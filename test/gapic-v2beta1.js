@@ -98,17 +98,24 @@ describe('DlpServiceClient', () => {
       var expectedResponse = {};
 
       // Mock Grpc layer
-      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(request, expectedResponse);
+      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
+        request,
+        expectedResponse
+      );
 
-      client.analyzeDataSourceRisk(request).then(responses => {
-        var operation = responses[0];
-        return operation.promise();
-      }).then(responses => {
-        assert.deepStrictEqual(responses[0], expectedResponse);
-        done();
-      }).catch(err => {
-        done(err);
-      });
+      client
+        .analyzeDataSourceRisk(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(responses => {
+          assert.deepStrictEqual(responses[0], expectedResponse);
+          done();
+        })
+        .catch(err => {
+          done(err);
+        });
     });
 
     it('invokes analyzeDataSourceRisk with error', done => {
@@ -123,24 +130,38 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(request, null, error);
+      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
+        request,
+        null,
+        error
+      );
 
-      client.analyzeDataSourceRisk(request).then(responses => {
-        var operation = responses[0];
-        return operation.promise();
-      }).then(responses => {
-        assert.fail();
-      }).catch(err => {
-        assert(err instanceof Error);
-        assert.equal(err.code, FAKE_STATUS_CODE);
-        done();
-      });
+      client
+        .analyzeDataSourceRisk(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(responses => {
+          assert.fail();
+        })
+        .catch(err => {
+          assert(err instanceof Error);
+          assert.equal(err.code, FAKE_STATUS_CODE);
+          done();
+        });
     });
 
     it('has longrunning decoder functions', () => {
       var client = new dlpModule.v2beta1.DlpServiceClient();
-      assert(client._descriptors.longrunning.analyzeDataSourceRisk.responseDecoder instanceof Function);
-      assert(client._descriptors.longrunning.analyzeDataSourceRisk.metadataDecoder instanceof Function);
+      assert(
+        client._descriptors.longrunning.analyzeDataSourceRisk
+          .responseDecoder instanceof Function
+      );
+      assert(
+        client._descriptors.longrunning.analyzeDataSourceRisk
+          .metadataDecoder instanceof Function
+      );
     });
   });
 
@@ -365,17 +386,24 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.createInspectOperation = mockLongRunningGrpcMethod(request, expectedResponse);
+      client._innerApiCalls.createInspectOperation = mockLongRunningGrpcMethod(
+        request,
+        expectedResponse
+      );
 
-      client.createInspectOperation(request).then(responses => {
-        var operation = responses[0];
-        return operation.promise();
-      }).then(responses => {
-        assert.deepStrictEqual(responses[0], expectedResponse);
-        done();
-      }).catch(err => {
-        done(err);
-      });
+      client
+        .createInspectOperation(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(responses => {
+          assert.deepStrictEqual(responses[0], expectedResponse);
+          done();
+        })
+        .catch(err => {
+          done(err);
+        });
     });
 
     it('invokes createInspectOperation with error', done => {
@@ -408,24 +436,38 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.createInspectOperation = mockLongRunningGrpcMethod(request, null, error);
+      client._innerApiCalls.createInspectOperation = mockLongRunningGrpcMethod(
+        request,
+        null,
+        error
+      );
 
-      client.createInspectOperation(request).then(responses => {
-        var operation = responses[0];
-        return operation.promise();
-      }).then(responses => {
-        assert.fail();
-      }).catch(err => {
-        assert(err instanceof Error);
-        assert.equal(err.code, FAKE_STATUS_CODE);
-        done();
-      });
+      client
+        .createInspectOperation(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(responses => {
+          assert.fail();
+        })
+        .catch(err => {
+          assert(err instanceof Error);
+          assert.equal(err.code, FAKE_STATUS_CODE);
+          done();
+        });
     });
 
     it('has longrunning decoder functions', () => {
       var client = new dlpModule.v2beta1.DlpServiceClient();
-      assert(client._descriptors.longrunning.createInspectOperation.responseDecoder instanceof Function);
-      assert(client._descriptors.longrunning.createInspectOperation.metadataDecoder instanceof Function);
+      assert(
+        client._descriptors.longrunning.createInspectOperation
+          .responseDecoder instanceof Function
+      );
+      assert(
+        client._descriptors.longrunning.createInspectOperation
+          .metadataDecoder instanceof Function
+      );
     });
   });
 
@@ -434,7 +476,7 @@ describe('DlpServiceClient', () => {
       var client = new dlpModule.v2beta1.DlpServiceClient();
 
       // Mock request
-      var formattedName = client.resultPath("[RESULT]");
+      var formattedName = client.resultPath('[RESULT]');
       var request = {
         name: formattedName,
       };
@@ -462,7 +504,7 @@ describe('DlpServiceClient', () => {
       var client = new dlpModule.v2beta1.DlpServiceClient();
 
       // Mock request
-      var formattedName = client.resultPath("[RESULT]");
+      var formattedName = client.resultPath('[RESULT]');
       var request = {
         name: formattedName,
       };
@@ -588,7 +630,6 @@ describe('DlpServiceClient', () => {
       });
     });
   });
-
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
@@ -612,12 +653,11 @@ function mockLongRunningGrpcMethod(expectedRequest, response, error) {
         return new Promise((resolve, reject) => {
           if (error) {
             reject(error);
-          }
-          else {
+          } else {
             resolve([response]);
           }
         });
-      }
+      },
     };
     return Promise.resolve([mockOperation]);
   };
