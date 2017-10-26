@@ -339,8 +339,8 @@ function inspectDatastore(
   kind,
   minLikelihood,
   maxFindings,
-  infoTypes,
-  includeQuote
+  infoTypes
+  // includeQuote
 ) {
   // [START inspect_datastore]
   // Imports the Google Cloud Data Loss Prevention library
@@ -431,8 +431,8 @@ function inspectBigquery(
   tableId,
   minLikelihood,
   maxFindings,
-  infoTypes,
-  includeQuote
+  infoTypes
+  // includeQuote
 ) {
   // [START inspect_bigquery]
   // Imports the Google Cloud Data Loss Prevention library

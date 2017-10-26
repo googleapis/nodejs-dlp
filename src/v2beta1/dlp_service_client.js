@@ -929,7 +929,7 @@ class DlpServiceClient {
    * @returns {String} - A string representing the result.
    */
   matchResultFromResultName(resultName) {
-    return resultPathTemplate.match(resultName).result;
+    return this._pathTemplates.resultPathTemplate.match(resultName).result;
   }
 }
 

@@ -142,7 +142,7 @@ describe('DlpServiceClient', () => {
           var operation = responses[0];
           return operation.promise();
         })
-        .then(responses => {
+        .then(() => {
           assert.fail();
         })
         .catch(err => {
@@ -448,7 +448,7 @@ describe('DlpServiceClient', () => {
           var operation = responses[0];
           return operation.promise();
         })
-        .then(responses => {
+        .then(() => {
           assert.fail();
         })
         .catch(err => {
