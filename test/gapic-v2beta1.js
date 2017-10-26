@@ -25,7 +25,10 @@ error.code = FAKE_STATUS_CODE;
 describe('DlpServiceClient', () => {
   describe('deidentifyContent', () => {
     it('invokes deidentifyContent without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var deidentifyConfig = {};
@@ -54,7 +57,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes deidentifyContent with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var deidentifyConfig = {};
@@ -84,7 +90,10 @@ describe('DlpServiceClient', () => {
 
   describe('analyzeDataSourceRisk', function() {
     it('invokes analyzeDataSourceRisk without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var privacyMetric = {};
@@ -119,7 +128,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes analyzeDataSourceRisk with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var privacyMetric = {};
@@ -153,7 +165,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('has longrunning decoder functions', () => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
       assert(
         client._descriptors.longrunning.analyzeDataSourceRisk
           .responseDecoder instanceof Function
@@ -167,7 +182,10 @@ describe('DlpServiceClient', () => {
 
   describe('inspectContent', () => {
     it('invokes inspectContent without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -207,7 +225,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes inspectContent with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -248,7 +269,10 @@ describe('DlpServiceClient', () => {
 
   describe('redactContent', () => {
     it('invokes redactContent without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -299,7 +323,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes redactContent with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -351,7 +378,10 @@ describe('DlpServiceClient', () => {
 
   describe('createInspectOperation', function() {
     it('invokes createInspectOperation without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -407,7 +437,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes createInspectOperation with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var name = 'EMAIL_ADDRESS';
@@ -459,7 +492,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('has longrunning decoder functions', () => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
       assert(
         client._descriptors.longrunning.createInspectOperation
           .responseDecoder instanceof Function
@@ -473,7 +509,10 @@ describe('DlpServiceClient', () => {
 
   describe('listInspectFindings', () => {
     it('invokes listInspectFindings without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var formattedName = client.resultPath('[RESULT]');
@@ -501,7 +540,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes listInspectFindings with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var formattedName = client.resultPath('[RESULT]');
@@ -527,7 +569,10 @@ describe('DlpServiceClient', () => {
 
   describe('listInfoTypes', () => {
     it('invokes listInfoTypes without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var category = 'PII';
@@ -554,7 +599,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes listInfoTypes with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var category = 'PII';
@@ -582,7 +630,10 @@ describe('DlpServiceClient', () => {
 
   describe('listRootCategories', () => {
     it('invokes listRootCategories without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var languageCode = 'en';
@@ -607,7 +658,10 @@ describe('DlpServiceClient', () => {
     });
 
     it('invokes listRootCategories with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient();
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
 
       // Mock request
       var languageCode = 'en';
