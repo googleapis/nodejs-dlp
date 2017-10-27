@@ -190,7 +190,7 @@ test.serial(`should inspect a Bigquery table`, async t => {
     `${cmd} bigquery integration_tests_dlp harmful`,
     cwd
   );
-  t.regex(output, /Info type: CREDIT_CARD_NUMBER/);
+  t.regex(output, /Info type: PHONE_NUMBER/);
 });
 
 test.serial(
