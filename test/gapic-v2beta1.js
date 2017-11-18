@@ -1,4 +1,4 @@
-// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google LLC All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,163 +23,6 @@ var error = new Error();
 error.code = FAKE_STATUS_CODE;
 
 describe('DlpServiceClient', () => {
-  describe('deidentifyContent', () => {
-    it('invokes deidentifyContent without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-
-      // Mock request
-      var deidentifyConfig = {};
-      var inspectConfig = {};
-      var items = [];
-      var request = {
-        deidentifyConfig: deidentifyConfig,
-        inspectConfig: inspectConfig,
-        items: items,
-      };
-
-      // Mock response
-      var expectedResponse = {};
-
-      // Mock Grpc layer
-      client._innerApiCalls.deidentifyContent = mockSimpleGrpcMethod(
-        request,
-        expectedResponse
-      );
-
-      client.deidentifyContent(request, (err, response) => {
-        assert.ifError(err);
-        assert.deepStrictEqual(response, expectedResponse);
-        done();
-      });
-    });
-
-    it('invokes deidentifyContent with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-
-      // Mock request
-      var deidentifyConfig = {};
-      var inspectConfig = {};
-      var items = [];
-      var request = {
-        deidentifyConfig: deidentifyConfig,
-        inspectConfig: inspectConfig,
-        items: items,
-      };
-
-      // Mock Grpc layer
-      client._innerApiCalls.deidentifyContent = mockSimpleGrpcMethod(
-        request,
-        null,
-        error
-      );
-
-      client.deidentifyContent(request, (err, response) => {
-        assert(err instanceof Error);
-        assert.equal(err.code, FAKE_STATUS_CODE);
-        assert(typeof response === 'undefined');
-        done();
-      });
-    });
-  });
-
-  describe('analyzeDataSourceRisk', function() {
-    it('invokes analyzeDataSourceRisk without error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-
-      // Mock request
-      var privacyMetric = {};
-      var sourceTable = {};
-      var request = {
-        privacyMetric: privacyMetric,
-        sourceTable: sourceTable,
-      };
-
-      // Mock response
-      var expectedResponse = {};
-
-      // Mock Grpc layer
-      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
-        request,
-        expectedResponse
-      );
-
-      client
-        .analyzeDataSourceRisk(request)
-        .then(responses => {
-          var operation = responses[0];
-          return operation.promise();
-        })
-        .then(responses => {
-          assert.deepStrictEqual(responses[0], expectedResponse);
-          done();
-        })
-        .catch(err => {
-          done(err);
-        });
-    });
-
-    it('invokes analyzeDataSourceRisk with error', done => {
-      var client = new dlpModule.v2beta1.DlpServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-
-      // Mock request
-      var privacyMetric = {};
-      var sourceTable = {};
-      var request = {
-        privacyMetric: privacyMetric,
-        sourceTable: sourceTable,
-      };
-
-      // Mock Grpc layer
-      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
-        request,
-        null,
-        error
-      );
-
-      client
-        .analyzeDataSourceRisk(request)
-        .then(responses => {
-          var operation = responses[0];
-          return operation.promise();
-        })
-        .then(() => {
-          assert.fail();
-        })
-        .catch(err => {
-          assert(err instanceof Error);
-          assert.equal(err.code, FAKE_STATUS_CODE);
-          done();
-        });
-    });
-
-    it('has longrunning decoder functions', () => {
-      var client = new dlpModule.v2beta1.DlpServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      assert(
-        client._descriptors.longrunning.analyzeDataSourceRisk
-          .responseDecoder instanceof Function
-      );
-      assert(
-        client._descriptors.longrunning.analyzeDataSourceRisk
-          .metadataDecoder instanceof Function
-      );
-    });
-  });
-
   describe('inspectContent', () => {
     it('invokes inspectContent without error', done => {
       var client = new dlpModule.v2beta1.DlpServiceClient({
@@ -373,6 +216,163 @@ describe('DlpServiceClient', () => {
         assert(typeof response === 'undefined');
         done();
       });
+    });
+  });
+
+  describe('deidentifyContent', () => {
+    it('invokes deidentifyContent without error', done => {
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var deidentifyConfig = {};
+      var inspectConfig = {};
+      var items = [];
+      var request = {
+        deidentifyConfig: deidentifyConfig,
+        inspectConfig: inspectConfig,
+        items: items,
+      };
+
+      // Mock response
+      var expectedResponse = {};
+
+      // Mock Grpc layer
+      client._innerApiCalls.deidentifyContent = mockSimpleGrpcMethod(
+        request,
+        expectedResponse
+      );
+
+      client.deidentifyContent(request, (err, response) => {
+        assert.ifError(err);
+        assert.deepStrictEqual(response, expectedResponse);
+        done();
+      });
+    });
+
+    it('invokes deidentifyContent with error', done => {
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var deidentifyConfig = {};
+      var inspectConfig = {};
+      var items = [];
+      var request = {
+        deidentifyConfig: deidentifyConfig,
+        inspectConfig: inspectConfig,
+        items: items,
+      };
+
+      // Mock Grpc layer
+      client._innerApiCalls.deidentifyContent = mockSimpleGrpcMethod(
+        request,
+        null,
+        error
+      );
+
+      client.deidentifyContent(request, (err, response) => {
+        assert(err instanceof Error);
+        assert.equal(err.code, FAKE_STATUS_CODE);
+        assert(typeof response === 'undefined');
+        done();
+      });
+    });
+  });
+
+  describe('analyzeDataSourceRisk', function() {
+    it('invokes analyzeDataSourceRisk without error', done => {
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var privacyMetric = {};
+      var sourceTable = {};
+      var request = {
+        privacyMetric: privacyMetric,
+        sourceTable: sourceTable,
+      };
+
+      // Mock response
+      var expectedResponse = {};
+
+      // Mock Grpc layer
+      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
+        request,
+        expectedResponse
+      );
+
+      client
+        .analyzeDataSourceRisk(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(responses => {
+          assert.deepStrictEqual(responses[0], expectedResponse);
+          done();
+        })
+        .catch(err => {
+          done(err);
+        });
+    });
+
+    it('invokes analyzeDataSourceRisk with error', done => {
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var privacyMetric = {};
+      var sourceTable = {};
+      var request = {
+        privacyMetric: privacyMetric,
+        sourceTable: sourceTable,
+      };
+
+      // Mock Grpc layer
+      client._innerApiCalls.analyzeDataSourceRisk = mockLongRunningGrpcMethod(
+        request,
+        null,
+        error
+      );
+
+      client
+        .analyzeDataSourceRisk(request)
+        .then(responses => {
+          var operation = responses[0];
+          return operation.promise();
+        })
+        .then(() => {
+          assert.fail();
+        })
+        .catch(err => {
+          assert(err instanceof Error);
+          assert.equal(err.code, FAKE_STATUS_CODE);
+          done();
+        });
+    });
+
+    it('has longrunning decoder functions', () => {
+      var client = new dlpModule.v2beta1.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+      assert(
+        client._descriptors.longrunning.analyzeDataSourceRisk
+          .responseDecoder instanceof Function
+      );
+      assert(
+        client._descriptors.longrunning.analyzeDataSourceRisk
+          .metadataDecoder instanceof Function
+      );
     });
   });
 
