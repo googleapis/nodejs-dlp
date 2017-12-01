@@ -106,16 +106,19 @@ class DlpServiceClient {
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this._pathTemplates = {
-      resultPathTemplate: new gax.PathTemplate(
-        'inspect/results/{result}'
-      ),
+      resultPathTemplate: new gax.PathTemplate('inspect/results/{result}'),
     };
     var protoFilesRoot = new gax.grpc.GoogleProtoFilesRoot();
     protoFilesRoot = protobuf.loadSync(
-      path.join(__dirname, '..', '..', 'protos', 'google/privacy/dlp/v2beta1/dlp.proto'),
+      path.join(
+        __dirname,
+        '..',
+        '..',
+        'protos',
+        'google/privacy/dlp/v2beta1/dlp.proto'
+      ),
       protoFilesRoot
     );
-
 
     // This API contains "long-running operations", which return a
     // an Operation object that allows for tracking of the operation,
@@ -141,13 +144,19 @@ class DlpServiceClient {
     this._descriptors.longrunning = {
       analyzeDataSourceRisk: new gax.LongrunningDescriptor(
         this.operationsClient,
-        analyzeDataSourceRiskResponse.decode.bind(analyzeDataSourceRiskResponse),
+        analyzeDataSourceRiskResponse.decode.bind(
+          analyzeDataSourceRiskResponse
+        ),
         analyzeDataSourceRiskMetadata.decode.bind(analyzeDataSourceRiskMetadata)
       ),
       createInspectOperation: new gax.LongrunningDescriptor(
         this.operationsClient,
-        createInspectOperationResponse.decode.bind(createInspectOperationResponse),
-        createInspectOperationMetadata.decode.bind(createInspectOperationMetadata)
+        createInspectOperationResponse.decode.bind(
+          createInspectOperationResponse
+        ),
+        createInspectOperationMetadata.decode.bind(
+          createInspectOperationMetadata
+        )
       ),
     };
 
@@ -217,9 +226,7 @@ class DlpServiceClient {
    * in this service.
    */
   static get scopes() {
-    return [
-      'https://www.googleapis.com/auth/cloud-platform',
-    ];
+    return ['https://www.googleapis.com/auth/cloud-platform'];
   }
 
   /**
@@ -557,7 +564,11 @@ class DlpServiceClient {
     }
     options = options || {};
 
-    return this._innerApiCalls.analyzeDataSourceRisk(request, options, callback);
+    return this._innerApiCalls.analyzeDataSourceRisk(
+      request,
+      options,
+      callback
+    );
   }
 
   /**
@@ -708,7 +719,11 @@ class DlpServiceClient {
     }
     options = options || {};
 
-    return this._innerApiCalls.createInspectOperation(request, options, callback);
+    return this._innerApiCalls.createInspectOperation(
+      request,
+      options,
+      callback
+    );
   }
 
   /**
@@ -903,11 +918,8 @@ class DlpServiceClient {
    * @returns {String} - A string representing the result.
    */
   matchResultFromResultName(resultName) {
-    return this._pathTemplates.resultPathTemplate
-      .match(resultName)
-      .result;
+    return this._pathTemplates.resultPathTemplate.match(resultName).result;
   }
 }
-
 
 module.exports = DlpServiceClient;
