@@ -2,8 +2,6 @@
 
 # [Google Cloud Data Loss Prevention (DLP) API: Node.js Client](https://github.com/googleapis/nodejs-dlp)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/googleapis/nodejs-dlp.svg)](https://greenkeeper.io/)
-
 [![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style&#x3D;flat)](https://cloud.google.com/terms/launch-stages)
 [![CircleCI](https://img.shields.io/circleci/project/github/googleapis/nodejs-dlp.svg?style=flat)](https://circleci.com/gh/googleapis/nodejs-dlp)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/googleapis/nodejs-dlp?branch=master&svg=true)](https://ci.appveyor.com/project/googleapis/nodejs-dlp)
