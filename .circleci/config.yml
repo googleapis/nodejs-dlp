@@ -1,5 +1,7 @@
-unit_tests:
-  steps: &unit_tests
+---
+# "Include" for unit tests definition.
+unit_tests: &unit_tests
+  steps:
     - checkout
     - run:
         name: Install modules and dependencies.
@@ -11,7 +13,8 @@ unit_tests:
         name: Submit coverage data to codecov.
         command: node_modules/.bin/codecov
         when: always
-version: 2
+
+version: 2.0
 workflows:
   version: 2
   tests:
@@ -21,6 +24,10 @@ workflows:
             tags:
               only: /.*/
       - node6:
+          filters:
+            tags:
+              only: /.*/
+      - node7:
           filters:
             tags:
               only: /.*/
@@ -36,6 +43,7 @@ workflows:
           requires:
             - node4
             - node6
+            - node7
             - node8
             - node9
           filters:
@@ -45,6 +53,7 @@ workflows:
           requires:
             - node4
             - node6
+            - node7
             - node8
             - node9
           filters:
@@ -58,7 +67,7 @@ workflows:
             branches:
               only: master
             tags:
-              only: '/^v[\d.]+$/'
+              only: /^v[\d.]+$/
       - sample_tests:
           requires:
             - lint
@@ -67,7 +76,7 @@ workflows:
             branches:
               only: master
             tags:
-              only: '/^v[\d.]+$/'
+              only: /^v[\d.]+$/
       - publish_npm:
           requires:
             - system_tests
@@ -76,12 +85,12 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: '/^v[\d.]+$/'
+              only: /^v[\d.]+$/
+
 jobs:
   node4:
     docker:
-      - image: 'node:4'
-        user: node
+      - image: node:4
     steps:
       - checkout
       - run:
@@ -96,33 +105,31 @@ jobs:
           when: always
   node6:
     docker:
-      - image: 'node:6'
-        user: node
-    steps: *unit_tests
+      - image: node:6
+    <<: *unit_tests
+  node7:
+    docker:
+      - image: node:7
+    <<: *unit_tests
   node8:
     docker:
-      - image: 'node:8'
-        user: node
-    steps: *unit_tests
+      - image: node:8
+    <<: *unit_tests
   node9:
     docker:
-      - image: 'node:9'
-        user: node
-    steps: *unit_tests
+      - image: node:9
+    <<: *unit_tests
+
   lint:
     docker:
-      - image: 'node:8'
-        user: node
+      - image: node:8
     steps:
       - checkout
       - run:
           name: Install modules and dependencies.
           command: |
-            mkdir -p /home/node/.npm-global
             npm install
             npm link
-          environment:
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
           name: Link the module being tested to the samples.
           command: |
@@ -130,17 +137,13 @@ jobs:
             npm link @google-cloud/dlp
             npm install
             cd ..
-          environment:
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
           name: Run linting.
           command: npm run lint
-          environment:
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
+
   docs:
     docker:
-      - image: 'node:8'
-        user: node
+      - image: node:8
     steps:
       - checkout
       - run:
@@ -149,10 +152,10 @@ jobs:
       - run:
           name: Build documentation.
           command: npm run docs
+
   sample_tests:
     docker:
-      - image: 'node:8'
-        user: node
+      - image: node:8
     steps:
       - checkout
       - run:
@@ -164,11 +167,8 @@ jobs:
       - run:
           name: Install and link the module.
           command: |
-            mkdir -p /home/node/.npm-global
             npm install
             npm link
-          environment:
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
           name: Link the module being tested to the samples.
           command: |
@@ -176,24 +176,21 @@ jobs:
             npm link @google-cloud/dlp
             npm install
             cd ..
-          environment:
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
           name: Run sample tests.
           command: npm run samples-test
           environment:
             GCLOUD_PROJECT: long-door-651
-            GOOGLE_APPLICATION_CREDENTIALS: /home/node/dlp-samples/.circleci/key.json
-            NPM_CONFIG_PREFIX: /home/node/.npm-global
+            GOOGLE_APPLICATION_CREDENTIALS: /var/dlp/.circleci/key.json
       - run:
           name: Remove unencrypted key.
           command: rm .circleci/key.json
           when: always
-    working_directory: /home/node/dlp-samples
+    working_directory: /var/dlp/
+
   system_tests:
     docker:
-      - image: 'node:8'
-        user: node
+      - image: node:8
     steps:
       - checkout
       - run:
@@ -214,15 +211,15 @@ jobs:
           name: Remove unencrypted key.
           command: rm .circleci/key.json
           when: always
+
   publish_npm:
     docker:
-      - image: 'node:8'
-        user: node
+      - image: node:8
     steps:
       - checkout
       - run:
           name: Set NPM authentication.
-          command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run:
-          name: Publish the module to npm.
-          command: npm publish
+         name: Publish the module to npm.
+         command: npm publish
