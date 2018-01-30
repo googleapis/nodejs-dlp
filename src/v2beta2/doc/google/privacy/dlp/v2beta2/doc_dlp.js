@@ -637,7 +637,10 @@ var InspectDataSourceRequest = {
  * Cloud repository for storing output.
  *
  * @property {Object} table
- *   Store findings in a new table in an existing dataset.
+ *   Store findings in a new table in an existing dataset. If table_id is not
+ *   set a new one will be generated for you with the following format:
+ *   dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for
+ *   generating the date details.
  *
  *   This object should have the same structure as [BigQueryTable]{@link google.privacy.dlp.v2beta2.BigQueryTable}
  *

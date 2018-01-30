@@ -18,9 +18,7 @@ describe('DlpServiceSmokeTest', () => {
   it('successfully makes a call to the service', done => {
     const dlp = require('../src');
 
-    var client = new dlp.v2beta1.DlpServiceClient({
-      // optional auth parameters.
-    });
+    var client = new dlp.v2beta2.DlpServiceClient({});
 
     var minLikelihood = 'POSSIBLE';
     var inspectConfig = {
