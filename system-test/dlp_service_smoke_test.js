@@ -18,22 +18,23 @@ describe('DlpServiceSmokeTest', () => {
   it('successfully makes a call to the service', done => {
     const dlp = require('../src');
 
+    var projectId = process.env['GCLOUD_PROJECT'];
     var client = new dlp.v2beta2.DlpServiceClient({});
 
-    var minLikelihood = 'POSSIBLE';
     var inspectConfig = {
-      minLikelihood: minLikelihood,
+      infoTypes: [{name: 'PHONE_NUMBER'}],
+      minLikelihood: 'POSSIBLE',
     };
     var type = 'text/plain';
     var value = 'my phone number is 215-512-1212';
-    var itemsElement = {
+    var item = {
       type: type,
       value: value,
     };
-    var items = [itemsElement];
     var request = {
       inspectConfig: inspectConfig,
-      items: items,
+      item: item,
+      parent: client.projectPath(projectId),
     };
     client
       .inspectContent(request)
