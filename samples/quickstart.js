@@ -51,7 +51,7 @@ const request = {
     includeQuote: includeQuote,
   },
   item: item,
-  parent: dlp.projectPath(projectId)
+  parent: dlp.projectPath(projectId),
 };
 
 // Run request
