@@ -16,6 +16,8 @@
 'use strict';
 
 // [START quickstart]
+const projectId = process.env['GCLOUD_PROJECT'];
+
 // Imports the Google Cloud Data Loss Prevention library
 const DLP = require('@google-cloud/dlp');
 
@@ -32,13 +34,13 @@ const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 const maxFindings = 0;
 
 // The infoTypes of information to match
-const infoTypes = [{name: 'US_MALE_NAME'}, {name: 'US_FEMALE_NAME'}];
+const infoTypes = [{name: 'MALE_NAME'}, {name: 'FEMALE_NAME'}];
 
 // Whether to include the matching string
 const includeQuote = true;
 
 // Construct items to inspect
-const items = [{type: 'text/plain', value: string}];
+const item = {type: 'text/plain', value: string};
 
 // Construct request
 const request = {
@@ -48,14 +50,16 @@ const request = {
     maxFindings: maxFindings,
     includeQuote: includeQuote,
   },
-  items: items,
+  item: item,
+  parent: dlp.projectPath(projectId)
 };
 
 // Run request
 dlp
   .inspectContent(request)
   .then(response => {
-    const findings = response[0].results[0].findings;
+    console.log(response);
+    const findings = response[0].result.findings;
     if (findings.length > 0) {
       console.log(`Findings:`);
       findings.forEach(finding => {
