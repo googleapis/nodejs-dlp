@@ -25,6 +25,9 @@ const cwd = path.join(__dirname, `..`);
 const harmfulString = 'My SSN is 372819127';
 const harmlessString = 'My favorite color is blue';
 
+const surrogateType = 'SSN_TOKEN';
+let labeledFPEString;
+
 const wrappedKey = process.env.DLP_DEID_WRAPPED_KEY;
 const keyName = process.env.DLP_DEID_KEY_NAME;
 
@@ -33,20 +36,20 @@ test.before(tools.checkCredentials);
 // deidentify_masking
 test(`should mask sensitive data in a string`, async t => {
   const output = await tools.runAsync(
-    `${cmd} mask "${harmfulString}" -c x -n 5`,
+    `${cmd} deidMask "${harmfulString}" -m x -n 5`,
     cwd
   );
   t.is(output, 'My SSN is xxxxx9127');
 });
 
 test(`should ignore insensitive data when masking a string`, async t => {
-  const output = await tools.runAsync(`${cmd} mask "${harmlessString}"`, cwd);
+  const output = await tools.runAsync(`${cmd} deidMask "${harmlessString}"`, cwd);
   t.is(output, harmlessString);
 });
 
 test(`should handle masking errors`, async t => {
   const output = await tools.runAsync(
-    `${cmd} mask "${harmfulString}" -n -1`,
+    `${cmd} deidMask "${harmfulString}" -n -1`,
     cwd
   );
   t.regex(output, /Error in deidentifyWithMask/);
@@ -55,16 +58,25 @@ test(`should handle masking errors`, async t => {
 // deidentify_fpe
 test(`should FPE encrypt sensitive data in a string`, async t => {
   const output = await tools.runAsync(
-    `${cmd} fpe "${harmfulString}" ${wrappedKey} ${keyName} -a NUMERIC`,
+    `${cmd} deidFpe "${harmfulString}" ${wrappedKey} ${keyName} -a NUMERIC`,
     cwd
   );
   t.regex(output, /My SSN is \d{9}/);
   t.not(output, harmfulString);
 });
 
+test.serial(`should use surrogate info types in FPE encryption`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} deidFpe "${harmfulString}" ${wrappedKey} ${keyName} -a NUMERIC -s ${surrogateType}`,
+    cwd
+  );
+  t.regex(output, /My SSN is SSN_TOKEN\(9\):\d{9}/);
+  labeledFPEString = output;
+});
+
 test(`should ignore insensitive data when FPE encrypting a string`, async t => {
   const output = await tools.runAsync(
-    `${cmd} fpe "${harmlessString}" ${wrappedKey} ${keyName}`,
+    `${cmd} deidFpe "${harmlessString}" ${wrappedKey} ${keyName}`,
     cwd
   );
   t.is(output, harmlessString);
@@ -72,8 +84,26 @@ test(`should ignore insensitive data when FPE encrypting a string`, async t => {
 
 test(`should handle FPE encryption errors`, async t => {
   const output = await tools.runAsync(
-    `${cmd} fpe "${harmfulString}" ${wrappedKey} BAD_KEY_NAME`,
+    `${cmd} deidFpe "${harmfulString}" ${wrappedKey} BAD_KEY_NAME`,
     cwd
   );
   t.regex(output, /Error in deidentifyWithFpe/);
+});
+
+// reidentify_fpe
+test.serial(`should FPE decrypt surrogate-typed sensitive data in a string`, async t => {
+  t.truthy(labeledFPEString, `Verify that FPE encryption succeeded.`);
+  const output = await tools.runAsync(
+    `${cmd} reidFpe "${labeledFPEString}" ${surrogateType} ${wrappedKey} ${keyName} -a NUMERIC`,
+    cwd
+  );
+  t.is(output, harmfulString);
+});
+
+test(`should handle FPE decryption errors`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} reidFpe "${harmfulString}" ${surrogateType} ${wrappedKey} BAD_KEY_NAME -a NUMERIC`,
+    cwd
+  );
+  t.regex(output, /Error in reidentifyWithFpe/);
 });
