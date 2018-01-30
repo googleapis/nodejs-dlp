@@ -58,7 +58,6 @@ const request = {
 dlp
   .inspectContent(request)
   .then(response => {
-    console.log(response);
     const findings = response[0].result.findings;
     if (findings.length > 0) {
       console.log(`Findings:`);
