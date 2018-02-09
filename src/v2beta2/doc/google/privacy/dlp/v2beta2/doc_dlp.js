@@ -185,7 +185,9 @@ var InspectResult = {
  * @property {string} quote
  *   The content that was found. Even if the content is not textual, it
  *   may be converted to a textual representation here.
- *   Provided if requested by the `InspectConfig`.
+ *   Provided if requested by the `InspectConfig` and the finding is
+ *   less than or equal to 4096 bytes long. If the finding exceeds 4096 bytes
+ *   in length, the quote may be omitted.
  *
  * @property {Object} infoType
  *   The type of content that might have been found.
@@ -995,6 +997,8 @@ var PrivacyMetric = {
      *   A column can be tagged with a InfoType to use the relevant public
      *   dataset as a statistical model of population, if available. We
      *   currently support US ZIP codes, region codes, ages and genders.
+     *   To programmatically obtain the list of supported InfoTypes, use
+     *   ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
      *
      *   This object should have the same structure as [InfoType]{@link google.privacy.dlp.v2beta2.InfoType}
      *
@@ -2433,7 +2437,8 @@ var CreateInspectTemplateRequest = {
  *
  * @property {string} name
  *   Resource name of organization and inspectTemplate to be updated, for
- *   example `organizations/433245324/inspectTemplates/432452342`.
+ *   example `organizations/433245324/inspectTemplates/432452342` or
+ *   projects/project-id/inspectTemplates/432452342.
  *
  * @property {Object} inspectTemplate
  *   New InspectTemplate value.
@@ -2458,7 +2463,8 @@ var UpdateInspectTemplateRequest = {
  *
  * @property {string} name
  *   Resource name of the organization and inspectTemplate to be read, for
- *   example `organizations/433245324/inspectTemplates/432452342`.
+ *   example `organizations/433245324/inspectTemplates/432452342` or
+ *   projects/project-id/inspectTemplates/432452342.
  *
  * @typedef GetInspectTemplateRequest
  * @memberof google.privacy.dlp.v2beta2
@@ -2516,7 +2522,8 @@ var ListInspectTemplatesResponse = {
  *
  * @property {string} name
  *   Resource name of the organization and inspectTemplate to be deleted, for
- *   example `organizations/433245324/inspectTemplates/432452342`.
+ *   example `organizations/433245324/inspectTemplates/432452342` or
+ *   projects/project-id/inspectTemplates/432452342.
  *
  * @typedef DeleteInspectTemplateRequest
  * @memberof google.privacy.dlp.v2beta2
@@ -2783,7 +2790,8 @@ var CreateDeidentifyTemplateRequest = {
  *
  * @property {string} name
  *   Resource name of organization and deidentify template to be updated, for
- *   example `organizations/433245324/deidentifyTemplates/432452342`.
+ *   example `organizations/433245324/deidentifyTemplates/432452342` or
+ *   projects/project-id/deidentifyTemplates/432452342.
  *
  * @property {Object} deidentifyTemplate
  *   New DeidentifyTemplate value.
@@ -2808,7 +2816,8 @@ var UpdateDeidentifyTemplateRequest = {
  *
  * @property {string} name
  *   Resource name of the organization and deidentify template to be read, for
- *   example `organizations/433245324/deidentifyTemplates/432452342`.
+ *   example `organizations/433245324/deidentifyTemplates/432452342` or
+ *   projects/project-id/deidentifyTemplates/432452342.
  *
  * @typedef GetDeidentifyTemplateRequest
  * @memberof google.privacy.dlp.v2beta2
@@ -2867,7 +2876,8 @@ var ListDeidentifyTemplatesResponse = {
  *
  * @property {string} name
  *   Resource name of the organization and deidentify template to be deleted,
- *   for example `organizations/433245324/deidentifyTemplates/432452342`.
+ *   for example `organizations/433245324/deidentifyTemplates/432452342` or
+ *   projects/project-id/deidentifyTemplates/432452342.
  *
  * @typedef DeleteDeidentifyTemplateRequest
  * @memberof google.privacy.dlp.v2beta2

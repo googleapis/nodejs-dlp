@@ -499,7 +499,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.inspectTemplatePath(
+      var formattedName = client.organizationInspectTemplatePath(
         '[ORGANIZATION]',
         '[INSPECT_TEMPLATE]'
       );
@@ -537,7 +537,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.inspectTemplatePath(
+      var formattedName = client.organizationInspectTemplatePath(
         '[ORGANIZATION]',
         '[INSPECT_TEMPLATE]'
       );
@@ -694,7 +694,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.inspectTemplatePath(
+      var formattedName = client.organizationInspectTemplatePath(
         '[ORGANIZATION]',
         '[INSPECT_TEMPLATE]'
       );
@@ -720,7 +720,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.inspectTemplatePath(
+      var formattedName = client.organizationInspectTemplatePath(
         '[ORGANIZATION]',
         '[INSPECT_TEMPLATE]'
       );
@@ -815,7 +815,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );
@@ -853,7 +853,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );
@@ -885,7 +885,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );
@@ -923,7 +923,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );
@@ -1022,7 +1022,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );
@@ -1048,7 +1048,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      var formattedName = client.deidentifyTemplatePath(
+      var formattedName = client.organizationDeidentifyTemplatePath(
         '[ORGANIZATION]',
         '[DEIDENTIFY_TEMPLATE]'
       );

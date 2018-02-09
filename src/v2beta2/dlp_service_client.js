@@ -108,16 +108,16 @@ class DlpServiceClient {
       organizationPathTemplate: new gax.PathTemplate(
         'organizations/{organization}'
       ),
-      deidentifyTemplatePathTemplate: new gax.PathTemplate(
+      organizationDeidentifyTemplatePathTemplate: new gax.PathTemplate(
         'organizations/{organization}/deidentifyTemplates/{deidentify_template}'
       ),
-      deidentifyTemplate2PathTemplate: new gax.PathTemplate(
+      projectDeidentifyTemplatePathTemplate: new gax.PathTemplate(
         'projects/{project}/deidentifyTemplates/{deidentify_template}'
       ),
-      inspectTemplatePathTemplate: new gax.PathTemplate(
+      organizationInspectTemplatePathTemplate: new gax.PathTemplate(
         'organizations/{organization}/inspectTemplates/{inspect_template}'
       ),
-      inspectTemplate2PathTemplate: new gax.PathTemplate(
+      projectInspectTemplatePathTemplate: new gax.PathTemplate(
         'projects/{project}/inspectTemplates/{inspect_template}'
       ),
       projectPathTemplate: new gax.PathTemplate('projects/{project}'),
@@ -571,7 +571,7 @@ class DlpServiceClient {
 
   /**
    * Schedules a job to compute risk analysis metrics over content in a Google
-   * Cloud Platform repository. [How-to guide}(/dlp/docs/compute-risk-analysis)
+   * Cloud Platform repository. [How-to guide](https://cloud.google.com/dlp/docs/compute-risk-analysis)
    *
    * @param {Object} request
    *   The request object that will be sent.
@@ -743,7 +743,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Resource name of organization and inspectTemplate to be updated, for
-   *   example `organizations/433245324/inspectTemplates/432452342`.
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
    * @param {Object} [request.inspectTemplate]
    *   New InspectTemplate value.
    *
@@ -771,7 +772,7 @@ class DlpServiceClient {
    *   // optional auth parameters.
    * });
    *
-   * var formattedName = client.inspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
+   * var formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
    * client.updateInspectTemplate({name: formattedName})
    *   .then(responses => {
    *     var response = responses[0];
@@ -802,7 +803,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} [request.name]
    *   Resource name of the organization and inspectTemplate to be read, for
-   *   example `organizations/433245324/inspectTemplates/432452342`.
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -1000,7 +1002,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Resource name of the organization and inspectTemplate to be deleted, for
-   *   example `organizations/433245324/inspectTemplates/432452342`.
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -1017,7 +1020,7 @@ class DlpServiceClient {
    *   // optional auth parameters.
    * });
    *
-   * var formattedName = client.inspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
+   * var formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
    * client.deleteInspectTemplate({name: formattedName}).catch(err => {
    *   console.error(err);
    * });
@@ -1104,7 +1107,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Resource name of organization and deidentify template to be updated, for
-   *   example `organizations/433245324/deidentifyTemplates/432452342`.
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
    * @param {Object} [request.deidentifyTemplate]
    *   New DeidentifyTemplate value.
    *
@@ -1132,7 +1136,7 @@ class DlpServiceClient {
    *   // optional auth parameters.
    * });
    *
-   * var formattedName = client.deidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
+   * var formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
    * client.updateDeidentifyTemplate({name: formattedName})
    *   .then(responses => {
    *     var response = responses[0];
@@ -1163,7 +1167,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Resource name of the organization and deidentify template to be read, for
-   *   example `organizations/433245324/deidentifyTemplates/432452342`.
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -1183,7 +1188,7 @@ class DlpServiceClient {
    *   // optional auth parameters.
    * });
    *
-   * var formattedName = client.deidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
+   * var formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
    * client.getDeidentifyTemplate({name: formattedName})
    *   .then(responses => {
    *     var response = responses[0];
@@ -1369,7 +1374,8 @@ class DlpServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Resource name of the organization and deidentify template to be deleted,
-   *   for example `organizations/433245324/deidentifyTemplates/432452342`.
+   *   for example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -1386,7 +1392,7 @@ class DlpServiceClient {
    *   // optional auth parameters.
    * });
    *
-   * var formattedName = client.deidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
+   * var formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
    * client.deleteDeidentifyTemplate({name: formattedName}).catch(err => {
    *   console.error(err);
    * });
@@ -1751,56 +1757,58 @@ class DlpServiceClient {
   }
 
   /**
-   * Return a fully-qualified deidentify_template resource name string.
+   * Return a fully-qualified organization_deidentify_template resource name string.
    *
    * @param {String} organization
    * @param {String} deidentifyTemplate
    * @returns {String}
    */
-  deidentifyTemplatePath(organization, deidentifyTemplate) {
-    return this._pathTemplates.deidentifyTemplatePathTemplate.render({
-      organization: organization,
-      deidentify_template: deidentifyTemplate,
-    });
+  organizationDeidentifyTemplatePath(organization, deidentifyTemplate) {
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.render(
+      {
+        organization: organization,
+        deidentify_template: deidentifyTemplate,
+      }
+    );
   }
 
   /**
-   * Return a fully-qualified deidentify_template_2 resource name string.
+   * Return a fully-qualified project_deidentify_template resource name string.
    *
    * @param {String} project
    * @param {String} deidentifyTemplate
    * @returns {String}
    */
-  deidentifyTemplate2Path(project, deidentifyTemplate) {
-    return this._pathTemplates.deidentifyTemplate2PathTemplate.render({
+  projectDeidentifyTemplatePath(project, deidentifyTemplate) {
+    return this._pathTemplates.projectDeidentifyTemplatePathTemplate.render({
       project: project,
       deidentify_template: deidentifyTemplate,
     });
   }
 
   /**
-   * Return a fully-qualified inspect_template resource name string.
+   * Return a fully-qualified organization_inspect_template resource name string.
    *
    * @param {String} organization
    * @param {String} inspectTemplate
    * @returns {String}
    */
-  inspectTemplatePath(organization, inspectTemplate) {
-    return this._pathTemplates.inspectTemplatePathTemplate.render({
+  organizationInspectTemplatePath(organization, inspectTemplate) {
+    return this._pathTemplates.organizationInspectTemplatePathTemplate.render({
       organization: organization,
       inspect_template: inspectTemplate,
     });
   }
 
   /**
-   * Return a fully-qualified inspect_template_2 resource name string.
+   * Return a fully-qualified project_inspect_template resource name string.
    *
    * @param {String} project
    * @param {String} inspectTemplate
    * @returns {String}
    */
-  inspectTemplate2Path(project, inspectTemplate) {
-    return this._pathTemplates.inspectTemplate2PathTemplate.render({
+  projectInspectTemplatePath(project, inspectTemplate) {
+    return this._pathTemplates.projectInspectTemplatePathTemplate.render({
       project: project,
       inspect_template: inspectTemplate,
     });
@@ -1845,106 +1853,118 @@ class DlpServiceClient {
   }
 
   /**
-   * Parse the deidentifyTemplateName from a deidentify_template resource.
+   * Parse the organizationDeidentifyTemplateName from a organization_deidentify_template resource.
    *
-   * @param {String} deidentifyTemplateName
-   *   A fully-qualified path representing a deidentify_template resources.
+   * @param {String} organizationDeidentifyTemplateName
+   *   A fully-qualified path representing a organization_deidentify_template resources.
    * @returns {String} - A string representing the organization.
    */
-  matchOrganizationFromDeidentifyTemplateName(deidentifyTemplateName) {
-    return this._pathTemplates.deidentifyTemplatePathTemplate.match(
-      deidentifyTemplateName
+  matchOrganizationFromOrganizationDeidentifyTemplateName(
+    organizationDeidentifyTemplateName
+  ) {
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.match(
+      organizationDeidentifyTemplateName
     ).organization;
   }
 
   /**
-   * Parse the deidentifyTemplateName from a deidentify_template resource.
+   * Parse the organizationDeidentifyTemplateName from a organization_deidentify_template resource.
    *
-   * @param {String} deidentifyTemplateName
-   *   A fully-qualified path representing a deidentify_template resources.
+   * @param {String} organizationDeidentifyTemplateName
+   *   A fully-qualified path representing a organization_deidentify_template resources.
    * @returns {String} - A string representing the deidentify_template.
    */
-  matchDeidentifyTemplateFromDeidentifyTemplateName(deidentifyTemplateName) {
-    return this._pathTemplates.deidentifyTemplatePathTemplate.match(
-      deidentifyTemplateName
+  matchDeidentifyTemplateFromOrganizationDeidentifyTemplateName(
+    organizationDeidentifyTemplateName
+  ) {
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.match(
+      organizationDeidentifyTemplateName
     ).deidentify_template;
   }
 
   /**
-   * Parse the deidentifyTemplate2Name from a deidentify_template_2 resource.
+   * Parse the projectDeidentifyTemplateName from a project_deidentify_template resource.
    *
-   * @param {String} deidentifyTemplate2Name
-   *   A fully-qualified path representing a deidentify_template_2 resources.
+   * @param {String} projectDeidentifyTemplateName
+   *   A fully-qualified path representing a project_deidentify_template resources.
    * @returns {String} - A string representing the project.
    */
-  matchProjectFromDeidentifyTemplate2Name(deidentifyTemplate2Name) {
-    return this._pathTemplates.deidentifyTemplate2PathTemplate.match(
-      deidentifyTemplate2Name
+  matchProjectFromProjectDeidentifyTemplateName(projectDeidentifyTemplateName) {
+    return this._pathTemplates.projectDeidentifyTemplatePathTemplate.match(
+      projectDeidentifyTemplateName
     ).project;
   }
 
   /**
-   * Parse the deidentifyTemplate2Name from a deidentify_template_2 resource.
+   * Parse the projectDeidentifyTemplateName from a project_deidentify_template resource.
    *
-   * @param {String} deidentifyTemplate2Name
-   *   A fully-qualified path representing a deidentify_template_2 resources.
+   * @param {String} projectDeidentifyTemplateName
+   *   A fully-qualified path representing a project_deidentify_template resources.
    * @returns {String} - A string representing the deidentify_template.
    */
-  matchDeidentifyTemplateFromDeidentifyTemplate2Name(deidentifyTemplate2Name) {
-    return this._pathTemplates.deidentifyTemplate2PathTemplate.match(
-      deidentifyTemplate2Name
+  matchDeidentifyTemplateFromProjectDeidentifyTemplateName(
+    projectDeidentifyTemplateName
+  ) {
+    return this._pathTemplates.projectDeidentifyTemplatePathTemplate.match(
+      projectDeidentifyTemplateName
     ).deidentify_template;
   }
 
   /**
-   * Parse the inspectTemplateName from a inspect_template resource.
+   * Parse the organizationInspectTemplateName from a organization_inspect_template resource.
    *
-   * @param {String} inspectTemplateName
-   *   A fully-qualified path representing a inspect_template resources.
+   * @param {String} organizationInspectTemplateName
+   *   A fully-qualified path representing a organization_inspect_template resources.
    * @returns {String} - A string representing the organization.
    */
-  matchOrganizationFromInspectTemplateName(inspectTemplateName) {
-    return this._pathTemplates.inspectTemplatePathTemplate.match(
-      inspectTemplateName
+  matchOrganizationFromOrganizationInspectTemplateName(
+    organizationInspectTemplateName
+  ) {
+    return this._pathTemplates.organizationInspectTemplatePathTemplate.match(
+      organizationInspectTemplateName
     ).organization;
   }
 
   /**
-   * Parse the inspectTemplateName from a inspect_template resource.
+   * Parse the organizationInspectTemplateName from a organization_inspect_template resource.
    *
-   * @param {String} inspectTemplateName
-   *   A fully-qualified path representing a inspect_template resources.
+   * @param {String} organizationInspectTemplateName
+   *   A fully-qualified path representing a organization_inspect_template resources.
    * @returns {String} - A string representing the inspect_template.
    */
-  matchInspectTemplateFromInspectTemplateName(inspectTemplateName) {
-    return this._pathTemplates.inspectTemplatePathTemplate.match(
-      inspectTemplateName
+  matchInspectTemplateFromOrganizationInspectTemplateName(
+    organizationInspectTemplateName
+  ) {
+    return this._pathTemplates.organizationInspectTemplatePathTemplate.match(
+      organizationInspectTemplateName
     ).inspect_template;
   }
 
   /**
-   * Parse the inspectTemplate2Name from a inspect_template_2 resource.
+   * Parse the projectInspectTemplateName from a project_inspect_template resource.
    *
-   * @param {String} inspectTemplate2Name
-   *   A fully-qualified path representing a inspect_template_2 resources.
+   * @param {String} projectInspectTemplateName
+   *   A fully-qualified path representing a project_inspect_template resources.
    * @returns {String} - A string representing the project.
    */
-  matchProjectFromInspectTemplate2Name(inspectTemplate2Name) {
-    return this._pathTemplates.inspectTemplate2PathTemplate.match(
-      inspectTemplate2Name
+  matchProjectFromProjectInspectTemplateName(projectInspectTemplateName) {
+    return this._pathTemplates.projectInspectTemplatePathTemplate.match(
+      projectInspectTemplateName
     ).project;
   }
 
   /**
-   * Parse the inspectTemplate2Name from a inspect_template_2 resource.
+   * Parse the projectInspectTemplateName from a project_inspect_template resource.
    *
-   * @param {String} inspectTemplate2Name
-   *   A fully-qualified path representing a inspect_template_2 resources.
+   * @param {String} projectInspectTemplateName
+   *   A fully-qualified path representing a project_inspect_template resources.
    * @returns {String} - A string representing the inspect_template.
    */
-  matchInspectTemplateFromInspectTemplate2Name(inspectTemplate2Name) {
-    return this._pathTemplates.inspectTemplate2PathTemplate.match(
-      inspectTemplate2Name
+  matchInspectTemplateFromProjectInspectTemplateName(
+    projectInspectTemplateName
+  ) {
+    return this._pathTemplates.projectInspectTemplatePathTemplate.match(
+      projectInspectTemplateName
     ).inspect_template;
   }
 
