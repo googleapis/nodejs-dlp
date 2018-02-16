@@ -39,15 +39,34 @@ var InfoType = {
  *
  *   This object should have the same structure as [InfoType]{@link google.privacy.dlp.v2beta2.InfoType}
  *
+ * @property {number} likelihood
+ *   Likelihood to return for this custom info type. This base value can be
+ *   altered by a detection rule if the finding meets the criteria specified by
+ *   the rule. Defaults to `VERY_LIKELY` if not specified.
+ *
+ *   The number should be among the values of [Likelihood]{@link google.privacy.dlp.v2beta2.Likelihood}
+ *
  * @property {Object} dictionary
  *   Dictionary-based custom info type.
  *
  *   This object should have the same structure as [Dictionary]{@link google.privacy.dlp.v2beta2.Dictionary}
  *
+ * @property {Object} regex
+ *   Regex-based custom info type.
+ *
+ *   This object should have the same structure as [Regex]{@link google.privacy.dlp.v2beta2.Regex}
+ *
  * @property {Object} surrogateType
  *   Surrogate info type.
  *
  *   This object should have the same structure as [SurrogateType]{@link google.privacy.dlp.v2beta2.SurrogateType}
+ *
+ * @property {Object[]} detectionRules
+ *   Set of detection rules to apply to all findings of this custom info type.
+ *   Rules are applied in order that they are specified. Not supported for the
+ *   `surrogate_type` custom info type.
+ *
+ *   This object should have the same structure as [DetectionRule]{@link google.privacy.dlp.v2beta2.DetectionRule}
  *
  * @typedef CustomInfoType
  * @memberof google.privacy.dlp.v2beta2
@@ -107,6 +126,20 @@ var CustomInfoType = {
   },
 
   /**
+   * Message defining a custom regular expression.
+   *
+   * @property {string} pattern
+   *   Pattern defining the regular expression.
+   *
+   * @typedef Regex
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.CustomInfoType.Regex definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+   */
+  Regex: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  },
+
+  /**
    * Message for detecting output from deidentification transformations
    * such as
    * [`CryptoReplaceFfxFpeConfig`](https://cloud.google.com/dlp/docs/reference/rest/v2beta1/content/deidentify#CryptoReplaceFfxFpeConfig).
@@ -121,6 +154,97 @@ var CustomInfoType = {
    */
   SurrogateType: {
     // This is for documentation. Actual contents will be loaded by gRPC.
+  },
+
+  /**
+   * Rule for modifying a custom info type to alter behavior under certain
+   * circumstances, depending on the specific details of the rule. Not supported
+   * for the `surrogate_type` custom info type.
+   *
+   * @property {Object} hotwordRule
+   *   Hotword-based detection rule.
+   *
+   *   This object should have the same structure as [HotwordRule]{@link google.privacy.dlp.v2beta2.HotwordRule}
+   *
+   * @typedef DetectionRule
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.CustomInfoType.DetectionRule definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+   */
+  DetectionRule: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+
+    /**
+     * Message for specifying a window around a finding to apply a detection
+     * rule.
+     *
+     * @property {number} windowBefore
+     *   Number of characters before the finding to consider.
+     *
+     * @property {number} windowAfter
+     *   Number of characters after the finding to consider.
+     *
+     * @typedef Proximity
+     * @memberof google.privacy.dlp.v2beta2
+     * @see [google.privacy.dlp.v2beta2.CustomInfoType.DetectionRule.Proximity definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+     */
+    Proximity: {
+      // This is for documentation. Actual contents will be loaded by gRPC.
+    },
+
+    /**
+     * Message for specifying an adjustment to the likelihood of a finding as
+     * part of a detection rule.
+     *
+     * @property {number} fixedLikelihood
+     *   Set the likelihood of a finding to a fixed value.
+     *
+     *   The number should be among the values of [Likelihood]{@link google.privacy.dlp.v2beta2.Likelihood}
+     *
+     * @property {number} relativeLikelihood
+     *   Increase or decrease the likelihood by the specified number of
+     *   levels. For example, if a finding would be `POSSIBLE` without the
+     *   detection rule and `relative_likelihood` is 1, then it is upgraded to
+     *   `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`.
+     *   Likelihood may never drop below `VERY_UNLIKELY` or exceed
+     *   `VERY_LIKELY`, so applying an adjustment of 1 followed by an
+     *   adjustment of -1 when base likelihood is `VERY_LIKELY` will result in
+     *   a final likelihood of `LIKELY`.
+     *
+     * @typedef LikelihoodAdjustment
+     * @memberof google.privacy.dlp.v2beta2
+     * @see [google.privacy.dlp.v2beta2.CustomInfoType.DetectionRule.LikelihoodAdjustment definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+     */
+    LikelihoodAdjustment: {
+      // This is for documentation. Actual contents will be loaded by gRPC.
+    },
+
+    /**
+     * Detection rule that adjusts the likelihood of findings within a certain
+     * proximity of hotwords.
+     *
+     * @property {Object} hotwordRegex
+     *   Regex pattern defining what qualifies as a hotword.
+     *
+     *   This object should have the same structure as [Regex]{@link google.privacy.dlp.v2beta2.Regex}
+     *
+     * @property {Object} proximity
+     *   Proximity of the finding within which the entire hotword must reside.
+     *   The total length of the window cannot exceed 1000 characters.
+     *
+     *   This object should have the same structure as [Proximity]{@link google.privacy.dlp.v2beta2.Proximity}
+     *
+     * @property {Object} likelihoodAdjustment
+     *   Likelihood adjustment to apply to all matching findings.
+     *
+     *   This object should have the same structure as [LikelihoodAdjustment]{@link google.privacy.dlp.v2beta2.LikelihoodAdjustment}
+     *
+     * @typedef HotwordRule
+     * @memberof google.privacy.dlp.v2beta2
+     * @see [google.privacy.dlp.v2beta2.CustomInfoType.DetectionRule.HotwordRule definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+     */
+    HotwordRule: {
+      // This is for documentation. Actual contents will be loaded by gRPC.
+    }
   }
 };
 
@@ -203,6 +327,10 @@ var DatastoreOptions = {
  * @property {Object} fileSet
  *   This object should have the same structure as [FileSet]{@link google.privacy.dlp.v2beta2.FileSet}
  *
+ * @property {number} bytesLimitPerFile
+ *   Max number of bytes to scan from a file. If a scanned file's size is bigger
+ *   than this value then the rest of the bytes are omitted.
+ *
  * @typedef CloudStorageOptions
  * @memberof google.privacy.dlp.v2beta2
  * @see [google.privacy.dlp.v2beta2.CloudStorageOptions definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
@@ -266,12 +394,44 @@ var BigQueryOptions = {
  *
  *   This object should have the same structure as [BigQueryOptions]{@link google.privacy.dlp.v2beta2.BigQueryOptions}
  *
+ * @property {Object} timespanConfig
+ *   This object should have the same structure as [TimespanConfig]{@link google.privacy.dlp.v2beta2.TimespanConfig}
+ *
  * @typedef StorageConfig
  * @memberof google.privacy.dlp.v2beta2
  * @see [google.privacy.dlp.v2beta2.StorageConfig definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
  */
 var StorageConfig = {
   // This is for documentation. Actual contents will be loaded by gRPC.
+
+  /**
+   * Configuration of the timespan of the items to include in scanning.
+   * Currently only supported when inspecting Google Cloud Storage and BigQuery.
+   *
+   * @property {Object} startTime
+   *   Exclude files older than this value.
+   *
+   *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+   *
+   * @property {Object} endTime
+   *   Exclude files newer than this value.
+   *   If set to zero, no upper time limit is applied.
+   *
+   *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+   *
+   * @property {boolean} enableAutoPopulationOfTimespanConfig
+   *   When the job is started by a JobTrigger we will automatically figure out
+   *   a valid start_time to avoid scanning files that have not been modified
+   *   since the last time the JobTrigger executed. This will be based on the
+   *   time of the execution of the last run of the JobTrigger.
+   *
+   * @typedef TimespanConfig
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.StorageConfig.TimespanConfig definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+   */
+  TimespanConfig: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  }
 };
 
 /**

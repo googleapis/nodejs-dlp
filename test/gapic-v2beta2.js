@@ -271,8 +271,10 @@ describe('DlpServiceClient', () => {
 
       // Mock response
       var name = 'name3373707';
+      var jobTriggerName = 'jobTriggerName1819490804';
       var expectedResponse = {
         name: name,
+        jobTriggerName: jobTriggerName,
       };
 
       // Mock Grpc layer
@@ -331,8 +333,10 @@ describe('DlpServiceClient', () => {
 
       // Mock response
       var name = 'name3373707';
+      var jobTriggerName = 'jobTriggerName1819490804';
       var expectedResponse = {
         name: name,
+        jobTriggerName: jobTriggerName,
       };
 
       // Mock Grpc layer
@@ -1153,8 +1157,10 @@ describe('DlpServiceClient', () => {
 
       // Mock response
       var name2 = 'name2-1052831874';
+      var jobTriggerName = 'jobTriggerName1819490804';
       var expectedResponse = {
         name: name2,
+        jobTriggerName: jobTriggerName,
       };
 
       // Mock Grpc layer

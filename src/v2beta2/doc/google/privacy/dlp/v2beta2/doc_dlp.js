@@ -627,6 +627,13 @@ var InspectContentResponse = {
  *
  *   This object should have the same structure as [InspectJobConfig]{@link google.privacy.dlp.v2beta2.InspectJobConfig}
  *
+ * @property {string} jobId
+ *   Optional job ID to use for the created job. If not provided, a job ID will
+ *   automatically be generated. Must be unique within the project. The job ID
+ *   can contain uppercase and lowercase letters, numbers, and hyphens; that is,
+ *   it must match the regular expression: `[a-zA-Z\\d-]+`. The maximum length
+ *   is 100 characters. Can be empty to allow the system to generate one.
+ *
  * @typedef InspectDataSourceRequest
  * @memberof google.privacy.dlp.v2beta2
  * @see [google.privacy.dlp.v2beta2.InspectDataSourceRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
@@ -802,6 +809,13 @@ var ListInfoTypesResponse = {
  *
  *   This object should have the same structure as [RiskAnalysisJobConfig]{@link google.privacy.dlp.v2beta2.RiskAnalysisJobConfig}
  *
+ * @property {string} jobId
+ *   Optional job ID to use for the created job. If not provided, a job ID will
+ *   automatically be generated. Must be unique within the project. The job ID
+ *   can contain uppercase and lowercase letters, numbers, and hyphens; that is,
+ *   it must match the regular expression: `[a-zA-Z\\d-]+`. The maximum length
+ *   is 100 characters. Can be empty to allow the system to generate one.
+ *
  * @typedef AnalyzeDataSourceRiskRequest
  * @memberof google.privacy.dlp.v2beta2
  * @see [google.privacy.dlp.v2beta2.AnalyzeDataSourceRiskRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
@@ -822,6 +836,12 @@ var AnalyzeDataSourceRiskRequest = {
  *   Input dataset to compute metrics over.
  *
  *   This object should have the same structure as [BigQueryTable]{@link google.privacy.dlp.v2beta2.BigQueryTable}
+ *
+ * @property {Object[]} actions
+ *   Actions to execute at the completion of the job. Are executed in the order
+ *   provided.
+ *
+ *   This object should have the same structure as [Action]{@link google.privacy.dlp.v2beta2.Action}
  *
  * @typedef RiskAnalysisJobConfig
  * @memberof google.privacy.dlp.v2beta2
@@ -2327,6 +2347,29 @@ var TransformationSummary = {
 };
 
 /**
+ * Schedule for triggeredJobs.
+ *
+ * @property {Object} reccurrencePeriodDuration
+ *   With this option a job is started a regular periodic basis. For
+ *   example: every 10 minutes.
+ *
+ *   A scheduled start time will be skipped if the previous
+ *   execution has not ended when its scheduled time occurs.
+ *
+ *   This value must be set to a time duration greater than or equal
+ *   to 60 minutes and can be no longer than 60 days.
+ *
+ *   This object should have the same structure as [Duration]{@link google.protobuf.Duration}
+ *
+ * @typedef Schedule
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.Schedule definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var Schedule = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
  * The inspectTemplate contains a configuration (set of types of sensitive data
  * to be detected) to be used anywhere you otherwise would normally specify
  * InspectConfig.
@@ -2404,6 +2447,183 @@ var InspectTemplate = {
  */
 var DeidentifyTemplate = {
   // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Contains a configuration to make dlp api calls on a repeating basis.
+ *
+ * @property {string} name
+ *   Unique resource name for the triggeredJob, assigned by the service when the
+ *   triggeredJob is created, for example
+ *   `projects/dlp-test-project/triggeredJobs/53234423`.
+ *
+ * @property {string} displayName
+ *   Display name (max 100 chars)
+ *
+ * @property {string} description
+ *   User provided description (max 256 chars)
+ *
+ * @property {Object} inspectJob
+ *   This object should have the same structure as [InspectJobConfig]{@link google.privacy.dlp.v2beta2.InspectJobConfig}
+ *
+ * @property {Object[]} triggers
+ *   A list of triggers which will be OR'ed together. Only one in the list
+ *   needs to trigger for a job to be started. The list may contain only
+ *   a single Schedule trigger and must have at least one object.
+ *
+ *   This object should have the same structure as [Trigger]{@link google.privacy.dlp.v2beta2.Trigger}
+ *
+ * @property {Object[]} errors
+ *   A stream of errors encountered when the trigger was activated. Repeated
+ *   errors may result in the JobTrigger automaticaly being paused.
+ *   Will return the last 100 errors. Whenever the JobTrigger is modified
+ *   this list will be cleared. Output only field.
+ *
+ *   This object should have the same structure as [Error]{@link google.privacy.dlp.v2beta2.Error}
+ *
+ * @property {Object} createTime
+ *   The creation timestamp of a triggeredJob, output only field.
+ *
+ *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+ *
+ * @property {Object} updateTime
+ *   The last update timestamp of a triggeredJob, output only field.
+ *
+ *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+ *
+ * @property {Object} lastRunTime
+ *   The timestamp of the last time this trigger executed.
+ *
+ *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+ *
+ * @property {number} status
+ *   A status for this trigger. [required]
+ *
+ *   The number should be among the values of [Status]{@link google.privacy.dlp.v2beta2.Status}
+ *
+ * @typedef JobTrigger
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.JobTrigger definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var JobTrigger = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+
+  /**
+   * What event needs to occur for a new job to be started.
+   *
+   * @property {Object} schedule
+   *   Create a job on a repeating basis based on the elapse of time.
+   *
+   *   This object should have the same structure as [Schedule]{@link google.privacy.dlp.v2beta2.Schedule}
+   *
+   * @typedef Trigger
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.JobTrigger.Trigger definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+   */
+  Trigger: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  },
+
+  /**
+   * The results of an unsuccessful activation of the JobTrigger.
+   *
+   * @property {Object} details
+   *   This object should have the same structure as [Status]{@link google.rpc.Status}
+   *
+   * @property {Object[]} timestamps
+   *   The times the error occurred.
+   *
+   *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
+   *
+   * @typedef Error
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.JobTrigger.Error definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+   */
+  Error: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  },
+
+  /**
+   * Whether the trigger is currently active. If PAUSED or CANCELLED, no jobs
+   * will be created with this configuration. The service may automatically
+   * pause triggers experiencing frequent errors. To restart a job, set the
+   * status to HEALTHY after correcting user errors.
+   *
+   * @enum {number}
+   * @memberof google.privacy.dlp.v2beta2
+   */
+  Status: {
+    STATUS_UNSPECIFIED: 0,
+
+    /**
+     * Trigger is healthy.
+     */
+    HEALTHY: 1,
+
+    /**
+     * Trigger is temporarily paused.
+     */
+    PAUSED: 2,
+
+    /**
+     * Trigger is cancelled and can not be resumed.
+     */
+    CANCELLED: 3
+  }
+};
+
+/**
+ * A task to execute on the completion of a job.
+ *
+ * @property {Object} saveFindings
+ *   Save resulting findings in a provided location.
+ *
+ *   This object should have the same structure as [SaveFindings]{@link google.privacy.dlp.v2beta2.SaveFindings}
+ *
+ * @property {Object} pubSub
+ *   Publish a notification to a pubsub topic.
+ *
+ *   This object should have the same structure as [PublishToPubSub]{@link google.privacy.dlp.v2beta2.PublishToPubSub}
+ *
+ * @typedef Action
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.Action definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var Action = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+
+  /**
+   * If set, the detailed findings will be persisted to the specified
+   * OutputStorageConfig. Compatible with: Inspect
+   *
+   * @property {Object} outputConfig
+   *   This object should have the same structure as [OutputStorageConfig]{@link google.privacy.dlp.v2beta2.OutputStorageConfig}
+   *
+   * @typedef SaveFindings
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.Action.SaveFindings definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+   */
+  SaveFindings: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  },
+
+  /**
+   * Publish the results of a DlpJob to a pub sub channel.
+   * Compatible with: Inpect, Risk
+   *
+   * @property {string} topic
+   *   Cloud Pub/Sub topic to send notifications to. The topic must have given
+   *   publishing access rights to the DLP API service account executing
+   *   the long running DlpJob sending the notifications.
+   *   Format is projects/{project}/topics/{topic}.
+   *
+   * @typedef PublishToPubSub
+   * @memberof google.privacy.dlp.v2beta2
+   * @see [google.privacy.dlp.v2beta2.Action.PublishToPubSub definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+   */
+  PublishToPubSub: {
+    // This is for documentation. Actual contents will be loaded by gRPC.
+  }
 };
 
 /**
@@ -2534,6 +2754,143 @@ var DeleteInspectTemplateRequest = {
 };
 
 /**
+ * Request message for CreateJobTrigger.
+ *
+ * @property {string} parent
+ *   The parent resource name, for example projects/my-project-id.
+ *
+ * @property {Object} jobTrigger
+ *   The JobTrigger to create.
+ *
+ *   This object should have the same structure as [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}
+ *
+ * @property {string} triggerId
+ *   The trigger id can contain uppercase and lowercase letters,
+ *   numbers, and hyphens; that is, it must match the regular
+ *   expression: `[a-zA-Z\\d-]+`. The maximum length is 100
+ *   characters. Can be empty to allow the system to generate one.
+ *
+ * @typedef CreateJobTriggerRequest
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.CreateJobTriggerRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var CreateJobTriggerRequest = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Request message for UpdateJobTrigger.
+ *
+ * @property {string} name
+ *   Resource name of the project and the triggeredJob, for example
+ *   `projects/dlp-test-project/jobTriggers/53234423`.
+ *
+ * @property {Object} jobTrigger
+ *   New JobTrigger value.
+ *
+ *   This object should have the same structure as [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}
+ *
+ * @property {Object} updateMask
+ *   Mask to control which fields get updated.
+ *
+ *   This object should have the same structure as [FieldMask]{@link google.protobuf.FieldMask}
+ *
+ * @typedef UpdateJobTriggerRequest
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.UpdateJobTriggerRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var UpdateJobTriggerRequest = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Request message for GetJobTrigger.
+ *
+ * @property {string} name
+ *   Resource name of the project and the triggeredJob, for example
+ *   `projects/dlp-test-project/jobTriggers/53234423`.
+ *
+ * @typedef GetJobTriggerRequest
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.GetJobTriggerRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var GetJobTriggerRequest = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Request message for ListJobTriggers.
+ *
+ * @property {string} parent
+ *   The parent resource name, for example projects/my-project-id.
+ *
+ * @property {string} pageToken
+ *   Optional page token to continue retrieval. Comes from previous call
+ *   to ListJobTriggers. `order_by` and `filter` should not change for
+ *   subsequent calls, but can be omitted if token is specified.
+ *
+ * @property {number} pageSize
+ *   Optional size of the page, can be limited by a server.
+ *
+ * @property {string} orderBy
+ *   Optional comma separated list of triggeredJob fields to order by,
+ *   followed by 'asc/desc' postfix, i.e.
+ *   `"create_time asc,name desc,schedule_mode asc"`. This list is
+ *   case-insensitive.
+ *
+ *   Example: `"name asc,schedule_mode desc, status desc"`
+ *
+ *   Supported filters keys and values are:
+ *
+ *   - `create_time`: corresponds to time the triggeredJob was created.
+ *   - `update_time`: corresponds to time the triggeredJob was last updated.
+ *   - `name`: corresponds to JobTrigger's display name.
+ *   - `status`: corresponds to the triggeredJob status.
+ *
+ * @typedef ListJobTriggersRequest
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.ListJobTriggersRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var ListJobTriggersRequest = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Response message for ListJobTriggers.
+ *
+ * @property {Object[]} jobTriggers
+ *   List of triggeredJobs, up to page_size in ListJobTriggersRequest.
+ *
+ *   This object should have the same structure as [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}
+ *
+ * @property {string} nextPageToken
+ *   If the next page is available then the next page token to be used
+ *   in following ListJobTriggers request.
+ *
+ * @typedef ListJobTriggersResponse
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.ListJobTriggersResponse definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var ListJobTriggersResponse = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
+ * Request message for DeleteJobTrigger.
+ *
+ * @property {string} name
+ *   Resource name of the project and the triggeredJob, for example
+ *   `projects/dlp-test-project/jobTriggers/53234423`.
+ *
+ * @typedef DeleteJobTriggerRequest
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.DeleteJobTriggerRequest definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/dlp.proto}
+ */
+var DeleteJobTriggerRequest = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
  * @property {Object} storageConfig
  *   The data to scan.
  *
@@ -2553,6 +2910,12 @@ var DeleteInspectTemplateRequest = {
  *   If provided, will be used as the default for all values in InspectConfig.
  *   `inspect_config` will be merged into the values persisted as part of the
  *   template.
+ *
+ * @property {Object[]} actions
+ *   Actions to execute at the completion of the job. Are executed in the order
+ *   provided.
+ *
+ *   This object should have the same structure as [Action]{@link google.privacy.dlp.v2beta2.Action}
  *
  * @typedef InspectJobConfig
  * @memberof google.privacy.dlp.v2beta2
@@ -2607,6 +2970,10 @@ var InspectJobConfig = {
  *   A stream of errors encountered running the job.
  *
  *   This object should have the same structure as [Status]{@link google.rpc.Status}
+ *
+ * @property {string} jobTriggerName
+ *   If created by a job trigger, the resource name of the trigger that
+ *   instantiated the job.
  *
  * @typedef DlpJob
  * @memberof google.privacy.dlp.v2beta2
@@ -2681,6 +3048,7 @@ var GetDlpJobRequest = {
  *   * Supported fields/values for inspect jobs:
  *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
  *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+ *       - `trigger_name` - The resource name of the trigger that created job.
  *   * Supported fields for risk analysis jobs:
  *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
  *   * The operator must be `=` or `!=`.

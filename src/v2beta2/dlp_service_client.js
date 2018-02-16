@@ -530,6 +530,12 @@ class DlpServiceClient {
    *   A configuration for the job.
    *
    *   This object should have the same structure as [InspectJobConfig]{@link google.privacy.dlp.v2beta2.InspectJobConfig}
+   * @param {string} [request.jobId]
+   *   Optional job ID to use for the created job. If not provided, a job ID will
+   *   automatically be generated. Must be unique within the project. The job ID
+   *   can contain uppercase and lowercase letters, numbers, and hyphens; that is,
+   *   it must match the regular expression: `[a-zA-Z\\d-]+`. The maximum length
+   *   is 100 characters. Can be empty to allow the system to generate one.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -581,6 +587,12 @@ class DlpServiceClient {
    *   Configuration for this risk analysis job.
    *
    *   This object should have the same structure as [RiskAnalysisJobConfig]{@link google.privacy.dlp.v2beta2.RiskAnalysisJobConfig}
+   * @param {string} [request.jobId]
+   *   Optional job ID to use for the created job. If not provided, a job ID will
+   *   automatically be generated. Must be unique within the project. The job ID
+   *   can contain uppercase and lowercase letters, numbers, and hyphens; that is,
+   *   it must match the regular expression: `[a-zA-Z\\d-]+`. The maximum length
+   *   is 100 characters. Can be empty to allow the system to generate one.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
    *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
@@ -1430,6 +1442,7 @@ class DlpServiceClient {
    *   * Supported fields/values for inspect jobs:
    *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
    *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - `trigger_name` - The resource name of the trigger that created job.
    *   * Supported fields for risk analysis jobs:
    *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
    *   * The operator must be `=` or `!=`.
@@ -1561,6 +1574,7 @@ class DlpServiceClient {
    *   * Supported fields/values for inspect jobs:
    *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
    *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - `trigger_name` - The resource name of the trigger that created job.
    *   * Supported fields for risk analysis jobs:
    *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
    *   * The operator must be `=` or `!=`.
