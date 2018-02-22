@@ -120,6 +120,9 @@ class DlpServiceClient {
       projectInspectTemplatePathTemplate: new gax.PathTemplate(
         'projects/{project}/inspectTemplates/{inspect_template}'
       ),
+      projectJobTriggerPathTemplate: new gax.PathTemplate(
+        'projects/{project}/jobTriggers/{job_trigger}'
+      ),
       projectPathTemplate: new gax.PathTemplate('projects/{project}'),
       dlpJobPathTemplate: new gax.PathTemplate(
         'projects/{project}/dlpJobs/{dlp_job}'
@@ -141,6 +144,11 @@ class DlpServiceClient {
         'deidentifyTemplates'
       ),
       listDlpJobs: new gax.PageDescriptor('pageToken', 'nextPageToken', 'jobs'),
+      listJobTriggers: new gax.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'jobTriggers'
+      ),
     };
 
     // Put together the default options sent with requests.
@@ -187,6 +195,10 @@ class DlpServiceClient {
       'getDlpJob',
       'deleteDlpJob',
       'cancelDlpJob',
+      'listJobTriggers',
+      'getJobTrigger',
+      'deleteJobTrigger',
+      'updateJobTrigger',
     ];
     for (let methodName of dlpServiceStubMethods) {
       this._innerApiCalls[methodName] = gax.createApiCall(
@@ -1754,6 +1766,324 @@ class DlpServiceClient {
     return this._innerApiCalls.cancelDlpJob(request, options, callback);
   }
 
+  /**
+   * Lists job triggers.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {number} [request.pageSize]
+   *   The maximum number of resources contained in the underlying API
+   *   response. If page streaming is performed per-resource, this
+   *   parameter does not affect the return value. If page streaming is
+   *   performed per-page, this determines the maximum number of
+   *   resources in a page.
+   * @param {string} [request.orderBy]
+   *   Optional comma separated list of triggeredJob fields to order by,
+   *   followed by 'asc/desc' postfix, i.e.
+   *   `"create_time asc,name desc,schedule_mode asc"`. This list is
+   *   case-insensitive.
+   *
+   *   Example: `"name asc,schedule_mode desc, status desc"`
+   *
+   *   Supported filters keys and values are:
+   *
+   *   - `create_time`: corresponds to time the triggeredJob was created.
+   *   - `update_time`: corresponds to time the triggeredJob was last updated.
+   *   - `name`: corresponds to JobTrigger's display name.
+   *   - `status`: corresponds to the triggeredJob status.
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @param {function(?Error, ?Array, ?Object, ?Object)} [callback]
+   *   The function which will be called with the result of the API call.
+   *
+   *   The second parameter to the callback is Array of [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   *
+   *   When autoPaginate: false is specified through options, it contains the result
+   *   in a single response. If the response indicates the next page exists, the third
+   *   parameter is set to be used for the next request object. The fourth parameter keeps
+   *   the raw response object of an object representing [ListJobTriggersResponse]{@link google.privacy.dlp.v2beta2.ListJobTriggersResponse}.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger} in a single response.
+   *   The second element is the next request object if the response
+   *   indicates the next page exists, or null. The third element is
+   *   an object representing [ListJobTriggersResponse]{@link google.privacy.dlp.v2beta2.ListJobTriggersResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * // Iterate over all elements.
+   * var formattedParent = client.projectPath('[PROJECT]');
+   *
+   * client.listJobTriggers({parent: formattedParent})
+   *   .then(responses => {
+   *     var resources = responses[0];
+   *     for (let i = 0; i < resources.length; i += 1) {
+   *       // doThingsWith(resources[i])
+   *     }
+   *   })
+   *   .catch(err => {
+   *     console.error(err);
+   *   });
+   *
+   * // Or obtain the paged response.
+   * var formattedParent = client.projectPath('[PROJECT]');
+   *
+   *
+   * var options = {autoPaginate: false};
+   * var callback = responses => {
+   *   // The actual resources in a response.
+   *   var resources = responses[0];
+   *   // The next request if the response shows that there are more responses.
+   *   var nextRequest = responses[1];
+   *   // The actual response object, if necessary.
+   *   // var rawResponse = responses[2];
+   *   for (let i = 0; i < resources.length; i += 1) {
+   *     // doThingsWith(resources[i]);
+   *   }
+   *   if (nextRequest) {
+   *     // Fetch the next page.
+   *     return client.listJobTriggers(nextRequest, options).then(callback);
+   *   }
+   * }
+   * client.listJobTriggers({parent: formattedParent}, options)
+   *   .then(callback)
+   *   .catch(err => {
+   *     console.error(err);
+   *   });
+   */
+  listJobTriggers(request, options, callback) {
+    if (options instanceof Function && callback === undefined) {
+      callback = options;
+      options = {};
+    }
+    options = options || {};
+
+    return this._innerApiCalls.listJobTriggers(request, options, callback);
+  }
+
+  /**
+   * Equivalent to {@link listJobTriggers}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listJobTriggers} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {number} [request.pageSize]
+   *   The maximum number of resources contained in the underlying API
+   *   response. If page streaming is performed per-resource, this
+   *   parameter does not affect the return value. If page streaming is
+   *   performed per-page, this determines the maximum number of
+   *   resources in a page.
+   * @param {string} [request.orderBy]
+   *   Optional comma separated list of triggeredJob fields to order by,
+   *   followed by 'asc/desc' postfix, i.e.
+   *   `"create_time asc,name desc,schedule_mode asc"`. This list is
+   *   case-insensitive.
+   *
+   *   Example: `"name asc,schedule_mode desc, status desc"`
+   *
+   *   Supported filters keys and values are:
+   *
+   *   - `create_time`: corresponds to time the triggeredJob was created.
+   *   - `update_time`: corresponds to time the triggeredJob was last updated.
+   *   - `name`: corresponds to JobTrigger's display name.
+   *   - `status`: corresponds to the triggeredJob status.
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger} on 'data' event.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * var formattedParent = client.projectPath('[PROJECT]');
+   * client.listJobTriggersStream({parent: formattedParent})
+   *   .on('data', element => {
+   *     // doThingsWith(element)
+   *   }).on('error', err => {
+   *     console.log(err);
+   *   });
+   */
+  listJobTriggersStream(request, options) {
+    options = options || {};
+
+    return this._descriptors.page.listJobTriggers.createStream(
+      this._innerApiCalls.listJobTriggers,
+      request,
+      options
+    );
+  }
+
+  /**
+   * Gets a job trigger.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @param {function(?Error, ?Object)} [callback]
+   *   The function which will be called with the result of the API call.
+   *
+   *   The second parameter to the callback is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * var formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
+   * client.getJobTrigger({name: formattedName})
+   *   .then(responses => {
+   *     var response = responses[0];
+   *     // doThingsWith(response)
+   *   })
+   *   .catch(err => {
+   *     console.error(err);
+   *   });
+   */
+  getJobTrigger(request, options, callback) {
+    if (options instanceof Function && callback === undefined) {
+      callback = options;
+      options = {};
+    }
+    options = options || {};
+
+    return this._innerApiCalls.getJobTrigger(request, options, callback);
+  }
+
+  /**
+   * Deletes a job trigger.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @param {function(?Error)} [callback]
+   *   The function which will be called with the result of the API call.
+   * @returns {Promise} - The promise which resolves when API call finishes.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * var name = '';
+   * client.deleteJobTrigger({name: name}).catch(err => {
+   *   console.error(err);
+   * });
+   */
+  deleteJobTrigger(request, options, callback) {
+    if (options instanceof Function && callback === undefined) {
+      callback = options;
+      options = {};
+    }
+    options = options || {};
+
+    return this._innerApiCalls.deleteJobTrigger(request, options, callback);
+  }
+
+  /**
+   * Updates a job trigger.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {Object} [request.jobTrigger]
+   *   New JobTrigger value.
+   *
+   *   This object should have the same structure as [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}
+   * @param {Object} [request.updateMask]
+   *   Mask to control which fields get updated.
+   *
+   *   This object should have the same structure as [FieldMask]{@link google.protobuf.FieldMask}
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @param {function(?Error, ?Object)} [callback]
+   *   The function which will be called with the result of the API call.
+   *
+   *   The second parameter to the callback is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * var formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
+   * client.updateJobTrigger({name: formattedName})
+   *   .then(responses => {
+   *     var response = responses[0];
+   *     // doThingsWith(response)
+   *   })
+   *   .catch(err => {
+   *     console.error(err);
+   *   });
+   */
+  updateJobTrigger(request, options, callback) {
+    if (options instanceof Function && callback === undefined) {
+      callback = options;
+      options = {};
+    }
+    options = options || {};
+
+    return this._innerApiCalls.updateJobTrigger(request, options, callback);
+  }
+
   // --------------------
   // -- Path templates --
   // --------------------
@@ -1825,6 +2155,20 @@ class DlpServiceClient {
     return this._pathTemplates.projectInspectTemplatePathTemplate.render({
       project: project,
       inspect_template: inspectTemplate,
+    });
+  }
+
+  /**
+   * Return a fully-qualified project_job_trigger resource name string.
+   *
+   * @param {String} project
+   * @param {String} jobTrigger
+   * @returns {String}
+   */
+  projectJobTriggerPath(project, jobTrigger) {
+    return this._pathTemplates.projectJobTriggerPathTemplate.render({
+      project: project,
+      job_trigger: jobTrigger,
     });
   }
 
@@ -1980,6 +2324,32 @@ class DlpServiceClient {
     return this._pathTemplates.projectInspectTemplatePathTemplate.match(
       projectInspectTemplateName
     ).inspect_template;
+  }
+
+  /**
+   * Parse the projectJobTriggerName from a project_job_trigger resource.
+   *
+   * @param {String} projectJobTriggerName
+   *   A fully-qualified path representing a project_job_trigger resources.
+   * @returns {String} - A string representing the project.
+   */
+  matchProjectFromProjectJobTriggerName(projectJobTriggerName) {
+    return this._pathTemplates.projectJobTriggerPathTemplate.match(
+      projectJobTriggerName
+    ).project;
+  }
+
+  /**
+   * Parse the projectJobTriggerName from a project_job_trigger resource.
+   *
+   * @param {String} projectJobTriggerName
+   *   A fully-qualified path representing a project_job_trigger resources.
+   * @returns {String} - A string representing the job_trigger.
+   */
+  matchJobTriggerFromProjectJobTriggerName(projectJobTriggerName) {
+    return this._pathTemplates.projectJobTriggerPathTemplate.match(
+      projectJobTriggerName
+    ).job_trigger;
   }
 
   /**

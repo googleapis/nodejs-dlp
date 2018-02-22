@@ -435,6 +435,26 @@ var StorageConfig = {
 };
 
 /**
+ * Row key for identifying a record in BigQuery table.
+ *
+ * @property {Object} tableReference
+ *   Complete BigQuery table reference.
+ *
+ *   This object should have the same structure as [BigQueryTable]{@link google.privacy.dlp.v2beta2.BigQueryTable}
+ *
+ * @property {number} rowNumber
+ *   Absolute number of the row from the beginning of the table at the time
+ *   of scanning.
+ *
+ * @typedef BigQueryKey
+ * @memberof google.privacy.dlp.v2beta2
+ * @see [google.privacy.dlp.v2beta2.BigQueryKey definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2beta2/storage.proto}
+ */
+var BigQueryKey = {
+  // This is for documentation. Actual contents will be loaded by gRPC.
+};
+
+/**
  * Record key for a finding in a Cloud Storage file.
  *
  * @property {string} filePath
@@ -540,6 +560,9 @@ var Key = {
  *
  * @property {Object} datastoreKey
  *   This object should have the same structure as [DatastoreKey]{@link google.privacy.dlp.v2beta2.DatastoreKey}
+ *
+ * @property {Object} bigQueryKey
+ *   This object should have the same structure as [BigQueryKey]{@link google.privacy.dlp.v2beta2.BigQueryKey}
  *
  * @typedef RecordKey
  * @memberof google.privacy.dlp.v2beta2
