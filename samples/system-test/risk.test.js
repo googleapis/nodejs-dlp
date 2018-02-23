@@ -54,7 +54,7 @@ test.after.always(async () => {
 });
 
 // numericalRiskAnalysis
-test(`should perform numerical risk analysis`, async t => {
+test.skip(`should perform numerical risk analysis`, async t => {
   console.log(`${cmd} numerical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName}`);
   const output = await tools.runAsync(
     `${cmd} numerical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName}`,
@@ -73,7 +73,7 @@ test(`should handle numerical risk analysis errors`, async t => {
 });
 
 // categoricalRiskAnalysis
-test(`should perform categorical risk analysis on a string field`, async t => {
+test.skip(`should perform categorical risk analysis on a string field`, async t => {
   const output = await tools.runAsync(
     `${cmd} categorical ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName}`,
     cwd
@@ -81,7 +81,7 @@ test(`should perform categorical risk analysis on a string field`, async t => {
   t.regex(output, /Most common value occurs \d time\(s\)/);
 });
 
-test(`should perform categorical risk analysis on a number field`, async t => {
+test.skip(`should perform categorical risk analysis on a number field`, async t => {
   const output = await tools.runAsync(
     `${cmd} categorical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName}`,
     cwd
@@ -98,7 +98,7 @@ test(`should handle categorical risk analysis errors`, async t => {
 });
 
 // kAnonymityAnalysis
-test(`should perform k-anonymity analysis on a single field`, async t => {
+test.skip(`should perform k-anonymity analysis on a single field`, async t => {
   const output = await tools.runAsync(
     `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField}`,
     cwd
@@ -107,7 +107,7 @@ test(`should perform k-anonymity analysis on a single field`, async t => {
   t.regex(output, /Class size: \d/);
 });
 
-test(`should perform k-anonymity analysis on multiple fields`, async t => {
+test.skip(`should perform k-anonymity analysis on multiple fields`, async t => {
   const output = await tools.runAsync(
     `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} ${repeatedField}`,
     cwd
@@ -125,7 +125,7 @@ test(`should handle k-anonymity analysis errors`, async t => {
 });
 
 // kMapAnalysis
-test(`should perform k-map analysis on a single field`, async t => {
+test.skip(`should perform k-map analysis on a single field`, async t => {
   const output = await tools.runAsync(
     `${cmd} kMap ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} -t AGE`,
     cwd
@@ -135,7 +135,7 @@ test(`should perform k-map analysis on a single field`, async t => {
   t.regex(output, /Values: \d{2}/);
 });
 
-test(`should perform k-map analysis on multiple fields`, async t => {
+test.skip(`should perform k-map analysis on multiple fields`, async t => {
   const output = await tools.runAsync(
     `${cmd} kMap ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} ${stringBooleanField} -t AGE GENDER`,
     cwd
@@ -162,7 +162,7 @@ test(`should check that numbers of quasi-ids and info types are equal`, async t 
 });
 
 // lDiversityAnalysis
-test(`should perform l-diversity analysis on a single field`, async t => {
+test.skip(`should perform l-diversity analysis on a single field`, async t => {
   const output = await tools.runAsync(
     `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField}`,
     cwd
@@ -172,7 +172,7 @@ test(`should perform l-diversity analysis on a single field`, async t => {
   t.regex(output, /Sensitive value James occurs \d time\(s\)/);
 });
 
-test(`should perform l-diversity analysis on multiple fields`, async t => {
+test.skip(`should perform l-diversity analysis on multiple fields`, async t => {
   const output = await tools.runAsync(
     `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField} ${repeatedField}`,
     cwd
