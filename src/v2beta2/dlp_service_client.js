@@ -199,6 +199,7 @@ class DlpServiceClient {
       'getJobTrigger',
       'deleteJobTrigger',
       'updateJobTrigger',
+      'createJobTrigger',
     ];
     for (let methodName of dlpServiceStubMethods) {
       this._innerApiCalls[methodName] = gax.createApiCall(
@@ -2082,6 +2083,62 @@ class DlpServiceClient {
     options = options || {};
 
     return this._innerApiCalls.updateJobTrigger(request, options, callback);
+  }
+
+  /**
+   * Creates a job to run DLP actions such as scanning storage for sensitive
+   * information on a set schedule.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {Object} [request.jobTrigger]
+   *   The JobTrigger to create.
+   *
+   *   This object should have the same structure as [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}
+   * @param {string} [request.triggerId]
+   *   The trigger id can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {Object} [options]
+   *   Optional parameters. You can override the default settings for this call, e.g, timeout,
+   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the details.
+   * @param {function(?Error, ?Object)} [callback]
+   *   The function which will be called with the result of the API call.
+   *
+   *   The second parameter to the callback is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2beta2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   *
+   * @example
+   *
+   * const dlp = require('@google-cloud/dlp');
+   *
+   * var client = new dlp.v2beta2.DlpServiceClient({
+   *   // optional auth parameters.
+   * });
+   *
+   * var formattedParent = client.projectPath('[PROJECT]');
+   * client.createJobTrigger({parent: formattedParent})
+   *   .then(responses => {
+   *     var response = responses[0];
+   *     // doThingsWith(response)
+   *   })
+   *   .catch(err => {
+   *     console.error(err);
+   *   });
+   */
+  createJobTrigger(request, options, callback) {
+    if (options instanceof Function && callback === undefined) {
+      callback = options;
+      options = {};
+    }
+    options = options || {};
+
+    return this._innerApiCalls.createJobTrigger(request, options, callback);
   }
 
   // --------------------

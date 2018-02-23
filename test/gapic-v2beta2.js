@@ -1557,6 +1557,70 @@ describe('DlpServiceClient', () => {
       });
     });
   });
+
+  describe('createJobTrigger', () => {
+    it('invokes createJobTrigger without error', done => {
+      var client = new dlpModule.v2beta2.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var formattedParent = client.projectPath('[PROJECT]');
+      var request = {
+        parent: formattedParent,
+      };
+
+      // Mock response
+      var name = 'name3373707';
+      var displayName = 'displayName1615086568';
+      var description = 'description-1724546052';
+      var expectedResponse = {
+        name: name,
+        displayName: displayName,
+        description: description,
+      };
+
+      // Mock Grpc layer
+      client._innerApiCalls.createJobTrigger = mockSimpleGrpcMethod(
+        request,
+        expectedResponse
+      );
+
+      client.createJobTrigger(request, (err, response) => {
+        assert.ifError(err);
+        assert.deepStrictEqual(response, expectedResponse);
+        done();
+      });
+    });
+
+    it('invokes createJobTrigger with error', done => {
+      var client = new dlpModule.v2beta2.DlpServiceClient({
+        credentials: {client_email: 'bogus', private_key: 'bogus'},
+        projectId: 'bogus',
+      });
+
+      // Mock request
+      var formattedParent = client.projectPath('[PROJECT]');
+      var request = {
+        parent: formattedParent,
+      };
+
+      // Mock Grpc layer
+      client._innerApiCalls.createJobTrigger = mockSimpleGrpcMethod(
+        request,
+        null,
+        error
+      );
+
+      client.createJobTrigger(request, (err, response) => {
+        assert(err instanceof Error);
+        assert.equal(err.code, FAKE_STATUS_CODE);
+        assert(typeof response === 'undefined');
+        done();
+      });
+    });
+  });
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
