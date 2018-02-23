@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2017 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,7 +22,7 @@
  * @namespace google.cloud.dlp
  */
 /**
- * @namespace google.cloud.dlp.v2beta1
+ * @namespace google.cloud.dlp.v2beta2
  */
 
 'use strict';
@@ -30,17 +30,18 @@
 // Import the clients for each version supported by this package.
 const gapic = Object.freeze({
   v2beta1: require('./v2beta1'),
+  v2beta2: require('./v2beta2'),
 });
 
 /**
  * The `@google-cloud/dlp` package has the following named exports:
  *
  * - `DlpServiceClient` - Reference to
- *   {@link v2beta1.DlpServiceClient}
- * - `v2beta1` - This is used for selecting or pinning a
+ *   {@link v2beta2.DlpServiceClient}
+ * - `v2beta2` - This is used for selecting or pinning a
  *   particular backend service version. It exports:
  *     - `DlpServiceClient` - Reference to
- *       {@link v2beta1.DlpServiceClient}
+ *       {@link v2beta2.DlpServiceClient}
  *
  * @module {object} @google-cloud/dlp
  * @alias nodejs-dlp
@@ -64,16 +65,17 @@ const gapic = Object.freeze({
 /**
  * @type {object}
  * @property {constructor} DlpServiceClient
- *   Reference to {@link v2beta1.DlpServiceClient}
+ *   Reference to {@link v2beta2.DlpServiceClient}
  */
-module.exports = gapic.v2beta1;
+module.exports = gapic.v2beta2;
 
 /**
  * @type {object}
  * @property {constructor} DlpServiceClient
- *   Reference to {@link v2beta1.DlpServiceClient}
+ *   Reference to {@link v2beta2.DlpServiceClient}
  */
 module.exports.v2beta1 = gapic.v2beta1;
+module.exports.v2beta2 = gapic.v2beta2;
 
 // Alias `module.exports` as `module.exports.default`, for future-proofing.
 module.exports.default = Object.assign({}, module.exports);
