@@ -19,7 +19,7 @@
 const projectId = process.env['GCLOUD_PROJECT'];
 
 // Imports the Google Cloud Data Loss Prevention library
-const DLP = require('@google-cloud/dlp');
+const DLP = require('@google-cloud/dlp').v2beta2;
 
 // Instantiates a client
 const dlp = new DLP.DlpServiceClient();
@@ -39,19 +39,19 @@ const infoTypes = [{name: 'MALE_NAME'}, {name: 'FEMALE_NAME'}];
 // Whether to include the matching string
 const includeQuote = true;
 
-// Construct items to inspect
+// Construct item to inspect
 const item = {type: 'text/plain', value: string};
 
 // Construct request
 const request = {
+  parent: dlp.projectPath(projectId),
   inspectConfig: {
     infoTypes: infoTypes,
     minLikelihood: minLikelihood,
     maxFindings: maxFindings,
-    includeQuote: includeQuote,
+    includeQuote: includeQuote
   },
-  item: item,
-  parent: dlp.projectPath(projectId),
+  item: item
 };
 
 // Run request
