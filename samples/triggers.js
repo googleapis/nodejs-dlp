@@ -28,7 +28,7 @@ function createTrigger (
 ) {
   // [START dlp_create_trigger]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -94,7 +94,7 @@ function createTrigger (
       triggers: [
         {
           schedule: {
-            reccurrencePeriodDuration: {
+            recurrencePeriodDuration: {
               seconds: 60 * 60 * 24 // Trigger the scan daily
             }
           }
@@ -120,7 +120,7 @@ function createTrigger (
 function listTriggers (callingProjectId) {
   // [START dlp_list_triggers]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp');
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -167,7 +167,7 @@ function listTriggers (callingProjectId) {
 function deleteTrigger (triggerId) {
   // [START dlp_delete_trigger]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();

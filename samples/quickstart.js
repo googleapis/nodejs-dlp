@@ -17,13 +17,16 @@
 
 // [START dlp_quickstart]
 // Imports the Google Cloud Data Loss Prevention library
-const DLP = require('@google-cloud/dlp').v2beta2;
+const DLP = require('@google-cloud/dlp').v2;
 
 // Instantiates a client
 const dlp = new DLP.DlpServiceClient();
 
 // The string to inspect
 const string = 'Robert Frost';
+
+// The project ID to run the API call under
+const projectId = process.env.GCLOUD_PROJECT;
 
 // The minimum likelihood required before returning a match
 const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
@@ -32,7 +35,7 @@ const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 const maxFindings = 0;
 
 // The infoTypes of information to match
-const infoTypes = [{name: 'US_MALE_NAME'}, {name: 'US_FEMALE_NAME'}];
+const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
 
 // Whether to include the matching string
 const includeQuote = true;
@@ -56,7 +59,7 @@ const request = {
 dlp
   .inspectContent(request)
   .then(response => {
-    const findings = response[0].results[0].findings;
+    const findings = response[0].result.findings;
     if (findings.length > 0) {
       console.log(`Findings:`);
       findings.forEach(finding => {

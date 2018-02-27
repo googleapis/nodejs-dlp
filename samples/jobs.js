@@ -18,7 +18,7 @@
 function listJobs (projectId, filter, jobType) {
   // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -66,7 +66,7 @@ function listJobs (projectId, filter, jobType) {
 function deleteJob (projectId, jobName) {
   // [START dlp_delete_job]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();

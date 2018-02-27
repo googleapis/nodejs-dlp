@@ -23,7 +23,7 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
   const fs = require('fs');
 
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -43,19 +43,21 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
   // The local path to save the resulting image to.
   // const outputPath = 'result.png';
 
-  const fileItem = {
-    type: mime.getType(filepath) || 'application/octet-stream',
-    data: Buffer.from(fs.readFileSync(filepath)).toString('base64')
-  };
-
   const imageRedactionConfigs = infoTypes.map(infoType => {
     return {infoType: infoType};
   });
 
+  // Load image
+  const fileTypeConstant = ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(mime.getType(filepath)) + 1;
+  const fileBytes = Buffer.from(fs.readFileSync(filepath)).toString('base64');
+
+  // Construct image redaction request
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    imageType: fileItem.type,
-    imageData: fileItem.data,
+    byteItem: {
+      type: fileTypeConstant,
+      data: fileBytes
+    },
     inspectConfig: {
       minLikelihood: minLikelihood,
       infoTypes: infoTypes
@@ -63,6 +65,7 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
     imageRedactionConfigs: imageRedactionConfigs
   };
 
+  // Run image redaction request
   dlp
     .redactImage(request)
     .then(response => {

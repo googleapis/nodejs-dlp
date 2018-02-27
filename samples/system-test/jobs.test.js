@@ -32,13 +32,13 @@ test.before(tools.checkCredentials);
 // Helper function for creating test jobs
 const createTestJob = async () => {
   // Initialize client library
-  const DLP = require('@google-cloud/dlp');
+  const DLP = require('@google-cloud/dlp').v2;
   const dlp = new DLP.DlpServiceClient();
 
   // Construct job request
   const request = {
     parent: dlp.projectPath(testCallingProjectId),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         categoricalStatsConfig: {
           field: {
@@ -56,7 +56,7 @@ const createTestJob = async () => {
 
   // Create job
   return dlp
-    .analyzeDataSourceRisk(request)
+    .createDlpJob(request)
     .then(response => {
       return response[0].name;
     });

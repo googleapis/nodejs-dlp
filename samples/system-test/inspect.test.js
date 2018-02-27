@@ -40,9 +40,6 @@ test.before(async () => {
     .then(response => {
       subscription = response[0];
     });
-
-  console.log(`TOPIC ${topicName}`);
-  console.log(`SUBSCRIPTION ${subscriptionName}`);
 });
 
 // Delete custom topic/subscription

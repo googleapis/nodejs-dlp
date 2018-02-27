@@ -21,7 +21,7 @@ const tools = require('@google-cloud/nodejs-repo-tools');
 const cmd = `node templates.js`;
 let templateName = '';
 
-const INFO_TYPE = `US_CENSUS_NAME`;
+const INFO_TYPE = `PERSON_NAME`;
 const MIN_LIKELIHOOD = `VERY_LIKELY`;
 const MAX_FINDINGS = 5;
 const INCLUDE_QUOTE = false;

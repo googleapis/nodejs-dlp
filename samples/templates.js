@@ -225,7 +225,7 @@ const cli = require(`yargs`) // eslint-disable-line
     global: true
   })
   .example(
-    `node $0 create -m VERY_LIKELY -t US_CENSUS_NAME -f 5 -q false`
+    `node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false`
   )
   .wrap(120)
   .recommendCommands()

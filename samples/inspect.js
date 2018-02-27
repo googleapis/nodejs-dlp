@@ -27,7 +27,7 @@ function inspectString (
 ) {
   // [START dlp_inspect_string]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -101,7 +101,7 @@ function inspectFile (
 ) {
   // [START dlp_inspect_file]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -129,9 +129,13 @@ function inspectFile (
   // const includeQuote = true;
 
   // Construct file data to inspect
-  const fileItem = {
-    type: mime.getType(filepath) || 'application/octet-stream',
-    data: Buffer.from(fs.readFileSync(filepath)).toString('base64')
+  const fileTypeConstant = ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(mime.getType(filepath)) + 1;
+  const fileBytes = Buffer.from(fs.readFileSync(filepath)).toString('base64');
+  const item = {
+    byteItem: {
+      type: fileTypeConstant,
+      data: fileBytes
+    }
   };
 
   // Construct request
@@ -145,7 +149,7 @@ function inspectFile (
         maxFindingsPerRequest: maxFindings
       }
     },
-    item: fileItem
+    item: item
   };
 
   // Run request
@@ -184,7 +188,7 @@ function inspectGCSFile (
 ) {
   // [START dlp_inspect_gcs]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -229,7 +233,7 @@ function inspectGCSFile (
   // Construct request for creating an inspect job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    inspectJob: {
       inspectConfig: {
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
@@ -255,7 +259,7 @@ function inspectGCSFile (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.inspectDataSource(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -316,7 +320,7 @@ function inspectDatastore (
 ) {
   // [START dlp_inspect_datastore]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -367,7 +371,7 @@ function inspectDatastore (
   // Construct request for creating an inspect job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    inspectJob: {
       inspectConfig: {
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
@@ -393,7 +397,7 @@ function inspectDatastore (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.inspectDataSource(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -454,7 +458,7 @@ function inspectBigquery (
 ) {
   // [START dlp_inspect_bigquery]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -506,7 +510,7 @@ function inspectBigquery (
   // Construct request for creating an inspect job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    inspectJob: {
       inspectConfig: {
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
@@ -532,7 +536,7 @@ function inspectBigquery (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.inspectDataSource(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;

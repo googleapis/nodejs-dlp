@@ -18,7 +18,7 @@
 function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberToMask) {
   // [START dlp_deidentify_masking]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -82,7 +82,7 @@ function deidentifyWithDateShift (
 ) {
   // [START dlp_deidentify_date_shift]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -210,7 +210,7 @@ function deidentifyWithDateShift (
 function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, keyName, wrappedKey) {
   // [START dlp_deidentify_fpe]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -295,7 +295,7 @@ function reidentifyWithFpe (
 ) {
   // [START reidentify_fpe]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();

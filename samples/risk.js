@@ -26,7 +26,7 @@ function numericalRiskAnalysis (
 ) {
   // [START dlp_numerical_stats]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -68,7 +68,7 @@ function numericalRiskAnalysis (
   // Construct request for creating a risk analysis job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         numericalStatsConfig: {
           field: {
@@ -97,7 +97,7 @@ function numericalRiskAnalysis (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.analyzeDataSourceRisk(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -168,7 +168,7 @@ function categoricalRiskAnalysis (
 ) {
   // [START dlp_categorical_stats]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -209,7 +209,7 @@ function categoricalRiskAnalysis (
   // Construct request for creating a risk analysis job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         categoricalStatsConfig: {
           field: {
@@ -238,7 +238,7 @@ function categoricalRiskAnalysis (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.analyzeDataSourceRisk(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -301,7 +301,7 @@ function kAnonymityAnalysis (
 ) {
   // [START dlp_k_anonymity]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -342,7 +342,7 @@ function kAnonymityAnalysis (
   // Construct request for creating a risk analysis job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         kAnonymityConfig: {
           quasiIds: quasiIds
@@ -369,7 +369,7 @@ function kAnonymityAnalysis (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.analyzeDataSourceRisk(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -432,7 +432,7 @@ function lDiversityAnalysis (
 ) {
   // [START dlp_l_diversity]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -476,7 +476,7 @@ function lDiversityAnalysis (
   // Construct request for creating a risk analysis job
   const request = {
     parent: dlp.projectPath(callingProjectId),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         lDiversityConfig: {
           quasiIds: quasiIds,
@@ -506,7 +506,7 @@ function lDiversityAnalysis (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.analyzeDataSourceRisk(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
@@ -577,7 +577,7 @@ function kMapEstimationAnalysis (
 ) {
   // [START k_map]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2beta2;
+  const DLP = require('@google-cloud/dlp').v2;
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
@@ -623,7 +623,7 @@ function kMapEstimationAnalysis (
   // Construct request for creating a risk analysis job
   const request = {
     parent: dlp.projectPath(process.env.GCLOUD_PROJECT),
-    jobConfig: {
+    riskJob: {
       privacyMetric: {
         kMapEstimationConfig: {
           quasiIds: quasiIds,
@@ -651,7 +651,7 @@ function kMapEstimationAnalysis (
       return topicResponse[0].subscription(subscriptionId);
     }).then(subscriptionResponse => {
       subscription = subscriptionResponse;
-      return dlp.analyzeDataSourceRisk(request);
+      return dlp.createDlpJob(request);
     }).then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
