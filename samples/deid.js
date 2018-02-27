@@ -15,13 +15,16 @@
 
 'use strict';
 
-function deidentifyWithMask(string, maskingCharacter, numberToMask) {
+function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberToMask) {
   // [START dlp_deidentify_masking]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp');
+  const DLP = require('@google-cloud/dlp').v2beta2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
@@ -34,8 +37,9 @@ function deidentifyWithMask(string, maskingCharacter, numberToMask) {
   // const maskingCharacter = 'x';
 
   // Construct deidentification request
-  const items = [{type: 'text/plain', value: string}];
+  const item = {type: 'text/plain', value: string};
   const request = {
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
@@ -43,22 +47,22 @@ function deidentifyWithMask(string, maskingCharacter, numberToMask) {
             primitiveTransformation: {
               characterMaskConfig: {
                 maskingCharacter: maskingCharacter,
-                numberToMask: numberToMask,
-              },
-            },
-          },
-        ],
-      },
+                numberToMask: numberToMask
+              }
+            }
+          }
+        ]
+      }
     },
-    items: items,
+    item: item
   };
 
   // Run deidentification request
   dlp
     .deidentifyContent(request)
     .then(response => {
-      const deidentifiedItems = response[0].items;
-      console.log(deidentifiedItems[0].value);
+      const deidentifiedItem = response[0].item;
+      console.log(deidentifiedItem.value);
     })
     .catch(err => {
       console.log(`Error in deidentifyWithMask: ${err.message || err}`);
@@ -66,19 +70,159 @@ function deidentifyWithMask(string, maskingCharacter, numberToMask) {
   // [END dlp_deidentify_masking]
 }
 
-function deidentifyWithFpe(string, alphabet, keyName, wrappedKey) {
-  // [START dlp_deidentify_fpe]
+function deidentifyWithDateShift (
+  callingProjectId, 
+  csvFile,
+  dateFields,
+  lowerBoundDays,
+  upperBoundDays,
+  contextFieldId,
+  wrappedKey,
+  keyName
+) {
+  // [START dlp_deidentify_date_shift]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp');
+  const DLP = require('@google-cloud/dlp').v2beta2;
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
+
+  // Import other required libraries
+  const fs = require('fs');
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
+
+  // The path to the CSV file to deidentify
+  // The first row of the file must specify column names, and all other rows
+  // must contain valid values
+  // const csvFile = '/path/to/file.csv';
+
+  // The list of (date) fields in the CSV file to date shift
+  // const dateFields = [{ name: 'birth_date'}, { name: 'register_date' }];
+
+  // The maximum number of days to shift a date backward
+  // const lowerBoundDays = 1;
+
+  // The maximum number of days to shift a date forward
+  // const upperBoundDays = 1;
+
+  // (Optional) The column to determine date shift amount based on
+  // If this is not specified, a random shift amount will be used for every row
+  // If this is specified, then 'wrappedKey' and 'keyName' must also be set
+  // const contextFieldId = [{ name: 'user_id' }];
+
+  // (Optional) The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
+  // If this is specified, then 'wrappedKey' and 'contextFieldId' must also be set
+  // const keyName = 'projects/YOUR_GCLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
+
+  // (Optional) The encrypted ('wrapped') AES-256 key to use when shifting dates
+  // This key should be encrypted using the Cloud KMS key specified above
+  // If this is specified, then 'keyName' and 'contextFieldId' must also be set
+  // const wrappedKey = 'YOUR_ENCRYPTED_AES_256_KEY'
+
+  // Helper function for converting CSV rows to Protobuf types
+  const rowToProto = (row) => {
+    const values = row.split(',');
+    const convertedValues = values.map(value => {
+      if (Date.parse(value)) {
+        const date = new Date(value);
+        return {
+          dateValue: {
+            year: date.getFullYear(),
+            month: date.getMonth() + 1,
+            day: date.getDate()
+          }
+        };
+      } else {
+        // Convert all non-date values to strings
+        return { stringValue: value.toString() };
+      }
+    });
+    return { values: convertedValues };
+  }
+
+  // Read and parse a CSV file
+  const csvLines = fs.readFileSync(csvFile).toString().split('\n');
+  const csvHeaders = csvLines[0].split(',');
+  const csvRows = csvLines.slice(1);
+
+  // Construct the table object
+  const tableItem = {
+    type: 'text/csv',
+    table: {
+      headers: csvHeaders.map(header => { return { name: header }}),
+      rows: csvRows.map(row => rowToProto(row))
+    }
+  };
+
+  // Construct DateShiftConfig
+  const dateShiftConfig = {
+    lowerBoundDays: lowerBoundDays,
+    upperBoundDays: upperBoundDays
+  };
+
+  if (contextFieldId && keyName && wrappedKey) {
+    dateShiftConfig.context = { name: contextFieldId }
+    dateShiftConfig.method = {
+      cryptoKey: {
+        kmsWrapped: {
+          wrappedKey: wrappedKey,
+          cryptoKeyName: keyName
+        }
+      }
+    }
+  } else if (contextFieldId || keyName || wrappedKey) {
+    throw 'You must set either ALL or NONE of {contextFieldId, keyName, wrappedKey}!';
+  }
+
+  // Construct deidentification request
+  const request = {
+    parent: dlp.projectPath(callingProjectId),
+    deidentifyConfig: {
+      recordTransformations: {
+        fieldTransformations: [{
+          fields: dateFields,
+          primitiveTransformation: {
+            dateShiftConfig: dateShiftConfig
+          }
+        }]
+      }
+    },
+    item: tableItem
+  };
+
+  console.log(JSON.stringify(request, null, 2))
+
+  // Run deidentification request
+  dlp
+    .deidentifyContent(request)
+    .then(response => {
+      const deidentifiedItem = response[0].item;
+      console.log(deidentifiedItem.value);
+    })
+    .catch(err => {
+      console.log(`Error in deidentifyWithDateShift: ${err.message || err}`);
+    });
+  // [END deidentify_date_shift]
+}
+
+function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, keyName, wrappedKey) {
+  // [START dlp_deidentify_fpe]
+  // Imports the Google Cloud Data Loss Prevention library
+  const DLP = require('@google-cloud/dlp').v2beta2;
+
+  // Instantiates a client
+  const dlp = new DLP.DlpServiceClient();
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
 
   // The set of characters to replace sensitive ones with
-  // For more information, see https://cloud.google.com/dlp/docs/reference/rest/v2beta1/content/deidentify#FfxCommonNativeAlphabet
+  // For more information, see https://cloud.google.com/dlp/docs/reference/rest/v2beta2/organizations.deidentifyTemplates#ffxcommonnativealphabet
   // const alphabet = 'ALPHA_NUMERIC';
 
   // The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
@@ -88,40 +232,146 @@ function deidentifyWithFpe(string, alphabet, keyName, wrappedKey) {
   // This key should be encrypted using the Cloud KMS key specified above
   // const wrappedKey = 'YOUR_ENCRYPTED_AES_256_KEY'
 
+  // (Optional) The name of the surrogate custom info type to use
+  // Only necessary if you want to reverse the deidentification process
+  // Can be essentially any arbitrary string, as long as it doesn't appear
+  // in your dataset otherwise. (TODO verify this)
+  // const surrogateType = 'SOME_INFO_TYPE_DEID';
+
+  // Construct FPE config
+  const cryptoReplaceFfxFpeConfig = {
+    cryptoKey: {
+      kmsWrapped: {
+        wrappedKey: wrappedKey,
+        cryptoKeyName: keyName
+      }
+    },
+    commonAlphabet: alphabet
+  };
+  if (surrogateType) {
+    cryptoReplaceFfxFpeConfig.surrogateInfoType = {
+      name: surrogateType
+    };
+  }
+
   // Construct deidentification request
-  const items = [{type: 'text/plain', value: string}];
+  const item = {type: 'text/plain', value: string};
   const request = {
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
           {
             primitiveTransformation: {
-              cryptoReplaceFfxFpeConfig: {
-                cryptoKey: {
-                  kmsWrapped: {
-                    wrappedKey: wrappedKey,
-                    cryptoKeyName: keyName,
-                  },
-                },
-                commonAlphabet: alphabet,
-              },
-            },
-          },
-        ],
-      },
+              cryptoReplaceFfxFpeConfig: cryptoReplaceFfxFpeConfig
+            }
+          }
+        ]
+      }
     },
-    items: items,
+    item: item
   };
 
   // Run deidentification request
   dlp
     .deidentifyContent(request)
     .then(response => {
-      const deidentifiedItems = response[0].items;
-      console.log(deidentifiedItems[0].value);
+      const deidentifiedItem = response[0].item;
+      console.log(deidentifiedItem.value);
     })
     .catch(err => {
       console.log(`Error in deidentifyWithFpe: ${err.message || err}`);
+    });
+  // [END deidentify_fpe]
+}
+
+function reidentifyWithFpe (
+  callingProjectId, 
+  string, 
+  alphabet, 
+  surrogateType, 
+  keyName, 
+  wrappedKey
+) {
+  // [START reidentify_fpe]
+  // Imports the Google Cloud Data Loss Prevention library
+  const DLP = require('@google-cloud/dlp').v2beta2;
+
+  // Instantiates a client
+  const dlp = new DLP.DlpServiceClient();
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
+
+  // The string to reidentify
+  // const string = 'My SSN is PHONE_TOKEN(9):#########';
+
+  // The set of characters to replace sensitive ones with
+  // For more information, see https://cloud.google.com/dlp/docs/reference/rest/v2beta2/organizations.deidentifyTemplates#ffxcommonnativealphabet
+  // const alphabet = 'ALPHA_NUMERIC';
+
+  // The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
+  // const keyName = 'projects/YOUR_GCLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
+
+  // The encrypted ('wrapped') AES-256 key to use
+  // This key should be encrypted using the Cloud KMS key specified above
+  // const wrappedKey = 'YOUR_ENCRYPTED_AES_256_KEY'
+
+  // The name of the surrogate custom info type to use when reidentifying data
+  // const surrogateType = 'SOME_INFO_TYPE_DEID';
+
+  // Construct deidentification request
+  const item = {type: 'text/*', value: string};
+  const request = {
+    parent: dlp.projectPath(callingProjectId),
+    reidentifyConfig: {
+      infoTypeTransformations: {
+        transformations: [
+          {
+            infoTypes: [{
+              name: surrogateType
+            }],
+            primitiveTransformation: {
+              cryptoReplaceFfxFpeConfig: {
+                cryptoKey: {
+                  kmsWrapped: {
+                    wrappedKey: wrappedKey,
+                    cryptoKeyName: keyName
+                  }
+                },
+                commonAlphabet: alphabet,
+                surrogateInfoType: {
+                  name: surrogateType
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    inspectConfig: {
+      customInfoTypes: [
+        {
+          infoType: {
+            name: surrogateType
+          },
+          surrogateType: {
+          }
+        }
+      ]
+    },
+    item: item
+  };
+
+  // Run reidentification request
+  dlp
+    .reidentifyContent(request)
+    .then(response => {
+      const reidentifiedItem = response[0].item;
+      console.log(reidentifiedItem.value);
+    })
+    .catch(err => {
+      console.log(`Error in reidentifyWithFpe: ${err.message || err}`);
     });
   // [END dlp_deidentify_fpe]
 }
@@ -129,25 +379,30 @@ function deidentifyWithFpe(string, alphabet, keyName, wrappedKey) {
 const cli = require(`yargs`)
   .demand(1)
   .command(
-    `mask <string>`,
+    `deidMask <string>`,
     `Deidentify sensitive data by masking it with a character.`,
     {
       maskingCharacter: {
         type: 'string',
-        alias: 'c',
-        default: '',
+        alias: 'm',
+        default: ''
       },
       numberToMask: {
         type: 'number',
         alias: 'n',
-        default: 0,
-      },
+        default: 0
+      }
     },
     opts =>
-      deidentifyWithMask(opts.string, opts.maskingCharacter, opts.numberToMask)
+      deidentifyWithMask(
+        opts.callingProjectId,
+        opts.string,
+        opts.maskingCharacter,
+        opts.numberToMask
+      )
   )
   .command(
-    `fpe <string> <wrappedKey> <keyName>`,
+    `deidFpe <string> <wrappedKey> <keyName>`,
     `Deidentify sensitive data using Format Preserving Encryption (FPE).`,
     {
       alphabet: {
@@ -158,21 +413,94 @@ const cli = require(`yargs`)
           'NUMERIC',
           'HEXADECIMAL',
           'UPPER_CASE_ALPHA_NUMERIC',
-          'ALPHA_NUMERIC',
-        ],
+          'ALPHA_NUMERIC'
+        ]
       },
+      surrogateType: {
+        type: 'string',
+        alias: 's',
+        default: ''
+      }
     },
     opts =>
       deidentifyWithFpe(
+        opts.callingProjectId,
         opts.string,
         opts.alphabet,
+        opts.surrogateType,
         opts.keyName,
         opts.wrappedKey
       )
   )
-  .example(`node $0 mask "My SSN is 372819127"`)
+  .command(
+    `reidFpe <string> <surrogateType> <wrappedKey> <keyName>`,
+    `Reidentify sensitive data using Format Preserving Encryption (FPE).`,
+    {
+      alphabet: {
+        type: 'string',
+        alias: 'a',
+        default: 'ALPHA_NUMERIC',
+        choices: [
+          'NUMERIC',
+          'HEXADECIMAL',
+          'UPPER_CASE_ALPHA_NUMERIC',
+          'ALPHA_NUMERIC'
+        ]
+      }
+    },
+    opts =>
+      reidentifyWithFpe(
+        opts.callingProjectId,
+        opts.string,
+        opts.alphabet,
+        opts.surrogateType,
+        opts.keyName,
+        opts.wrappedKey
+      )
+  )
+  .command(
+    `deidDateShift <csvFile> <lowerBoundDays> <upperBoundDays> [dateFields...]`,
+    `Deidentify dates by pseudorandomly shifting them.`,
+    {
+      contextFieldId: {
+        type: 'string',
+        alias: 'w',
+        default: '',
+      },
+      wrappedKey: {
+        type: 'string',
+        alias: 'w',
+        default: '',
+      },
+      keyName: {
+        type: 'string',
+        alias: 'n',
+        default: '',
+      }
+    },
+    opts =>
+      deidentifyWithDateShift(
+        opts.callingProjectId,
+        opts.csvFile,
+        opts.dateFields.map(f => {
+          return {name: f};
+        }),
+        opts.lowerBoundDays,
+        opts.upperBoundDays,
+        opts.contextFieldId,
+        opts.keyName,
+        opts.wrappedKey
+      )
+  )
+  .option('c', {
+    type: 'string',
+    alias: 'callingProjectId',
+    default: process.env.GCLOUD_PROJECT || ''
+  })
+  // TODO UPDATE THESE
+  .example(`node $0 deidMask "My SSN is 372819127"`)
   .example(
-    `node $0 fpe "My SSN is 372819127" <YOUR_ENCRYPTED_AES_256_KEY> <YOUR_KEY_NAME>`
+    `node $0 deidFpe "My SSN is 372819127" <YOUR_ENCRYPTED_AES_256_KEY> <YOUR_KEY_NAME>`
   )
   .wrap(120)
   .recommendCommands()
