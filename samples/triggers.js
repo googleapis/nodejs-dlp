@@ -76,17 +76,10 @@ function createTrigger (
         maxFindingsPerRequest: maxFindings
       }
     },
-    triggers: [{
-      schedule: {
-        seconds: frequency * 3600,
-        nanos: 0
-      }
-    }],
     storageConfig: storageItem
   };
 
   // Construct trigger creation request
-  // TODO this seems redundant...
   const request = {
     parent: dlp.projectPath(callingProjectId),
     jobTrigger: {
