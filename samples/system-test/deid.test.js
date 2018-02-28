@@ -17,6 +17,7 @@
 
 const path = require('path');
 const test = require('ava');
+const fs = require('fs');
 const tools = require('@google-cloud/nodejs-repo-tools');
 
 const cmd = 'node deid.js';
@@ -30,6 +31,12 @@ let labeledFPEString;
 
 const wrappedKey = process.env.DLP_DEID_WRAPPED_KEY;
 const keyName = process.env.DLP_DEID_KEY_NAME;
+
+const csvFile = `resources/dates.csv`;
+const tempOutputFile = path.join(__dirname, `temp.result.csv`);
+const csvContextField = `name`;
+const dateShiftAmount = 30;
+const dateFields = `birth_date register_date`;
 
 test.before(tools.checkCredentials);
 
@@ -106,4 +113,45 @@ test(`should handle FPE decryption errors`, async t => {
     cwd
   );
   t.regex(output, /Error in reidentifyWithFpe/);
+});
+
+// deidentify_date_shift
+test(`should date-shift a CSV file`, async t => {
+  const outputCsvFile = path.join(__dirname, 'dates.result.csv');
+  const output = await tools.runAsync(
+    `${cmd} deidDateShift "${csvFile}" "${outputCsvFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields}`,
+    cwd
+  );
+  t.true(output.includes(`Successfully saved date-shift output to ${outputCsvFile}`));
+  t.not(fs.readFileSync(outputCsvFile).toString(), fs.readFileSync(csvFile).toString());
+});
+
+test(`should date-shift a CSV file using a context field`, async t => {
+  const outputCsvFile = path.join(__dirname, 'dates-context.result.csv');
+  const correctResultFile = 'system-test/resources/date-shift-context.correct.csv';
+  const output = await tools.runAsync(
+    `${cmd} deidDateShift "${csvFile}" "${outputCsvFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields} -f ${csvContextField} -n ${keyName} -w ${wrappedKey}`,
+    cwd
+  );
+  t.true(output.includes(`Successfully saved date-shift output to ${outputCsvFile}`));
+  t.is(fs.readFileSync(outputCsvFile).toString(), fs.readFileSync(correctResultFile).toString());
+});
+
+test(`should require all-or-none of {contextField, wrappedKey, keyName}`, async t => {
+  await t.throws(
+    tools.runAsync(
+      `${cmd} deidDateShift "${csvFile}" "${tempOutputFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields} -f ${csvContextField} -n ${keyName}`,
+      cwd
+    ),
+    Error,
+    /You must set ALL or NONE of/
+  );
+});
+
+test(`should handle date-shift errors`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} deidDateShift "${csvFile}" "${tempOutputFile}" ${dateShiftAmount} ${dateShiftAmount}`,
+    cwd
+  );
+  t.regex(output, /Error in deidentifyWithDateShift/);
 });

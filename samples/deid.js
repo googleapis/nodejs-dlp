@@ -71,8 +71,9 @@ function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberT
 }
 
 function deidentifyWithDateShift (
-  callingProjectId, 
-  csvFile,
+  callingProjectId,
+  inputCsvFile,
+  outputCsvFile,
   dateFields,
   lowerBoundDays,
   upperBoundDays,
@@ -96,7 +97,7 @@ function deidentifyWithDateShift (
   // The path to the CSV file to deidentify
   // The first row of the file must specify column names, and all other rows
   // must contain valid values
-  // const csvFile = '/path/to/file.csv';
+  // const inputCsvFile = '/path/to/file.csv';
 
   // The list of (date) fields in the CSV file to date shift
   // const dateFields = [{ name: 'birth_date'}, { name: 'register_date' }];
@@ -140,10 +141,10 @@ function deidentifyWithDateShift (
       }
     });
     return { values: convertedValues };
-  }
+  };
 
   // Read and parse a CSV file
-  const csvLines = fs.readFileSync(csvFile).toString().split('\n');
+  const csvLines = fs.readFileSync(inputCsvFile).toString().split('\n');
   const csvHeaders = csvLines[0].split(',');
   const csvRows = csvLines.slice(1);
 
@@ -151,7 +152,7 @@ function deidentifyWithDateShift (
   const tableItem = {
     type: 'text/csv',
     table: {
-      headers: csvHeaders.map(header => { return { name: header }}),
+      headers: csvHeaders.map(header => { return { name: header }; }),
       rows: csvRows.map(row => rowToProto(row))
     }
   };
@@ -163,17 +164,15 @@ function deidentifyWithDateShift (
   };
 
   if (contextFieldId && keyName && wrappedKey) {
-    dateShiftConfig.context = { name: contextFieldId }
-    dateShiftConfig.method = {
-      cryptoKey: {
-        kmsWrapped: {
-          wrappedKey: wrappedKey,
-          cryptoKeyName: keyName
-        }
+    dateShiftConfig.context = { name: contextFieldId };
+    dateShiftConfig.cryptoKey = {
+      kmsWrapped: {
+        wrappedKey: wrappedKey,
+        cryptoKeyName: keyName
       }
-    }
+    };
   } else if (contextFieldId || keyName || wrappedKey) {
-    throw 'You must set either ALL or NONE of {contextFieldId, keyName, wrappedKey}!';
+    throw new Error('You must set either ALL or NONE of {contextFieldId, keyName, wrappedKey}!');
   }
 
   // Construct deidentification request
@@ -192,14 +191,24 @@ function deidentifyWithDateShift (
     item: tableItem
   };
 
-  console.log(JSON.stringify(request, null, 2))
-
   // Run deidentification request
   dlp
     .deidentifyContent(request)
     .then(response => {
-      const deidentifiedItem = response[0].item;
-      console.log(deidentifiedItem.value);
+      const tableRows = response[0].item.table.rows;
+
+      // Write results to a CSV file
+      tableRows.forEach((row, rowIndex) => {
+        const rowValues = row.values.map(
+          value => value.stringValue ||
+          `${value.dateValue.month}/${value.dateValue.day}/${value.dateValue.year}`
+        );
+        csvLines[rowIndex + 1] = rowValues.join(',');
+      });
+      fs.writeFileSync(outputCsvFile, csvLines.join('\n'));
+
+      // Print status
+      console.log(`Successfully saved date-shift output to ${outputCsvFile}`);
     })
     .catch(err => {
       console.log(`Error in deidentifyWithDateShift: ${err.message || err}`);
@@ -286,11 +295,11 @@ function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, k
 }
 
 function reidentifyWithFpe (
-  callingProjectId, 
-  string, 
-  alphabet, 
-  surrogateType, 
-  keyName, 
+  callingProjectId,
+  string,
+  alphabet,
+  surrogateType,
+  keyName,
   wrappedKey
 ) {
   // [START reidentify_fpe]
@@ -459,37 +468,38 @@ const cli = require(`yargs`)
       )
   )
   .command(
-    `deidDateShift <csvFile> <lowerBoundDays> <upperBoundDays> [dateFields...]`,
-    `Deidentify dates by pseudorandomly shifting them.`,
+    `deidDateShift <inputCsvFile> <outputCsvFile> <lowerBoundDays> <upperBoundDays> [dateFields...]`,
+    `Deidentify dates in a CSV file by pseudorandomly shifting them.`,
     {
       contextFieldId: {
         type: 'string',
-        alias: 'w',
-        default: '',
+        alias: 'f',
+        default: ''
       },
       wrappedKey: {
         type: 'string',
         alias: 'w',
-        default: '',
+        default: ''
       },
       keyName: {
         type: 'string',
         alias: 'n',
-        default: '',
+        default: ''
       }
     },
     opts =>
       deidentifyWithDateShift(
         opts.callingProjectId,
-        opts.csvFile,
+        opts.inputCsvFile,
+        opts.outputCsvFile,
         opts.dateFields.map(f => {
           return {name: f};
         }),
         opts.lowerBoundDays,
         opts.upperBoundDays,
         opts.contextFieldId,
-        opts.keyName,
-        opts.wrappedKey
+        opts.wrappedKey,
+        opts.keyName
       )
   )
   .option('c', {
