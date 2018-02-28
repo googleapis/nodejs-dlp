@@ -23,6 +23,8 @@ const projectId = process.env.GCLOUD_PROJECT;
 const cmd = `node triggers.js`;
 const triggerName = `my-trigger-${uuid.v4()}`;
 const fullTriggerName = `projects/${projectId}/jobTriggers/${triggerName}`;
+const triggerDisplayName = `My Trigger Display Name: ${uuid.v4()}`;
+const triggerDescription = `My Trigger Description: ${uuid.v4()}`;
 
 const infoType = `US_CENSUS_NAME`;
 const minLikelihood = `VERY_LIKELY`;
@@ -30,13 +32,15 @@ const maxFindings = 5;
 const bucketName = process.env.BUCKET_NAME;
 
 test.serial(`should create a trigger`, async t => {
-  const output = await tools.runAsync(`${cmd} create ${bucketName} 1 -n ${triggerName} -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`);
+  const output = await tools.runAsync(`${cmd} create ${bucketName} 1 -n ${triggerName} -m ${minLikelihood} -t ${infoType} -f ${maxFindings} -d "${triggerDisplayName}" -s "${triggerDescription}"`);
   t.true(output.includes(`Successfully created trigger ${fullTriggerName}`));
 });
 
 test.serial(`should list triggers`, async t => {
   const output = await tools.runAsync(`${cmd} list`);
   t.true(output.includes(`Trigger ${fullTriggerName}`));
+  t.true(output.includes(`Display Name: ${triggerDisplayName}`));
+  t.true(output.includes(`Description: ${triggerDescription}`));
   t.regex(output, /Created: \d{1,2}\/\d{1,2}\/\d{4}/);
   t.regex(output, /Updated: \d{1,2}\/\d{1,2}\/\d{4}/);
   t.regex(output, /Status: HEALTHY/);

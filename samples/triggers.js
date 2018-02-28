@@ -21,7 +21,7 @@ function createTrigger (
   displayName,
   description,
   bucketName,
-  frequency,
+  scanPeriod,
   infoTypes,
   minLikelihood,
   maxFindings
@@ -57,8 +57,8 @@ function createTrigger (
   // The infoTypes of information to match
   // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
 
-  // How often to run the scan, in hours (minimum = 1 hour)
-  // const frequency = 1;
+  // How often to wait between scans, in days (minimum = 1 day)
+  // const scanPeriod = 1;
 
   // Get reference to the bucket to be inspected
   const storageItem = {
@@ -84,11 +84,13 @@ function createTrigger (
     parent: dlp.projectPath(callingProjectId),
     jobTrigger: {
       inspectJob: job,
+      displayName: displayName,
+      description: description,
       triggers: [
         {
           schedule: {
             recurrencePeriodDuration: {
-              seconds: 60 * 60 * 24 // Trigger the scan daily
+              seconds: scanPeriod * 60 * 60 * 24 // Trigger the scan daily
             }
           }
         }
@@ -187,7 +189,7 @@ function deleteTrigger (triggerId) {
 const cli = require(`yargs`) // eslint-disable-line
   .demand(1)
   .command(
-    `create <bucketName> <frequency>`,
+    `create <bucketName> <scanPeriod>`,
     `Create a Data Loss Prevention API job trigger.`,
     {
       infoTypes: {
@@ -242,7 +244,7 @@ const cli = require(`yargs`) // eslint-disable-line
       opts.displayName,
       opts.description,
       opts.bucketName,
-      opts.frequency,
+      opts.scanPeriod,
       opts.infoTypes,
       opts.minLikelihood,
       opts.maxFindings
