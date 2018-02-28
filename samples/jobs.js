@@ -15,7 +15,7 @@
 
 'use strict';
 
-function listJobs (projectId, filter, jobType) {
+function listJobs (callingProject, filter, jobType) {
   // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp').v2;
@@ -24,10 +24,10 @@ function listJobs (projectId, filter, jobType) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const projectId = process.env.GCLOUD_PROJECT;
+  // const callingProject = process.env.GCLOUD_PROJECT;
 
   // The filter expression to use
-  // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2beta2/projects.dlpJobs/list
+  // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs/list
   // const filter = `state=DONE`;
 
   // The type of job to list (either 'INSPECT' or 'REDACT')
@@ -35,7 +35,7 @@ function listJobs (projectId, filter, jobType) {
 
   // Construct request for listing DLP scan jobs
   const request = {
-    parent: dlp.projectPath(projectId),
+    parent: dlp.projectPath(callingProject),
     filter: filter,
     type: jobType
   };
@@ -63,7 +63,7 @@ function listJobs (projectId, filter, jobType) {
   // [END dlp_list_jobs]
 }
 
-function deleteJob (projectId, jobName) {
+function deleteJob (jobName) {
   // [START dlp_delete_job]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp').v2;
@@ -71,12 +71,11 @@ function deleteJob (projectId, jobName) {
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
-  // The project ID to run the API call under
-  // const projectId = process.env.GCLOUD_PROJECT;
+  // The name of the job whose results should be deleted
+  // const jobName = 'projects/my-project/dlpJobs/X-#####'
 
   // Construct job deletion request
   const request = {
-    parent: dlp.projectPath(projectId),
     name: jobName
   };
 
@@ -103,17 +102,17 @@ const cli = require(`yargs`) // eslint-disable-line
         default: 'INSPECT'
       }
     },
-    opts => listJobs(opts.projectId, opts.filter, opts.jobType)
+    opts => listJobs(opts.callingProject, opts.filter, opts.jobType)
   )
   .command(
     `delete <jobName>`,
     `Delete results of a Data Loss Prevention API job.`,
     {},
-    opts => deleteJob(opts.projectId, opts.jobName)
+    opts => deleteJob(opts.callingProject, opts.jobName)
   )
-  .option('p', {
+  .option('c', {
     type: 'string',
-    alias: 'projectId',
+    alias: 'callingProject',
     default: process.env.GCLOUD_PROJECT
   })
   .example(`node $0 list "state=DONE" -t REDACT`)
