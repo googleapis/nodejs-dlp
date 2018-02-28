@@ -15,7 +15,15 @@
 
 'use strict';
 
-function createInspectTemplate (callingProjectId, displayName, infoTypes, includeQuote, minLikelihood, maxFindings) {
+function createInspectTemplate (
+  callingProjectId,
+  templateId,
+  displayName,
+  infoTypes,
+  includeQuote,
+  minLikelihood,
+  maxFindings
+) {
   // [START dlp_create_template]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -38,6 +46,9 @@ function createInspectTemplate (callingProjectId, displayName, infoTypes, includ
   // Whether to include the matching string
   // const includeQuote = true;
 
+  // (Optional) The name of the template to be created.
+  // const templateId = 'my-template';
+
   // The human-readable name to give the template
   // const displayName = 'My template';
 
@@ -57,7 +68,8 @@ function createInspectTemplate (callingProjectId, displayName, infoTypes, includ
     inspectTemplate: {
       inspectConfig: inspectConfig,
       displayName: displayName
-    }
+    },
+    templateId: templateId
   };
 
   dlp.createInspectTemplate(request)
@@ -93,6 +105,7 @@ function listInspectTemplates (callingProjectId) {
     parent: dlp.projectPath(callingProjectId)
   };
 
+  // Run template-deletion request
   dlp.listInspectTemplates(request)
     .then(response => {
       const templates = response[0];
@@ -137,6 +150,7 @@ function deleteInspectTemplate (templateName) {
     name: templateName
   };
 
+  // Run template-deletion request
   dlp.deleteInspectTemplate(request)
     .then(response => {
       console.log(`Successfully deleted template ${templateName}.`);
@@ -188,11 +202,24 @@ const cli = require(`yargs`) // eslint-disable-line
         default: 0,
         type: 'number',
         global: true
+      },
+      templateId: {
+        alias: 'i',
+        default: '',
+        type: 'string',
+        global: true
+      },
+      displayName: {
+        alias: 'd',
+        default: '',
+        type: 'string',
+        global: true
       }
     },
     opts =>
       createInspectTemplate(
         opts.callingProjectId,
+        opts.templateId,
         opts.displayName,
         opts.infoTypes,
         opts.includeQuote,
