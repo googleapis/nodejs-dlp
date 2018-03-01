@@ -309,6 +309,7 @@ function inspectGCSFile (
 
 function inspectDatastore (
   callingProjectId,
+  dataProjectId,
   namespaceId,
   kind,
   topicId,
@@ -316,7 +317,6 @@ function inspectDatastore (
   minLikelihood,
   maxFindings,
   infoTypes
-  // includeQuote
 ) {
   // [START dlp_inspect_datastore]
   // Import the Google Cloud client libraries
@@ -329,6 +329,10 @@ function inspectDatastore (
 
   // The project ID to run the API call under
   // const callingProjectId = process.env.GCLOUD_PROJECT;
+
+  // The project ID the target Datastore is stored under
+  // This may or may not equal the calling project ID
+  // const dataProjectId = process.env.GCLOUD_PROJECT;
 
   // (Optional) The ID namespace of the Datastore document to inspect.
   // To ignore Datastore namespaces, set this to an empty string ('')
@@ -359,7 +363,7 @@ function inspectDatastore (
   const storageItems = {
     datastoreOptions: {
       partitionId: {
-        projectId: callingProjectId,
+        projectId: dataProjectId,
         namespaceId: namespaceId
       },
       kind: {
@@ -447,7 +451,7 @@ function inspectDatastore (
 
 function inspectBigquery (
   callingProjectId,
-  tableProjectId,
+  dataProjectId,
   datasetId,
   tableId,
   topicId,
@@ -470,7 +474,7 @@ function inspectBigquery (
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const dataProjectId = process.env.GCLOUD_PROJECT;
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -500,7 +504,7 @@ function inspectBigquery (
   const storageItem = {
     bigQueryOptions: {
       tableReference: {
-        projectId: tableProjectId,
+        projectId: dataProjectId,
         datasetId: datasetId,
         tableId: tableId
       }
@@ -634,17 +638,11 @@ const cli = require(`yargs`) // eslint-disable-line
   .command(
     `bigquery <datasetName> <tableName> <topicId> <subscriptionId>`,
     `Inspects a BigQuery table using the Data Loss Prevention API using Pub/Sub for job notifications.`,
-    {
-      tableProjectId: {
-        alias: 'p',
-        type: 'string',
-        default: process.env.GCLOUD_PROJECT || ''
-      }
-    },
+    {},
     opts => {
       inspectBigquery(
         opts.callingProjectId,
-        opts.tableProjectId,
+        opts.dataProjectId,
         opts.datasetName,
         opts.tableName,
         opts.topicId,
@@ -668,14 +666,14 @@ const cli = require(`yargs`) // eslint-disable-line
     opts =>
       inspectDatastore(
         opts.callingProjectId,
+        opts.dataProjectId,
         opts.namespaceId,
         opts.kind,
         opts.topicId,
         opts.subscriptionId,
         opts.minLikelihood,
         opts.maxFindings,
-        opts.infoTypes,
-        opts.includeQuote
+        opts.infoTypes
       )
   )
   .option('m', {
@@ -695,6 +693,11 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
+    default: process.env.GCLOUD_PROJECT || ''
+  })
+  .option('p', {
+    type: 'string',
+    alias: 'dataProjectId',
     default: process.env.GCLOUD_PROJECT || ''
   })
   .option('f', {
