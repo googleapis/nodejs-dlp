@@ -621,7 +621,7 @@ const cli = require(`yargs`) // eslint-disable-line
   )
   .command(
     `gcsFile <bucketName> <fileName> <topicId> <subscriptionId>`,
-    `Inspects a text file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.`,
+    `Inspects a file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.`,
     {},
     opts =>
       inspectGCSFile(

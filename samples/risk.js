@@ -269,19 +269,26 @@ function categoricalRiskAnalysis (
     .then(jobName => dlp.getDlpJob({ name: jobName }))
     .then(wrappedJob => {
       const job = wrappedJob[0];
-      const results =
-        job.riskDetails.categoricalStatsResult.valueFrequencyHistogramBuckets[0];
-      console.log(
-        `Most common value occurs ${results.valueFrequencyUpperBound} time(s)`
-      );
-      console.log(
-        `Least common value occurs ${results.valueFrequencyLowerBound} time(s)`
-      );
-      console.log(`${results.bucketSize} unique values total.`);
-      results.bucketValues.forEach(bucket => {
+      const histogramBuckets =
+        job.riskDetails.categoricalStatsResult.valueFrequencyHistogramBuckets;
+      histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
+        console.log(`Bucket ${histogramBucketIdx}:`);
+
+        // Print bucket stats
         console.log(
-          `Value ${getValue(bucket.value)} occurs ${bucket.count} time(s).`
+          `  Most common value occurs ${histogramBucket.valueFrequencyUpperBound} time(s)`
         );
+        console.log(
+          `  Least common value occurs ${histogramBucket.valueFrequencyLowerBound} time(s)`
+        );
+
+        // Print bucket values
+        console.log(`${histogramBucket.bucketSize} unique values total.`);
+        histogramBucket.bucketValues.forEach(valueBucket => {
+          console.log(
+            `  Value ${getValue(valueBucket.value)} occurs ${valueBucket.count} time(s).`
+          );
+        });
       });
     })
     .catch(err => {
@@ -331,7 +338,7 @@ function kAnonymityAnalysis (
   // const subscriptionId = 'MY-PUBSUB-SUBSCRIPTION'
 
   // A set of columns that form a composite key ('quasi-identifiers')
-  // const quasiIds = [{ columnName: 'age' }, { columnName: 'city' }];
+  // const quasiIds = [{ name: 'age' }, { name: 'city' }];
 
   const sourceTable = {
     projectId: tableProjectId,
@@ -400,18 +407,22 @@ function kAnonymityAnalysis (
     .then(jobName => dlp.getDlpJob({ name: jobName }))
     .then(wrappedJob => {
       const job = wrappedJob[0];
-      const results =
-        job.riskDetails.kAnonymityResult.equivalenceClassHistogramBuckets[0];
-      console.log(
-        `Bucket size range: [${results.equivalenceClassSizeLowerBound}, ${
-          results.equivalenceClassSizeUpperBound
-        }]`
-      );
+      const histogramBuckets =
+        job.riskDetails.kAnonymityResult.equivalenceClassHistogramBuckets;
 
-      results.bucketValues.forEach(bucket => {
-        const quasiIdValues = bucket.quasiIdsValues.map(getValue).join(', ');
-        console.log(`  Quasi-ID values: {${quasiIdValues}}`);
-        console.log(`  Class size: ${bucket.equivalenceClassSize}`);
+      histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
+        console.log(`Bucket ${histogramBucketIdx}:`);
+        console.log(
+          `  Bucket size range: [${histogramBucket.equivalenceClassSizeLowerBound}, ${
+            histogramBucket.equivalenceClassSizeUpperBound
+          }]`
+        );
+
+        histogramBucket.bucketValues.forEach(valueBucket => {
+          const quasiIdValues = valueBucket.quasiIdsValues.map(getValue).join(', ');
+          console.log(`  Quasi-ID values: ${quasiIdValues}`);
+          console.log(`  Class size: ${valueBucket.equivalenceClassSize}`);
+        });
       });
     })
     .catch(err => {
@@ -465,7 +476,7 @@ function lDiversityAnalysis (
   // const sensitiveAttribute = 'name';
 
   // A set of columns that form a composite key ('quasi-identifiers')
-  // const quasiIds = [{ columnName: 'age' }, { columnName: 'city' }];
+  // const quasiIds = [{ name: 'age' }, { name: 'city' }];
 
   const sourceTable = {
     projectId: tableProjectId,
