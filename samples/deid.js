@@ -97,7 +97,10 @@ function deidentifyWithDateShift (
   // The path to the CSV file to deidentify
   // The first row of the file must specify column names, and all other rows
   // must contain valid values
-  // const inputCsvFile = '/path/to/file.csv';
+  // const inputCsvFile = '/path/to/input/file.csv';
+
+  // The path to save the date-shifted CSV file to
+  // const outputCsvFile = '/path/to/output/file.csv';
 
   // The list of (date) fields in the CSV file to date shift
   // const dateFields = [{ name: 'birth_date'}, { name: 'register_date' }];
@@ -337,9 +340,6 @@ function reidentifyWithFpe (
       infoTypeTransformations: {
         transformations: [
           {
-            infoTypes: [{
-              name: surrogateType
-            }],
             primitiveTransformation: {
               cryptoReplaceFfxFpeConfig: {
                 cryptoKey: {
@@ -389,7 +389,7 @@ const cli = require(`yargs`)
   .demand(1)
   .command(
     `deidMask <string>`,
-    `Deidentify sensitive data by masking it with a character.`,
+    `Deidentify sensitive data in a string by masking it with a character.`,
     {
       maskingCharacter: {
         type: 'string',
@@ -412,7 +412,7 @@ const cli = require(`yargs`)
   )
   .command(
     `deidFpe <string> <wrappedKey> <keyName>`,
-    `Deidentify sensitive data using Format Preserving Encryption (FPE).`,
+    `Deidentify sensitive data in a string using Format Preserving Encryption (FPE).`,
     {
       alphabet: {
         type: 'string',
@@ -443,7 +443,7 @@ const cli = require(`yargs`)
   )
   .command(
     `reidFpe <string> <surrogateType> <wrappedKey> <keyName>`,
-    `Reidentify sensitive data using Format Preserving Encryption (FPE).`,
+    `Reidentify sensitive data in a string using Format Preserving Encryption (FPE).`,
     {
       alphabet: {
         type: 'string',
