@@ -420,7 +420,7 @@ function kAnonymityAnalysis (
 
         histogramBucket.bucketValues.forEach(valueBucket => {
           const quasiIdValues = valueBucket.quasiIdsValues.map(getValue).join(', ');
-          console.log(`  Quasi-ID values: ${quasiIdValues}`);
+          console.log(`  Quasi-ID values: {${quasiIdValues}}`);
           console.log(`  Class size: ${valueBucket.equivalenceClassSize}`);
         });
       });
@@ -548,25 +548,29 @@ function lDiversityAnalysis (
     .then(jobName => dlp.getDlpJob({ name: jobName }))
     .then(wrappedJob => {
       const job = wrappedJob[0];
-      const results =
+      const histogramBuckets =
         job.riskDetails.lDiversityResult
-          .sensitiveValueFrequencyHistogramBuckets[0];
+          .sensitiveValueFrequencyHistogramBuckets;
 
-      console.log(
-        `Bucket size range: [${results.sensitiveValueFrequencyLowerBound}, ${
-          results.sensitiveValueFrequencyUpperBound
-        }]`
-      );
-      results.bucketValues.forEach(bucket => {
-        const quasiIdValues = bucket.quasiIdsValues.map(getValue).join(', ');
-        console.log(`  Quasi-ID values: {${quasiIdValues}}`);
-        console.log(`  Class size: ${bucket.equivalenceClassSize}`);
-        bucket.topSensitiveValues.forEach(valueObj => {
-          console.log(
-            `    Sensitive value ${getValue(valueObj.value)} occurs ${
-              valueObj.count
-            } time(s).`
-          );
+      histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
+        console.log(`Bucket ${histogramBucketIdx}:`);
+
+        console.log(
+          `Bucket size range: [${histogramBucket.sensitiveValueFrequencyLowerBound}, ${
+            histogramBucket.sensitiveValueFrequencyUpperBound
+          }]`
+        );
+        histogramBucket.bucketValues.forEach(valueBucket => {
+          const quasiIdValues = valueBucket.quasiIdsValues.map(getValue).join(', ');
+          console.log(`  Quasi-ID values: {${quasiIdValues}}`);
+          console.log(`  Class size: ${valueBucket.equivalenceClassSize}`);
+          valueBucket.topSensitiveValues.forEach(valueObj => {
+            console.log(
+              `    Sensitive value ${getValue(valueObj.value)} occurs ${
+                valueObj.count
+              } time(s).`
+            );
+          });
         });
       });
     })
@@ -693,16 +697,17 @@ function kMapEstimationAnalysis (
     .then(jobName => dlp.getDlpJob({ name: jobName }))
     .then(wrappedJob => {
       const job = wrappedJob[0];
-      const buckets =
+      const histogramBuckets =
         job.riskDetails.kMapEstimationResult.kMapEstimationHistogram;
 
-      buckets.forEach(bucket => {
-        console.log(`Anonymity range: [${bucket.minAnonymity}, ${bucket.maxAnonymity}]`);
-        console.log(`Size: ${bucket.bucketSize}`);
-        bucket.bucketValues.forEach(valueList => {
-          const values = valueList.quasiIdsValues.map(value => getValue(value));
-          console.log(`  Values: ${values.join(' ')}`);
-          console.log(`  Estimated k-map anonymity: ${valueList.estimatedAnonymity}`);
+      histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
+        console.log(`Bucket ${histogramBucketIdx}:`);
+        console.log(`  Anonymity range: [${histogramBucket.minAnonymity}, ${histogramBucket.maxAnonymity}]`);
+        console.log(`  Size: ${histogramBucket.bucketSize}`);
+        histogramBucket.bucketValues.forEach(valueBucket => {
+          const values = valueBucket.quasiIdsValues.map(value => getValue(value));
+          console.log(`    Values: ${values.join(' ')}`);
+          console.log(`    Estimated k-map anonymity: ${valueBucket.estimatedAnonymity}`);
         });
       });
     })
