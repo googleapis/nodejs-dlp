@@ -49,7 +49,7 @@ function createInspectTemplate (
   // (Optional) The name of the template to be created.
   // const templateId = 'my-template';
 
-  // The human-readable name to give the template
+  // (Optional) The human-readable name to give the template
   // const displayName = 'My template';
 
   // Construct the inspection configuration for the template
@@ -143,6 +143,7 @@ function deleteInspectTemplate (templateName) {
   const dlp = new DLP.DlpServiceClient();
 
   // The name of the template to delete
+  // Parent project ID is automatically extracted from this parameter
   // const templateName = 'projects/YOUR_PROJECT_ID/inspectTemplates/#####'
 
   // Construct template-deletion request
@@ -251,9 +252,9 @@ const cli = require(`yargs`) // eslint-disable-line
     default: process.env.GCLOUD_PROJECT,
     global: true
   })
-  .example(
-    `node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false`
-  )
+  .example(`node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false -i my-template-id`)
+  .example(`node $0 list`)
+  .example(`node $0 delete projects/my-project/inspectTemplates/#####`)
   .wrap(120)
   .recommendCommands()
   .epilogue(`For more information, see https://cloud.google.com/dlp/docs.`);

@@ -18,7 +18,7 @@
 function listInfoTypes (languageCode, filter) {
   // [START dlp_list_info_types]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();

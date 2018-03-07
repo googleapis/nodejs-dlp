@@ -28,16 +28,13 @@ function createTrigger (
 ) {
   // [START dlp_create_trigger]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
   // const callingProjectId = process.env.GCLOUD_PROJECT;
-
-  // The name of the bucket to scan.
-  // const bucketName = 'YOUR-BUCKET';
 
   // (Optional) The name of the trigger to be created.
   // const triggerId = 'my-trigger';
@@ -48,17 +45,20 @@ function createTrigger (
   // (Optional) A description for the trigger to be created
   // const description = "This is a sample trigger.";
 
+  // The name of the bucket to scan.
+  // const bucketName = 'YOUR-BUCKET';
+
+  // How often to wait between scans, in days (minimum = 1 day)
+  // const scanPeriod = 1;
+
+  // The infoTypes of information to match
+  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
+
   // The minimum likelihood required before returning a match
   // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 
   // The maximum number of findings to report per request (0 = server maximum)
   // const maxFindings = 0;
-
-  // The infoTypes of information to match
-  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
-
-  // How often to wait between scans, in days (minimum = 1 day)
-  // const scanPeriod = 1;
 
   // Get reference to the bucket to be inspected
   const storageItem = {
@@ -115,7 +115,7 @@ function createTrigger (
 function listTriggers (callingProjectId) {
   // [START dlp_list_triggers]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -162,12 +162,13 @@ function listTriggers (callingProjectId) {
 function deleteTrigger (triggerId) {
   // [START dlp_delete_trigger]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
   // The name of the trigger to be deleted
+  // Parent project ID is automatically extracted from this parameter
   // const triggerId = 'projects/my-project/triggers/my-trigger';
 
   // Construct trigger deletion request

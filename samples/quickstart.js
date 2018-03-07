@@ -17,7 +17,7 @@
 
 // [START dlp_quickstart]
 // Imports the Google Cloud Data Loss Prevention library
-const DLP = require('@google-cloud/dlp').v2;
+const DLP = require('@google-cloud/dlp');
 
 // Instantiates a client
 const dlp = new DLP.DlpServiceClient();
@@ -41,7 +41,7 @@ const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
 const includeQuote = true;
 
 // Construct item to inspect
-const item = {type: 'text/plain', value: string};
+const item = { value: string };
 
 // Construct request
 const request = {

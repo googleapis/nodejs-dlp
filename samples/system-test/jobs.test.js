@@ -74,6 +74,11 @@ test(`should list jobs`, async t => {
   t.regex(output, /Job projects\/(\w|-)+\/dlpJobs\/\w-\d+ status: DONE/);
 });
 
+test(`should list jobs of a given type`, async t => {
+  const output = await tools.runAsync(`${cmd} list 'state=DONE' -t RISK_ANALYSIS_JOB`);
+  t.regex(output, /Job projects\/(\w|-)+\/dlpJobs\/r-\d+ status: DONE/);
+});
+
 test(`should handle job listing errors`, async t => {
   const output = await tools.runAsync(`${cmd} list 'state=NOPE'`);
   t.regex(output, /Error in listJobs/);

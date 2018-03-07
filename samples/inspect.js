@@ -27,7 +27,7 @@ function inspectString (
 ) {
   // [START dlp_inspect_string]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -51,7 +51,7 @@ function inspectString (
   // const includeQuote = true;
 
   // Construct item to inspect
-  const item = { type: 'text/plain', value: string };
+  const item = { value: string };
 
   // Construct request
   const request = {
@@ -101,7 +101,7 @@ function inspectFile (
 ) {
   // [START dlp_inspect_file]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -188,11 +188,11 @@ function inspectGCSFile (
 ) {
   // [START dlp_inspect_gcs]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -320,11 +320,11 @@ function inspectDatastore (
 ) {
   // [START dlp_inspect_datastore]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -462,11 +462,11 @@ function inspectBigquery (
 ) {
   // [START dlp_inspect_bigquery]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -621,7 +621,7 @@ const cli = require(`yargs`) // eslint-disable-line
   )
   .command(
     `gcsFile <bucketName> <fileName> <topicId> <subscriptionId>`,
-    `Inspects a file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.`,
+    `Inspects a text file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.`,
     {},
     opts =>
       inspectGCSFile(
@@ -727,9 +727,7 @@ const cli = require(`yargs`) // eslint-disable-line
     type: 'string',
     global: true
   })
-  .example(
-    `node $0 string "My phone number is (123) 456-7890 and my email address is me@somedomain.com"`
-  )
+  .example(`node $0 string "My email address is me@somedomain.com"`)
   .example(`node $0 file resources/test.txt`)
   .example(`node $0 gcsFile my-bucket my-file.txt my-topic my-subscription`)
   .example(`node $0 bigquery my-dataset my-table my-topic my-subscription`)
@@ -737,7 +735,7 @@ const cli = require(`yargs`) // eslint-disable-line
   .wrap(120)
   .recommendCommands()
   .epilogue(
-    `For more information, see https://cloud.google.com/dlp/docs. Optional flags are explained at https://cloud.google.com/dlp/docs/reference/rest/v2beta2/InspectConfig`
+    `For more information, see https://cloud.google.com/dlp/docs. Optional flags are explained at https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig`
   );
 
 if (module === require.main) {

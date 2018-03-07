@@ -15,27 +15,27 @@
 
 'use strict';
 
-function listJobs (callingProject, filter, jobType) {
+function listJobs (callingProjectId, filter, jobType) {
   // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProject = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
 
   // The filter expression to use
   // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs/list
   // const filter = `state=DONE`;
 
-  // The type of job to list (either 'INSPECT' or 'REDACT')
-  // const jobType = 'INSPECT';
+  // The type of job to list (either 'INSPECT_JOB' or 'RISK_ANALYSIS_JOB')
+  // const jobType = 'INSPECT_JOB';
 
   // Construct request for listing DLP scan jobs
   const request = {
-    parent: dlp.projectPath(callingProject),
+    parent: dlp.projectPath(callingProjectId),
     filter: filter,
     type: jobType
   };
@@ -57,12 +57,13 @@ function listJobs (callingProject, filter, jobType) {
 function deleteJob (jobName) {
   // [START dlp_delete_job]
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
   // The name of the job whose results should be deleted
+  // Parent project ID is automatically extracted from this parameter
   // const jobName = 'projects/my-project/dlpJobs/X-#####'
 
   // Construct job deletion request
@@ -106,7 +107,7 @@ const cli = require(`yargs`) // eslint-disable-line
     alias: 'callingProject',
     default: process.env.GCLOUD_PROJECT
   })
-  .example(`node $0 list "state=DONE" -t REDACT`)
+  .example(`node $0 list "state=DONE" -t RISK_ANALYSIS_JOB`)
   .example(`node $0 delete projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####`)
   .wrap(120)
   .recommendCommands()

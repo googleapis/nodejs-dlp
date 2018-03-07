@@ -26,11 +26,11 @@ function numericalRiskAnalysis (
 ) {
   // [START dlp_numerical_stats]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -168,11 +168,11 @@ function categoricalRiskAnalysis (
 ) {
   // [START dlp_categorical_stats]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -308,11 +308,11 @@ function kAnonymityAnalysis (
 ) {
   // [START dlp_k_anonymity]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -443,11 +443,11 @@ function lDiversityAnalysis (
 ) {
   // [START dlp_l_diversity]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under
@@ -592,11 +592,11 @@ function kMapEstimationAnalysis (
 ) {
   // [START k_map]
   // Import the Google Cloud client libraries
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
   const Pubsub = require('@google-cloud/pubsub');
 
   // Instantiates clients
-  const dlp = new DLP.DlpServiceClient({ servicePath: 'autopush-dlp.sandbox.googleapis.com' });
+  const dlp = new DLP.DlpServiceClient();
   const pubsub = new Pubsub();
 
   // The project ID to run the API call under

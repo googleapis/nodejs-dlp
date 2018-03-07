@@ -15,7 +15,6 @@
 
 'use strict';
 
-
 function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outputPath) {
   // [START dlp_redact_image]
   // Imports required Node.js libraries
@@ -23,7 +22,7 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
   const fs = require('fs');
 
   // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp').v2;
+  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
@@ -32,7 +31,7 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
   // const callingProjectId = process.env.GCLOUD_PROJECT;
 
   // The path to a local file to inspect. Can be a JPG or PNG image file.
-  // const fileName = 'path/to/image.png';
+  // const filepath = 'path/to/image.png';
 
   // The minimum likelihood required before redacting a match
   // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
@@ -128,7 +127,7 @@ const cli = require(`yargs`)
   .wrap(120)
   .recommendCommands()
   .epilogue(
-    `For more information, see https://cloud.google.com/dlp/docs. Optional flags are explained at https://cloud.google.com/dlp/docs/reference/rest/v2beta2/InspectConfig`
+    `For more information, see https://cloud.google.com/dlp/docs. Optional flags are explained at https://cloud.google.com/dlp/docs/reference/rest/v2/projects.image/redact#ImageRedactionConfig`
   );
 
 if (module === require.main) {
