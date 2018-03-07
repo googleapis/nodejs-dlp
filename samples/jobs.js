@@ -46,15 +46,6 @@ function listJobs (callingProject, filter, jobType) {
       const jobs = response[0];
       jobs.forEach(job => {
         console.log(`Job ${job.name} status: ${job.state}`);
-
-        const infoTypeStats = job.inspectDetails.result.infoTypeStats;
-        if (infoTypeStats.length > 0) {
-          infoTypeStats.forEach(infoTypeStat => {
-            console.log(`  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`);
-          });
-        } else {
-          console.log(`No findings.`);
-        }
       });
     })
     .catch(err => {
@@ -108,7 +99,7 @@ const cli = require(`yargs`) // eslint-disable-line
     `delete <jobName>`,
     `Delete results of a Data Loss Prevention API job.`,
     {},
-    opts => deleteJob(opts.callingProject, opts.jobName)
+    opts => deleteJob(opts.jobName)
   )
   .option('c', {
     type: 'string',
