@@ -1,6 +1,6 @@
 {
-  "name": "dlp-cli",
-  "description": "Command-line interface for Google Cloud Platform's Data Loss Prevention API",
+  "name": "dlp-samples",
+  "description": "Code samples for Google Cloud Platform's Data Loss Prevention API",
   "version": "0.0.1",
   "private": true,
   "license": "Apache-2.0",

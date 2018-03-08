@@ -105,7 +105,7 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProject',
-    default: process.env.GCLOUD_PROJECT
+    default: process.env.GCLOUD_PROJECT || ''
   })
   .example(`node $0 list "state=DONE" -t RISK_ANALYSIS_JOB`)
   .example(`node $0 delete projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####`)

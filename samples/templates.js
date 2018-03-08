@@ -243,13 +243,13 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT,
+    default: process.env.GCLOUD_PROJECT || '',
     global: true
   })
   .option('p', {
     type: 'string',
     alias: 'tableProjectId',
-    default: process.env.GCLOUD_PROJECT,
+    default: process.env.GCLOUD_PROJECT || '',
     global: true
   })
   .example(`node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false -i my-template-id`)

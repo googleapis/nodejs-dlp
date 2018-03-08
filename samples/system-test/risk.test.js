@@ -162,7 +162,6 @@ test(`should check that numbers of quasi-ids and info types are equal`, async t 
 
 // lDiversityAnalysis
 test.serial(`should perform l-diversity analysis on a single field`, async t => {
-  console.log(`${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField}`);
   const output = await tools.runAsync(
     `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField}`,
     cwd
