@@ -103,12 +103,12 @@ function inspectFile (
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
-  // Instantiates a client
-  const dlp = new DLP.DlpServiceClient();
-
   // Import other required libraries
   const fs = require('fs');
   const mime = require('mime');
+
+  // Instantiates a client
+  const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
   // const callingProjectId = process.env.GCLOUD_PROJECT;

@@ -17,12 +17,12 @@
 
 function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outputPath) {
   // [START dlp_redact_image]
+  // Imports the Google Cloud Data Loss Prevention library
+  const DLP = require('@google-cloud/dlp');
+
   // Imports required Node.js libraries
   const mime = require('mime');
   const fs = require('fs');
-
-  // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
