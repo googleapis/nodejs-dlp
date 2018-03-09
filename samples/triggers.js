@@ -253,7 +253,7 @@ const cli = require(`yargs`) // eslint-disable-line
   )
   .command(
     `list`,
-    `List Data Loss Prevention API triggers.`,
+    `List Data Loss Prevention API job triggers.`,
     {},
     opts => listTriggers(opts.callingProjectId)
   )
