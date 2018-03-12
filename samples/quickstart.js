@@ -49,7 +49,9 @@ const request = {
   inspectConfig: {
     infoTypes: infoTypes,
     minLikelihood: minLikelihood,
-    maxFindings: maxFindings,
+    limits: {
+      maxFindingsPerRequest: maxFindings
+    },
     includeQuote: includeQuote
   },
   item: item
