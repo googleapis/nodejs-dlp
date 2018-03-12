@@ -26,7 +26,7 @@ function listInfoTypes (languageCode, filter) {
   // The BCP-47 language code to use, e.g. 'en-US'
   // const languageCode = 'en-US';
 
-  // (Optional) The filter to use
+  // The filter to use
   // const filter = 'supported_by=INSPECT'
 
   dlp
