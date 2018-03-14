@@ -15,6 +15,9 @@ The [Data Loss Prevention API](https://cloud.google.com/dlp/docs/) provides prog
   * [Metadata](#metadata)
   * [DeID](#deid)
   * [Risk Analysis](#risk-analysis)
+  * [Inspect Templates](#inspect-templates)
+  * [Job Management](#job-management)
+  * [Job Triggers](#job-triggers)
 
 ## Before you begin
 
@@ -222,6 +225,101 @@ For more information, see https://cloud.google.com/dlp/docs.
 
 [risk_4_docs]: https://cloud.google.com/dlp/docs
 [risk_4_code]: risk.js
+
+### Inspect Templates
+
+View the [source code][templates_5_code].
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-dlp&page=editor&open_in_editor=samples/templates.js,samples/README.md)
+
+__Usage:__ `node templates.js --help`
+
+```
+templates.js <command>
+
+Commands:
+  templates.js create                 Create a new DLP inspection configuration template.
+  templates.js list                   List DLP inspection configuration templates.
+  templates.js delete <templateName>  Delete the DLP inspection configuration template with the specified name.
+
+Options:
+  --version               Show version number                                                                  [boolean]
+  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
+  -p, --tableProjectId                                                         [string] [default: "nodejs-docs-samples"]
+  --help                  Show help                                                                            [boolean]
+
+Examples:
+  node templates.js create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false -i my-template-id
+  node templates.js list
+  node templates.js delete projects/my-project/inspectTemplates/#####
+
+For more information, see https://cloud.google.com/dlp/docs.
+```
+
+[templates_5_docs]: https://cloud.google.com/dlp/docs
+[templates_5_code]: templates.js
+
+### Job Management
+
+View the [source code][jobs_6_code].
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-dlp&page=editor&open_in_editor=samples/jobs.js,samples/README.md)
+
+__Usage:__ `node jobs.js --help`
+
+```
+jobs.js <command>
+
+Commands:
+  jobs.js list <filter>     List Data Loss Prevention API jobs corresponding to a given filter.
+  jobs.js delete <jobName>  Delete results of a Data Loss Prevention API job.
+
+Options:
+  --version             Show version number                                                                    [boolean]
+  -c, --callingProject                                                         [string] [default: "nodejs-docs-samples"]
+  --help                Show help                                                                              [boolean]
+
+Examples:
+  node jobs.js list "state=DONE" -t RISK_ANALYSIS_JOB
+  node jobs.js delete projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####
+
+For more information, see https://cloud.google.com/dlp/docs.
+```
+
+[jobs_6_docs]: https://cloud.google.com/dlp/docs
+[jobs_6_code]: jobs.js
+
+### Job Triggers
+
+View the [source code][triggers_7_code].
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-dlp&page=editor&open_in_editor=samples/triggers.js,samples/README.md)
+
+__Usage:__ `node triggers.js --help`
+
+```
+triggers.js <command>
+
+Commands:
+  triggers.js create <bucketName> <scanPeriod>  Create a Data Loss Prevention API job trigger.
+  triggers.js list                              List Data Loss Prevention API job triggers.
+  triggers.js delete <triggerId>                Delete a Data Loss Prevention API job trigger.
+
+Options:
+  --version               Show version number                                                                  [boolean]
+  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
+  --help                  Show help                                                                            [boolean]
+
+Examples:
+  node triggers.js create my-bucket 1
+  node triggers.js list
+  node triggers.js delete projects/my-project/jobTriggers/my-trigger
+
+For more information, see https://cloud.google.com/dlp/docs.
+```
+
+[triggers_7_docs]: https://cloud.google.com/dlp/docs
+[triggers_7_code]: triggers.js
 
 [shell_img]: http://gstatic.com/cloudssh/images/open-btn.png
 [shell_link]: https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-dlp&page=editor&open_in_editor=samples/README.md
