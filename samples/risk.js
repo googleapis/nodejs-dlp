@@ -106,12 +106,13 @@ function numericalRiskAnalysis (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -247,12 +248,13 @@ function categoricalRiskAnalysis (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -385,12 +387,13 @@ function kAnonymityAnalysis (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -526,12 +529,13 @@ function lDiversityAnalysis (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -675,12 +679,13 @@ function kMapEstimationAnalysis (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 

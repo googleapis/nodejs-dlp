@@ -268,9 +268,8 @@ function inspectGCSFile (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
@@ -410,9 +409,8 @@ function inspectDatastore (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
@@ -549,9 +547,8 @@ function inspectBigquery (
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
         const messageHandler = (message) => {
-          message.ack();
-
           if (message.attributes && message.attributes.DlpJobName === jobName) {
+            message.ack();
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
