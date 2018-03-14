@@ -273,6 +273,8 @@ function inspectGCSFile (
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -414,6 +416,8 @@ function inspectDatastore (
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
@@ -552,6 +556,8 @@ function inspectBigquery (
             subscription.removeListener('message', messageHandler);
             subscription.removeListener('error', errorHandler);
             resolve(jobName);
+          } else {
+            message.nack();
           }
         };
 
