@@ -73,27 +73,21 @@ test(`should handle numerical risk analysis errors`, async t => {
 });
 
 // categoricalRiskAnalysis
-test(
-  `should perform categorical risk analysis on a string field`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} categorical ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Most common value occurs \d time\(s\)/);
-  }
-);
+test(`should perform categorical risk analysis on a string field`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} categorical ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Most common value occurs \d time\(s\)/);
+});
 
-test(
-  `should perform categorical risk analysis on a number field`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} categorical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Most common value occurs \d time\(s\)/);
-  }
-);
+test(`should perform categorical risk analysis on a number field`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} categorical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Most common value occurs \d time\(s\)/);
+});
 
 test(`should handle categorical risk analysis errors`, async t => {
   const output = await tools.runAsync(
@@ -104,29 +98,23 @@ test(`should handle categorical risk analysis errors`, async t => {
 });
 
 // kAnonymityAnalysis
-test(
-  `should perform k-anonymity analysis on a single field`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Quasi-ID values: \{\d{2}\}/);
-    t.regex(output, /Class size: \d/);
-  }
-);
+test(`should perform k-anonymity analysis on a single field`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Quasi-ID values: \{\d{2}\}/);
+  t.regex(output, /Class size: \d/);
+});
 
-test(
-  `should perform k-anonymity analysis on multiple fields`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} ${repeatedField} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Quasi-ID values: \{\d{2}, \d{4} \d{4} \d{4} \d{4}\}/);
-    t.regex(output, /Class size: \d/);
-  }
-);
+test(`should perform k-anonymity analysis on multiple fields`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} kAnonymity ${dataset} harmful ${topicName} ${subscriptionName} ${numericField} ${repeatedField} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Quasi-ID values: \{\d{2}, \d{4} \d{4} \d{4} \d{4}\}/);
+  t.regex(output, /Class size: \d/);
+});
 
 test(`should handle k-anonymity analysis errors`, async t => {
   const output = await tools.runAsync(
@@ -177,31 +165,25 @@ test(`should check that numbers of quasi-ids and info types are equal`, async t 
 });
 
 // lDiversityAnalysis
-test(
-  `should perform l-diversity analysis on a single field`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Quasi-ID values: \{\d{2}\}/);
-    t.regex(output, /Class size: \d/);
-    t.regex(output, /Sensitive value James occurs \d time\(s\)/);
-  }
-);
+test(`should perform l-diversity analysis on a single field`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Quasi-ID values: \{\d{2}\}/);
+  t.regex(output, /Class size: \d/);
+  t.regex(output, /Sensitive value James occurs \d time\(s\)/);
+});
 
-test(
-  `should perform l-diversity analysis on multiple fields`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField} ${repeatedField} -p ${testProjectId}`,
-      cwd
-    );
-    t.regex(output, /Quasi-ID values: \{\d{2}, \d{4} \d{4} \d{4} \d{4}\}/);
-    t.regex(output, /Class size: \d/);
-    t.regex(output, /Sensitive value James occurs \d time\(s\)/);
-  }
-);
+test(`should perform l-diversity analysis on multiple fields`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} lDiversity ${dataset} harmful ${uniqueField} ${topicName} ${subscriptionName} ${numericField} ${repeatedField} -p ${testProjectId}`,
+    cwd
+  );
+  t.regex(output, /Quasi-ID values: \{\d{2}, \d{4} \d{4} \d{4} \d{4}\}/);
+  t.regex(output, /Class size: \d/);
+  t.regex(output, /Sensitive value James occurs \d time\(s\)/);
+});
 
 test(`should handle l-diversity analysis errors`, async t => {
   const output = await tools.runAsync(

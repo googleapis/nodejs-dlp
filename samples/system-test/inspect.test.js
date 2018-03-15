@@ -168,16 +168,13 @@ test(`should inspect a Bigquery table`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType PHONE_NUMBER/);
 });
 
-test(
-  `should handle a Bigquery table with no sensitive data`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -p ${dataProject}`,
-      cwd
-    );
-    t.regex(output, /No findings/);
-  }
-);
+test(`should handle a Bigquery table with no sensitive data`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -p ${dataProject}`,
+    cwd
+  );
+  t.regex(output, /No findings/);
+});
 
 test(`should report Bigquery table handling errors`, async t => {
   const output = await tools.runAsync(

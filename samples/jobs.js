@@ -46,9 +46,7 @@ function listJobs(callingProjectId, filter, jobType) {
     .then(response => {
       const jobs = response[0];
       jobs.forEach(job => {
-        console.log(
-          `Job ${job.name} status: ${job.state}`
-        );
+        console.log(`Job ${job.name} status: ${job.state}`);
       });
     })
     .catch(err => {
