@@ -155,11 +155,9 @@ function deidentifyWithDateShift(
   const csvLines = fs
     .readFileSync(inputCsvFile)
     .toString()
-    .split('\n');
+    .split('\n')
+    .filter(line => line.match(/,/));
   const csvHeaders = csvLines[0].split(',');
-  if (csvLines[csvLines.length - 1] === '') {
-    csvLines.splice(-1);
-  }
   const csvRows = csvLines.slice(1);
 
   // Construct the table object
@@ -227,9 +225,10 @@ function deidentifyWithDateShift(
         );
         csvLines[rowIndex + 1] = rowValues.join(',');
       });
+      csvLines.push('');
       fs.writeFileSync(
         outputCsvFile,
-        csvLines.map(line => line + '\n').join('')
+        csvLines.join('\n')
       );
 
       // Print status
