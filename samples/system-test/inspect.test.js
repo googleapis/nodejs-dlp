@@ -99,7 +99,7 @@ test(`should report local file handling errors`, async t => {
 });
 
 // inspect_gcs_file_promise
-test.skip(`should inspect a GCS text file`, async t => {
+test.serial(`should inspect a GCS text file`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} test.txt ${topicName} ${subscriptionName}`,
     cwd
@@ -108,7 +108,7 @@ test.skip(`should inspect a GCS text file`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.skip(`should inspect multiple GCS text files`, async t => {
+test.serial(`should inspect multiple GCS text files`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} "*.txt" ${topicName} ${subscriptionName}`,
     cwd
@@ -117,7 +117,7 @@ test.skip(`should inspect multiple GCS text files`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.skip(`should handle a GCS file with no sensitive data`, async t => {
+test.serial(`should handle a GCS file with no sensitive data`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName}`,
     cwd
@@ -125,7 +125,7 @@ test.skip(`should handle a GCS file with no sensitive data`, async t => {
   t.regex(output, /No findings/);
 });
 
-test.skip(`should report GCS file handling errors`, async t => {
+test.serial(`should report GCS file handling errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName} -t BAD_TYPE`,
     cwd
@@ -134,7 +134,7 @@ test.skip(`should report GCS file handling errors`, async t => {
 });
 
 // inspect_datastore
-test.skip(`should inspect Datastore`, async t => {
+test.serial(`should inspect Datastore`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Person ${topicName} ${subscriptionName} --namespaceId DLP`,
     cwd
@@ -142,7 +142,7 @@ test.skip(`should inspect Datastore`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.skip(`should handle Datastore with no sensitive data`, async t => {
+test.serial(`should handle Datastore with no sensitive data`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP`,
     cwd
@@ -150,7 +150,7 @@ test.skip(`should handle Datastore with no sensitive data`, async t => {
   t.regex(output, /No findings/);
 });
 
-test.skip(`should report Datastore errors`, async t => {
+test.serial(`should report Datastore errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -t BAD_TYPE`,
     cwd
