@@ -3,7 +3,7 @@
   "requiresProjectId": true,
   "product": "dlp",
   "client_reference_url": "https://cloud.google.com/nodejs/docs/reference/dlp/latest/",
-  "release_quality": "ga",
+  "release_quality": "beta",
   "samples": [
     {
       "id": "inspect",

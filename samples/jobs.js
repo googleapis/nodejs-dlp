@@ -15,7 +15,7 @@
 
 'use strict';
 
-function listJobs (callingProjectId, filter, jobType) {
+function listJobs(callingProjectId, filter, jobType) {
   // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -37,12 +37,13 @@ function listJobs (callingProjectId, filter, jobType) {
   const request = {
     parent: dlp.projectPath(callingProjectId),
     filter: filter,
-    type: jobType
+    type: jobType,
   };
 
   // Run job-listing request
-  dlp.listDlpJobs(request)
-    .then((response) => {
+  dlp
+    .listDlpJobs(request)
+    .then(response => {
       const jobs = response[0];
       jobs.forEach(job => {
         console.log(`Job ${job.name} status: ${job.state}`);
@@ -54,7 +55,7 @@ function listJobs (callingProjectId, filter, jobType) {
   // [END dlp_list_jobs]
 }
 
-function deleteJob (jobName) {
+function deleteJob(jobName) {
   // [START dlp_delete_job]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -68,12 +69,13 @@ function deleteJob (jobName) {
 
   // Construct job deletion request
   const request = {
-    name: jobName
+    name: jobName,
   };
 
   // Run job deletion request
-  dlp.deleteDlpJob(request)
-    .then(response => {
+  dlp
+    .deleteDlpJob(request)
+    .then((/*response*/) => {
       console.log(`Successfully deleted job ${jobName}.`);
     })
     .catch(err => {
@@ -91,8 +93,8 @@ const cli = require(`yargs`) // eslint-disable-line
       jobType: {
         type: 'string',
         alias: 't',
-        default: 'INSPECT'
-      }
+        default: 'INSPECT',
+      },
     },
     opts => listJobs(opts.callingProject, opts.filter, opts.jobType)
   )
@@ -105,15 +107,13 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProject',
-    default: process.env.GCLOUD_PROJECT || ''
+    default: process.env.GCLOUD_PROJECT || '',
   })
   .example(`node $0 list "state=DONE" -t RISK_ANALYSIS_JOB`)
   .example(`node $0 delete projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####`)
   .wrap(120)
   .recommendCommands()
-  .epilogue(
-    `For more information, see https://cloud.google.com/dlp/docs.`
-  );
+  .epilogue(`For more information, see https://cloud.google.com/dlp/docs.`);
 
 if (module === require.main) {
   cli.help().strict().argv; // eslint-disable-line

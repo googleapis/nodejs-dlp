@@ -41,7 +41,7 @@ const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
 const includeQuote = true;
 
 // Construct item to inspect
-const item = { value: string };
+const item = {value: string};
 
 // Construct request
 const request = {
@@ -50,11 +50,11 @@ const request = {
     infoTypes: infoTypes,
     minLikelihood: minLikelihood,
     limits: {
-      maxFindingsPerRequest: maxFindings
+      maxFindingsPerRequest: maxFindings,
     },
-    includeQuote: includeQuote
+    includeQuote: includeQuote,
   },
-  item: item
+  item: item,
 };
 
 // Run request

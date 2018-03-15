@@ -30,6 +30,9 @@ test(`should list info types`, async t => {
 });
 
 test(`should filter listed info types`, async t => {
-  const output = await tools.runAsync(`${cmd} infoTypes "supported_by=RISK_ANALYSIS"`, cwd);
+  const output = await tools.runAsync(
+    `${cmd} infoTypes "supported_by=RISK_ANALYSIS"`,
+    cwd
+  );
   t.notRegex(output, /US_DRIVERS_LICENSE_NUMBER/);
 });

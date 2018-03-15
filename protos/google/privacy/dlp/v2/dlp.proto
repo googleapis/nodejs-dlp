@@ -47,37 +47,50 @@ service DlpService {
   // [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
   // images](/dlp/docs/inspecting-images)
   rpc InspectContent(InspectContentRequest) returns (InspectContentResponse) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/content:inspect" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/content:inspect"
+      body: "*"
+    };
   }
 
   // Redacts potentially sensitive info from an image.
   // This method has limits on input size, processing time, and output size.
   // [How-to guide](/dlp/docs/redacting-sensitive-data-images)
   rpc RedactImage(RedactImageRequest) returns (RedactImageResponse) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/image:redact" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/image:redact"
+      body: "*"
+    };
   }
 
   // De-identifies potentially sensitive info from a ContentItem.
   // This method has limits on input size and output size.
   // [How-to guide](/dlp/docs/deidentify-sensitive-data)
   rpc DeidentifyContent(DeidentifyContentRequest) returns (DeidentifyContentResponse) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/content:deidentify" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/content:deidentify"
+      body: "*"
+    };
   }
 
   // Re-identify content that has been de-identified.
   rpc ReidentifyContent(ReidentifyContentRequest) returns (ReidentifyContentResponse) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/content:reidentify" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/content:reidentify"
+      body: "*"
+    };
   }
 
   // Returns sensitive information types DLP supports.
   rpc ListInfoTypes(ListInfoTypesRequest) returns (ListInfoTypesResponse) {
-    option (google.api.http) = { get: "/v2/infoTypes" };
+    option (google.api.http) = {
+      get: "/v2/infoTypes"
+    };
   }
 
   // Creates an inspect template for re-using frequently used configuration
   // for inspecting content, images, and storage.
-  rpc CreateInspectTemplate(CreateInspectTemplateRequest)
-      returns (InspectTemplate) {
+  rpc CreateInspectTemplate(CreateInspectTemplateRequest) returns (InspectTemplate) {
     option (google.api.http) = {
       post: "/v2/{parent=organizations/*}/inspectTemplates"
       body: "*"
@@ -89,13 +102,14 @@ service DlpService {
   }
 
   // Updates the inspect template.
-  rpc UpdateInspectTemplate(UpdateInspectTemplateRequest)
-      returns (InspectTemplate) {
+  rpc UpdateInspectTemplate(UpdateInspectTemplateRequest) returns (InspectTemplate) {
     option (google.api.http) = {
       patch: "/v2/{name=organizations/*/inspectTemplates/*}"
       body: "*"
-      additional_bindings:
-          { patch: "/v2/{name=projects/*/inspectTemplates/*}" body: "*" }
+      additional_bindings {
+        patch: "/v2/{name=projects/*/inspectTemplates/*}"
+        body: "*"
+      }
     };
   }
 
@@ -110,8 +124,7 @@ service DlpService {
   }
 
   // Lists inspect templates.
-  rpc ListInspectTemplates(ListInspectTemplatesRequest)
-      returns (ListInspectTemplatesResponse) {
+  rpc ListInspectTemplates(ListInspectTemplatesRequest) returns (ListInspectTemplatesResponse) {
     option (google.api.http) = {
       get: "/v2/{parent=organizations/*}/inspectTemplates"
       additional_bindings {
@@ -121,8 +134,7 @@ service DlpService {
   }
 
   // Deletes inspect templates.
-  rpc DeleteInspectTemplate(DeleteInspectTemplateRequest)
-      returns (google.protobuf.Empty) {
+  rpc DeleteInspectTemplate(DeleteInspectTemplateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2/{name=organizations/*/inspectTemplates/*}"
       additional_bindings {
@@ -133,8 +145,7 @@ service DlpService {
 
   // Creates an Deidentify template for re-using frequently used configuration
   // for Deidentifying content, images, and storage.
-  rpc CreateDeidentifyTemplate(CreateDeidentifyTemplateRequest)
-      returns (DeidentifyTemplate) {
+  rpc CreateDeidentifyTemplate(CreateDeidentifyTemplateRequest) returns (DeidentifyTemplate) {
     option (google.api.http) = {
       post: "/v2/{parent=organizations/*}/deidentifyTemplates"
       body: "*"
@@ -146,12 +157,11 @@ service DlpService {
   }
 
   // Updates the inspect template.
-  rpc UpdateDeidentifyTemplate(UpdateDeidentifyTemplateRequest)
-      returns (DeidentifyTemplate) {
+  rpc UpdateDeidentifyTemplate(UpdateDeidentifyTemplateRequest) returns (DeidentifyTemplate) {
     option (google.api.http) = {
       patch: "/v2/{name=organizations/*/deidentifyTemplates/*}"
       body: "*"
-      additional_bindings: {
+      additional_bindings {
         patch: "/v2/{name=projects/*/deidentifyTemplates/*}"
         body: "*"
       }
@@ -159,8 +169,7 @@ service DlpService {
   }
 
   // Gets an inspect template.
-  rpc GetDeidentifyTemplate(GetDeidentifyTemplateRequest)
-      returns (DeidentifyTemplate) {
+  rpc GetDeidentifyTemplate(GetDeidentifyTemplateRequest) returns (DeidentifyTemplate) {
     option (google.api.http) = {
       get: "/v2/{name=organizations/*/deidentifyTemplates/*}"
       additional_bindings {
@@ -170,8 +179,7 @@ service DlpService {
   }
 
   // Lists inspect templates.
-  rpc ListDeidentifyTemplates(ListDeidentifyTemplatesRequest)
-      returns (ListDeidentifyTemplatesResponse) {
+  rpc ListDeidentifyTemplates(ListDeidentifyTemplatesRequest) returns (ListDeidentifyTemplatesResponse) {
     option (google.api.http) = {
       get: "/v2/{parent=organizations/*}/deidentifyTemplates"
       additional_bindings {
@@ -181,8 +189,7 @@ service DlpService {
   }
 
   // Deletes inspect templates.
-  rpc DeleteDeidentifyTemplate(DeleteDeidentifyTemplateRequest)
-      returns (google.protobuf.Empty) {
+  rpc DeleteDeidentifyTemplate(DeleteDeidentifyTemplateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2/{name=organizations/*/deidentifyTemplates/*}"
       additional_bindings {
@@ -194,57 +201,81 @@ service DlpService {
   // Creates a job to run DLP actions such as scanning storage for sensitive
   // information on a set schedule.
   rpc CreateJobTrigger(CreateJobTriggerRequest) returns (JobTrigger) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/jobTriggers" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/jobTriggers"
+      body: "*"
+    };
   }
 
   // Updates a job trigger.
   rpc UpdateJobTrigger(UpdateJobTriggerRequest) returns (JobTrigger) {
-    option (google.api.http) = { patch: "/v2/{name=projects/*/jobTriggers/*}" body: "*" };
+    option (google.api.http) = {
+      patch: "/v2/{name=projects/*/jobTriggers/*}"
+      body: "*"
+    };
   }
 
   // Gets a job trigger.
   rpc GetJobTrigger(GetJobTriggerRequest) returns (JobTrigger) {
-    option (google.api.http) = { get: "/v2/{name=projects/*/jobTriggers/*}" };
+    option (google.api.http) = {
+      get: "/v2/{name=projects/*/jobTriggers/*}"
+    };
   }
 
   // Lists job triggers.
   rpc ListJobTriggers(ListJobTriggersRequest) returns (ListJobTriggersResponse) {
-    option (google.api.http) = { get: "/v2/{parent=projects/*}/jobTriggers" };
+    option (google.api.http) = {
+      get: "/v2/{parent=projects/*}/jobTriggers"
+    };
   }
 
   // Deletes a job trigger.
   rpc DeleteJobTrigger(DeleteJobTriggerRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = { delete: "/v2/{name=projects/*/jobTriggers/*}" };
+    option (google.api.http) = {
+      delete: "/v2/{name=projects/*/jobTriggers/*}"
+    };
   }
 
   // Create a new job to inspect storage or calculate risk metrics [How-to
   // guide](/dlp/docs/compute-risk-analysis).
   rpc CreateDlpJob(CreateDlpJobRequest) returns (DlpJob) {
-    option (google.api.http) = { post: "/v2/{parent=projects/*}/dlpJobs" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{parent=projects/*}/dlpJobs"
+      body: "*"
+    };
   }
 
   // Lists DlpJobs that match the specified filter in the request.
   rpc ListDlpJobs(ListDlpJobsRequest) returns (ListDlpJobsResponse) {
-    option (google.api.http) = { get: "/v2/{parent=projects/*}/dlpJobs" };
+    option (google.api.http) = {
+      get: "/v2/{parent=projects/*}/dlpJobs"
+    };
   }
 
   // Gets the latest state of a long-running DlpJob.
   rpc GetDlpJob(GetDlpJobRequest) returns (DlpJob) {
-    option (google.api.http) = { get: "/v2/{name=projects/*/dlpJobs/*}" };
+    option (google.api.http) = {
+      get: "/v2/{name=projects/*/dlpJobs/*}"
+    };
   }
 
   // Deletes a long-running DlpJob. This method indicates that the client is
   // no longer interested in the DlpJob result. The job will be cancelled if
   // possible.
   rpc DeleteDlpJob(DeleteDlpJobRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = { delete: "/v2/{name=projects/*/dlpJobs/*}" };
+    option (google.api.http) = {
+      delete: "/v2/{name=projects/*/dlpJobs/*}"
+    };
   }
 
   // Starts asynchronous cancellation on a long-running DlpJob.  The server
   // makes a best effort to cancel the DlpJob, but success is not
   // guaranteed.
   rpc CancelDlpJob(CancelDlpJobRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = { post: "/v2/{name=projects/*/dlpJobs/*}:cancel" body: "*" };
+    option (google.api.http) = {
+      post: "/v2/{name=projects/*/dlpJobs/*}:cancel"
+      body: "*"
+    };
   }
 }
 
@@ -267,9 +298,14 @@ message InspectConfig {
     }
 
     // Max number of findings that will be returned for each item scanned.
+    // When set within `InspectDataSourceRequest`,
+    // the maximum returned is 1000 regardless if this is set higher.
+    // When set within `InspectContentRequest`, this field is ignored.
     int32 max_findings_per_item = 1;
 
-    // Max total number of findings that will be returned per request/job.
+    // Max number of findings that will be returned per request/job.
+    // When set within `InspectContentRequest`, the maximum returned is 1000
+    // regardless if this is set higher.
     int32 max_findings_per_request = 2;
 
     // Configuration of findings limit given for specified infoTypes.
@@ -387,7 +423,9 @@ message Finding {
   // Timestamp when finding was detected.
   google.protobuf.Timestamp create_time = 6;
 
-  // InfoType-dependent details parsed from quote.
+  // Contains data parsed from quotes. Only populated if include_quote was set
+  // to true and a supported infoType was requested. Currently supported
+  // infoTypes: DATE, DATE_OF_BIRTH and TIME.
   QuoteInfo quote_info = 7;
 }
 
@@ -955,6 +993,9 @@ message AnalyzeDataSourceRiskDetails {
       // Sample of value frequencies in this bucket. The total number of
       // values returned per bucket is capped at 20.
       repeated ValueFrequency bucket_values = 4;
+
+      // Total number of distinct values in this bucket.
+      int64 bucket_value_count = 5;
     }
 
     // Histogram of value frequencies in the column.
@@ -988,6 +1029,9 @@ message AnalyzeDataSourceRiskDetails {
       // Sample of equivalence classes in this bucket. The total number of
       // classes returned per bucket is capped at 20.
       repeated KAnonymityEquivalenceClass bucket_values = 4;
+
+      // Total number of distinct equivalence classes in this bucket.
+      int64 bucket_value_count = 5;
     }
 
     // Histogram of k-anonymity equivalence classes.
@@ -1027,6 +1071,9 @@ message AnalyzeDataSourceRiskDetails {
       // Sample of equivalence classes in this bucket. The total number of
       // classes returned per bucket is capped at 20.
       repeated LDiversityEquivalenceClass bucket_values = 4;
+
+      // Total number of distinct equivalence classes in this bucket.
+      int64 bucket_value_count = 5;
     }
 
     // Histogram of l-diversity equivalence class sensitive value frequencies.
@@ -1066,6 +1113,9 @@ message AnalyzeDataSourceRiskDetails {
       // Sample of quasi-identifier tuple values in this bucket. The total
       // number of classes returned per bucket is capped at 20.
       repeated KMapEstimationQuasiIdValues bucket_values = 6;
+
+      // Total number of distinct quasi-identifier tuple values in this bucket.
+      int64 bucket_value_count = 7;
     }
 
     // The intervals [min_anonymity, max_anonymity] do not overlap. If a value
@@ -1385,6 +1435,7 @@ message BucketingConfig {
 // replaced with the same surrogate.
 // Identifiers must be at least two characters long.
 // In the case that the identifier is the empty string, it will be skipped.
+// See [Pseudonymization](/dlp/docs/pseudonymization) for example usage.
 message CryptoReplaceFfxFpeConfig {
   // These are commonly used subsets of the alphabet that the FFX mode
   // natively supports. In the algorithm, the alphabet is selected using

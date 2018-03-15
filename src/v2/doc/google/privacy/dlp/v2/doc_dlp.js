@@ -64,9 +64,14 @@ var InspectConfig = {
   /**
    * @property {number} maxFindingsPerItem
    *   Max number of findings that will be returned for each item scanned.
+   *   When set within `InspectDataSourceRequest`,
+   *   the maximum returned is 1000 regardless if this is set higher.
+   *   When set within `InspectContentRequest`, this field is ignored.
    *
    * @property {number} maxFindingsPerRequest
-   *   Max total number of findings that will be returned per request/job.
+   *   Max number of findings that will be returned per request/job.
+   *   When set within `InspectContentRequest`, the maximum returned is 1000
+   *   regardless if this is set higher.
    *
    * @property {Object[]} maxFindingsPerInfoType
    *   Configuration of findings limit given for specified infoTypes.
@@ -246,7 +251,9 @@ var InspectResult = {
  *   This object should have the same structure as [Timestamp]{@link google.protobuf.Timestamp}
  *
  * @property {Object} quoteInfo
- *   InfoType-dependent details parsed from quote.
+ *   Contains data parsed from quotes. Only populated if include_quote was set
+ *   to true and a supported infoType was requested. Currently supported
+ *   infoTypes: DATE, DATE_OF_BIRTH and TIME.
  *
  *   This object should have the same structure as [QuoteInfo]{@link google.privacy.dlp.v2.QuoteInfo}
  *
@@ -1286,6 +1293,9 @@ var AnalyzeDataSourceRiskDetails = {
      *
      *   This object should have the same structure as [ValueFrequency]{@link google.privacy.dlp.v2.ValueFrequency}
      *
+     * @property {number} bucketValueCount
+     *   Total number of distinct values in this bucket.
+     *
      * @typedef CategoricalStatsHistogramBucket
      * @memberof google.privacy.dlp.v2
      * @see [google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.CategoricalStatsHistogramBucket definition in proto format]{@link https://github.com/googleapis/googleapis/blob/master/google/privacy/dlp/v2/dlp.proto}
@@ -1347,6 +1357,9 @@ var AnalyzeDataSourceRiskDetails = {
      *   classes returned per bucket is capped at 20.
      *
      *   This object should have the same structure as [KAnonymityEquivalenceClass]{@link google.privacy.dlp.v2.KAnonymityEquivalenceClass}
+     *
+     * @property {number} bucketValueCount
+     *   Total number of distinct equivalence classes in this bucket.
      *
      * @typedef KAnonymityHistogramBucket
      * @memberof google.privacy.dlp.v2
@@ -1417,6 +1430,9 @@ var AnalyzeDataSourceRiskDetails = {
      *   classes returned per bucket is capped at 20.
      *
      *   This object should have the same structure as [LDiversityEquivalenceClass]{@link google.privacy.dlp.v2.LDiversityEquivalenceClass}
+     *
+     * @property {number} bucketValueCount
+     *   Total number of distinct equivalence classes in this bucket.
      *
      * @typedef LDiversityHistogramBucket
      * @memberof google.privacy.dlp.v2
@@ -1493,6 +1509,9 @@ var AnalyzeDataSourceRiskDetails = {
      *   number of classes returned per bucket is capped at 20.
      *
      *   This object should have the same structure as [KMapEstimationQuasiIdValues]{@link google.privacy.dlp.v2.KMapEstimationQuasiIdValues}
+     *
+     * @property {number} bucketValueCount
+     *   Total number of distinct quasi-identifier tuple values in this bucket.
      *
      * @typedef KMapEstimationHistogramBucket
      * @memberof google.privacy.dlp.v2
@@ -1985,6 +2004,7 @@ var BucketingConfig = {
  * replaced with the same surrogate.
  * Identifiers must be at least two characters long.
  * In the case that the identifier is the empty string, it will be skipped.
+ * See [Pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) for example usage.
  *
  * @property {Object} cryptoKey
  *   The key used by the encryption algorithm. [required]

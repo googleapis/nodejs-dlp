@@ -15,7 +15,7 @@
 
 'use strict';
 
-function numericalRiskAnalysis (
+function numericalRiskAnalysis(
   callingProjectId,
   tableProjectId,
   datasetId,
@@ -62,7 +62,7 @@ function numericalRiskAnalysis (
   const sourceTable = {
     projectId: tableProjectId,
     datasetId: datasetId,
-    tableId: tableId
+    tableId: tableId,
   };
 
   // Construct request for creating a risk analysis job
@@ -72,17 +72,19 @@ function numericalRiskAnalysis (
       privacyMetric: {
         numericalStatsConfig: {
           field: {
-            name: columnName
-          }
-        }
+            name: columnName,
+          },
+        },
       },
       sourceTable: sourceTable,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create helper function for unpacking values
@@ -90,22 +92,26 @@ function numericalRiskAnalysis (
 
   // Run risk analysis job
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -116,7 +122,7 @@ function numericalRiskAnalysis (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -126,7 +132,7 @@ function numericalRiskAnalysis (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       const results = job.riskDetails.numericalStatsResult;
@@ -158,7 +164,7 @@ function numericalRiskAnalysis (
   // [END dlp_numerical_stats]
 }
 
-function categoricalRiskAnalysis (
+function categoricalRiskAnalysis(
   callingProjectId,
   tableProjectId,
   datasetId,
@@ -204,7 +210,7 @@ function categoricalRiskAnalysis (
   const sourceTable = {
     projectId: tableProjectId,
     datasetId: datasetId,
-    tableId: tableId
+    tableId: tableId,
   };
 
   // Construct request for creating a risk analysis job
@@ -214,17 +220,19 @@ function categoricalRiskAnalysis (
       privacyMetric: {
         categoricalStatsConfig: {
           field: {
-            name: columnName
-          }
-        }
+            name: columnName,
+          },
+        },
       },
       sourceTable: sourceTable,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create helper function for unpacking values
@@ -232,22 +240,26 @@ function categoricalRiskAnalysis (
 
   // Run risk analysis job
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -258,7 +270,7 @@ function categoricalRiskAnalysis (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -268,7 +280,7 @@ function categoricalRiskAnalysis (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       const histogramBuckets =
@@ -278,17 +290,23 @@ function categoricalRiskAnalysis (
 
         // Print bucket stats
         console.log(
-          `  Most common value occurs ${histogramBucket.valueFrequencyUpperBound} time(s)`
+          `  Most common value occurs ${
+            histogramBucket.valueFrequencyUpperBound
+          } time(s)`
         );
         console.log(
-          `  Least common value occurs ${histogramBucket.valueFrequencyLowerBound} time(s)`
+          `  Least common value occurs ${
+            histogramBucket.valueFrequencyLowerBound
+          } time(s)`
         );
 
         // Print bucket values
         console.log(`${histogramBucket.bucketSize} unique values total.`);
         histogramBucket.bucketValues.forEach(valueBucket => {
           console.log(
-            `  Value ${getValue(valueBucket.value)} occurs ${valueBucket.count} time(s).`
+            `  Value ${getValue(valueBucket.value)} occurs ${
+              valueBucket.count
+            } time(s).`
           );
         });
       });
@@ -299,7 +317,7 @@ function categoricalRiskAnalysis (
   // [END dlp_categorical_stats]
 }
 
-function kAnonymityAnalysis (
+function kAnonymityAnalysis(
   callingProjectId,
   tableProjectId,
   datasetId,
@@ -345,7 +363,7 @@ function kAnonymityAnalysis (
   const sourceTable = {
     projectId: tableProjectId,
     datasetId: datasetId,
-    tableId: tableId
+    tableId: tableId,
   };
 
   // Construct request for creating a risk analysis job
@@ -354,16 +372,18 @@ function kAnonymityAnalysis (
     riskJob: {
       privacyMetric: {
         kAnonymityConfig: {
-          quasiIds: quasiIds
-        }
+          quasiIds: quasiIds,
+        },
       },
       sourceTable: sourceTable,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create helper function for unpacking values
@@ -371,22 +391,26 @@ function kAnonymityAnalysis (
 
   // Run risk analysis job
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -397,7 +421,7 @@ function kAnonymityAnalysis (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -407,7 +431,7 @@ function kAnonymityAnalysis (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       const histogramBuckets =
@@ -416,13 +440,15 @@ function kAnonymityAnalysis (
       histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
         console.log(`Bucket ${histogramBucketIdx}:`);
         console.log(
-          `  Bucket size range: [${histogramBucket.equivalenceClassSizeLowerBound}, ${
-            histogramBucket.equivalenceClassSizeUpperBound
-          }]`
+          `  Bucket size range: [${
+            histogramBucket.equivalenceClassSizeLowerBound
+          }, ${histogramBucket.equivalenceClassSizeUpperBound}]`
         );
 
         histogramBucket.bucketValues.forEach(valueBucket => {
-          const quasiIdValues = valueBucket.quasiIdsValues.map(getValue).join(', ');
+          const quasiIdValues = valueBucket.quasiIdsValues
+            .map(getValue)
+            .join(', ');
           console.log(`  Quasi-ID values: {${quasiIdValues}}`);
           console.log(`  Class size: ${valueBucket.equivalenceClassSize}`);
         });
@@ -434,7 +460,7 @@ function kAnonymityAnalysis (
   // [END dlp_k_anonymity]
 }
 
-function lDiversityAnalysis (
+function lDiversityAnalysis(
   callingProjectId,
   tableProjectId,
   datasetId,
@@ -484,7 +510,7 @@ function lDiversityAnalysis (
   const sourceTable = {
     projectId: tableProjectId,
     datasetId: datasetId,
-    tableId: tableId
+    tableId: tableId,
   };
 
   // Construct request for creating a risk analysis job
@@ -495,17 +521,19 @@ function lDiversityAnalysis (
         lDiversityConfig: {
           quasiIds: quasiIds,
           sensitiveAttribute: {
-            name: sensitiveAttribute
-          }
-        }
+            name: sensitiveAttribute,
+          },
+        },
       },
       sourceTable: sourceTable,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create helper function for unpacking values
@@ -513,22 +541,26 @@ function lDiversityAnalysis (
 
   // Run risk analysis job
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -539,7 +571,7 @@ function lDiversityAnalysis (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -549,7 +581,7 @@ function lDiversityAnalysis (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       const histogramBuckets =
@@ -560,12 +592,14 @@ function lDiversityAnalysis (
         console.log(`Bucket ${histogramBucketIdx}:`);
 
         console.log(
-          `Bucket size range: [${histogramBucket.sensitiveValueFrequencyLowerBound}, ${
-            histogramBucket.sensitiveValueFrequencyUpperBound
-          }]`
+          `Bucket size range: [${
+            histogramBucket.sensitiveValueFrequencyLowerBound
+          }, ${histogramBucket.sensitiveValueFrequencyUpperBound}]`
         );
         histogramBucket.bucketValues.forEach(valueBucket => {
-          const quasiIdValues = valueBucket.quasiIdsValues.map(getValue).join(', ');
+          const quasiIdValues = valueBucket.quasiIdsValues
+            .map(getValue)
+            .join(', ');
           console.log(`  Quasi-ID values: {${quasiIdValues}}`);
           console.log(`  Class size: ${valueBucket.equivalenceClassSize}`);
           valueBucket.topSensitiveValues.forEach(valueObj => {
@@ -584,7 +618,7 @@ function lDiversityAnalysis (
   // [END dlp_l_diversity]
 }
 
-function kMapEstimationAnalysis (
+function kMapEstimationAnalysis(
   callingProjectId,
   tableProjectId,
   datasetId,
@@ -636,7 +670,7 @@ function kMapEstimationAnalysis (
   const sourceTable = {
     projectId: tableProjectId,
     datasetId: datasetId,
-    tableId: tableId
+    tableId: tableId,
   };
 
   // Construct request for creating a risk analysis job
@@ -646,16 +680,18 @@ function kMapEstimationAnalysis (
       privacyMetric: {
         kMapEstimationConfig: {
           quasiIds: quasiIds,
-          regionCode: regionCode
-        }
+          regionCode: regionCode,
+        },
       },
       sourceTable: sourceTable,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create helper function for unpacking values
@@ -663,22 +699,26 @@ function kMapEstimationAnalysis (
 
   // Run risk analysis job
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -689,7 +729,7 @@ function kMapEstimationAnalysis (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -699,7 +739,7 @@ function kMapEstimationAnalysis (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       const histogramBuckets =
@@ -707,12 +747,20 @@ function kMapEstimationAnalysis (
 
       histogramBuckets.forEach((histogramBucket, histogramBucketIdx) => {
         console.log(`Bucket ${histogramBucketIdx}:`);
-        console.log(`  Anonymity range: [${histogramBucket.minAnonymity}, ${histogramBucket.maxAnonymity}]`);
+        console.log(
+          `  Anonymity range: [${histogramBucket.minAnonymity}, ${
+            histogramBucket.maxAnonymity
+          }]`
+        );
         console.log(`  Size: ${histogramBucket.bucketSize}`);
         histogramBucket.bucketValues.forEach(valueBucket => {
-          const values = valueBucket.quasiIdsValues.map(value => getValue(value));
+          const values = valueBucket.quasiIdsValues.map(value =>
+            getValue(value)
+          );
           console.log(`    Values: ${values.join(' ')}`);
-          console.log(`    Estimated k-map anonymity: ${valueBucket.estimatedAnonymity}`);
+          console.log(
+            `    Estimated k-map anonymity: ${valueBucket.estimatedAnonymity}`
+          );
         });
       });
     })
@@ -798,19 +846,21 @@ const cli = require(`yargs`) // eslint-disable-line
         alias: 't',
         type: 'array',
         global: true,
-        default: []
+        default: [],
       },
       regionCode: {
         alias: 'r',
         type: 'string',
         global: true,
-        default: 'USA'
-      }
+        default: 'USA',
+      },
     },
     opts => {
       // Validate infoType count (required for CLI parsing, not the API itself)
       if (opts.infoTypes.length !== opts.quasiIdColumnNames.length) {
-        console.error('Number of infoTypes and number of quasi-identifiers must be equal!');
+        console.error(
+          'Number of infoTypes and number of quasi-identifiers must be equal!'
+        );
       } else {
         return kMapEstimationAnalysis(
           opts.callingProjectId,
@@ -823,11 +873,11 @@ const cli = require(`yargs`) // eslint-disable-line
           opts.quasiIdColumnNames.map((name, idx) => {
             return {
               field: {
-                name: name
+                name: name,
               },
               infoType: {
-                name: opts.infoTypes[idx]
-              }
+                name: opts.infoTypes[idx],
+              },
             };
           })
         );
@@ -838,13 +888,13 @@ const cli = require(`yargs`) // eslint-disable-line
     type: 'string',
     alias: 'callingProjectId',
     default: process.env.GCLOUD_PROJECT || '',
-    global: true
+    global: true,
   })
   .option('p', {
     type: 'string',
     alias: 'tableProjectId',
     default: process.env.GCLOUD_PROJECT || '',
-    global: true
+    global: true,
   })
   .example(
     `node $0 numerical nhtsa_traffic_fatalities accident_2015 state_number my-topic my-subscription -p bigquery-public-data`

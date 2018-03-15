@@ -32,7 +32,9 @@ const maxFindings = 5;
 const bucketName = process.env.BUCKET_NAME;
 
 test.serial(`should create a trigger`, async t => {
-  const output = await tools.runAsync(`${cmd} create ${bucketName} 1 -n ${triggerName} -m ${minLikelihood} -t ${infoType} -f ${maxFindings} -d "${triggerDisplayName}" -s "${triggerDescription}"`);
+  const output = await tools.runAsync(
+    `${cmd} create ${bucketName} 1 -n ${triggerName} -m ${minLikelihood} -t ${infoType} -f ${maxFindings} -d "${triggerDisplayName}" -s "${triggerDescription}"`
+  );
   t.true(output.includes(`Successfully created trigger ${fullTriggerName}`));
 });
 
@@ -53,7 +55,9 @@ test.serial(`should delete a trigger`, async t => {
 });
 
 test(`should handle trigger creation errors`, async t => {
-  const output = await tools.runAsync(`${cmd} create ${bucketName} 1 -n "@@@@@" -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`);
+  const output = await tools.runAsync(
+    `${cmd} create ${bucketName} 1 -n "@@@@@" -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`
+  );
   t.regex(output, /Error in createTrigger/);
 });
 

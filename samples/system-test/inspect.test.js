@@ -32,7 +32,8 @@ let topic, subscription;
 const topicName = `dlp-inspect-topic-${uuid.v4()}`;
 const subscriptionName = `dlp-inspect-subscription-${uuid.v4()}`;
 test.before(async () => {
-  await pubsub.createTopic(topicName)
+  await pubsub
+    .createTopic(topicName)
     .then(response => {
       topic = response[0];
       return topic.createSubscription(subscriptionName);
@@ -44,8 +45,7 @@ test.before(async () => {
 
 // Delete custom topic/subscription
 test.after.always(async () => {
-  await subscription.delete()
-    .then(() => topic.delete());
+  await subscription.delete().then(() => topic.delete());
 });
 
 // inspect_string
@@ -99,7 +99,7 @@ test(`should report local file handling errors`, async t => {
 });
 
 // inspect_gcs_file_promise
-test.serial(`should inspect a GCS text file`, async t => {
+test.skip(`should inspect a GCS text file`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} test.txt ${topicName} ${subscriptionName}`,
     cwd
@@ -108,7 +108,7 @@ test.serial(`should inspect a GCS text file`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.serial(`should inspect multiple GCS text files`, async t => {
+test.skip(`should inspect multiple GCS text files`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} "*.txt" ${topicName} ${subscriptionName}`,
     cwd
@@ -117,18 +117,15 @@ test.serial(`should inspect multiple GCS text files`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.serial(
-  `should handle a GCS file with no sensitive data`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName}`,
-      cwd
-    );
-    t.regex(output, /No findings/);
-  }
-);
+test.skip(`should handle a GCS file with no sensitive data`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName}`,
+    cwd
+  );
+  t.regex(output, /No findings/);
+});
 
-test.serial(`should report GCS file handling errors`, async t => {
+test.skip(`should report GCS file handling errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName} -t BAD_TYPE`,
     cwd
@@ -137,7 +134,7 @@ test.serial(`should report GCS file handling errors`, async t => {
 });
 
 // inspect_datastore
-test.serial(`should inspect Datastore`, async t => {
+test.skip(`should inspect Datastore`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Person ${topicName} ${subscriptionName} --namespaceId DLP`,
     cwd
@@ -145,7 +142,7 @@ test.serial(`should inspect Datastore`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
 });
 
-test.serial(`should handle Datastore with no sensitive data`, async t => {
+test.skip(`should handle Datastore with no sensitive data`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP`,
     cwd
@@ -153,7 +150,7 @@ test.serial(`should handle Datastore with no sensitive data`, async t => {
   t.regex(output, /No findings/);
 });
 
-test.serial(`should report Datastore errors`, async t => {
+test.skip(`should report Datastore errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -t BAD_TYPE`,
     cwd
@@ -162,7 +159,7 @@ test.serial(`should report Datastore errors`, async t => {
 });
 
 // inspect_bigquery
-test.serial(`should inspect a Bigquery table`, async t => {
+test.skip(`should inspect a Bigquery table`, async t => {
   const output = await tools.runAsync(
     `${cmd} bigquery integration_tests_dlp harmful ${topicName} ${subscriptionName}`,
     cwd
@@ -170,18 +167,15 @@ test.serial(`should inspect a Bigquery table`, async t => {
   t.regex(output, /Found \d instance\(s\) of infoType PHONE_NUMBER/);
 });
 
-test.serial(
-  `should handle a Bigquery table with no sensitive data`,
-  async t => {
-    const output = await tools.runAsync(
-      `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName}`,
-      cwd
-    );
-    t.regex(output, /No findings/);
-  }
-);
+test.skip(`should handle a Bigquery table with no sensitive data`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName}`,
+    cwd
+  );
+  t.regex(output, /No findings/);
+});
 
-test.serial(`should report Bigquery table handling errors`, async t => {
+test.skip(`should report Bigquery table handling errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -t BAD_TYPE`,
     cwd

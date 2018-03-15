@@ -55,8 +55,8 @@ Options:
   -m, --minLikelihood
           [string] [choices: "LIKELIHOOD_UNSPECIFIED", "VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
                                                                                      [default: "LIKELIHOOD_UNSPECIFIED"]
-  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
-  -p, --dataProjectId                                                          [string] [default: "nodejs-docs-samples"]
+  -c, --callingProjectId                                                                          [string] [default: ""]
+  -p, --dataProjectId                                                                             [string] [default: ""]
   -f, --maxFindings                                                                                [number] [default: 0]
   -q, --includeQuote                                                                           [boolean] [default: true]
   -t, --infoTypes                               [array] [default: ["PHONE_NUMBER","EMAIL_ADDRESS","CREDIT_CARD_NUMBER"]]
@@ -97,7 +97,7 @@ Options:
           [string] [choices: "LIKELIHOOD_UNSPECIFIED", "VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
                                                                                      [default: "LIKELIHOOD_UNSPECIFIED"]
   -t, --infoTypes                                                                                     [array] [required]
-  -c, --callingProject                                                         [string] [default: "nodejs-docs-samples"]
+  -c, --callingProject                                                                            [string] [default: ""]
   --help                Show help                                                                              [boolean]
 
 Examples:
@@ -161,7 +161,7 @@ Commands:
 
 Options:
   --version               Show version number                                                                  [boolean]
-  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
+  -c, --callingProjectId                                                                          [string] [default: ""]
   --help                  Show help                                                                            [boolean]
 
 Examples:
@@ -205,8 +205,8 @@ Commands:
 
 Options:
   --version               Show version number                                                                  [boolean]
-  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
-  -p, --tableProjectId                                                         [string] [default: "nodejs-docs-samples"]
+  -c, --callingProjectId                                                                          [string] [default: ""]
+  -p, --tableProjectId                                                                            [string] [default: ""]
   --help                  Show help                                                                            [boolean]
 
 Examples:
@@ -244,8 +244,8 @@ Commands:
 
 Options:
   --version               Show version number                                                                  [boolean]
-  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
-  -p, --tableProjectId                                                         [string] [default: "nodejs-docs-samples"]
+  -c, --callingProjectId                                                                          [string] [default: ""]
+  -p, --tableProjectId                                                                            [string] [default: ""]
   --help                  Show help                                                                            [boolean]
 
 Examples:
@@ -276,7 +276,7 @@ Commands:
 
 Options:
   --version             Show version number                                                                    [boolean]
-  -c, --callingProject                                                         [string] [default: "nodejs-docs-samples"]
+  -c, --callingProject                                                                            [string] [default: ""]
   --help                Show help                                                                              [boolean]
 
 Examples:
@@ -307,7 +307,7 @@ Commands:
 
 Options:
   --version               Show version number                                                                  [boolean]
-  -c, --callingProjectId                                                       [string] [default: "nodejs-docs-samples"]
+  -c, --callingProjectId                                                                          [string] [default: ""]
   --help                  Show help                                                                            [boolean]
 
 Examples:
@@ -321,5 +321,5 @@ For more information, see https://cloud.google.com/dlp/docs.
 [triggers_7_docs]: https://cloud.google.com/dlp/docs
 [triggers_7_code]: triggers.js
 
-[shell_img]: http://gstatic.com/cloudssh/images/open-btn.png
+[shell_img]: //gstatic.com/cloudssh/images/open-btn.png
 [shell_link]: https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-dlp&page=editor&open_in_editor=samples/README.md

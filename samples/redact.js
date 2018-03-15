@@ -15,7 +15,13 @@
 
 'use strict';
 
-function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outputPath) {
+function redactImage(
+  callingProjectId,
+  filepath,
+  minLikelihood,
+  infoTypes,
+  outputPath
+) {
   // [START dlp_redact_image]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -47,7 +53,10 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
   });
 
   // Load image
-  const fileTypeConstant = ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(mime.getType(filepath)) + 1;
+  const fileTypeConstant =
+    ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(
+      mime.getType(filepath)
+    ) + 1;
   const fileBytes = Buffer.from(fs.readFileSync(filepath)).toString('base64');
 
   // Construct image redaction request
@@ -55,13 +64,13 @@ function redactImage (callingProjectId, filepath, minLikelihood, infoTypes, outp
     parent: dlp.projectPath(callingProjectId),
     byteItem: {
       type: fileTypeConstant,
-      data: fileBytes
+      data: fileBytes,
     },
     inspectConfig: {
       minLikelihood: minLikelihood,
-      infoTypes: infoTypes
+      infoTypes: infoTypes,
     },
-    imageRedactionConfigs: imageRedactionConfigs
+    imageRedactionConfigs: imageRedactionConfigs,
   };
 
   // Run image redaction request
@@ -103,9 +112,9 @@ const cli = require(`yargs`)
       'UNLIKELY',
       'POSSIBLE',
       'LIKELY',
-      'VERY_LIKELY'
+      'VERY_LIKELY',
     ],
-    global: true
+    global: true,
   })
   .option('t', {
     alias: 'infoTypes',
@@ -115,13 +124,13 @@ const cli = require(`yargs`)
     coerce: infoTypes =>
       infoTypes.map(type => {
         return {name: type};
-      })
+      }),
   })
   .option('c', {
     alias: 'callingProject',
     default: process.env.GCLOUD_PROJECT || '',
     type: 'string',
-    global: true
+    global: true,
   })
   .example(`node $0 image resources/test.png result.png -t MALE_NAME`)
   .wrap(120)

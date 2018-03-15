@@ -50,7 +50,10 @@ test(`should mask sensitive data in a string`, async t => {
 });
 
 test(`should ignore insensitive data when masking a string`, async t => {
-  const output = await tools.runAsync(`${cmd} deidMask "${harmlessString}"`, cwd);
+  const output = await tools.runAsync(
+    `${cmd} deidMask "${harmlessString}"`,
+    cwd
+  );
   t.is(output, harmlessString);
 });
 
@@ -98,14 +101,17 @@ test(`should handle FPE encryption errors`, async t => {
 });
 
 // reidentify_fpe
-test.serial(`should FPE decrypt surrogate-typed sensitive data in a string`, async t => {
-  t.truthy(labeledFPEString, `Verify that FPE encryption succeeded.`);
-  const output = await tools.runAsync(
-    `${cmd} reidFpe "${labeledFPEString}" ${surrogateType} ${wrappedKey} ${keyName} -a NUMERIC`,
-    cwd
-  );
-  t.is(output, harmfulString);
-});
+test.serial(
+  `should FPE decrypt surrogate-typed sensitive data in a string`,
+  async t => {
+    t.truthy(labeledFPEString, `Verify that FPE encryption succeeded.`);
+    const output = await tools.runAsync(
+      `${cmd} reidFpe "${labeledFPEString}" ${surrogateType} ${wrappedKey} ${keyName} -a NUMERIC`,
+      cwd
+    );
+    t.is(output, harmfulString);
+  }
+);
 
 test(`should handle FPE decryption errors`, async t => {
   const output = await tools.runAsync(
@@ -122,19 +128,30 @@ test(`should date-shift a CSV file`, async t => {
     `${cmd} deidDateShift "${csvFile}" "${outputCsvFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields}`,
     cwd
   );
-  t.true(output.includes(`Successfully saved date-shift output to ${outputCsvFile}`));
-  t.not(fs.readFileSync(outputCsvFile).toString(), fs.readFileSync(csvFile).toString());
+  t.true(
+    output.includes(`Successfully saved date-shift output to ${outputCsvFile}`)
+  );
+  t.not(
+    fs.readFileSync(outputCsvFile).toString(),
+    fs.readFileSync(csvFile).toString()
+  );
 });
 
 test(`should date-shift a CSV file using a context field`, async t => {
   const outputCsvFile = path.join(__dirname, 'dates-context.result.csv');
-  const correctResultFile = 'system-test/resources/date-shift-context.correct.csv';
+  const correctResultFile =
+    'system-test/resources/date-shift-context.correct.csv';
   const output = await tools.runAsync(
     `${cmd} deidDateShift "${csvFile}" "${outputCsvFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields} -f ${csvContextField} -n ${keyName} -w ${wrappedKey}`,
     cwd
   );
-  t.true(output.includes(`Successfully saved date-shift output to ${outputCsvFile}`));
-  t.is(fs.readFileSync(outputCsvFile).toString(), fs.readFileSync(correctResultFile).toString());
+  t.true(
+    output.includes(`Successfully saved date-shift output to ${outputCsvFile}`)
+  );
+  t.is(
+    fs.readFileSync(outputCsvFile).toString(),
+    fs.readFileSync(correctResultFile).toString()
+  );
 });
 
 test(`should require all-or-none of {contextField, wrappedKey, keyName}`, async t => {

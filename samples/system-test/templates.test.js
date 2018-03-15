@@ -29,11 +29,15 @@ const INCLUDE_QUOTE = false;
 const DISPLAY_NAME = `My Template ${uuid.v4()}`;
 const TEMPLATE_NAME = `my-template-${uuid.v4()}`;
 
-const fullTemplateName = `projects/${process.env.GCLOUD_PROJECT}/inspectTemplates/${TEMPLATE_NAME}`;
+const fullTemplateName = `projects/${
+  process.env.GCLOUD_PROJECT
+}/inspectTemplates/${TEMPLATE_NAME}`;
 
 // create_inspect_template
 test.serial(`should create template`, async t => {
-  const output = await tools.runAsync(`${cmd} create -m ${MIN_LIKELIHOOD} -t ${INFO_TYPE} -f ${MAX_FINDINGS} -q ${INCLUDE_QUOTE} -d "${DISPLAY_NAME}" -i "${TEMPLATE_NAME}"`);
+  const output = await tools.runAsync(
+    `${cmd} create -m ${MIN_LIKELIHOOD} -t ${INFO_TYPE} -f ${MAX_FINDINGS} -q ${INCLUDE_QUOTE} -d "${DISPLAY_NAME}" -i "${TEMPLATE_NAME}"`
+  );
   t.true(output.includes(`Successfully created template ${fullTemplateName}`));
 });
 
@@ -54,7 +58,7 @@ test.serial(`should pass creation settings to template`, async t => {
   const output = await tools.runAsync(`${cmd} list`);
   t.true(output.includes(`Template ${fullTemplateName}`));
   t.true(output.includes(`Display name: ${DISPLAY_NAME}`));
-  t.true(output.includes(`InfoTypes: US_CENSUS_NAME`));
+  t.true(output.includes(`InfoTypes: ${INFO_TYPE}`));
   t.true(output.includes(`Minimum likelihood: ${MIN_LIKELIHOOD}`));
   t.true(output.includes(`Include quotes: ${INCLUDE_QUOTE}`));
   t.true(output.includes(`Max findings per request: ${MAX_FINDINGS}`));

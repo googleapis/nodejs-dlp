@@ -15,7 +15,7 @@
 
 'use strict';
 
-function createInspectTemplate (
+function createInspectTemplate(
   callingProjectId,
   templateId,
   displayName,
@@ -58,8 +58,8 @@ function createInspectTemplate (
     minLikelihood: minLikelihood,
     includeQuote: includeQuote,
     limits: {
-      maxFindingsPerRequest: maxFindings
-    }
+      maxFindingsPerRequest: maxFindings,
+    },
   };
 
   // Construct template-creation request
@@ -67,12 +67,13 @@ function createInspectTemplate (
     parent: dlp.projectPath(callingProjectId),
     inspectTemplate: {
       inspectConfig: inspectConfig,
-      displayName: displayName
+      displayName: displayName,
     },
-    templateId: templateId
+    templateId: templateId,
   };
 
-  dlp.createInspectTemplate(request)
+  dlp
+    .createInspectTemplate(request)
     .then(response => {
       const templateName = response[0].name;
       console.log(`Successfully created template ${templateName}.`);
@@ -83,7 +84,7 @@ function createInspectTemplate (
   // [END dlp_create_template]
 }
 
-function listInspectTemplates (callingProjectId) {
+function listInspectTemplates(callingProjectId) {
   // [START dlp_list_templates]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -97,16 +98,17 @@ function listInspectTemplates (callingProjectId) {
   // Helper function to pretty-print dates
   const formatDate = date => {
     const msSinceEpoch = parseInt(date.seconds, 10) * 1000;
-    return new Date(msSinceEpoch).toLocaleString();
+    return new Date(msSinceEpoch).toLocaleString('en-US');
   };
 
   // Construct template-listing request
   const request = {
-    parent: dlp.projectPath(callingProjectId)
+    parent: dlp.projectPath(callingProjectId),
   };
 
   // Run template-deletion request
-  dlp.listInspectTemplates(request)
+  dlp
+    .listInspectTemplates(request)
     .then(response => {
       const templates = response[0];
       templates.forEach(template => {
@@ -125,7 +127,10 @@ function listInspectTemplates (callingProjectId) {
         console.log(`  Include quotes:`, inspectConfig.includeQuote);
 
         const limits = inspectConfig.limits;
-        console.log(`  Max findings per request:`, limits.maxFindingsPerRequest);
+        console.log(
+          `  Max findings per request:`,
+          limits.maxFindingsPerRequest
+        );
       });
     })
     .catch(err => {
@@ -134,7 +139,7 @@ function listInspectTemplates (callingProjectId) {
   // [END dlp_list_templates]
 }
 
-function deleteInspectTemplate (templateName) {
+function deleteInspectTemplate(templateName) {
   // [START dlp_delete_template]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -148,12 +153,13 @@ function deleteInspectTemplate (templateName) {
 
   // Construct template-deletion request
   const request = {
-    name: templateName
+    name: templateName,
   };
 
   // Run template-deletion request
-  dlp.deleteInspectTemplate(request)
-    .then(response => {
+  dlp
+    .deleteInspectTemplate(request)
+    .then((/*response*/) => {
       console.log(`Successfully deleted template ${templateName}.`);
     })
     .catch(err => {
@@ -178,9 +184,9 @@ const cli = require(`yargs`) // eslint-disable-line
           'UNLIKELY',
           'POSSIBLE',
           'LIKELY',
-          'VERY_LIKELY'
+          'VERY_LIKELY',
         ],
-        global: true
+        global: true,
       },
       infoTypes: {
         alias: 't',
@@ -190,32 +196,32 @@ const cli = require(`yargs`) // eslint-disable-line
         coerce: infoTypes =>
           infoTypes.map(type => {
             return {name: type};
-          })
+          }),
       },
       includeQuote: {
         alias: 'q',
         default: true,
         type: 'boolean',
-        global: true
+        global: true,
       },
       maxFindings: {
         alias: 'f',
         default: 0,
         type: 'number',
-        global: true
+        global: true,
       },
       templateId: {
         alias: 'i',
         default: '',
         type: 'string',
-        global: true
+        global: true,
       },
       displayName: {
         alias: 'd',
         default: '',
         type: 'string',
-        global: true
-      }
+        global: true,
+      },
     },
     opts =>
       createInspectTemplate(
@@ -228,11 +234,8 @@ const cli = require(`yargs`) // eslint-disable-line
         opts.maxFindings
       )
   )
-  .command(
-    `list`,
-    `List DLP inspection configuration templates.`,
-    {},
-    opts => listInspectTemplates(opts.callingProjectId)
+  .command(`list`, `List DLP inspection configuration templates.`, {}, opts =>
+    listInspectTemplates(opts.callingProjectId)
   )
   .command(
     `delete <templateName>`,
@@ -244,15 +247,17 @@ const cli = require(`yargs`) // eslint-disable-line
     type: 'string',
     alias: 'callingProjectId',
     default: process.env.GCLOUD_PROJECT || '',
-    global: true
+    global: true,
   })
   .option('p', {
     type: 'string',
     alias: 'tableProjectId',
     default: process.env.GCLOUD_PROJECT || '',
-    global: true
+    global: true,
   })
-  .example(`node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false -i my-template-id`)
+  .example(
+    `node $0 create -m VERY_LIKELY -t PERSON_NAME -f 5 -q false -i my-template-id`
+  )
   .example(`node $0 list`)
   .example(`node $0 delete projects/my-project/inspectTemplates/#####`)
   .wrap(120)

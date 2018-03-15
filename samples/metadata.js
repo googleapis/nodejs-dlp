@@ -15,7 +15,7 @@
 
 'use strict';
 
-function listInfoTypes (languageCode, filter) {
+function listInfoTypes(languageCode, filter) {
   // [START dlp_list_info_types]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -32,7 +32,7 @@ function listInfoTypes (languageCode, filter) {
   dlp
     .listInfoTypes({
       languageCode: languageCode,
-      filter: filter
+      filter: filter,
     })
     .then(body => {
       const infoTypes = body[0].infoTypes;
@@ -59,7 +59,7 @@ const cli = require(`yargs`)
     alias: 'languageCode',
     default: 'en-US',
     type: 'string',
-    global: true
+    global: true,
   })
   .example(`node $0 infoTypes "supported_by=INSPECT"`)
   .wrap(120)

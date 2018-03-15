@@ -15,7 +15,12 @@
 
 'use strict';
 
-function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberToMask) {
+function deidentifyWithMask(
+  callingProjectId,
+  string,
+  maskingCharacter,
+  numberToMask
+) {
   // [START dlp_deidentify_masking]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -37,7 +42,7 @@ function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberT
   // const maskingCharacter = 'x';
 
   // Construct deidentification request
-  const item = { value: string };
+  const item = {value: string};
   const request = {
     parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
@@ -47,14 +52,14 @@ function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberT
             primitiveTransformation: {
               characterMaskConfig: {
                 maskingCharacter: maskingCharacter,
-                numberToMask: numberToMask
-              }
-            }
-          }
-        ]
-      }
+                numberToMask: numberToMask,
+              },
+            },
+          },
+        ],
+      },
     },
-    item: item
+    item: item,
   };
 
   // Run deidentification request
@@ -70,7 +75,7 @@ function deidentifyWithMask (callingProjectId, string, maskingCharacter, numberT
   // [END dlp_deidentify_masking]
 }
 
-function deidentifyWithDateShift (
+function deidentifyWithDateShift(
   callingProjectId,
   inputCsvFile,
   outputCsvFile,
@@ -126,7 +131,7 @@ function deidentifyWithDateShift (
   // const wrappedKey = 'YOUR_ENCRYPTED_AES_256_KEY'
 
   // Helper function for converting CSV rows to Protobuf types
-  const rowToProto = (row) => {
+  const rowToProto = row => {
     const values = row.split(',');
     const convertedValues = values.map(value => {
       if (Date.parse(value)) {
@@ -135,46 +140,53 @@ function deidentifyWithDateShift (
           dateValue: {
             year: date.getFullYear(),
             month: date.getMonth() + 1,
-            day: date.getDate()
-          }
+            day: date.getDate(),
+          },
         };
       } else {
         // Convert all non-date values to strings
-        return { stringValue: value.toString() };
+        return {stringValue: value.toString()};
       }
     });
-    return { values: convertedValues };
+    return {values: convertedValues};
   };
 
   // Read and parse a CSV file
-  const csvLines = fs.readFileSync(inputCsvFile).toString().split('\n');
+  const csvLines = fs
+    .readFileSync(inputCsvFile)
+    .toString()
+    .split('\n');
   const csvHeaders = csvLines[0].split(',');
   const csvRows = csvLines.slice(1);
 
   // Construct the table object
   const tableItem = {
     table: {
-      headers: csvHeaders.map(header => { return { name: header }; }),
-      rows: csvRows.map(row => rowToProto(row))
-    }
+      headers: csvHeaders.map(header => {
+        return {name: header};
+      }),
+      rows: csvRows.map(row => rowToProto(row)),
+    },
   };
 
   // Construct DateShiftConfig
   const dateShiftConfig = {
     lowerBoundDays: lowerBoundDays,
-    upperBoundDays: upperBoundDays
+    upperBoundDays: upperBoundDays,
   };
 
   if (contextFieldId && keyName && wrappedKey) {
-    dateShiftConfig.context = { name: contextFieldId };
+    dateShiftConfig.context = {name: contextFieldId};
     dateShiftConfig.cryptoKey = {
       kmsWrapped: {
         wrappedKey: wrappedKey,
-        cryptoKeyName: keyName
-      }
+        cryptoKeyName: keyName,
+      },
     };
   } else if (contextFieldId || keyName || wrappedKey) {
-    throw new Error('You must set either ALL or NONE of {contextFieldId, keyName, wrappedKey}!');
+    throw new Error(
+      'You must set either ALL or NONE of {contextFieldId, keyName, wrappedKey}!'
+    );
   }
 
   // Construct deidentification request
@@ -182,15 +194,17 @@ function deidentifyWithDateShift (
     parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       recordTransformations: {
-        fieldTransformations: [{
-          fields: dateFields,
-          primitiveTransformation: {
-            dateShiftConfig: dateShiftConfig
-          }
-        }]
-      }
+        fieldTransformations: [
+          {
+            fields: dateFields,
+            primitiveTransformation: {
+              dateShiftConfig: dateShiftConfig,
+            },
+          },
+        ],
+      },
     },
-    item: tableItem
+    item: tableItem,
   };
 
   // Run deidentification request
@@ -202,8 +216,11 @@ function deidentifyWithDateShift (
       // Write results to a CSV file
       tableRows.forEach((row, rowIndex) => {
         const rowValues = row.values.map(
-          value => value.stringValue ||
-          `${value.dateValue.month}/${value.dateValue.day}/${value.dateValue.year}`
+          value =>
+            value.stringValue ||
+            `${value.dateValue.month}/${value.dateValue.day}/${
+              value.dateValue.year
+            }`
         );
         csvLines[rowIndex + 1] = rowValues.join(',');
       });
@@ -218,7 +235,14 @@ function deidentifyWithDateShift (
   // [END deidentify_date_shift]
 }
 
-function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, keyName, wrappedKey) {
+function deidentifyWithFpe(
+  callingProjectId,
+  string,
+  alphabet,
+  surrogateType,
+  keyName,
+  wrappedKey
+) {
   // [START dlp_deidentify_fpe]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -254,19 +278,19 @@ function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, k
     cryptoKey: {
       kmsWrapped: {
         wrappedKey: wrappedKey,
-        cryptoKeyName: keyName
-      }
+        cryptoKeyName: keyName,
+      },
     },
-    commonAlphabet: alphabet
+    commonAlphabet: alphabet,
   };
   if (surrogateType) {
     cryptoReplaceFfxFpeConfig.surrogateInfoType = {
-      name: surrogateType
+      name: surrogateType,
     };
   }
 
   // Construct deidentification request
-  const item = { value: string };
+  const item = {value: string};
   const request = {
     parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
@@ -274,13 +298,13 @@ function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, k
         transformations: [
           {
             primitiveTransformation: {
-              cryptoReplaceFfxFpeConfig: cryptoReplaceFfxFpeConfig
-            }
-          }
-        ]
-      }
+              cryptoReplaceFfxFpeConfig: cryptoReplaceFfxFpeConfig,
+            },
+          },
+        ],
+      },
     },
-    item: item
+    item: item,
   };
 
   // Run deidentification request
@@ -296,7 +320,7 @@ function deidentifyWithFpe (callingProjectId, string, alphabet, surrogateType, k
   // [END deidentify_fpe]
 }
 
-function reidentifyWithFpe (
+function reidentifyWithFpe(
   callingProjectId,
   string,
   alphabet,
@@ -332,7 +356,7 @@ function reidentifyWithFpe (
   // const surrogateType = 'SOME_INFO_TYPE_DEID';
 
   // Construct deidentification request
-  const item = { value: string };
+  const item = {value: string};
   const request = {
     parent: dlp.projectPath(callingProjectId),
     reidentifyConfig: {
@@ -344,31 +368,30 @@ function reidentifyWithFpe (
                 cryptoKey: {
                   kmsWrapped: {
                     wrappedKey: wrappedKey,
-                    cryptoKeyName: keyName
-                  }
+                    cryptoKeyName: keyName,
+                  },
                 },
                 commonAlphabet: alphabet,
                 surrogateInfoType: {
-                  name: surrogateType
-                }
-              }
-            }
-          }
-        ]
-      }
+                  name: surrogateType,
+                },
+              },
+            },
+          },
+        ],
+      },
     },
     inspectConfig: {
       customInfoTypes: [
         {
           infoType: {
-            name: surrogateType
+            name: surrogateType,
           },
-          surrogateType: {
-          }
-        }
-      ]
+          surrogateType: {},
+        },
+      ],
     },
-    item: item
+    item: item,
   };
 
   // Run reidentification request
@@ -393,13 +416,13 @@ const cli = require(`yargs`)
       maskingCharacter: {
         type: 'string',
         alias: 'm',
-        default: ''
+        default: '',
       },
       numberToMask: {
         type: 'number',
         alias: 'n',
-        default: 0
-      }
+        default: 0,
+      },
     },
     opts =>
       deidentifyWithMask(
@@ -421,14 +444,14 @@ const cli = require(`yargs`)
           'NUMERIC',
           'HEXADECIMAL',
           'UPPER_CASE_ALPHA_NUMERIC',
-          'ALPHA_NUMERIC'
-        ]
+          'ALPHA_NUMERIC',
+        ],
       },
       surrogateType: {
         type: 'string',
         alias: 's',
-        default: ''
-      }
+        default: '',
+      },
     },
     opts =>
       deidentifyWithFpe(
@@ -452,9 +475,9 @@ const cli = require(`yargs`)
           'NUMERIC',
           'HEXADECIMAL',
           'UPPER_CASE_ALPHA_NUMERIC',
-          'ALPHA_NUMERIC'
-        ]
-      }
+          'ALPHA_NUMERIC',
+        ],
+      },
     },
     opts =>
       reidentifyWithFpe(
@@ -473,18 +496,18 @@ const cli = require(`yargs`)
       contextFieldId: {
         type: 'string',
         alias: 'f',
-        default: ''
+        default: '',
       },
       wrappedKey: {
         type: 'string',
         alias: 'w',
-        default: ''
+        default: '',
       },
       keyName: {
         type: 'string',
         alias: 'n',
-        default: ''
-      }
+        default: '',
+      },
     },
     opts =>
       deidentifyWithDateShift(
@@ -504,7 +527,7 @@ const cli = require(`yargs`)
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || ''
+    default: process.env.GCLOUD_PROJECT || '',
   })
   .example(`node $0 deidMask "My SSN is 372819127"`)
   .example(

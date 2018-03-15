@@ -15,7 +15,7 @@
 
 'use strict';
 
-function createTrigger (
+function createTrigger(
   callingProjectId,
   triggerId,
   displayName,
@@ -63,8 +63,8 @@ function createTrigger (
   // Get reference to the bucket to be inspected
   const storageItem = {
     cloudStorageOptions: {
-      fileSet: {url: `gs://${bucketName}/*`}
-    }
+      fileSet: {url: `gs://${bucketName}/*`},
+    },
   };
 
   // Construct job to be triggered
@@ -73,10 +73,10 @@ function createTrigger (
       infoTypes: infoTypes,
       minLikelihood: minLikelihood,
       limits: {
-        maxFindingsPerRequest: maxFindings
-      }
+        maxFindingsPerRequest: maxFindings,
+      },
     },
-    storageConfig: storageItem
+    storageConfig: storageItem,
   };
 
   // Construct trigger creation request
@@ -90,18 +90,19 @@ function createTrigger (
         {
           schedule: {
             recurrencePeriodDuration: {
-              seconds: scanPeriod * 60 * 60 * 24 // Trigger the scan daily
-            }
-          }
-        }
+              seconds: scanPeriod * 60 * 60 * 24, // Trigger the scan daily
+            },
+          },
+        },
       ],
-      status: 'HEALTHY'
+      status: 'HEALTHY',
     },
-    triggerId: triggerId
+    triggerId: triggerId,
   };
 
   // Run trigger creation request
-  dlp.createJobTrigger(request)
+  dlp
+    .createJobTrigger(request)
     .then(response => {
       const trigger = response[0];
       console.log(`Successfully created trigger ${trigger.name}.`);
@@ -112,7 +113,7 @@ function createTrigger (
   // [END dlp_create_trigger]
 }
 
-function listTriggers (callingProjectId) {
+function listTriggers(callingProjectId) {
   // [START dlp_list_triggers]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -125,17 +126,18 @@ function listTriggers (callingProjectId) {
 
   // Construct trigger listing request
   const request = {
-    parent: dlp.projectPath(callingProjectId)
+    parent: dlp.projectPath(callingProjectId),
   };
 
   // Helper function to pretty-print dates
   const formatDate = date => {
     const msSinceEpoch = parseInt(date.seconds, 10) * 1000;
-    return new Date(msSinceEpoch).toLocaleString();
+    return new Date(msSinceEpoch).toLocaleString('en-US');
   };
 
   // Run trigger listing request
-  dlp.listJobTriggers(request)
+  dlp
+    .listJobTriggers(request)
     .then(response => {
       const triggers = response[0];
       triggers.forEach(trigger => {
@@ -159,7 +161,7 @@ function listTriggers (callingProjectId) {
   // [END dlp_list_trigger]
 }
 
-function deleteTrigger (triggerId) {
+function deleteTrigger(triggerId) {
   // [START dlp_delete_trigger]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -173,12 +175,13 @@ function deleteTrigger (triggerId) {
 
   // Construct trigger deletion request
   const request = {
-    name: triggerId
+    name: triggerId,
   };
 
   // Run trigger deletion request
-  dlp.deleteJobTrigger(request)
-    .then(response => {
+  dlp
+    .deleteJobTrigger(request)
+    .then((/*response*/) => {
       console.log(`Successfully deleted trigger ${triggerId}.`);
     })
     .catch(err => {
@@ -201,22 +204,22 @@ const cli = require(`yargs`) // eslint-disable-line
         coerce: infoTypes =>
           infoTypes.map(type => {
             return {name: type};
-          })
+          }),
       },
       triggerId: {
         alias: 'n',
         default: '',
-        type: 'string'
+        type: 'string',
       },
       displayName: {
         alias: 'd',
         default: '',
-        type: 'string'
+        type: 'string',
       },
       description: {
         alias: 's',
         default: '',
-        type: 'string'
+        type: 'string',
       },
       minLikelihood: {
         alias: 'm',
@@ -228,34 +231,32 @@ const cli = require(`yargs`) // eslint-disable-line
           'UNLIKELY',
           'POSSIBLE',
           'LIKELY',
-          'VERY_LIKELY'
+          'VERY_LIKELY',
         ],
-        global: true
+        global: true,
       },
       maxFindings: {
         alias: 'f',
         default: 0,
         type: 'number',
-        global: true
-      }
+        global: true,
+      },
     },
-    opts => createTrigger(
-      opts.callingProjectId,
-      opts.triggerId,
-      opts.displayName,
-      opts.description,
-      opts.bucketName,
-      opts.scanPeriod,
-      opts.infoTypes,
-      opts.minLikelihood,
-      opts.maxFindings
-    )
+    opts =>
+      createTrigger(
+        opts.callingProjectId,
+        opts.triggerId,
+        opts.displayName,
+        opts.description,
+        opts.bucketName,
+        opts.scanPeriod,
+        opts.infoTypes,
+        opts.minLikelihood,
+        opts.maxFindings
+      )
   )
-  .command(
-    `list`,
-    `List Data Loss Prevention API job triggers.`,
-    {},
-    opts => listTriggers(opts.callingProjectId)
+  .command(`list`, `List Data Loss Prevention API job triggers.`, {}, opts =>
+    listTriggers(opts.callingProjectId)
   )
   .command(
     `delete <triggerId>`,
@@ -266,16 +267,14 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || ''
+    default: process.env.GCLOUD_PROJECT || '',
   })
   .example(`node $0 create my-bucket 1`)
   .example(`node $0 list`)
   .example(`node $0 delete projects/my-project/jobTriggers/my-trigger`)
   .wrap(120)
   .recommendCommands()
-  .epilogue(
-    `For more information, see https://cloud.google.com/dlp/docs.`
-  );
+  .epilogue(`For more information, see https://cloud.google.com/dlp/docs.`);
 
 if (module === require.main) {
   cli.help().strict().argv; // eslint-disable-line

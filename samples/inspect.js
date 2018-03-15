@@ -17,7 +17,7 @@
 
 const Buffer = require('safe-buffer').Buffer;
 
-function inspectString (
+function inspectString(
   callingProjectId,
   string,
   minLikelihood,
@@ -51,7 +51,7 @@ function inspectString (
   // const includeQuote = true;
 
   // Construct item to inspect
-  const item = { value: string };
+  const item = {value: string};
 
   // Construct request
   const request = {
@@ -61,10 +61,10 @@ function inspectString (
       minLikelihood: minLikelihood,
       includeQuote: includeQuote,
       limits: {
-        maxFindingsPerRequest: maxFindings
-      }
+        maxFindingsPerRequest: maxFindings,
+      },
     },
-    item: item
+    item: item,
   };
 
   // Run request
@@ -91,7 +91,7 @@ function inspectString (
   // [END dlp_inspect_string]
 }
 
-function inspectFile (
+function inspectFile(
   callingProjectId,
   filepath,
   minLikelihood,
@@ -129,13 +129,16 @@ function inspectFile (
   // const includeQuote = true;
 
   // Construct file data to inspect
-  const fileTypeConstant = ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(mime.getType(filepath)) + 1;
+  const fileTypeConstant =
+    ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(
+      mime.getType(filepath)
+    ) + 1;
   const fileBytes = Buffer.from(fs.readFileSync(filepath)).toString('base64');
   const item = {
     byteItem: {
       type: fileTypeConstant,
-      data: fileBytes
-    }
+      data: fileBytes,
+    },
   };
 
   // Construct request
@@ -146,10 +149,10 @@ function inspectFile (
       minLikelihood: minLikelihood,
       includeQuote: includeQuote,
       limits: {
-        maxFindingsPerRequest: maxFindings
-      }
+        maxFindingsPerRequest: maxFindings,
+      },
     },
-    item: item
+    item: item,
   };
 
   // Run request
@@ -176,7 +179,7 @@ function inspectFile (
   // [END dlp_inspect_file]
 }
 
-function inspectGCSFile (
+function inspectGCSFile(
   callingProjectId,
   bucketName,
   fileName,
@@ -226,8 +229,8 @@ function inspectGCSFile (
   // Get reference to the file to be inspected
   const storageItem = {
     cloudStorageOptions: {
-      fileSet: {url: `gs://${bucketName}/${fileName}`}
-    }
+      fileSet: {url: `gs://${bucketName}/${fileName}`},
+    },
   };
 
   // Construct request for creating an inspect job
@@ -238,36 +241,42 @@ function inspectGCSFile (
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
         limits: {
-          maxFindingsPerRequest: maxFindings
-        }
+          maxFindingsPerRequest: maxFindings,
+        },
       },
       storageConfig: storageItem,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Create a GCS File inspection job and wait for it to complete
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -278,7 +287,7 @@ function inspectGCSFile (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -288,7 +297,7 @@ function inspectGCSFile (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       console.log(`Job ${job.name} status: ${job.state}`);
@@ -296,7 +305,11 @@ function inspectGCSFile (
       const infoTypeStats = job.inspectDetails.result.infoTypeStats;
       if (infoTypeStats.length > 0) {
         infoTypeStats.forEach(infoTypeStat => {
-          console.log(`  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`);
+          console.log(
+            `  Found ${infoTypeStat.count} instance(s) of infoType ${
+              infoTypeStat.infoType.name
+            }.`
+          );
         });
       } else {
         console.log(`No findings.`);
@@ -308,7 +321,7 @@ function inspectGCSFile (
   // [END dlp_inspect_gcs]
 }
 
-function inspectDatastore (
+function inspectDatastore(
   callingProjectId,
   dataProjectId,
   namespaceId,
@@ -365,12 +378,12 @@ function inspectDatastore (
     datastoreOptions: {
       partitionId: {
         projectId: dataProjectId,
-        namespaceId: namespaceId
+        namespaceId: namespaceId,
       },
       kind: {
-        name: kind
-      }
-    }
+        name: kind,
+      },
+    },
   };
 
   // Construct request for creating an inspect job
@@ -381,36 +394,42 @@ function inspectDatastore (
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
         limits: {
-          maxFindingsPerRequest: maxFindings
-        }
+          maxFindingsPerRequest: maxFindings,
+        },
       },
       storageConfig: storageItems,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Run inspect-job creation request
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -421,7 +440,7 @@ function inspectDatastore (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
           reject(err);
@@ -431,7 +450,7 @@ function inspectDatastore (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       console.log(`Job ${job.name} status: ${job.state}`);
@@ -439,7 +458,11 @@ function inspectDatastore (
       const infoTypeStats = job.inspectDetails.result.infoTypeStats;
       if (infoTypeStats.length > 0) {
         infoTypeStats.forEach(infoTypeStat => {
-          console.log(`  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`);
+          console.log(
+            `  Found ${infoTypeStat.count} instance(s) of infoType ${
+              infoTypeStat.infoType.name
+            }.`
+          );
         });
       } else {
         console.log(`No findings.`);
@@ -451,7 +474,7 @@ function inspectDatastore (
   // [END dlp_inspect_datastore]
 }
 
-function inspectBigquery (
+function inspectBigquery(
   callingProjectId,
   dataProjectId,
   datasetId,
@@ -508,9 +531,9 @@ function inspectBigquery (
       tableReference: {
         projectId: dataProjectId,
         datasetId: datasetId,
-        tableId: tableId
-      }
-    }
+        tableId: tableId,
+      },
+    },
   };
 
   // Construct request for creating an inspect job
@@ -521,36 +544,42 @@ function inspectBigquery (
         infoTypes: infoTypes,
         minLikelihood: minLikelihood,
         limits: {
-          maxFindingsPerRequest: maxFindings
-        }
+          maxFindingsPerRequest: maxFindings,
+        },
       },
       storageConfig: storageItem,
-      actions: [{
-        pubSub: {
-          topic: `projects/${callingProjectId}/topics/${topicId}`
-        }
-      }]
-    }
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
   };
 
   // Run inspect-job creation request
   let subscription;
-  pubsub.topic(topicId).get()
+  pubsub
+    .topic(topicId)
+    .get()
     .then(topicResponse => {
       // Verify the Pub/Sub topic and listen for job notifications via an
       // existing subscription.
       return topicResponse[0].subscription(subscriptionId);
-    }).then(subscriptionResponse => {
+    })
+    .then(subscriptionResponse => {
       subscription = subscriptionResponse;
       return dlp.createDlpJob(request);
-    }).then(jobsResponse => {
+    })
+    .then(jobsResponse => {
       // Get the job's ID
       return jobsResponse[0].name;
     })
     .then(jobName => {
       // Watch the Pub/Sub topic until the DLP job finishes
       return new Promise((resolve, reject) => {
-        const messageHandler = (message) => {
+        const messageHandler = message => {
           if (message.attributes && message.attributes.DlpJobName === jobName) {
             message.ack();
             subscription.removeListener('message', messageHandler);
@@ -561,7 +590,7 @@ function inspectBigquery (
           }
         };
 
-        const errorHandler = (err) => {
+        const errorHandler = err => {
           console.error(err);
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
@@ -572,7 +601,7 @@ function inspectBigquery (
         subscription.on('error', errorHandler);
       });
     })
-    .then(jobName => dlp.getDlpJob({ name: jobName }))
+    .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
       console.log(`Job ${job.name} state: ${job.state}`);
@@ -580,7 +609,11 @@ function inspectBigquery (
       const infoTypeStats = job.inspectDetails.result.infoTypeStats;
       if (infoTypeStats.length > 0) {
         infoTypeStats.forEach(infoTypeStat => {
-          console.log(`  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`);
+          console.log(
+            `  Found ${infoTypeStat.count} instance(s) of infoType ${
+              infoTypeStat.infoType.name
+            }.`
+          );
         });
       } else {
         console.log(`No findings.`);
@@ -663,8 +696,8 @@ const cli = require(`yargs`) // eslint-disable-line
       namespaceId: {
         type: 'string',
         alias: 'n',
-        default: ''
-      }
+        default: '',
+      },
     },
     opts =>
       inspectDatastore(
@@ -689,31 +722,31 @@ const cli = require(`yargs`) // eslint-disable-line
       'UNLIKELY',
       'POSSIBLE',
       'LIKELY',
-      'VERY_LIKELY'
+      'VERY_LIKELY',
     ],
-    global: true
+    global: true,
   })
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || ''
+    default: process.env.GCLOUD_PROJECT || '',
   })
   .option('p', {
     type: 'string',
     alias: 'dataProjectId',
-    default: process.env.GCLOUD_PROJECT || ''
+    default: process.env.GCLOUD_PROJECT || '',
   })
   .option('f', {
     alias: 'maxFindings',
     default: 0,
     type: 'number',
-    global: true
+    global: true,
   })
   .option('q', {
     alias: 'includeQuote',
     default: true,
     type: 'boolean',
-    global: true
+    global: true,
   })
   .option('t', {
     alias: 'infoTypes',
@@ -723,12 +756,12 @@ const cli = require(`yargs`) // eslint-disable-line
     coerce: infoTypes =>
       infoTypes.map(type => {
         return {name: type};
-      })
+      }),
   })
   .option('n', {
     alias: 'notificationTopic',
     type: 'string',
-    global: true
+    global: true,
   })
   .example(`node $0 string "My email address is me@somedomain.com"`)
   .example(`node $0 file resources/test.txt`)

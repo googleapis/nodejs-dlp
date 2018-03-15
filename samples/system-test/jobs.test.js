@@ -42,29 +42,27 @@ const createTestJob = async () => {
       privacyMetric: {
         categoricalStatsConfig: {
           field: {
-            name: testColumnName
-          }
-        }
+            name: testColumnName,
+          },
+        },
       },
       sourceTable: {
         projectId: testTableProjectId,
         datasetId: testDatasetId,
-        tableId: testTableId
-      }
-    }
+        tableId: testTableId,
+      },
+    },
   };
 
   // Create job
-  return dlp
-    .createDlpJob(request)
-    .then(response => {
-      return response[0].name;
-    });
+  return dlp.createDlpJob(request).then(response => {
+    return response[0].name;
+  });
 };
 
 // Create a test job
 let testJobName;
-test.before(async t => {
+test.before(async () => {
   testJobName = await createTestJob();
 });
 
@@ -75,7 +73,9 @@ test(`should list jobs`, async t => {
 });
 
 test(`should list jobs of a given type`, async t => {
-  const output = await tools.runAsync(`${cmd} list 'state=DONE' -t RISK_ANALYSIS_JOB`);
+  const output = await tools.runAsync(
+    `${cmd} list 'state=DONE' -t RISK_ANALYSIS_JOB`
+  );
   t.regex(output, /Job projects\/(\w|-)+\/dlpJobs\/r-\d+ status: DONE/);
 });
 
