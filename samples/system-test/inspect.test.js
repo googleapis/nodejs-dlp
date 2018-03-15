@@ -136,7 +136,7 @@ test.serial(`should report GCS file handling errors`, async t => {
 // inspect_datastore
 test.serial(`should inspect Datastore`, async t => {
   const output = await tools.runAsync(
-    `${cmd} datastore Person ${topicName} ${subscriptionName} --namespaceId DLP`,
+    `${cmd} datastore Person ${topicName} ${subscriptionName} --namespaceId DLP -p nodejs-docs-samples`,
     cwd
   );
   t.regex(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
@@ -144,7 +144,7 @@ test.serial(`should inspect Datastore`, async t => {
 
 test.serial(`should handle Datastore with no sensitive data`, async t => {
   const output = await tools.runAsync(
-    `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP`,
+    `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -p nodejs-docs-samples`,
     cwd
   );
   t.regex(output, /No findings/);
@@ -152,32 +152,35 @@ test.serial(`should handle Datastore with no sensitive data`, async t => {
 
 test.serial(`should report Datastore errors`, async t => {
   const output = await tools.runAsync(
-    `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -t BAD_TYPE`,
+    `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -t BAD_TYPE -p nodejs-docs-samples`,
     cwd
   );
   t.regex(output, /Error in inspectDatastore/);
 });
 
 // inspect_bigquery
-test.skip(`should inspect a Bigquery table`, async t => {
+test.serial(`should inspect a Bigquery table`, async t => {
   const output = await tools.runAsync(
-    `${cmd} bigquery integration_tests_dlp harmful ${topicName} ${subscriptionName}`,
+    `${cmd} bigquery integration_tests_dlp harmful ${topicName} ${subscriptionName} -p nodejs-docs-samples`,
     cwd
   );
   t.regex(output, /Found \d instance\(s\) of infoType PHONE_NUMBER/);
 });
 
-test.skip(`should handle a Bigquery table with no sensitive data`, async t => {
-  const output = await tools.runAsync(
-    `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName}`,
-    cwd
-  );
-  t.regex(output, /No findings/);
-});
+test.serial(
+  `should handle a Bigquery table with no sensitive data`,
+  async t => {
+    const output = await tools.runAsync(
+      `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -p nodejs-docs-samples`,
+      cwd
+    );
+    t.regex(output, /No findings/);
+  }
+);
 
-test.skip(`should report Bigquery table handling errors`, async t => {
+test.serial(`should report Bigquery table handling errors`, async t => {
   const output = await tools.runAsync(
-    `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -t BAD_TYPE`,
+    `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -t BAD_TYPE -p nodejs-docs-samples`,
     cwd
   );
   t.regex(output, /Error in inspectBigquery/);
