@@ -75,7 +75,7 @@ function deleteJob(jobName) {
   // Run job deletion request
   dlp
     .deleteDlpJob(request)
-    .then((/*response*/) => {
+    .then(() => {
       console.log(`Successfully deleted job ${jobName}.`);
     })
     .catch(err => {

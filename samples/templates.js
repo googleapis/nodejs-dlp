@@ -159,7 +159,7 @@ function deleteInspectTemplate(templateName) {
   // Run template-deletion request
   dlp
     .deleteInspectTemplate(request)
-    .then((/*response*/) => {
+    .then(() => {
       console.log(`Successfully deleted template ${templateName}.`);
     })
     .catch(err => {

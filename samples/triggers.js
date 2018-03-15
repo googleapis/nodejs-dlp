@@ -181,7 +181,7 @@ function deleteTrigger(triggerId) {
   // Run trigger deletion request
   dlp
     .deleteJobTrigger(request)
-    .then((/*response*/) => {
+    .then(() => {
       console.log(`Successfully deleted trigger ${triggerId}.`);
     })
     .catch(err => {
