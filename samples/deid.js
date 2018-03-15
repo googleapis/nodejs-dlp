@@ -157,6 +157,9 @@ function deidentifyWithDateShift(
     .toString()
     .split('\n');
   const csvHeaders = csvLines[0].split(',');
+  if (csvLines[csvLines.length - 1] === '') {
+    csvLines.splice(-1);
+  }
   const csvRows = csvLines.slice(1);
 
   // Construct the table object
@@ -224,7 +227,10 @@ function deidentifyWithDateShift(
         );
         csvLines[rowIndex + 1] = rowValues.join(',');
       });
-      fs.writeFileSync(outputCsvFile, csvLines.join('\n'));
+      fs.writeFileSync(
+        outputCsvFile,
+        csvLines.map(line => line + '\n').join('')
+      );
 
       // Print status
       console.log(`Successfully saved date-shift output to ${outputCsvFile}`);
