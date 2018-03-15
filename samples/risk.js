@@ -132,6 +132,10 @@ function numericalRiskAnalysis(
         subscription.on('error', errorHandler);
       });
     })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
+    })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
@@ -279,6 +283,10 @@ function categoricalRiskAnalysis(
         subscription.on('message', messageHandler);
         subscription.on('error', errorHandler);
       });
+    })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
     })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
@@ -431,6 +439,10 @@ function kAnonymityAnalysis(
         subscription.on('error', errorHandler);
       });
     })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
+    })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
@@ -580,6 +592,10 @@ function lDiversityAnalysis(
         subscription.on('message', messageHandler);
         subscription.on('error', errorHandler);
       });
+    })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
     })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
@@ -738,6 +754,10 @@ function kMapEstimationAnalysis(
         subscription.on('message', messageHandler);
         subscription.on('error', errorHandler);
       });
+    })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
     })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {

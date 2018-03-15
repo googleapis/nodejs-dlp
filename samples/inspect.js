@@ -297,6 +297,10 @@ function inspectGCSFile(
         subscription.on('error', errorHandler);
       });
     })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
+    })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
@@ -450,6 +454,10 @@ function inspectDatastore(
         subscription.on('error', errorHandler);
       });
     })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
+    })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {
       const job = wrappedJob[0];
@@ -600,6 +608,10 @@ function inspectBigquery(
         subscription.on('message', messageHandler);
         subscription.on('error', errorHandler);
       });
+    })
+    .then(jobName => {
+      // Wait for DLP job to fully complete
+      return new Promise(resolve => setTimeout(resolve(jobName), 500));
     })
     .then(jobName => dlp.getDlpJob({name: jobName}))
     .then(wrappedJob => {

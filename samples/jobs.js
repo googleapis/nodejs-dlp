@@ -47,9 +47,7 @@ function listJobs(callingProjectId, filter, jobType) {
       const jobs = response[0];
       jobs.forEach(job => {
         console.log(
-          `Job ${job.name} status: ${job.state} created: ${new Date(
-            parseInt(job.createTime.seconds, 10) * 1000
-          ).toLocaleString('en-US')}`
+          `Job ${job.name} status: ${job.state}`
         );
       });
     })
