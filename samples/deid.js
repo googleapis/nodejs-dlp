@@ -226,10 +226,7 @@ function deidentifyWithDateShift(
         csvLines[rowIndex + 1] = rowValues.join(',');
       });
       csvLines.push('');
-      fs.writeFileSync(
-        outputCsvFile,
-        csvLines.join('\n')
-      );
+      fs.writeFileSync(outputCsvFile, csvLines.join('\n'));
 
       // Print status
       console.log(`Successfully saved date-shift output to ${outputCsvFile}`);
