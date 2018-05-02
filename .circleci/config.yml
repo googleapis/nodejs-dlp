@@ -137,7 +137,7 @@ jobs:
     steps: *unit_tests_steps
   lint:
     docker:
-      - image: 'node:10'
+      - image: 'node:8'
         user: node
     steps:
       - checkout
@@ -159,7 +159,7 @@ jobs:
             NPM_CONFIG_PREFIX: /home/node/.npm-global
   docs:
     docker:
-      - image: 'node:10'
+      - image: 'node:8'
         user: node
     steps:
       - checkout
@@ -170,7 +170,7 @@ jobs:
           command: npm run docs
   sample_tests:
     docker:
-      - image: 'node:10'
+      - image: 'node:8'
         user: node
     steps:
       - checkout
@@ -197,7 +197,7 @@ jobs:
     working_directory: /home/node/dlp-samples
   system_tests:
     docker:
-      - image: 'node:10'
+      - image: 'node:8'
         user: node
     steps:
       - checkout
@@ -221,7 +221,7 @@ jobs:
           when: always
   publish_npm:
     docker:
-      - image: 'node:10'
+      - image: 'node:8'
         user: node
     steps:
       - checkout
