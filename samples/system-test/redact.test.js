@@ -85,7 +85,7 @@ test(`should redact multiple sensitive data types from an image`, async t => {
   t.deepEqual(correct, result);
 });
 
-test(`should report infotype errors`, async t => {
+test(`should report info type errors`, async t => {
   const output = await tools.runAsync(
     `${cmd} string "My email is jenny@example.com" -t NONEXISTENT`,
     cwd
