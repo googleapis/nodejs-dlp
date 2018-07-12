@@ -40,9 +40,6 @@ s.replace(
 '''
 Node.js specific cleanup
 '''
-# Repo Cleanup/Setup
-subprocess.run(['npm', 'install'])
-
-# prettify and lint
+subprocess.run(['npm', 'ci'])
 subprocess.run(['npm', 'run', 'prettier'])
 subprocess.run(['npm', 'run', 'lint'])
