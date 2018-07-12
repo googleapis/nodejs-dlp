@@ -4,7 +4,7 @@
 
 [1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
 
-## v1.0.0
+## v0.8.0
 
 ### BREAKING CHANGE
 - fix: drop support for node.js 4.x and 9.x (#81)
