@@ -29,11 +29,17 @@ s.copy(library,
 )
 
 '''
+Replace the namespace so RPC types documentation are linked properly.
+'''
+s.replace(
+  'src/index.js',
+  '\* @namespace google.cloud',
+  '* @namespace google.privacy',
+)
+
+'''
 Node.js specific cleanup
 '''
-# Repo Cleanup/Setup
-subprocess.run(['npm', 'install'])
-
-# prettify and lint
+subprocess.run(['npm', 'ci'])
 subprocess.run(['npm', 'run', 'prettier'])
 subprocess.run(['npm', 'run', 'lint'])
