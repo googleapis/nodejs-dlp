@@ -18,7 +18,8 @@ import synthtool as s
 import synthtool.gcp as gcp
 import subprocess
 
-gapic = gcp.GAPICGenerator()
+gapic = gcp.GAPICGeneratorgcp.CommonTemplates()
+()
 
 version = 'v2'
 library = gapic.node_library('dlp', version,
@@ -27,6 +28,10 @@ library = gapic.node_library('dlp', version,
 s.copy(library,
   excludes=['README.md', 'package.json']
 )
+
+templates = common_templates.node_library(package_name="@google-cloud/dlp")
+s.copy(templates)
+
 
 '''
 Replace the namespace so RPC types documentation are linked properly.
