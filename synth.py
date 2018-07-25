@@ -18,8 +18,8 @@ import synthtool as s
 import synthtool.gcp as gcp
 import subprocess
 
-gapic = gcp.GAPICGeneratorgcp.CommonTemplates()
-()
+gapic = gcp.GAPICGenerator()
+gcp.CommonTemplates()
 
 version = 'v2'
 library = gapic.node_library('dlp', version,
