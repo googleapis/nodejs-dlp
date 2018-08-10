@@ -19,6 +19,7 @@ import synthtool.gcp as gcp
 import subprocess
 
 gapic = gcp.GAPICGenerator()
+common_templates = gcp.CommonTemplates()
 
 version = 'v2'
 library = gapic.node_library('dlp', version,
@@ -28,12 +29,22 @@ s.copy(library,
   excludes=['README.md', 'package.json']
 )
 
+templates = common_templates.node_library(package_name="@google-cloud/dlp")
+s.copy(templates)
+
+
+'''
+Replace the namespace so RPC types documentation are linked properly.
+'''
+s.replace(
+  'src/index.js',
+  '\* @namespace google.cloud',
+  '* @namespace google.privacy',
+)
+
 '''
 Node.js specific cleanup
 '''
-# Repo Cleanup/Setup
 subprocess.run(['npm', 'install'])
-
-# prettify and lint
 subprocess.run(['npm', 'run', 'prettier'])
 subprocess.run(['npm', 'run', 'lint'])

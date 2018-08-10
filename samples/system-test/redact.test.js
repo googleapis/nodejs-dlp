@@ -32,7 +32,8 @@ test.before(tools.checkCredentials);
 
 function readImage(filePath) {
   return new Promise((resolve, reject) => {
-    fs.createReadStream(filePath)
+    fs
+      .createReadStream(filePath)
       .pipe(new PNG())
       .on('error', reject)
       .on('parsed', function() {
@@ -55,6 +56,31 @@ async function getImageDiffPercentage(image1Path, image2Path) {
   );
   return diffPixels / (diff.width * diff.height);
 }
+
+// redact_text
+test(`should redact a single sensitive data type from a string`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} string "My email is jenny@example.com" -t EMAIL_ADDRESS`,
+    cwd
+  );
+  t.regex(output, /My email is \[EMAIL_ADDRESS\]/);
+});
+
+test(`should redact multiple sensitive data types from a string`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} string "I am 29 years old and my email is jenny@example.com" -t EMAIL_ADDRESS AGE`,
+    cwd
+  );
+  t.regex(output, /I am \[AGE\] and my email is \[EMAIL_ADDRESS\]/);
+});
+
+test(`should handle string with no sensitive data`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} string "No sensitive data to redact here" -t EMAIL_ADDRESS AGE`,
+    cwd
+  );
+  t.regex(output, /No sensitive data to redact here/);
+});
 
 // redact_image
 test(`should redact a single sensitive data type from an image`, async t => {
@@ -87,6 +113,14 @@ test(`should redact multiple sensitive data types from an image`, async t => {
     `${testResourcePath}/${testName}.expected.png`
   );
   t.true(difference < 0.03);
+});
+
+test(`should report info type errors`, async t => {
+  const output = await tools.runAsync(
+    `${cmd} string "My email is jenny@example.com" -t NONEXISTENT`,
+    cwd
+  );
+  t.regex(output, /Error in deidentifyContent/);
 });
 
 test(`should report image redaction handling errors`, async t => {
