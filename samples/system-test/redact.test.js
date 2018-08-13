@@ -32,8 +32,7 @@ test.before(tools.checkCredentials);
 
 function readImage(filePath) {
   return new Promise((resolve, reject) => {
-    fs
-      .createReadStream(filePath)
+    fs.createReadStream(filePath)
       .pipe(new PNG())
       .on('error', reject)
       .on('parsed', function() {
