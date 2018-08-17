@@ -4,7 +4,7 @@
 
 [1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
 
-## v0.8.1
+## v0.9.0
 
 ### New Features
 - Bring in new feature:
