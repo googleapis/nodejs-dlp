@@ -2,7 +2,11 @@
 
 [npm history][1]
 
-[1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
+[1]: https://www.npmjs.com/package/@google-cloud/dlp?activeTab=versions
+
+## v0.8.1
+
+A patch release to address documentation issues (#108).
 
 ## v0.8.0
 
