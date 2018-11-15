@@ -27,7 +27,7 @@ function numericalRiskAnalysis(
   // [START dlp_numerical_stats]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -180,7 +180,7 @@ function categoricalRiskAnalysis(
   // [START dlp_categorical_stats]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -337,7 +337,7 @@ function kAnonymityAnalysis(
   // [START dlp_k_anonymity]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -485,7 +485,7 @@ function lDiversityAnalysis(
   // [START dlp_l_diversity]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -647,7 +647,7 @@ function kMapEstimationAnalysis(
   // [START dlp_k_map]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();

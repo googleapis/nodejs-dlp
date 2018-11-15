@@ -190,7 +190,7 @@ function inspectGCSFile(
   // [START dlp_inspect_gcs]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -337,7 +337,7 @@ function inspectDatastore(
   // [START dlp_inspect_datastore]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
@@ -494,7 +494,7 @@ function inspectBigquery(
   // [START dlp_inspect_bigquery]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
-  const Pubsub = require('@google-cloud/pubsub');
+  const {Pubsub} = require('@google-cloud/pubsub');
 
   // Instantiates clients
   const dlp = new DLP.DlpServiceClient();
