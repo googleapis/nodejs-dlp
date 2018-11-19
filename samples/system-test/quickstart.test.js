@@ -16,15 +16,15 @@
 'use strict';
 
 const path = require('path');
-const test = require('ava');
+const assert = require('assert');
 const tools = require('@google-cloud/nodejs-repo-tools');
 
 const cmd = 'node quickstart.js';
-const cwd = path.join(__dirname, `..`);
+const cwd = path.join(__dirname, '..');
 
-test.before(tools.checkCredentials);
+before(tools.checkCredentials);
 
-test(`should run`, async t => {
+it('should run', async () => {
   const output = await tools.runAsync(cmd, cwd);
-  t.regex(output, /Info type: PERSON_NAME/);
+  assert.strictEqual(new RegExp(/Info type: PERSON_NAME/).test(output), true);
 });
