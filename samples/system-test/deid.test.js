@@ -167,12 +167,12 @@ it('should date-shift a CSV file using a context field', async () => {
 
 it('should require all-or-none of {contextField, wrappedKey, keyName}', async () => {
   await assert.throws(
-    tools.runAsync(
+    () => tools.runAsync(
       `${cmd} deidDateShift "${csvFile}" "${tempOutputFile}" ${dateShiftAmount} ${dateShiftAmount} ${dateFields} -f ${csvContextField} -n ${keyName}`,
       cwd
     ),
     Error,
-    /You must set ALL or NONE of/
+    /You must set either ALL or NONE of/
   );
 });
 
