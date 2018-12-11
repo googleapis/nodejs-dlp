@@ -69,7 +69,10 @@ it('should inspect a string with custom regex', async () => {
     `${cmd} string "I'm Gary and my email is gary@example.com" -r "gary@example\\.com"`,
     cwd
   );
-  assert.strictEqual(new RegExp(/Info type: CUSTOM_REGEX_0/).test(output), true);
+  assert.strictEqual(
+    new RegExp(/Info type: CUSTOM_REGEX_0/).test(output),
+    true
+  );
 });
 
 it('should handle a string with no sensitive data', async () => {
@@ -93,13 +96,22 @@ it('should inspect a local text file', async () => {
 });
 
 it('should inspect a local text file with custom dictionary', async () => {
-  const output = await tools.runAsync(`${cmd} file resources/test.txt -d "gary@somedomain.com"`, cwd);
+  const output = await tools.runAsync(
+    `${cmd} file resources/test.txt -d "gary@somedomain.com"`,
+    cwd
+  );
   assert.strictEqual(new RegExp(/Info type: CUSTOM_DICT_0/).test(output), true);
 });
 
 it('should inspect a local text file with custom regex', async () => {
-  const output = await tools.runAsync(`${cmd} file resources/test.txt -r "\\(\\d{3}\\) \\d{3}-\\d{4}"`, cwd);
-  assert.strictEqual(new RegExp(/Info type: CUSTOM_REGEX_0/).test(output), true);
+  const output = await tools.runAsync(
+    `${cmd} file resources/test.txt -r "\\(\\d{3}\\) \\d{3}-\\d{4}"`,
+    cwd
+  );
+  assert.strictEqual(
+    new RegExp(/Info type: CUSTOM_REGEX_0/).test(output),
+    true
+  );
 });
 
 it('should inspect a local image file', async () => {
