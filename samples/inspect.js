@@ -776,7 +776,7 @@ const cli = require(`yargs`) // eslint-disable-line
     type: 'array',
     global: true,
     coerce: customRegexes =>
-      customRegexes.map((rgx, idx) => { 
+      customRegexes.map((rgx, idx) => {
         return {infoType: {name: 'CUSTOM_REGEX_'.concat(idx.toString())}, regex: {pattern: rgx}};
       }),
   })
