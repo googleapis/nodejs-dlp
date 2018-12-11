@@ -132,7 +132,7 @@ async function inspectFile(
   // The customInfoTypes of information to match
   // const customInfoTypes = [{ name: 'DICT_TYPE', dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
   //   { name: 'REGEX_TYPE', regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
-    
+
   // Whether to include the matching string
   // const includeQuote = true;
 
@@ -765,20 +765,20 @@ const cli = require(`yargs`) // eslint-disable-line
     coerce: customDictionaries =>
       customDictionaries.map((dict, idx) => {
         return {
-          infoType: {name: "CUSTOM_DICT_".concat(idx.toString())},
-          dictionary: {wordList: {words: dict.split(',')}}
+          infoType: {name: 'CUSTOM_DICT_'.concat(idx.toString())},
+          dictionary: {wordList: {words: dict.split(',')}},
         };
       }),
   })
   .option('r', {
-     alias: 'customRegexes',
-     default: [],
-     type: 'array',
-     global: true,
-     coerce: customRegexes =>
-       customRegexes.map((rgx, idx) => { 
-         return {infoType: {name: "CUSTOM_REGEX_".concat(idx.toString())}, regex: {pattern: rgx}};
-       }),
+    alias: 'customRegexes',
+    default: [],
+    type: 'array',
+    global: true,
+    coerce: customRegexes =>
+      customRegexes.map((rgx, idx) => { 
+        return {infoType: {name: 'CUSTOM_REGEX_'.concat(idx.toString())}, regex: {pattern: rgx}};
+      }),
   })
   .option('n', {
     alias: 'notificationTopic',
