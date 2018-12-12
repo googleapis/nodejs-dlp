@@ -90,30 +90,6 @@ it('should handle string with no sensitive data', async () => {
   );
 });
 
-test(`should redact a single sensitive data type from a string`, async t => {
-  const output = await tools.runAsync(
-    `${cmd} string "My email is jenny@example.com" -t EMAIL_ADDRESS`,
-    cwd
-  );
-  t.regex(output, /My email is \[EMAIL_ADDRESS\]/);
-});
-
-test(`should redact multiple sensitive data types from a string`, async t => {
-  const output = await tools.runAsync(
-    `${cmd} string "I am 29 years old and my email is jenny@example.com" -t EMAIL_ADDRESS AGE`,
-    cwd
-  );
-  t.regex(output, /I am \[AGE\] and my email is \[EMAIL_ADDRESS\]/);
-});
-
-test(`should handle string with no sensitive data`, async t => {
-  const output = await tools.runAsync(
-    `${cmd} string "No sensitive data to redact here" -t EMAIL_ADDRESS AGE`,
-    cwd
-  );
-  t.regex(output, /No sensitive data to redact here/);
-});
-
 // redact_image
 it('should redact a single sensitive data type from an image', async () => {
   const testName = `redact-single-type`;
