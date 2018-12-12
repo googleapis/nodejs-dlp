@@ -69,6 +69,34 @@ it('should report string inspection handling errors', async () => {
   assert.strictEqual(new RegExp(/Error in inspectString/).test(output), true);
 });
 
+// inspect_table
+it('should inspect a table', async () => {
+  const output = await tools.runAsync(
+    `${cmd} table "col1,col2" "Alice,no email address" "Gary,gary@example.com"`,
+    cwd
+  );
+  assert.strictEqual(new RegExp(/Info type: EMAIL_ADDRESS/).test(output), true);
+  assert.strictEqual(new RegExp(/Table column: col2/).test(output), true);
+  assert.strictEqual(new RegExp(/Table row: 1/).test(output), true);
+});
+
+it('should handle a table with no findings', async () => {
+  const output = await tools.runAsync(
+    `${cmd} table "col1,col2" "Alice,no email address" "Gary,no email address"`,
+    cwd
+  );
+  assert.strictEqual(output, 'No findings.');
+});
+
+it('should report table row length mismatch', async () => {
+  assert.rejects(async () => {
+    const output = await tools.runAsync(
+      `${cmd} table "col1,col2,col3" "a,b,c" "1,2"`,
+      cwd
+    );
+  }, new RegExp(/The number of items in each row must equal the number of headers./));
+});
+
 // inspect_file
 it('should inspect a local text file', async () => {
   const output = await tools.runAsync(`${cmd} file resources/test.txt`, cwd);

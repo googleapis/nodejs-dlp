@@ -88,6 +88,110 @@ async function inspectString(
   // [END dlp_inspect_string]
 }
 
+function inspectTable(
+  callingProjectId,
+  tableHeaders,
+  tableRows,
+  minLikelihood,
+  maxFindings,
+  infoTypes,
+  includeQuote
+) {
+  // [START dlp_inspect_table]
+  // Imports the Google Cloud Data Loss Prevention library
+  const DLP = require('@google-cloud/dlp');
+
+  // Instantiates a client
+  const dlp = new DLP.DlpServiceClient();
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
+
+  // The headers of the table to inspect, in a comma-delimited string
+  // const tableHeaders = "";
+
+  // The rows of the table to inspect, with each row represented as a comma-delimited list of items
+  // Number of items in each row must be equal to number of headers
+  // const tableItems = [];
+
+  // The minimum likelihood required before returning a match
+  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
+
+  // The maximum number of findings to report per request (0 = server maximum)
+  // const maxFindings = 0;
+
+  // The infoTypes of information to match
+  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
+
+  // Whether to include the matching string
+  // const includeQuote = true;
+
+  tableHeaders = tableHeaders.split(',');
+  // Parse rows from input
+  var rows = [];
+  tableRows.forEach(row => {
+    const rowItems = row.split(',');
+    if (!(tableHeaders.length == rowItems.length)) {
+      throw 'The number of items in each row must equal the number of headers.';
+    }
+    rows.push({
+      values: rowItems.map(rowItem => {
+        return {stringValue: rowItem};
+      }),
+    });
+  });
+
+  // Construct table to inspect
+  const table = {
+    headers: tableHeaders.map(header => {
+      return {name: header};
+    }),
+    rows: rows,
+  };
+  const item = {table: table};
+
+  // Construct request
+  const request = {
+    parent: dlp.projectPath(callingProjectId),
+    inspectConfig: {
+      infoTypes: infoTypes,
+      minLikelihood: minLikelihood,
+      includeQuote: includeQuote,
+      limits: {
+        maxFindingsPerRequest: maxFindings,
+      },
+    },
+    item: item,
+  };
+
+  // Run request
+  dlp
+    .inspectContent(request)
+    .then(response => {
+      const findings = response[0].result.findings;
+      if (findings.length > 0) {
+        console.log(`Findings:`);
+        findings.forEach(finding => {
+          if (includeQuote) {
+            console.log(`\tQuote: ${finding.quote}`);
+          }
+          const tableLocation =
+            finding.location.contentLocations[0].recordLocation;
+          console.log(`\tInfo type: ${finding.infoType.name}`);
+          console.log(`\tLikelihood: ${finding.likelihood}`);
+          console.log(`\tTable column: ${tableLocation.fieldId.name}`);
+          console.log(`\tTable row: ${tableLocation.tableLocation.rowIndex}`);
+        });
+      } else {
+        console.log(`No findings.`);
+      }
+    })
+    .catch(err => {
+      console.log(`Error in inspectString: ${err.message || err}`);
+    });
+  // [END dlp_inspect_table]
+}
+
 async function inspectFile(
   callingProjectId,
   filepath,
@@ -599,6 +703,21 @@ const cli = require(`yargs`) // eslint-disable-line
       inspectString(
         opts.callingProjectId,
         opts.string,
+        opts.minLikelihood,
+        opts.maxFindings,
+        opts.infoTypes,
+        opts.includeQuote
+      )
+  )
+  .command(
+    `table <tableHeaders> [tableRows..]`,
+    `Inspect a table using the Data Loss Prevention API.`,
+    {},
+    opts =>
+      inspectTable(
+        opts.callingProjectId,
+        opts.tableHeaders,
+        opts.tableRows,
         opts.minLikelihood,
         opts.maxFindings,
         opts.infoTypes,
