@@ -16,11 +16,13 @@
 'use strict';
 
 const path = require('path');
-const assert = require('assert');
+const nativeAssert = require('assert');
 const tools = require('@google-cloud/nodejs-repo-tools');
 const {PubSub} = require('@google-cloud/pubsub');
 const pubsub = new PubSub();
 const uuid = require('uuid');
+const {assert} = require('chai');
+const {expect} = require('chai');
 
 const cmd = 'node inspect.js';
 const cwd = path.join(__dirname, '..');
@@ -75,9 +77,9 @@ it('should inspect a table', async () => {
     `${cmd} table "col1,col2" "Alice,no email address" "Gary,gary@example.com"`,
     cwd
   );
-  assert.strictEqual(new RegExp(/Info type: EMAIL_ADDRESS/).test(output), true);
-  assert.strictEqual(new RegExp(/Table column: col2/).test(output), true);
-  assert.strictEqual(new RegExp(/Table row: 1/).test(output), true);
+  assert.match(output, new RegExp(/Info type: EMAIL_ADDRESS/));
+  assert.match(output, new RegExp(/Table column: col2/));
+  assert.match(output, new RegExp(/Table row: 1/));
 });
 
 it('should handle a table with no findings', async () => {
@@ -89,7 +91,7 @@ it('should handle a table with no findings', async () => {
 });
 
 it('should report table row length mismatch', async () => {
-  assert.rejects(async () => {
+  nativeAssert.rejects(async () => {
     const output = await tools.runAsync(
       `${cmd} table "col1,col2,col3" "a,b,c" "1,2"`,
       cwd
