@@ -221,12 +221,8 @@ async function inspectGCSFile(
   // TODO(developer): create a Pub/Sub subscription to use for this
   // const subscriptionId = 'MY-PUBSUB-SUBSCRIPTION'
 
-  // Get reference to the file to be inspected
-  const storageItem = {
-    cloudStorageOptions: {
-      fileSet: {url: `gs://${bucketName}/${fileName}`},
-    },
-  };
+  // Get reference to the file(s) to be inspected
+  const fileSet = {url: `gs://${bucketName}/${fileName}`};
 
   // Construct request for creating an inspect job
   const request = {
@@ -239,7 +235,11 @@ async function inspectGCSFile(
           maxFindingsPerRequest: maxFindings,
         },
       },
-      storageConfig: storageItem,
+      storageConfig: {
+        cloudStorageOptions: {
+          fileSet: fileSet,
+        },
+      },
       actions: [
         {
           pubSub: {
@@ -305,6 +305,151 @@ async function inspectGCSFile(
   }
 
   // [END dlp_inspect_gcs]
+}
+
+async function inspectGCSFileWithSampling(
+  callingProjectId,
+  bucketName,
+  fileName,
+  topicId,
+  subscriptionId,
+  bytesLimit,
+  filesPercent,
+  minLikelihood,
+  maxFindings,
+  infoTypes
+) {
+  // [START dlp_inspect_gcs_sampling]
+  // Import the Google Cloud client libraries
+  const DLP = require('@google-cloud/dlp');
+  const {PubSub} = require('@google-cloud/pubsub');
+
+  // Instantiates clients
+  const dlp = new DLP.DlpServiceClient();
+  const pubsub = new PubSub();
+
+  // The project ID to run the API call under
+  // const callingProjectId = process.env.GCLOUD_PROJECT;
+
+  // The name of the bucket where the file resides.
+  // const bucketName = 'YOUR-BUCKET';
+
+  // The path to the file within the bucket to inspect.
+  // Can contain wildcards, e.g. "my-image.*"
+  // const fileName = 'my-image.png';
+
+  // The maximum number of bytes to inspect per file.
+  // const bytesLimit = 200;
+
+  // The percentage of files to inspect
+  // const filesPercent = 90;
+
+  // The minimum likelihood required before returning a match
+  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
+
+  // The maximum number of findings to report per request (0 = server maximum)
+  // const maxFindings = 0;
+
+  // The infoTypes of information to match
+  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
+
+  // The name of the Pub/Sub topic to notify once the job completes
+  // TODO(developer): create a Pub/Sub topic to use for this
+  // const topicId = 'MY-PUBSUB-TOPIC'
+
+  // The name of the Pub/Sub subscription to use when listening for job
+  // completion notifications
+  // TODO(developer): create a Pub/Sub subscription to use for this
+  // const subscriptionId = 'MY-PUBSUB-SUBSCRIPTION'
+
+  // Get reference to the file(s) to be inspected
+  const fileSet = {url: `gs://${bucketName}/${fileName}`};
+
+  // Construct request for creating an inspect job
+  const request = {
+    parent: dlp.projectPath(callingProjectId),
+    inspectJob: {
+      inspectConfig: {
+        infoTypes: infoTypes,
+        minLikelihood: minLikelihood,
+        limits: {
+          maxFindingsPerRequest: maxFindings,
+        },
+      },
+      storageConfig: {
+        cloudStorageOptions: {
+          fileSet: fileSet,
+          bytesLimitPerFile: bytesLimit,
+          sampleMethod: 'RANDOM_START',
+          fileTypes: ['TEXT_FILE'],
+          filesLimitPercent: filesPercent,
+        },
+      },
+      actions: [
+        {
+          pubSub: {
+            topic: `projects/${callingProjectId}/topics/${topicId}`,
+          },
+        },
+      ],
+    },
+  };
+
+  try {
+    // Create a GCS File inspection job and wait for it to complete
+    const [topicResponse] = await pubsub.topic(topicId).get();
+    // Verify the Pub/Sub topic and listen for job notifications via an
+    // existing subscription.
+    const subscription = await topicResponse.subscription(subscriptionId);
+    const [jobsResponse] = await dlp.createDlpJob(request);
+    // Get the job's ID
+    const jobName = jobsResponse.name;
+    // Watch the Pub/Sub topic until the DLP job finishes
+    await new Promise((resolve, reject) => {
+      const messageHandler = message => {
+        if (message.attributes && message.attributes.DlpJobName === jobName) {
+          message.ack();
+          subscription.removeListener('message', messageHandler);
+          subscription.removeListener('error', errorHandler);
+          resolve(jobName);
+        } else {
+          message.nack();
+        }
+      };
+
+      const errorHandler = err => {
+        subscription.removeListener('message', messageHandler);
+        subscription.removeListener('error', errorHandler);
+        reject(err);
+      };
+
+      subscription.on('message', messageHandler);
+      subscription.on('error', errorHandler);
+    });
+
+    setTimeout(() => {
+      console.log(`Waiting for DLP job to fully complete`);
+    }, 500);
+    const [job] = await dlp.getDlpJob({name: jobName});
+    console.log(`Job ${job.name} status: ${job.state}`);
+
+    const infoTypeStats = job.inspectDetails.result.infoTypeStats;
+    if (infoTypeStats.length > 0) {
+      infoTypeStats.forEach(infoTypeStat => {
+        console.log(
+          `  Found ${infoTypeStat.count} instance(s) of infoType ${
+            infoTypeStat.infoType.name
+          }.`
+        );
+      });
+    } else {
+      console.log(`No findings.`);
+    }
+  } catch (err) {
+    console.log(`Error in inspectGCSFile: ${err.message || err}`);
+  }
+
+  // [END dlp_inspect_gcs_sampling]
 }
 
 async function inspectDatastore(
@@ -620,20 +765,36 @@ const cli = require(`yargs`) // eslint-disable-line
       )
   )
   .command(
-    `gcsFile <bucketName> <fileName> <topicId> <subscriptionId>`,
+    `gcsFile <bucketName> <fileName> <topicId> <subscriptionId> [bytesLimit] [filesPercent]`,
     `Inspects a text file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.`,
     {},
-    opts =>
-      inspectGCSFile(
-        opts.callingProjectId,
-        opts.bucketName,
-        opts.fileName,
-        opts.topicId,
-        opts.subscriptionId,
-        opts.minLikelihood,
-        opts.maxFindings,
-        opts.infoTypes
-      )
+    opts => {
+      if (opts.bytesLimit || opts.filesPercent) {
+        inspectGCSFileWithSampling(
+          opts.callingProjectId,
+          opts.bucketName,
+          opts.fileName,
+          opts.topicId,
+          opts.subscriptionId,
+          opts.bytesLimit,
+          opts.filesPercent,
+          opts.minLikelihood,
+          opts.maxFindings,
+          opts.infoTypes
+        );
+      } else {
+        inspectGCSFile(
+          opts.callingProjectId,
+          opts.bucketName,
+          opts.fileName,
+          opts.topicId,
+          opts.subscriptionId,
+          opts.minLikelihood,
+          opts.maxFindings,
+          opts.infoTypes
+        );
+      }
+    }
   )
   .command(
     `bigquery <datasetName> <tableName> <topicId> <subscriptionId>`,
