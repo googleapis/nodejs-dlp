@@ -16,13 +16,11 @@
 'use strict';
 
 const path = require('path');
-const nativeAssert = require('assert');
 const tools = require('@google-cloud/nodejs-repo-tools');
 const {PubSub} = require('@google-cloud/pubsub');
 const pubsub = new PubSub();
 const uuid = require('uuid');
 const {assert} = require('chai');
-const {expect} = require('chai');
 
 const cmd = 'node inspect.js';
 const cwd = path.join(__dirname, '..');
@@ -107,15 +105,6 @@ it('should handle a table with no findings', async () => {
     cwd
   );
   assert.strictEqual(output, 'No findings.');
-});
-
-it('should report table row length mismatch', async () => {
-  nativeAssert.rejects(async () => {
-    const output = await tools.runAsync(
-      `${cmd} table "col1,col2,col3" "a,b,c" "1,2"`,
-      cwd
-    );
-  }, new RegExp(/The number of items in each row must equal the number of headers./));
 });
 
 // inspect_file

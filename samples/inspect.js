@@ -134,10 +134,10 @@ function inspectTable(
 
   tableHeaders = tableHeaders.split(',');
   // Parse rows from input
-  var rows = [];
+  const rows = [];
   tableRows.forEach(row => {
     const rowItems = row.split(',');
-    if (!(tableHeaders.length == rowItems.length)) {
+    if (tableHeaders.length !== rowItems.length) {
       throw 'The number of items in each row must equal the number of headers.';
     }
     rows.push({
