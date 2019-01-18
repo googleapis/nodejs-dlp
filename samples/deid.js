@@ -307,15 +307,10 @@ async function deidentifyWithFpe(
     item: item,
   };
 
-  try {
-    // Run deidentification request
-    const [response] = await dlp.deidentifyContent(request);
-    const deidentifiedItem = response.item;
-    console.log(deidentifiedItem.value);
-  } catch (err) {
-    console.log(`Error in deidentifyWithFpe: ${err.message || err}`);
-  }
-
+  // Run deidentification request
+  const [response] = await dlp.deidentifyContent(request);
+  const deidentifiedItem = response.item;
+  console.log(deidentifiedItem.value);
   // [END dlp_deidentify_fpe]
 }
 
