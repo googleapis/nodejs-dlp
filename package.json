@@ -40,7 +40,7 @@
     "fix": "eslint --fix '**/*.js'"
   },
   "dependencies": {
-    "google-gax": "^0.22.0",
+    "google-gax": "^0.24.0",
     "lodash.merge": "^4.6.0",
     "protobufjs": "^6.8.0"
   },
@@ -51,7 +51,7 @@
     "eslint-config-prettier": "^3.0.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "ink-docstrap": "^1.3.0",
+    "jsdoc-baseline": "git+https://github.com/hegemonic/jsdoc-baseline.git",
     "intelli-espower-loader": "^1.0.1",
     "jsdoc": "^3.5.5",
     "mocha": "^5.0.0",
