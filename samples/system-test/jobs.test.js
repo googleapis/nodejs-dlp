@@ -77,7 +77,7 @@ it('should list jobs', async () => {
 });
 
 it('should list jobs of a given type', async () => {
-  const output = await tools.runAsync(
+  const {output} = await tools.spawnAsyncWithIO(
     `${cmd} list 'state=DONE' -t RISK_ANALYSIS_JOB`
   );
   assert.strictEqual(
