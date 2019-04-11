@@ -136,13 +136,11 @@ describe('risk', () => {
   });
 
   it('should check that numbers of quasi-ids and info types are equal', () => {
-    const {stderr} = execSync(
-      `${cmd} kMap ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField} -t AGE GENDER -p ${testProjectId}`
-    );
-    assert.match(
-      stderr,
-      /Number of infoTypes and number of quasi-identifiers must be equal!/
-    );
+    assert.throws(() => {
+      execSync(
+        `${cmd} kMap ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField} -t AGE GENDER -p ${testProjectId}`
+      );
+    }, /Number of infoTypes and number of quasi-identifiers must be equal!/);
   });
 
   // lDiversityAnalysis

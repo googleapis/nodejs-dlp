@@ -54,7 +54,7 @@ describe('triggers', () => {
 
   it('should delete a trigger', () => {
     const output = execSync(`${cmd} delete ${fullTriggerName}`);
-    assert.match(output, `Successfully deleted trigger ${fullTriggerName}.`);
+    assert.include(output, `Successfully deleted trigger ${fullTriggerName}.`);
   });
 
   it('should handle trigger creation errors', () => {
