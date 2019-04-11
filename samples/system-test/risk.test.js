@@ -24,9 +24,9 @@ const execSync = cmd => {
   try {
     return cp.execSync(cmd, {encoding: 'utf-8'});
   } catch (err) {
-    throw Error(err.stderr)
+    throw Error(err.stderr);
   }
-}
+};
 
 const cmd = 'node risk.js';
 const dataset = 'integration_tests_dlp';
