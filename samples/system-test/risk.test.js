@@ -22,11 +22,14 @@ const cp = require('child_process');
 
 const execSync = cmd => {
   try {
-    return cp.execSync(cmd, {encoding: 'utf-8'});
+    cp.execSync(cmd, {
+      encoding: 'utf-8',
+      stdio: [null, null, null]
+    });
   } catch (err) {
-    throw Error(err.stderr);
+    throw Error(err.stderr)
   }
-};
+}
 
 const cmd = 'node risk.js';
 const dataset = 'integration_tests_dlp';
