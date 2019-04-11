@@ -20,7 +20,13 @@ const uuid = require('uuid');
 const {PubSub} = require(`@google-cloud/pubsub`);
 const cp = require('child_process');
 
-const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
+const execSync = cmd => {
+  try {
+    return cp.execSync(cmd, {encoding: 'utf-8'});
+  } catch (err) {
+    throw Error(err.stderr)
+  }
+}
 
 const cmd = 'node risk.js';
 const dataset = 'integration_tests_dlp';
