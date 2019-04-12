@@ -21,14 +21,10 @@ const {PubSub} = require(`@google-cloud/pubsub`);
 const cp = require('child_process');
 
 const execSync = cmd => {
-  try {
-    return cp.execSync(cmd, {
-      encoding: 'utf-8',
-      stdio: [null, null, null],
-    });
-  } catch (err) {
-    throw Error(err.stderr);
-  }
+  return cp.execSync(cmd, {
+    encoding: 'utf-8',
+    stdio: [null, null, null],
+  });
 };
 
 const cmd = 'node risk.js';
