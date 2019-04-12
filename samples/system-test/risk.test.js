@@ -22,7 +22,7 @@ const cp = require('child_process');
 
 const execSync = cmd => {
   try {
-    cp.execSync(cmd, {
+    return cp.execSync(cmd, {
       encoding: 'utf-8',
       stdio: [null, null, null],
     });
