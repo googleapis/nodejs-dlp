@@ -83,6 +83,21 @@ async function inspectString(
 }
 // [END dlp_inspect_string]
 
+// [START dlp_inspect_file]
+/**
+ * @param {string} callingProjectId The project ID to run the API call under
+ * @param {string} filepath The path to a local file to inspect. Can be a text, JPG, or PNG file.
+ *   i.e. 'path/to/image.png'
+ * @param {string} minLikelihood The minimum likelihood required before returning a match.
+ *   i.e. 'LIKELIHOOD_UNSPECIFIED'
+ * @param {number} maxFindings The maximum number of findings to report per request (0 = server maximum)
+ * @param {object} infoTypes The infoTypes of information to match. Example:
+ *   [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }]
+ * @param {object[]} customInfoTypes The customInfoTypes of information to match. Example:
+ *   [{ name: 'DICT_TYPE', dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
+ *    { name: 'REGEX_TYPE', regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
+ * @param {boolean} includeQuote Whether to include the matching string
+ */
 async function inspectFile(
   callingProjectId,
   filepath,
@@ -92,7 +107,6 @@ async function inspectFile(
   customInfoTypes,
   includeQuote
 ) {
-  // [START dlp_inspect_file]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
@@ -102,28 +116,6 @@ async function inspectFile(
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
-
-  // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
-
-  // The path to a local file to inspect. Can be a text, JPG, or PNG file.
-  // const filepath = 'path/to/image.png';
-
-  // The minimum likelihood required before returning a match
-  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
-
-  // The maximum number of findings to report per request (0 = server maximum)
-  // const maxFindings = 0;
-
-  // The infoTypes of information to match
-  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
-
-  // The customInfoTypes of information to match
-  // const customInfoTypes = [{ name: 'DICT_TYPE', dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
-  //   { name: 'REGEX_TYPE', regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
-
-  // Whether to include the matching string
-  // const includeQuote = true;
 
   // Construct file data to inspect
   const fileTypeConstant =
