@@ -15,6 +15,19 @@
 
 'use strict';
 
+// [START dlp_inspect_string]
+/**
+ * @param {string} callingProjectId The project ID to run the API call under
+ * @param {string} string The string to inspect
+ * @param {string} minLikelihood The minimum likelihood required before returning a match
+ * @param {number} maxFindings The maximum number of findings to report per request (0 = server maximum)
+ * @param {object} infoTypes The infoTypes of information to match. Example:
+ *   [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }]
+ * @param {object[]} customInfoTypes The customInfoTypes of information to match. Example:
+ *   [{ name: 'DICT_TYPE', dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
+ *    { name: 'REGEX_TYPE', regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
+ * @param {boolean} includeQuote Whether to include the matching string
+ */
 async function inspectString(
   callingProjectId,
   string,
@@ -24,34 +37,11 @@ async function inspectString(
   customInfoTypes,
   includeQuote
 ) {
-  // [START dlp_inspect_string]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
-
-  // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
-
-  // The string to inspect
-  // const string = 'My name is Gary and my email is gary@example.com';
-
-  // The minimum likelihood required before returning a match
-  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
-
-  // The maximum number of findings to report per request (0 = server maximum)
-  // const maxFindings = 0;
-
-  // The infoTypes of information to match
-  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
-
-  // The customInfoTypes of information to match
-  // const customInfoTypes = [{ name: 'DICT_TYPE', dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
-  //   { name: 'REGEX_TYPE', regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
-
-  // Whether to include the matching string
-  // const includeQuote = true;
 
   // Construct item to inspect
   const item = {value: string};
@@ -90,9 +80,8 @@ async function inspectString(
   } catch (err) {
     console.log(`Error in inspectString: ${err.message || err}`);
   }
-
-  // [END dlp_inspect_string]
 }
+// [END dlp_inspect_string]
 
 async function inspectFile(
   callingProjectId,
