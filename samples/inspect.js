@@ -164,8 +164,8 @@ async function inspectFile(
   } catch (err) {
     console.log(`Error in inspectFile: ${err.message || err}`);
   }
-  // [END dlp_inspect_file]
 }
+// [END dlp_inspect_file]
 
 async function inspectGCSFile(
   callingProjectId,
