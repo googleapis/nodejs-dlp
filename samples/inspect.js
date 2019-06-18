@@ -310,7 +310,9 @@ async function inspectGCSFile(
     if (infoTypeStats.length > 0) {
       infoTypeStats.forEach(infoTypeStat => {
         console.log(
-          `  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`
+          `  Found ${infoTypeStat.count} instance(s) of infoType ${
+            infoTypeStat.infoType.name
+          }.`
         );
       });
     } else {
@@ -456,7 +458,9 @@ async function inspectDatastore(
     if (infoTypeStats.length > 0) {
       infoTypeStats.forEach(infoTypeStat => {
         console.log(
-          `  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`
+          `  Found ${infoTypeStat.count} instance(s) of infoType ${
+            infoTypeStat.infoType.name
+          }.`
         );
       });
     } else {
@@ -600,7 +604,9 @@ async function inspectBigquery(
     if (infoTypeStats.length > 0) {
       infoTypeStats.forEach(infoTypeStat => {
         console.log(
-          `  Found ${infoTypeStat.count} instance(s) of infoType ${infoTypeStat.infoType.name}.`
+          `  Found ${infoTypeStat.count} instance(s) of infoType ${
+            infoTypeStat.infoType.name
+          }.`
         );
       });
     } else {
