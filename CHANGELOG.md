@@ -4,6 +4,27 @@
 
 [1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
 
+### [1.3.1](https://www.github.com/googleapis/nodejs-dlp/compare/v1.3.0...v1.3.1) (2019-06-26)
+
+
+### Bug Fixes
+
+* **docs:** link to reference docs section on googleapis.dev ([#313](https://www.github.com/googleapis/nodejs-dlp/issues/313)) ([3a7b991](https://www.github.com/googleapis/nodejs-dlp/commit/3a7b991))
+
+## [1.3.0](https://www.github.com/googleapis/nodejs-dlp/compare/v1.2.1...v1.3.0) (2019-06-19)
+
+
+### Features
+
+* add avro support ([#310](https://www.github.com/googleapis/nodejs-dlp/issues/310)) ([ac4f6d9](https://www.github.com/googleapis/nodejs-dlp/commit/ac4f6d9))
+
+### [1.2.1](https://www.github.com/googleapis/nodejs-dlp/compare/v1.2.0...v1.2.1) (2019-06-16)
+
+
+### Bug Fixes
+
+* **docs:** move to new client docs URL ([#306](https://www.github.com/googleapis/nodejs-dlp/issues/306)) ([c2c018d](https://www.github.com/googleapis/nodejs-dlp/commit/c2c018d))
+
 ## [1.2.0](https://www.github.com/googleapis/nodejs-dlp/compare/v1.1.0...v1.2.0) (2019-06-06)
 
 
