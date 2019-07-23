@@ -55,35 +55,6 @@ async function listJobs(callingProjectId, filter, jobType) {
   // [END dlp_list_jobs]
 }
 
-function deleteJob(jobName) {
-  // [START dlp_delete_job]
-  // Imports the Google Cloud Data Loss Prevention library
-  const DLP = require('@google-cloud/dlp');
-
-  // Instantiates a client
-  const dlp = new DLP.DlpServiceClient();
-
-  // The name of the job whose results should be deleted
-  // Parent project ID is automatically extracted from this parameter
-  // const jobName = 'projects/my-project/dlpJobs/X-#####'
-
-  // Construct job deletion request
-  const request = {
-    name: jobName,
-  };
-
-  // Run job deletion request
-  dlp
-    .deleteDlpJob(request)
-    .then(() => {
-      console.log(`Successfully deleted job ${jobName}.`);
-    })
-    .catch(err => {
-      console.log(`Error in deleteJob: ${err.message || err}`);
-    });
-  // [END dlp_delete_job]
-}
-
 const cli = require(`yargs`) // eslint-disable-line
   .demand(1)
   .command(
@@ -97,12 +68,6 @@ const cli = require(`yargs`) // eslint-disable-line
       },
     },
     opts => listJobs(opts.callingProject, opts.filter, opts.jobType)
-  )
-  .command(
-    `delete <jobName>`,
-    `Delete results of a Data Loss Prevention API job.`,
-    {},
-    opts => deleteJob(opts.jobName)
   )
   .option('c', {
     type: 'string',

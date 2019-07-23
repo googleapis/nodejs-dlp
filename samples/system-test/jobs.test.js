@@ -21,7 +21,6 @@ const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cmd = `node jobs.js`;
-const badJobName = `projects/not-a-project/dlpJobs/i-123456789`;
 
 const testCallingProjectId = process.env.GCLOUD_PROJECT;
 const testTableProjectId = `bigquery-public-data`;
@@ -62,9 +61,8 @@ describe('jobs', () => {
   };
 
   // Create a test job
-  let testJobName;
   before(async () => {
-    testJobName = await createTestJob();
+    await createTestJob();
   });
 
   // dlp_list_jobs
@@ -81,16 +79,5 @@ describe('jobs', () => {
   it('should handle job listing errors', () => {
     const output = execSync(`${cmd} list 'state=NOPE'`);
     assert.match(output, /Error in listJobs/);
-  });
-
-  // dlp_delete_job
-  it('should delete job', () => {
-    const output = execSync(`${cmd} delete ${testJobName}`);
-    assert.include(output, `Successfully deleted job ${testJobName}.`);
-  });
-
-  it('should handle job deletion errors', () => {
-    const output = execSync(`${cmd} delete ${badJobName}`);
-    assert.match(output, /Error in deleteJob/);
   });
 });
