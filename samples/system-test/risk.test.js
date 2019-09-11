@@ -35,7 +35,7 @@ const testProjectId = process.env.GCLOUD_PROJECT;
 const pubsub = new PubSub();
 
 /*
- * The tests in risk.js rely on a table in BigQuery entitled
+ * The tests in this file rely on a table in BigQuery entitled
  * "integration_tests_dlp.harmful" with the following fields:
  *
  * Age NUMERIC NULLABLE
