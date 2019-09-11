@@ -40,7 +40,7 @@ const pubsub = new PubSub();
  *
  * Age NUMERIC NULLABLE
  * Name STRING NULLABLE
- * 
+ *
  * Insert into this table a few rows of Age/Name pairs.
  */
 describe('risk', () => {
