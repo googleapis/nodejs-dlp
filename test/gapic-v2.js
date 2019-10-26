@@ -405,10 +405,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationInspectTemplatePath(
-        '[ORGANIZATION]',
-        '[INSPECT_TEMPLATE]'
-      );
+      const formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -443,10 +440,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationInspectTemplatePath(
-        '[ORGANIZATION]',
-        '[INSPECT_TEMPLATE]'
-      );
+      const formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -548,11 +542,7 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.listInspectTemplates = (
-        actualRequest,
-        options,
-        callback
-      ) => {
+      client._innerApiCalls.listInspectTemplates = (actualRequest, options, callback) => {
         assert.deepStrictEqual(actualRequest, request);
         callback(null, expectedResponse.inspectTemplates);
       };
@@ -600,18 +590,13 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationInspectTemplatePath(
-        '[ORGANIZATION]',
-        '[INSPECT_TEMPLATE]'
-      );
+      const formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
       const request = {
         name: formattedName,
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.deleteInspectTemplate = mockSimpleGrpcMethod(
-        request
-      );
+      client._innerApiCalls.deleteInspectTemplate = mockSimpleGrpcMethod(request);
 
       client.deleteInspectTemplate(request, err => {
         assert.ifError(err);
@@ -626,10 +611,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationInspectTemplatePath(
-        '[ORGANIZATION]',
-        '[INSPECT_TEMPLATE]'
-      );
+      const formattedName = client.organizationInspectTemplatePath('[ORGANIZATION]', '[INSPECT_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -721,10 +703,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -759,10 +738,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -791,10 +767,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -829,10 +802,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -876,11 +846,7 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.listDeidentifyTemplates = (
-        actualRequest,
-        options,
-        callback
-      ) => {
+      client._innerApiCalls.listDeidentifyTemplates = (actualRequest, options, callback) => {
         assert.deepStrictEqual(actualRequest, request);
         callback(null, expectedResponse.deidentifyTemplates);
       };
@@ -928,18 +894,13 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.deleteDeidentifyTemplate = mockSimpleGrpcMethod(
-        request
-      );
+      client._innerApiCalls.deleteDeidentifyTemplate = mockSimpleGrpcMethod(request);
 
       client.deleteDeidentifyTemplate(request, err => {
         assert.ifError(err);
@@ -954,10 +915,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationDeidentifyTemplatePath(
-        '[ORGANIZATION]',
-        '[DEIDENTIFY_TEMPLATE]'
-      );
+      const formattedName = client.organizationDeidentifyTemplatePath('[ORGANIZATION]', '[DEIDENTIFY_TEMPLATE]');
       const request = {
         name: formattedName,
       };
@@ -1062,11 +1020,7 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.listDlpJobs = (
-        actualRequest,
-        options,
-        callback
-      ) => {
+      client._innerApiCalls.listDlpJobs = (actualRequest, options, callback) => {
         assert.deepStrictEqual(actualRequest, request);
         callback(null, expectedResponse.jobs);
       };
@@ -1289,11 +1243,7 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.listJobTriggers = (
-        actualRequest,
-        options,
-        callback
-      ) => {
+      client._innerApiCalls.listJobTriggers = (actualRequest, options, callback) => {
         assert.deepStrictEqual(actualRequest, request);
         callback(null, expectedResponse.jobTriggers);
       };
@@ -1341,10 +1291,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.projectJobTriggerPath(
-        '[PROJECT]',
-        '[JOB_TRIGGER]'
-      );
+      const formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
       const request = {
         name: formattedName,
       };
@@ -1379,10 +1326,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.projectJobTriggerPath(
-        '[PROJECT]',
-        '[JOB_TRIGGER]'
-      );
+      const formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
       const request = {
         name: formattedName,
       };
@@ -1460,10 +1404,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.projectJobTriggerPath(
-        '[PROJECT]',
-        '[JOB_TRIGGER]'
-      );
+      const formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
       const request = {
         name: formattedName,
       };
@@ -1498,10 +1439,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.projectJobTriggerPath(
-        '[PROJECT]',
-        '[JOB_TRIGGER]'
-      );
+      const formattedName = client.projectJobTriggerPath('[PROJECT]', '[JOB_TRIGGER]');
       const request = {
         name: formattedName,
       };
@@ -1654,10 +1592,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
@@ -1688,10 +1623,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
@@ -1720,10 +1652,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
@@ -1754,10 +1683,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
@@ -1801,11 +1727,7 @@ describe('DlpServiceClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.listStoredInfoTypes = (
-        actualRequest,
-        options,
-        callback
-      ) => {
+      client._innerApiCalls.listStoredInfoTypes = (actualRequest, options, callback) => {
         assert.deepStrictEqual(actualRequest, request);
         callback(null, expectedResponse.storedInfoTypes);
       };
@@ -1853,18 +1775,13 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.deleteStoredInfoType = mockSimpleGrpcMethod(
-        request
-      );
+      client._innerApiCalls.deleteStoredInfoType = mockSimpleGrpcMethod(request);
 
       client.deleteStoredInfoType(request, err => {
         assert.ifError(err);
@@ -1879,10 +1796,7 @@ describe('DlpServiceClient', () => {
       });
 
       // Mock request
-      const formattedName = client.organizationStoredInfoTypePath(
-        '[ORGANIZATION]',
-        '[STORED_INFO_TYPE]'
-      );
+      const formattedName = client.organizationStoredInfoTypePath('[ORGANIZATION]', '[STORED_INFO_TYPE]');
       const request = {
         name: formattedName,
       };
@@ -1901,6 +1815,7 @@ describe('DlpServiceClient', () => {
       });
     });
   });
+
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
