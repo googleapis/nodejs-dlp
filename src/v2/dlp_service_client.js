@@ -77,7 +77,9 @@ class DlpServiceClient {
     const gaxModule = !global.isBrowser && opts.fallback ? gax.fallback : gax;
 
     const servicePath =
-      opts.servicePath || opts.apiEndpoint || this.constructor.servicePath;
+      opts.servicePath ||
+      opts.apiEndpoint ||
+      this.constructor.servicePath;
 
     // Ensure that options include the service address and port.
     opts = Object.assign(
@@ -118,15 +120,11 @@ class DlpServiceClient {
     // For Node.js, pass the path to JSON proto file.
     // For browsers, pass the JSON content.
 
-    const nodejsProtoPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'protos',
-      'protos.json'
-    );
+    const nodejsProtoPath = path.join(__dirname, '..', '..', 'protos', 'protos.json');
     const protos = gaxGrpc.loadProto(
-      opts.fallback ? require('../../protos/protos.json') : nodejsProtoPath
+      opts.fallback ?
+        require("../../protos/protos.json") :
+        nodejsProtoPath
     );
 
     // This API contains "path templates"; forward-slash-separated
@@ -148,7 +146,9 @@ class DlpServiceClient {
       organizationStoredInfoTypePathTemplate: new gaxModule.PathTemplate(
         'organizations/{organization}/storedInfoTypes/{stored_info_type}'
       ),
-      projectPathTemplate: new gaxModule.PathTemplate('projects/{project}'),
+      projectPathTemplate: new gaxModule.PathTemplate(
+        'projects/{project}'
+      ),
       projectDeidentifyTemplatePathTemplate: new gaxModule.PathTemplate(
         'projects/{project}/deidentifyTemplates/{deidentify_template}'
       ),
@@ -210,9 +210,9 @@ class DlpServiceClient {
     // Put together the "service stub" for
     // google.privacy.dlp.v2.DlpService.
     const dlpServiceStub = gaxGrpc.createStub(
-      opts.fallback
-        ? protos.lookupService('google.privacy.dlp.v2.DlpService')
-        : protos.google.privacy.dlp.v2.DlpService,
+      opts.fallback ?
+        protos.lookupService('google.privacy.dlp.v2.DlpService') :
+        protos.google.privacy.dlp.v2.DlpService,
       opts
     );
 
@@ -294,7 +294,9 @@ class DlpServiceClient {
    * in this service.
    */
   static get scopes() {
-    return ['https://www.googleapis.com/auth/cloud-platform'];
+    return [
+      'https://www.googleapis.com/auth/cloud-platform',
+    ];
   }
 
   /**
@@ -378,11 +380,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.inspectContent(request, options, callback);
   }
@@ -454,11 +455,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.redactImage(request, options, callback);
   }
@@ -543,11 +543,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.deidentifyContent(request, options, callback);
   }
@@ -633,11 +632,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.reidentifyContent(request, options, callback);
   }
@@ -753,17 +751,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
-    return this._innerApiCalls.createInspectTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.createInspectTemplate(request, options, callback);
   }
 
   /**
@@ -822,17 +815,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
-    return this._innerApiCalls.updateInspectTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.updateInspectTemplate(request, options, callback);
   }
 
   /**
@@ -883,11 +871,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getInspectTemplate(request, options, callback);
   }
@@ -1001,11 +988,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.listInspectTemplates(request, options, callback);
   }
@@ -1078,7 +1064,7 @@ class DlpServiceClient {
       request,
       options
     );
-  }
+  };
 
   /**
    * Deletes an InspectTemplate.
@@ -1120,17 +1106,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
-    return this._innerApiCalls.deleteInspectTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.deleteInspectTemplate(request, options, callback);
   }
 
   /**
@@ -1191,17 +1172,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
-    return this._innerApiCalls.createDeidentifyTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.createDeidentifyTemplate(request, options, callback);
   }
 
   /**
@@ -1261,17 +1237,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
-    return this._innerApiCalls.updateDeidentifyTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.updateDeidentifyTemplate(request, options, callback);
   }
 
   /**
@@ -1323,17 +1294,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
-    return this._innerApiCalls.getDeidentifyTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.getDeidentifyTemplate(request, options, callback);
   }
 
   /**
@@ -1446,17 +1412,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
-    return this._innerApiCalls.listDeidentifyTemplates(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.listDeidentifyTemplates(request, options, callback);
   }
 
   /**
@@ -1527,7 +1488,7 @@ class DlpServiceClient {
       request,
       options
     );
-  }
+  };
 
   /**
    * Deletes a DeidentifyTemplate.
@@ -1570,17 +1531,12 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
-    return this._innerApiCalls.deleteDeidentifyTemplate(
-      request,
-      options,
-      callback
-    );
+    return this._innerApiCalls.deleteDeidentifyTemplate(request, options, callback);
   }
 
   /**
@@ -1643,11 +1599,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.createDlpJob(request, options, callback);
   }
@@ -1794,11 +1749,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.listDlpJobs(request, options, callback);
   }
@@ -1903,7 +1857,7 @@ class DlpServiceClient {
       request,
       options
     );
-  }
+  };
 
   /**
    * Gets the latest state of a long-running DlpJob.
@@ -1952,11 +1906,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getDlpJob(request, options, callback);
   }
@@ -2002,11 +1955,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.deleteDlpJob(request, options, callback);
   }
@@ -2052,11 +2004,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.cancelDlpJob(request, options, callback);
   }
@@ -2196,11 +2147,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.listJobTriggers(request, options, callback);
   }
@@ -2299,7 +2249,7 @@ class DlpServiceClient {
       request,
       options
     );
-  }
+  };
 
   /**
    * Gets a job trigger.
@@ -2348,11 +2298,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getJobTrigger(request, options, callback);
   }
@@ -2396,11 +2345,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.deleteJobTrigger(request, options, callback);
   }
@@ -2460,11 +2408,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.updateJobTrigger(request, options, callback);
   }
@@ -2525,11 +2472,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.createJobTrigger(request, options, callback);
   }
@@ -2591,11 +2537,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.createStoredInfoType(request, options, callback);
   }
@@ -2660,11 +2605,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.updateStoredInfoType(request, options, callback);
   }
@@ -2718,11 +2662,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getStoredInfoType(request, options, callback);
   }
@@ -2838,11 +2781,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.listStoredInfoTypes(request, options, callback);
   }
@@ -2916,7 +2858,7 @@ class DlpServiceClient {
       request,
       options
     );
-  }
+  };
 
   /**
    * Deletes a stored infoType.
@@ -2959,11 +2901,10 @@ class DlpServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.deleteStoredInfoType(request, options, callback);
   }
@@ -3006,12 +2947,10 @@ class DlpServiceClient {
    * @returns {String}
    */
   organizationDeidentifyTemplatePath(organization, deidentifyTemplate) {
-    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.render(
-      {
-        organization: organization,
-        deidentify_template: deidentifyTemplate,
-      }
-    );
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.render({
+      organization: organization,
+      deidentify_template: deidentifyTemplate,
+    });
   }
 
   /**
@@ -3118,7 +3057,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromDlpJobName(dlpJobName) {
-    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).project;
+    return this._pathTemplates.dlpJobPathTemplate
+      .match(dlpJobName)
+      .project;
   }
 
   /**
@@ -3129,7 +3070,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the dlp_job.
    */
   matchDlpJobFromDlpJobName(dlpJobName) {
-    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).dlp_job;
+    return this._pathTemplates.dlpJobPathTemplate
+      .match(dlpJobName)
+      .dlp_job;
   }
 
   /**
@@ -3140,7 +3083,8 @@ class DlpServiceClient {
    * @returns {String} - A string representing the organization.
    */
   matchOrganizationFromOrganizationName(organizationName) {
-    return this._pathTemplates.organizationPathTemplate.match(organizationName)
+    return this._pathTemplates.organizationPathTemplate
+      .match(organizationName)
       .organization;
   }
 
@@ -3151,12 +3095,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_deidentify_template resources.
    * @returns {String} - A string representing the organization.
    */
-  matchOrganizationFromOrganizationDeidentifyTemplateName(
-    organizationDeidentifyTemplateName
-  ) {
-    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.match(
-      organizationDeidentifyTemplateName
-    ).organization;
+  matchOrganizationFromOrganizationDeidentifyTemplateName(organizationDeidentifyTemplateName) {
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate
+      .match(organizationDeidentifyTemplateName)
+      .organization;
   }
 
   /**
@@ -3166,12 +3108,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_deidentify_template resources.
    * @returns {String} - A string representing the deidentify_template.
    */
-  matchDeidentifyTemplateFromOrganizationDeidentifyTemplateName(
-    organizationDeidentifyTemplateName
-  ) {
-    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate.match(
-      organizationDeidentifyTemplateName
-    ).deidentify_template;
+  matchDeidentifyTemplateFromOrganizationDeidentifyTemplateName(organizationDeidentifyTemplateName) {
+    return this._pathTemplates.organizationDeidentifyTemplatePathTemplate
+      .match(organizationDeidentifyTemplateName)
+      .deidentify_template;
   }
 
   /**
@@ -3181,12 +3121,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_inspect_template resources.
    * @returns {String} - A string representing the organization.
    */
-  matchOrganizationFromOrganizationInspectTemplateName(
-    organizationInspectTemplateName
-  ) {
-    return this._pathTemplates.organizationInspectTemplatePathTemplate.match(
-      organizationInspectTemplateName
-    ).organization;
+  matchOrganizationFromOrganizationInspectTemplateName(organizationInspectTemplateName) {
+    return this._pathTemplates.organizationInspectTemplatePathTemplate
+      .match(organizationInspectTemplateName)
+      .organization;
   }
 
   /**
@@ -3196,12 +3134,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_inspect_template resources.
    * @returns {String} - A string representing the inspect_template.
    */
-  matchInspectTemplateFromOrganizationInspectTemplateName(
-    organizationInspectTemplateName
-  ) {
-    return this._pathTemplates.organizationInspectTemplatePathTemplate.match(
-      organizationInspectTemplateName
-    ).inspect_template;
+  matchInspectTemplateFromOrganizationInspectTemplateName(organizationInspectTemplateName) {
+    return this._pathTemplates.organizationInspectTemplatePathTemplate
+      .match(organizationInspectTemplateName)
+      .inspect_template;
   }
 
   /**
@@ -3211,12 +3147,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_stored_info_type resources.
    * @returns {String} - A string representing the organization.
    */
-  matchOrganizationFromOrganizationStoredInfoTypeName(
-    organizationStoredInfoTypeName
-  ) {
-    return this._pathTemplates.organizationStoredInfoTypePathTemplate.match(
-      organizationStoredInfoTypeName
-    ).organization;
+  matchOrganizationFromOrganizationStoredInfoTypeName(organizationStoredInfoTypeName) {
+    return this._pathTemplates.organizationStoredInfoTypePathTemplate
+      .match(organizationStoredInfoTypeName)
+      .organization;
   }
 
   /**
@@ -3226,12 +3160,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a organization_stored_info_type resources.
    * @returns {String} - A string representing the stored_info_type.
    */
-  matchStoredInfoTypeFromOrganizationStoredInfoTypeName(
-    organizationStoredInfoTypeName
-  ) {
-    return this._pathTemplates.organizationStoredInfoTypePathTemplate.match(
-      organizationStoredInfoTypeName
-    ).stored_info_type;
+  matchStoredInfoTypeFromOrganizationStoredInfoTypeName(organizationStoredInfoTypeName) {
+    return this._pathTemplates.organizationStoredInfoTypePathTemplate
+      .match(organizationStoredInfoTypeName)
+      .stored_info_type;
   }
 
   /**
@@ -3242,7 +3174,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectName(projectName) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).project;
+    return this._pathTemplates.projectPathTemplate
+      .match(projectName)
+      .project;
   }
 
   /**
@@ -3253,9 +3187,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectDeidentifyTemplateName(projectDeidentifyTemplateName) {
-    return this._pathTemplates.projectDeidentifyTemplatePathTemplate.match(
-      projectDeidentifyTemplateName
-    ).project;
+    return this._pathTemplates.projectDeidentifyTemplatePathTemplate
+      .match(projectDeidentifyTemplateName)
+      .project;
   }
 
   /**
@@ -3265,12 +3199,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a project_deidentify_template resources.
    * @returns {String} - A string representing the deidentify_template.
    */
-  matchDeidentifyTemplateFromProjectDeidentifyTemplateName(
-    projectDeidentifyTemplateName
-  ) {
-    return this._pathTemplates.projectDeidentifyTemplatePathTemplate.match(
-      projectDeidentifyTemplateName
-    ).deidentify_template;
+  matchDeidentifyTemplateFromProjectDeidentifyTemplateName(projectDeidentifyTemplateName) {
+    return this._pathTemplates.projectDeidentifyTemplatePathTemplate
+      .match(projectDeidentifyTemplateName)
+      .deidentify_template;
   }
 
   /**
@@ -3281,9 +3213,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectInspectTemplateName(projectInspectTemplateName) {
-    return this._pathTemplates.projectInspectTemplatePathTemplate.match(
-      projectInspectTemplateName
-    ).project;
+    return this._pathTemplates.projectInspectTemplatePathTemplate
+      .match(projectInspectTemplateName)
+      .project;
   }
 
   /**
@@ -3293,12 +3225,10 @@ class DlpServiceClient {
    *   A fully-qualified path representing a project_inspect_template resources.
    * @returns {String} - A string representing the inspect_template.
    */
-  matchInspectTemplateFromProjectInspectTemplateName(
-    projectInspectTemplateName
-  ) {
-    return this._pathTemplates.projectInspectTemplatePathTemplate.match(
-      projectInspectTemplateName
-    ).inspect_template;
+  matchInspectTemplateFromProjectInspectTemplateName(projectInspectTemplateName) {
+    return this._pathTemplates.projectInspectTemplatePathTemplate
+      .match(projectInspectTemplateName)
+      .inspect_template;
   }
 
   /**
@@ -3309,9 +3239,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectJobTriggerName(projectJobTriggerName) {
-    return this._pathTemplates.projectJobTriggerPathTemplate.match(
-      projectJobTriggerName
-    ).project;
+    return this._pathTemplates.projectJobTriggerPathTemplate
+      .match(projectJobTriggerName)
+      .project;
   }
 
   /**
@@ -3322,9 +3252,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the job_trigger.
    */
   matchJobTriggerFromProjectJobTriggerName(projectJobTriggerName) {
-    return this._pathTemplates.projectJobTriggerPathTemplate.match(
-      projectJobTriggerName
-    ).job_trigger;
+    return this._pathTemplates.projectJobTriggerPathTemplate
+      .match(projectJobTriggerName)
+      .job_trigger;
   }
 
   /**
@@ -3335,9 +3265,9 @@ class DlpServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectStoredInfoTypeName(projectStoredInfoTypeName) {
-    return this._pathTemplates.projectStoredInfoTypePathTemplate.match(
-      projectStoredInfoTypeName
-    ).project;
+    return this._pathTemplates.projectStoredInfoTypePathTemplate
+      .match(projectStoredInfoTypeName)
+      .project;
   }
 
   /**
@@ -3348,10 +3278,11 @@ class DlpServiceClient {
    * @returns {String} - A string representing the stored_info_type.
    */
   matchStoredInfoTypeFromProjectStoredInfoTypeName(projectStoredInfoTypeName) {
-    return this._pathTemplates.projectStoredInfoTypePathTemplate.match(
-      projectStoredInfoTypeName
-    ).stored_info_type;
+    return this._pathTemplates.projectStoredInfoTypePathTemplate
+      .match(projectStoredInfoTypeName)
+      .stored_info_type;
   }
 }
+
 
 module.exports = DlpServiceClient;
