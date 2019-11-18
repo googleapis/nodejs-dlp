@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
 
+### [1.7.2](https://www.github.com/googleapis/nodejs-dlp/compare/v1.7.1...v1.7.2) (2019-11-18)
+
+
+### Bug Fixes
+
+* **docs:** bump release level to GA ([#363](https://www.github.com/googleapis/nodejs-dlp/issues/363)) ([67dfc81](https://www.github.com/googleapis/nodejs-dlp/commit/67dfc816ec097b91248a0a9f63e39d25c90c5647))
+
 ### [1.7.1](https://www.github.com/googleapis/nodejs-dlp/compare/v1.7.0...v1.7.1) (2019-11-18)
 
 
