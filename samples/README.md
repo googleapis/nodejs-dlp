@@ -29,6 +29,12 @@ data in unstructured data streams.
 Before running the samples, make sure you've followed the steps outlined in
 [Using the client library](https://github.com/googleapis/nodejs-dlp#using-the-client-library).
 
+### Installing sample dependencies
+
+```bash
+cd samples; npm install
+```
+
 ## Samples
 
 
