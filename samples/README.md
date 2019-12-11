@@ -31,7 +31,9 @@ Before running the samples, make sure you've followed the steps outlined in
 
 
 `cd samples`
+
 `npm install`
+
 `cd ..`
 
 ## Samples
