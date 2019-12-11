@@ -29,6 +29,11 @@ data in unstructured data streams.
 Before running the samples, make sure you've followed the steps outlined in
 [Using the client library](https://github.com/googleapis/nodejs-dlp#using-the-client-library).
 
+
+`cd samples`
+`npm install`
+`cd ..`
+
 ## Samples
 
 
@@ -42,7 +47,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node deid.js`
+`node samples/deid.js`
 
 
 -----
@@ -59,7 +64,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node inspect.js`
+`node samples/inspect.js`
 
 
 -----
@@ -76,7 +81,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node jobs.js`
+`node samples/jobs.js`
 
 
 -----
@@ -93,7 +98,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node metadata.js`
+`node samples/metadata.js`
 
 
 -----
@@ -110,7 +115,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node quickstart.js`
+`node samples/quickstart.js`
 
 
 -----
@@ -127,7 +132,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node redact.js`
+`node samples/redact.js`
 
 
 -----
@@ -144,7 +149,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node risk.js`
+`node samples/risk.js`
 
 
 -----
@@ -161,7 +166,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node templates.js`
+`node samples/templates.js`
 
 
 -----
@@ -178,7 +183,7 @@ View the [source code](https://github.com/googleapis/nodejs-dlp/blob/master/samp
 __Usage:__
 
 
-`node triggers.js`
+`node samples/triggers.js`
 
 
 
