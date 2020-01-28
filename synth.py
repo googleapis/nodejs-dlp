@@ -24,11 +24,12 @@ version = 'v2'
 library = gapic.typescript_library(
     'dlp', version,
     generator_args={
-            "grpc-service-config": f"google/cloud/dlp/{version}/dlp_grpc_service_config.json",
+            "grpc-service-config": f"google/privacy/dlp/{version}/dlp_grpc_service_config.json",
             "package-name": f"@google-cloud/dlp"
             },
+            proto_path=f'/google/privacy/dlp/{version}',
             extra_proto_files=['google/cloud/common_resources.proto'],
-            proto_path=f'/google/cloud/dlp/{version}')
+            )
 s.copy(library, excludes=['src/index.ts', 'README.md', 'package.json'])
 
 # Copy common templates

@@ -17,10 +17,18 @@
 // ** All changes to this file may be overwritten. **
 
 import * as gax from 'google-gax';
-import {APICallback, Callback, CallOptions, Descriptors, ClientOptions, PaginationCallback, PaginationResponse} from 'google-gax';
+import {
+  APICallback,
+  Callback,
+  CallOptions,
+  Descriptors,
+  ClientOptions,
+  PaginationCallback,
+  PaginationResponse,
+} from 'google-gax';
 import * as path from 'path';
 
-import { Transform } from 'stream';
+import {Transform} from 'stream';
 import * as protosTypes from '../../protos/protos';
 import * as gapicConfig from './dlp_service_client_config.json';
 
@@ -78,10 +86,12 @@ export class DlpServiceClient {
   constructor(opts?: ClientOptions) {
     // Ensure that options include the service address and port.
     const staticMembers = this.constructor as typeof DlpServiceClient;
-    const servicePath = opts && opts.servicePath ?
-        opts.servicePath :
-        ((opts && opts.apiEndpoint) ? opts.apiEndpoint :
-                                      staticMembers.servicePath);
+    const servicePath =
+      opts && opts.servicePath
+        ? opts.servicePath
+        : opts && opts.apiEndpoint
+        ? opts.apiEndpoint
+        : staticMembers.servicePath;
     const port = opts && opts.port ? opts.port : staticMembers.port;
 
     if (!opts) {
@@ -91,8 +101,8 @@ export class DlpServiceClient {
     opts.port = opts.port || port;
     opts.clientConfig = opts.clientConfig || {};
 
-    const isBrowser = (typeof window !== 'undefined');
-    if (isBrowser){
+    const isBrowser = typeof window !== 'undefined';
+    if (isBrowser) {
       opts.fallback = true;
     }
     // If we are in browser, we are already using fallback because of the
@@ -106,13 +116,10 @@ export class DlpServiceClient {
     const gaxGrpc = new gaxModule.GrpcClient(opts);
 
     // Save the auth object to the client, for use by other methods.
-    this.auth = (gaxGrpc.auth as gax.GoogleAuth);
+    this.auth = gaxGrpc.auth as gax.GoogleAuth;
 
     // Determine the client header string.
-    const clientHeader = [
-      `gax/${gaxModule.version}`,
-      `gapic/${version}`,
-    ];
+    const clientHeader = [`gax/${gaxModule.version}`, `gapic/${version}`];
     if (typeof process !== 'undefined' && 'versions' in process) {
       clientHeader.push(`gl-node/${process.versions.node}`);
     } else {
@@ -128,20 +135,22 @@ export class DlpServiceClient {
     // For Node.js, pass the path to JSON proto file.
     // For browsers, pass the JSON content.
 
-    const nodejsProtoPath = path.join(__dirname, '..', '..', 'protos', 'protos.json');
+    const nodejsProtoPath = path.join(
+      __dirname,
+      '..',
+      '..',
+      'protos',
+      'protos.json'
+    );
     const protos = gaxGrpc.loadProto(
-      opts.fallback ?
-        require("../../protos/protos.json") :
-        nodejsProtoPath
+      opts.fallback ? require('../../protos/protos.json') : nodejsProtoPath
     );
 
     // This API contains "path templates"; forward-slash-separated
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this._pathTemplates = {
-      projectPathTemplate: new gaxModule.PathTemplate(
-        'projects/{project}'
-      ),
+      projectPathTemplate: new gaxModule.PathTemplate('projects/{project}'),
       organizationPathTemplate: new gaxModule.PathTemplate(
         'organizations/{organization}'
       ),
@@ -175,22 +184,40 @@ export class DlpServiceClient {
     // (e.g. 50 results at a time, with tokens to get subsequent
     // pages). Denote the keys used for pagination and results.
     this._descriptors.page = {
-      listInspectTemplates:
-          new gaxModule.PageDescriptor('pageToken', 'nextPageToken', 'inspectTemplates'),
-      listDeidentifyTemplates:
-          new gaxModule.PageDescriptor('pageToken', 'nextPageToken', 'deidentifyTemplates'),
-      listJobTriggers:
-          new gaxModule.PageDescriptor('pageToken', 'nextPageToken', 'jobTriggers'),
-      listDlpJobs:
-          new gaxModule.PageDescriptor('pageToken', 'nextPageToken', 'jobs'),
-      listStoredInfoTypes:
-          new gaxModule.PageDescriptor('pageToken', 'nextPageToken', 'storedInfoTypes')
+      listInspectTemplates: new gaxModule.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'inspectTemplates'
+      ),
+      listDeidentifyTemplates: new gaxModule.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'deidentifyTemplates'
+      ),
+      listJobTriggers: new gaxModule.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'jobTriggers'
+      ),
+      listDlpJobs: new gaxModule.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'jobs'
+      ),
+      listStoredInfoTypes: new gaxModule.PageDescriptor(
+        'pageToken',
+        'nextPageToken',
+        'storedInfoTypes'
+      ),
     };
 
     // Put together the default options sent with requests.
     const defaults = gaxGrpc.constructSettings(
-        'google.privacy.dlp.v2.DlpService', gapicConfig as gax.ClientConfig,
-        opts.clientConfig || {}, {'x-goog-api-client': clientHeader.join(' ')});
+      'google.privacy.dlp.v2.DlpService',
+      gapicConfig as gax.ClientConfig,
+      opts.clientConfig || {},
+      {'x-goog-api-client': clientHeader.join(' ')}
+    );
 
     // Set up a dictionary of "inner API calls"; the core implementation
     // of calling the API is handled in `google-gax`, with this code
@@ -200,16 +227,50 @@ export class DlpServiceClient {
     // Put together the "service stub" for
     // google.privacy.dlp.v2.DlpService.
     this.dlpServiceStub = gaxGrpc.createStub(
-        opts.fallback ?
-          (protos as protobuf.Root).lookupService('google.privacy.dlp.v2.DlpService') :
-          // tslint:disable-next-line no-any
+      opts.fallback
+        ? (protos as protobuf.Root).lookupService(
+            'google.privacy.dlp.v2.DlpService'
+          )
+        : // tslint:disable-next-line no-any
           (protos as any).google.privacy.dlp.v2.DlpService,
-        opts) as Promise<{[method: string]: Function}>;
+      opts
+    ) as Promise<{[method: string]: Function}>;
 
     // Iterate over each of the methods that the service provides
     // and create an API call method for each.
-    const dlpServiceStubMethods =
-        ['inspectContent', 'redactImage', 'deidentifyContent', 'reidentifyContent', 'listInfoTypes', 'createInspectTemplate', 'updateInspectTemplate', 'getInspectTemplate', 'listInspectTemplates', 'deleteInspectTemplate', 'createDeidentifyTemplate', 'updateDeidentifyTemplate', 'getDeidentifyTemplate', 'listDeidentifyTemplates', 'deleteDeidentifyTemplate', 'createJobTrigger', 'updateJobTrigger', 'getJobTrigger', 'listJobTriggers', 'deleteJobTrigger', 'activateJobTrigger', 'createDlpJob', 'listDlpJobs', 'getDlpJob', 'deleteDlpJob', 'cancelDlpJob', 'createStoredInfoType', 'updateStoredInfoType', 'getStoredInfoType', 'listStoredInfoTypes', 'deleteStoredInfoType'];
+    const dlpServiceStubMethods = [
+      'inspectContent',
+      'redactImage',
+      'deidentifyContent',
+      'reidentifyContent',
+      'listInfoTypes',
+      'createInspectTemplate',
+      'updateInspectTemplate',
+      'getInspectTemplate',
+      'listInspectTemplates',
+      'deleteInspectTemplate',
+      'createDeidentifyTemplate',
+      'updateDeidentifyTemplate',
+      'getDeidentifyTemplate',
+      'listDeidentifyTemplates',
+      'deleteDeidentifyTemplate',
+      'createJobTrigger',
+      'updateJobTrigger',
+      'getJobTrigger',
+      'listJobTriggers',
+      'deleteJobTrigger',
+      'activateJobTrigger',
+      'createDlpJob',
+      'listDlpJobs',
+      'getDlpJob',
+      'deleteDlpJob',
+      'cancelDlpJob',
+      'createStoredInfoType',
+      'updateStoredInfoType',
+      'getStoredInfoType',
+      'listStoredInfoTypes',
+      'deleteStoredInfoType',
+    ];
 
     for (const methodName of dlpServiceStubMethods) {
       const innerCallPromise = this.dlpServiceStub.then(
@@ -219,16 +280,17 @@ export class DlpServiceClient {
           }
           return stub[methodName].apply(stub, args);
         },
-        (err: Error|null|undefined) => () => {
+        (err: Error | null | undefined) => () => {
           throw err;
-        });
+        }
+      );
 
       const apiCall = gaxModule.createApiCall(
         innerCallPromise,
         defaults[methodName],
         this._descriptors.page[methodName] ||
-            this._descriptors.stream[methodName] ||
-            this._descriptors.longrunning[methodName]
+          this._descriptors.stream[methodName] ||
+          this._descriptors.longrunning[methodName]
       );
 
       this._innerApiCalls[methodName] = (
@@ -268,9 +330,7 @@ export class DlpServiceClient {
    * in this service.
    */
   static get scopes() {
-    return [
-      'https://www.googleapis.com/auth/cloud-platform'
-    ];
+    return ['https://www.googleapis.com/auth/cloud-platform'];
   }
 
   getProjectId(): Promise<string>;
@@ -280,8 +340,9 @@ export class DlpServiceClient {
    * @param {function(Error, string)} callback - the callback to
    *   be called with the current project Id.
    */
-  getProjectId(callback?: Callback<string, undefined, undefined>):
-      Promise<string>|void {
+  getProjectId(
+    callback?: Callback<string, undefined, undefined>
+  ): Promise<string> | void {
     if (callback) {
       this.auth.getProjectId(callback);
       return;
@@ -293,74 +354,86 @@ export class DlpServiceClient {
   // -- Service calls --
   // -------------------
   inspectContent(
-      request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
-        protosTypes.google.privacy.dlp.v2.IInspectContentRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
+      protosTypes.google.privacy.dlp.v2.IInspectContentRequest | undefined,
+      {} | undefined
+    ]
+  >;
   inspectContent(
-      request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
-          protosTypes.google.privacy.dlp.v2.IInspectContentRequest|undefined,
-          {}|undefined>): void;
-/**
- * Finds potentially sensitive info in content.
- * This method has limits on input size, processing time, and output size.
- *
- * When no InfoTypes or CustomInfoTypes are specified in this request, the
- * system will automatically choose what detectors to run. By default this may
- * be all types, but may change over time as detectors are updated.
- *
- * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
- * and https://cloud.google.com/dlp/docs/inspecting-text,
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   The parent resource name, for example projects/my-project-id.
- * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
- *   Configuration for the inspector. What specified here will override
- *   the template referenced by the inspect_template_name argument.
- * @param {google.privacy.dlp.v2.ContentItem} request.item
- *   The item to inspect.
- * @param {string} request.inspectTemplateName
- *   Template to use. Any configuration directly specified in
- *   inspect_config will override those set in the template. Singular fields
- *   that are set in this request will replace their corresponding fields in the
- *   template. Repeated fields are appended. Singular sub-messages and groups
- *   are recursively merged.
- * @param {string} request.locationId
- *   The geographic location to process content inspection. Reserved for future
- *   extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [InspectContentResponse]{@link google.privacy.dlp.v2.InspectContentResponse}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
+      protosTypes.google.privacy.dlp.v2.IInspectContentRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Finds potentially sensitive info in content.
+   * This method has limits on input size, processing time, and output size.
+   *
+   * When no InfoTypes or CustomInfoTypes are specified in this request, the
+   * system will automatically choose what detectors to run. By default this may
+   * be all types, but may change over time as detectors are updated.
+   *
+   * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+   * and https://cloud.google.com/dlp/docs/inspecting-text,
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
+   *   Configuration for the inspector. What specified here will override
+   *   the template referenced by the inspect_template_name argument.
+   * @param {google.privacy.dlp.v2.ContentItem} request.item
+   *   The item to inspect.
+   * @param {string} request.inspectTemplateName
+   *   Template to use. Any configuration directly specified in
+   *   inspect_config will override those set in the template. Singular fields
+   *   that are set in this request will replace their corresponding fields in the
+   *   template. Repeated fields are appended. Singular sub-messages and groups
+   *   are recursively merged.
+   * @param {string} request.locationId
+   *   The geographic location to process content inspection. Reserved for future
+   *   extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [InspectContentResponse]{@link google.privacy.dlp.v2.InspectContentResponse}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   inspectContent(
-      request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IInspectContentRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
-          protosTypes.google.privacy.dlp.v2.IInspectContentRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
-          protosTypes.google.privacy.dlp.v2.IInspectContentRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
-        protosTypes.google.privacy.dlp.v2.IInspectContentRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IInspectContentRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
+      protosTypes.google.privacy.dlp.v2.IInspectContentRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectContentResponse,
+      protosTypes.google.privacy.dlp.v2.IInspectContentRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -369,76 +442,88 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.inspectContent(request, options, callback);
   }
   redactImage(
-      request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
-        protosTypes.google.privacy.dlp.v2.IRedactImageRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
+      protosTypes.google.privacy.dlp.v2.IRedactImageRequest | undefined,
+      {} | undefined
+    ]
+  >;
   redactImage(
-      request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
-          protosTypes.google.privacy.dlp.v2.IRedactImageRequest|undefined,
-          {}|undefined>): void;
-/**
- * Redacts potentially sensitive info from an image.
- * This method has limits on input size, processing time, and output size.
- * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
- * learn more.
- *
- * When no InfoTypes or CustomInfoTypes are specified in this request, the
- * system will automatically choose what detectors to run. By default this may
- * be all types, but may change over time as detectors are updated.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   The parent resource name, for example projects/my-project-id.
- * @param {string} request.locationId
- *   The geographic location to process the request. Reserved for future
- *   extensions.
- * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
- *   Configuration for the inspector.
- * @param {number[]} request.imageRedactionConfigs
- *   The configuration for specifying what content to redact from images.
- * @param {boolean} request.includeFindings
- *   Whether the response should include findings along with the redacted
- *   image.
- * @param {google.privacy.dlp.v2.ByteContentItem} request.byteItem
- *   The content must be PNG, JPEG, SVG or BMP.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [RedactImageResponse]{@link google.privacy.dlp.v2.RedactImageResponse}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
+      protosTypes.google.privacy.dlp.v2.IRedactImageRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Redacts potentially sensitive info from an image.
+   * This method has limits on input size, processing time, and output size.
+   * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+   * learn more.
+   *
+   * When no InfoTypes or CustomInfoTypes are specified in this request, the
+   * system will automatically choose what detectors to run. By default this may
+   * be all types, but may change over time as detectors are updated.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {string} request.locationId
+   *   The geographic location to process the request. Reserved for future
+   *   extensions.
+   * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
+   *   Configuration for the inspector.
+   * @param {number[]} request.imageRedactionConfigs
+   *   The configuration for specifying what content to redact from images.
+   * @param {boolean} request.includeFindings
+   *   Whether the response should include findings along with the redacted
+   *   image.
+   * @param {google.privacy.dlp.v2.ByteContentItem} request.byteItem
+   *   The content must be PNG, JPEG, SVG or BMP.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [RedactImageResponse]{@link google.privacy.dlp.v2.RedactImageResponse}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   redactImage(
-      request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IRedactImageRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
-          protosTypes.google.privacy.dlp.v2.IRedactImageRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
-          protosTypes.google.privacy.dlp.v2.IRedactImageRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
-        protosTypes.google.privacy.dlp.v2.IRedactImageRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IRedactImageRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
+      protosTypes.google.privacy.dlp.v2.IRedactImageRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IRedactImageResponse,
+      protosTypes.google.privacy.dlp.v2.IRedactImageRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -447,89 +532,102 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.redactImage(request, options, callback);
   }
   deidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
-        protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest | undefined,
+      {} | undefined
+    ]
+  >;
   deidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest|undefined,
-          {}|undefined>): void;
-/**
- * De-identifies potentially sensitive info from a ContentItem.
- * This method has limits on input size and output size.
- * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
- * learn more.
- *
- * When no InfoTypes or CustomInfoTypes are specified in this request, the
- * system will automatically choose what detectors to run. By default this may
- * be all types, but may change over time as detectors are updated.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   The parent resource name, for example projects/my-project-id.
- * @param {google.privacy.dlp.v2.DeidentifyConfig} request.deidentifyConfig
- *   Configuration for the de-identification of the content item.
- *   Items specified here will override the template referenced by the
- *   deidentify_template_name argument.
- * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
- *   Configuration for the inspector.
- *   Items specified here will override the template referenced by the
- *   inspect_template_name argument.
- * @param {google.privacy.dlp.v2.ContentItem} request.item
- *   The item to de-identify. Will be treated as text.
- * @param {string} request.inspectTemplateName
- *   Template to use. Any configuration directly specified in
- *   inspect_config will override those set in the template. Singular fields
- *   that are set in this request will replace their corresponding fields in the
- *   template. Repeated fields are appended. Singular sub-messages and groups
- *   are recursively merged.
- * @param {string} request.deidentifyTemplateName
- *   Template to use. Any configuration directly specified in
- *   deidentify_config will override those set in the template. Singular fields
- *   that are set in this request will replace their corresponding fields in the
- *   template. Repeated fields are appended. Singular sub-messages and groups
- *   are recursively merged.
- * @param {string} request.locationId
- *   The geographic location to process de-identification. Reserved for future
- *   extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DeidentifyContentResponse]{@link google.privacy.dlp.v2.DeidentifyContentResponse}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * De-identifies potentially sensitive info from a ContentItem.
+   * This method has limits on input size and output size.
+   * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+   * learn more.
+   *
+   * When no InfoTypes or CustomInfoTypes are specified in this request, the
+   * system will automatically choose what detectors to run. By default this may
+   * be all types, but may change over time as detectors are updated.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   The parent resource name, for example projects/my-project-id.
+   * @param {google.privacy.dlp.v2.DeidentifyConfig} request.deidentifyConfig
+   *   Configuration for the de-identification of the content item.
+   *   Items specified here will override the template referenced by the
+   *   deidentify_template_name argument.
+   * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
+   *   Configuration for the inspector.
+   *   Items specified here will override the template referenced by the
+   *   inspect_template_name argument.
+   * @param {google.privacy.dlp.v2.ContentItem} request.item
+   *   The item to de-identify. Will be treated as text.
+   * @param {string} request.inspectTemplateName
+   *   Template to use. Any configuration directly specified in
+   *   inspect_config will override those set in the template. Singular fields
+   *   that are set in this request will replace their corresponding fields in the
+   *   template. Repeated fields are appended. Singular sub-messages and groups
+   *   are recursively merged.
+   * @param {string} request.deidentifyTemplateName
+   *   Template to use. Any configuration directly specified in
+   *   deidentify_config will override those set in the template. Singular fields
+   *   that are set in this request will replace their corresponding fields in the
+   *   template. Repeated fields are appended. Singular sub-messages and groups
+   *   are recursively merged.
+   * @param {string} request.locationId
+   *   The geographic location to process de-identification. Reserved for future
+   *   extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DeidentifyContentResponse]{@link google.privacy.dlp.v2.DeidentifyContentResponse}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
-        protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IDeidentifyContentRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -538,91 +636,104 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.deidentifyContent(request, options, callback);
   }
   reidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
-        protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest | undefined,
+      {} | undefined
+    ]
+  >;
   reidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest|undefined,
-          {}|undefined>): void;
-/**
- * Re-identifies content that has been de-identified.
- * See
- * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
- * to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name.
- * @param {google.privacy.dlp.v2.DeidentifyConfig} request.reidentifyConfig
- *   Configuration for the re-identification of the content item.
- *   This field shares the same proto message type that is used for
- *   de-identification, however its usage here is for the reversal of the
- *   previous de-identification. Re-identification is performed by examining
- *   the transformations used to de-identify the items and executing the
- *   reverse. This requires that only reversible transformations
- *   be provided here. The reversible transformations are:
- *
- *    - `CryptoDeterministicConfig`
- *    - `CryptoReplaceFfxFpeConfig`
- * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
- *   Configuration for the inspector.
- * @param {google.privacy.dlp.v2.ContentItem} request.item
- *   The item to re-identify. Will be treated as text.
- * @param {string} request.inspectTemplateName
- *   Template to use. Any configuration directly specified in
- *   `inspect_config` will override those set in the template. Singular fields
- *   that are set in this request will replace their corresponding fields in the
- *   template. Repeated fields are appended. Singular sub-messages and groups
- *   are recursively merged.
- * @param {string} request.reidentifyTemplateName
- *   Template to use. References an instance of `DeidentifyTemplate`.
- *   Any configuration directly specified in `reidentify_config` or
- *   `inspect_config` will override those set in the template. Singular fields
- *   that are set in this request will replace their corresponding fields in the
- *   template. Repeated fields are appended. Singular sub-messages and groups
- *   are recursively merged.
- * @param {string} request.locationId
- *   The geographic location to process content reidentification.  Reserved for
- *   future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [ReidentifyContentResponse]{@link google.privacy.dlp.v2.ReidentifyContentResponse}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Re-identifies content that has been de-identified.
+   * See
+   * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+   * to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name.
+   * @param {google.privacy.dlp.v2.DeidentifyConfig} request.reidentifyConfig
+   *   Configuration for the re-identification of the content item.
+   *   This field shares the same proto message type that is used for
+   *   de-identification, however its usage here is for the reversal of the
+   *   previous de-identification. Re-identification is performed by examining
+   *   the transformations used to de-identify the items and executing the
+   *   reverse. This requires that only reversible transformations
+   *   be provided here. The reversible transformations are:
+   *
+   *    - `CryptoDeterministicConfig`
+   *    - `CryptoReplaceFfxFpeConfig`
+   * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
+   *   Configuration for the inspector.
+   * @param {google.privacy.dlp.v2.ContentItem} request.item
+   *   The item to re-identify. Will be treated as text.
+   * @param {string} request.inspectTemplateName
+   *   Template to use. Any configuration directly specified in
+   *   `inspect_config` will override those set in the template. Singular fields
+   *   that are set in this request will replace their corresponding fields in the
+   *   template. Repeated fields are appended. Singular sub-messages and groups
+   *   are recursively merged.
+   * @param {string} request.reidentifyTemplateName
+   *   Template to use. References an instance of `DeidentifyTemplate`.
+   *   Any configuration directly specified in `reidentify_config` or
+   *   `inspect_config` will override those set in the template. Singular fields
+   *   that are set in this request will replace their corresponding fields in the
+   *   template. Repeated fields are appended. Singular sub-messages and groups
+   *   are recursively merged.
+   * @param {string} request.locationId
+   *   The geographic location to process content reidentification.  Reserved for
+   *   future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [ReidentifyContentResponse]{@link google.privacy.dlp.v2.ReidentifyContentResponse}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   reidentifyContent(
-      request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
-          protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
-        protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentResponse,
+      protosTypes.google.privacy.dlp.v2.IReidentifyContentRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -631,132 +742,165 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.reidentifyContent(request, options, callback);
   }
   listInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
-        protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest | undefined,
+      {} | undefined
+    ]
+  >;
   listInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
-          protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest|undefined,
-          {}|undefined>): void;
-/**
- * Returns a list of the sensitive information types that the DLP API
- * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.languageCode
- *   BCP-47 language code for localized infoType friendly
- *   names. If omitted, or if localized strings are not available,
- *   en-US strings will be returned.
- * @param {string} request.filter
- *   filter to only return infoTypes supported by certain parts of the
- *   API. Defaults to supported_by=INSPECT.
- * @param {string} request.locationId
- *   The geographic location to list info types. Reserved for future
- *   extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [ListInfoTypesResponse]{@link google.privacy.dlp.v2.ListInfoTypesResponse}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Returns a list of the sensitive information types that the DLP API
+   * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.languageCode
+   *   BCP-47 language code for localized infoType friendly
+   *   names. If omitted, or if localized strings are not available,
+   *   en-US strings will be returned.
+   * @param {string} request.filter
+   *   filter to only return infoTypes supported by certain parts of the
+   *   API. Defaults to supported_by=INSPECT.
+   * @param {string} request.locationId
+   *   The geographic location to list info types. Reserved for future
+   *   extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [ListInfoTypesResponse]{@link google.privacy.dlp.v2.ListInfoTypesResponse}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
-          protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
-          protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
-        protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesResponse,
+      protosTypes.google.privacy.dlp.v2.IListInfoTypesRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
     return this._innerApiCalls.listInfoTypes(request, options, callback);
   }
   createInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   createInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Creates an InspectTemplate for re-using frequently used configuration
- * for inspecting content, images, and storage.
- * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {google.privacy.dlp.v2.InspectTemplate} request.inspectTemplate
- *   Required. The InspectTemplate to create.
- * @param {string} request.templateId
- *   The template id can contain uppercase and lowercase letters,
- *   numbers, and hyphens; that is, it must match the regular
- *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
- *   characters. Can be empty to allow the system to generate one.
- * @param {string} request.locationId
- *   The geographic location to store the inspection template. Reserved for
- *   future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      | protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Creates an InspectTemplate for re-using frequently used configuration
+   * for inspecting content, images, and storage.
+   * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {google.privacy.dlp.v2.InspectTemplate} request.inspectTemplate
+   *   Required. The InspectTemplate to create.
+   * @param {string} request.templateId
+   *   The template id can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {string} request.locationId
+   *   The geographic location to store the inspection template. Reserved for
+   *   future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   createInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      | protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -765,64 +909,89 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
-    return this._innerApiCalls.createInspectTemplate(request, options, callback);
+    return this._innerApiCalls.createInspectTemplate(
+      request,
+      options,
+      callback
+    );
   }
   updateInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   updateInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Updates the InspectTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of organization and inspectTemplate to be updated, for
- *   example `organizations/433245324/inspectTemplates/432452342` or
- *   projects/project-id/inspectTemplates/432452342.
- * @param {google.privacy.dlp.v2.InspectTemplate} request.inspectTemplate
- *   New InspectTemplate value.
- * @param {google.protobuf.FieldMask} request.updateMask
- *   Mask to control which fields get updated.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      | protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Updates the InspectTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of organization and inspectTemplate to be updated, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
+   * @param {google.privacy.dlp.v2.InspectTemplate} request.inspectTemplate
+   *   New InspectTemplate value.
+   * @param {google.protobuf.FieldMask} request.updateMask
+   *   Mask to control which fields get updated.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   updateInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      | protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -831,60 +1000,77 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
-    return this._innerApiCalls.updateInspectTemplate(request, options, callback);
+    return this._innerApiCalls.updateInspectTemplate(
+      request,
+      options,
+      callback
+    );
   }
   getInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest | undefined,
+      {} | undefined
+    ]
+  >;
   getInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Gets an InspectTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and inspectTemplate to be read, for
- *   example `organizations/433245324/inspectTemplates/432452342` or
- *   projects/project-id/inspectTemplates/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Gets an InspectTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and inspectTemplate to be read, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   getInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate,
-        protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate,
+      protosTypes.google.privacy.dlp.v2.IGetInspectTemplateRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -893,60 +1079,81 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.getInspectTemplate(request, options, callback);
   }
   deleteInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   deleteInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Deletes an InspectTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and inspectTemplate to be deleted, for
- *   example `organizations/433245324/inspectTemplates/432452342` or
- *   projects/project-id/inspectTemplates/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Deletes an InspectTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and inspectTemplate to be deleted, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deleteInspectTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -955,71 +1162,96 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
-    return this._innerApiCalls.deleteInspectTemplate(request, options, callback);
+    return this._innerApiCalls.deleteInspectTemplate(
+      request,
+      options,
+      callback
+    );
   }
   createDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   createDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Creates a DeidentifyTemplate for re-using frequently used configuration
- * for de-identifying content, images, and storage.
- * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
- * more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {google.privacy.dlp.v2.DeidentifyTemplate} request.deidentifyTemplate
- *   Required. The DeidentifyTemplate to create.
- * @param {string} request.templateId
- *   The template id can contain uppercase and lowercase letters,
- *   numbers, and hyphens; that is, it must match the regular
- *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
- *   characters. Can be empty to allow the system to generate one.
- * @param {string} request.locationId
- *   The geographic location to store the deidentification template. Reserved
- *   for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Creates a DeidentifyTemplate for re-using frequently used configuration
+   * for de-identifying content, images, and storage.
+   * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+   * more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {google.privacy.dlp.v2.DeidentifyTemplate} request.deidentifyTemplate
+   *   Required. The DeidentifyTemplate to create.
+   * @param {string} request.templateId
+   *   The template id can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {string} request.locationId
+   *   The geographic location to store the deidentification template. Reserved
+   *   for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   createDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1028,65 +1260,90 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
-    return this._innerApiCalls.createDeidentifyTemplate(request, options, callback);
+    return this._innerApiCalls.createDeidentifyTemplate(
+      request,
+      options,
+      callback
+    );
   }
   updateDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   updateDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Updates the DeidentifyTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
- * more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of organization and deidentify template to be updated, for
- *   example `organizations/433245324/deidentifyTemplates/432452342` or
- *   projects/project-id/deidentifyTemplates/432452342.
- * @param {google.privacy.dlp.v2.DeidentifyTemplate} request.deidentifyTemplate
- *   New DeidentifyTemplate value.
- * @param {google.protobuf.FieldMask} request.updateMask
- *   Mask to control which fields get updated.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Updates the DeidentifyTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+   * more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of organization and deidentify template to be updated, for
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
+   * @param {google.privacy.dlp.v2.DeidentifyTemplate} request.deidentifyTemplate
+   *   New DeidentifyTemplate value.
+   * @param {google.protobuf.FieldMask} request.updateMask
+   *   Mask to control which fields get updated.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   updateDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1095,61 +1352,86 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
-    return this._innerApiCalls.updateDeidentifyTemplate(request, options, callback);
+    return this._innerApiCalls.updateDeidentifyTemplate(
+      request,
+      options,
+      callback
+    );
   }
   getDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   getDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Gets a DeidentifyTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
- * more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and deidentify template to be read, for
- *   example `organizations/433245324/deidentifyTemplates/432452342` or
- *   projects/project-id/deidentifyTemplates/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Gets a DeidentifyTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+   * more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and deidentify template to be read, for
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   getDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-          protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
-        protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      | protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate,
+      (
+        | protosTypes.google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1158,61 +1440,86 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
-    return this._innerApiCalls.getDeidentifyTemplate(request, options, callback);
+    return this._innerApiCalls.getDeidentifyTemplate(
+      request,
+      options,
+      callback
+    );
   }
   deleteDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   deleteDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest|undefined,
-          {}|undefined>): void;
-/**
- * Deletes a DeidentifyTemplate.
- * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
- * more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and deidentify template to be deleted,
- *   for example `organizations/433245324/deidentifyTemplates/432452342` or
- *   projects/project-id/deidentifyTemplates/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Deletes a DeidentifyTemplate.
+   * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+   * more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and deidentify template to be deleted,
+   *   for example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deleteDeidentifyTemplate(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1221,69 +1528,86 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
-    return this._innerApiCalls.deleteDeidentifyTemplate(request, options, callback);
+    return this._innerApiCalls.deleteDeidentifyTemplate(
+      request,
+      options,
+      callback
+    );
   }
   createJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  >;
   createJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest|undefined,
-          {}|undefined>): void;
-/**
- * Creates a job trigger to run DLP actions such as scanning storage for
- * sensitive information on a set schedule.
- * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id.
- * @param {google.privacy.dlp.v2.JobTrigger} request.jobTrigger
- *   Required. The JobTrigger to create.
- * @param {string} request.triggerId
- *   The trigger id can contain uppercase and lowercase letters,
- *   numbers, and hyphens; that is, it must match the regular
- *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
- *   characters. Can be empty to allow the system to generate one.
- * @param {string} request.locationId
- *   The geographic location to store the job trigger. Reserved for
- *   future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Creates a job trigger to run DLP actions such as scanning storage for
+   * sensitive information on a set schedule.
+   * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id.
+   * @param {google.privacy.dlp.v2.JobTrigger} request.jobTrigger
+   *   Required. The JobTrigger to create.
+   * @param {string} request.triggerId
+   *   The trigger id can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {string} request.locationId
+   *   The geographic location to store the job trigger. Reserved for
+   *   future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   createJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.ICreateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1292,63 +1616,76 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.createJobTrigger(request, options, callback);
   }
   updateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  >;
   updateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest|undefined,
-          {}|undefined>): void;
-/**
- * Updates a job trigger.
- * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the project and the triggeredJob, for example
- *   `projects/dlp-test-project/jobTriggers/53234423`.
- * @param {google.privacy.dlp.v2.JobTrigger} request.jobTrigger
- *   New JobTrigger value.
- * @param {google.protobuf.FieldMask} request.updateMask
- *   Mask to control which fields get updated.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Updates a job trigger.
+   * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {google.privacy.dlp.v2.JobTrigger} request.jobTrigger
+   *   New JobTrigger value.
+   * @param {google.protobuf.FieldMask} request.updateMask
+   *   Mask to control which fields get updated.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   updateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IUpdateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1357,59 +1694,71 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.updateJobTrigger(request, options, callback);
   }
   getJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  >;
   getJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest|undefined,
-          {}|undefined>): void;
-/**
- * Gets a job trigger.
- * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the project and the triggeredJob, for example
- *   `projects/dlp-test-project/jobTriggers/53234423`.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Gets a job trigger.
+   * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   getJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger,
-          protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger,
-        protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger,
+      protosTypes.google.privacy.dlp.v2.IGetJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1418,59 +1767,72 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.getJobTrigger(request, options, callback);
   }
   deleteJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  >;
   deleteJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest|undefined,
-          {}|undefined>): void;
-/**
- * Deletes a job trigger.
- * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the project and the triggeredJob, for example
- *   `projects/dlp-test-project/jobTriggers/53234423`.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Deletes a job trigger.
+   * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the project and the triggeredJob, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deleteJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1479,59 +1841,72 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.deleteJobTrigger(request, options, callback);
   }
   activateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  >;
   activateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest|undefined,
-          {}|undefined>): void;
-/**
- * Activate a job trigger. Causes the immediate execute of a trigger
- * instead of waiting on the trigger event to occur.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the trigger to activate, for example
- *   `projects/dlp-test-project/jobTriggers/53234423`.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Activate a job trigger. Causes the immediate execute of a trigger
+   * instead of waiting on the trigger event to occur.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the trigger to activate, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   activateJobTrigger(
-      request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IActivateJobTriggerRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1540,75 +1915,87 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.activateJobTrigger(request, options, callback);
   }
   createDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  >;
   createDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest|undefined,
-          {}|undefined>): void;
-/**
- * Creates a new job to inspect storage or calculate risk metrics.
- * See https://cloud.google.com/dlp/docs/inspecting-storage and
- * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
- *
- * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
- * system will automatically choose what detectors to run. By default this may
- * be all types, but may change over time as detectors are updated.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id.
- * @param {google.privacy.dlp.v2.InspectJobConfig} request.inspectJob
- *   Set to control what and how to inspect.
- * @param {google.privacy.dlp.v2.RiskAnalysisJobConfig} request.riskJob
- *   Set to choose what metric to calculate.
- * @param {string} request.jobId
- *   The job id can contain uppercase and lowercase letters,
- *   numbers, and hyphens; that is, it must match the regular
- *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
- *   characters. Can be empty to allow the system to generate one.
- * @param {string} request.locationId
- *   The geographic location to store and process the job. Reserved for
- *   future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Creates a new job to inspect storage or calculate risk metrics.
+   * See https://cloud.google.com/dlp/docs/inspecting-storage and
+   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+   *
+   * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+   * system will automatically choose what detectors to run. By default this may
+   * be all types, but may change over time as detectors are updated.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id.
+   * @param {google.privacy.dlp.v2.InspectJobConfig} request.inspectJob
+   *   Set to control what and how to inspect.
+   * @param {google.privacy.dlp.v2.RiskAnalysisJobConfig} request.riskJob
+   *   Set to choose what metric to calculate.
+   * @param {string} request.jobId
+   *   The job id can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {string} request.locationId
+   *   The geographic location to store and process the job. Reserved for
+   *   future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   createDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.ICreateDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1617,59 +2004,71 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.createDlpJob(request, options, callback);
   }
   getDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  >;
   getDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest|undefined,
-          {}|undefined>): void;
-/**
- * Gets the latest state of a long-running DlpJob.
- * See https://cloud.google.com/dlp/docs/inspecting-storage and
- * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. The name of the DlpJob resource.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Gets the latest state of a long-running DlpJob.
+   * See https://cloud.google.com/dlp/docs/inspecting-storage and
+   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. The name of the DlpJob resource.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   getDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob,
-          protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob,
-        protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob,
+      protosTypes.google.privacy.dlp.v2.IGetDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1678,61 +2077,73 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.getDlpJob(request, options, callback);
   }
   deleteDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  >;
   deleteDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest|undefined,
-          {}|undefined>): void;
-/**
- * Deletes a long-running DlpJob. This method indicates that the client is
- * no longer interested in the DlpJob result. The job will be cancelled if
- * possible.
- * See https://cloud.google.com/dlp/docs/inspecting-storage and
- * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. The name of the DlpJob resource to be deleted.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Deletes a long-running DlpJob. This method indicates that the client is
+   * no longer interested in the DlpJob result. The job will be cancelled if
+   * possible.
+   * See https://cloud.google.com/dlp/docs/inspecting-storage and
+   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. The name of the DlpJob resource to be deleted.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deleteDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.IDeleteDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1741,61 +2152,73 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.deleteDlpJob(request, options, callback);
   }
   cancelDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  >;
   cancelDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest|undefined,
-          {}|undefined>): void;
-/**
- * Starts asynchronous cancellation on a long-running DlpJob. The server
- * makes a best effort to cancel the DlpJob, but success is not
- * guaranteed.
- * See https://cloud.google.com/dlp/docs/inspecting-storage and
- * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. The name of the DlpJob resource to be cancelled.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Starts asynchronous cancellation on a long-running DlpJob. The server
+   * makes a best effort to cancel the DlpJob, but success is not
+   * guaranteed.
+   * See https://cloud.google.com/dlp/docs/inspecting-storage and
+   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. The name of the DlpJob resource to be cancelled.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   cancelDlpJob(
-      request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest|undefined, {}|undefined
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      protosTypes.google.privacy.dlp.v2.ICancelDlpJobRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1804,70 +2227,91 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.cancelDlpJob(request, options, callback);
   }
   createStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   createStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest|undefined,
-          {}|undefined>): void;
-/**
- * Creates a pre-built stored infoType to be used for inspection.
- * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {google.privacy.dlp.v2.StoredInfoTypeConfig} request.config
- *   Required. Configuration of the storedInfoType to create.
- * @param {string} request.storedInfoTypeId
- *   The storedInfoType ID can contain uppercase and lowercase letters,
- *   numbers, and hyphens; that is, it must match the regular
- *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
- *   characters. Can be empty to allow the system to generate one.
- * @param {string} request.locationId
- *   The geographic location to store the stored infoType. Reserved for
- *   future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      | protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Creates a pre-built stored infoType to be used for inspection.
+   * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {google.privacy.dlp.v2.StoredInfoTypeConfig} request.config
+   *   Required. Configuration of the storedInfoType to create.
+   * @param {string} request.storedInfoTypeId
+   *   The storedInfoType ID can contain uppercase and lowercase letters,
+   *   numbers, and hyphens; that is, it must match the regular
+   *   expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   *   characters. Can be empty to allow the system to generate one.
+   * @param {string} request.locationId
+   *   The geographic location to store the stored infoType. Reserved for
+   *   future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   createStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      | protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      (
+        | protosTypes.google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1876,68 +2320,89 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.createStoredInfoType(request, options, callback);
   }
   updateStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   updateStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest|undefined,
-          {}|undefined>): void;
-/**
- * Updates the stored infoType by creating a new version. The existing version
- * will continue to be used until the new version is ready.
- * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of organization and storedInfoType to be updated, for
- *   example `organizations/433245324/storedInfoTypes/432452342` or
- *   projects/project-id/storedInfoTypes/432452342.
- * @param {google.privacy.dlp.v2.StoredInfoTypeConfig} request.config
- *   Updated configuration for the storedInfoType. If not provided, a new
- *   version of the storedInfoType will be created with the existing
- *   configuration.
- * @param {google.protobuf.FieldMask} request.updateMask
- *   Mask to control which fields get updated.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      | protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Updates the stored infoType by creating a new version. The existing version
+   * will continue to be used until the new version is ready.
+   * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of organization and storedInfoType to be updated, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
+   *   projects/project-id/storedInfoTypes/432452342.
+   * @param {google.privacy.dlp.v2.StoredInfoTypeConfig} request.config
+   *   Updated configuration for the storedInfoType. If not provided, a new
+   *   version of the storedInfoType will be created with the existing
+   *   configuration.
+   * @param {google.protobuf.FieldMask} request.updateMask
+   *   Mask to control which fields get updated.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   updateStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      | protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      (
+        | protosTypes.google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -1946,61 +2411,74 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.updateStoredInfoType(request, options, callback);
   }
   getStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest | undefined,
+      {} | undefined
+    ]
+  >;
   getStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest|undefined,
-          {}|undefined>): void;
-/**
- * Gets a stored infoType.
- * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and storedInfoType to be read, for
- *   example `organizations/433245324/storedInfoTypes/432452342` or
- *   projects/project-id/storedInfoTypes/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Gets a stored infoType.
+   * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and storedInfoType to be read, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
+   *   projects/project-id/storedInfoTypes/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   getStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-          protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType,
-        protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType,
+      protosTypes.google.privacy.dlp.v2.IGetStoredInfoTypeRequest | undefined,
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2009,61 +2487,82 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.getStoredInfoType(request, options, callback);
   }
   deleteStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest|undefined, {}|undefined
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   deleteStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest|undefined,
-          {}|undefined>): void;
-/**
- * Deletes a stored infoType.
- * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.name
- *   Required. Resource name of the organization and storedInfoType to be deleted, for
- *   example `organizations/433245324/storedInfoTypes/432452342` or
- *   projects/project-id/storedInfoTypes/432452342.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): void;
+  /**
+   * Deletes a stored infoType.
+   * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Required. Resource name of the organization and storedInfoType to be deleted, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
+   *   projects/project-id/storedInfoTypes/432452342.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   deleteStoredInfoType(
-      request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest|undefined, {}|undefined>,
-      callback?: Callback<
-          protosTypes.google.protobuf.IEmpty,
-          protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest|undefined,
-          {}|undefined>):
-      Promise<[
-        protosTypes.google.protobuf.IEmpty,
-        protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest|undefined, {}|undefined
-      ]>|void {
+          | protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+          | undefined,
+          {} | undefined
+        >,
+    callback?: Callback<
+      protosTypes.google.protobuf.IEmpty,
+      | protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+      | undefined,
+      {} | undefined
+    >
+  ): Promise<
+    [
+      protosTypes.google.protobuf.IEmpty,
+      (
+        | protosTypes.google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2072,98 +2571,107 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'name': request.name || '',
+      name: request.name || '',
     });
     return this._innerApiCalls.deleteStoredInfoType(request, options, callback);
   }
 
   listInspectTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
-        protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
+    ]
+  >;
   listInspectTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse>): void;
-/**
- * Lists InspectTemplates.
- * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListInspectTemplates`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the template was created.
- *   - `update_time`: corresponds to time the template was last updated.
- *   - `name`: corresponds to template's name.
- *   - `display_name`: corresponds to template's display name.
- * @param {string} request.locationId
- *   The geographic location where inspection templates will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is Array of [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
- *   The client library support auto-pagination by default: it will call the API as many
- *   times as needed and will merge results from all the pages into this array.
- *
- *   When autoPaginate: false is specified through options, the array has three elements.
- *   The first element is Array of [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate} that corresponds to
- *   the one page received from the API server.
- *   If the second element is not null it contains the request object of type [ListInspectTemplatesRequest]{@link google.privacy.dlp.v2.ListInspectTemplatesRequest}
- *   that can be used to obtain the next page of the results.
- *   If it is null, the next page does not exist.
- *   The third element contains the raw response received from the API server. Its type is
- *   [ListInspectTemplatesResponse]{@link google.privacy.dlp.v2.ListInspectTemplatesResponse}.
- *
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
+    >
+  ): void;
+  /**
+   * Lists InspectTemplates.
+   * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListInspectTemplates`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the template was created.
+   *   - `update_time`: corresponds to time the template was last updated.
+   *   - `name`: corresponds to template's name.
+   *   - `display_name`: corresponds to template's display name.
+   * @param {string} request.locationId
+   *   The geographic location where inspection templates will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate}.
+   *   The client library support auto-pagination by default: it will call the API as many
+   *   times as needed and will merge results from all the pages into this array.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate} that corresponds to
+   *   the one page received from the API server.
+   *   If the second element is not null it contains the request object of type [ListInspectTemplatesRequest]{@link google.privacy.dlp.v2.ListInspectTemplatesRequest}
+   *   that can be used to obtain the next page of the results.
+   *   If it is null, the next page does not exist.
+   *   The third element contains the raw response received from the API server. Its type is
+   *   [ListInspectTemplatesResponse]{@link google.privacy.dlp.v2.ListInspectTemplatesResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listInspectTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
-        protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest | null,
+          protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IInspectTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListInspectTemplatesResponse
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2172,61 +2680,61 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.listInspectTemplates(request, options, callback);
   }
 
-/**
- * Equivalent to {@link listInspectTemplates}, but returns a NodeJS Stream object.
- *
- * This fetches the paged responses for {@link listInspectTemplates} continuously
- * and invokes the callback registered for 'data' event for each element in the
- * responses.
- *
- * The returned object has 'end' method when no more elements are required.
- *
- * autoPaginate option will be ignored.
- *
- * @see {@link https://nodejs.org/api/stream.html}
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListInspectTemplates`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the template was created.
- *   - `update_time`: corresponds to time the template was last updated.
- *   - `name`: corresponds to template's name.
- *   - `display_name`: corresponds to template's display name.
- * @param {string} request.locationId
- *   The geographic location where inspection templates will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Stream}
- *   An object stream which emits an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate} on 'data' event.
- */
+  /**
+   * Equivalent to {@link listInspectTemplates}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listInspectTemplates} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListInspectTemplates`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the template was created.
+   *   - `update_time`: corresponds to time the template was last updated.
+   *   - `name`: corresponds to template's name.
+   *   - `display_name`: corresponds to template's display name.
+   * @param {string} request.locationId
+   *   The geographic location where inspection templates will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [InspectTemplate]{@link google.privacy.dlp.v2.InspectTemplate} on 'data' event.
+   */
   listInspectTemplatesStream(
-      request?: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
-      options?: gax.CallOptions | {}):
-    Transform{
+    request?: protosTypes.google.privacy.dlp.v2.IListInspectTemplatesRequest,
+    options?: gax.CallOptions | {}
+  ): Transform {
     request = request || {};
     const callSettings = new gax.CallSettings(options);
     return this._descriptors.page.listInspectTemplates.createStream(
@@ -2236,93 +2744,102 @@ export class DlpServiceClient {
     );
   }
   listDeidentifyTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
-        protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    ]
+  >;
   listDeidentifyTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse>): void;
-/**
- * Lists DeidentifyTemplates.
- * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
- * more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListDeidentifyTemplates`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the template was created.
- *   - `update_time`: corresponds to time the template was last updated.
- *   - `name`: corresponds to template's name.
- *   - `display_name`: corresponds to template's display name.
- * @param {string} request.locationId
- *   The geographic location where deidentifications templates will be retrieved
- *   from. Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is Array of [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
- *   The client library support auto-pagination by default: it will call the API as many
- *   times as needed and will merge results from all the pages into this array.
- *
- *   When autoPaginate: false is specified through options, the array has three elements.
- *   The first element is Array of [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate} that corresponds to
- *   the one page received from the API server.
- *   If the second element is not null it contains the request object of type [ListDeidentifyTemplatesRequest]{@link google.privacy.dlp.v2.ListDeidentifyTemplatesRequest}
- *   that can be used to obtain the next page of the results.
- *   If it is null, the next page does not exist.
- *   The third element contains the raw response received from the API server. Its type is
- *   [ListDeidentifyTemplatesResponse]{@link google.privacy.dlp.v2.ListDeidentifyTemplatesResponse}.
- *
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    >
+  ): void;
+  /**
+   * Lists DeidentifyTemplates.
+   * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+   * more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListDeidentifyTemplates`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the template was created.
+   *   - `update_time`: corresponds to time the template was last updated.
+   *   - `name`: corresponds to template's name.
+   *   - `display_name`: corresponds to template's display name.
+   * @param {string} request.locationId
+   *   The geographic location where deidentifications templates will be retrieved
+   *   from. Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate}.
+   *   The client library support auto-pagination by default: it will call the API as many
+   *   times as needed and will merge results from all the pages into this array.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate} that corresponds to
+   *   the one page received from the API server.
+   *   If the second element is not null it contains the request object of type [ListDeidentifyTemplatesRequest]{@link google.privacy.dlp.v2.ListDeidentifyTemplatesRequest}
+   *   that can be used to obtain the next page of the results.
+   *   If it is null, the next page does not exist.
+   *   The third element contains the raw response received from the API server. Its type is
+   *   [ListDeidentifyTemplatesResponse]{@link google.privacy.dlp.v2.ListDeidentifyTemplatesResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listDeidentifyTemplates(
-      request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
-        protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest | null,
+          protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDeidentifyTemplate[],
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2331,61 +2848,65 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
-    return this._innerApiCalls.listDeidentifyTemplates(request, options, callback);
+    return this._innerApiCalls.listDeidentifyTemplates(
+      request,
+      options,
+      callback
+    );
   }
 
-/**
- * Equivalent to {@link listDeidentifyTemplates}, but returns a NodeJS Stream object.
- *
- * This fetches the paged responses for {@link listDeidentifyTemplates} continuously
- * and invokes the callback registered for 'data' event for each element in the
- * responses.
- *
- * The returned object has 'end' method when no more elements are required.
- *
- * autoPaginate option will be ignored.
- *
- * @see {@link https://nodejs.org/api/stream.html}
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListDeidentifyTemplates`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the template was created.
- *   - `update_time`: corresponds to time the template was last updated.
- *   - `name`: corresponds to template's name.
- *   - `display_name`: corresponds to template's display name.
- * @param {string} request.locationId
- *   The geographic location where deidentifications templates will be retrieved
- *   from. Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Stream}
- *   An object stream which emits an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate} on 'data' event.
- */
+  /**
+   * Equivalent to {@link listDeidentifyTemplates}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listDeidentifyTemplates} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListDeidentifyTemplates`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the template was created.
+   *   - `update_time`: corresponds to time the template was last updated.
+   *   - `name`: corresponds to template's name.
+   *   - `display_name`: corresponds to template's display name.
+   * @param {string} request.locationId
+   *   The geographic location where deidentifications templates will be retrieved
+   *   from. Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [DeidentifyTemplate]{@link google.privacy.dlp.v2.DeidentifyTemplate} on 'data' event.
+   */
   listDeidentifyTemplatesStream(
-      request?: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
-      options?: gax.CallOptions | {}):
-    Transform{
+    request?: protosTypes.google.privacy.dlp.v2.IListDeidentifyTemplatesRequest,
+    options?: gax.CallOptions | {}
+  ): Transform {
     request = request || {};
     const callSettings = new gax.CallSettings(options);
     return this._descriptors.page.listDeidentifyTemplates.createStream(
@@ -2395,118 +2916,127 @@ export class DlpServiceClient {
     );
   }
   listJobTriggers(
-      request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger[],
-        protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger[],
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
+    ]
+  >;
   listJobTriggers(
-      request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger[],
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse>): void;
-/**
- * Lists job triggers.
- * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example `projects/my-project-id`.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to ListJobTriggers. `order_by` field must not
- *   change for subsequent calls.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by a server.
- * @param {string} request.orderBy
- *   Comma separated list of triggeredJob fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the JobTrigger was created.
- *   - `update_time`: corresponds to time the JobTrigger was last updated.
- *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
- *   - `name`: corresponds to JobTrigger's name.
- *   - `display_name`: corresponds to JobTrigger's display name.
- *   - `status`: corresponds to JobTrigger's status.
- * @param {string} request.filter
- *   Allows filtering.
- *
- *   Supported syntax:
- *
- *   * Filter expressions are made up of one or more restrictions.
- *   * Restrictions can be combined by `AND` or `OR` logical operators. A
- *   sequence of restrictions implicitly uses `AND`.
- *   * A restriction has the form of `{field} {operator} {value}`.
- *   * Supported fields/values for inspect jobs:
- *       - `status` - HEALTHY|PAUSED|CANCELLED
- *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
- *       - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
- *       quotation marks. Nanoseconds are ignored.
- *       - 'error_count' - Number of errors that have occurred while running.
- *   * The operator must be `=` or `!=` for status and inspected_storage.
- *
- *   Examples:
- *
- *   * inspected_storage = cloud_storage AND status = HEALTHY
- *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
- *   * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY)
- *   * last_run_time > \"2017-12-12T00:00:00+00:00\"
- *
- *   The length of this field should be no more than 500 characters.
- * @param {string} request.locationId
- *   The geographic location where job triggers will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is Array of [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
- *   The client library support auto-pagination by default: it will call the API as many
- *   times as needed and will merge results from all the pages into this array.
- *
- *   When autoPaginate: false is specified through options, the array has three elements.
- *   The first element is Array of [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger} that corresponds to
- *   the one page received from the API server.
- *   If the second element is not null it contains the request object of type [ListJobTriggersRequest]{@link google.privacy.dlp.v2.ListJobTriggersRequest}
- *   that can be used to obtain the next page of the results.
- *   If it is null, the next page does not exist.
- *   The third element contains the raw response received from the API server. Its type is
- *   [ListJobTriggersResponse]{@link google.privacy.dlp.v2.ListJobTriggersResponse}.
- *
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger[],
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
+    >
+  ): void;
+  /**
+   * Lists job triggers.
+   * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example `projects/my-project-id`.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to ListJobTriggers. `order_by` field must not
+   *   change for subsequent calls.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by a server.
+   * @param {string} request.orderBy
+   *   Comma separated list of triggeredJob fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the JobTrigger was created.
+   *   - `update_time`: corresponds to time the JobTrigger was last updated.
+   *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
+   *   - `name`: corresponds to JobTrigger's name.
+   *   - `display_name`: corresponds to JobTrigger's display name.
+   *   - `status`: corresponds to JobTrigger's status.
+   * @param {string} request.filter
+   *   Allows filtering.
+   *
+   *   Supported syntax:
+   *
+   *   * Filter expressions are made up of one or more restrictions.
+   *   * Restrictions can be combined by `AND` or `OR` logical operators. A
+   *   sequence of restrictions implicitly uses `AND`.
+   *   * A restriction has the form of `{field} {operator} {value}`.
+   *   * Supported fields/values for inspect jobs:
+   *       - `status` - HEALTHY|PAUSED|CANCELLED
+   *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+   *       quotation marks. Nanoseconds are ignored.
+   *       - 'error_count' - Number of errors that have occurred while running.
+   *   * The operator must be `=` or `!=` for status and inspected_storage.
+   *
+   *   Examples:
+   *
+   *   * inspected_storage = cloud_storage AND status = HEALTHY
+   *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
+   *   * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY)
+   *   * last_run_time > \"2017-12-12T00:00:00+00:00\"
+   *
+   *   The length of this field should be no more than 500 characters.
+   * @param {string} request.locationId
+   *   The geographic location where job triggers will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger}.
+   *   The client library support auto-pagination by default: it will call the API as many
+   *   times as needed and will merge results from all the pages into this array.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger} that corresponds to
+   *   the one page received from the API server.
+   *   If the second element is not null it contains the request object of type [ListJobTriggersRequest]{@link google.privacy.dlp.v2.ListJobTriggersRequest}
+   *   that can be used to obtain the next page of the results.
+   *   If it is null, the next page does not exist.
+   *   The third element contains the raw response received from the API server. Its type is
+   *   [ListJobTriggersResponse]{@link google.privacy.dlp.v2.ListJobTriggersResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listJobTriggers(
-      request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IJobTrigger[],
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IJobTrigger[],
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IJobTrigger[],
-        protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest | null,
+          protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IJobTrigger[],
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IJobTrigger[],
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListJobTriggersResponse
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2515,87 +3045,87 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.listJobTriggers(request, options, callback);
   }
 
-/**
- * Equivalent to {@link listJobTriggers}, but returns a NodeJS Stream object.
- *
- * This fetches the paged responses for {@link listJobTriggers} continuously
- * and invokes the callback registered for 'data' event for each element in the
- * responses.
- *
- * The returned object has 'end' method when no more elements are required.
- *
- * autoPaginate option will be ignored.
- *
- * @see {@link https://nodejs.org/api/stream.html}
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example `projects/my-project-id`.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to ListJobTriggers. `order_by` field must not
- *   change for subsequent calls.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by a server.
- * @param {string} request.orderBy
- *   Comma separated list of triggeredJob fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc,update_time, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the JobTrigger was created.
- *   - `update_time`: corresponds to time the JobTrigger was last updated.
- *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
- *   - `name`: corresponds to JobTrigger's name.
- *   - `display_name`: corresponds to JobTrigger's display name.
- *   - `status`: corresponds to JobTrigger's status.
- * @param {string} request.filter
- *   Allows filtering.
- *
- *   Supported syntax:
- *
- *   * Filter expressions are made up of one or more restrictions.
- *   * Restrictions can be combined by `AND` or `OR` logical operators. A
- *   sequence of restrictions implicitly uses `AND`.
- *   * A restriction has the form of `{field} {operator} {value}`.
- *   * Supported fields/values for inspect jobs:
- *       - `status` - HEALTHY|PAUSED|CANCELLED
- *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
- *       - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
- *       quotation marks. Nanoseconds are ignored.
- *       - 'error_count' - Number of errors that have occurred while running.
- *   * The operator must be `=` or `!=` for status and inspected_storage.
- *
- *   Examples:
- *
- *   * inspected_storage = cloud_storage AND status = HEALTHY
- *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
- *   * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY)
- *   * last_run_time > \"2017-12-12T00:00:00+00:00\"
- *
- *   The length of this field should be no more than 500 characters.
- * @param {string} request.locationId
- *   The geographic location where job triggers will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Stream}
- *   An object stream which emits an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger} on 'data' event.
- */
+  /**
+   * Equivalent to {@link listJobTriggers}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listJobTriggers} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example `projects/my-project-id`.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to ListJobTriggers. `order_by` field must not
+   *   change for subsequent calls.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by a server.
+   * @param {string} request.orderBy
+   *   Comma separated list of triggeredJob fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc,update_time, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the JobTrigger was created.
+   *   - `update_time`: corresponds to time the JobTrigger was last updated.
+   *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
+   *   - `name`: corresponds to JobTrigger's name.
+   *   - `display_name`: corresponds to JobTrigger's display name.
+   *   - `status`: corresponds to JobTrigger's status.
+   * @param {string} request.filter
+   *   Allows filtering.
+   *
+   *   Supported syntax:
+   *
+   *   * Filter expressions are made up of one or more restrictions.
+   *   * Restrictions can be combined by `AND` or `OR` logical operators. A
+   *   sequence of restrictions implicitly uses `AND`.
+   *   * A restriction has the form of `{field} {operator} {value}`.
+   *   * Supported fields/values for inspect jobs:
+   *       - `status` - HEALTHY|PAUSED|CANCELLED
+   *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+   *       quotation marks. Nanoseconds are ignored.
+   *       - 'error_count' - Number of errors that have occurred while running.
+   *   * The operator must be `=` or `!=` for status and inspected_storage.
+   *
+   *   Examples:
+   *
+   *   * inspected_storage = cloud_storage AND status = HEALTHY
+   *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
+   *   * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY)
+   *   * last_run_time > \"2017-12-12T00:00:00+00:00\"
+   *
+   *   The length of this field should be no more than 500 characters.
+   * @param {string} request.locationId
+   *   The geographic location where job triggers will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [JobTrigger]{@link google.privacy.dlp.v2.JobTrigger} on 'data' event.
+   */
   listJobTriggersStream(
-      request?: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
-      options?: gax.CallOptions | {}):
-    Transform{
+    request?: protosTypes.google.privacy.dlp.v2.IListJobTriggersRequest,
+    options?: gax.CallOptions | {}
+  ): Transform {
     request = request || {};
     const callSettings = new gax.CallSettings(options);
     return this._descriptors.page.listJobTriggers.createStream(
@@ -2605,121 +3135,130 @@ export class DlpServiceClient {
     );
   }
   listDlpJobs(
-      request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob[],
-        protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob[],
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
+    ]
+  >;
   listDlpJobs(
-      request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob[],
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse>): void;
-/**
- * Lists DlpJobs that match the specified filter in the request.
- * See https://cloud.google.com/dlp/docs/inspecting-storage and
- * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id.
- * @param {string} request.filter
- *   Allows filtering.
- *
- *   Supported syntax:
- *
- *   * Filter expressions are made up of one or more restrictions.
- *   * Restrictions can be combined by `AND` or `OR` logical operators. A
- *   sequence of restrictions implicitly uses `AND`.
- *   * A restriction has the form of `{field} {operator} {value}`.
- *   * Supported fields/values for inspect jobs:
- *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
- *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
- *       - `trigger_name` - The resource name of the trigger that created job.
- *       - 'end_time` - Corresponds to time the job finished.
- *       - 'start_time` - Corresponds to time the job finished.
- *   * Supported fields for risk analysis jobs:
- *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
- *       - 'end_time` - Corresponds to time the job finished.
- *       - 'start_time` - Corresponds to time the job finished.
- *   * The operator must be `=` or `!=`.
- *
- *   Examples:
- *
- *   * inspected_storage = cloud_storage AND state = done
- *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
- *   * inspected_storage = cloud_storage AND (state = done OR state = canceled)
- *   * end_time > \"2017-12-12T00:00:00+00:00\"
- *
- *   The length of this field should be no more than 500 characters.
- * @param {number} request.pageSize
- *   The standard list page size.
- * @param {string} request.pageToken
- *   The standard list page token.
- * @param {google.privacy.dlp.v2.DlpJobType} request.type
- *   The type of job. Defaults to `DlpJobType.INSPECT`
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc, end_time asc, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the job was created.
- *   - `end_time`: corresponds to time the job ended.
- *   - `name`: corresponds to job's name.
- *   - `state`: corresponds to `state`
- * @param {string} request.locationId
- *   The geographic location where jobs will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is Array of [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
- *   The client library support auto-pagination by default: it will call the API as many
- *   times as needed and will merge results from all the pages into this array.
- *
- *   When autoPaginate: false is specified through options, the array has three elements.
- *   The first element is Array of [DlpJob]{@link google.privacy.dlp.v2.DlpJob} that corresponds to
- *   the one page received from the API server.
- *   If the second element is not null it contains the request object of type [ListDlpJobsRequest]{@link google.privacy.dlp.v2.ListDlpJobsRequest}
- *   that can be used to obtain the next page of the results.
- *   If it is null, the next page does not exist.
- *   The third element contains the raw response received from the API server. Its type is
- *   [ListDlpJobsResponse]{@link google.privacy.dlp.v2.ListDlpJobsResponse}.
- *
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob[],
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
+    >
+  ): void;
+  /**
+   * Lists DlpJobs that match the specified filter in the request.
+   * See https://cloud.google.com/dlp/docs/inspecting-storage and
+   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id.
+   * @param {string} request.filter
+   *   Allows filtering.
+   *
+   *   Supported syntax:
+   *
+   *   * Filter expressions are made up of one or more restrictions.
+   *   * Restrictions can be combined by `AND` or `OR` logical operators. A
+   *   sequence of restrictions implicitly uses `AND`.
+   *   * A restriction has the form of `{field} {operator} {value}`.
+   *   * Supported fields/values for inspect jobs:
+   *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
+   *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - `trigger_name` - The resource name of the trigger that created job.
+   *       - 'end_time` - Corresponds to time the job finished.
+   *       - 'start_time` - Corresponds to time the job finished.
+   *   * Supported fields for risk analysis jobs:
+   *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
+   *       - 'end_time` - Corresponds to time the job finished.
+   *       - 'start_time` - Corresponds to time the job finished.
+   *   * The operator must be `=` or `!=`.
+   *
+   *   Examples:
+   *
+   *   * inspected_storage = cloud_storage AND state = done
+   *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
+   *   * inspected_storage = cloud_storage AND (state = done OR state = canceled)
+   *   * end_time > \"2017-12-12T00:00:00+00:00\"
+   *
+   *   The length of this field should be no more than 500 characters.
+   * @param {number} request.pageSize
+   *   The standard list page size.
+   * @param {string} request.pageToken
+   *   The standard list page token.
+   * @param {google.privacy.dlp.v2.DlpJobType} request.type
+   *   The type of job. Defaults to `DlpJobType.INSPECT`
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc, end_time asc, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the job was created.
+   *   - `end_time`: corresponds to time the job ended.
+   *   - `name`: corresponds to job's name.
+   *   - `state`: corresponds to `state`
+   * @param {string} request.locationId
+   *   The geographic location where jobs will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [DlpJob]{@link google.privacy.dlp.v2.DlpJob}.
+   *   The client library support auto-pagination by default: it will call the API as many
+   *   times as needed and will merge results from all the pages into this array.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [DlpJob]{@link google.privacy.dlp.v2.DlpJob} that corresponds to
+   *   the one page received from the API server.
+   *   If the second element is not null it contains the request object of type [ListDlpJobsRequest]{@link google.privacy.dlp.v2.ListDlpJobsRequest}
+   *   that can be used to obtain the next page of the results.
+   *   If it is null, the next page does not exist.
+   *   The third element contains the raw response received from the API server. Its type is
+   *   [ListDlpJobsResponse]{@link google.privacy.dlp.v2.ListDlpJobsResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listDlpJobs(
-      request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IDlpJob[],
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IDlpJob[],
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IDlpJob[],
-        protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest | null,
+          protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IDlpJob[],
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IDlpJob[],
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListDlpJobsResponse
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2728,89 +3267,89 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.listDlpJobs(request, options, callback);
   }
 
-/**
- * Equivalent to {@link listDlpJobs}, but returns a NodeJS Stream object.
- *
- * This fetches the paged responses for {@link listDlpJobs} continuously
- * and invokes the callback registered for 'data' event for each element in the
- * responses.
- *
- * The returned object has 'end' method when no more elements are required.
- *
- * autoPaginate option will be ignored.
- *
- * @see {@link https://nodejs.org/api/stream.html}
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id.
- * @param {string} request.filter
- *   Allows filtering.
- *
- *   Supported syntax:
- *
- *   * Filter expressions are made up of one or more restrictions.
- *   * Restrictions can be combined by `AND` or `OR` logical operators. A
- *   sequence of restrictions implicitly uses `AND`.
- *   * A restriction has the form of `{field} {operator} {value}`.
- *   * Supported fields/values for inspect jobs:
- *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
- *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
- *       - `trigger_name` - The resource name of the trigger that created job.
- *       - 'end_time` - Corresponds to time the job finished.
- *       - 'start_time` - Corresponds to time the job finished.
- *   * Supported fields for risk analysis jobs:
- *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
- *       - 'end_time` - Corresponds to time the job finished.
- *       - 'start_time` - Corresponds to time the job finished.
- *   * The operator must be `=` or `!=`.
- *
- *   Examples:
- *
- *   * inspected_storage = cloud_storage AND state = done
- *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
- *   * inspected_storage = cloud_storage AND (state = done OR state = canceled)
- *   * end_time > \"2017-12-12T00:00:00+00:00\"
- *
- *   The length of this field should be no more than 500 characters.
- * @param {number} request.pageSize
- *   The standard list page size.
- * @param {string} request.pageToken
- *   The standard list page token.
- * @param {google.privacy.dlp.v2.DlpJobType} request.type
- *   The type of job. Defaults to `DlpJobType.INSPECT`
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc, end_time asc, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the job was created.
- *   - `end_time`: corresponds to time the job ended.
- *   - `name`: corresponds to job's name.
- *   - `state`: corresponds to `state`
- * @param {string} request.locationId
- *   The geographic location where jobs will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Stream}
- *   An object stream which emits an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob} on 'data' event.
- */
+  /**
+   * Equivalent to {@link listDlpJobs}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listDlpJobs} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id.
+   * @param {string} request.filter
+   *   Allows filtering.
+   *
+   *   Supported syntax:
+   *
+   *   * Filter expressions are made up of one or more restrictions.
+   *   * Restrictions can be combined by `AND` or `OR` logical operators. A
+   *   sequence of restrictions implicitly uses `AND`.
+   *   * A restriction has the form of `{field} {operator} {value}`.
+   *   * Supported fields/values for inspect jobs:
+   *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
+   *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+   *       - `trigger_name` - The resource name of the trigger that created job.
+   *       - 'end_time` - Corresponds to time the job finished.
+   *       - 'start_time` - Corresponds to time the job finished.
+   *   * Supported fields for risk analysis jobs:
+   *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
+   *       - 'end_time` - Corresponds to time the job finished.
+   *       - 'start_time` - Corresponds to time the job finished.
+   *   * The operator must be `=` or `!=`.
+   *
+   *   Examples:
+   *
+   *   * inspected_storage = cloud_storage AND state = done
+   *   * inspected_storage = cloud_storage OR inspected_storage = bigquery
+   *   * inspected_storage = cloud_storage AND (state = done OR state = canceled)
+   *   * end_time > \"2017-12-12T00:00:00+00:00\"
+   *
+   *   The length of this field should be no more than 500 characters.
+   * @param {number} request.pageSize
+   *   The standard list page size.
+   * @param {string} request.pageToken
+   *   The standard list page token.
+   * @param {google.privacy.dlp.v2.DlpJobType} request.type
+   *   The type of job. Defaults to `DlpJobType.INSPECT`
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc, end_time asc, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the job was created.
+   *   - `end_time`: corresponds to time the job ended.
+   *   - `name`: corresponds to job's name.
+   *   - `state`: corresponds to `state`
+   * @param {string} request.locationId
+   *   The geographic location where jobs will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [DlpJob]{@link google.privacy.dlp.v2.DlpJob} on 'data' event.
+   */
   listDlpJobsStream(
-      request?: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
-      options?: gax.CallOptions | {}):
-    Transform{
+    request?: protosTypes.google.privacy.dlp.v2.IListDlpJobsRequest,
+    options?: gax.CallOptions | {}
+  ): Transform {
     request = request || {};
     const callSettings = new gax.CallSettings(options);
     return this._descriptors.page.listDlpJobs.createStream(
@@ -2820,94 +3359,103 @@ export class DlpServiceClient {
     );
   }
   listStoredInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
-      options?: gax.CallOptions):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
-        protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
-      ]>;
+    request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
+    options?: gax.CallOptions
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    ]
+  >;
   listStoredInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
-      options: gax.CallOptions,
-      callback: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse>): void;
-/**
- * Lists stored infoTypes.
- * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
- * learn more.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListStoredInfoTypes`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc, display_name, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the most recent version of the
- *   resource was created.
- *   - `state`: corresponds to the state of the resource.
- *   - `name`: corresponds to resource name.
- *   - `display_name`: corresponds to info type's display name.
- * @param {string} request.locationId
- *   The geographic location where stored infoTypes will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is Array of [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
- *   The client library support auto-pagination by default: it will call the API as many
- *   times as needed and will merge results from all the pages into this array.
- *
- *   When autoPaginate: false is specified through options, the array has three elements.
- *   The first element is Array of [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType} that corresponds to
- *   the one page received from the API server.
- *   If the second element is not null it contains the request object of type [ListStoredInfoTypesRequest]{@link google.privacy.dlp.v2.ListStoredInfoTypesRequest}
- *   that can be used to obtain the next page of the results.
- *   If it is null, the next page does not exist.
- *   The third element contains the raw response received from the API server. Its type is
- *   [ListStoredInfoTypesResponse]{@link google.privacy.dlp.v2.ListStoredInfoTypesResponse}.
- *
- *   The promise has a method named "cancel" which cancels the ongoing API call.
- */
+    request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
+    options: gax.CallOptions,
+    callback: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    >
+  ): void;
+  /**
+   * Lists stored infoTypes.
+   * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+   * learn more.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListStoredInfoTypes`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc, display_name, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the most recent version of the
+   *   resource was created.
+   *   - `state`: corresponds to the state of the resource.
+   *   - `name`: corresponds to resource name.
+   *   - `display_name`: corresponds to info type's display name.
+   * @param {string} request.locationId
+   *   The geographic location where stored infoTypes will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is Array of [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType}.
+   *   The client library support auto-pagination by default: it will call the API as many
+   *   times as needed and will merge results from all the pages into this array.
+   *
+   *   When autoPaginate: false is specified through options, the array has three elements.
+   *   The first element is Array of [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType} that corresponds to
+   *   the one page received from the API server.
+   *   If the second element is not null it contains the request object of type [ListStoredInfoTypesRequest]{@link google.privacy.dlp.v2.ListStoredInfoTypesRequest}
+   *   that can be used to obtain the next page of the results.
+   *   If it is null, the next page does not exist.
+   *   The third element contains the raw response received from the API server. Its type is
+   *   [ListStoredInfoTypesResponse]{@link google.privacy.dlp.v2.ListStoredInfoTypesResponse}.
+   *
+   *   The promise has a method named "cancel" which cancels the ongoing API call.
+   */
   listStoredInfoTypes(
-      request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
-      optionsOrCallback?: gax.CallOptions|Callback<
+    request: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
+    optionsOrCallback?:
+      | gax.CallOptions
+      | Callback<
           protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse>,
-      callback?: Callback<
-          protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest|null,
-          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse>):
-      Promise<[
-        protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
-        protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest|null,
-        protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
-      ]>|void {
+          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest | null,
+          protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
+        >,
+    callback?: Callback<
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    >
+  ): Promise<
+    [
+      protosTypes.google.privacy.dlp.v2.IStoredInfoType[],
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest | null,
+      protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    ]
+  > | void {
     request = request || {};
     let options: gax.CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as gax.CallOptions;
     }
     options = options || {};
@@ -2916,62 +3464,62 @@ export class DlpServiceClient {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     return this._innerApiCalls.listStoredInfoTypes(request, options, callback);
   }
 
-/**
- * Equivalent to {@link listStoredInfoTypes}, but returns a NodeJS Stream object.
- *
- * This fetches the paged responses for {@link listStoredInfoTypes} continuously
- * and invokes the callback registered for 'data' event for each element in the
- * responses.
- *
- * The returned object has 'end' method when no more elements are required.
- *
- * autoPaginate option will be ignored.
- *
- * @see {@link https://nodejs.org/api/stream.html}
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The parent resource name, for example projects/my-project-id or
- *   organizations/my-org-id.
- * @param {string} request.pageToken
- *   Page token to continue retrieval. Comes from previous call
- *   to `ListStoredInfoTypes`.
- * @param {number} request.pageSize
- *   Size of the page, can be limited by server. If zero server returns
- *   a page of max size 100.
- * @param {string} request.orderBy
- *   Comma separated list of fields to order by,
- *   followed by `asc` or `desc` postfix. This list is case-insensitive,
- *   default sorting order is ascending, redundant space characters are
- *   insignificant.
- *
- *   Example: `name asc, display_name, create_time desc`
- *
- *   Supported fields are:
- *
- *   - `create_time`: corresponds to time the most recent version of the
- *   resource was created.
- *   - `state`: corresponds to the state of the resource.
- *   - `name`: corresponds to resource name.
- *   - `display_name`: corresponds to info type's display name.
- * @param {string} request.locationId
- *   The geographic location where stored infoTypes will be retrieved from.
- *   Use `-` for all locations. Reserved for future extensions.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Stream}
- *   An object stream which emits an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType} on 'data' event.
- */
+  /**
+   * Equivalent to {@link listStoredInfoTypes}, but returns a NodeJS Stream object.
+   *
+   * This fetches the paged responses for {@link listStoredInfoTypes} continuously
+   * and invokes the callback registered for 'data' event for each element in the
+   * responses.
+   *
+   * The returned object has 'end' method when no more elements are required.
+   *
+   * autoPaginate option will be ignored.
+   *
+   * @see {@link https://nodejs.org/api/stream.html}
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The parent resource name, for example projects/my-project-id or
+   *   organizations/my-org-id.
+   * @param {string} request.pageToken
+   *   Page token to continue retrieval. Comes from previous call
+   *   to `ListStoredInfoTypes`.
+   * @param {number} request.pageSize
+   *   Size of the page, can be limited by server. If zero server returns
+   *   a page of max size 100.
+   * @param {string} request.orderBy
+   *   Comma separated list of fields to order by,
+   *   followed by `asc` or `desc` postfix. This list is case-insensitive,
+   *   default sorting order is ascending, redundant space characters are
+   *   insignificant.
+   *
+   *   Example: `name asc, display_name, create_time desc`
+   *
+   *   Supported fields are:
+   *
+   *   - `create_time`: corresponds to time the most recent version of the
+   *   resource was created.
+   *   - `state`: corresponds to the state of the resource.
+   *   - `name`: corresponds to resource name.
+   *   - `display_name`: corresponds to info type's display name.
+   * @param {string} request.locationId
+   *   The geographic location where stored infoTypes will be retrieved from.
+   *   Use `-` for all locations. Reserved for future extensions.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Stream}
+   *   An object stream which emits an object representing [StoredInfoType]{@link google.privacy.dlp.v2.StoredInfoType} on 'data' event.
+   */
   listStoredInfoTypesStream(
-      request?: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
-      options?: gax.CallOptions | {}):
-    Transform{
+    request?: protosTypes.google.privacy.dlp.v2.IListStoredInfoTypesRequest,
+    options?: gax.CallOptions | {}
+  ): Transform {
     request = request || {};
     const callSettings = new gax.CallSettings(options);
     return this._descriptors.page.listStoredInfoTypes.createStream(
@@ -2990,9 +3538,9 @@ export class DlpServiceClient {
    * @param {string} project
    * @returns {string} Resource name string.
    */
-  projectPath(project:string) {
+  projectPath(project: string) {
     return this._pathTemplates.projectPathTemplate.render({
-      project: project,
+      project,
     });
   }
 
@@ -3013,9 +3561,9 @@ export class DlpServiceClient {
    * @param {string} organization
    * @returns {string} Resource name string.
    */
-  organizationPath(organization:string) {
+  organizationPath(organization: string) {
     return this._pathTemplates.organizationPathTemplate.render({
-      organization: organization,
+      organization,
     });
   }
 
@@ -3027,7 +3575,8 @@ export class DlpServiceClient {
    * @returns {string} A string representing the organization.
    */
   matchOrganizationFromOrganizationName(organizationName: string) {
-    return this._pathTemplates.organizationPathTemplate.match(organizationName).organization;
+    return this._pathTemplates.organizationPathTemplate.match(organizationName)
+      .organization;
   }
 
   /**
@@ -3037,9 +3586,12 @@ export class DlpServiceClient {
    * @param {string} inspect_template
    * @returns {string} Resource name string.
    */
-  organizationInspectTemplatePath(organization:string,inspectTemplate:string) {
+  organizationInspectTemplatePath(
+    organization: string,
+    inspectTemplate: string
+  ) {
     return this._pathTemplates.organizationinspecttemplatePathTemplate.render({
-      organization: organization,
+      organization,
       inspect_template: inspectTemplate,
     });
   }
@@ -3051,8 +3603,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationInspectTemplate resource.
    * @returns {string} A string representing the organization.
    */
-  matchOrganizationFromOrganizationInspectTemplateName(organizationinspecttemplateName: string) {
-    return this._pathTemplates.organizationinspecttemplatePathTemplate.match(organizationinspecttemplateName).organization;
+  matchOrganizationFromOrganizationInspectTemplateName(
+    organizationinspecttemplateName: string
+  ) {
+    return this._pathTemplates.organizationinspecttemplatePathTemplate.match(
+      organizationinspecttemplateName
+    ).organization;
   }
 
   /**
@@ -3062,8 +3618,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationInspectTemplate resource.
    * @returns {string} A string representing the inspect_template.
    */
-  matchInspect_templateFromOrganizationInspectTemplateName(organizationinspecttemplateName: string) {
-    return this._pathTemplates.organizationinspecttemplatePathTemplate.match(organizationinspecttemplateName).inspect_template;
+  matchInspect_templateFromOrganizationInspectTemplateName(
+    organizationinspecttemplateName: string
+  ) {
+    return this._pathTemplates.organizationinspecttemplatePathTemplate.match(
+      organizationinspecttemplateName
+    ).inspect_template;
   }
 
   /**
@@ -3073,9 +3633,9 @@ export class DlpServiceClient {
    * @param {string} inspect_template
    * @returns {string} Resource name string.
    */
-  projectInspectTemplatePath(project:string,inspectTemplate:string) {
+  projectInspectTemplatePath(project: string, inspectTemplate: string) {
     return this._pathTemplates.projectinspecttemplatePathTemplate.render({
-      project: project,
+      project,
       inspect_template: inspectTemplate,
     });
   }
@@ -3087,8 +3647,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing ProjectInspectTemplate resource.
    * @returns {string} A string representing the project.
    */
-  matchProjectFromProjectInspectTemplateName(projectinspecttemplateName: string) {
-    return this._pathTemplates.projectinspecttemplatePathTemplate.match(projectinspecttemplateName).project;
+  matchProjectFromProjectInspectTemplateName(
+    projectinspecttemplateName: string
+  ) {
+    return this._pathTemplates.projectinspecttemplatePathTemplate.match(
+      projectinspecttemplateName
+    ).project;
   }
 
   /**
@@ -3098,8 +3662,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing ProjectInspectTemplate resource.
    * @returns {string} A string representing the inspect_template.
    */
-  matchInspect_templateFromProjectInspectTemplateName(projectinspecttemplateName: string) {
-    return this._pathTemplates.projectinspecttemplatePathTemplate.match(projectinspecttemplateName).inspect_template;
+  matchInspect_templateFromProjectInspectTemplateName(
+    projectinspecttemplateName: string
+  ) {
+    return this._pathTemplates.projectinspecttemplatePathTemplate.match(
+      projectinspecttemplateName
+    ).inspect_template;
   }
 
   /**
@@ -3109,9 +3677,9 @@ export class DlpServiceClient {
    * @param {string} job_trigger
    * @returns {string} Resource name string.
    */
-  jobTriggerPath(project:string,jobTrigger:string) {
+  jobTriggerPath(project: string, jobTrigger: string) {
     return this._pathTemplates.jobtriggerPathTemplate.render({
-      project: project,
+      project,
       job_trigger: jobTrigger,
     });
   }
@@ -3124,7 +3692,8 @@ export class DlpServiceClient {
    * @returns {string} A string representing the project.
    */
   matchProjectFromJobTriggerName(jobtriggerName: string) {
-    return this._pathTemplates.jobtriggerPathTemplate.match(jobtriggerName).project;
+    return this._pathTemplates.jobtriggerPathTemplate.match(jobtriggerName)
+      .project;
   }
 
   /**
@@ -3135,7 +3704,8 @@ export class DlpServiceClient {
    * @returns {string} A string representing the job_trigger.
    */
   matchJob_triggerFromJobTriggerName(jobtriggerName: string) {
-    return this._pathTemplates.jobtriggerPathTemplate.match(jobtriggerName).job_trigger;
+    return this._pathTemplates.jobtriggerPathTemplate.match(jobtriggerName)
+      .job_trigger;
   }
 
   /**
@@ -3145,9 +3715,9 @@ export class DlpServiceClient {
    * @param {string} dlp_job
    * @returns {string} Resource name string.
    */
-  dlpJobPath(project:string,dlpJob:string) {
+  dlpJobPath(project: string, dlpJob: string) {
     return this._pathTemplates.dlpjobPathTemplate.render({
-      project: project,
+      project,
       dlp_job: dlpJob,
     });
   }
@@ -3181,11 +3751,16 @@ export class DlpServiceClient {
    * @param {string} deidentify_template
    * @returns {string} Resource name string.
    */
-  organizationDeidentifyTemplatePath(organization:string,deidentifyTemplate:string) {
-    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.render({
-      organization: organization,
-      deidentify_template: deidentifyTemplate,
-    });
+  organizationDeidentifyTemplatePath(
+    organization: string,
+    deidentifyTemplate: string
+  ) {
+    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.render(
+      {
+        organization,
+        deidentify_template: deidentifyTemplate,
+      }
+    );
   }
 
   /**
@@ -3195,8 +3770,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationDeidentifyTemplate resource.
    * @returns {string} A string representing the organization.
    */
-  matchOrganizationFromOrganizationDeidentifyTemplateName(organizationdeidentifytemplateName: string) {
-    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.match(organizationdeidentifytemplateName).organization;
+  matchOrganizationFromOrganizationDeidentifyTemplateName(
+    organizationdeidentifytemplateName: string
+  ) {
+    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.match(
+      organizationdeidentifytemplateName
+    ).organization;
   }
 
   /**
@@ -3206,8 +3785,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationDeidentifyTemplate resource.
    * @returns {string} A string representing the deidentify_template.
    */
-  matchDeidentify_templateFromOrganizationDeidentifyTemplateName(organizationdeidentifytemplateName: string) {
-    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.match(organizationdeidentifytemplateName).deidentify_template;
+  matchDeidentify_templateFromOrganizationDeidentifyTemplateName(
+    organizationdeidentifytemplateName: string
+  ) {
+    return this._pathTemplates.organizationdeidentifytemplatePathTemplate.match(
+      organizationdeidentifytemplateName
+    ).deidentify_template;
   }
 
   /**
@@ -3217,9 +3800,9 @@ export class DlpServiceClient {
    * @param {string} deidentify_template
    * @returns {string} Resource name string.
    */
-  projectDeidentifyTemplatePath(project:string,deidentifyTemplate:string) {
+  projectDeidentifyTemplatePath(project: string, deidentifyTemplate: string) {
     return this._pathTemplates.projectdeidentifytemplatePathTemplate.render({
-      project: project,
+      project,
       deidentify_template: deidentifyTemplate,
     });
   }
@@ -3231,8 +3814,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing ProjectDeidentifyTemplate resource.
    * @returns {string} A string representing the project.
    */
-  matchProjectFromProjectDeidentifyTemplateName(projectdeidentifytemplateName: string) {
-    return this._pathTemplates.projectdeidentifytemplatePathTemplate.match(projectdeidentifytemplateName).project;
+  matchProjectFromProjectDeidentifyTemplateName(
+    projectdeidentifytemplateName: string
+  ) {
+    return this._pathTemplates.projectdeidentifytemplatePathTemplate.match(
+      projectdeidentifytemplateName
+    ).project;
   }
 
   /**
@@ -3242,8 +3829,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing ProjectDeidentifyTemplate resource.
    * @returns {string} A string representing the deidentify_template.
    */
-  matchDeidentify_templateFromProjectDeidentifyTemplateName(projectdeidentifytemplateName: string) {
-    return this._pathTemplates.projectdeidentifytemplatePathTemplate.match(projectdeidentifytemplateName).deidentify_template;
+  matchDeidentify_templateFromProjectDeidentifyTemplateName(
+    projectdeidentifytemplateName: string
+  ) {
+    return this._pathTemplates.projectdeidentifytemplatePathTemplate.match(
+      projectdeidentifytemplateName
+    ).deidentify_template;
   }
 
   /**
@@ -3253,9 +3844,9 @@ export class DlpServiceClient {
    * @param {string} stored_info_type
    * @returns {string} Resource name string.
    */
-  organizationStoredInfoTypePath(organization:string,storedInfoType:string) {
+  organizationStoredInfoTypePath(organization: string, storedInfoType: string) {
     return this._pathTemplates.organizationstoredinfotypePathTemplate.render({
-      organization: organization,
+      organization,
       stored_info_type: storedInfoType,
     });
   }
@@ -3267,8 +3858,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationStoredInfoType resource.
    * @returns {string} A string representing the organization.
    */
-  matchOrganizationFromOrganizationStoredInfoTypeName(organizationstoredinfotypeName: string) {
-    return this._pathTemplates.organizationstoredinfotypePathTemplate.match(organizationstoredinfotypeName).organization;
+  matchOrganizationFromOrganizationStoredInfoTypeName(
+    organizationstoredinfotypeName: string
+  ) {
+    return this._pathTemplates.organizationstoredinfotypePathTemplate.match(
+      organizationstoredinfotypeName
+    ).organization;
   }
 
   /**
@@ -3278,8 +3873,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing OrganizationStoredInfoType resource.
    * @returns {string} A string representing the stored_info_type.
    */
-  matchStored_info_typeFromOrganizationStoredInfoTypeName(organizationstoredinfotypeName: string) {
-    return this._pathTemplates.organizationstoredinfotypePathTemplate.match(organizationstoredinfotypeName).stored_info_type;
+  matchStored_info_typeFromOrganizationStoredInfoTypeName(
+    organizationstoredinfotypeName: string
+  ) {
+    return this._pathTemplates.organizationstoredinfotypePathTemplate.match(
+      organizationstoredinfotypeName
+    ).stored_info_type;
   }
 
   /**
@@ -3289,9 +3888,9 @@ export class DlpServiceClient {
    * @param {string} stored_info_type
    * @returns {string} Resource name string.
    */
-  projectStoredInfoTypePath(project:string,storedInfoType:string) {
+  projectStoredInfoTypePath(project: string, storedInfoType: string) {
     return this._pathTemplates.projectstoredinfotypePathTemplate.render({
-      project: project,
+      project,
       stored_info_type: storedInfoType,
     });
   }
@@ -3304,7 +3903,9 @@ export class DlpServiceClient {
    * @returns {string} A string representing the project.
    */
   matchProjectFromProjectStoredInfoTypeName(projectstoredinfotypeName: string) {
-    return this._pathTemplates.projectstoredinfotypePathTemplate.match(projectstoredinfotypeName).project;
+    return this._pathTemplates.projectstoredinfotypePathTemplate.match(
+      projectstoredinfotypeName
+    ).project;
   }
 
   /**
@@ -3314,8 +3915,12 @@ export class DlpServiceClient {
    *   A fully-qualified path representing ProjectStoredInfoType resource.
    * @returns {string} A string representing the stored_info_type.
    */
-  matchStored_info_typeFromProjectStoredInfoTypeName(projectstoredinfotypeName: string) {
-    return this._pathTemplates.projectstoredinfotypePathTemplate.match(projectstoredinfotypeName).stored_info_type;
+  matchStored_info_typeFromProjectStoredInfoTypeName(
+    projectstoredinfotypeName: string
+  ) {
+    return this._pathTemplates.projectstoredinfotypePathTemplate.match(
+      projectstoredinfotypeName
+    ).stored_info_type;
   }
 
   /**
