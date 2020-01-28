@@ -28,18 +28,17 @@ describe('DlpServiceSmokeTest', () => {
     const type = 'text/plain';
     const value = 'my phone number is 215-512-1212';
     const item = {
-      type: type,
-      value: value,
+      type,
+      value,
     };
     const request = {
-      inspectConfig: inspectConfig,
-      item: item,
+      inspectConfig,
+      item,
       parent: client.projectPath(projectId),
     };
     client
       .inspectContent(request)
-      // @tslint disable-no-any-next-line
-      .then((responses: any) => {
+      .then((responses: {}) => {
         const response = responses[0];
         console.log(response);
       })
