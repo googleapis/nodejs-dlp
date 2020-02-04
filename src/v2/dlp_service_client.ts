@@ -150,21 +150,11 @@ export class DlpServiceClient {
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this._pathTemplates = {
-      projectPathTemplate: new gaxModule.PathTemplate('projects/{project}'),
-      organizationPathTemplate: new gaxModule.PathTemplate(
-        'organizations/{organization}'
-      ),
       organizationInspectTemplatePathTemplate: new gaxModule.PathTemplate(
         'organizations/{organization}/inspectTemplates/{inspect_template}'
       ),
       projectInspectTemplatePathTemplate: new gaxModule.PathTemplate(
         'projects/{project}/inspectTemplates/{inspect_template}'
-      ),
-      jobTriggerPathTemplate: new gaxModule.PathTemplate(
-        'projects/{project}/jobTriggers/{job_trigger}'
-      ),
-      dlpJobPathTemplate: new gaxModule.PathTemplate(
-        'projects/{project}/dlpJobs/{dlp_job}'
       ),
       organizationDeidentifyTemplatePathTemplate: new gaxModule.PathTemplate(
         'organizations/{organization}/deidentifyTemplates/{deidentify_template}'
@@ -172,11 +162,21 @@ export class DlpServiceClient {
       projectDeidentifyTemplatePathTemplate: new gaxModule.PathTemplate(
         'projects/{project}/deidentifyTemplates/{deidentify_template}'
       ),
+      jobTriggerPathTemplate: new gaxModule.PathTemplate(
+        'projects/{project}/jobTriggers/{job_trigger}'
+      ),
+      dlpJobPathTemplate: new gaxModule.PathTemplate(
+        'projects/{project}/dlpJobs/{dlp_job}'
+      ),
       organizationStoredInfoTypePathTemplate: new gaxModule.PathTemplate(
         'organizations/{organization}/storedInfoTypes/{stored_info_type}'
       ),
       projectStoredInfoTypePathTemplate: new gaxModule.PathTemplate(
         'projects/{project}/storedInfoTypes/{stored_info_type}'
+      ),
+      projectPathTemplate: new gaxModule.PathTemplate('projects/{project}'),
+      organizationPathTemplate: new gaxModule.PathTemplate(
+        'organizations/{organization}'
       ),
     };
 
@@ -3533,53 +3533,6 @@ export class DlpServiceClient {
   // --------------------
 
   /**
-   * Return a fully-qualified project resource name string.
-   *
-   * @param {string} project
-   * @returns {string} Resource name string.
-   */
-  projectPath(project: string) {
-    return this._pathTemplates.projectPathTemplate.render({
-      project,
-    });
-  }
-
-  /**
-   * Parse the project from Project resource.
-   *
-   * @param {string} projectName
-   *   A fully-qualified path representing Project resource.
-   * @returns {string} A string representing the project.
-   */
-  matchProjectFromProjectName(projectName: string) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).project;
-  }
-
-  /**
-   * Return a fully-qualified organization resource name string.
-   *
-   * @param {string} organization
-   * @returns {string} Resource name string.
-   */
-  organizationPath(organization: string) {
-    return this._pathTemplates.organizationPathTemplate.render({
-      organization,
-    });
-  }
-
-  /**
-   * Parse the organization from Organization resource.
-   *
-   * @param {string} organizationName
-   *   A fully-qualified path representing Organization resource.
-   * @returns {string} A string representing the organization.
-   */
-  matchOrganizationFromOrganizationName(organizationName: string) {
-    return this._pathTemplates.organizationPathTemplate.match(organizationName)
-      .organization;
-  }
-
-  /**
    * Return a fully-qualified organizationInspectTemplate resource name string.
    *
    * @param {string} organization
@@ -3668,80 +3621,6 @@ export class DlpServiceClient {
     return this._pathTemplates.projectInspectTemplatePathTemplate.match(
       projectInspectTemplateName
     ).inspect_template;
-  }
-
-  /**
-   * Return a fully-qualified jobTrigger resource name string.
-   *
-   * @param {string} project
-   * @param {string} job_trigger
-   * @returns {string} Resource name string.
-   */
-  jobTriggerPath(project: string, jobTrigger: string) {
-    return this._pathTemplates.jobTriggerPathTemplate.render({
-      project,
-      job_trigger: jobTrigger,
-    });
-  }
-
-  /**
-   * Parse the project from JobTrigger resource.
-   *
-   * @param {string} jobTriggerName
-   *   A fully-qualified path representing JobTrigger resource.
-   * @returns {string} A string representing the project.
-   */
-  matchProjectFromJobTriggerName(jobTriggerName: string) {
-    return this._pathTemplates.jobTriggerPathTemplate.match(jobTriggerName)
-      .project;
-  }
-
-  /**
-   * Parse the job_trigger from JobTrigger resource.
-   *
-   * @param {string} jobTriggerName
-   *   A fully-qualified path representing JobTrigger resource.
-   * @returns {string} A string representing the job_trigger.
-   */
-  matchJobTriggerFromJobTriggerName(jobTriggerName: string) {
-    return this._pathTemplates.jobTriggerPathTemplate.match(jobTriggerName)
-      .job_trigger;
-  }
-
-  /**
-   * Return a fully-qualified dlpJob resource name string.
-   *
-   * @param {string} project
-   * @param {string} dlp_job
-   * @returns {string} Resource name string.
-   */
-  dlpJobPath(project: string, dlpJob: string) {
-    return this._pathTemplates.dlpJobPathTemplate.render({
-      project,
-      dlp_job: dlpJob,
-    });
-  }
-
-  /**
-   * Parse the project from DlpJob resource.
-   *
-   * @param {string} dlpJobName
-   *   A fully-qualified path representing DlpJob resource.
-   * @returns {string} A string representing the project.
-   */
-  matchProjectFromDlpJobName(dlpJobName: string) {
-    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).project;
-  }
-
-  /**
-   * Parse the dlp_job from DlpJob resource.
-   *
-   * @param {string} dlpJobName
-   *   A fully-qualified path representing DlpJob resource.
-   * @returns {string} A string representing the dlp_job.
-   */
-  matchDlpJobFromDlpJobName(dlpJobName: string) {
-    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).dlp_job;
   }
 
   /**
@@ -3838,6 +3717,80 @@ export class DlpServiceClient {
   }
 
   /**
+   * Return a fully-qualified jobTrigger resource name string.
+   *
+   * @param {string} project
+   * @param {string} job_trigger
+   * @returns {string} Resource name string.
+   */
+  jobTriggerPath(project: string, jobTrigger: string) {
+    return this._pathTemplates.jobTriggerPathTemplate.render({
+      project,
+      job_trigger: jobTrigger,
+    });
+  }
+
+  /**
+   * Parse the project from JobTrigger resource.
+   *
+   * @param {string} jobTriggerName
+   *   A fully-qualified path representing JobTrigger resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromJobTriggerName(jobTriggerName: string) {
+    return this._pathTemplates.jobTriggerPathTemplate.match(jobTriggerName)
+      .project;
+  }
+
+  /**
+   * Parse the job_trigger from JobTrigger resource.
+   *
+   * @param {string} jobTriggerName
+   *   A fully-qualified path representing JobTrigger resource.
+   * @returns {string} A string representing the job_trigger.
+   */
+  matchJobTriggerFromJobTriggerName(jobTriggerName: string) {
+    return this._pathTemplates.jobTriggerPathTemplate.match(jobTriggerName)
+      .job_trigger;
+  }
+
+  /**
+   * Return a fully-qualified dlpJob resource name string.
+   *
+   * @param {string} project
+   * @param {string} dlp_job
+   * @returns {string} Resource name string.
+   */
+  dlpJobPath(project: string, dlpJob: string) {
+    return this._pathTemplates.dlpJobPathTemplate.render({
+      project,
+      dlp_job: dlpJob,
+    });
+  }
+
+  /**
+   * Parse the project from DlpJob resource.
+   *
+   * @param {string} dlpJobName
+   *   A fully-qualified path representing DlpJob resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromDlpJobName(dlpJobName: string) {
+    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).project;
+  }
+
+  /**
+   * Parse the dlp_job from DlpJob resource.
+   *
+   * @param {string} dlpJobName
+   *   A fully-qualified path representing DlpJob resource.
+   * @returns {string} A string representing the dlp_job.
+   */
+  matchDlpJobFromDlpJobName(dlpJobName: string) {
+    return this._pathTemplates.dlpJobPathTemplate.match(dlpJobName).dlp_job;
+  }
+
+  /**
    * Return a fully-qualified organizationStoredInfoType resource name string.
    *
    * @param {string} organization
@@ -3921,6 +3874,53 @@ export class DlpServiceClient {
     return this._pathTemplates.projectStoredInfoTypePathTemplate.match(
       projectStoredInfoTypeName
     ).stored_info_type;
+  }
+
+  /**
+   * Return a fully-qualified project resource name string.
+   *
+   * @param {string} project
+   * @returns {string} Resource name string.
+   */
+  projectPath(project: string) {
+    return this._pathTemplates.projectPathTemplate.render({
+      project,
+    });
+  }
+
+  /**
+   * Parse the project from Project resource.
+   *
+   * @param {string} projectName
+   *   A fully-qualified path representing Project resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromProjectName(projectName: string) {
+    return this._pathTemplates.projectPathTemplate.match(projectName).project;
+  }
+
+  /**
+   * Return a fully-qualified organization resource name string.
+   *
+   * @param {string} organization
+   * @returns {string} Resource name string.
+   */
+  organizationPath(organization: string) {
+    return this._pathTemplates.organizationPathTemplate.render({
+      organization,
+    });
+  }
+
+  /**
+   * Parse the organization from Organization resource.
+   *
+   * @param {string} organizationName
+   *   A fully-qualified path representing Organization resource.
+   * @returns {string} A string representing the organization.
+   */
+  matchOrganizationFromOrganizationName(organizationName: string) {
+    return this._pathTemplates.organizationPathTemplate.match(organizationName)
+      .organization;
   }
 
   /**
