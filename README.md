@@ -118,7 +118,7 @@ npm install @google-cloud/dlp
 
 ## Samples
 
-Samples are in the [`samples/`](https://github.com/googleapis/nodejs-dlp/tree/master/samples) directory. The samples' `README.md`
+Samples are in the [`samples/`](https://github.com/googleapis/nodejs-dlp/tree/master/samples) directory. The samples [README.md](samples/README.md)
 has instructions for running the samples.
 
 | Sample                      | Source Code                       | Try it |
