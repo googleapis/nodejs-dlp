@@ -58,59 +58,59 @@ npm install @google-cloud/dlp
 
 ```javascript
 
-  // Instantiates a client
-  const dlp = new DLP.DlpServiceClient();
+// Instantiates a client
+const dlp = new DLP.DlpServiceClient();
 
-  // The string to inspect
-  const string = 'Robert Frost';
+// The string to inspect
+const string = 'Robert Frost';
 
-  // The project ID to run the API call under
-  const projectId = process.env.GCLOUD_PROJECT;
+// The project ID to run the API call under
+const projectId = process.env.GCLOUD_PROJECT;
 
-  // The minimum likelihood required before returning a match
-  const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
+// The minimum likelihood required before returning a match
+const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 
-  // The maximum number of findings to report (0 = server maximum)
-  const maxFindings = 0;
+// The maximum number of findings to report (0 = server maximum)
+const maxFindings = 0;
 
-  // The infoTypes of information to match
-  const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
+// The infoTypes of information to match
+const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
 
-  // Whether to include the matching string
-  const includeQuote = true;
+// Whether to include the matching string
+const includeQuote = true;
 
-  // Construct item to inspect
-  const item = {value: string};
+// Construct item to inspect
+const item = {value: string};
 
-  // Construct request
-  const request = {
-    parent: dlp.projectPath(projectId),
-    inspectConfig: {
-      infoTypes: infoTypes,
-      minLikelihood: minLikelihood,
-      limits: {
-        maxFindingsPerRequest: maxFindings,
-      },
-      includeQuote: includeQuote,
+// Construct request
+const request = {
+  parent: dlp.projectPath(projectId),
+  inspectConfig: {
+    infoTypes: infoTypes,
+    minLikelihood: minLikelihood,
+    limits: {
+      maxFindingsPerRequest: maxFindings,
     },
-    item: item,
-  };
+    includeQuote: includeQuote,
+  },
+  item: item,
+};
 
-  // Run request
-  const [response] = await dlp.inspectContent(request);
-  const findings = response.result.findings;
-  if (findings.length > 0) {
-    console.log(`Findings:`);
-    findings.forEach(finding => {
-      if (includeQuote) {
-        console.log(`\tQuote: ${finding.quote}`);
-      }
-      console.log(`\tInfo type: ${finding.infoType.name}`);
-      console.log(`\tLikelihood: ${finding.likelihood}`);
-    });
-  } else {
-    console.log(`No findings.`);
-  }
+// Run request
+const [response] = await dlp.inspectContent(request);
+const findings = response.result.findings;
+if (findings.length > 0) {
+  console.log(`Findings:`);
+  findings.forEach(finding => {
+    if (includeQuote) {
+      console.log(`\tQuote: ${finding.quote}`);
+    }
+    console.log(`\tInfo type: ${finding.infoType.name}`);
+    console.log(`\tLikelihood: ${finding.likelihood}`);
+  });
+} else {
+  console.log(`No findings.`);
+}
 
 ```
 
@@ -161,11 +161,13 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-dlp/blob/master/CONTRIBUTING.md).
 
-Please note that this `README.md`, the `samples/README.md`,
+Please note that this [README.md](README.md), the [samples/README.md](samples/README.md),
 and a variety of configuration files in this repository (including `.nycrc` and `tsconfig.json`)
-are generated from a central template. To edit one of these files, make an edit
-to its template in this
-[directory](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
+are generated from a central template.
+
+If you would like to make edits to one of those files
+(or if you aren't certain if the file you're changing is one, check in the template repository before making changes),
+look for the file in the [template](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
 
 ## License
 
