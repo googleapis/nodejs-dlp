@@ -164,7 +164,7 @@ export class DlpServiceClient {
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this.pathTemplates = {
-      inspectFindingPathTemplate: new this._gaxModule.PathTemplate(
+      findingPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/findings/{finding}'
       ),
       organizationPathTemplate: new this._gaxModule.PathTemplate(
@@ -469,6 +469,8 @@ export class DlpServiceClient {
    * @param {string} request.locationId
    *   The geographic location to process content inspection. Reserved for future
    *   extensions.
+   *   When inspecting images location is restricted to 'global', 'us', 'asia',
+   *   and 'europe'.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -561,6 +563,7 @@ export class DlpServiceClient {
    * @param {string} request.locationId
    *   The geographic location to process the request. Reserved for future
    *   extensions.
+   *   Location is restricted to 'global', 'us', 'asia', and 'europe'.
    * @param {google.privacy.dlp.v2.InspectConfig} request.inspectConfig
    *   Configuration for the inspector.
    * @param {number[]} request.imageRedactionConfigs
@@ -1075,8 +1078,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of organization and inspectTemplate to be updated,
-   *   for example `organizations/433245324/inspectTemplates/432452342` or
+   *   Required. Resource name of organization and inspectTemplate to be updated, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
    *   projects/project-id/inspectTemplates/432452342.
    * @param {google.privacy.dlp.v2.InspectTemplate} request.inspectTemplate
    *   New InspectTemplate value.
@@ -1170,8 +1173,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and inspectTemplate to be read,
-   *   for example `organizations/433245324/inspectTemplates/432452342` or
+   *   Required. Resource name of the organization and inspectTemplate to be read, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
    *   projects/project-id/inspectTemplates/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
@@ -1261,9 +1264,9 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and inspectTemplate to be
-   *   deleted, for example `organizations/433245324/inspectTemplates/432452342`
-   *   or projects/project-id/inspectTemplates/432452342.
+   *   Required. Resource name of the organization and inspectTemplate to be deleted, for
+   *   example `organizations/433245324/inspectTemplates/432452342` or
+   *   projects/project-id/inspectTemplates/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -1459,9 +1462,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of organization and deidentify template to be
-   *   updated, for example
-   *   `organizations/433245324/deidentifyTemplates/432452342` or
+   *   Required. Resource name of organization and deidentify template to be updated, for
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
    *   projects/project-id/deidentifyTemplates/432452342.
    * @param {google.privacy.dlp.v2.DeidentifyTemplate} request.deidentifyTemplate
    *   New DeidentifyTemplate value.
@@ -1560,9 +1562,9 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and deidentify template to be
-   *   read, for example `organizations/433245324/deidentifyTemplates/432452342`
-   *   or projects/project-id/deidentifyTemplates/432452342.
+   *   Required. Resource name of the organization and deidentify template to be read, for
+   *   example `organizations/433245324/deidentifyTemplates/432452342` or
+   *   projects/project-id/deidentifyTemplates/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -1652,9 +1654,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and deidentify template to be
-   *   deleted, for example
-   *   `organizations/433245324/deidentifyTemplates/432452342` or
+   *   Required. Resource name of the organization and deidentify template to be deleted,
+   *   for example `organizations/433245324/deidentifyTemplates/432452342` or
    *   projects/project-id/deidentifyTemplates/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
@@ -1934,8 +1935,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the trigger to execute a hybrid inspect on, for
-   *   example `projects/dlp-test-project/jobTriggers/53234423`.
+   *   Required. Resource name of the trigger to execute a hybrid inspect on, for example
+   *   `projects/dlp-test-project/jobTriggers/53234423`.
    * @param {google.privacy.dlp.v2.HybridContentItem} request.hybridItem
    *   The item to inspect.
    * @param {object} [options]
@@ -2737,8 +2738,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of organization and storedInfoType to be updated,
-   *   for example `organizations/433245324/storedInfoTypes/432452342` or
+   *   Required. Resource name of organization and storedInfoType to be updated, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
    *   projects/project-id/storedInfoTypes/432452342.
    * @param {google.privacy.dlp.v2.StoredInfoTypeConfig} request.config
    *   Updated configuration for the storedInfoType. If not provided, a new
@@ -2831,8 +2832,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and storedInfoType to be read,
-   *   for example `organizations/433245324/storedInfoTypes/432452342` or
+   *   Required. Resource name of the organization and storedInfoType to be read, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
    *   projects/project-id/storedInfoTypes/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
@@ -2921,8 +2922,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the organization and storedInfoType to be
-   *   deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
+   *   Required. Resource name of the organization and storedInfoType to be deleted, for
+   *   example `organizations/433245324/storedInfoTypes/432452342` or
    *   projects/project-id/storedInfoTypes/432452342.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
@@ -3016,8 +3017,8 @@ export class DlpServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
-   *   Required. Resource name of the job to execute a hybrid inspect on, for
-   *   example `projects/dlp-test-project/dlpJob/53234423`.
+   *   Required. Resource name of the job to execute a hybrid inspect on, for example
+   *   `projects/dlp-test-project/dlpJob/53234423`.
    * @param {google.privacy.dlp.v2.HybridContentItem} request.hybridItem
    *   The item to inspect.
    * @param {object} [options]
@@ -4588,15 +4589,15 @@ export class DlpServiceClient {
   // --------------------
 
   /**
-   * Return a fully-qualified inspectFinding resource name string.
+   * Return a fully-qualified finding resource name string.
    *
    * @param {string} project
    * @param {string} location
    * @param {string} finding
    * @returns {string} Resource name string.
    */
-  inspectFindingPath(project: string, location: string, finding: string) {
-    return this.pathTemplates.inspectFindingPathTemplate.render({
+  findingPath(project: string, location: string, finding: string) {
+    return this.pathTemplates.findingPathTemplate.render({
       project: project,
       location: location,
       finding: finding,
@@ -4604,42 +4605,36 @@ export class DlpServiceClient {
   }
 
   /**
-   * Parse the project from InspectFinding resource.
+   * Parse the project from Finding resource.
    *
-   * @param {string} inspectFindingName
-   *   A fully-qualified path representing InspectFinding resource.
+   * @param {string} findingName
+   *   A fully-qualified path representing Finding resource.
    * @returns {string} A string representing the project.
    */
-  matchProjectFromInspectFindingName(inspectFindingName: string) {
-    return this.pathTemplates.inspectFindingPathTemplate.match(
-      inspectFindingName
-    ).project;
+  matchProjectFromFindingName(findingName: string) {
+    return this.pathTemplates.findingPathTemplate.match(findingName).project;
   }
 
   /**
-   * Parse the location from InspectFinding resource.
+   * Parse the location from Finding resource.
    *
-   * @param {string} inspectFindingName
-   *   A fully-qualified path representing InspectFinding resource.
+   * @param {string} findingName
+   *   A fully-qualified path representing Finding resource.
    * @returns {string} A string representing the location.
    */
-  matchLocationFromInspectFindingName(inspectFindingName: string) {
-    return this.pathTemplates.inspectFindingPathTemplate.match(
-      inspectFindingName
-    ).location;
+  matchLocationFromFindingName(findingName: string) {
+    return this.pathTemplates.findingPathTemplate.match(findingName).location;
   }
 
   /**
-   * Parse the finding from InspectFinding resource.
+   * Parse the finding from Finding resource.
    *
-   * @param {string} inspectFindingName
-   *   A fully-qualified path representing InspectFinding resource.
+   * @param {string} findingName
+   *   A fully-qualified path representing Finding resource.
    * @returns {string} A string representing the finding.
    */
-  matchFindingFromInspectFindingName(inspectFindingName: string) {
-    return this.pathTemplates.inspectFindingPathTemplate.match(
-      inspectFindingName
-    ).finding;
+  matchFindingFromFindingName(findingName: string) {
+    return this.pathTemplates.findingPathTemplate.match(findingName).finding;
   }
 
   /**
