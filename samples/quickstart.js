@@ -27,7 +27,7 @@ async function quickStart() {
   const string = 'Robert Frost';
 
   // The project ID to run the API call under
-  const projectId = process.env.GCLOUD_PROJECT;
+  const projectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The minimum likelihood required before returning a match
   const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';

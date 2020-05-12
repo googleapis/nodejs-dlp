@@ -78,7 +78,7 @@ async function redactImage(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The path to a local file to inspect. Can be a JPG or PNG image file.
   // const filepath = 'path/to/image.png';
@@ -183,7 +183,7 @@ const cli = require('yargs')
   })
   .option('c', {
     alias: 'callingProject',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     type: 'string',
     global: true,
   })

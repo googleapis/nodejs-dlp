@@ -25,7 +25,7 @@ async function listJobs(callingProjectId, filter, jobType) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The filter expression to use
   // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs/list
@@ -106,10 +106,10 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProject',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .example('node $0 list "state=DONE" -t RISK_ANALYSIS_JOB')
-  .example('node $0 delete projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####')
+  .example('node $0 delete projects/YOUR_GOOGLE_CLOUD_PROJECT/dlpJobs/X-#####')
   .wrap(120)
   .recommendCommands()
   .epilogue('For more information, see https://cloud.google.com/dlp/docs.');

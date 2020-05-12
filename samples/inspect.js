@@ -31,7 +31,7 @@ async function inspectString(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The string to inspect
   // const string = 'My name is Gary and my email is gary@example.com';
@@ -114,7 +114,7 @@ async function inspectFile(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The path to a local file to inspect. Can be a text, JPG, or PNG file.
   // const filepath = 'path/to/image.png';
@@ -206,7 +206,7 @@ async function inspectGCSFile(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The name of the bucket where the file resides.
   // const bucketName = 'YOUR-BUCKET';
@@ -344,11 +344,11 @@ async function inspectDatastore(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The project ID the target Datastore is stored under
   // This may or may not equal the calling project ID
-  // const dataProjectId = process.env.GCLOUD_PROJECT;
+  // const dataProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // (Optional) The ID namespace of the Datastore document to inspect.
   // To ignore Datastore namespaces, set this to an empty string ('')
@@ -490,11 +490,11 @@ async function inspectBigquery(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const dataProjectId = process.env.GCLOUD_PROJECT;
+  // const dataProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -721,12 +721,12 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .option('p', {
     type: 'string',
     alias: 'dataProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .option('f', {
     alias: 'maxFindings',

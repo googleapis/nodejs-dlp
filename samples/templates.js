@@ -33,7 +33,7 @@ async function createInspectTemplate(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The minimum likelihood required before returning a match
   // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
@@ -93,7 +93,7 @@ async function listInspectTemplates(callingProjectId) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // Helper function to pretty-print dates
   const formatDate = date => {
@@ -241,13 +241,13 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     global: true,
   })
   .option('p', {
     type: 'string',
     alias: 'tableProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     global: true,
   })
   .example(

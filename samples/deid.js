@@ -28,7 +28,7 @@ async function deidentifyWithMask(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
@@ -95,7 +95,7 @@ async function deidentifyWithDateShift(
   const fs = require('fs');
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The path to the CSV file to deidentify
   // The first row of the file must specify column names, and all other rows
@@ -121,7 +121,7 @@ async function deidentifyWithDateShift(
 
   // (Optional) The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
   // If this is specified, then 'wrappedKey' and 'contextFieldId' must also be set
-  // const keyName = 'projects/YOUR_GCLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
+  // const keyName = 'projects/YOUR_GOOGLE_CLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
 
   // (Optional) The encrypted ('wrapped') AES-256 key to use when shifting dates
   // This key should be encrypted using the Cloud KMS key specified above
@@ -248,7 +248,7 @@ async function deidentifyWithFpe(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
@@ -258,7 +258,7 @@ async function deidentifyWithFpe(
   // const alphabet = 'ALPHA_NUMERIC';
 
   // The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
-  // const keyName = 'projects/YOUR_GCLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
+  // const keyName = 'projects/YOUR_GOOGLE_CLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
 
   // The encrypted ('wrapped') AES-256 key to use
   // This key should be encrypted using the Cloud KMS key specified above
@@ -332,7 +332,7 @@ async function reidentifyWithFpe(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // The string to reidentify
   // const string = 'My SSN is PHONE_TOKEN(9):#########';
@@ -342,7 +342,7 @@ async function reidentifyWithFpe(
   // const alphabet = 'ALPHA_NUMERIC';
 
   // The name of the Cloud KMS key used to encrypt ('wrap') the AES-256 key
-  // const keyName = 'projects/YOUR_GCLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
+  // const keyName = 'projects/YOUR_GOOGLE_CLOUD_PROJECT/locations/YOUR_LOCATION/keyRings/YOUR_KEYRING_NAME/cryptoKeys/YOUR_KEY_NAME';
 
   // The encrypted ('wrapped') AES-256 key to use
   // This key should be encrypted using the Cloud KMS key specified above
@@ -522,7 +522,7 @@ const cli = require('yargs')
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .example('node $0 deidMask "My SSN is 372819127"')
   .example(
