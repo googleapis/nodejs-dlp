@@ -36,7 +36,7 @@ async function createTrigger(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // (Optional) The name of the trigger to be created.
   // const triggerId = 'my-trigger';
@@ -128,7 +128,7 @@ async function listTriggers(callingProjectId) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = process.env.GOOGLE_CLOUD_PROJECT;
 
   // Construct trigger listing request
   const request = {
@@ -273,7 +273,7 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .example('node $0 create my-bucket 1')
   .example('node $0 list')
