@@ -31,7 +31,6 @@ const cmd = 'node risk.js';
 const dataset = 'integration_tests_dlp';
 const uniqueField = 'Name';
 const numericField = 'Age';
-const testProjectId = process.env.GCLOUD_PROJECT;
 const pubsub = new PubSub();
 
 /*
@@ -45,10 +44,11 @@ const pubsub = new PubSub();
  */
 describe('risk', () => {
   // Create new custom topic/subscription
-  let topic, subscription;
+  let topic, subscription, testProjectId;
   const topicName = `dlp-risk-topic-${uuid.v4()}`;
   const subscriptionName = `dlp-risk-subscription-${uuid.v4()}`;
   before(async () => {
+    testProjectId = await pubsub.auth.getProjectId();
     [topic] = await pubsub.createTopic(topicName);
     [subscription] = await topic.createSubscription(subscriptionName);
   });

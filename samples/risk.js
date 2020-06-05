@@ -35,11 +35,11 @@ async function numericalRiskAnalysis(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const tableProjectId = 'YOUR_PROJECT_ID';
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -171,11 +171,11 @@ async function categoricalRiskAnalysis(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const tableProjectId = 'YOUR_PROJECT_ID';
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -307,11 +307,11 @@ async function kAnonymityAnalysis(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const tableProjectId = 'YOUR_PROJECT_ID';
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -436,11 +436,11 @@ async function lDiversityAnalysis(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const tableProjectId = 'YOUR_PROJECT_ID';
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -578,11 +578,11 @@ async function kMapEstimationAnalysis(
   const pubsub = new PubSub();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The project ID the table is stored under
   // This may or (for public datasets) may not equal the calling project ID
-  // const tableProjectId = process.env.GCLOUD_PROJECT;
+  // const tableProjectId = 'YOUR_PROJECT_ID';
 
   // The ID of the dataset to inspect, e.g. 'my_dataset'
   // const datasetId = 'my_dataset';
@@ -615,7 +615,7 @@ async function kMapEstimationAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(process.env.GCLOUD_PROJECT),
+    parent: dlp.projectPath(callingProjectId),
     riskJob: {
       privacyMetric: {
         kMapEstimationConfig: {

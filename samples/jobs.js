@@ -25,7 +25,7 @@ async function listJobs(callingProjectId, filter, jobType) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The filter expression to use
   // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs/list

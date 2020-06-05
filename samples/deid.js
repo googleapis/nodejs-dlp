@@ -28,7 +28,7 @@ async function deidentifyWithMask(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
@@ -95,7 +95,7 @@ async function deidentifyWithDateShift(
   const fs = require('fs');
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The path to the CSV file to deidentify
   // The first row of the file must specify column names, and all other rows
@@ -248,7 +248,7 @@ async function deidentifyWithFpe(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The string to deidentify
   // const string = 'My SSN is 372819127';
@@ -332,7 +332,8 @@ async function reidentifyWithFpe(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // TODO(developer): uncomment this line, and use your project Id
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The string to reidentify
   // const string = 'My SSN is PHONE_TOKEN(9):#########';

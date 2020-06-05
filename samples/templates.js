@@ -33,7 +33,7 @@ async function createInspectTemplate(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The minimum likelihood required before returning a match
   // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
@@ -93,7 +93,7 @@ async function listInspectTemplates(callingProjectId) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // Helper function to pretty-print dates
   const formatDate = date => {

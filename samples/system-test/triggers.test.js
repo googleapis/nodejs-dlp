@@ -15,23 +15,30 @@
 'use strict';
 
 const {assert} = require('chai');
-const {describe, it} = require('mocha');
+const {describe, it, before} = require('mocha');
 const cp = require('child_process');
 const uuid = require('uuid');
+const {DlpServiceClient} = require('@google-cloud/dlp');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 describe('triggers', () => {
-  const projectId = process.env.GCLOUD_PROJECT;
+  let projectId;
+  let triggerName;
+  let fullTriggerName;
   const cmd = 'node triggers.js';
-  const triggerName = `my-trigger-${uuid.v4()}`;
-  const fullTriggerName = `projects/${projectId}/jobTriggers/${triggerName}`;
   const triggerDisplayName = `My Trigger Display Name: ${uuid.v4()}`;
   const triggerDescription = `My Trigger Description: ${uuid.v4()}`;
   const infoType = 'PERSON_NAME';
   const minLikelihood = 'VERY_LIKELY';
   const maxFindings = 5;
   const bucketName = process.env.BUCKET_NAME;
+  before(async () => {
+    const dlp = new DlpServiceClient();
+    projectId = await dlp.getProjectId();
+    triggerName = `my-trigger-${uuid.v4()}`;
+    fullTriggerName = `projects/${projectId}/jobTriggers/${triggerName}`;
+  });
 
   it('should create a trigger', () => {
     const output = execSync(

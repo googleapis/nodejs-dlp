@@ -22,19 +22,18 @@ const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cmd = 'node jobs.js';
 const badJobName = 'projects/not-a-project/dlpJobs/i-123456789';
-
-const testCallingProjectId = process.env.GCLOUD_PROJECT;
 const testTableProjectId = 'bigquery-public-data';
 const testDatasetId = 'san_francisco';
 const testTableId = 'bikeshare_trips';
 const testColumnName = 'zip_code';
 
 describe('jobs', () => {
-  // Helper function for creating test jobs
-  const createTestJob = async () => {
-    // Initialize client library
-    const DLP = require('@google-cloud/dlp').v2;
-    const dlp = new DLP.DlpServiceClient();
+  let testCallingProjectId;
+  let testJobName;
+  before(async () => {
+    const {DlpServiceClient} = require('@google-cloud/dlp');
+    const dlp = new DlpServiceClient();
+    testCallingProjectId = await dlp.getProjectId();
 
     // Construct job request
     const request = {
@@ -56,15 +55,8 @@ describe('jobs', () => {
     };
 
     // Create job
-    return dlp.createDlpJob(request).then(response => {
-      return response[0].name;
-    });
-  };
-
-  // Create a test job
-  let testJobName;
-  before(async () => {
-    testJobName = await createTestJob();
+    const [job] = await dlp.createDlpJob(request);
+    testJobName = job.name;
   });
 
   // dlp_list_jobs

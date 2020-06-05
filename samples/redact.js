@@ -78,7 +78,7 @@ async function redactImage(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // The path to a local file to inspect. Can be a JPG or PNG image file.
   // const filepath = 'path/to/image.png';

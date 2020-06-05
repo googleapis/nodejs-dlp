@@ -15,9 +15,10 @@
 'use strict';
 
 const {assert} = require('chai');
-const {describe, it} = require('mocha');
+const {describe, it, before} = require('mocha');
 const cp = require('child_process');
 const uuid = require('uuid');
+const {DlpServiceClient} = require('@google-cloud/dlp');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
@@ -32,7 +33,12 @@ describe('templates', () => {
   const DISPLAY_NAME = `My Template ${uuid.v4()}`;
   const TEMPLATE_NAME = `my-template-${uuid.v4()}`;
 
-  const fullTemplateName = `projects/${process.env.GCLOUD_PROJECT}/inspectTemplates/${TEMPLATE_NAME}`;
+  let fullTemplateName;
+  before(async () => {
+    const dlp = new DlpServiceClient();
+    const projectId = await dlp.getProjectId();
+    fullTemplateName = `projects/${projectId}/inspectTemplates/${TEMPLATE_NAME}`;
+  });
 
   // create_inspect_template
   it('should create template', () => {

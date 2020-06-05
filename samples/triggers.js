@@ -36,7 +36,7 @@ async function createTrigger(
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // (Optional) The name of the trigger to be created.
   // const triggerId = 'my-trigger';
@@ -128,7 +128,7 @@ async function listTriggers(callingProjectId) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const callingProjectId = process.env.GCLOUD_PROJECT;
+  // const callingProjectId = 'YOUR_PROJECT_ID';
 
   // Construct trigger listing request
   const request = {
