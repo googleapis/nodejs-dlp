@@ -721,12 +721,12 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .option('p', {
     type: 'string',
     alias: 'dataProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .option('f', {
     alias: 'maxFindings',

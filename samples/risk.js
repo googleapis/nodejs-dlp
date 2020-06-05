@@ -810,13 +810,13 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     global: true,
   })
   .option('p', {
     type: 'string',
     alias: 'tableProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     global: true,
   })
   .example(

@@ -523,7 +523,7 @@ const cli = require('yargs')
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .example('node $0 deidMask "My SSN is 372819127"')
   .example(

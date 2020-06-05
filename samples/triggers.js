@@ -273,7 +273,7 @@ const cli = require(`yargs`) // eslint-disable-line
   .option('c', {
     type: 'string',
     alias: 'callingProjectId',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
   })
   .example('node $0 create my-bucket 1')
   .example('node $0 list')

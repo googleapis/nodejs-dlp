@@ -183,7 +183,7 @@ const cli = require('yargs')
   })
   .option('c', {
     alias: 'callingProject',
-    default: process.env.GCLOUD_PROJECT || '',
+    default: process.env.GOOGLE_CLOUD_PROJECT || '',
     type: 'string',
     global: true,
   })
