@@ -434,7 +434,7 @@ async function deidentifyWithReplacement(
             primitiveTransformation: {
               replaceConfig: {
                 newValue: {
-                  stringValue: replacement
+                  stringValue: replacement,
                 },
               },
             },
