@@ -451,7 +451,7 @@ async function deidentifyWithReplacement(
     const deidentifiedItem = response.item;
     console.log(deidentifiedItem.value);
   } catch (err) {
-    console.log(`Error in deidentifyWithMask: ${err.message || err}`);
+    console.log(`Error in deidentifyWithReplacement: ${err.message || err}`);
   }
 
   // [END dlp_deidentify_replacement]
