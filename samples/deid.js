@@ -434,7 +434,7 @@ async function deidentifyWithReplacement(
             primitiveTransformation: {
               replaceConfig: {
                 newValue: {
-                    stringValue: replacement
+                  stringValue: replacement
                 },
               },
             },
@@ -578,11 +578,12 @@ const cli = require('yargs')
     'deidReplace <string> <replacement>',
     'Deidentify sensitive data in a string by replacing it with a given replacement string.',
     {},
-    opts => deidentifyWithReplacement(
+    opts =>
+      deidentifyWithReplacement(
         opts.callingProjectId,
         opts.string,
         opts.replacement
-    ).catch(console.log)
+      ).catch(console.log)
   )
   .option('c', {
     type: 'string',
