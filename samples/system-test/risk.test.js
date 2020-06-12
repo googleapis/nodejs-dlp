@@ -86,7 +86,6 @@ describe('risk', () => {
     const output = execSync(
       `${cmd} numerical ${dataset} harmful ${numericField} ${topicName} ${subscriptionName} -p ${testProjectId}`
     );
-    console.info(output);
     assert.match(output, /Value at 0% quantile:/);
     assert.match(output, /Value at \d+% quantile:/);
   });
