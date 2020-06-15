@@ -68,7 +68,7 @@ async function numericalRiskAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(callingProjectId),
+    parent: `projects/${callingProjectId}/locations/global`,
     riskJob: {
       privacyMetric: {
         numericalStatsConfig: {
@@ -207,7 +207,7 @@ async function categoricalRiskAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(callingProjectId),
+    parent: `projects/${callingProjectId}/locations/global`,
     riskJob: {
       privacyMetric: {
         categoricalStatsConfig: {
@@ -347,7 +347,7 @@ async function kAnonymityAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(callingProjectId),
+    parent: `projects/${callingProjectId}/locations/global`,
     riskJob: {
       privacyMetric: {
         kAnonymityConfig: {
@@ -483,7 +483,7 @@ async function lDiversityAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(callingProjectId),
+    parent: `projects/${callingProjectId}/locations/global`,
     riskJob: {
       privacyMetric: {
         lDiversityConfig: {
@@ -631,7 +631,7 @@ async function kMapEstimationAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: dlp.projectPath(process.env.GCLOUD_PROJECT),
+    parent: `projects/${callingProjectId}/locations/global`,
     riskJob: {
       privacyMetric: {
         kMapEstimationConfig: {
