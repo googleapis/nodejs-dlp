@@ -114,7 +114,7 @@ describe('inspect', () => {
   });
 
   // inspect_gcs_file_promise
-  it('should inspect a GCS text file', () => {
+  it.skip('should inspect a GCS text file', () => {
     const output = execSync(
       `${cmd} gcsFile ${bucket} test.txt ${topicName} ${subscriptionName}`
     );
@@ -122,7 +122,7 @@ describe('inspect', () => {
     assert.match(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
   });
 
-  it('should inspect multiple GCS text files', () => {
+  it.skip('should inspect multiple GCS text files', () => {
     const output = execSync(
       `${cmd} gcsFile ${bucket} "*.txt" ${topicName} ${subscriptionName}`
     );
@@ -130,7 +130,7 @@ describe('inspect', () => {
     assert.match(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
   });
 
-  it('should handle a GCS file with no sensitive data', () => {
+  it.skip('should handle a GCS file with no sensitive data', () => {
     const output = execSync(
       `${cmd} gcsFile ${bucket} harmless.txt ${topicName} ${subscriptionName}`
     );
@@ -145,14 +145,14 @@ describe('inspect', () => {
   });
 
   // inspect_datastore
-  it('should inspect Datastore', () => {
+  it.skip('should inspect Datastore', () => {
     const output = execSync(
       `${cmd} datastore Person ${topicName} ${subscriptionName} --namespaceId DLP -p ${dataProject}`
     );
     assert.match(output, /Found \d instance\(s\) of infoType EMAIL_ADDRESS/);
   });
 
-  it('should handle Datastore with no sensitive data', () => {
+  it.skip('should handle Datastore with no sensitive data', () => {
     const output = execSync(
       `${cmd} datastore Harmless ${topicName} ${subscriptionName} --namespaceId DLP -p ${dataProject}`
     );
@@ -167,14 +167,14 @@ describe('inspect', () => {
   });
 
   // inspect_bigquery
-  it('should inspect a Bigquery table', () => {
+  it.skip('should inspect a Bigquery table', () => {
     const output = execSync(
       `${cmd} bigquery integration_tests_dlp harmful ${topicName} ${subscriptionName} -p ${dataProject}`
     );
     assert.match(output, /Found \d instance\(s\) of infoType PHONE_NUMBER/);
   });
 
-  it('should handle a Bigquery table with no sensitive data', () => {
+  it.skip('should handle a Bigquery table with no sensitive data', () => {
     const output = execSync(
       `${cmd} bigquery integration_tests_dlp harmless ${topicName} ${subscriptionName} -p ${dataProject}`
     );
