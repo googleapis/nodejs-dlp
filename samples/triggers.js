@@ -89,7 +89,7 @@ async function createTrigger(
 
   // Construct trigger creation request
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     jobTrigger: {
       inspectJob: job,
       displayName: displayName,
@@ -132,7 +132,7 @@ async function listTriggers(callingProjectId) {
 
   // Construct trigger listing request
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
   };
 
   // Helper function to pretty-print dates

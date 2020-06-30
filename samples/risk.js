@@ -68,7 +68,7 @@ async function numericalRiskAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     riskJob: {
       privacyMetric: {
         numericalStatsConfig: {
@@ -97,10 +97,14 @@ async function numericalRiskAnalysis(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+    const jobNameSuffix = jobName.split('/').pop();
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
-        if (message.attributes && message.attributes.DlpJobName === jobName) {
+        if (
+          message.attributes &&
+          message.attributes.DlpJobName.includes(jobNameSuffix)
+        ) {
           message.ack();
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
@@ -203,7 +207,7 @@ async function categoricalRiskAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     riskJob: {
       privacyMetric: {
         categoricalStatsConfig: {
@@ -232,10 +236,14 @@ async function categoricalRiskAnalysis(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+    const jobNameSuffix = jobName.split('/').pop();
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
-        if (message.attributes && message.attributes.DlpJobName === jobName) {
+        if (
+          message.attributes &&
+          message.attributes.DlpJobName.includes(jobNameSuffix)
+        ) {
           message.ack();
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
@@ -339,7 +347,7 @@ async function kAnonymityAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     riskJob: {
       privacyMetric: {
         kAnonymityConfig: {
@@ -366,10 +374,14 @@ async function kAnonymityAnalysis(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+    const jobNameSuffix = jobName.split('/').pop();
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
-        if (message.attributes && message.attributes.DlpJobName === jobName) {
+        if (
+          message.attributes &&
+          message.attributes.DlpJobName.includes(jobNameSuffix)
+        ) {
           message.ack();
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
@@ -471,7 +483,7 @@ async function lDiversityAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     riskJob: {
       privacyMetric: {
         lDiversityConfig: {
@@ -501,10 +513,14 @@ async function lDiversityAnalysis(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+    const jobNameSuffix = jobName.split('/').pop();
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
-        if (message.attributes && message.attributes.DlpJobName === jobName) {
+        if (
+          message.attributes &&
+          message.attributes.DlpJobName.includes(jobNameSuffix)
+        ) {
           message.ack();
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);
@@ -615,7 +631,7 @@ async function kMapEstimationAnalysis(
 
   // Construct request for creating a risk analysis job
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(process.env.GCLOUD_PROJECT),
     riskJob: {
       privacyMetric: {
         kMapEstimationConfig: {
@@ -643,10 +659,14 @@ async function kMapEstimationAnalysis(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+    const jobNameSuffix = jobName.split('/').pop();
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
-        if (message.attributes && message.attributes.DlpJobName === jobName) {
+        if (
+          message.attributes &&
+          message.attributes.DlpJobName.includes(jobNameSuffix)
+        ) {
           message.ack();
           subscription.removeListener('message', messageHandler);
           subscription.removeListener('error', errorHandler);

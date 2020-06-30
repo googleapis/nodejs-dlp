@@ -65,7 +65,7 @@ async function createInspectTemplate(
 
   // Construct template-creation request
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     inspectTemplate: {
       inspectConfig: inspectConfig,
       displayName: displayName,
@@ -103,7 +103,7 @@ async function listInspectTemplates(callingProjectId) {
 
   // Construct template-listing request
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
   };
 
   try {

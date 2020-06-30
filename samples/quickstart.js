@@ -46,7 +46,7 @@ async function quickStart() {
 
   // Construct request
   const request = {
-    parent: `projects/${projectId}/locations/global`,
+    parent: dlp.projectPath(projectId),
     inspectConfig: {
       infoTypes: infoTypes,
       minLikelihood: minLikelihood,

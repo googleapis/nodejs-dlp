@@ -43,7 +43,7 @@ async function deidentifyWithMask(
   // Construct deidentification request
   const item = {value: string};
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
@@ -190,7 +190,7 @@ async function deidentifyWithDateShift(
 
   // Construct deidentification request
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       recordTransformations: {
         fieldTransformations: [
@@ -289,7 +289,7 @@ async function deidentifyWithFpe(
   // Construct deidentification request
   const item = {value: string};
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
@@ -354,7 +354,7 @@ async function reidentifyWithFpe(
   // Construct deidentification request
   const item = {value: string};
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     reidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
@@ -426,7 +426,7 @@ async function deidentifyWithReplacement(
   // Construct deidentification request
   const item = {value: string};
   const request = {
-    parent: `projects/${callingProjectId}/locations/global`,
+    parent: dlp.projectPath(callingProjectId),
     deidentifyConfig: {
       infoTypeTransformations: {
         transformations: [
