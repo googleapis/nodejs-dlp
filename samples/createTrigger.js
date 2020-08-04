@@ -16,6 +16,8 @@
 
 // sample-metadata:
 //  title: Job Triggers
+//  description: Create a Data Loss Prevention API job trigger.
+//  usage: node createTrigger.js my-project triggerId displayName description bucketName autoPopulateTimespan scanPeriod infoTypes minLikelihood maxFindings
 
 function main(
   projectId,

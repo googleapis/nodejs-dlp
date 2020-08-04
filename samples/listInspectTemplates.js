@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: List Inspect Templates
+//  description: List DLP inspection configuration templates.
+//  usage: node listInspectTemplates.js my-project
+
 function main(projectId) {
   // [START dlp_list_inspect_templates]
   // Imports the Google Cloud Data Loss Prevention library

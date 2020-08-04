@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Deidentify with Date Shift
+//  description: Deidentify dates in a CSV file by pseudorandomly shifting them.
+//  usage: node deidentifyWithDateShift.js my-project dates.csv dates-shifted.csv 30 30 birth_date register_date [<YOUR_ENCRYPTED_AES_256_KEY> projects/my-project/locations/global/keyrings/my-keyring]
+
 function main(
   projectId,
   inputCsvFile,

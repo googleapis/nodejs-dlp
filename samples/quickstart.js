@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Quickstart
+//  description: Inspects and assesses a string.
+//  usage: node quickstart.js my-project
+
 function main(projectId) {
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');

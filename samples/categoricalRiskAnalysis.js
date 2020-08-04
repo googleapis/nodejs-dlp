@@ -13,6 +13,12 @@
 // limitations under the License.
 
 'use strict';
+
+// sample-metadata:
+//   title: Categorical Risk Analysis
+//   description: Computes risk metrics of a column of data in a Google BigQuery table.
+//   usage: node categoricalRiskAnalysis.js my-project nhtsa_traffic_fatalities accident_2015 state_name my-topic my-subscription bigquery-public-data
+
 function main(
   projectId,
   tableProjectId,

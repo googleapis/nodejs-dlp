@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: kAnonymity Analysis
+//  description: Computes the k-anonymity of a column set in a Google BigQuery table
+//  usage: node kAnonymityAnalysis.js my-project tableProjectId datasetId tableId topicId subscriptionId quasiIds
+
 function main(
   projectId,
   tableProjectId,

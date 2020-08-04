@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: Delete Job
+//  description: Delete results of a Data Loss Prevention API job.
+//  usage: node deleteJob.js my-project projects/YOUR_GCLOUD_PROJECT/dlpJobs/X-#####
+
 function main(projectId, jobName) {
   // [START dlp_delete_job]
   // Imports the Google Cloud Data Loss Prevention library

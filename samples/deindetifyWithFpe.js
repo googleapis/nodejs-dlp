@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Deidentify with FPE
+//  description: Deidentify sensitive data in a string using Format Preserving Encryption (FPE).
+//  usage: node deidentifyWithFpe.js my-project "My SSN is 372819127" <YOUR_ENCRYPTED_AES_256_KEY> projects/my-project/locations/global/keyrings/my-keyring SSN_TOKEN
+
 function main(projectId, string, alphabet, surrogateType, keyName, wrappedKey) {
   // [START dlp_deidentify_fpe]
   // Imports the Google Cloud Data Loss Prevention library

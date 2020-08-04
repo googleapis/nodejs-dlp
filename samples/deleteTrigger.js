@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: Delete Trigger
+//  description: Delete results of a Data Loss Prevention API job.
+//  usage: node deleteTrigger.js my-rpoject projects/my-project/jobTriggers/my-trigger
+
 function main(projectId, triggerId) {
   // [START dlp_delete_trigger]
   // Imports the Google Cloud Data Loss Prevention library

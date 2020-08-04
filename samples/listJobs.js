@@ -15,7 +15,10 @@
 'use strict';
 
 // sample-metadata:
-//  title: Job Management
+//  title: List jobs
+//  description: List Data Loss Prevention API jobs corresponding to a given filter.
+//  usage: node listJobs.js my-project filter jobType
+
 function main(projectId, filter, jobType) {
   // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library

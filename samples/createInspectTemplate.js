@@ -16,6 +16,9 @@
 
 // sample-metadata:
 //  title: Inspect Templates
+//  description: Create a new DLP inspection configuration template.
+//  usage: node createInspectTemplate.js my-project VERY_LIKELY PERSON_NAME 5 false my-template-id
+
 function main(
   projectId,
   templateId,

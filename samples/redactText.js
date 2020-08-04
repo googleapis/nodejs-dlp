@@ -11,6 +11,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+// sample-metadata:
+//  title: Redact Text
+//  description: Redact sensitive data from text using the Data Loss Prevention API.
+//  usage: node redactText.js my-project string minLikelihood infoTypes
+
 function main(projectId, string, minLikelihood, infoTypes) {
   // [START dlp_redact_text]
   // Imports the Google Cloud Data Loss Prevention library

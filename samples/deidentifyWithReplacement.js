@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Deidentify with Replacement
+//  description: Deidentify sensitive data in a string by replacing it with a given replacement string.
+//  usage: node deidentifyWithMask.js my-project string replacement
+
 function main(projectId, string, replacement) {
   // [START dlp_deidentify_replacement]
   // Imports the Google Cloud Data Loss Prevention library

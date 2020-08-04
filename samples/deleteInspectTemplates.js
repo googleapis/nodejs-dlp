@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Delete Inspect Templates
+//  description: Delete the DLP inspection configuration template with the specified name.
+//  usage: node deleteInspectTemplates.js my-project projects/my-project/inspectTemplates/#####
+
 function main(projectId, templateName) {
   // [START dlp_delete_inspect_template]
   // Imports the Google Cloud Data Loss Prevention library

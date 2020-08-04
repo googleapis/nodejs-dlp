@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: Inspect File
+//  description: Inspects a local text, PNG, or JPEG file using the Data Loss Prevention API.
+//  usage: node inspectFile.js my-project filepath minLikelihood maxFindings infoTypes customInfoTypes includeQuote
+
 function main(
   projectId,
   filepath,

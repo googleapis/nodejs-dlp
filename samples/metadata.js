@@ -13,6 +13,10 @@
 // limitations under the License.
 
 'use strict';
+// sample-metadata:
+//  title: Metadata
+//  description: List the types of sensitive information the DLP API supports
+//  usage: node metadata.js my-project langaugeCode filter
 
 function main(projectId, languageCode, filter) {
   // [START dlp_list_info_types]

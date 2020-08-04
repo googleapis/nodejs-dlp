@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Deidentify with Mask
+//  description: Deidentify sensitive data in a string by masking it with a character.
+//  usage: node deidentifyWithMask.js my-project string maskingCharacter numberToMask
+
 function main(projectId, string, maskingCharacter, numberToMask) {
   // [START dlp_deidentify_masking]
   // Imports the Google Cloud Data Loss Prevention library

@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: l Diversity Analysis
+//  description: Computes the l-diversity of a column set in a Google BigQuery table.
+//  usage: node lDiversityAnalysis.js my-project tableProjectId datasetId tableId topicId subscriptionId sensitiveAttribute quasiIds
+
 function main(
   projectId,
   tableProjectId,

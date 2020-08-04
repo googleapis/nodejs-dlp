@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: Inspect GCS File
+//  description: Inspects a text file stored on Google Cloud Storage with the Data Loss Prevention API, using Pub/Sub for job notifications.
+//  usage: node inspectGCSFile.js my-project filepath minLikelihood maxFindings infoTypes customInfoTypes includeQuote
+
 function main(
   projectId,
   bucketName,

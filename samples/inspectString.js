@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Inspects strings
+//  description: Inspect a string using the Data Loss Prevention API.
+//  usage: node inspectString.js my-project string minLikelihood maxFindings infoTypes customInfoTypes includeQuote
+
 function main(
   projectId,
   string,

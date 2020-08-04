@@ -11,6 +11,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+// sample-metadata:
+//  title: Redact Image
+//  description: Redact sensitive data from an image using the Data Loss Prevention API.
+//  usage: node redactImage.js my-project filepath minLikelihood infoTypes outputPath
+
 function main(projectId, filepath, minLikelihood, infoTypes, outputPath) {
   // [START dlp_redact_image]
   // Imports the Google Cloud Data Loss Prevention library

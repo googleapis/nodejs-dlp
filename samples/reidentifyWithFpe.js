@@ -13,6 +13,12 @@
 // limitations under the License.
 
 'use strict';
+
+// sample-metadata:
+//  title: Reidentify with FPE
+//  description: Reidentify sensitive data in a string using Format Preserving Encryption (FPE).
+//  usage: node reidentifyWithFpe.js my-project string alphabet surrogateType keyName wrappedKey
+
 function main(projectId, string, alphabet, surrogateType, keyName, wrappedKey) {
   // [START dlp_reidentify_fpe]
   // Imports the Google Cloud Data Loss Prevention library

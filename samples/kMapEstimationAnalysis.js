@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: kMap Estimation Analysis
+//  description: Computes the k-map risk estimation of a column set in a Google BigQuery table.
+//  usage: node kMapEstimationAnalysis.js my-project tableProjectId datasetId tableId topicId subscriptionId regionCode quasiIds
+
 function main(
   projectId,
   tableProjectId,

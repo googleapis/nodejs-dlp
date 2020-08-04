@@ -15,7 +15,9 @@
 'use strict';
 
 // sample-metadata:
-//  title: Job Triggers
+//  title: List Triggers
+//  description: List Data Loss Prevention API job triggers.
+//  usage: node listTriggers.js my-project
 
 function main(projectId) {
   // [START dlp_list_triggers]

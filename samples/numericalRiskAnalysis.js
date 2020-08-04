@@ -15,7 +15,9 @@
 'use strict';
 
 // sample-metadata:
-//  title: Risk Analysis
+//  title: Numerical Risk Analysis
+//  description: Computes risk metrics of a column of numbers in a Google BigQuery table.
+//  usage: node numericalRiskAnalysis.js my-project tableProjectId datasetId tableId columnName topicId subscriptionId
 
 function main(
   projectId,

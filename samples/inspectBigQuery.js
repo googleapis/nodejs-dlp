@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// sample-metadata:
+//  title: Inspect Bigquery
+//  description: Inspects a BigQuery table using the Data Loss Prevention API using Pub/Sub for job notifications.
+//  usage: node inspectBigQuery.js my-project dataProjectId datasetId tableId topicId subscriptionId minLikelihood maxFindings infoTypes customInfoTypes
+
 function main(
   projectId,
   dataProjectId,

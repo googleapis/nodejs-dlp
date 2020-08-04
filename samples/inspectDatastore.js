@@ -14,6 +14,11 @@
 
 'use strict';
 
+// sample-metadata:
+//  title: Inspect Datastore
+//  description: Inspect a Datastore instance using the Data Loss Prevention API using Pub/Sub for job notifications.
+//  usage: node inspectDatastore.js my-project dataProjectId namespaceId kind topicId subscriptionId minLikelihood maxFindings infoTypes customInfoTypes
+
 function main(
   projectId,
   dataProjectId,
