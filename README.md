@@ -68,7 +68,7 @@ const dlp = new DLP.DlpServiceClient();
 const string = 'Robert Frost';
 
 // The project ID to run the API call under
-const projectId = process.env.GCLOUD_PROJECT;
+const projectId = 'my-project';
 
 // The minimum likelihood required before returning a match
 const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';

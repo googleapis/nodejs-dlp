@@ -14,34 +14,45 @@
 
 'use strict';
 
-function main(projectId) {
+function main(
+  projectId,
+  string,
+  minLikelihood,
+  maxFindings,
+  infoTypes,
+  customInfoTypes,
+  includeQuote
+) {
+  // [START dlp_inspect_string]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
-
-  // [START dlp_quickstart]
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
-  // The string to inspect
-  const string = 'Robert Frost';
-
   // The project ID to run the API call under
   // const projectId = 'my-project';
 
-  async function quickStart() {
-    // The minimum likelihood required before returning a match
-    const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
+  // The string to inspect
+  // const string = 'My name is Gary and my email is gary@example.com';
 
-    // The maximum number of findings to report (0 = server maximum)
-    const maxFindings = 0;
+  // The minimum likelihood required before returning a match
+  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 
-    // The infoTypes of information to match
-    const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
+  // The maximum number of findings to report per request (0 = server maximum)
+  // const maxFindings = 0;
 
-    // Whether to include the matching string
-    const includeQuote = true;
+  // The infoTypes of information to match
+  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
 
+  // The customInfoTypes of information to match
+  // const customInfoTypes = [{ infoType: { name: 'DICT_TYPE' }, dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
+  //   { infoType: { name: 'REGEX_TYPE' }, regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
+
+  // Whether to include the matching string
+  // const includeQuote = true;
+
+  async function inspectString() {
     // Construct item to inspect
     const item = {value: string};
 
@@ -50,11 +61,12 @@ function main(projectId) {
       parent: `projects/${projectId}/locations/global`,
       inspectConfig: {
         infoTypes: infoTypes,
+        customInfoTypes: customInfoTypes,
         minLikelihood: minLikelihood,
+        includeQuote: includeQuote,
         limits: {
           maxFindingsPerRequest: maxFindings,
         },
-        includeQuote: includeQuote,
       },
       item: item,
     };
@@ -75,8 +87,8 @@ function main(projectId) {
       console.log('No findings.');
     }
   }
-  quickStart();
-  // [END dlp_quickstart]
+  inspectString();
+  // [END dlp_inspect_string]
 }
 
 main(...process.argv.slice(2));

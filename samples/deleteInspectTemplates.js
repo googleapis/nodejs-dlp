@@ -14,8 +14,8 @@
 
 'use strict';
 
-function main(projectId, languageCode, filter) {
-  // [START dlp_list_info_types]
+function main(projectId, templateName) {
+  // [START dlp_delete_inspect_template]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
@@ -25,26 +25,22 @@ function main(projectId, languageCode, filter) {
   // The project ID to run the API call under
   // const projectId = 'my-project';
 
-  // The BCP-47 language code to use, e.g. 'en-US'
-  // const languageCode = 'en-US';
+  // The name of the template to delete
+  // Parent project ID is automatically extracted from this parameter
+  // const templateName = 'projects/YOUR_PROJECT_ID/inspectTemplates/#####'
+  async function deleteInspectTemplate() {
+    // Construct template-deletion request
+    const request = {
+      name: templateName,
+    };
 
-  // The filter to use
-  // const filter = 'supported_by=INSPECT'
-
-  async function listInfoTypes() {
-    const [response] = await dlp.listInfoTypes({
-      languageCode: languageCode,
-      filter: filter,
-    });
-    const infoTypes = response.infoTypes;
-    console.log('Info types:');
-    infoTypes.forEach(infoType => {
-      console.log(`\t${infoType.name} (${infoType.displayName})`);
-    });
+    // Run template-deletion request
+    await dlp.deleteInspectTemplate(request);
+    console.log(`Successfully deleted template ${templateName}.`);
   }
 
-  listInfoTypes();
-  // [END dlp_list_info_types]
+  deleteInspectTemplate();
+  // [END dlp_delete_inspect_template]
 }
 
 main(...process.argv.slice(2));

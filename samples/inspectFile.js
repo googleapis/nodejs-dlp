@@ -12,49 +12,73 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-'use strict';
-
-function main(projectId) {
+function main(
+  projectId,
+  filepath,
+  minLikelihood,
+  maxFindings,
+  infoTypes,
+  customInfoTypes,
+  includeQuote
+) {
+  // [START dlp_inspect_file]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
-  // [START dlp_quickstart]
+  // Import other required libraries
+  const fs = require('fs');
+  const mime = require('mime');
 
   // Instantiates a client
   const dlp = new DLP.DlpServiceClient();
 
-  // The string to inspect
-  const string = 'Robert Frost';
-
   // The project ID to run the API call under
   // const projectId = 'my-project';
 
-  async function quickStart() {
-    // The minimum likelihood required before returning a match
-    const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
+  // The path to a local file to inspect. Can be a text, JPG, or PNG file.
+  // const filepath = 'path/to/image.png';
 
-    // The maximum number of findings to report (0 = server maximum)
-    const maxFindings = 0;
+  // The minimum likelihood required before returning a match
+  // const minLikelihood = 'LIKELIHOOD_UNSPECIFIED';
 
-    // The infoTypes of information to match
-    const infoTypes = [{name: 'PERSON_NAME'}, {name: 'US_STATE'}];
+  // The maximum number of findings to report per request (0 = server maximum)
+  // const maxFindings = 0;
 
-    // Whether to include the matching string
-    const includeQuote = true;
+  // The infoTypes of information to match
+  // const infoTypes = [{ name: 'PHONE_NUMBER' }, { name: 'EMAIL_ADDRESS' }, { name: 'CREDIT_CARD_NUMBER' }];
 
-    // Construct item to inspect
-    const item = {value: string};
+  // The customInfoTypes of information to match
+  // const customInfoTypes = [{ infoType: { name: 'DICT_TYPE' }, dictionary: { wordList: { words: ['foo', 'bar', 'baz']}}},
+  //   { infoType: { name: 'REGEX_TYPE' }, regex: '\\(\\d{3}\\) \\d{3}-\\d{4}'}];
+
+  // Whether to include the matching string
+  // const includeQuote = true;
+
+  async function inspectFile() {
+    // Construct file data to inspect
+    const fileTypeConstant =
+      ['image/jpeg', 'image/bmp', 'image/png', 'image/svg'].indexOf(
+        mime.getType(filepath)
+      ) + 1;
+    const fileBytes = Buffer.from(fs.readFileSync(filepath)).toString('base64');
+    const item = {
+      byteItem: {
+        type: fileTypeConstant,
+        data: fileBytes,
+      },
+    };
 
     // Construct request
     const request = {
       parent: `projects/${projectId}/locations/global`,
       inspectConfig: {
         infoTypes: infoTypes,
+        customInfoTypes: customInfoTypes,
         minLikelihood: minLikelihood,
+        includeQuote: includeQuote,
         limits: {
           maxFindingsPerRequest: maxFindings,
         },
-        includeQuote: includeQuote,
       },
       item: item,
     };
@@ -75,8 +99,8 @@ function main(projectId) {
       console.log('No findings.');
     }
   }
-  quickStart();
-  // [END dlp_quickstart]
+  // [END dlp_inspect_file]
+  inspectFile();
 }
 
 main(...process.argv.slice(2));

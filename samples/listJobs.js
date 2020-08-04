@@ -14,8 +14,10 @@
 
 'use strict';
 
-function main(projectId, languageCode, filter) {
-  // [START dlp_list_info_types]
+// sample-metadata:
+//  title: Job Management
+function main(projectId, filter, jobType) {
+  // [START dlp_list_jobs]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
@@ -25,26 +27,29 @@ function main(projectId, languageCode, filter) {
   // The project ID to run the API call under
   // const projectId = 'my-project';
 
-  // The BCP-47 language code to use, e.g. 'en-US'
-  // const languageCode = 'en-US';
+  // The filter expression to use
+  // For more information and filter syntax, see https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs/list
+  // const filter = `state=DONE`;
 
-  // The filter to use
-  // const filter = 'supported_by=INSPECT'
-
-  async function listInfoTypes() {
-    const [response] = await dlp.listInfoTypes({
-      languageCode: languageCode,
+  // The type of job to list (either 'INSPECT_JOB' or 'RISK_ANALYSIS_JOB')
+  // const jobType = 'INSPECT_JOB';
+  async function listJobs() {
+    // Construct request for listing DLP scan jobs
+    const request = {
+      parent: `projects/${projectId}/locations/global`,
       filter: filter,
-    });
-    const infoTypes = response.infoTypes;
-    console.log('Info types:');
-    infoTypes.forEach(infoType => {
-      console.log(`\t${infoType.name} (${infoType.displayName})`);
+      type: jobType,
+    };
+
+    // Run job-listing request
+    const [jobs] = await dlp.listDlpJobs(request);
+    jobs.forEach(job => {
+      console.log(`Job ${job.name} status: ${job.state}`);
     });
   }
 
-  listInfoTypes();
-  // [END dlp_list_info_types]
+  listJobs();
+  // [END dlp_list_jobs]
 }
 
 main(...process.argv.slice(2));

@@ -12,10 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-'use strict';
-
-function main(projectId, languageCode, filter) {
-  // [START dlp_list_info_types]
+function main(projectId, triggerId) {
+  // [START dlp_delete_trigger]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
 
@@ -23,28 +21,25 @@ function main(projectId, languageCode, filter) {
   const dlp = new DLP.DlpServiceClient();
 
   // The project ID to run the API call under
-  // const projectId = 'my-project';
+  // const projectId = 'my-project'
 
-  // The BCP-47 language code to use, e.g. 'en-US'
-  // const languageCode = 'en-US';
+  // The name of the trigger to be deleted
+  // Parent project ID is automatically extracted from this parameter
+  // const triggerId = 'projects/my-project/triggers/my-trigger';
 
-  // The filter to use
-  // const filter = 'supported_by=INSPECT'
+  async function deleteTrigger() {
+    // Construct trigger deletion request
+    const request = {
+      name: triggerId,
+    };
 
-  async function listInfoTypes() {
-    const [response] = await dlp.listInfoTypes({
-      languageCode: languageCode,
-      filter: filter,
-    });
-    const infoTypes = response.infoTypes;
-    console.log('Info types:');
-    infoTypes.forEach(infoType => {
-      console.log(`\t${infoType.name} (${infoType.displayName})`);
-    });
+    // Run trigger deletion request
+    await dlp.deleteJobTrigger(request);
+    console.log(`Successfully deleted trigger ${triggerId}.`);
   }
 
-  listInfoTypes();
-  // [END dlp_list_info_types]
+  deleteTrigger();
+  // [END dlp_delete_trigger]
 }
 
 main(...process.argv.slice(2));

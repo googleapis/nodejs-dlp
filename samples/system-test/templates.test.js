@@ -15,16 +15,18 @@
 'use strict';
 
 const {assert} = require('chai');
-const {describe, it} = require('mocha');
+const {describe, it, before} = require('mocha');
 const cp = require('child_process');
 const uuid = require('uuid');
+const DLP = require('@google-cloud/dlp');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
-const cmd = 'node templates.js';
 const templateName = '';
+const client = new DLP.DlpServiceClient();
 
 describe('templates', () => {
+  let projectId;
   const INFO_TYPE = 'PERSON_NAME';
   const MIN_LIKELIHOOD = 'VERY_LIKELY';
   const MAX_FINDINGS = 5;
@@ -32,31 +34,36 @@ describe('templates', () => {
   const DISPLAY_NAME = `My Template ${uuid.v4()}`;
   const TEMPLATE_NAME = `my-template-${uuid.v4()}`;
 
-  const fullTemplateName = `projects/${process.env.GCLOUD_PROJECT}/locations/global/inspectTemplates/${TEMPLATE_NAME}`;
+  const fullTemplateName = `projects/${projectId}/locations/global/inspectTemplates/${TEMPLATE_NAME}`;
 
+  before(async () => {
+    projectId = await client.getProjectId();
+  });
   // create_inspect_template
   it('should create template', () => {
     const output = execSync(
-      `${cmd} create -m ${MIN_LIKELIHOOD} -t ${INFO_TYPE} -f ${MAX_FINDINGS} -q ${INCLUDE_QUOTE} -d "${DISPLAY_NAME}" -i "${TEMPLATE_NAME}"`
+      `node createInspectTemplate.js ${projectId} -m ${MIN_LIKELIHOOD} -t ${INFO_TYPE} -f ${MAX_FINDINGS} -q ${INCLUDE_QUOTE} -d "${DISPLAY_NAME}" -i "${TEMPLATE_NAME}"`
     );
     assert.include(output, `Successfully created template ${fullTemplateName}`);
   });
 
   it('should handle template creation errors', () => {
-    const output = execSync(`${cmd} create -i invalid_template#id`);
+    const output = execSync(
+      `node createInspectTemplate.js ${projectId} -i invalid_template#id`
+    );
     assert.match(output, /Error in createInspectTemplate/);
   });
 
   // list_inspect_templates
   it('should list templates', () => {
-    const output = execSync(`${cmd} list`);
+    const output = execSync(`node listInspectTemplates.js ${projectId}`);
     assert.include(output, `Template ${templateName}`);
     assert.match(output, /Created: \d{1,2}\/\d{1,2}\/\d{4}/);
     assert.match(output, /Updated: \d{1,2}\/\d{1,2}\/\d{4}/);
   });
 
   it('should pass creation settings to template', () => {
-    const output = execSync(`${cmd} list`);
+    const output = execSync(`node listInspectTemplates.js ${projectId}`);
     assert.include(output, `Template ${fullTemplateName}`);
     assert.include(output, `Display name: ${DISPLAY_NAME}`);
     assert.include(output, `InfoTypes: ${INFO_TYPE}`);
@@ -67,7 +74,9 @@ describe('templates', () => {
 
   // delete_inspect_template
   it('should delete template', () => {
-    const output = execSync(`${cmd} delete ${fullTemplateName}`);
+    const output = execSync(
+      `node deleteInspectTemplate.js ${projectId} ${fullTemplateName}`
+    );
     assert.include(
       output,
       `Successfully deleted template ${fullTemplateName}.`
@@ -75,7 +84,9 @@ describe('templates', () => {
   });
 
   it('should handle template deletion errors', () => {
-    const output = execSync(`${cmd} delete BAD_TEMPLATE`);
+    const output = execSync(
+      `node deleteInspectTemplate.js ${projectId} BAD_TEMPLATE`
+    );
     assert.match(output, /Error in deleteInspectTemplate/);
   });
 });

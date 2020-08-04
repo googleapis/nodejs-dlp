@@ -15,15 +15,17 @@
 'use strict';
 
 const {assert} = require('chai');
-const {describe, it} = require('mocha');
+const {describe, it, before} = require('mocha');
 const cp = require('child_process');
 const uuid = require('uuid');
+const DLP = require('@google-cloud/dlp');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
+const client = new DLP.DlpServiceClient();
+
 describe('triggers', () => {
-  const projectId = process.env.GCLOUD_PROJECT;
-  const cmd = 'node triggers.js';
+  let projectId;
   const triggerName = `my-trigger-${uuid.v4()}`;
   const fullTriggerName = `projects/${projectId}/locations/global/jobTriggers/${triggerName}`;
   const triggerDisplayName = `My Trigger Display Name: ${uuid.v4()}`;
@@ -33,16 +35,20 @@ describe('triggers', () => {
   const maxFindings = 5;
   const bucketName = process.env.BUCKET_NAME;
 
+  before(async () => {
+    projectId = await client.getProjectId();
+  });
+
   it('should create a trigger', () => {
     const output = execSync(
-      `${cmd} create ${bucketName} 1 -n ${triggerName} --autoPopulateTimespan \
+      `node createTrigger.js ${projectId} create ${bucketName} 1 -n ${triggerName} --autoPopulateTimespan \
       -m ${minLikelihood} -t ${infoType} -f ${maxFindings} -d "${triggerDisplayName}" -s "${triggerDescription}"`
     );
     assert.include(output, `Successfully created trigger ${fullTriggerName}`);
   });
 
   it('should list triggers', () => {
-    const output = execSync(`${cmd} list`);
+    const output = execSync(`node listTrigger.js ${projectId}`);
     assert.include(output, `Trigger ${fullTriggerName}`);
     assert.include(output, `Display Name: ${triggerDisplayName}`);
     assert.include(output, `Description: ${triggerDescription}`);
@@ -53,19 +59,23 @@ describe('triggers', () => {
   });
 
   it('should delete a trigger', () => {
-    const output = execSync(`${cmd} delete ${fullTriggerName}`);
+    const output = execSync(
+      `node deleteTrigger.js ${projectId} ${fullTriggerName}`
+    );
     assert.include(output, `Successfully deleted trigger ${fullTriggerName}.`);
   });
 
   it('should handle trigger creation errors', () => {
     const output = execSync(
-      `${cmd} create ${bucketName} 1 -n "@@@@@" -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`
+      `node createTrigger.js ${projectId} ${bucketName} 1 -n "@@@@@" -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`
     );
     assert.match(output, /Error in createTrigger/);
   });
 
   it('should handle trigger deletion errors', () => {
-    const output = execSync(`${cmd} delete bad-trigger-path`);
+    const output = execSync(
+      `node deleteTrigger.js ${projectId} bad-trigger-path`
+    );
     assert.match(output, /Error in deleteTrigger/);
   });
 });
