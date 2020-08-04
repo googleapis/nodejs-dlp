@@ -48,7 +48,7 @@ describe('triggers', () => {
   });
 
   it('should list triggers', () => {
-    const output = execSync(`node listTrigger.js ${projectId}`);
+    const output = execSync(`node listTriggers.js ${projectId}`);
     assert.include(output, `Trigger ${fullTriggerName}`);
     assert.include(output, `Display Name: ${triggerDisplayName}`);
     assert.include(output, `Description: ${triggerDescription}`);
