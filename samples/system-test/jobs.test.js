@@ -103,7 +103,7 @@ describe('test', () => {
 
   it('should list jobs of a given type', () => {
     const output = execSync(
-      `node listJobs.js ${projectId} 'state=DONE' -t RISK_ANALYSIS_JOB`
+      `node listJobs.js ${projectId} 'state=DONE' RISK_ANALYSIS_JOB`
     );
     assert.match(
       output,
@@ -112,18 +112,29 @@ describe('test', () => {
   });
 
   it('should handle job listing errors', () => {
-    const output = execSync(`node listJobs.js ${projectId} 'state=NOPE'`);
-    assert.match(output, /Error in listJobs/);
+    let output;
+    try {
+    output = execSync(`node listJobs.js ${projectId} 'state=NOPE'`);
+    } catch (err) {
+output = err.message
+    }
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 
   // dlp_delete_job
   it('should delete job', () => {
-    const output = execSync(`node deleteJobs.js ${projectId} ${testJobName}`);
+    const output = execSync(`node deleteJob.js ${projectId} ${testJobName}`);
     assert.include(output, `Successfully deleted job ${testJobName}.`);
   });
 
   it('should handle job deletion errors', () => {
-    const output = execSync(`node deleteJobs.js ${projectId} ${badJobName}`);
+    let output;
+    try{
+    output = execSync(`node deleteJob.js ${projectId} ${badJobName}`);
+    } catch (err) {
+      output = err.message
+    }
+    console.log(output)
     assert.match(output, /Error in deleteJob/);
   });
 });

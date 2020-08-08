@@ -28,6 +28,9 @@ function main(
   infoTypes,
   customInfoTypes
 ) {
+
+  [infoTypes, customInfoTypes] = transformCLI(infoTypes, customInfoTypes);
+
   // [START dlp_inspect_gcs]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
@@ -157,3 +160,25 @@ process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });
+
+function transformCLI(infoTypes, customInfoTypes) {
+  infoTypes = infoTypes? infoTypes.split(',').map(type => {
+    return {name: type};
+  }) : undefined
+
+  if (customInfoTypes) {
+  customInfoTypes = customInfoTypes.includes(',') ? customInfoTypes.split(',').map((dict, idx) => {
+      return {
+        infoType: {name: 'CUSTOM_DICT_'.concat(idx.toString())},
+        dictionary: {wordList: {words: dict.split(',')}},
+      };
+    }) : customInfoTypes.split(',').map((rgx, idx) => {
+      return {
+        infoType: {name: 'CUSTOM_REGEX_'.concat(idx.toString())},
+        regex: {pattern: rgx},
+      };
+    }) 
+  }
+
+  return [infoTypes, customInfoTypes];
+}

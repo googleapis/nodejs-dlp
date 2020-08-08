@@ -27,6 +27,7 @@ const client = new DLP.DlpServiceClient();
 
 describe('templates', () => {
   let projectId;
+  let fullTemplateName;
   const INFO_TYPE = 'PERSON_NAME';
   const MIN_LIKELIHOOD = 'VERY_LIKELY';
   const MAX_FINDINGS = 5;
@@ -34,24 +35,30 @@ describe('templates', () => {
   const DISPLAY_NAME = `My Template ${uuid.v4()}`;
   const TEMPLATE_NAME = `my-template-${uuid.v4()}`;
 
-  const fullTemplateName = `projects/${projectId}/locations/global/inspectTemplates/${TEMPLATE_NAME}`;
-
   before(async () => {
     projectId = await client.getProjectId();
+    fullTemplateName = `projects/${projectId}/locations/global/inspectTemplates/${TEMPLATE_NAME}`;
+
   });
+
   // create_inspect_template
   it('should create template', () => {
     const output = execSync(
-      `node createInspectTemplate.js ${projectId} -m ${MIN_LIKELIHOOD} -t ${INFO_TYPE} -f ${MAX_FINDINGS} -q ${INCLUDE_QUOTE} -d "${DISPLAY_NAME}" -i "${TEMPLATE_NAME}"`
+      `node createInspectTemplate.js ${projectId} "${TEMPLATE_NAME}" "${DISPLAY_NAME}" ${INFO_TYPE} ${INCLUDE_QUOTE} ${MIN_LIKELIHOOD} ${MAX_FINDINGS}`
     );
+    console.log(output);
     assert.include(output, `Successfully created template ${fullTemplateName}`);
   });
 
   it('should handle template creation errors', () => {
-    const output = execSync(
-      `node createInspectTemplate.js ${projectId} -i invalid_template#id`
-    );
-    assert.match(output, /Error in createInspectTemplate/);
+    let output;
+    try {
+    output = execSync(
+      `node createInspectTemplate.js ${projectId} invalid_template#id`
+    ); } catch (err) {
+      output = err.message;
+    }
+    assert.include(output,'INVALID_ARGUMENT');
   });
 
   // list_inspect_templates
@@ -64,12 +71,11 @@ describe('templates', () => {
 
   it('should pass creation settings to template', () => {
     const output = execSync(`node listInspectTemplates.js ${projectId}`);
-    assert.include(output, `Template ${fullTemplateName}`);
-    assert.include(output, `Display name: ${DISPLAY_NAME}`);
-    assert.include(output, `InfoTypes: ${INFO_TYPE}`);
-    assert.include(output, `Minimum likelihood: ${MIN_LIKELIHOOD}`);
-    assert.include(output, `Include quotes: ${INCLUDE_QUOTE}`);
-    assert.include(output, `Max findings per request: ${MAX_FINDINGS}`);
+    assert.include(output, fullTemplateName);
+    assert.include(output, DISPLAY_NAME);
+    assert.include(output, INFO_TYPE);
+    assert.include(output, MIN_LIKELIHOOD);
+    assert.include(output, MAX_FINDINGS);
   });
 
   // delete_inspect_template
@@ -84,9 +90,14 @@ describe('templates', () => {
   });
 
   it('should handle template deletion errors', () => {
-    const output = execSync(
+    let output;
+    try {
+    output = execSync(
       `node deleteInspectTemplate.js ${projectId} BAD_TEMPLATE`
     );
-    assert.match(output, /Error in deleteInspectTemplate/);
+    } catch (err) {
+      output = err.message
+    }
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 });

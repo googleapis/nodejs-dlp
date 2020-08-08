@@ -29,7 +29,7 @@ const surrogateType = 'SSN_TOKEN';
 const csvFile = 'resources/dates.csv';
 const tempOutputFile = path.join(__dirname, 'temp.result.csv');
 const dateShiftAmount = 30;
-const dateFields = "'birth_date,register_date'";
+const dateFields = "birth_date,register_date";
 
 const client = new DLP.DlpServiceClient();
 describe('deid', () => {
@@ -68,20 +68,21 @@ describe('deid', () => {
   it('should handle FPE encryption errors', () => {
     let output;
     try {
-    const output = execSync(
-      `node deidentifyWithFpe.js ${projectId} "${harmfulString}" BAD_KEY_NAME BAD_KEY_NAME`
-    );    } catch (err) {
+    output = execSync(
+      `node deidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' 'BAD_KEY_NAME' 'BAD_KEY_NAME'`
+    );    
+  } catch (err) {
       output = err.message;
       }
-    assert.include(output, 'INVALID_ARGUMENT');
-  });
+      assert.include(output, 'invalid encoding');
+    });
 
   // reidentify_fpe
   it('should handle FPE decryption errors', () => {
     let output;
     try {
-    const output = execSync(
-      `node reidentifyWithFpe.js ${projectId} "${harmfulString}" ${surrogateType} BAD_KEY_NAME BAD_KEY_NAME NUMERIC`
+    output = execSync(
+      `node reidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' ${surrogateType} 'BAD_KEY_NAME' 'BAD_KEY_NAME NUMERIC'`
     ); } catch (err) {
       output = err.message;
       }
@@ -89,20 +90,20 @@ describe('deid', () => {
   });
 
   // deidentify_date_shift
-  // it('should date-shift a CSV file', () => {
-  //   const outputCsvFile = 'dates.actual.csv';
-  //   const output = execSync(
-  //     `node deidentifyWithDateShift.js ${projectId} "${csvFile}" "${outputCsvFile}" ${dateFields} ${dateShiftAmount} ${dateShiftAmount}`
-  //   );
-  //   assert.include(
-  //     output,
-  //     `Successfully saved date-shift output to ${outputCsvFile}`
-  //   );
-  //   assert.notInclude(
-  //     fs.readFileSync(outputCsvFile).toString(),
-  //     fs.readFileSync(csvFile).toString()
-  //   );
-  // });
+  it('should date-shift a CSV file', () => {
+    const outputCsvFile = 'dates.actual.csv';
+    const output = execSync(
+      `node deidentifyWithDateShift.js ${projectId} "${csvFile}" "${outputCsvFile}" ${dateFields} ${dateShiftAmount} ${dateShiftAmount}`
+    );
+    assert.include(
+      output,
+      `Successfully saved date-shift output to ${outputCsvFile}`
+    );
+    assert.notInclude(
+      fs.readFileSync(outputCsvFile).toString(),
+      fs.readFileSync(csvFile).toString()
+    );
+  });
 
   it('should handle date-shift errors', () => {
     let output;
@@ -113,7 +114,6 @@ describe('deid', () => {
     } catch(err) {
       output = err.message;
     }
-    //console.log(output)
-    assert.match(output, /array expected/);
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 });

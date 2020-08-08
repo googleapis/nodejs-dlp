@@ -26,8 +26,8 @@ const client = new DLP.DlpServiceClient();
 
 describe('triggers', () => {
   let projectId;
+  let fullTriggerName;
   const triggerName = `my-trigger-${uuid.v4()}`;
-  const fullTriggerName = `projects/${projectId}/locations/global/jobTriggers/${triggerName}`;
   const triggerDisplayName = `My Trigger Display Name: ${uuid.v4()}`;
   const triggerDescription = `My Trigger Description: ${uuid.v4()}`;
   const infoType = 'PERSON_NAME';
@@ -37,12 +37,13 @@ describe('triggers', () => {
 
   before(async () => {
     projectId = await client.getProjectId();
+    fullTriggerName = `projects/${projectId}/locations/global/jobTriggers/${triggerName}`;
   });
+
 
   it('should create a trigger', () => {
     const output = execSync(
-      `node createTrigger.js ${projectId} create ${bucketName} 1 -n ${triggerName} --autoPopulateTimespan \
-      -m ${minLikelihood} -t ${infoType} -f ${maxFindings} -d "${triggerDisplayName}" -s "${triggerDescription}"`
+      `node createTrigger.js ${projectId} ${triggerName} "${triggerDisplayName}" "${triggerDescription}" ${bucketName} true '1' ${infoType} ${minLikelihood} ${maxFindings}`
     );
     assert.include(output, `Successfully created trigger ${fullTriggerName}`);
   });
@@ -66,16 +67,24 @@ describe('triggers', () => {
   });
 
   it('should handle trigger creation errors', () => {
-    const output = execSync(
-      `node createTrigger.js ${projectId} ${bucketName} 1 -n "@@@@@" -m ${minLikelihood} -t ${infoType} -f ${maxFindings}`
-    );
-    assert.match(output, /Error in createTrigger/);
+    let output;
+    try {
+    output = execSync(
+      `node createTrigger.js ${projectId} 'name' "${triggerDisplayName}" ${bucketName} true 1 "@@@@@" ${minLikelihood} ${maxFindings}`
+    ); } catch (err) {
+      output = err.message
+    }
+    assert.include(output, 'fail');
   });
 
   it('should handle trigger deletion errors', () => {
-    const output = execSync(
-      `node deleteTrigger.js ${projectId} bad-trigger-path`
-    );
-    assert.match(output, /Error in deleteTrigger/);
+    let output;
+    try {
+      output = execSync(
+      `node deleteTrigger.js ${projectId} 'bad-trigger-path'`
+    ); } catch (err) {
+      output=err.message
+    }
+    assert.include(output, 'fail');
   });
 });

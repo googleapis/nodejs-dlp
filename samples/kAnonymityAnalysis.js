@@ -26,6 +26,12 @@ function main(
   subscriptionId,
   quasiIds
 ) {
+  quasiIds = transformCLI(quasiIds);
+
+  console.log(tableId);
+  console.log(topicId);
+  console.log(subscriptionId);
+  console.log(quasiIds);
   // [START dlp_k_anonymity]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
@@ -65,8 +71,9 @@ function main(
       datasetId: datasetId,
       tableId: tableId,
     };
-
     // Construct request for creating a risk analysis job
+    console.log(quasiIds);
+
     const request = {
       parent: `projects/${projectId}/locations/global`,
       riskJob: {
@@ -147,3 +154,26 @@ process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });
+
+function transformCLI(quasiIds) {
+  quasiIds = quasiIds? quasiIds.split(',').map((name, idx) => {
+    return {
+      field: {
+        name: name,
+      },
+      infoType: {
+        name: idx,
+      },
+    };
+  }) : undefined;
+
+  if (quasiIds.infoType && quasiIds.field) {
+  if (quasiIds.infoType.length !== quasiIds.field.length) {
+    console.error(
+      'Number of infoTypes and number of quasi-identifiers must be equal!'
+    );
+    process.exitCode = 1;
+  } 
+  }
+  return quasiIds;
+}
