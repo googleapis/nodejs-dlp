@@ -78,11 +78,11 @@ describe('inspect', () => {
   it('should report string inspection handling errors', () => {
     let output;
     try {
-    output = execSync(
-      `node inspectString.js ${projectId} "I'm Gary and my email is gary@example.com" 'LIKELIHOOD_UNSPECIFIED' '0' BAD_TYPE`
-    );
+      output = execSync(
+        `node inspectString.js ${projectId} "I'm Gary and my email is gary@example.com" 'LIKELIHOOD_UNSPECIFIED' '0' BAD_TYPE`
+      );
     } catch (err) {
-      output = err.message
+      output = err.message;
     }
     assert.include(output, 'BAD_TYPE');
   });
@@ -127,11 +127,11 @@ describe('inspect', () => {
   it('should report local file handling errors', () => {
     let output;
     try {
-     output = execSync(
-      `node inspectFile.js ${projectId} resources/harmless.txt 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
-    );
-    } catch(err) {
-      output = err.message
+      output = execSync(
+        `node inspectFile.js ${projectId} resources/harmless.txt 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');
   });
@@ -164,11 +164,11 @@ describe('inspect', () => {
     let output;
     try {
       output = execSync(
-      `node inspectGCSFile.js ${projectId} ${bucket} harmless.txt ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
-    );
-      } catch (err) {
-        output = err.message
-      }
+        `node inspectGCSFile.js ${projectId} ${bucket} harmless.txt ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
+      );
+    } catch (err) {
+      output = err.message;
+    }
     assert.include(output, 'INVALID_ARGUMENT');
   });
 
@@ -188,14 +188,14 @@ describe('inspect', () => {
   });
 
   it('should report Datastore errors', () => {
-   let output;
+    let output;
     try {
-    output = execSync(
-      `node inspectDatastore.js ${projectId} ${projectId} 'DLP' 'Person' ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
-    );
-   } catch (err) {
-     output = err.message
-   }
+      output = execSync(
+        `node inspectDatastore.js ${projectId} ${projectId} 'DLP' 'Person' ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
+      );
+    } catch (err) {
+      output = err.message;
+    }
     assert.include(output, 'INVALID_ARGUMENT');
   });
 
@@ -215,15 +215,15 @@ describe('inspect', () => {
   });
 
   it('should report Bigquery table handling errors', () => {
-   let output;
-   try {
-    const output = execSync(
-      `node inspectBigQuery.js ${projectId} ${dataProject} integration_tests_dlp harmless ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
-    );
-   } catch (err) {
-    output = err.message;
-   }
-   assert.include(output, 'INVALID_ARGUMENT');
+    let output;
+    try {
+      const output = execSync(
+        `node inspectBigQuery.js ${projectId} ${dataProject} integration_tests_dlp harmless ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
+      );
+    } catch (err) {
+      output = err.message;
+    }
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 
   // CLI options
@@ -279,4 +279,4 @@ describe('inspect', () => {
     assert.notMatch(outputB, /EMAIL_ADDRESS/);
     assert.match(outputB, /PHONE_NUMBER/);
   });
- });
+});

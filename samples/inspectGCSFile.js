@@ -28,7 +28,6 @@ function main(
   infoTypes,
   customInfoTypes
 ) {
-
   [infoTypes, customInfoTypes] = transformCLI(infoTypes, customInfoTypes);
 
   // [START dlp_inspect_gcs]
@@ -162,22 +161,26 @@ process.on('unhandledRejection', err => {
 });
 
 function transformCLI(infoTypes, customInfoTypes) {
-  infoTypes = infoTypes? infoTypes.split(',').map(type => {
-    return {name: type};
-  }) : undefined
+  infoTypes = infoTypes
+    ? infoTypes.split(',').map(type => {
+        return {name: type};
+      })
+    : undefined;
 
   if (customInfoTypes) {
-  customInfoTypes = customInfoTypes.includes(',') ? customInfoTypes.split(',').map((dict, idx) => {
-      return {
-        infoType: {name: 'CUSTOM_DICT_'.concat(idx.toString())},
-        dictionary: {wordList: {words: dict.split(',')}},
-      };
-    }) : customInfoTypes.split(',').map((rgx, idx) => {
-      return {
-        infoType: {name: 'CUSTOM_REGEX_'.concat(idx.toString())},
-        regex: {pattern: rgx},
-      };
-    }) 
+    customInfoTypes = customInfoTypes.includes(',')
+      ? customInfoTypes.split(',').map((dict, idx) => {
+          return {
+            infoType: {name: 'CUSTOM_DICT_'.concat(idx.toString())},
+            dictionary: {wordList: {words: dict.split(',')}},
+          };
+        })
+      : customInfoTypes.split(',').map((rgx, idx) => {
+          return {
+            infoType: {name: 'CUSTOM_REGEX_'.concat(idx.toString())},
+            regex: {pattern: rgx},
+          };
+        });
   }
 
   return [infoTypes, customInfoTypes];

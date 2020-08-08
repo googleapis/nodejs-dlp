@@ -40,7 +40,6 @@ describe('triggers', () => {
     fullTriggerName = `projects/${projectId}/locations/global/jobTriggers/${triggerName}`;
   });
 
-
   it('should create a trigger', () => {
     const output = execSync(
       `node createTrigger.js ${projectId} ${triggerName} "${triggerDisplayName}" "${triggerDescription}" ${bucketName} true '1' ${infoType} ${minLikelihood} ${maxFindings}`
@@ -69,10 +68,11 @@ describe('triggers', () => {
   it('should handle trigger creation errors', () => {
     let output;
     try {
-    output = execSync(
-      `node createTrigger.js ${projectId} 'name' "${triggerDisplayName}" ${bucketName} true 1 "@@@@@" ${minLikelihood} ${maxFindings}`
-    ); } catch (err) {
-      output = err.message
+      output = execSync(
+        `node createTrigger.js ${projectId} 'name' "${triggerDisplayName}" ${bucketName} true 1 "@@@@@" ${minLikelihood} ${maxFindings}`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'fail');
   });
@@ -81,9 +81,10 @@ describe('triggers', () => {
     let output;
     try {
       output = execSync(
-      `node deleteTrigger.js ${projectId} 'bad-trigger-path'`
-    ); } catch (err) {
-      output=err.message
+        `node deleteTrigger.js ${projectId} 'bad-trigger-path'`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'fail');
   });

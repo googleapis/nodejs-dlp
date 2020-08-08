@@ -114,9 +114,9 @@ describe('test', () => {
   it('should handle job listing errors', () => {
     let output;
     try {
-    output = execSync(`node listJobs.js ${projectId} 'state=NOPE'`);
+      output = execSync(`node listJobs.js ${projectId} 'state=NOPE'`);
     } catch (err) {
-output = err.message
+      output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');
   });
@@ -129,12 +129,12 @@ output = err.message
 
   it('should handle job deletion errors', () => {
     let output;
-    try{
-    output = execSync(`node deleteJob.js ${projectId} ${badJobName}`);
+    try {
+      output = execSync(`node deleteJob.js ${projectId} ${badJobName}`);
     } catch (err) {
-      output = err.message
+      output = err.message;
     }
-    console.log(output)
+    console.log(output);
     assert.match(output, /Error in deleteJob/);
   });
 });

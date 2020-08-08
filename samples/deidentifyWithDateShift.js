@@ -30,7 +30,6 @@ function main(
   wrappedKey,
   keyName
 ) {
-
   dateFields = transformCLI(dateFields);
   // [START dlp_deidentify_date_shift]
   // Imports the Google Cloud Data Loss Prevention library
@@ -186,7 +185,7 @@ process.on('unhandledRejection', err => {
 });
 
 function transformCLI(dateFields) {
-  return dateFields = dateFields.split(',').map(type => {
+  return (dateFields = dateFields.split(',').map(type => {
     return {name: type};
-  });
+  }));
 }

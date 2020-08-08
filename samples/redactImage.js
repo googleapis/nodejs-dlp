@@ -18,7 +18,7 @@
 //  usage: node redactImage.js my-project filepath minLikelihood infoTypes outputPath
 
 function main(projectId, filepath, minLikelihood, infoTypes, outputPath) {
-  infoTypes = transformCLI(infoTypes)
+  infoTypes = transformCLI(infoTypes);
   // [START dlp_redact_image]
   // Imports the Google Cloud Data Loss Prevention library
   const DLP = require('@google-cloud/dlp');
@@ -87,8 +87,10 @@ process.on('unhandledRejection', err => {
 });
 
 function transformCLI(infoTypes) {
-  infoTypes = infoTypes? infoTypes.split(',').map(type => {
-    return {name: type};
-  }) : undefined
+  infoTypes = infoTypes
+    ? infoTypes.split(',').map(type => {
+        return {name: type};
+      })
+    : undefined;
   return infoTypes;
 }

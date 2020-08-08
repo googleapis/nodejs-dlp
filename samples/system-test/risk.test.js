@@ -96,14 +96,13 @@ describe('risk', () => {
   it('should handle numerical risk analysis errors', () => {
     let output;
     try {
-    output = execSync(
-      `node numericalRiskAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${numericField} ${topicName} ${subscriptionName}`
-    );
+      output = execSync(
+        `node numericalRiskAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${numericField} ${topicName} ${subscriptionName}`
+      );
     } catch (err) {
-      output = err.message
+      output = err.message;
     }
-    console.log(output);
-    assert.match(output, /Error in numericalRiskAnalysis/);
+    assert.include(output, 'NOT FOUND');
   });
 
   // categoricalRiskAnalysis
@@ -125,11 +124,11 @@ describe('risk', () => {
     let output;
     try {
       output = execSync(
-      `node categoricalRiskAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${uniqueField} ${topicName} ${subscriptionName}`
-    );
-      } catch (err) {
-        output = err.message
-      }
+        `node categoricalRiskAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${uniqueField} ${topicName} ${subscriptionName}`
+      );
+    } catch (err) {
+      output = err.message;
+    }
     assert.include(output, 'fail');
   });
 
@@ -145,10 +144,12 @@ describe('risk', () => {
 
   it('should handle k-anonymity analysis errors', () => {
     let output;
-    try {output = execSync(
-      `node kAnonymityAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField}`
-    ); } catch(err) {
-      output = err.message
+    try {
+      output = execSync(
+        `node kAnonymityAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField}`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'fail');
   });
@@ -166,13 +167,14 @@ describe('risk', () => {
   it('should handle k-map analysis errors', () => {
     let output;
     try {
-    output = execSync(
-      `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField} AGE`
-    ); } catch (err) {
-      output = err.message
+      output = execSync(
+        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField} AGE`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'fail');
-    });
+  });
 
   it('should check that numbers of quasi-ids and info types are equal', () => {
     assert.throws(() => {
@@ -195,11 +197,12 @@ describe('risk', () => {
   it('should handle l-diversity analysis errors', () => {
     let output;
     try {
-    const output = execSync(
-      `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField}`
-    ); } catch (err) {
-      output = err.message
+      const output = execSync(
+        `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} ${numericField}`
+      );
+    } catch (err) {
+      output = err.message;
     }
     assert.include(output, 'fail');
-    });
+  });
 });

@@ -38,7 +38,6 @@ describe('templates', () => {
   before(async () => {
     projectId = await client.getProjectId();
     fullTemplateName = `projects/${projectId}/locations/global/inspectTemplates/${TEMPLATE_NAME}`;
-
   });
 
   // create_inspect_template
@@ -53,12 +52,13 @@ describe('templates', () => {
   it('should handle template creation errors', () => {
     let output;
     try {
-    output = execSync(
-      `node createInspectTemplate.js ${projectId} invalid_template#id`
-    ); } catch (err) {
+      output = execSync(
+        `node createInspectTemplate.js ${projectId} invalid_template#id`
+      );
+    } catch (err) {
       output = err.message;
     }
-    assert.include(output,'INVALID_ARGUMENT');
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 
   // list_inspect_templates
@@ -92,11 +92,11 @@ describe('templates', () => {
   it('should handle template deletion errors', () => {
     let output;
     try {
-    output = execSync(
-      `node deleteInspectTemplate.js ${projectId} BAD_TEMPLATE`
-    );
+      output = execSync(
+        `node deleteInspectTemplate.js ${projectId} BAD_TEMPLATE`
+      );
     } catch (err) {
-      output = err.message
+      output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');
   });

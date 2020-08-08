@@ -93,8 +93,10 @@ process.on('unhandledRejection', err => {
 });
 
 function transformCLI(infoTypes) {
-  infoTypes = infoTypes? infoTypes.split(',').map(type => {
-    return {name: type};
-  }) : undefined
+  infoTypes = infoTypes
+    ? infoTypes.split(',').map(type => {
+        return {name: type};
+      })
+    : undefined;
   return infoTypes;
 }

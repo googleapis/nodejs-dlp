@@ -29,7 +29,7 @@ const surrogateType = 'SSN_TOKEN';
 const csvFile = 'resources/dates.csv';
 const tempOutputFile = path.join(__dirname, 'temp.result.csv');
 const dateShiftAmount = 30;
-const dateFields = "birth_date,register_date";
+const dateFields = 'birth_date,register_date';
 
 const client = new DLP.DlpServiceClient();
 describe('deid', () => {
@@ -57,35 +57,37 @@ describe('deid', () => {
     let output;
     try {
       output = cp.execSync(
-      `node deidentifyWithMask.js ${projectId} "${harmfulString}" 'a' '-1'`) 
+        `node deidentifyWithMask.js ${projectId} "${harmfulString}" 'a' '-1'`
+      );
     } catch (err) {
       output = err.message;
-      }
-      assert.include(output, 'INVALID_ARGUMENT')
+    }
+    assert.include(output, 'INVALID_ARGUMENT');
   });
 
   // deidentify_fpe
   it('should handle FPE encryption errors', () => {
     let output;
     try {
-    output = execSync(
-      `node deidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' 'BAD_KEY_NAME' 'BAD_KEY_NAME'`
-    );    
-  } catch (err) {
+      output = execSync(
+        `node deidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' 'BAD_KEY_NAME' 'BAD_KEY_NAME'`
+      );
+    } catch (err) {
       output = err.message;
-      }
-      assert.include(output, 'invalid encoding');
-    });
+    }
+    assert.include(output, 'invalid encoding');
+  });
 
   // reidentify_fpe
   it('should handle FPE decryption errors', () => {
     let output;
     try {
-    output = execSync(
-      `node reidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' ${surrogateType} 'BAD_KEY_NAME' 'BAD_KEY_NAME NUMERIC'`
-    ); } catch (err) {
+      output = execSync(
+        `node reidentifyWithFpe.js ${projectId} "${harmfulString}" '[0-9A-Za-z]' ${surrogateType} 'BAD_KEY_NAME' 'BAD_KEY_NAME NUMERIC'`
+      );
+    } catch (err) {
       output = err.message;
-      }
+    }
     assert.include(output, 'invalid encoding');
   });
 
@@ -107,11 +109,11 @@ describe('deid', () => {
 
   it('should handle date-shift errors', () => {
     let output;
-    try{
-    output = execSync(
-      `node deidentifyWithDateShift.js ${projectId} "${csvFile}" "${tempOutputFile}" ${dateShiftAmount} ${dateShiftAmount}`
-    );
-    } catch(err) {
+    try {
+      output = execSync(
+        `node deidentifyWithDateShift.js ${projectId} "${csvFile}" "${tempOutputFile}" ${dateShiftAmount} ${dateShiftAmount}`
+      );
+    } catch (err) {
       output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');

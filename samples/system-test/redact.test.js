@@ -111,11 +111,11 @@ describe('redact', () => {
 
   it('should report info type errors', () => {
     let output;
-    try{
-    output = execSync(
-      `node redactText.js ${projectId} "My email is jenny@example.com" LIKELIHOOD_UNSPECIFIED 'NONEXISTENT'`
-    );
-    } catch(err) {
+    try {
+      output = execSync(
+        `node redactText.js ${projectId} "My email is jenny@example.com" LIKELIHOOD_UNSPECIFIED 'NONEXISTENT'`
+      );
+    } catch (err) {
       output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');
@@ -123,10 +123,11 @@ describe('redact', () => {
 
   it('should report image redaction handling errors', () => {
     let output;
-    try{
-    output = execSync(
-      `node redactImage.js ${projectId} ${testImage} output.png BAD_TYPE`
-    ); } catch(err) {
+    try {
+      output = execSync(
+        `node redactImage.js ${projectId} ${testImage} output.png BAD_TYPE`
+      );
+    } catch (err) {
       output = err.message;
     }
     assert.include(output, 'INVALID_ARGUMENT');
