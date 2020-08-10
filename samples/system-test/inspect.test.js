@@ -217,7 +217,7 @@ describe('inspect', () => {
   it('should report Bigquery table handling errors', () => {
     let output;
     try {
-      const output = execSync(
+      output = execSync(
         `node inspectBigQuery.js ${projectId} ${dataProject} integration_tests_dlp harmless ${topicName} ${subscriptionName} 'LIKELIHOOD_UNSPECIFIED' '0' 'BAD_TYPE'`
       );
     } catch (err) {
