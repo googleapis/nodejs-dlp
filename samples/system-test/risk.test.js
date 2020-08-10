@@ -102,7 +102,7 @@ describe('risk', () => {
     } catch (err) {
       output = err.message;
     }
-    assert.include(output, 'NOT FOUND');
+    assert.include(output, 'NOT_FOUND');
   });
 
   // categoricalRiskAnalysis
@@ -157,7 +157,7 @@ describe('risk', () => {
   // kMapAnalysis
   it('should perform k-map analysis on a single field', () => {
     const output = execSync(
-      `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'USA' ${numericField}`
+      `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'US' ${numericField}`
     );
     assert.match(output, /Anonymity range: \[\d+, \d+\]/);
     assert.match(output, /Size: \d/);
@@ -179,7 +179,7 @@ describe('risk', () => {
   it('should check that numbers of quasi-ids and info types are equal', () => {
     assert.throws(() => {
       execSync(
-        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} 'USA' 'AGE,GENDER'`
+        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} 'US' 'AGE,GENDER'`
       );
     }, /Number of infoTypes and number of quasi-identifiers must be equal!/);
   });
@@ -187,7 +187,7 @@ describe('risk', () => {
   // lDiversityAnalysis
   it('should perform l-diversity analysis on a single field', () => {
     const output = execSync(
-      `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} ${uniqueField} ${numericField}`
+      `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} '${uniqueField}' '${numericField}'`
     );
     assert.match(output, /Quasi-ID values:/);
     assert.match(output, /Class size: \d/);
