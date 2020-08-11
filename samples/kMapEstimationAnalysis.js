@@ -28,7 +28,7 @@ function main(
   quasiIds
 ) {
   quasiIds = transformCLI(quasiIds);
-  console.log(quasiIds);
+
   // [START dlp_k_map]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
@@ -159,9 +159,11 @@ process.on('unhandledRejection', err => {
 
 function transformCLI(quasiIds) {
   quasiIds = quasiIds
-    ? quasiIds.split(',').map((name, idx) => {
+    ? quasiIds.map((name, idx) => {
         return {
-          name: name,
+          field: {
+            name: name,
+          },
           infoType: {
             name: idx,
           },
