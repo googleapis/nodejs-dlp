@@ -179,7 +179,7 @@ describe('risk', () => {
   it('should check that numbers of quasi-ids and info types are equal', () => {
     assert.throws(() => {
       execSync(
-        `node kMapEstimationAnalysis.js ${projectId} ${projectId} anotherdataset harmful kanon kanon 'US' 'Age,Gender' AGE`
+        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'US' 'Age,Gender' AGE`
       );
     }, /3 INVALID_ARGUMENT: InfoType name cannot be empty of a TaggedField/);
   });
