@@ -161,9 +161,7 @@ function transformCLI(quasiIds) {
   quasiIds = quasiIds
     ? quasiIds.split(',').map((name, idx) => {
         return {
-          field: {
-            name: name,
-          },
+          name: name,
           infoType: {
             name: idx,
           },

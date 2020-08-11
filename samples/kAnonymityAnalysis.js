@@ -28,10 +28,6 @@ function main(
 ) {
   quasiIds = transformCLI(quasiIds);
 
-  console.log(tableId);
-  console.log(topicId);
-  console.log(subscriptionId);
-  console.log(quasiIds);
   // [START dlp_k_anonymity]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
@@ -72,7 +68,6 @@ function main(
       tableId: tableId,
     };
     // Construct request for creating a risk analysis job
-    console.log(quasiIds);
 
     const request = {
       parent: `projects/${projectId}/locations/global`,
@@ -159,9 +154,7 @@ function transformCLI(quasiIds) {
   quasiIds = quasiIds
     ? quasiIds.split(',').map((name, idx) => {
         return {
-          field: {
-            name: name,
-          },
+          name: name,
           infoType: {
             name: idx,
           },

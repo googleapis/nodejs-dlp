@@ -46,11 +46,11 @@ const client = new DLP.DlpServiceClient();
 describe('risk', () => {
   let projectId;
   // Create new custom topic/subscription
-  let topic, subscription;
-  const topicName = `dlp-risk-topic-${uuid.v4()}-${Date.now()}`;
-  const subscriptionName = `dlp-risk-subscription-${uuid.v4()}-${Date.now()}`;
+  let topic, subscription, topicName, subscriptionName;
 
   before(async () => {
+    topicName = `dlp-risk-topic-${uuid.v4()}-${Date.now()}`;
+    subscriptionName = `dlp-risk-subscription-${uuid.v4()}-${Date.now()}`;
     projectId = await client.getProjectId();
     [topic] = await pubsub.createTopic(topicName);
     [subscription] = await topic.createSubscription(subscriptionName);
@@ -133,13 +133,13 @@ describe('risk', () => {
   });
 
   // kAnonymityAnalysis
-  it.only('should perform k-anonymity analysis on a single field', () => {
+  it('should perform k-anonymity analysis on a single field', () => {
     const output = execSync(
-      `node kAnonymityAnalysis.js ${projectId} 'long-door-651' ${dataset} harmful ${topicName} ${subscriptionName} ${numericField}`
+      `node kAnonymityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} ${numericField}`
     );
     console.log(output);
-    assert.include(output, /Quasi-ID values:/);
-    assert.include(output, /Class size: \d/);
+    assert.include(output, 'Quasi-ID values:');
+    assert.include(output, 'Class size:');
   });
 
   it('should handle k-anonymity analysis errors', () => {
@@ -179,7 +179,7 @@ describe('risk', () => {
   it('should check that numbers of quasi-ids and info types are equal', () => {
     assert.throws(() => {
       execSync(
-        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} nonexistent ${topicName} ${subscriptionName} 'US' 'AGE,GENDER'`
+        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'US' 'AGE,GENDER'`
       );
     }, /Number of infoTypes and number of quasi-identifiers must be equal!/);
   });
@@ -187,7 +187,7 @@ describe('risk', () => {
   // lDiversityAnalysis
   it('should perform l-diversity analysis on a single field', () => {
     const output = execSync(
-      `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} '${uniqueField}' '${numericField}'`
+      `node lDiversityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} ${uniqueField} ${numericField}`
     );
     assert.match(output, /Quasi-ID values:/);
     assert.match(output, /Class size: \d/);

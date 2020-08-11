@@ -27,6 +27,7 @@ function main(
   sensitiveAttribute,
   quasiIds
 ) {
+  quasiIds = transformCLI(quasiIds);
   // [START dlp_l_diversity]
   // Import the Google Cloud client libraries
   const DLP = require('@google-cloud/dlp');
@@ -163,3 +164,26 @@ process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });
+
+function transformCLI(quasiIds) {
+  quasiIds = quasiIds
+    ? quasiIds.split(',').map((name, idx) => {
+        return {
+          name: name,
+          infoType: {
+            name: idx,
+          },
+        };
+      })
+    : undefined;
+
+  if (quasiIds.infoType && quasiIds.field) {
+    if (quasiIds.infoType.length !== quasiIds.field.length) {
+      console.error(
+        'Number of infoTypes and number of quasi-identifiers must be equal!'
+      );
+      process.exitCode = 1;
+    }
+  }
+  return quasiIds;
+}
