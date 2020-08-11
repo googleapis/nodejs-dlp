@@ -52,9 +52,9 @@ describe('risk', () => {
     topicName = `dlp-risk-topic-${uuid.v4()}-${Date.now()}`;
     subscriptionName = `dlp-risk-subscription-${uuid.v4()}-${Date.now()}`;
     projectId = await client.getProjectId();
-    [topic] = await pubsub.createTopic(topicName);
-    [subscription] = await topic.createSubscription(subscriptionName);
-    await deleteOldTopics();
+    // [topic] = await pubsub.createTopic(topicName);
+    // [subscription] = await topic.createSubscription(subscriptionName);
+    // await deleteOldTopics();
   });
 
   async function deleteOldTopics() {
@@ -79,10 +79,10 @@ describe('risk', () => {
   }
 
   // Delete custom topic/subscription
-  after(async () => {
-    await subscription.delete();
-    await topic.delete();
-  });
+  // after(async () => {
+  //   await subscription.delete();
+  //   await topic.delete();
+  // });
 
   // numericalRiskAnalysis
   it('should perform numerical risk analysis', () => {
@@ -176,10 +176,10 @@ describe('risk', () => {
     assert.include(output, 'fail');
   });
 
-  it('should check that numbers of quasi-ids and info types are equal', () => {
+  it.only('should check that numbers of quasi-ids and info types are equal', () => {
     assert.throws(() => {
       execSync(
-        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'US' 'AGE,GENDER'`
+        `node kMapEstimationAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} 'US' 'Age'`
       );
     }, /Number of infoTypes and number of quasi-identifiers must be equal!/);
   });

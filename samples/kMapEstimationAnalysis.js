@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+const { type } = require('os');
+
 // sample-metadata:
 //  title: kMap Estimation Analysis
 //  description: Computes the k-map risk estimation of a column set in a Google BigQuery table.
@@ -74,13 +76,16 @@ function main(
       tableId: tableId,
     };
 
+    console.log(await quasiIds);
+    console.log(Array.isArray([quasiIds]));
+
     // Construct request for creating a risk analysis job
     const request = {
       parent: `projects/${projectId}/locations/global`,
       riskJob: {
         privacyMetric: {
           kMapEstimationConfig: {
-            quasiIds: quasiIds,
+            quasiIds: [quasiIds],
             regionCode: regionCode,
           },
         },
@@ -157,15 +162,23 @@ process.on('unhandledRejection', err => {
   process.exitCode = 1;
 });
 
-function transformCLI(quasiIds) {
+async function transformCLI(quasiIds) {
+  const DLP = require('@google-cloud/dlp');
+  const dlp = new DLP.DlpServiceClient();
+
+  const [infoTypes] = await dlp.listInfoTypes({
+    languageCode: 'infoTypes',
+    filter: "supported_by=RISK_ANALYSIS",
+  });
+  
   quasiIds = quasiIds
-    ? quasiIds.split(',').map((name, idx) => {
+    ? quasiIds.split(',').map((name, index) => {
         return {
           field: {
             name: name,
           },
           infoType: {
-            name: idx,
+            name: infoTypes.infoTypes[index].name,
           },
         };
       })

@@ -51,8 +51,11 @@ function main(projectId, languageCode, filter) {
   // [END dlp_list_info_types]
 }
 
+module.exports.main = main;
+
 main(...process.argv.slice(2));
 process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });
+
