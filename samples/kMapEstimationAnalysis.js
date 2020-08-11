@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const { type } = require('os');
-
 // sample-metadata:
 //  title: kMap Estimation Analysis
 //  description: Computes the k-map risk estimation of a column set in a Google BigQuery table.
@@ -27,9 +25,10 @@ function main(
   topicId,
   subscriptionId,
   regionCode,
-  quasiIds
+  quasiIds,
+  infoTypes
 ) {
-  quasiIds = transformCLI(quasiIds);
+  quasiIds = transformCLI(quasiIds, infoTypes);
 
   // [START dlp_k_map]
   // Import the Google Cloud client libraries
@@ -76,16 +75,13 @@ function main(
       tableId: tableId,
     };
 
-    console.log(await quasiIds);
-    console.log(Array.isArray([quasiIds]));
-
     // Construct request for creating a risk analysis job
     const request = {
       parent: `projects/${projectId}/locations/global`,
       riskJob: {
         privacyMetric: {
           kMapEstimationConfig: {
-            quasiIds: [quasiIds],
+            quasiIds: quasiIds,
             regionCode: regionCode,
           },
         },
@@ -99,7 +95,6 @@ function main(
         ],
       },
     };
-
     // Create helper function for unpacking values
     const getValue = obj => obj[Object.keys(obj)[0]];
 
@@ -108,6 +103,7 @@ function main(
     const subscription = await topicResponse.subscription(subscriptionId);
     const [jobsResponse] = await dlp.createDlpJob(request);
     const jobName = jobsResponse.name;
+
     // Watch the Pub/Sub topic until the DLP job finishes
     await new Promise((resolve, reject) => {
       const messageHandler = message => {
@@ -134,6 +130,7 @@ function main(
       console.log(' Waiting for DLP job to fully complete');
     }, 500);
     const [job] = await dlp.getDlpJob({name: jobName});
+
     const histogramBuckets =
       job.riskDetails.kMapEstimationResult.kMapEstimationHistogram;
 
@@ -162,15 +159,9 @@ process.on('unhandledRejection', err => {
   process.exitCode = 1;
 });
 
-async function transformCLI(quasiIds) {
-  const DLP = require('@google-cloud/dlp');
-  const dlp = new DLP.DlpServiceClient();
+function transformCLI(quasiIds, infoTypes) {
+  infoTypes = infoTypes ? infoTypes.split(',') : null;
 
-  const [infoTypes] = await dlp.listInfoTypes({
-    languageCode: 'infoTypes',
-    filter: "supported_by=RISK_ANALYSIS",
-  });
-  
   quasiIds = quasiIds
     ? quasiIds.split(',').map((name, index) => {
         return {
@@ -178,20 +169,11 @@ async function transformCLI(quasiIds) {
             name: name,
           },
           infoType: {
-            name: infoTypes.infoTypes[index].name,
+            name: infoTypes[index],
           },
         };
       })
     : undefined;
-
-  if (quasiIds && quasiIds.infoType && quasiIds.field) {
-    if (quasiIds.infoType.length !== quasiIds.field.length) {
-      console.error(
-        'Number of infoTypes and number of quasi-identifiers must be equal!'
-      );
-      process.exitCode = 1;
-    }
-  }
 
   return quasiIds;
 }

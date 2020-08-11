@@ -161,14 +161,5 @@ function transformCLI(quasiIds) {
         };
       })
     : undefined;
-
-  if (quasiIds.infoType && quasiIds.field) {
-    if (quasiIds.infoType.length !== quasiIds.field.length) {
-      console.error(
-        'Number of infoTypes and number of quasi-identifiers must be equal!'
-      );
-      process.exitCode = 1;
-    }
-  }
   return quasiIds;
 }
