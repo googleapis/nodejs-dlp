@@ -133,9 +133,9 @@ describe('risk', () => {
   });
 
   // kAnonymityAnalysis
-  it('should perform k-anonymity analysis on a single field', () => {
+  it.only('should perform k-anonymity analysis on a single field', () => {
     const output = execSync(
-      `node kAnonymityAnalysis.js ${projectId} ${projectId} ${dataset} harmful ${topicName} ${subscriptionName} ${numericField}`
+      `node kAnonymityAnalysis.js ${projectId} 'long-door-651' ${dataset} harmful ${topicName} ${subscriptionName} ${numericField}`
     );
     console.log(output);
     assert.include(output, /Quasi-ID values:/);
