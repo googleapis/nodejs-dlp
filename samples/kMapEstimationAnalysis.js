@@ -159,7 +159,7 @@ process.on('unhandledRejection', err => {
 
 function transformCLI(quasiIds) {
   quasiIds = quasiIds
-    ? quasiIds.map((name, idx) => {
+    ? quasiIds.split(',').map((name, idx) => {
         return {
           field: {
             name: name,
