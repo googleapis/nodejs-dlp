@@ -22,7 +22,13 @@
 "https://github.com/googleapis/nodejs-dlp/blob/master/samples/numericalRiskAnalysis.js",
 "https://github.com/googleapis/nodejs-dlp/blob/master/samples/redactImage.js",
 "https://github.com/googleapis/nodejs-dlp/blob/master/samples/redactText.js",
-"https://github.com/googleapis/nodejs-dlp/blob/master/samples/reidentifyWithFpe.js"
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/reidentifyWithFpe.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/categoricalRiskAnalysis.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/createInspectTemplate.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/createTrigger.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/deidentifyWithDateShift.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/deidentifyWithFpe.js",
+"https://github.com/googleapis/nodejs-dlp/blob/master/samples/deidentifyWithMask.js"
   ],
   "silent": true,
   "concurrency": 10
