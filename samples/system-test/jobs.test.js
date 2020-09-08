@@ -107,7 +107,7 @@ describe('test', () => {
   }
 
   // dlp_list_jobs
-  it('should list jobs', function () {
+  it('should list jobs', async function () {
     this.retries(5);
     await delay(this.test);
     const output = execSync(`node listJobs.js ${projectId} 'state=DONE'`);
@@ -117,7 +117,7 @@ describe('test', () => {
     );
   });
 
-  it('should list jobs of a given type', function () {
+  it('should list jobs of a given type', async function () {
     this.retries(5);
     await delay(this.test);
     const output = execSync(
