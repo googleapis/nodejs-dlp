@@ -3,7 +3,8 @@
   "skip": [
     "https://codecov.io/gh/googleapis/",
     "www.googleapis.com",
-    "img.shields.io"
+    "img.shields.io",
+    "http://localhost:5803/dlp/docs/specifying-location"
   ],
   "silent": true,
   "concurrency": 10
