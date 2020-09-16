@@ -463,7 +463,7 @@ export class DlpServiceClient {
    *   Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -579,7 +579,7 @@ export class DlpServiceClient {
    *   Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -691,7 +691,7 @@ export class DlpServiceClient {
    *   Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -814,7 +814,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1043,7 +1043,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1439,7 +1439,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1844,7 +1844,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -2399,7 +2399,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -2761,7 +2761,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3336,7 +3336,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3457,7 +3457,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3534,7 +3534,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3642,7 +3642,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3767,7 +3767,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3844,7 +3844,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3946,7 +3946,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4087,7 +4087,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4186,7 +4186,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4312,7 +4312,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4453,7 +4453,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4554,7 +4554,7 @@ export class DlpServiceClient {
    *   Required. Parent resource name.
    *
    *   The format of this value varies depending on whether you have [specified a
-   *   processing location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   processing location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4687,7 +4687,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4809,7 +4809,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4887,7 +4887,7 @@ export class DlpServiceClient {
    *
    *   The format of this value varies depending on the scope of the request
    *   (project or organization) and whether you have [specified a processing
-   *   location](https://cloud.google.com/dlp/docs/specifying-location):
+   *   location](/dlp/docs/specifying-location):
    *
    *   + Projects scope, location specified:<br/>
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
