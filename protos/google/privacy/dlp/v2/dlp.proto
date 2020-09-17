@@ -1157,7 +1157,7 @@ message RedactImageRequest {
   // Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1221,7 +1221,7 @@ message DeidentifyContentRequest {
   // Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1282,7 +1282,7 @@ message ReidentifyContentRequest {
   // Required. Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -1353,7 +1353,7 @@ message InspectContentRequest {
   // Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3133,7 +3133,7 @@ message CreateInspectTemplateRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3207,7 +3207,7 @@ message ListInspectTemplatesRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3285,7 +3285,7 @@ message CreateJobTriggerRequest {
   // Required. Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3366,7 +3366,7 @@ message CreateDlpJobRequest {
   // Required. Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3409,7 +3409,7 @@ message ListJobTriggersRequest {
   // Required. Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3608,7 +3608,7 @@ message ListDlpJobsRequest {
   // Required. Parent resource name.
   //
   // The format of this value varies depending on whether you have [specified a
-  // processing location](https://cloud.google.com/dlp/docs/specifying-location):
+  // processing location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3733,7 +3733,7 @@ message CreateDeidentifyTemplateRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -3807,7 +3807,7 @@ message ListDeidentifyTemplatesRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4002,7 +4002,7 @@ message CreateStoredInfoTypeRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
@@ -4078,7 +4078,7 @@ message ListStoredInfoTypesRequest {
   //
   // The format of this value varies depending on the scope of the request
   // (project or organization) and whether you have [specified a processing
-  // location](https://cloud.google.com/dlp/docs/specifying-location):
+  // location](/dlp/docs/specifying-location):
   //
   // + Projects scope, location specified:<br/>
   //   `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
