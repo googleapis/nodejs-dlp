@@ -43,7 +43,7 @@
     "precompile": "gts clean"
   },
   "dependencies": {
-    "google-gax": "^2.24.2",
+    "google-gax": "^2.24.3-beta.0",
     "protobufjs": "^6.8.0"
   },
   "devDependencies": {
