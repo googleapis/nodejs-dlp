@@ -1,0 +1,529 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+    summary: Represents a Finding.
+    name: google.privacy.dlp.v2.Finding
+    fullName: google.privacy.dlp.v2.Finding
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobCreateTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#labels:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#likelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#location:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quote:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quoteInfo:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#resourceName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#triggerName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding:constructor(1)'
+    summary: Constructs a new Finding.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IFinding);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.create:member(1)'
+    summary: Creates a new Finding instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IFinding): google.privacy.dlp.v2.Finding;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+        description: Finding instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#createTime:member'
+    summary: Finding createTime.
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decode:member(1)'
+    summary: Decodes a Finding message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Finding;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+        description: Finding
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decodeDelimited:member(1)'
+    summary: 'Decodes a Finding message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Finding;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+        description: Finding
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode:member(1)'
+    summary: >-
+      Encodes the specified Finding message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Finding.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IFinding, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Finding message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Finding message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Finding.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IFinding, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Finding message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.fromObject:member(1)'
+    summary: Creates a Finding message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Finding;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+        description: Finding
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#infoType:member'
+    summary: Finding infoType.
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobCreateTime:member'
+    summary: Finding jobCreateTime.
+    name: jobCreateTime
+    fullName: jobCreateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public jobCreateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobCreateTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobName:member'
+    summary: Finding jobName.
+    name: jobName
+    fullName: jobName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public jobName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#labels:member'
+    summary: Finding labels.
+    name: labels
+    fullName: labels
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public labels: { [k: string]: string };'
+      return:
+        type:
+          - '{ [k: string]: string }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#likelihood:member'
+    summary: Finding likelihood.
+    name: likelihood
+    fullName: likelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public likelihood: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#likelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#location:member'
+    summary: Finding location.
+    name: location
+    fullName: location
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public location?: (google.privacy.dlp.v2.ILocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#location~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#name:member'
+    summary: Finding name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quote:member'
+    summary: Finding quote.
+    name: quote
+    fullName: quote
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public quote: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quoteInfo:member'
+    summary: Finding quoteInfo.
+    name: quoteInfo
+    fullName: quoteInfo
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public quoteInfo?: (google.privacy.dlp.v2.IQuoteInfo|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quoteInfo~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#resourceName:member'
+    summary: Finding resourceName.
+    name: resourceName
+    fullName: resourceName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public resourceName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#toJSON:member(1)'
+    summary: Converts this Finding to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.toObject:member(1)'
+    summary: Creates a plain object from a Finding message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Finding, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Finding
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Finding.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#triggerName:member'
+    summary: Finding triggerName.
+    name: triggerName
+    fullName: triggerName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public triggerName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.verify:member(1)'
+    summary: Verifies a Finding message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+    name: IFinding
+    fullName: google.privacy.dlp.v2.IFinding
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+    name: Finding
+    fullName: google.privacy.dlp.v2.Finding
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#jobCreateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#likelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#location~0:complex'
+    name: (google.privacy.dlp.v2.ILocation|null)
+    fullName: (google.privacy.dlp.v2.ILocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation:interface'
+        name: google.privacy.dlp.v2.ILocation
+        fullName: google.privacy.dlp.v2.ILocation
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding#quoteInfo~0:complex'
+    name: (google.privacy.dlp.v2.IQuoteInfo|null)
+    fullName: (google.privacy.dlp.v2.IQuoteInfo|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo:interface'
+        name: google.privacy.dlp.v2.IQuoteInfo
+        fullName: google.privacy.dlp.v2.IQuoteInfo
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

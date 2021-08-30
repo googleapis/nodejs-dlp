@@ -1,0 +1,2341 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:class'
+    summary: Represents a DlpService
+    name: google.privacy.dlp.v2.DlpService
+    fullName: google.privacy.dlp.v2.DlpService
+    langs:
+      - typeScript
+    type: class
+    extends:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~0:complex'
+    inheritance:
+      - type: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~1:complex'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger:member(2)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType:member(2)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:constructor(1)'
+    summary: Constructs a new DlpService service.
+    name: '(constructor)(rpcImpl, requestDelimited, responseDelimited)'
+    fullName: '(constructor)(rpcImpl, requestDelimited, responseDelimited)'
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);'
+      parameters:
+        - id: rpcImpl
+          description: RPC implementation
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~2:complex'
+        - id: requestDelimited
+          description: Whether requests are length-delimited
+          type:
+            - boolean
+        - id: responseDelimited
+          description: Whether responses are length-delimited
+          type:
+            - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger:member(1)'
+    summary: Calls ActivateJobTrigger.
+    name: 'activateJobTrigger(request, callback)'
+    fullName: 'activateJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public activateJobTrigger(request: google.privacy.dlp.v2.IActivateJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ActivateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IActivateJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DlpJob'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger:member(2)'
+    summary: Calls ActivateJobTrigger.
+    name: activateJobTrigger(request)
+    fullName: activateJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public activateJobTrigger(request: google.privacy.dlp.v2.IActivateJobTriggerRequest):
+        Promise<google.privacy.dlp.v2.DlpJob>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ActivateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IActivateJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob:member(1)'
+    summary: Calls CancelDlpJob.
+    name: 'cancelDlpJob(request, callback)'
+    fullName: 'cancelDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public cancelDlpJob(request: google.privacy.dlp.v2.ICancelDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.CancelDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CancelDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob:member(2)'
+    summary: Calls CancelDlpJob.
+    name: cancelDlpJob(request)
+    fullName: cancelDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public cancelDlpJob(request: google.privacy.dlp.v2.ICancelDlpJobRequest): Promise<google.protobuf.Empty>;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CancelDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.create:member(1)'
+    summary: Creates new DlpService service using the specified rpc implementation.
+    name: 'create(rpcImpl, requestDelimited, responseDelimited)'
+    fullName: 'create(rpcImpl, requestDelimited, responseDelimited)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean):
+        DlpService;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:class'
+        description: RPC service. Useful where requests and/or responses are streamed.
+      parameters:
+        - id: rpcImpl
+          description: RPC implementation
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.create~0:complex'
+        - id: requestDelimited
+          description: Whether requests are length-delimited
+          type:
+            - boolean
+        - id: responseDelimited
+          description: Whether responses are length-delimited
+          type:
+            - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate:member(1)'
+    summary: Calls CreateDeidentifyTemplate.
+    name: 'createDeidentifyTemplate(request, callback)'
+    fullName: 'createDeidentifyTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createDeidentifyTemplate(request: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CreateDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DeidentifyTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate:member(2)'
+    summary: Calls CreateDeidentifyTemplate.
+    name: createDeidentifyTemplate(request)
+    fullName: createDeidentifyTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createDeidentifyTemplate(request: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest):
+        Promise<google.privacy.dlp.v2.DeidentifyTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CreateDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob:member(1)'
+    summary: Calls CreateDlpJob.
+    name: 'createDlpJob(request, callback)'
+    fullName: 'createDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createDlpJob(request: google.privacy.dlp.v2.ICreateDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.CreateDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CreateDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DlpJob'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob:member(2)'
+    summary: Calls CreateDlpJob.
+    name: createDlpJob(request)
+    fullName: createDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public createDlpJob(request: google.privacy.dlp.v2.ICreateDlpJobRequest): Promise<google.privacy.dlp.v2.DlpJob>;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CreateDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate:member(1)'
+    summary: Calls CreateInspectTemplate.
+    name: 'createInspectTemplate(request, callback)'
+    fullName: 'createInspectTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createInspectTemplate(request: google.privacy.dlp.v2.ICreateInspectTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CreateInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and InspectTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate:member(2)'
+    summary: Calls CreateInspectTemplate.
+    name: createInspectTemplate(request)
+    fullName: createInspectTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createInspectTemplate(request: google.privacy.dlp.v2.ICreateInspectTemplateRequest):
+        Promise<google.privacy.dlp.v2.InspectTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CreateInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger:member(1)'
+    summary: Calls CreateJobTrigger.
+    name: 'createJobTrigger(request, callback)'
+    fullName: 'createJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createJobTrigger(request: google.privacy.dlp.v2.ICreateJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CreateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and JobTrigger'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger:member(2)'
+    summary: Calls CreateJobTrigger.
+    name: createJobTrigger(request)
+    fullName: createJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createJobTrigger(request: google.privacy.dlp.v2.ICreateJobTriggerRequest):
+        Promise<google.privacy.dlp.v2.JobTrigger>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CreateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType:member(1)'
+    summary: Calls CreateStoredInfoType.
+    name: 'createStoredInfoType(request, callback)'
+    fullName: 'createStoredInfoType(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createStoredInfoType(request: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest, callback:
+        google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: CreateStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and StoredInfoType'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType:member(2)'
+    summary: Calls CreateStoredInfoType.
+    name: createStoredInfoType(request)
+    fullName: createStoredInfoType(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public createStoredInfoType(request: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest):
+        Promise<google.privacy.dlp.v2.StoredInfoType>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: CreateStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent:member(1)'
+    summary: Calls DeidentifyContent.
+    name: 'deidentifyContent(request, callback)'
+    fullName: 'deidentifyContent(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deidentifyContent(request: google.privacy.dlp.v2.IDeidentifyContentRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeidentifyContentCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeidentifyContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DeidentifyContentResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent:member(2)'
+    summary: Calls DeidentifyContent.
+    name: deidentifyContent(request)
+    fullName: deidentifyContent(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deidentifyContent(request: google.privacy.dlp.v2.IDeidentifyContentRequest):
+        Promise<google.privacy.dlp.v2.DeidentifyContentResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeidentifyContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate:member(1)'
+    summary: Calls DeleteDeidentifyTemplate.
+    name: 'deleteDeidentifyTemplate(request, callback)'
+    fullName: 'deleteDeidentifyTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteDeidentifyTemplate(request: google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeleteDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate:member(2)'
+    summary: Calls DeleteDeidentifyTemplate.
+    name: deleteDeidentifyTemplate(request)
+    fullName: deleteDeidentifyTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteDeidentifyTemplate(request: google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest):
+        Promise<google.protobuf.Empty>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeleteDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob:member(1)'
+    summary: Calls DeleteDlpJob.
+    name: 'deleteDlpJob(request, callback)'
+    fullName: 'deleteDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteDlpJob(request: google.privacy.dlp.v2.IDeleteDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeleteDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob:member(2)'
+    summary: Calls DeleteDlpJob.
+    name: deleteDlpJob(request)
+    fullName: deleteDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public deleteDlpJob(request: google.privacy.dlp.v2.IDeleteDlpJobRequest): Promise<google.protobuf.Empty>;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeleteDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate:member(1)'
+    summary: Calls DeleteInspectTemplate.
+    name: 'deleteInspectTemplate(request, callback)'
+    fullName: 'deleteInspectTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteInspectTemplate(request: google.privacy.dlp.v2.IDeleteInspectTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeleteInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate:member(2)'
+    summary: Calls DeleteInspectTemplate.
+    name: deleteInspectTemplate(request)
+    fullName: deleteInspectTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteInspectTemplate(request: google.privacy.dlp.v2.IDeleteInspectTemplateRequest):
+        Promise<google.protobuf.Empty>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeleteInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger:member(1)'
+    summary: Calls DeleteJobTrigger.
+    name: 'deleteJobTrigger(request, callback)'
+    fullName: 'deleteJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteJobTrigger(request: google.privacy.dlp.v2.IDeleteJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeleteJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger:member(2)'
+    summary: Calls DeleteJobTrigger.
+    name: deleteJobTrigger(request)
+    fullName: deleteJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteJobTrigger(request: google.privacy.dlp.v2.IDeleteJobTriggerRequest):
+        Promise<google.protobuf.Empty>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeleteJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType:member(1)'
+    summary: Calls DeleteStoredInfoType.
+    name: 'deleteStoredInfoType(request, callback)'
+    fullName: 'deleteStoredInfoType(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteStoredInfoType(request: google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest, callback:
+        google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: DeleteStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType:member(2)'
+    summary: Calls DeleteStoredInfoType.
+    name: deleteStoredInfoType(request)
+    fullName: deleteStoredInfoType(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public deleteStoredInfoType(request: google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest):
+        Promise<google.protobuf.Empty>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: DeleteStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob:member(1)'
+    summary: Calls FinishDlpJob.
+    name: 'finishDlpJob(request, callback)'
+    fullName: 'finishDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public finishDlpJob(request: google.privacy.dlp.v2.IFinishDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.FinishDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: FinishDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinishDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and Empty'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob:member(2)'
+    summary: Calls FinishDlpJob.
+    name: finishDlpJob(request)
+    fullName: finishDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public finishDlpJob(request: google.privacy.dlp.v2.IFinishDlpJobRequest): Promise<google.protobuf.Empty>;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: FinishDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IFinishDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate:member(1)'
+    summary: Calls GetDeidentifyTemplate.
+    name: 'getDeidentifyTemplate(request, callback)'
+    fullName: 'getDeidentifyTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getDeidentifyTemplate(request: google.privacy.dlp.v2.IGetDeidentifyTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: GetDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDeidentifyTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DeidentifyTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate:member(2)'
+    summary: Calls GetDeidentifyTemplate.
+    name: getDeidentifyTemplate(request)
+    fullName: getDeidentifyTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getDeidentifyTemplate(request: google.privacy.dlp.v2.IGetDeidentifyTemplateRequest):
+        Promise<google.privacy.dlp.v2.DeidentifyTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: GetDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDeidentifyTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob:member(1)'
+    summary: Calls GetDlpJob.
+    name: 'getDlpJob(request, callback)'
+    fullName: 'getDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getDlpJob(request: google.privacy.dlp.v2.IGetDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.GetDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: GetDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DlpJob'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob:member(2)'
+    summary: Calls GetDlpJob.
+    name: getDlpJob(request)
+    fullName: getDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public getDlpJob(request: google.privacy.dlp.v2.IGetDlpJobRequest): Promise<google.privacy.dlp.v2.DlpJob>;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: GetDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate:member(1)'
+    summary: Calls GetInspectTemplate.
+    name: 'getInspectTemplate(request, callback)'
+    fullName: 'getInspectTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getInspectTemplate(request: google.privacy.dlp.v2.IGetInspectTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: GetInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and InspectTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate:member(2)'
+    summary: Calls GetInspectTemplate.
+    name: getInspectTemplate(request)
+    fullName: getInspectTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getInspectTemplate(request: google.privacy.dlp.v2.IGetInspectTemplateRequest):
+        Promise<google.privacy.dlp.v2.InspectTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: GetInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger:member(1)'
+    summary: Calls GetJobTrigger.
+    name: 'getJobTrigger(request, callback)'
+    fullName: 'getJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getJobTrigger(request: google.privacy.dlp.v2.IGetJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.GetJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: GetJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and JobTrigger'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger:member(2)'
+    summary: Calls GetJobTrigger.
+    name: getJobTrigger(request)
+    fullName: getJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getJobTrigger(request: google.privacy.dlp.v2.IGetJobTriggerRequest):
+        Promise<google.privacy.dlp.v2.JobTrigger>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: GetJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType:member(1)'
+    summary: Calls GetStoredInfoType.
+    name: 'getStoredInfoType(request, callback)'
+    fullName: 'getStoredInfoType(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getStoredInfoType(request: google.privacy.dlp.v2.IGetStoredInfoTypeRequest, callback:
+        google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: GetStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetStoredInfoTypeRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and StoredInfoType'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType:member(2)'
+    summary: Calls GetStoredInfoType.
+    name: getStoredInfoType(request)
+    fullName: getStoredInfoType(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public getStoredInfoType(request: google.privacy.dlp.v2.IGetStoredInfoTypeRequest):
+        Promise<google.privacy.dlp.v2.StoredInfoType>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: GetStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetStoredInfoTypeRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob:member(1)'
+    summary: Calls HybridInspectDlpJob.
+    name: 'hybridInspectDlpJob(request, callback)'
+    fullName: 'hybridInspectDlpJob(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public hybridInspectDlpJob(request: google.privacy.dlp.v2.IHybridInspectDlpJobRequest, callback:
+        google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: HybridInspectDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and HybridInspectResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob:member(2)'
+    summary: Calls HybridInspectDlpJob.
+    name: hybridInspectDlpJob(request)
+    fullName: hybridInspectDlpJob(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public hybridInspectDlpJob(request: google.privacy.dlp.v2.IHybridInspectDlpJobRequest):
+        Promise<google.privacy.dlp.v2.HybridInspectResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: HybridInspectDlpJobRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger:member(1)'
+    summary: Calls HybridInspectJobTrigger.
+    name: 'hybridInspectJobTrigger(request, callback)'
+    fullName: 'hybridInspectJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public hybridInspectJobTrigger(request: google.privacy.dlp.v2.IHybridInspectJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: HybridInspectJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and HybridInspectResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger:member(2)'
+    summary: Calls HybridInspectJobTrigger.
+    name: hybridInspectJobTrigger(request)
+    fullName: hybridInspectJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public hybridInspectJobTrigger(request: google.privacy.dlp.v2.IHybridInspectJobTriggerRequest):
+        Promise<google.privacy.dlp.v2.HybridInspectResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: HybridInspectJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent:member(1)'
+    summary: Calls InspectContent.
+    name: 'inspectContent(request, callback)'
+    fullName: 'inspectContent(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public inspectContent(request: google.privacy.dlp.v2.IInspectContentRequest, callback:
+        google.privacy.dlp.v2.DlpService.InspectContentCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: InspectContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and InspectContentResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent:member(2)'
+    summary: Calls InspectContent.
+    name: inspectContent(request)
+    fullName: inspectContent(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public inspectContent(request: google.privacy.dlp.v2.IInspectContentRequest):
+        Promise<google.privacy.dlp.v2.InspectContentResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: InspectContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates:member(1)'
+    summary: Calls ListDeidentifyTemplates.
+    name: 'listDeidentifyTemplates(request, callback)'
+    fullName: 'listDeidentifyTemplates(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listDeidentifyTemplates(request: google.privacy.dlp.v2.IListDeidentifyTemplatesRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListDeidentifyTemplatesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListDeidentifyTemplatesResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates:member(2)'
+    summary: Calls ListDeidentifyTemplates.
+    name: listDeidentifyTemplates(request)
+    fullName: listDeidentifyTemplates(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listDeidentifyTemplates(request: google.privacy.dlp.v2.IListDeidentifyTemplatesRequest):
+        Promise<google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListDeidentifyTemplatesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs:member(1)'
+    summary: Calls ListDlpJobs.
+    name: 'listDlpJobs(request, callback)'
+    fullName: 'listDlpJobs(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listDlpJobs(request: google.privacy.dlp.v2.IListDlpJobsRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListDlpJobsCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListDlpJobsRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListDlpJobsResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs:member(2)'
+    summary: Calls ListDlpJobs.
+    name: listDlpJobs(request)
+    fullName: listDlpJobs(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listDlpJobs(request: google.privacy.dlp.v2.IListDlpJobsRequest):
+        Promise<google.privacy.dlp.v2.ListDlpJobsResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListDlpJobsRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes:member(1)'
+    summary: Calls ListInfoTypes.
+    name: 'listInfoTypes(request, callback)'
+    fullName: 'listInfoTypes(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listInfoTypes(request: google.privacy.dlp.v2.IListInfoTypesRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListInfoTypesCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListInfoTypesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListInfoTypesResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes:member(2)'
+    summary: Calls ListInfoTypes.
+    name: listInfoTypes(request)
+    fullName: listInfoTypes(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listInfoTypes(request: google.privacy.dlp.v2.IListInfoTypesRequest):
+        Promise<google.privacy.dlp.v2.ListInfoTypesResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListInfoTypesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates:member(1)'
+    summary: Calls ListInspectTemplates.
+    name: 'listInspectTemplates(request, callback)'
+    fullName: 'listInspectTemplates(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listInspectTemplates(request: google.privacy.dlp.v2.IListInspectTemplatesRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListInspectTemplatesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListInspectTemplatesResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates:member(2)'
+    summary: Calls ListInspectTemplates.
+    name: listInspectTemplates(request)
+    fullName: listInspectTemplates(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listInspectTemplates(request: google.privacy.dlp.v2.IListInspectTemplatesRequest):
+        Promise<google.privacy.dlp.v2.ListInspectTemplatesResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListInspectTemplatesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers:member(1)'
+    summary: Calls ListJobTriggers.
+    name: 'listJobTriggers(request, callback)'
+    fullName: 'listJobTriggers(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listJobTriggers(request: google.privacy.dlp.v2.IListJobTriggersRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListJobTriggersCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListJobTriggersRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListJobTriggersResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers:member(2)'
+    summary: Calls ListJobTriggers.
+    name: listJobTriggers(request)
+    fullName: listJobTriggers(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listJobTriggers(request: google.privacy.dlp.v2.IListJobTriggersRequest):
+        Promise<google.privacy.dlp.v2.ListJobTriggersResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListJobTriggersRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes:member(1)'
+    summary: Calls ListStoredInfoTypes.
+    name: 'listStoredInfoTypes(request, callback)'
+    fullName: 'listStoredInfoTypes(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listStoredInfoTypes(request: google.privacy.dlp.v2.IListStoredInfoTypesRequest, callback:
+        google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ListStoredInfoTypesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ListStoredInfoTypesResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes:member(2)'
+    summary: Calls ListStoredInfoTypes.
+    name: listStoredInfoTypes(request)
+    fullName: listStoredInfoTypes(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public listStoredInfoTypes(request: google.privacy.dlp.v2.IListStoredInfoTypesRequest):
+        Promise<google.privacy.dlp.v2.ListStoredInfoTypesResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ListStoredInfoTypesRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage:member(1)'
+    summary: Calls RedactImage.
+    name: 'redactImage(request, callback)'
+    fullName: 'redactImage(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public redactImage(request: google.privacy.dlp.v2.IRedactImageRequest, callback:
+        google.privacy.dlp.v2.DlpService.RedactImageCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: RedactImageRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and RedactImageResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage:member(2)'
+    summary: Calls RedactImage.
+    name: redactImage(request)
+    fullName: redactImage(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public redactImage(request: google.privacy.dlp.v2.IRedactImageRequest):
+        Promise<google.privacy.dlp.v2.RedactImageResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: RedactImageRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent:member(1)'
+    summary: Calls ReidentifyContent.
+    name: 'reidentifyContent(request, callback)'
+    fullName: 'reidentifyContent(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public reidentifyContent(request: google.privacy.dlp.v2.IReidentifyContentRequest, callback:
+        google.privacy.dlp.v2.DlpService.ReidentifyContentCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: ReidentifyContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and ReidentifyContentResponse'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent:member(2)'
+    summary: Calls ReidentifyContent.
+    name: reidentifyContent(request)
+    fullName: reidentifyContent(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public reidentifyContent(request: google.privacy.dlp.v2.IReidentifyContentRequest):
+        Promise<google.privacy.dlp.v2.ReidentifyContentResponse>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: ReidentifyContentRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate:member(1)'
+    summary: Calls UpdateDeidentifyTemplate.
+    name: 'updateDeidentifyTemplate(request, callback)'
+    fullName: 'updateDeidentifyTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateDeidentifyTemplate(request: google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: UpdateDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and DeidentifyTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate:member(2)'
+    summary: Calls UpdateDeidentifyTemplate.
+    name: updateDeidentifyTemplate(request)
+    fullName: updateDeidentifyTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateDeidentifyTemplate(request: google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest):
+        Promise<google.privacy.dlp.v2.DeidentifyTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: UpdateDeidentifyTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate:member(1)'
+    summary: Calls UpdateInspectTemplate.
+    name: 'updateInspectTemplate(request, callback)'
+    fullName: 'updateInspectTemplate(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateInspectTemplate(request: google.privacy.dlp.v2.IUpdateInspectTemplateRequest, callback:
+        google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: UpdateInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and InspectTemplate'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate:member(2)'
+    summary: Calls UpdateInspectTemplate.
+    name: updateInspectTemplate(request)
+    fullName: updateInspectTemplate(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateInspectTemplate(request: google.privacy.dlp.v2.IUpdateInspectTemplateRequest):
+        Promise<google.privacy.dlp.v2.InspectTemplate>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: UpdateInspectTemplateRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger:member(1)'
+    summary: Calls UpdateJobTrigger.
+    name: 'updateJobTrigger(request, callback)'
+    fullName: 'updateJobTrigger(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateJobTrigger(request: google.privacy.dlp.v2.IUpdateJobTriggerRequest, callback:
+        google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: UpdateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateJobTriggerRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and JobTrigger'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger:member(2)'
+    summary: Calls UpdateJobTrigger.
+    name: updateJobTrigger(request)
+    fullName: updateJobTrigger(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateJobTrigger(request: google.privacy.dlp.v2.IUpdateJobTriggerRequest):
+        Promise<google.privacy.dlp.v2.JobTrigger>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: UpdateJobTriggerRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType:member(1)'
+    summary: Calls UpdateStoredInfoType.
+    name: 'updateStoredInfoType(request, callback)'
+    fullName: 'updateStoredInfoType(request, callback)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateStoredInfoType(request: google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest, callback:
+        google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback): void;
+      return:
+        type:
+          - void
+        description: ''
+      parameters:
+        - id: request
+          description: UpdateStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest:interface'
+        - id: callback
+          description: 'Node-style callback called with the error, if any, and StoredInfoType'
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback:type'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType:member(2)'
+    summary: Calls UpdateStoredInfoType.
+    name: updateStoredInfoType(request)
+    fullName: updateStoredInfoType(request)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public updateStoredInfoType(request: google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest):
+        Promise<google.privacy.dlp.v2.StoredInfoType>;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType~0:complex'
+        description: Promise
+      parameters:
+        - id: request
+          description: UpdateStoredInfoTypeRequest message or plain object
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest:interface'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~0:complex'
+    name: $protobuf.rpc.Service
+    fullName: $protobuf.rpc.Service
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!rpc.Service:class'
+        name: rpc.Service
+        fullName: rpc.Service
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~1:complex'
+    name: $protobuf.rpc.Service
+    fullName: $protobuf.rpc.Service
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!rpc.Service:class'
+        name: rpc.Service
+        fullName: rpc.Service
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService~2:complex'
+    name: $protobuf.RPCImpl
+    fullName: $protobuf.RPCImpl
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!RPCImpl:type'
+        name: RPCImpl
+        fullName: RPCImpl
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IActivateJobTriggerRequest:interface'
+    name: IActivateJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IActivateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback:type'
+    name: ActivateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#activateJobTrigger~0:complex'
+    name: Promise<google.privacy.dlp.v2.DlpJob>
+    fullName: Promise<google.privacy.dlp.v2.DlpJob>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+    name: ICancelDlpJobRequest
+    fullName: google.privacy.dlp.v2.ICancelDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback:type'
+    name: CancelDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.CancelDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#cancelDlpJob~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:class'
+    name: DlpService
+    fullName: google.privacy.dlp.v2.DlpService
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.create~0:complex'
+    name: $protobuf.RPCImpl
+    fullName: $protobuf.RPCImpl
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!RPCImpl:type'
+        name: RPCImpl
+        fullName: RPCImpl
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+    name: ICreateDeidentifyTemplateRequest
+    fullName: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback:type'
+    name: CreateDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDeidentifyTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    fullName: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+    name: ICreateDlpJobRequest
+    fullName: google.privacy.dlp.v2.ICreateDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback:type'
+    name: CreateDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createDlpJob~0:complex'
+    name: Promise<google.privacy.dlp.v2.DlpJob>
+    fullName: Promise<google.privacy.dlp.v2.DlpJob>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+    name: ICreateInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.ICreateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback:type'
+    name: CreateInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createInspectTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.InspectTemplate>
+    fullName: Promise<google.privacy.dlp.v2.InspectTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+    name: ICreateJobTriggerRequest
+    fullName: google.privacy.dlp.v2.ICreateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback:type'
+    name: CreateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createJobTrigger~0:complex'
+    name: Promise<google.privacy.dlp.v2.JobTrigger>
+    fullName: Promise<google.privacy.dlp.v2.JobTrigger>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+    name: ICreateStoredInfoTypeRequest
+    fullName: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback:type'
+    name: CreateStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#createStoredInfoType~0:complex'
+    name: Promise<google.privacy.dlp.v2.StoredInfoType>
+    fullName: Promise<google.privacy.dlp.v2.StoredInfoType>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentRequest:interface'
+    name: IDeidentifyContentRequest
+    fullName: google.privacy.dlp.v2.IDeidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback:type'
+    name: DeidentifyContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeidentifyContentCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deidentifyContent~0:complex'
+    name: Promise<google.privacy.dlp.v2.DeidentifyContentResponse>
+    fullName: Promise<google.privacy.dlp.v2.DeidentifyContentResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentResponse:class'
+        name: google.privacy.dlp.v2.DeidentifyContentResponse
+        fullName: google.privacy.dlp.v2.DeidentifyContentResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest:interface'
+    name: IDeleteDeidentifyTemplateRequest
+    fullName: google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback:type'
+    name: DeleteDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDlpJobRequest:interface'
+    name: IDeleteDlpJobRequest
+    fullName: google.privacy.dlp.v2.IDeleteDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback:type'
+    name: DeleteDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteDlpJob~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+    name: IDeleteInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback:type'
+    name: DeleteInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteInspectTemplate~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteJobTriggerRequest:interface'
+    name: IDeleteJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IDeleteJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback:type'
+    name: DeleteJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteJobTrigger~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest:interface'
+    name: IDeleteStoredInfoTypeRequest
+    fullName: google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback:type'
+    name: DeleteStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#deleteStoredInfoType~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinishDlpJobRequest:interface'
+    name: IFinishDlpJobRequest
+    fullName: google.privacy.dlp.v2.IFinishDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback:type'
+    name: FinishDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.FinishDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#finishDlpJob~0:complex'
+    name: Promise<google.protobuf.Empty>
+    fullName: Promise<google.protobuf.Empty>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetDeidentifyTemplateRequest:interface'
+    name: IGetDeidentifyTemplateRequest
+    fullName: google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback:type'
+    name: GetDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDeidentifyTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    fullName: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetDlpJobRequest:interface'
+    name: IGetDlpJobRequest
+    fullName: google.privacy.dlp.v2.IGetDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback:type'
+    name: GetDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getDlpJob~0:complex'
+    name: Promise<google.privacy.dlp.v2.DlpJob>
+    fullName: Promise<google.privacy.dlp.v2.DlpJob>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+    name: IGetInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IGetInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback:type'
+    name: GetInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getInspectTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.InspectTemplate>
+    fullName: Promise<google.privacy.dlp.v2.InspectTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+    name: IGetJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IGetJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback:type'
+    name: GetJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getJobTrigger~0:complex'
+    name: Promise<google.privacy.dlp.v2.JobTrigger>
+    fullName: Promise<google.privacy.dlp.v2.JobTrigger>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetStoredInfoTypeRequest:interface'
+    name: IGetStoredInfoTypeRequest
+    fullName: google.privacy.dlp.v2.IGetStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback:type'
+    name: GetStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#getStoredInfoType~0:complex'
+    name: Promise<google.privacy.dlp.v2.StoredInfoType>
+    fullName: Promise<google.privacy.dlp.v2.StoredInfoType>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+    name: IHybridInspectDlpJobRequest
+    fullName: google.privacy.dlp.v2.IHybridInspectDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback:type'
+    name: HybridInspectDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectDlpJob~0:complex'
+    name: Promise<google.privacy.dlp.v2.HybridInspectResponse>
+    fullName: Promise<google.privacy.dlp.v2.HybridInspectResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+        name: google.privacy.dlp.v2.HybridInspectResponse
+        fullName: google.privacy.dlp.v2.HybridInspectResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectJobTriggerRequest:interface'
+    name: IHybridInspectJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IHybridInspectJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback:type'
+    name: HybridInspectJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger~0:complex'
+    name: Promise<google.privacy.dlp.v2.HybridInspectResponse>
+    fullName: Promise<google.privacy.dlp.v2.HybridInspectResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+        name: google.privacy.dlp.v2.HybridInspectResponse
+        fullName: google.privacy.dlp.v2.HybridInspectResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+    name: IInspectContentRequest
+    fullName: google.privacy.dlp.v2.IInspectContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback:type'
+    name: InspectContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.InspectContentCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#inspectContent~0:complex'
+    name: Promise<google.privacy.dlp.v2.InspectContentResponse>
+    fullName: Promise<google.privacy.dlp.v2.InspectContentResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentResponse:class'
+        name: google.privacy.dlp.v2.InspectContentResponse
+        fullName: google.privacy.dlp.v2.InspectContentResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesRequest:interface'
+    name: IListDeidentifyTemplatesRequest
+    fullName: google.privacy.dlp.v2.IListDeidentifyTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback:type'
+    name: ListDeidentifyTemplatesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDeidentifyTemplates~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesResponse:class'
+        name: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse
+        fullName: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+    name: IListDlpJobsRequest
+    fullName: google.privacy.dlp.v2.IListDlpJobsRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback:type'
+    name: ListDlpJobsCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListDlpJobsCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listDlpJobs~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListDlpJobsResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListDlpJobsResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsResponse:class'
+        name: google.privacy.dlp.v2.ListDlpJobsResponse
+        fullName: google.privacy.dlp.v2.ListDlpJobsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+    name: IListInfoTypesRequest
+    fullName: google.privacy.dlp.v2.IListInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback:type'
+    name: ListInfoTypesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListInfoTypesCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInfoTypes~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListInfoTypesResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListInfoTypesResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesResponse:class'
+        name: google.privacy.dlp.v2.ListInfoTypesResponse
+        fullName: google.privacy.dlp.v2.ListInfoTypesResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+    name: IListInspectTemplatesRequest
+    fullName: google.privacy.dlp.v2.IListInspectTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback:type'
+    name: ListInspectTemplatesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listInspectTemplates~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListInspectTemplatesResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListInspectTemplatesResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesResponse:class'
+        name: google.privacy.dlp.v2.ListInspectTemplatesResponse
+        fullName: google.privacy.dlp.v2.ListInspectTemplatesResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+    name: IListJobTriggersRequest
+    fullName: google.privacy.dlp.v2.IListJobTriggersRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback:type'
+    name: ListJobTriggersCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListJobTriggersCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listJobTriggers~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListJobTriggersResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListJobTriggersResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersResponse:class'
+        name: google.privacy.dlp.v2.ListJobTriggersResponse
+        fullName: google.privacy.dlp.v2.ListJobTriggersResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesRequest:interface'
+    name: IListStoredInfoTypesRequest
+    fullName: google.privacy.dlp.v2.IListStoredInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback:type'
+    name: ListStoredInfoTypesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#listStoredInfoTypes~0:complex'
+    name: Promise<google.privacy.dlp.v2.ListStoredInfoTypesResponse>
+    fullName: Promise<google.privacy.dlp.v2.ListStoredInfoTypesResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesResponse:class'
+        name: google.privacy.dlp.v2.ListStoredInfoTypesResponse
+        fullName: google.privacy.dlp.v2.ListStoredInfoTypesResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+    name: IRedactImageRequest
+    fullName: google.privacy.dlp.v2.IRedactImageRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback:type'
+    name: RedactImageCallback
+    fullName: google.privacy.dlp.v2.DlpService.RedactImageCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#redactImage~0:complex'
+    name: Promise<google.privacy.dlp.v2.RedactImageResponse>
+    fullName: Promise<google.privacy.dlp.v2.RedactImageResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageResponse:class'
+        name: google.privacy.dlp.v2.RedactImageResponse
+        fullName: google.privacy.dlp.v2.RedactImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentRequest:interface'
+    name: IReidentifyContentRequest
+    fullName: google.privacy.dlp.v2.IReidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback:type'
+    name: ReidentifyContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.ReidentifyContentCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#reidentifyContent~0:complex'
+    name: Promise<google.privacy.dlp.v2.ReidentifyContentResponse>
+    fullName: Promise<google.privacy.dlp.v2.ReidentifyContentResponse>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentResponse:class'
+        name: google.privacy.dlp.v2.ReidentifyContentResponse
+        fullName: google.privacy.dlp.v2.ReidentifyContentResponse
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest:interface'
+    name: IUpdateDeidentifyTemplateRequest
+    fullName: google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback:type'
+    name: UpdateDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    fullName: Promise<google.privacy.dlp.v2.DeidentifyTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+    name: IUpdateInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback:type'
+    name: UpdateInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateInspectTemplate~0:complex'
+    name: Promise<google.privacy.dlp.v2.InspectTemplate>
+    fullName: Promise<google.privacy.dlp.v2.InspectTemplate>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateJobTriggerRequest:interface'
+    name: IUpdateJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IUpdateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback:type'
+    name: UpdateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateJobTrigger~0:complex'
+    name: Promise<google.privacy.dlp.v2.JobTrigger>
+    fullName: Promise<google.privacy.dlp.v2.JobTrigger>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: '>'
+        fullName: '>'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest:interface'
+    name: IUpdateStoredInfoTypeRequest
+    fullName: google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback:type'
+    name: UpdateStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService#updateStoredInfoType~0:complex'
+    name: Promise<google.privacy.dlp.v2.StoredInfoType>
+    fullName: Promise<google.privacy.dlp.v2.StoredInfoType>
+    spec.typeScript:
+      - uid: '!Promise:interface'
+        name: Promise
+        fullName: Promise
+      - name: <
+        fullName: <
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: '>'
+        fullName: '>'

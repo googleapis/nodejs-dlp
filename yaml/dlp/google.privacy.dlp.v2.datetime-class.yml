@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+    summary: Represents a DateTime.
+    name: google.privacy.dlp.v2.DateTime
+    fullName: google.privacy.dlp.v2.DateTime
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#date:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#dayOfWeek:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#time:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#timeZone:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:constructor(1)'
+    summary: Constructs a new DateTime.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IDateTime);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.create:member(1)'
+    summary: Creates a new DateTime instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IDateTime): google.privacy.dlp.v2.DateTime;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+        description: DateTime instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#date:member'
+    summary: DateTime date.
+    name: date
+    fullName: date
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public date?: (google.type.IDate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#date~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#dayOfWeek:member'
+    summary: DateTime dayOfWeek.
+    name: dayOfWeek
+    fullName: dayOfWeek
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dayOfWeek: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#dayOfWeek~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decode:member(1)'
+    summary: Decodes a DateTime message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.DateTime;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+        description: DateTime
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decodeDelimited:member(1)'
+    summary: 'Decodes a DateTime message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.DateTime;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+        description: DateTime
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode:member(1)'
+    summary: Encodes the specified DateTime message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IDateTime, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DateTime message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited:member(1)'
+    summary: 'Encodes the specified DateTime message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IDateTime, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DateTime message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.fromObject:member(1)'
+    summary: Creates a DateTime message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.DateTime;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+        description: DateTime
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#time:member'
+    summary: DateTime time.
+    name: time
+    fullName: time
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public time?: (google.type.ITimeOfDay|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#time~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#timeZone:member'
+    summary: DateTime timeZone.
+    name: timeZone
+    fullName: timeZone
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public timeZone?: (google.privacy.dlp.v2.DateTime.ITimeZone|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#timeZone~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#toJSON:member(1)'
+    summary: Converts this DateTime to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.toObject:member(1)'
+    summary: Creates a plain object from a DateTime message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.DateTime, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: DateTime
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.verify:member(1)'
+    summary: Verifies a DateTime message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+    name: IDateTime
+    fullName: google.privacy.dlp.v2.IDateTime
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+    name: DateTime
+    fullName: google.privacy.dlp.v2.DateTime
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#date~0:complex'
+    name: (google.type.IDate|null)
+    fullName: (google.type.IDate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.IDate:interface'
+        name: google.type.IDate
+        fullName: google.type.IDate
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#dayOfWeek~0:complex'
+    name: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek)
+    fullName: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#time~0:complex'
+    name: (google.type.ITimeOfDay|null)
+    fullName: (google.type.ITimeOfDay|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+        name: google.type.ITimeOfDay
+        fullName: google.type.ITimeOfDay
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime#timeZone~0:complex'
+    name: (google.privacy.dlp.v2.DateTime.ITimeZone|null)
+    fullName: (google.privacy.dlp.v2.DateTime.ITimeZone|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone:interface'
+        name: google.privacy.dlp.v2.DateTime.ITimeZone
+        fullName: google.privacy.dlp.v2.DateTime.ITimeZone
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

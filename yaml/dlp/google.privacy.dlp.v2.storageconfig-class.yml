@@ -1,0 +1,435 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+    summary: Represents a StorageConfig.
+    name: google.privacy.dlp.v2.StorageConfig
+    fullName: google.privacy.dlp.v2.StorageConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#bigQueryOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#cloudStorageOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#datastoreOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#hybridOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#timespanConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:constructor(1)'
+    summary: Constructs a new StorageConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IStorageConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#bigQueryOptions:member'
+    summary: StorageConfig bigQueryOptions.
+    name: bigQueryOptions
+    fullName: bigQueryOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public bigQueryOptions?: (google.privacy.dlp.v2.IBigQueryOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#bigQueryOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#cloudStorageOptions:member'
+    summary: StorageConfig cloudStorageOptions.
+    name: cloudStorageOptions
+    fullName: cloudStorageOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public cloudStorageOptions?: (google.privacy.dlp.v2.ICloudStorageOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#cloudStorageOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.create:member(1)'
+    summary: Creates a new StorageConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IStorageConfig): google.privacy.dlp.v2.StorageConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+        description: StorageConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#datastoreOptions:member'
+    summary: StorageConfig datastoreOptions.
+    name: datastoreOptions
+    fullName: datastoreOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public datastoreOptions?: (google.privacy.dlp.v2.IDatastoreOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#datastoreOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decode:member(1)'
+    summary: Decodes a StorageConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.StorageConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+        description: StorageConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a StorageConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.StorageConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+        description: StorageConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode:member(1)'
+    summary: Encodes the specified StorageConfig message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IStorageConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: StorageConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited:member(1)'
+    summary: 'Encodes the specified StorageConfig message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IStorageConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: StorageConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.fromObject:member(1)'
+    summary: Creates a StorageConfig message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.StorageConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+        description: StorageConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#hybridOptions:member'
+    summary: StorageConfig hybridOptions.
+    name: hybridOptions
+    fullName: hybridOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public hybridOptions?: (google.privacy.dlp.v2.IHybridOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#hybridOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#timespanConfig:member'
+    summary: StorageConfig timespanConfig.
+    name: timespanConfig
+    fullName: timespanConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public timespanConfig?: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#timespanConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#toJSON:member(1)'
+    summary: Converts this StorageConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.toObject:member(1)'
+    summary: Creates a plain object from a StorageConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.StorageConfig, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: StorageConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#type:member'
+    summary: StorageConfig type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type?: ("datastoreOptions"|"cloudStorageOptions"|"bigQueryOptions"|"hybridOptions");'
+      return:
+        type:
+          - ("datastoreOptions"|"cloudStorageOptions"|"bigQueryOptions"|"hybridOptions")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.verify:member(1)'
+    summary: Verifies a StorageConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+    name: IStorageConfig
+    fullName: google.privacy.dlp.v2.IStorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#bigQueryOptions~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryOptions|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+        name: google.privacy.dlp.v2.IBigQueryOptions
+        fullName: google.privacy.dlp.v2.IBigQueryOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#cloudStorageOptions~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStorageOptions|null)
+    fullName: (google.privacy.dlp.v2.ICloudStorageOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions:interface'
+        name: google.privacy.dlp.v2.ICloudStorageOptions
+        fullName: google.privacy.dlp.v2.ICloudStorageOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+    name: StorageConfig
+    fullName: google.privacy.dlp.v2.StorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#datastoreOptions~0:complex'
+    name: (google.privacy.dlp.v2.IDatastoreOptions|null)
+    fullName: (google.privacy.dlp.v2.IDatastoreOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions:interface'
+        name: google.privacy.dlp.v2.IDatastoreOptions
+        fullName: google.privacy.dlp.v2.IDatastoreOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#hybridOptions~0:complex'
+    name: (google.privacy.dlp.v2.IHybridOptions|null)
+    fullName: (google.privacy.dlp.v2.IHybridOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions:interface'
+        name: google.privacy.dlp.v2.IHybridOptions
+        fullName: google.privacy.dlp.v2.IHybridOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig#timespanConfig~0:complex'
+    name: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null)
+    fullName: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig:interface'
+        name: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+        fullName: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

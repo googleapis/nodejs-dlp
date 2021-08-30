@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable:interface'
+    summary: Properties of a Table.
+    name: google.privacy.dlp.v2.ITable
+    fullName: google.privacy.dlp.v2.ITable
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITable#headers:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITable#rows:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable#headers:member'
+    summary: Table headers
+    name: headers
+    fullName: headers
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'headers?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITable#headers~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable#rows:member'
+    summary: Table rows
+    name: rows
+    fullName: rows
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rows?: (google.privacy.dlp.v2.Table.IRow[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITable#rows~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable#headers~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable#rows~0:complex'
+    name: '(google.privacy.dlp.v2.Table.IRow[]|null)'
+    fullName: '(google.privacy.dlp.v2.Table.IRow[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Table.IRow:interface'
+        name: google.privacy.dlp.v2.Table.IRow
+        fullName: google.privacy.dlp.v2.Table.IRow
+      - name: '[]|null)'
+        fullName: '[]|null)'

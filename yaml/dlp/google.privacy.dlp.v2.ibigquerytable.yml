@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+    summary: Properties of a BigQueryTable.
+    name: google.privacy.dlp.v2.IBigQueryTable
+    fullName: google.privacy.dlp.v2.IBigQueryTable
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#datasetId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#projectId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#tableId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#datasetId:member'
+    summary: BigQueryTable datasetId
+    name: datasetId
+    fullName: datasetId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'datasetId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#projectId:member'
+    summary: BigQueryTable projectId
+    name: projectId
+    fullName: projectId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'projectId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable#tableId:member'
+    summary: BigQueryTable tableId
+    name: tableId
+    fullName: tableId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'tableId?: (string|null);'
+      return:
+        type:
+          - (string|null)

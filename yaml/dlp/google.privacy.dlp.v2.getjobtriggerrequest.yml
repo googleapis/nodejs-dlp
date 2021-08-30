@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+    summary: Represents a GetJobTriggerRequest.
+    name: google.privacy.dlp.v2.GetJobTriggerRequest
+    fullName: google.privacy.dlp.v2.GetJobTriggerRequest
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:constructor(1)'
+    summary: Constructs a new GetJobTriggerRequest.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IGetJobTriggerRequest);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.create:member(1)'
+    summary: Creates a new GetJobTriggerRequest instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IGetJobTriggerRequest):
+        google.privacy.dlp.v2.GetJobTriggerRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+        description: GetJobTriggerRequest instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decode:member(1)'
+    summary: Decodes a GetJobTriggerRequest message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.GetJobTriggerRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+        description: GetJobTriggerRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decodeDelimited:member(1)'
+    summary: 'Decodes a GetJobTriggerRequest message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.GetJobTriggerRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+        description: GetJobTriggerRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode:member(1)'
+    summary: >-
+      Encodes the specified GetJobTriggerRequest message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IGetJobTriggerRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: GetJobTriggerRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified GetJobTriggerRequest message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IGetJobTriggerRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: GetJobTriggerRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.fromObject:member(1)'
+    summary: >-
+      Creates a GetJobTriggerRequest message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.GetJobTriggerRequest;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+        description: GetJobTriggerRequest
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest#name:member'
+    summary: GetJobTriggerRequest name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest#toJSON:member(1)'
+    summary: Converts this GetJobTriggerRequest to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.toObject:member(1)'
+    summary: Creates a plain object from a GetJobTriggerRequest message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.GetJobTriggerRequest, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: GetJobTriggerRequest
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.verify:member(1)'
+    summary: Verifies a GetJobTriggerRequest message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+    name: IGetJobTriggerRequest
+    fullName: google.privacy.dlp.v2.IGetJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+    name: GetJobTriggerRequest
+    fullName: google.privacy.dlp.v2.GetJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

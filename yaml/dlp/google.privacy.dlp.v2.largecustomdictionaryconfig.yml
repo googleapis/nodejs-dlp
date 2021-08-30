@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+    summary: Represents a LargeCustomDictionaryConfig.
+    name: google.privacy.dlp.v2.LargeCustomDictionaryConfig
+    fullName: google.privacy.dlp.v2.LargeCustomDictionaryConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#bigQueryField:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#cloudStorageFileSet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#outputPath:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#source:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:constructor(1)'
+    summary: Constructs a new LargeCustomDictionaryConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ILargeCustomDictionaryConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#bigQueryField:member'
+    summary: LargeCustomDictionaryConfig bigQueryField.
+    name: bigQueryField
+    fullName: bigQueryField
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public bigQueryField?: (google.privacy.dlp.v2.IBigQueryField|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#bigQueryField~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#cloudStorageFileSet:member'
+    summary: LargeCustomDictionaryConfig cloudStorageFileSet.
+    name: cloudStorageFileSet
+    fullName: cloudStorageFileSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public cloudStorageFileSet?: (google.privacy.dlp.v2.ICloudStorageFileSet|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#cloudStorageFileSet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.create:member(1)'
+    summary: Creates a new LargeCustomDictionaryConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.ILargeCustomDictionaryConfig):
+        google.privacy.dlp.v2.LargeCustomDictionaryConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+        description: LargeCustomDictionaryConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decode:member(1)'
+    summary: Decodes a LargeCustomDictionaryConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.LargeCustomDictionaryConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+        description: LargeCustomDictionaryConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a LargeCustomDictionaryConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.LargeCustomDictionaryConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+        description: LargeCustomDictionaryConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode:member(1)'
+    summary: >-
+      Encodes the specified LargeCustomDictionaryConfig message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ILargeCustomDictionaryConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: LargeCustomDictionaryConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified LargeCustomDictionaryConfig message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ILargeCustomDictionaryConfig, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: LargeCustomDictionaryConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.fromObject:member(1)'
+    summary: >-
+      Creates a LargeCustomDictionaryConfig message from a plain object. Also converts values to their respective
+      internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.LargeCustomDictionaryConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+        description: LargeCustomDictionaryConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#outputPath:member'
+    summary: LargeCustomDictionaryConfig outputPath.
+    name: outputPath
+    fullName: outputPath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public outputPath?: (google.privacy.dlp.v2.ICloudStoragePath|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#outputPath~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#source:member'
+    summary: LargeCustomDictionaryConfig source.
+    name: source
+    fullName: source
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public source?: ("cloudStorageFileSet"|"bigQueryField");'
+      return:
+        type:
+          - ("cloudStorageFileSet"|"bigQueryField")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#toJSON:member(1)'
+    summary: Converts this LargeCustomDictionaryConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.toObject:member(1)'
+    summary: >-
+      Creates a plain object from a LargeCustomDictionaryConfig message. Also converts values to other types if
+      specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.LargeCustomDictionaryConfig, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: LargeCustomDictionaryConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.verify:member(1)'
+    summary: Verifies a LargeCustomDictionaryConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+    name: ILargeCustomDictionaryConfig
+    fullName: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#bigQueryField~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryField|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryField|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField:interface'
+        name: google.privacy.dlp.v2.IBigQueryField
+        fullName: google.privacy.dlp.v2.IBigQueryField
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#cloudStorageFileSet~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStorageFileSet|null)
+    fullName: (google.privacy.dlp.v2.ICloudStorageFileSet|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet:interface'
+        name: google.privacy.dlp.v2.ICloudStorageFileSet
+        fullName: google.privacy.dlp.v2.ICloudStorageFileSet
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+    name: LargeCustomDictionaryConfig
+    fullName: google.privacy.dlp.v2.LargeCustomDictionaryConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig#outputPath~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    fullName: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStoragePath:interface'
+        name: google.privacy.dlp.v2.ICloudStoragePath
+        fullName: google.privacy.dlp.v2.ICloudStoragePath
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

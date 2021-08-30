@@ -1,0 +1,164 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+    summary: Properties of a HttpRule.
+    name: google.api.IHttpRule
+    fullName: google.api.IHttpRule
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.IHttpRule#additionalBindings:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#body:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#custom:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#delete:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#get:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#patch:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#post:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#put:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#responseBody:member'
+      - '@google-cloud/dlp!google.api.IHttpRule#selector:member'
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#additionalBindings:member'
+    summary: HttpRule additionalBindings
+    name: additionalBindings
+    fullName: additionalBindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'additionalBindings?: (google.api.IHttpRule[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.IHttpRule#additionalBindings~0:complex'
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#body:member'
+    summary: HttpRule body
+    name: body
+    fullName: body
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'body?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#custom:member'
+    summary: HttpRule custom
+    name: custom
+    fullName: custom
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'custom?: (google.api.ICustomHttpPattern|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.IHttpRule#custom~0:complex'
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#delete:member'
+    summary: HttpRule delete
+    name: delete
+    fullName: delete
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '"delete"?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#get:member'
+    summary: HttpRule get
+    name: get
+    fullName: get
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'get?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#patch:member'
+    summary: HttpRule patch
+    name: patch
+    fullName: patch
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'patch?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#post:member'
+    summary: HttpRule post
+    name: post
+    fullName: post
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'post?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#put:member'
+    summary: HttpRule put
+    name: put
+    fullName: put
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'put?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#responseBody:member'
+    summary: HttpRule responseBody
+    name: responseBody
+    fullName: responseBody
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'responseBody?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#selector:member'
+    summary: HttpRule selector
+    name: selector
+    fullName: selector
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'selector?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#additionalBindings~0:complex'
+    name: '(google.api.IHttpRule[]|null)'
+    fullName: '(google.api.IHttpRule[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+        name: google.api.IHttpRule
+        fullName: google.api.IHttpRule
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.api.IHttpRule#custom~0:complex'
+    name: (google.api.ICustomHttpPattern|null)
+    fullName: (google.api.ICustomHttpPattern|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+        name: google.api.ICustomHttpPattern
+        fullName: google.api.ICustomHttpPattern
+      - name: '|null)'
+        fullName: '|null)'

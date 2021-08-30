@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+    summary: Properties of a CustomHttpPattern.
+    name: google.api.ICustomHttpPattern
+    fullName: google.api.ICustomHttpPattern
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.ICustomHttpPattern#kind:member'
+      - '@google-cloud/dlp!google.api.ICustomHttpPattern#path:member'
+  - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern#kind:member'
+    summary: CustomHttpPattern kind
+    name: kind
+    fullName: kind
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kind?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern#path:member'
+    summary: CustomHttpPattern path
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'path?: (string|null);'
+      return:
+        type:
+          - (string|null)

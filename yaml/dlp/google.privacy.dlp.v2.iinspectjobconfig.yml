@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+    summary: Properties of an InspectJobConfig.
+    name: google.privacy.dlp.v2.IInspectJobConfig
+    fullName: google.privacy.dlp.v2.IInspectJobConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#actions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectTemplateName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#storageConfig:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#actions:member'
+    summary: InspectJobConfig actions
+    name: actions
+    fullName: actions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'actions?: (google.privacy.dlp.v2.IAction[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#actions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectConfig:member'
+    summary: InspectJobConfig inspectConfig
+    name: inspectConfig
+    fullName: inspectConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectConfig?: (google.privacy.dlp.v2.IInspectConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectTemplateName:member'
+    summary: InspectJobConfig inspectTemplateName
+    name: inspectTemplateName
+    fullName: inspectTemplateName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectTemplateName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#storageConfig:member'
+    summary: InspectJobConfig storageConfig
+    name: storageConfig
+    fullName: storageConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'storageConfig?: (google.privacy.dlp.v2.IStorageConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#storageConfig~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#actions~0:complex'
+    name: '(google.privacy.dlp.v2.IAction[]|null)'
+    fullName: '(google.privacy.dlp.v2.IAction[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+        name: google.privacy.dlp.v2.IAction
+        fullName: google.privacy.dlp.v2.IAction
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#inspectConfig~0:complex'
+    name: (google.privacy.dlp.v2.IInspectConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        name: google.privacy.dlp.v2.IInspectConfig
+        fullName: google.privacy.dlp.v2.IInspectConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig#storageConfig~0:complex'
+    name: (google.privacy.dlp.v2.IStorageConfig|null)
+    fullName: (google.privacy.dlp.v2.IStorageConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+        name: google.privacy.dlp.v2.IStorageConfig
+        fullName: google.privacy.dlp.v2.IStorageConfig
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+    summary: Properties of a CryptoKey.
+    name: google.privacy.dlp.v2.ICryptoKey
+    fullName: google.privacy.dlp.v2.ICryptoKey
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#kmsWrapped:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#transient:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#unwrapped:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#kmsWrapped:member'
+    summary: CryptoKey kmsWrapped
+    name: kmsWrapped
+    fullName: kmsWrapped
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kmsWrapped?: (google.privacy.dlp.v2.IKmsWrappedCryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#kmsWrapped~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#transient:member'
+    summary: CryptoKey transient
+    name: transient
+    fullName: transient
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'transient?: (google.privacy.dlp.v2.ITransientCryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#transient~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#unwrapped:member'
+    summary: CryptoKey unwrapped
+    name: unwrapped
+    fullName: unwrapped
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'unwrapped?: (google.privacy.dlp.v2.IUnwrappedCryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#unwrapped~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#kmsWrapped~0:complex'
+    name: (google.privacy.dlp.v2.IKmsWrappedCryptoKey|null)
+    fullName: (google.privacy.dlp.v2.IKmsWrappedCryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey:interface'
+        name: google.privacy.dlp.v2.IKmsWrappedCryptoKey
+        fullName: google.privacy.dlp.v2.IKmsWrappedCryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#transient~0:complex'
+    name: (google.privacy.dlp.v2.ITransientCryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ITransientCryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransientCryptoKey:interface'
+        name: google.privacy.dlp.v2.ITransientCryptoKey
+        fullName: google.privacy.dlp.v2.ITransientCryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey#unwrapped~0:complex'
+    name: (google.privacy.dlp.v2.IUnwrappedCryptoKey|null)
+    fullName: (google.privacy.dlp.v2.IUnwrappedCryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey:interface'
+        name: google.privacy.dlp.v2.IUnwrappedCryptoKey
+        fullName: google.privacy.dlp.v2.IUnwrappedCryptoKey
+      - name: '|null)'
+        fullName: '|null)'

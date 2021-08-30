@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption:enum'
+    summary: ContentOption enum.
+    name: google.privacy.dlp.v2.ContentOption
+    fullName: google.privacy.dlp.v2.ContentOption
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_IMAGE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_TEXT:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_IMAGE:member'
+    name: CONTENT_IMAGE
+    fullName: CONTENT_IMAGE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_TEXT:member'
+    name: CONTENT_TEXT
+    fullName: CONTENT_TEXT
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption.CONTENT_UNSPECIFIED:member'
+    name: CONTENT_UNSPECIFIED
+    fullName: CONTENT_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

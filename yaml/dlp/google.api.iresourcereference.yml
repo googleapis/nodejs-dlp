@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.IResourceReference:interface'
+    summary: Properties of a ResourceReference.
+    name: google.api.IResourceReference
+    fullName: google.api.IResourceReference
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.IResourceReference#childType:member'
+      - '@google-cloud/dlp!google.api.IResourceReference#type:member'
+  - uid: '@google-cloud/dlp!google.api.IResourceReference#childType:member'
+    summary: ResourceReference childType
+    name: childType
+    fullName: childType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'childType?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IResourceReference#type:member'
+    summary: ResourceReference type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (string|null);'
+      return:
+        type:
+          - (string|null)

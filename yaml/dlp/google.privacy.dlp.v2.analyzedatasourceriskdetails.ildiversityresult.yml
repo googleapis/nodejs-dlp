@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult:interface'
+    summary: Properties of a LDiversityResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult#sensitiveValueFrequencyHistogramBuckets:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult#sensitiveValueFrequencyHistogramBuckets:member
+    summary: LDiversityResult sensitiveValueFrequencyHistogramBuckets
+    name: sensitiveValueFrequencyHistogramBuckets
+    fullName: sensitiveValueFrequencyHistogramBuckets
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        sensitiveValueFrequencyHistogramBuckets?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult#sensitiveValueFrequencyHistogramBuckets~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult#sensitiveValueFrequencyHistogramBuckets~0:complex
+    name: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket[]|null)'
+    fullName: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket:interface
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

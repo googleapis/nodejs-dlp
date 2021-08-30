@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig:interface'
+    summary: Properties of a TimePartConfig.
+    name: google.privacy.dlp.v2.ITimePartConfig
+    fullName: google.privacy.dlp.v2.ITimePartConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig#partToExtract:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig#partToExtract:member'
+    summary: TimePartConfig partToExtract
+    name: partToExtract
+    fullName: partToExtract
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        partToExtract?: (google.privacy.dlp.v2.TimePartConfig.TimePart|keyof typeof
+        google.privacy.dlp.v2.TimePartConfig.TimePart|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig#partToExtract~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig#partToExtract~0:complex'
+    name: (google.privacy.dlp.v2.TimePartConfig.TimePart|keyof typeof google.privacy.dlp.v2.TimePartConfig.TimePart|null)
+    fullName: (google.privacy.dlp.v2.TimePartConfig.TimePart|keyof typeof google.privacy.dlp.v2.TimePartConfig.TimePart|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart:enum'
+        name: google.privacy.dlp.v2.TimePartConfig.TimePart
+        fullName: google.privacy.dlp.v2.TimePartConfig.TimePart
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart:enum'
+        name: google.privacy.dlp.v2.TimePartConfig.TimePart
+        fullName: google.privacy.dlp.v2.TimePartConfig.TimePart
+      - name: '|null)'
+        fullName: '|null)'

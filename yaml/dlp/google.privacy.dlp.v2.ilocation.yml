@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation:interface'
+    summary: Properties of a Location.
+    name: google.privacy.dlp.v2.ILocation
+    fullName: google.privacy.dlp.v2.ILocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#byteRange:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#codepointRange:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#container:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#contentLocations:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#byteRange:member'
+    summary: Location byteRange
+    name: byteRange
+    fullName: byteRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'byteRange?: (google.privacy.dlp.v2.IRange|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#byteRange~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#codepointRange:member'
+    summary: Location codepointRange
+    name: codepointRange
+    fullName: codepointRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'codepointRange?: (google.privacy.dlp.v2.IRange|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#codepointRange~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#container:member'
+    summary: Location container
+    name: container
+    fullName: container
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'container?: (google.privacy.dlp.v2.IContainer|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#container~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#contentLocations:member'
+    summary: Location contentLocations
+    name: contentLocations
+    fullName: contentLocations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'contentLocations?: (google.privacy.dlp.v2.IContentLocation[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#contentLocations~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#byteRange~0:complex'
+    name: (google.privacy.dlp.v2.IRange|null)
+    fullName: (google.privacy.dlp.v2.IRange|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRange:interface'
+        name: google.privacy.dlp.v2.IRange
+        fullName: google.privacy.dlp.v2.IRange
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#codepointRange~0:complex'
+    name: (google.privacy.dlp.v2.IRange|null)
+    fullName: (google.privacy.dlp.v2.IRange|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRange:interface'
+        name: google.privacy.dlp.v2.IRange
+        fullName: google.privacy.dlp.v2.IRange
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#container~0:complex'
+    name: (google.privacy.dlp.v2.IContainer|null)
+    fullName: (google.privacy.dlp.v2.IContainer|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+        name: google.privacy.dlp.v2.IContainer
+        fullName: google.privacy.dlp.v2.IContainer
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation#contentLocations~0:complex'
+    name: '(google.privacy.dlp.v2.IContentLocation[]|null)'
+    fullName: '(google.privacy.dlp.v2.IContentLocation[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation:interface'
+        name: google.privacy.dlp.v2.IContentLocation
+        fullName: google.privacy.dlp.v2.IContentLocation
+      - name: '[]|null)'
+        fullName: '[]|null)'

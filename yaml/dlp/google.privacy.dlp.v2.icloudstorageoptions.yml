@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions:interface'
+    summary: Properties of a CloudStorageOptions.
+    name: google.privacy.dlp.v2.ICloudStorageOptions
+    fullName: google.privacy.dlp.v2.ICloudStorageOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFile:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFilePercent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileSet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#filesLimitPercent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#sampleMethod:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFile:member'
+    summary: CloudStorageOptions bytesLimitPerFile
+    name: bytesLimitPerFile
+    fullName: bytesLimitPerFile
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bytesLimitPerFile?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFile~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFilePercent:member'
+    summary: CloudStorageOptions bytesLimitPerFilePercent
+    name: bytesLimitPerFilePercent
+    fullName: bytesLimitPerFilePercent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bytesLimitPerFilePercent?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileSet:member'
+    summary: CloudStorageOptions fileSet
+    name: fileSet
+    fullName: fileSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fileSet?: (google.privacy.dlp.v2.CloudStorageOptions.IFileSet|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileSet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#filesLimitPercent:member'
+    summary: CloudStorageOptions filesLimitPercent
+    name: filesLimitPercent
+    fullName: filesLimitPercent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'filesLimitPercent?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileTypes:member'
+    summary: CloudStorageOptions fileTypes
+    name: fileTypes
+    fullName: fileTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fileTypes?: (google.privacy.dlp.v2.FileType[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#sampleMethod:member'
+    summary: CloudStorageOptions sampleMethod
+    name: sampleMethod
+    fullName: sampleMethod
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        sampleMethod?: (google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|keyof typeof
+        google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#sampleMethod~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#bytesLimitPerFile~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileSet~0:complex'
+    name: (google.privacy.dlp.v2.CloudStorageOptions.IFileSet|null)
+    fullName: (google.privacy.dlp.v2.CloudStorageOptions.IFileSet|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet:interface'
+        name: google.privacy.dlp.v2.CloudStorageOptions.IFileSet
+        fullName: google.privacy.dlp.v2.CloudStorageOptions.IFileSet
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#fileTypes~0:complex'
+    name: '(google.privacy.dlp.v2.FileType[]|null)'
+    fullName: '(google.privacy.dlp.v2.FileType[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType:enum'
+        name: google.privacy.dlp.v2.FileType
+        fullName: google.privacy.dlp.v2.FileType
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions#sampleMethod~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|null)
+    fullName: >-
+      (google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.CloudStorageOptions.SampleMethod|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+      - name: '|null)'
+        fullName: '|null)'

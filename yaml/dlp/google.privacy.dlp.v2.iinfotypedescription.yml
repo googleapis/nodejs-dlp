@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription:interface'
+    summary: Properties of an InfoTypeDescription.
+    name: google.privacy.dlp.v2.IInfoTypeDescription
+    fullName: google.privacy.dlp.v2.IInfoTypeDescription
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#displayName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#supportedBy:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#description:member'
+    summary: InfoTypeDescription description
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'description?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#displayName:member'
+    summary: InfoTypeDescription displayName
+    name: displayName
+    fullName: displayName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'displayName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#name:member'
+    summary: InfoTypeDescription name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#supportedBy:member'
+    summary: InfoTypeDescription supportedBy
+    name: supportedBy
+    fullName: supportedBy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'supportedBy?: (google.privacy.dlp.v2.InfoTypeSupportedBy[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#supportedBy~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription#supportedBy~0:complex'
+    name: '(google.privacy.dlp.v2.InfoTypeSupportedBy[]|null)'
+    fullName: '(google.privacy.dlp.v2.InfoTypeSupportedBy[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeSupportedBy:enum'
+        name: google.privacy.dlp.v2.InfoTypeSupportedBy
+        fullName: google.privacy.dlp.v2.InfoTypeSupportedBy
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,469 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+    summary: Represents an InspectConfig.
+    name: google.privacy.dlp.v2.InspectConfig
+    fullName: google.privacy.dlp.v2.InspectConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#contentOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#customInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#excludeInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#includeQuote:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#infoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#limits:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#minLikelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#ruleSet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:constructor(1)'
+    summary: Constructs a new InspectConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IInspectConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#contentOptions:member'
+    summary: InspectConfig contentOptions.
+    name: contentOptions
+    fullName: contentOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public contentOptions: google.privacy.dlp.v2.ContentOption[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#contentOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.create:member(1)'
+    summary: Creates a new InspectConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IInspectConfig): google.privacy.dlp.v2.InspectConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+        description: InspectConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#customInfoTypes:member'
+    summary: InspectConfig customInfoTypes.
+    name: customInfoTypes
+    fullName: customInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public customInfoTypes: google.privacy.dlp.v2.ICustomInfoType[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#customInfoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decode:member(1)'
+    summary: Decodes an InspectConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.InspectConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+        description: InspectConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decodeDelimited:member(1)'
+    summary: 'Decodes an InspectConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.InspectConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+        description: InspectConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode:member(1)'
+    summary: Encodes the specified InspectConfig message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IInspectConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InspectConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited:member(1)'
+    summary: 'Encodes the specified InspectConfig message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IInspectConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InspectConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#excludeInfoTypes:member'
+    summary: InspectConfig excludeInfoTypes.
+    name: excludeInfoTypes
+    fullName: excludeInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public excludeInfoTypes: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.fromObject:member(1)'
+    summary: Creates an InspectConfig message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.InspectConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+        description: InspectConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#includeQuote:member'
+    summary: InspectConfig includeQuote.
+    name: includeQuote
+    fullName: includeQuote
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public includeQuote: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#infoTypes:member'
+    summary: InspectConfig infoTypes.
+    name: infoTypes
+    fullName: infoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public infoTypes: google.privacy.dlp.v2.IInfoType[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#infoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#limits:member'
+    summary: InspectConfig limits.
+    name: limits
+    fullName: limits
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public limits?: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#limits~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#minLikelihood:member'
+    summary: InspectConfig minLikelihood.
+    name: minLikelihood
+    fullName: minLikelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public minLikelihood: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#minLikelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#ruleSet:member'
+    summary: InspectConfig ruleSet.
+    name: ruleSet
+    fullName: ruleSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public ruleSet: google.privacy.dlp.v2.IInspectionRuleSet[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#ruleSet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#toJSON:member(1)'
+    summary: Converts this InspectConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.toObject:member(1)'
+    summary: Creates a plain object from an InspectConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.InspectConfig, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: InspectConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.verify:member(1)'
+    summary: Verifies an InspectConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+    name: IInspectConfig
+    fullName: google.privacy.dlp.v2.IInspectConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#contentOptions~0:complex'
+    name: 'google.privacy.dlp.v2.ContentOption[]'
+    fullName: 'google.privacy.dlp.v2.ContentOption[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption:enum'
+        name: google.privacy.dlp.v2.ContentOption
+        fullName: google.privacy.dlp.v2.ContentOption
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+    name: InspectConfig
+    fullName: google.privacy.dlp.v2.InspectConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#customInfoTypes~0:complex'
+    name: 'google.privacy.dlp.v2.ICustomInfoType[]'
+    fullName: 'google.privacy.dlp.v2.ICustomInfoType[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+        name: google.privacy.dlp.v2.ICustomInfoType
+        fullName: google.privacy.dlp.v2.ICustomInfoType
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#infoTypes~0:complex'
+    name: 'google.privacy.dlp.v2.IInfoType[]'
+    fullName: 'google.privacy.dlp.v2.IInfoType[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#limits~0:complex'
+    name: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null)
+    fullName: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits:interface'
+        name: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+        fullName: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#minLikelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig#ruleSet~0:complex'
+    name: 'google.privacy.dlp.v2.IInspectionRuleSet[]'
+    fullName: 'google.privacy.dlp.v2.IInspectionRuleSet[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet:interface'
+        name: google.privacy.dlp.v2.IInspectionRuleSet
+        fullName: google.privacy.dlp.v2.IInspectionRuleSet
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

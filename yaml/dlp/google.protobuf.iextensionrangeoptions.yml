@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions:interface'
+    summary: Properties of an ExtensionRangeOptions.
+    name: google.protobuf.IExtensionRangeOptions
+    fullName: google.protobuf.IExtensionRangeOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions#uninterpretedOption:member'
+    summary: ExtensionRangeOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

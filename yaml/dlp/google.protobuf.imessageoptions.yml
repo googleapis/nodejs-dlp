@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions:interface'
+    summary: Properties of a MessageOptions.
+    name: google.protobuf.IMessageOptions
+    fullName: google.protobuf.IMessageOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#".google.api.resource":member'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#mapEntry:member'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#messageSetWireFormat:member'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#noStandardDescriptorAccessor:member'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#".google.api.resource":member'
+    summary: MessageOptions .google.api.resource
+    name: '".google.api.resource"'
+    fullName: '".google.api.resource"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.resource"?: (google.api.IResourceDescriptor|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMessageOptions#".google.api.resource"~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#deprecated:member'
+    summary: MessageOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#mapEntry:member'
+    summary: MessageOptions mapEntry
+    name: mapEntry
+    fullName: mapEntry
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'mapEntry?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#messageSetWireFormat:member'
+    summary: MessageOptions messageSetWireFormat
+    name: messageSetWireFormat
+    fullName: messageSetWireFormat
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'messageSetWireFormat?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#noStandardDescriptorAccessor:member'
+    summary: MessageOptions noStandardDescriptorAccessor
+    name: noStandardDescriptorAccessor
+    fullName: noStandardDescriptorAccessor
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'noStandardDescriptorAccessor?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#uninterpretedOption:member'
+    summary: MessageOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMessageOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#".google.api.resource"~0:complex'
+    name: (google.api.IResourceDescriptor|null)
+    fullName: (google.api.IResourceDescriptor|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+        name: google.api.IResourceDescriptor
+        fullName: google.api.IResourceDescriptor
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

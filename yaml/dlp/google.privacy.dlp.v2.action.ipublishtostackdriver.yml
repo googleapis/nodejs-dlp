@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToStackdriver:interface'
+    summary: Properties of a PublishToStackdriver.
+    name: google.privacy.dlp.v2.Action.IPublishToStackdriver
+    fullName: google.privacy.dlp.v2.Action.IPublishToStackdriver
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

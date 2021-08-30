@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig:interface'
+    summary: Properties of an ImageRedactionConfig.
+    name: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+    fullName: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactAllText:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactionColor:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#infoType:member'
+    summary: ImageRedactionConfig infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactAllText:member'
+    summary: ImageRedactionConfig redactAllText
+    name: redactAllText
+    fullName: redactAllText
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'redactAllText?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactionColor:member'
+    summary: ImageRedactionConfig redactionColor
+    name: redactionColor
+    fullName: redactionColor
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'redactionColor?: (google.privacy.dlp.v2.IColor|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactionColor~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig#redactionColor~0:complex'
+    name: (google.privacy.dlp.v2.IColor|null)
+    fullName: (google.privacy.dlp.v2.IColor|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor:interface'
+        name: google.privacy.dlp.v2.IColor
+        fullName: google.privacy.dlp.v2.IColor
+      - name: '|null)'
+        fullName: '|null)'

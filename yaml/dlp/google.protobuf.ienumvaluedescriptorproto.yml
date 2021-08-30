@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto:interface'
+    summary: Properties of an EnumValueDescriptorProto.
+    name: google.protobuf.IEnumValueDescriptorProto
+    fullName: google.protobuf.IEnumValueDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#number:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#options:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#name:member'
+    summary: EnumValueDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#number:member'
+    summary: EnumValueDescriptorProto number
+    name: number
+    fullName: number
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'number?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#options:member'
+    summary: EnumValueDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IEnumValueOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#options~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto#options~0:complex'
+    name: (google.protobuf.IEnumValueOptions|null)
+    fullName: (google.protobuf.IEnumValueOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumValueOptions:interface'
+        name: google.protobuf.IEnumValueOptions
+        fullName: google.protobuf.IEnumValueOptions
+      - name: '|null)'
+        fullName: '|null)'

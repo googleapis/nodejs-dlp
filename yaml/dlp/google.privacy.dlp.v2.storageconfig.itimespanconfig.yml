@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig:interface'
+    summary: Properties of a TimespanConfig.
+    name: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+    fullName: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#enableAutoPopulationOfTimespanConfig:member
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#endTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#startTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#timestampField:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#enableAutoPopulationOfTimespanConfig:member'
+    summary: TimespanConfig enableAutoPopulationOfTimespanConfig
+    name: enableAutoPopulationOfTimespanConfig
+    fullName: enableAutoPopulationOfTimespanConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'enableAutoPopulationOfTimespanConfig?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#endTime:member'
+    summary: TimespanConfig endTime
+    name: endTime
+    fullName: endTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'endTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#endTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#startTime:member'
+    summary: TimespanConfig startTime
+    name: startTime
+    fullName: startTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'startTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#startTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#timestampField:member'
+    summary: TimespanConfig timestampField
+    name: timestampField
+    fullName: timestampField
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timestampField?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#timestampField~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#endTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#startTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig#timestampField~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'

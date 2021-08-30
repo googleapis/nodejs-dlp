@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo:interface'
+    summary: Properties of a QuoteInfo.
+    name: google.privacy.dlp.v2.IQuoteInfo
+    fullName: google.privacy.dlp.v2.IQuoteInfo
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo#dateTime:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo#dateTime:member'
+    summary: QuoteInfo dateTime
+    name: dateTime
+    fullName: dateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dateTime?: (google.privacy.dlp.v2.IDateTime|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo#dateTime~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo#dateTime~0:complex'
+    name: (google.privacy.dlp.v2.IDateTime|null)
+    fullName: (google.privacy.dlp.v2.IDateTime|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+        name: google.privacy.dlp.v2.IDateTime
+        fullName: google.privacy.dlp.v2.IDateTime
+      - name: '|null)'
+        fullName: '|null)'

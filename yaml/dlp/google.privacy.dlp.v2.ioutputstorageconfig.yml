@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig:interface'
+    summary: Properties of an OutputStorageConfig.
+    name: google.privacy.dlp.v2.IOutputStorageConfig
+    fullName: google.privacy.dlp.v2.IOutputStorageConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#outputSchema:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#table:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#outputSchema:member'
+    summary: OutputStorageConfig outputSchema
+    name: outputSchema
+    fullName: outputSchema
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        outputSchema?: (google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|keyof typeof
+        google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#outputSchema~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#table:member'
+    summary: OutputStorageConfig table
+    name: table
+    fullName: table
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'table?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#table~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#outputSchema~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|keyof typeof
+      google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|null)
+    fullName: >-
+      (google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|keyof typeof
+      google.privacy.dlp.v2.OutputStorageConfig.OutputSchema|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema:enum'
+        name: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+        fullName: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema:enum'
+        name: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+        fullName: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig#table~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'

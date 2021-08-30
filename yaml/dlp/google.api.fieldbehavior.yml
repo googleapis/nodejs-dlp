@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior:enum'
+    summary: FieldBehavior enum.
+    name: google.api.FieldBehavior
+    fullName: google.api.FieldBehavior
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.FieldBehavior.FIELD_BEHAVIOR_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.api.FieldBehavior.IMMUTABLE:member'
+      - '@google-cloud/dlp!google.api.FieldBehavior.INPUT_ONLY:member'
+      - '@google-cloud/dlp!google.api.FieldBehavior.OPTIONAL:member'
+      - '@google-cloud/dlp!google.api.FieldBehavior.OUTPUT_ONLY:member'
+      - '@google-cloud/dlp!google.api.FieldBehavior.REQUIRED:member'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.FIELD_BEHAVIOR_UNSPECIFIED:member'
+    name: FIELD_BEHAVIOR_UNSPECIFIED
+    fullName: FIELD_BEHAVIOR_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.IMMUTABLE:member'
+    name: IMMUTABLE
+    fullName: IMMUTABLE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.INPUT_ONLY:member'
+    name: INPUT_ONLY
+    fullName: INPUT_ONLY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.OPTIONAL:member'
+    name: OPTIONAL
+    fullName: OPTIONAL
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.OUTPUT_ONLY:member'
+    name: OUTPUT_ONLY
+    fullName: OUTPUT_ONLY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior.REQUIRED:member'
+    name: REQUIRED
+    fullName: REQUIRED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

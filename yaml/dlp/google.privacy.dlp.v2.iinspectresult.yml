@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult:interface'
+    summary: Properties of an InspectResult.
+    name: google.privacy.dlp.v2.IInspectResult
+    fullName: google.privacy.dlp.v2.IInspectResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findings:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findingsTruncated:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findings:member'
+    summary: InspectResult findings
+    name: findings
+    fullName: findings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'findings?: (google.privacy.dlp.v2.IFinding[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findings~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findingsTruncated:member'
+    summary: InspectResult findingsTruncated
+    name: findingsTruncated
+    fullName: findingsTruncated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'findingsTruncated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult#findings~0:complex'
+    name: '(google.privacy.dlp.v2.IFinding[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFinding[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+        name: google.privacy.dlp.v2.IFinding
+        fullName: google.privacy.dlp.v2.IFinding
+      - name: '[]|null)'
+        fullName: '[]|null)'

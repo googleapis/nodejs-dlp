@@ -1,0 +1,2632 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!'
+    name: '@google-cloud/dlp'
+    fullName: '@google-cloud/dlp'
+    langs:
+      - typeScript
+    type: package
+    children:
+      - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+      - '@google-cloud/dlp!google.api.FieldBehavior:enum'
+      - '@google-cloud/dlp!google.api.Http:class'
+      - '@google-cloud/dlp!google.api.HttpRule:class'
+      - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+      - '@google-cloud/dlp!google.api.IHttp:interface'
+      - '@google-cloud/dlp!google.api.IHttpRule:interface'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+      - '@google-cloud/dlp!google.api.IResourceReference:interface'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+      - '@google-cloud/dlp!google.api.ResourceReference:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IJobNotificationEmails:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishSummaryToCscc:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToStackdriver:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.JobNotificationEmails:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishSummaryToCscc:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishToPubSub:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishToStackdriver:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.SaveFindings:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ActivateJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.CategoricalStatsHistogramBucket:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket:interface
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationHistogramBucket:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationQuasiIdValues:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues:interface
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityEquivalenceClass:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityHistogramBucket:class
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationHistogramBucket:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationQuasiIdValues:class
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityEquivalenceClass:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket:interface
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityEquivalenceClass:class
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityHistogramBucket:class
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.NumericalStatsResult:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryField:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryTable:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BoundingBox:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CancelDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharacterMaskConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageFileSet:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.FileSet:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStoragePath:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Color:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Container:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentItem:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CreateDeidentifyTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CreateDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CreateInspectTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CreateJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CreateStoredInfoTypeRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoHashConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.HotwordRule:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.LikelihoodAdjustment:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.Proximity:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.WordList:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ISurrogateType:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Regex:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.SurrogateType:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DatastoreKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DatastoreOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.TimeZone:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeleteDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeleteInspectTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeleteJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeleteStoredInfoTypeRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback:type'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DocumentLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.EntityId:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExcludeInfoTypes:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FieldId:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FieldTransformation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FinishDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FixedSizeBucketingConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetDeidentifyTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetInspectTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.GetStoredInfoTypeRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridContentItem:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectDlpJobRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectStatistics:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IActivateJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStoragePath:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IColor:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDocumentLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IEntityId:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExcludeInfoTypes:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinishDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDeidentifyTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetStoredInfoTypeRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryStats:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ImageLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IManual:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeDescription:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeStats:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeSupportedBy:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations.InfoTypeTransformation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.InfoTypeLimit:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.RequestedOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.Result:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRuleSet:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectJobConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectResult:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRange:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordSuppression:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentResponse:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceValueConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceWithInfoTypeConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStatisticalTable:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITable:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationSummary:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransientCryptoKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateJobTriggerRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Trigger:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.IPathElement:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.PathElement:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.KindExpression:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.KmsWrappedCryptoKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryStats:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Location:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Manual:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MetadataLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PartitionId:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrimitiveTransformation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.CategoricalStatsConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.DeltaPresenceEstimationConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable:class'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField:interface
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.TaggedField:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.LDiversityConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.NumericalStatsConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.QuasiId:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.QuoteInfo:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Range:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Condition:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Conditions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordSuppression:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordTransformations:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.ImageRedactionConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentResponse:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ReplaceValueConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ReplaceWithInfoTypeConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable.IQuasiIdentifierField:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable.QuasiIdentifierField:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.TimespanConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StorageMetadataLabel:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeStats:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeVersion:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredType:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Table:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Table.IRow:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Table.Row:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TableLocation:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TableOptions:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.IThrowError:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.LeaveUntransformed:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ThrowError:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult:interface'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.SummaryResult:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode:enum'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransientCryptoKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.UnwrappedCryptoKey:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.UpdateInspectTemplateRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.UpdateJobTriggerRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.UpdateStoredInfoTypeRequest:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ValueFrequency:class'
+      - '@google-cloud/dlp!google.protobuf.Any:class'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.ExtensionRange:class'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange:interface'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange:interface'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.ReservedRange:class'
+      - '@google-cloud/dlp!google.protobuf.Duration:class'
+      - '@google-cloud/dlp!google.protobuf.Empty:class'
+      - '@google-cloud/dlp!google.protobuf.EnumDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.EnumReservedRange:class'
+      - '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange:interface'
+      - '@google-cloud/dlp!google.protobuf.EnumOptions:class'
+      - '@google-cloud/dlp!google.protobuf.EnumValueDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.EnumValueOptions:class'
+      - '@google-cloud/dlp!google.protobuf.ExtensionRangeOptions:class'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label:enum'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type:enum'
+      - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorSet:class'
+      - '@google-cloud/dlp!google.protobuf.FileOptions:class'
+      - '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode:enum'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo:class'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.Annotation:class'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation:interface'
+      - '@google-cloud/dlp!google.protobuf.IAny:interface'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IDuration:interface'
+      - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IEnumOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IEnumValueOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorSet:interface'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo:interface'
+      - '@google-cloud/dlp!google.protobuf.IMessageOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IOneofDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IOneofOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+      - '@google-cloud/dlp!google.protobuf.ISourceCodeInfo:interface'
+      - '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+      - '@google-cloud/dlp!google.protobuf.MessageOptions:class'
+      - '@google-cloud/dlp!google.protobuf.MethodDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.MethodOptions:class'
+      - '@google-cloud/dlp!google.protobuf.MethodOptions.IdempotencyLevel:enum'
+      - '@google-cloud/dlp!google.protobuf.OneofDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.OneofOptions:class'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo:class'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+      - '@google-cloud/dlp!google.protobuf.Timestamp:class'
+      - '@google-cloud/dlp!google.protobuf.UninterpretedOption:class'
+      - '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart:interface'
+      - '@google-cloud/dlp!google.protobuf.UninterpretedOption.NamePart:class'
+      - '@google-cloud/dlp!google.rpc.IStatus:interface'
+      - '@google-cloud/dlp!google.rpc.Status:class'
+      - '@google-cloud/dlp!google.type.Date:class'
+      - '@google-cloud/dlp!google.type.DayOfWeek:enum'
+      - '@google-cloud/dlp!google.type.IDate:interface'
+      - '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+      - '@google-cloud/dlp!google.type.TimeOfDay:class'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type ActivateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CancelDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.CancelDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type CancelDlpJobCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type CreateDeidentifyTemplateCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.DeidentifyTemplate) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CreateDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type CreateDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type CreateInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type CreateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type CreateStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeidentifyContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeidentifyContentCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type DeidentifyContentCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.DeidentifyContentResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type DeleteDeidentifyTemplateCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type DeleteDlpJobCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type DeleteInspectTemplateCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type DeleteJobTriggerCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type DeleteStoredInfoTypeCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.FinishDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.FinishDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type FinishDlpJobCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type GetDeidentifyTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate)
+        => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.GetDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type GetDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type GetInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.GetJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type GetJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type GetStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback
+    fullName: google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type HybridInspectDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse)
+        => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type HybridInspectJobTriggerCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.HybridInspectResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.InspectContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.InspectContentCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type InspectContentCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectContentResponse) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ListDeidentifyTemplatesCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.ListDeidentifyTemplatesResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListDlpJobsCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListDlpJobsCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type ListDlpJobsCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListDlpJobsResponse) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListInfoTypesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListInfoTypesCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ListInfoTypesCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListInfoTypesResponse) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ListInspectTemplatesCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.ListInspectTemplatesResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListJobTriggersCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListJobTriggersCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ListJobTriggersCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListJobTriggersResponse)
+        => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback
+    fullName: google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ListStoredInfoTypesCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.ListStoredInfoTypesResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.RedactImageCallback
+    fullName: google.privacy.dlp.v2.DlpService.RedactImageCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type RedactImageCallback = (error: (Error|null), response?: google.privacy.dlp.v2.RedactImageResponse) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.ReidentifyContentCallback
+    fullName: google.privacy.dlp.v2.DlpService.ReidentifyContentCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type ReidentifyContentCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.ReidentifyContentResponse) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type UpdateDeidentifyTemplateCallback = (error: (Error|null), response?:
+        google.privacy.dlp.v2.DeidentifyTemplate) => void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type UpdateInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: 'type UpdateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback:type'
+    summary: Callback as used by .
+    name: google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback
+    fullName: google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback
+    langs:
+      - typeScript
+    type: typealias
+    syntax:
+      content: >-
+        type UpdateStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) =>
+        void;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+    name: google.api.CustomHttpPattern
+  - uid: '@google-cloud/dlp!google.api.FieldBehavior:enum'
+    name: google.api.FieldBehavior
+  - uid: '@google-cloud/dlp!google.api.Http:class'
+    name: google.api.Http
+  - uid: '@google-cloud/dlp!google.api.HttpRule:class'
+    name: google.api.HttpRule
+  - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+    name: google.api.ICustomHttpPattern
+  - uid: '@google-cloud/dlp!google.api.IHttp:interface'
+    name: google.api.IHttp
+  - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+    name: google.api.IHttpRule
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+    name: google.api.IResourceDescriptor
+  - uid: '@google-cloud/dlp!google.api.IResourceReference:interface'
+    name: google.api.IResourceReference
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+    name: google.api.ResourceDescriptor
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+    name: google.api.ResourceDescriptor.History
+  - uid: '@google-cloud/dlp!google.api.ResourceReference:class'
+    name: google.api.ResourceReference
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+    name: google.privacy.dlp.v2.Action
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IJobNotificationEmails:interface'
+    name: google.privacy.dlp.v2.Action.IJobNotificationEmails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+    name: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishSummaryToCscc:interface'
+    name: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub:interface'
+    name: google.privacy.dlp.v2.Action.IPublishToPubSub
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToStackdriver:interface'
+    name: google.privacy.dlp.v2.Action.IPublishToStackdriver
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings:interface'
+    name: google.privacy.dlp.v2.Action.ISaveFindings
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.JobNotificationEmails:class'
+    name: google.privacy.dlp.v2.Action.JobNotificationEmails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+    name: google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishSummaryToCscc:class'
+    name: google.privacy.dlp.v2.Action.PublishSummaryToCscc
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishToPubSub:class'
+    name: google.privacy.dlp.v2.Action.PublishToPubSub
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishToStackdriver:class'
+    name: google.privacy.dlp.v2.Action.PublishToStackdriver
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.SaveFindings:class'
+    name: google.privacy.dlp.v2.Action.SaveFindings
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ActivateJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.ActivateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.CategoricalStatsHistogramBucket:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.CategoricalStatsHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationHistogramBucket:class
+    name: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationQuasiIdValues:class
+    name: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationQuasiIdValues
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket:interface
+    name: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues:interface
+    name: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult:interface'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityEquivalenceClass:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityEquivalenceClass
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityHistogramBucket:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityHistogramBucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationHistogramBucket:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationQuasiIdValues:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationQuasiIdValues
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityEquivalenceClass:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityEquivalenceClass
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket:interface
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.ILDiversityHistogramBucket
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityEquivalenceClass:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityEquivalenceClass
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityHistogramBucket:class
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityHistogramBucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.NumericalStatsResult:class'
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.NumericalStatsResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryField:class'
+    name: google.privacy.dlp.v2.BigQueryField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+    name: google.privacy.dlp.v2.BigQueryKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+    name: google.privacy.dlp.v2.BigQueryOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+    name: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryTable:class'
+    name: google.privacy.dlp.v2.BigQueryTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BoundingBox:class'
+    name: google.privacy.dlp.v2.BoundingBox
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig:class'
+    name: google.privacy.dlp.v2.BucketingConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+    name: google.privacy.dlp.v2.BucketingConfig.Bucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+    name: google.privacy.dlp.v2.BucketingConfig.IBucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+    name: google.privacy.dlp.v2.ByteContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+    name: google.privacy.dlp.v2.ByteContentItem.BytesType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CancelDlpJobRequest:class'
+    name: google.privacy.dlp.v2.CancelDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharacterMaskConfig:class'
+    name: google.privacy.dlp.v2.CharacterMaskConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore:class'
+    name: google.privacy.dlp.v2.CharsToIgnore
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore:enum'
+    name: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageFileSet:class'
+    name: google.privacy.dlp.v2.CloudStorageFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions:class'
+    name: google.privacy.dlp.v2.CloudStorageOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.FileSet:class'
+    name: google.privacy.dlp.v2.CloudStorageOptions.FileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet:interface'
+    name: google.privacy.dlp.v2.CloudStorageOptions.IFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod:enum'
+    name: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStoragePath:class'
+    name: google.privacy.dlp.v2.CloudStoragePath
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+    name: google.privacy.dlp.v2.CloudStorageRegexFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Color:class'
+    name: google.privacy.dlp.v2.Color
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Container:class'
+    name: google.privacy.dlp.v2.Container
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentItem:class'
+    name: google.privacy.dlp.v2.ContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentLocation:class'
+    name: google.privacy.dlp.v2.ContentLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption:enum'
+    name: google.privacy.dlp.v2.ContentOption
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CreateDeidentifyTemplateRequest:class'
+    name: google.privacy.dlp.v2.CreateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CreateDlpJobRequest:class'
+    name: google.privacy.dlp.v2.CreateDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CreateInspectTemplateRequest:class'
+    name: google.privacy.dlp.v2.CreateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CreateJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.CreateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CreateStoredInfoTypeRequest:class'
+    name: google.privacy.dlp.v2.CreateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+    name: google.privacy.dlp.v2.CryptoDeterministicConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoHashConfig:class'
+    name: google.privacy.dlp.v2.CryptoHashConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoKey:class'
+    name: google.privacy.dlp.v2.CryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+    name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+    name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+    name: google.privacy.dlp.v2.CustomInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule:class'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.HotwordRule:class'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.HotwordRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.LikelihoodAdjustment:class'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.LikelihoodAdjustment
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.Proximity:class'
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.Proximity
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary:class'
+    name: google.privacy.dlp.v2.CustomInfoType.Dictionary
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.WordList:class'
+    name: google.privacy.dlp.v2.CustomInfoType.Dictionary.WordList
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+    name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.IRegex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ISurrogateType:interface'
+    name: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Regex:class'
+    name: google.privacy.dlp.v2.CustomInfoType.Regex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.SurrogateType:class'
+    name: google.privacy.dlp.v2.CustomInfoType.SurrogateType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DatastoreKey:class'
+    name: google.privacy.dlp.v2.DatastoreKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DatastoreOptions:class'
+    name: google.privacy.dlp.v2.DatastoreOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+    name: google.privacy.dlp.v2.DateShiftConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime:class'
+    name: google.privacy.dlp.v2.DateTime
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone:interface'
+    name: google.privacy.dlp.v2.DateTime.ITimeZone
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.TimeZone:class'
+    name: google.privacy.dlp.v2.DateTime.TimeZone
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyConfig:class'
+    name: google.privacy.dlp.v2.DeidentifyConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentRequest:class'
+    name: google.privacy.dlp.v2.DeidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentResponse:class'
+    name: google.privacy.dlp.v2.DeidentifyContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+    name: google.privacy.dlp.v2.DeidentifyTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest:class'
+    name: google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeleteDlpJobRequest:class'
+    name: google.privacy.dlp.v2.DeleteDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeleteInspectTemplateRequest:class'
+    name: google.privacy.dlp.v2.DeleteInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeleteJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.DeleteJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeleteStoredInfoTypeRequest:class'
+    name: google.privacy.dlp.v2.DeleteStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+    name: google.privacy.dlp.v2.DlpJob
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+    name: google.privacy.dlp.v2.DlpJob.JobState
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+    name: google.privacy.dlp.v2.DlpJobType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService:class'
+    name: google.privacy.dlp.v2.DlpService
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ActivateJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CancelDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDeidentifyTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateInspectTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.CreateStoredInfoTypeCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeidentifyContentCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyContentResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DeidentifyContentResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyContentResponse:class'
+        name: google.privacy.dlp.v2.DeidentifyContentResponse
+        fullName: google.privacy.dlp.v2.DeidentifyContentResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDeidentifyTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteInspectTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.DeleteStoredInfoTypeCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.FinishDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.protobuf.Empty) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.protobuf.Empty) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+        name: google.protobuf.Empty
+        fullName: google.protobuf.Empty
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDeidentifyTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DlpJob) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        name: google.privacy.dlp.v2.DlpJob
+        fullName: google.privacy.dlp.v2.DlpJob
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetInspectTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.GetStoredInfoTypeCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectDlpJobCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+        name: google.privacy.dlp.v2.HybridInspectResponse
+        fullName: google.privacy.dlp.v2.HybridInspectResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.HybridInspectJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+        name: google.privacy.dlp.v2.HybridInspectResponse
+        fullName: google.privacy.dlp.v2.HybridInspectResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.InspectContentCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.InspectContentResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.InspectContentResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentResponse:class'
+        name: google.privacy.dlp.v2.InspectContentResponse
+        fullName: google.privacy.dlp.v2.InspectContentResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDeidentifyTemplatesCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse) => void'
+    fullName: >-
+      (error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse) =>
+      void
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesResponse:class'
+        name: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse
+        fullName: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListDlpJobsCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListDlpJobsResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListDlpJobsResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsResponse:class'
+        name: google.privacy.dlp.v2.ListDlpJobsResponse
+        fullName: google.privacy.dlp.v2.ListDlpJobsResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInfoTypesCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListInfoTypesResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListInfoTypesResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesResponse:class'
+        name: google.privacy.dlp.v2.ListInfoTypesResponse
+        fullName: google.privacy.dlp.v2.ListInfoTypesResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListInspectTemplatesCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListInspectTemplatesResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListInspectTemplatesResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesResponse:class'
+        name: google.privacy.dlp.v2.ListInspectTemplatesResponse
+        fullName: google.privacy.dlp.v2.ListInspectTemplatesResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListJobTriggersCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListJobTriggersResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListJobTriggersResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersResponse:class'
+        name: google.privacy.dlp.v2.ListJobTriggersResponse
+        fullName: google.privacy.dlp.v2.ListJobTriggersResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ListStoredInfoTypesCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ListStoredInfoTypesResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ListStoredInfoTypesResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesResponse:class'
+        name: google.privacy.dlp.v2.ListStoredInfoTypesResponse
+        fullName: google.privacy.dlp.v2.ListStoredInfoTypesResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.RedactImageCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.RedactImageResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.RedactImageResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageResponse:class'
+        name: google.privacy.dlp.v2.RedactImageResponse
+        fullName: google.privacy.dlp.v2.RedactImageResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.ReidentifyContentCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.ReidentifyContentResponse) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.ReidentifyContentResponse) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentResponse:class'
+        name: google.privacy.dlp.v2.ReidentifyContentResponse
+        fullName: google.privacy.dlp.v2.ReidentifyContentResponse
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateDeidentifyTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        name: google.privacy.dlp.v2.DeidentifyTemplate
+        fullName: google.privacy.dlp.v2.DeidentifyTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateInspectTemplateCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+        name: google.privacy.dlp.v2.InspectTemplate
+        fullName: google.privacy.dlp.v2.InspectTemplate
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateJobTriggerCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+        name: google.privacy.dlp.v2.JobTrigger
+        fullName: google.privacy.dlp.v2.JobTrigger
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpService.UpdateStoredInfoTypeCallback~0:complex'
+    name: '(error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    fullName: '(error: (google.privacy.dlp.v2.Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void'
+    spec.typeScript:
+      - name: '(error: ('
+        fullName: '(error: ('
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        name: Error
+        fullName: google.privacy.dlp.v2.Error
+      - name: '|null), response?: '
+        fullName: '|null), response?: '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+        name: google.privacy.dlp.v2.StoredInfoType
+        fullName: google.privacy.dlp.v2.StoredInfoType
+      - name: ) => void
+        fullName: ) => void
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DocumentLocation:class'
+    name: google.privacy.dlp.v2.DocumentLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.EntityId:class'
+    name: google.privacy.dlp.v2.EntityId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+    name: google.privacy.dlp.v2.Error
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExcludeInfoTypes:class'
+    name: google.privacy.dlp.v2.ExcludeInfoTypes
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+    name: google.privacy.dlp.v2.ExclusionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FieldId:class'
+    name: google.privacy.dlp.v2.FieldId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FieldTransformation:class'
+    name: google.privacy.dlp.v2.FieldTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType:enum'
+    name: google.privacy.dlp.v2.FileType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Finding:class'
+    name: google.privacy.dlp.v2.Finding
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FinishDlpJobRequest:class'
+    name: google.privacy.dlp.v2.FinishDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FixedSizeBucketingConfig:class'
+    name: google.privacy.dlp.v2.FixedSizeBucketingConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetDeidentifyTemplateRequest:class'
+    name: google.privacy.dlp.v2.GetDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetDlpJobRequest:class'
+    name: google.privacy.dlp.v2.GetDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetInspectTemplateRequest:class'
+    name: google.privacy.dlp.v2.GetInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.GetJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.GetStoredInfoTypeRequest:class'
+    name: google.privacy.dlp.v2.GetStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridContentItem:class'
+    name: google.privacy.dlp.v2.HybridContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+    name: google.privacy.dlp.v2.HybridFindingDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectDlpJobRequest:class'
+    name: google.privacy.dlp.v2.HybridInspectDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.HybridInspectJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectResponse:class'
+    name: google.privacy.dlp.v2.HybridInspectResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridInspectStatistics:class'
+    name: google.privacy.dlp.v2.HybridInspectStatistics
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridOptions:class'
+    name: google.privacy.dlp.v2.HybridOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+    name: google.privacy.dlp.v2.IAction
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IActivateJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.IActivateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+    name: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField:interface'
+    name: google.privacy.dlp.v2.IBigQueryField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+    name: google.privacy.dlp.v2.IBigQueryKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+    name: google.privacy.dlp.v2.IBigQueryOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+    name: google.privacy.dlp.v2.IBigQueryTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox:interface'
+    name: google.privacy.dlp.v2.IBoundingBox
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig:interface'
+    name: google.privacy.dlp.v2.IBucketingConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+    name: google.privacy.dlp.v2.IByteContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.ICancelDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig:interface'
+    name: google.privacy.dlp.v2.ICharacterMaskConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore:interface'
+    name: google.privacy.dlp.v2.ICharsToIgnore
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet:interface'
+    name: google.privacy.dlp.v2.ICloudStorageFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions:interface'
+    name: google.privacy.dlp.v2.ICloudStorageOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStoragePath:interface'
+    name: google.privacy.dlp.v2.ICloudStoragePath
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+    name: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor:interface'
+    name: google.privacy.dlp.v2.IColor
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+    name: google.privacy.dlp.v2.IContainer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+    name: google.privacy.dlp.v2.IContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation:interface'
+    name: google.privacy.dlp.v2.IContentLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+    name: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.ICreateDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+    name: google.privacy.dlp.v2.ICreateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.ICreateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+    name: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+    name: google.privacy.dlp.v2.ICryptoDeterministicConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig:interface'
+    name: google.privacy.dlp.v2.ICryptoHashConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+    name: google.privacy.dlp.v2.ICryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+    name: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+    name: google.privacy.dlp.v2.ICustomInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreKey:interface'
+    name: google.privacy.dlp.v2.IDatastoreKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions:interface'
+    name: google.privacy.dlp.v2.IDatastoreOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+    name: google.privacy.dlp.v2.IDateShiftConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+    name: google.privacy.dlp.v2.IDateTime
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig:interface'
+    name: google.privacy.dlp.v2.IDeidentifyConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentRequest:interface'
+    name: google.privacy.dlp.v2.IDeidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse:interface'
+    name: google.privacy.dlp.v2.IDeidentifyContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+    name: google.privacy.dlp.v2.IDeidentifyTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IDeleteDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.IDeleteDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.IDeleteJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest:interface'
+    name: google.privacy.dlp.v2.IDeleteStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+    name: google.privacy.dlp.v2.IDlpJob
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDocumentLocation:interface'
+    name: google.privacy.dlp.v2.IDocumentLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IEntityId:interface'
+    name: google.privacy.dlp.v2.IEntityId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+    name: google.privacy.dlp.v2.IError
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExcludeInfoTypes:interface'
+    name: google.privacy.dlp.v2.IExcludeInfoTypes
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+    name: google.privacy.dlp.v2.IExclusionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+    name: google.privacy.dlp.v2.IFieldId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation:interface'
+    name: google.privacy.dlp.v2.IFieldTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+    name: google.privacy.dlp.v2.IFinding
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinishDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.IFinishDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig:interface'
+    name: google.privacy.dlp.v2.IFixedSizeBucketingConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetDeidentifyTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IGetDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.IGetDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IGetInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.IGetJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetStoredInfoTypeRequest:interface'
+    name: google.privacy.dlp.v2.IGetStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem:interface'
+    name: google.privacy.dlp.v2.IHybridContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+    name: google.privacy.dlp.v2.IHybridFindingDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+    name: google.privacy.dlp.v2.IHybridInspectDlpJobRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.IHybridInspectJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectResponse:interface'
+    name: google.privacy.dlp.v2.IHybridInspectResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics:interface'
+    name: google.privacy.dlp.v2.IHybridInspectStatistics
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions:interface'
+    name: google.privacy.dlp.v2.IHybridOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation:interface'
+    name: google.privacy.dlp.v2.IImageLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+    name: google.privacy.dlp.v2.IInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription:interface'
+    name: google.privacy.dlp.v2.IInfoTypeDescription
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats:interface'
+    name: google.privacy.dlp.v2.IInfoTypeStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations:interface'
+    name: google.privacy.dlp.v2.IInfoTypeTransformations
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+    name: google.privacy.dlp.v2.IInspectConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+    name: google.privacy.dlp.v2.IInspectContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentResponse:interface'
+    name: google.privacy.dlp.v2.IInspectContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails:interface'
+    name: google.privacy.dlp.v2.IInspectDataSourceDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+    name: google.privacy.dlp.v2.IInspectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet:interface'
+    name: google.privacy.dlp.v2.IInspectionRuleSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+    name: google.privacy.dlp.v2.IInspectJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectResult:interface'
+    name: google.privacy.dlp.v2.IInspectResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+    name: google.privacy.dlp.v2.IInspectTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger:interface'
+    name: google.privacy.dlp.v2.IJobTrigger
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+    name: google.privacy.dlp.v2.IKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression:interface'
+    name: google.privacy.dlp.v2.IKindExpression
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey:interface'
+    name: google.privacy.dlp.v2.IKmsWrappedCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+    name: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryStats:interface'
+    name: google.privacy.dlp.v2.ILargeCustomDictionaryStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesRequest:interface'
+    name: google.privacy.dlp.v2.IListDeidentifyTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse:interface'
+    name: google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+    name: google.privacy.dlp.v2.IListDlpJobsRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse:interface'
+    name: google.privacy.dlp.v2.IListDlpJobsResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+    name: google.privacy.dlp.v2.IListInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse:interface'
+    name: google.privacy.dlp.v2.IListInfoTypesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+    name: google.privacy.dlp.v2.IListInspectTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse:interface'
+    name: google.privacy.dlp.v2.IListInspectTemplatesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+    name: google.privacy.dlp.v2.IListJobTriggersRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse:interface'
+    name: google.privacy.dlp.v2.IListJobTriggersResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesRequest:interface'
+    name: google.privacy.dlp.v2.IListStoredInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse:interface'
+    name: google.privacy.dlp.v2.IListStoredInfoTypesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation:interface'
+    name: google.privacy.dlp.v2.ILocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ImageLocation:class'
+    name: google.privacy.dlp.v2.ImageLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IManual:interface'
+    name: google.privacy.dlp.v2.IManual
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation:interface'
+    name: google.privacy.dlp.v2.IMetadataLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+    name: google.privacy.dlp.v2.InfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeDescription:class'
+    name: google.privacy.dlp.v2.InfoTypeDescription
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeStats:class'
+    name: google.privacy.dlp.v2.InfoTypeStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeSupportedBy:enum'
+    name: google.privacy.dlp.v2.InfoTypeSupportedBy
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations:class'
+    name: google.privacy.dlp.v2.InfoTypeTransformations
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation:interface'
+    name: google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations.InfoTypeTransformation:class'
+    name: google.privacy.dlp.v2.InfoTypeTransformations.InfoTypeTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig:class'
+    name: google.privacy.dlp.v2.InspectConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits:class'
+    name: google.privacy.dlp.v2.InspectConfig.FindingLimits
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit:interface'
+    name: google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.InfoTypeLimit:class'
+    name: google.privacy.dlp.v2.InspectConfig.FindingLimits.InfoTypeLimit
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits:interface'
+    name: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentRequest:class'
+    name: google.privacy.dlp.v2.InspectContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectContentResponse:class'
+    name: google.privacy.dlp.v2.InspectContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails:class'
+    name: google.privacy.dlp.v2.InspectDataSourceDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions:interface'
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult:interface'
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.IResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.RequestedOptions:class'
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.RequestedOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.Result:class'
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.Result
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+    name: google.privacy.dlp.v2.InspectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRuleSet:class'
+    name: google.privacy.dlp.v2.InspectionRuleSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectJobConfig:class'
+    name: google.privacy.dlp.v2.InspectJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectResult:class'
+    name: google.privacy.dlp.v2.InspectResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectTemplate:class'
+    name: google.privacy.dlp.v2.InspectTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig:interface'
+    name: google.privacy.dlp.v2.IOutputStorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+    name: google.privacy.dlp.v2.IPartitionId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation:interface'
+    name: google.privacy.dlp.v2.IPrimitiveTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+    name: google.privacy.dlp.v2.IPrivacyMetric
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId:interface'
+    name: google.privacy.dlp.v2.IQuasiId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo:interface'
+    name: google.privacy.dlp.v2.IQuoteInfo
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRange:interface'
+    name: google.privacy.dlp.v2.IRange
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition:interface'
+    name: google.privacy.dlp.v2.IRecordCondition
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey:interface'
+    name: google.privacy.dlp.v2.IRecordKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation:interface'
+    name: google.privacy.dlp.v2.IRecordLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordSuppression:interface'
+    name: google.privacy.dlp.v2.IRecordSuppression
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations:interface'
+    name: google.privacy.dlp.v2.IRecordTransformations
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactConfig:interface'
+    name: google.privacy.dlp.v2.IRedactConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+    name: google.privacy.dlp.v2.IRedactImageRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageResponse:interface'
+    name: google.privacy.dlp.v2.IRedactImageResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentRequest:interface'
+    name: google.privacy.dlp.v2.IReidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReidentifyContentResponse:interface'
+    name: google.privacy.dlp.v2.IReidentifyContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceValueConfig:interface'
+    name: google.privacy.dlp.v2.IReplaceValueConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceWithInfoTypeConfig:interface'
+    name: google.privacy.dlp.v2.IReplaceWithInfoTypeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+    name: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+    name: google.privacy.dlp.v2.ISchedule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStatisticalTable:interface'
+    name: google.privacy.dlp.v2.IStatisticalTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+    name: google.privacy.dlp.v2.IStorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel:interface'
+    name: google.privacy.dlp.v2.IStorageMetadataLabel
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType:interface'
+    name: google.privacy.dlp.v2.IStoredInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig:interface'
+    name: google.privacy.dlp.v2.IStoredInfoTypeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats:interface'
+    name: google.privacy.dlp.v2.IStoredInfoTypeStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion:interface'
+    name: google.privacy.dlp.v2.IStoredInfoTypeVersion
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType:interface'
+    name: google.privacy.dlp.v2.IStoredType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable:interface'
+    name: google.privacy.dlp.v2.ITable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation:interface'
+    name: google.privacy.dlp.v2.ITableLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+    name: google.privacy.dlp.v2.ITableOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig:interface'
+    name: google.privacy.dlp.v2.ITimePartConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling:interface'
+    name: google.privacy.dlp.v2.ITransformationErrorHandling
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+    name: google.privacy.dlp.v2.ITransformationOverview
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationSummary:interface'
+    name: google.privacy.dlp.v2.ITransformationSummary
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransientCryptoKey:interface'
+    name: google.privacy.dlp.v2.ITransientCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey:interface'
+    name: google.privacy.dlp.v2.IUnwrappedCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IUpdateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+    name: google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateJobTriggerRequest:interface'
+    name: google.privacy.dlp.v2.IUpdateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest:interface'
+    name: google.privacy.dlp.v2.IUpdateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+    name: google.privacy.dlp.v2.IValue
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency:interface'
+    name: google.privacy.dlp.v2.IValueFrequency
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger:class'
+    name: google.privacy.dlp.v2.JobTrigger
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger:interface'
+    name: google.privacy.dlp.v2.JobTrigger.ITrigger
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status:enum'
+    name: google.privacy.dlp.v2.JobTrigger.Status
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Trigger:class'
+    name: google.privacy.dlp.v2.JobTrigger.Trigger
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+    name: google.privacy.dlp.v2.Key
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.IPathElement:interface'
+    name: google.privacy.dlp.v2.Key.IPathElement
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.PathElement:class'
+    name: google.privacy.dlp.v2.Key.PathElement
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.KindExpression:class'
+    name: google.privacy.dlp.v2.KindExpression
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.KmsWrappedCryptoKey:class'
+    name: google.privacy.dlp.v2.KmsWrappedCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryConfig:class'
+    name: google.privacy.dlp.v2.LargeCustomDictionaryConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.LargeCustomDictionaryStats:class'
+    name: google.privacy.dlp.v2.LargeCustomDictionaryStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+    name: google.privacy.dlp.v2.Likelihood
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesRequest:class'
+    name: google.privacy.dlp.v2.ListDeidentifyTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDeidentifyTemplatesResponse:class'
+    name: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsRequest:class'
+    name: google.privacy.dlp.v2.ListDlpJobsRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListDlpJobsResponse:class'
+    name: google.privacy.dlp.v2.ListDlpJobsResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+    name: google.privacy.dlp.v2.ListInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesResponse:class'
+    name: google.privacy.dlp.v2.ListInfoTypesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesRequest:class'
+    name: google.privacy.dlp.v2.ListInspectTemplatesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInspectTemplatesResponse:class'
+    name: google.privacy.dlp.v2.ListInspectTemplatesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersRequest:class'
+    name: google.privacy.dlp.v2.ListJobTriggersRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListJobTriggersResponse:class'
+    name: google.privacy.dlp.v2.ListJobTriggersResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesRequest:class'
+    name: google.privacy.dlp.v2.ListStoredInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListStoredInfoTypesResponse:class'
+    name: google.privacy.dlp.v2.ListStoredInfoTypesResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Location:class'
+    name: google.privacy.dlp.v2.Location
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Manual:class'
+    name: google.privacy.dlp.v2.Manual
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+    name: google.privacy.dlp.v2.MatchingType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataLocation:class'
+    name: google.privacy.dlp.v2.MetadataLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType:enum'
+    name: google.privacy.dlp.v2.MetadataType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig:class'
+    name: google.privacy.dlp.v2.OutputStorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema:enum'
+    name: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PartitionId:class'
+    name: google.privacy.dlp.v2.PartitionId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrimitiveTransformation:class'
+    name: google.privacy.dlp.v2.PrimitiveTransformation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+    name: google.privacy.dlp.v2.PrivacyMetric
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.CategoricalStatsConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.CategoricalStatsConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.DeltaPresenceEstimationConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.DeltaPresenceEstimationConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField:interface'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.TaggedField:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.TaggedField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.LDiversityConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.LDiversityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.NumericalStatsConfig:class'
+    name: google.privacy.dlp.v2.PrivacyMetric.NumericalStatsConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.QuasiId:class'
+    name: google.privacy.dlp.v2.QuasiId
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.QuoteInfo:class'
+    name: google.privacy.dlp.v2.QuoteInfo
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Range:class'
+    name: google.privacy.dlp.v2.Range
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition:class'
+    name: google.privacy.dlp.v2.RecordCondition
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Condition:class'
+    name: google.privacy.dlp.v2.RecordCondition.Condition
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Conditions:class'
+    name: google.privacy.dlp.v2.RecordCondition.Conditions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions:class'
+    name: google.privacy.dlp.v2.RecordCondition.Expressions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator:enum'
+    name: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition:interface'
+    name: google.privacy.dlp.v2.RecordCondition.ICondition
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions:interface'
+    name: google.privacy.dlp.v2.RecordCondition.IConditions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions:interface'
+    name: google.privacy.dlp.v2.RecordCondition.IExpressions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordKey:class'
+    name: google.privacy.dlp.v2.RecordKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordLocation:class'
+    name: google.privacy.dlp.v2.RecordLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordSuppression:class'
+    name: google.privacy.dlp.v2.RecordSuppression
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordTransformations:class'
+    name: google.privacy.dlp.v2.RecordTransformations
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactConfig:class'
+    name: google.privacy.dlp.v2.RedactConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+    name: google.privacy.dlp.v2.RedactImageRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig:interface'
+    name: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.ImageRedactionConfig:class'
+    name: google.privacy.dlp.v2.RedactImageRequest.ImageRedactionConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageResponse:class'
+    name: google.privacy.dlp.v2.RedactImageResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentRequest:class'
+    name: google.privacy.dlp.v2.ReidentifyContentRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReidentifyContentResponse:class'
+    name: google.privacy.dlp.v2.ReidentifyContentResponse
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator:enum'
+    name: google.privacy.dlp.v2.RelationalOperator
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReplaceValueConfig:class'
+    name: google.privacy.dlp.v2.ReplaceValueConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ReplaceWithInfoTypeConfig:class'
+    name: google.privacy.dlp.v2.ReplaceWithInfoTypeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+    name: google.privacy.dlp.v2.RiskAnalysisJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+    name: google.privacy.dlp.v2.Schedule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable:class'
+    name: google.privacy.dlp.v2.StatisticalTable
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable.IQuasiIdentifierField:interface'
+    name: google.privacy.dlp.v2.StatisticalTable.IQuasiIdentifierField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StatisticalTable.QuasiIdentifierField:class'
+    name: google.privacy.dlp.v2.StatisticalTable.QuasiIdentifierField
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig:class'
+    name: google.privacy.dlp.v2.StorageConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig:interface'
+    name: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.TimespanConfig:class'
+    name: google.privacy.dlp.v2.StorageConfig.TimespanConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageMetadataLabel:class'
+    name: google.privacy.dlp.v2.StorageMetadataLabel
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoType:class'
+    name: google.privacy.dlp.v2.StoredInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeConfig:class'
+    name: google.privacy.dlp.v2.StoredInfoTypeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState:enum'
+    name: google.privacy.dlp.v2.StoredInfoTypeState
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeStats:class'
+    name: google.privacy.dlp.v2.StoredInfoTypeStats
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeVersion:class'
+    name: google.privacy.dlp.v2.StoredInfoTypeVersion
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredType:class'
+    name: google.privacy.dlp.v2.StoredType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Table:class'
+    name: google.privacy.dlp.v2.Table
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Table.IRow:interface'
+    name: google.privacy.dlp.v2.Table.IRow
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Table.Row:class'
+    name: google.privacy.dlp.v2.Table.Row
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TableLocation:class'
+    name: google.privacy.dlp.v2.TableLocation
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TableOptions:class'
+    name: google.privacy.dlp.v2.TableOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig:class'
+    name: google.privacy.dlp.v2.TimePartConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart:enum'
+    name: google.privacy.dlp.v2.TimePartConfig.TimePart
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling:class'
+    name: google.privacy.dlp.v2.TransformationErrorHandling
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed:interface'
+    name: google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.IThrowError:interface'
+    name: google.privacy.dlp.v2.TransformationErrorHandling.IThrowError
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.LeaveUntransformed:class'
+    name: google.privacy.dlp.v2.TransformationErrorHandling.LeaveUntransformed
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ThrowError:class'
+    name: google.privacy.dlp.v2.TransformationErrorHandling.ThrowError
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+    name: google.privacy.dlp.v2.TransformationOverview
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary:class'
+    name: google.privacy.dlp.v2.TransformationSummary
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult:interface'
+    name: google.privacy.dlp.v2.TransformationSummary.ISummaryResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.SummaryResult:class'
+    name: google.privacy.dlp.v2.TransformationSummary.SummaryResult
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode:enum'
+    name: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransientCryptoKey:class'
+    name: google.privacy.dlp.v2.TransientCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.UnwrappedCryptoKey:class'
+    name: google.privacy.dlp.v2.UnwrappedCryptoKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest:class'
+    name: google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.UpdateInspectTemplateRequest:class'
+    name: google.privacy.dlp.v2.UpdateInspectTemplateRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.UpdateJobTriggerRequest:class'
+    name: google.privacy.dlp.v2.UpdateJobTriggerRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.UpdateStoredInfoTypeRequest:class'
+    name: google.privacy.dlp.v2.UpdateStoredInfoTypeRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+    name: google.privacy.dlp.v2.Value
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ValueFrequency:class'
+    name: google.privacy.dlp.v2.ValueFrequency
+  - uid: '@google-cloud/dlp!google.protobuf.Any:class'
+    name: google.protobuf.Any
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+    name: google.protobuf.DescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.ExtensionRange:class'
+    name: google.protobuf.DescriptorProto.ExtensionRange
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange:interface'
+    name: google.protobuf.DescriptorProto.IExtensionRange
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange:interface'
+    name: google.protobuf.DescriptorProto.IReservedRange
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.ReservedRange:class'
+    name: google.protobuf.DescriptorProto.ReservedRange
+  - uid: '@google-cloud/dlp!google.protobuf.Duration:class'
+    name: google.protobuf.Duration
+  - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+    name: google.protobuf.Empty
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto:class'
+    name: google.protobuf.EnumDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.EnumReservedRange:class'
+    name: google.protobuf.EnumDescriptorProto.EnumReservedRange
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange:interface'
+    name: google.protobuf.EnumDescriptorProto.IEnumReservedRange
+  - uid: '@google-cloud/dlp!google.protobuf.EnumOptions:class'
+    name: google.protobuf.EnumOptions
+  - uid: '@google-cloud/dlp!google.protobuf.EnumValueDescriptorProto:class'
+    name: google.protobuf.EnumValueDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.EnumValueOptions:class'
+    name: google.protobuf.EnumValueOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ExtensionRangeOptions:class'
+    name: google.protobuf.ExtensionRangeOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto:class'
+    name: google.protobuf.FieldDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label:enum'
+    name: google.protobuf.FieldDescriptorProto.Label
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type:enum'
+    name: google.protobuf.FieldDescriptorProto.Type
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask:class'
+    name: google.protobuf.FieldMask
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+    name: google.protobuf.FieldOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+    name: google.protobuf.FieldOptions.CType
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+    name: google.protobuf.FieldOptions.JSType
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+    name: google.protobuf.FileDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorSet:class'
+    name: google.protobuf.FileDescriptorSet
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions:class'
+    name: google.protobuf.FileOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode:enum'
+    name: google.protobuf.FileOptions.OptimizeMode
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo:class'
+    name: google.protobuf.GeneratedCodeInfo
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.Annotation:class'
+    name: google.protobuf.GeneratedCodeInfo.Annotation
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation:interface'
+    name: google.protobuf.GeneratedCodeInfo.IAnnotation
+  - uid: '@google-cloud/dlp!google.protobuf.IAny:interface'
+    name: google.protobuf.IAny
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+    name: google.protobuf.IDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IDuration:interface'
+    name: google.protobuf.IDuration
+  - uid: '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+    name: google.protobuf.IEmpty
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+    name: google.protobuf.IEnumDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions:interface'
+    name: google.protobuf.IEnumOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto:interface'
+    name: google.protobuf.IEnumValueDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumValueOptions:interface'
+    name: google.protobuf.IEnumValueOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions:interface'
+    name: google.protobuf.IExtensionRangeOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+    name: google.protobuf.IFieldDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+    name: google.protobuf.IFieldMask
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+    name: google.protobuf.IFieldOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+    name: google.protobuf.IFileDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorSet:interface'
+    name: google.protobuf.IFileDescriptorSet
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions:interface'
+    name: google.protobuf.IFileOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo:interface'
+    name: google.protobuf.IGeneratedCodeInfo
+  - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions:interface'
+    name: google.protobuf.IMessageOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto:interface'
+    name: google.protobuf.IMethodDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions:interface'
+    name: google.protobuf.IMethodOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IOneofDescriptorProto:interface'
+    name: google.protobuf.IOneofDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IOneofOptions:interface'
+    name: google.protobuf.IOneofOptions
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+    name: google.protobuf.IServiceDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+    name: google.protobuf.IServiceOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo:interface'
+    name: google.protobuf.ISourceCodeInfo
+  - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+    name: google.protobuf.ITimestamp
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+    name: google.protobuf.IUninterpretedOption
+  - uid: '@google-cloud/dlp!google.protobuf.MessageOptions:class'
+    name: google.protobuf.MessageOptions
+  - uid: '@google-cloud/dlp!google.protobuf.MethodDescriptorProto:class'
+    name: google.protobuf.MethodDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.MethodOptions:class'
+    name: google.protobuf.MethodOptions
+  - uid: '@google-cloud/dlp!google.protobuf.MethodOptions.IdempotencyLevel:enum'
+    name: google.protobuf.MethodOptions.IdempotencyLevel
+  - uid: '@google-cloud/dlp!google.protobuf.OneofDescriptorProto:class'
+    name: google.protobuf.OneofDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.OneofOptions:class'
+    name: google.protobuf.OneofOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+    name: google.protobuf.ServiceDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+    name: google.protobuf.ServiceOptions
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo:class'
+    name: google.protobuf.SourceCodeInfo
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+    name: google.protobuf.SourceCodeInfo.ILocation
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+    name: google.protobuf.SourceCodeInfo.Location
+  - uid: '@google-cloud/dlp!google.protobuf.Timestamp:class'
+    name: google.protobuf.Timestamp
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption:class'
+    name: google.protobuf.UninterpretedOption
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart:interface'
+    name: google.protobuf.UninterpretedOption.INamePart
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.NamePart:class'
+    name: google.protobuf.UninterpretedOption.NamePart
+  - uid: '@google-cloud/dlp!google.rpc.IStatus:interface'
+    name: google.rpc.IStatus
+  - uid: '@google-cloud/dlp!google.rpc.Status:class'
+    name: google.rpc.Status
+  - uid: '@google-cloud/dlp!google.type.Date:class'
+    name: google.type.Date
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+    name: google.type.DayOfWeek
+  - uid: '@google-cloud/dlp!google.type.IDate:interface'
+    name: google.type.IDate
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+    name: google.type.ITimeOfDay
+  - uid: '@google-cloud/dlp!google.type.TimeOfDay:class'
+    name: google.type.TimeOfDay

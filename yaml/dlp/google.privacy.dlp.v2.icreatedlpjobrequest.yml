@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest:interface'
+    summary: Properties of a CreateDlpJobRequest.
+    name: google.privacy.dlp.v2.ICreateDlpJobRequest
+    fullName: google.privacy.dlp.v2.ICreateDlpJobRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#inspectJob:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#jobId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#riskJob:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#inspectJob:member'
+    summary: CreateDlpJobRequest inspectJob
+    name: inspectJob
+    fullName: inspectJob
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectJob?: (google.privacy.dlp.v2.IInspectJobConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#inspectJob~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#jobId:member'
+    summary: CreateDlpJobRequest jobId
+    name: jobId
+    fullName: jobId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#locationId:member'
+    summary: CreateDlpJobRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#parent:member'
+    summary: CreateDlpJobRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#riskJob:member'
+    summary: CreateDlpJobRequest riskJob
+    name: riskJob
+    fullName: riskJob
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'riskJob?: (google.privacy.dlp.v2.IRiskAnalysisJobConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#riskJob~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#inspectJob~0:complex'
+    name: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+        name: google.privacy.dlp.v2.IInspectJobConfig
+        fullName: google.privacy.dlp.v2.IInspectJobConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDlpJobRequest#riskJob~0:complex'
+    name: (google.privacy.dlp.v2.IRiskAnalysisJobConfig|null)
+    fullName: (google.privacy.dlp.v2.IRiskAnalysisJobConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+        name: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+        fullName: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+      - name: '|null)'
+        fullName: '|null)'

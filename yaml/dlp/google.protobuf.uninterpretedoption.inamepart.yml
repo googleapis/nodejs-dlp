@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart:interface'
+    summary: Properties of a NamePart.
+    name: google.protobuf.UninterpretedOption.INamePart
+    fullName: google.protobuf.UninterpretedOption.INamePart
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart#isExtension:member'
+      - '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart#namePart:member'
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart#isExtension:member'
+    summary: NamePart isExtension
+    name: isExtension
+    fullName: isExtension
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'isExtension: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart#namePart:member'
+    summary: NamePart namePart
+    name: namePart
+    fullName: namePart
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'namePart: string;'
+      return:
+        type:
+          - string

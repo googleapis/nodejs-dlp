@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions:interface'
+    summary: Properties of a Conditions.
+    name: google.privacy.dlp.v2.RecordCondition.IConditions
+    fullName: google.privacy.dlp.v2.RecordCondition.IConditions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions#conditions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions#conditions:member'
+    summary: Conditions conditions
+    name: conditions
+    fullName: conditions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'conditions?: (google.privacy.dlp.v2.RecordCondition.ICondition[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions#conditions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions#conditions~0:complex'
+    name: '(google.privacy.dlp.v2.RecordCondition.ICondition[]|null)'
+    fullName: '(google.privacy.dlp.v2.RecordCondition.ICondition[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition:interface'
+        name: google.privacy.dlp.v2.RecordCondition.ICondition
+        fullName: google.privacy.dlp.v2.RecordCondition.ICondition
+      - name: '[]|null)'
+        fullName: '[]|null)'

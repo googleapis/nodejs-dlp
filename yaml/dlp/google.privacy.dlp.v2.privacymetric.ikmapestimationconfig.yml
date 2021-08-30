@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig:interface'
+    summary: Properties of a KMapEstimationConfig.
+    name: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#auxiliaryTables:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#quasiIds:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#regionCode:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#auxiliaryTables:member'
+    summary: KMapEstimationConfig auxiliaryTables
+    name: auxiliaryTables
+    fullName: auxiliaryTables
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'auxiliaryTables?: (google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#auxiliaryTables~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#quasiIds:member'
+    summary: KMapEstimationConfig quasiIds
+    name: quasiIds
+    fullName: quasiIds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIds?: (google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#quasiIds~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#regionCode:member'
+    summary: KMapEstimationConfig regionCode
+    name: regionCode
+    fullName: regionCode
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regionCode?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#auxiliaryTables~0:complex'
+    name: '(google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable[]|null)'
+    fullName: '(google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable
+        fullName: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.IAuxiliaryTable
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig#quasiIds~0:complex'
+    name: '(google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField[]|null)'
+    fullName: '(google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField
+        fullName: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.ITaggedField
+      - name: '[]|null)'
+        fullName: '[]|null)'

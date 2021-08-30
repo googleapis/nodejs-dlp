@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation:interface'
+    summary: Properties of an Annotation.
+    name: google.protobuf.GeneratedCodeInfo.IAnnotation
+    fullName: google.protobuf.GeneratedCodeInfo.IAnnotation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#begin:member'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#end:member'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#path:member'
+      - '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#sourceFile:member'
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#begin:member'
+    summary: Annotation begin
+    name: begin
+    fullName: begin
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'begin?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#end:member'
+    summary: Annotation end
+    name: end
+    fullName: end
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'end?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#path:member'
+    summary: Annotation path
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'path?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation#sourceFile:member'
+    summary: Annotation sourceFile
+    name: sourceFile
+    fullName: sourceFile
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'sourceFile?: (string|null);'
+      return:
+        type:
+          - (string|null)

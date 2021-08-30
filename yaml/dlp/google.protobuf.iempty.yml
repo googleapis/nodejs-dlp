@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+    summary: Properties of an Empty.
+    name: google.protobuf.IEmpty
+    fullName: google.protobuf.IEmpty
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

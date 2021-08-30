@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IManual:interface'
+    summary: Properties of a Manual.
+    name: google.privacy.dlp.v2.IManual
+    fullName: google.privacy.dlp.v2.IManual
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

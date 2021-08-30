@@ -1,0 +1,392 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+    summary: Represents a ResourceDescriptor.
+    name: google.api.ResourceDescriptor
+    fullName: google.api.ResourceDescriptor
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.ResourceDescriptor:constructor(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.create:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.decode:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.encode:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.fromObject:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#history:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#nameField:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#pattern:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#plural:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#singular:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#toJSON:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.toObject:member(1)'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor#type:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor:constructor(1)'
+    summary: Constructs a new ResourceDescriptor.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.api.IResourceDescriptor);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.create:member(1)'
+    summary: Creates a new ResourceDescriptor instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.api.IResourceDescriptor): google.api.ResourceDescriptor;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+        description: ResourceDescriptor instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.decode:member(1)'
+    summary: Decodes a ResourceDescriptor message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.ResourceDescriptor;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+        description: ResourceDescriptor
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.decodeDelimited:member(1)'
+    summary: 'Decodes a ResourceDescriptor message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.ResourceDescriptor;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+        description: ResourceDescriptor
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encode:member(1)'
+    summary: Encodes the specified ResourceDescriptor message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.api.IResourceDescriptor, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ResourceDescriptor message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited:member(1)'
+    summary: 'Encodes the specified ResourceDescriptor message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.api.IResourceDescriptor, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ResourceDescriptor message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.fromObject:member(1)'
+    summary: Creates a ResourceDescriptor message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.api.ResourceDescriptor;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+        description: ResourceDescriptor
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#history:member'
+    summary: ResourceDescriptor history.
+    name: history
+    fullName: history
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public history: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.ResourceDescriptor#history~0:complex'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#nameField:member'
+    summary: ResourceDescriptor nameField.
+    name: nameField
+    fullName: nameField
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public nameField: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#pattern:member'
+    summary: ResourceDescriptor pattern.
+    name: pattern
+    fullName: pattern
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public pattern: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#plural:member'
+    summary: ResourceDescriptor plural.
+    name: plural
+    fullName: plural
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public plural: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#singular:member'
+    summary: ResourceDescriptor singular.
+    name: singular
+    fullName: singular
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public singular: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#toJSON:member(1)'
+    summary: Converts this ResourceDescriptor to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.toObject:member(1)'
+    summary: Creates a plain object from a ResourceDescriptor message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.api.ResourceDescriptor, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ResourceDescriptor
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.api.ResourceDescriptor.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#type:member'
+    summary: ResourceDescriptor type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.verify:member(1)'
+    summary: Verifies a ResourceDescriptor message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+    name: IResourceDescriptor
+    fullName: google.api.IResourceDescriptor
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor:class'
+    name: ResourceDescriptor
+    fullName: google.api.ResourceDescriptor
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor#history~0:complex'
+    name: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History)
+    fullName: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+        name: google.api.ResourceDescriptor.History
+        fullName: google.api.ResourceDescriptor.History
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+        name: google.api.ResourceDescriptor.History
+        fullName: google.api.ResourceDescriptor.History
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

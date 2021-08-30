@@ -1,0 +1,369 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+    summary: Represents a ServiceDescriptorProto.
+    name: google.protobuf.ServiceDescriptorProto
+    fullName: google.protobuf.ServiceDescriptorProto
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#method:member'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:constructor(1)'
+    summary: Constructs a new ServiceDescriptorProto.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IServiceDescriptorProto);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.create:member(1)'
+    summary: Creates a new ServiceDescriptorProto instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.protobuf.IServiceDescriptorProto):
+        google.protobuf.ServiceDescriptorProto;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+        description: ServiceDescriptorProto instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decode:member(1)'
+    summary: Decodes a ServiceDescriptorProto message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.protobuf.ServiceDescriptorProto;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+        description: ServiceDescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decodeDelimited:member(1)'
+    summary: 'Decodes a ServiceDescriptorProto message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.ServiceDescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+        description: ServiceDescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode:member(1)'
+    summary: >-
+      Encodes the specified ServiceDescriptorProto message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.protobuf.IServiceDescriptorProto, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ServiceDescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified ServiceDescriptorProto message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.IServiceDescriptorProto, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ServiceDescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.fromObject:member(1)'
+    summary: >-
+      Creates a ServiceDescriptorProto message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.ServiceDescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+        description: ServiceDescriptorProto
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#method:member'
+    summary: ServiceDescriptorProto method.
+    name: method
+    fullName: method
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public method: google.protobuf.IMethodDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#method~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#name:member'
+    summary: ServiceDescriptorProto name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#options:member'
+    summary: ServiceDescriptorProto options.
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public options?: (google.protobuf.IServiceOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#toJSON:member(1)'
+    summary: Converts this ServiceDescriptorProto to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.toObject:member(1)'
+    summary: Creates a plain object from a ServiceDescriptorProto message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.ServiceDescriptorProto, options?: $protobuf.IConversionOptions):
+        { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ServiceDescriptorProto
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.verify:member(1)'
+    summary: Verifies a ServiceDescriptorProto message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+    name: IServiceDescriptorProto
+    fullName: google.protobuf.IServiceDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto:class'
+    name: ServiceDescriptorProto
+    fullName: google.protobuf.ServiceDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#method~0:complex'
+    name: 'google.protobuf.IMethodDescriptorProto[]'
+    fullName: 'google.protobuf.IMethodDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto:interface'
+        name: google.protobuf.IMethodDescriptorProto
+        fullName: google.protobuf.IMethodDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto#options~0:complex'
+    name: (google.protobuf.IServiceOptions|null)
+    fullName: (google.protobuf.IServiceOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+        name: google.protobuf.IServiceOptions
+        fullName: google.protobuf.IServiceOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceDescriptorProto.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

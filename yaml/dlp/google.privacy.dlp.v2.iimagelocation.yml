@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation:interface'
+    summary: Properties of an ImageLocation.
+    name: google.privacy.dlp.v2.IImageLocation
+    fullName: google.privacy.dlp.v2.IImageLocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation#boundingBoxes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation#boundingBoxes:member'
+    summary: ImageLocation boundingBoxes
+    name: boundingBoxes
+    fullName: boundingBoxes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'boundingBoxes?: (google.privacy.dlp.v2.IBoundingBox[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation#boundingBoxes~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation#boundingBoxes~0:complex'
+    name: '(google.privacy.dlp.v2.IBoundingBox[]|null)'
+    fullName: '(google.privacy.dlp.v2.IBoundingBox[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox:interface'
+        name: google.privacy.dlp.v2.IBoundingBox
+        fullName: google.privacy.dlp.v2.IBoundingBox
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,351 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+    summary: Represents a CloudStorageRegexFileSet.
+    name: google.privacy.dlp.v2.CloudStorageRegexFileSet
+    fullName: google.privacy.dlp.v2.CloudStorageRegexFileSet
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#bucketName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#excludeRegex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#includeRegex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:constructor(1)'
+    summary: Constructs a new CloudStorageRegexFileSet.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ICloudStorageRegexFileSet);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#bucketName:member'
+    summary: CloudStorageRegexFileSet bucketName.
+    name: bucketName
+    fullName: bucketName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public bucketName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.create:member(1)'
+    summary: Creates a new CloudStorageRegexFileSet instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.ICloudStorageRegexFileSet):
+        google.privacy.dlp.v2.CloudStorageRegexFileSet;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+        description: CloudStorageRegexFileSet instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decode:member(1)'
+    summary: Decodes a CloudStorageRegexFileSet message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.CloudStorageRegexFileSet;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+        description: CloudStorageRegexFileSet
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decodeDelimited:member(1)'
+    summary: 'Decodes a CloudStorageRegexFileSet message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.CloudStorageRegexFileSet;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+        description: CloudStorageRegexFileSet
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode:member(1)'
+    summary: >-
+      Encodes the specified CloudStorageRegexFileSet message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ICloudStorageRegexFileSet, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CloudStorageRegexFileSet message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified CloudStorageRegexFileSet message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ICloudStorageRegexFileSet, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CloudStorageRegexFileSet message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#excludeRegex:member'
+    summary: CloudStorageRegexFileSet excludeRegex.
+    name: excludeRegex
+    fullName: excludeRegex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public excludeRegex: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.fromObject:member(1)'
+    summary: >-
+      Creates a CloudStorageRegexFileSet message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.CloudStorageRegexFileSet;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+        description: CloudStorageRegexFileSet
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#includeRegex:member'
+    summary: CloudStorageRegexFileSet includeRegex.
+    name: includeRegex
+    fullName: includeRegex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public includeRegex: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet#toJSON:member(1)'
+    summary: Converts this CloudStorageRegexFileSet to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.toObject:member(1)'
+    summary: Creates a plain object from a CloudStorageRegexFileSet message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.CloudStorageRegexFileSet, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: CloudStorageRegexFileSet
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.verify:member(1)'
+    summary: Verifies a CloudStorageRegexFileSet message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+    name: ICloudStorageRegexFileSet
+    fullName: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet:class'
+    name: CloudStorageRegexFileSet
+    fullName: google.privacy.dlp.v2.CloudStorageRegexFileSet
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageRegexFileSet.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

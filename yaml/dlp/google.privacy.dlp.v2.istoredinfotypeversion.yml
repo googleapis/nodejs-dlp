@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion:interface'
+    summary: Properties of a StoredInfoTypeVersion.
+    name: google.privacy.dlp.v2.IStoredInfoTypeVersion
+    fullName: google.privacy.dlp.v2.IStoredInfoTypeVersion
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#config:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#errors:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#state:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#stats:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#config:member'
+    summary: StoredInfoTypeVersion config
+    name: config
+    fullName: config
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'config?: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#config~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#createTime:member'
+    summary: StoredInfoTypeVersion createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#errors:member'
+    summary: StoredInfoTypeVersion errors
+    name: errors
+    fullName: errors
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'errors?: (google.privacy.dlp.v2.IError[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#errors~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#state:member'
+    summary: StoredInfoTypeVersion state
+    name: state
+    fullName: state
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'state?: (google.privacy.dlp.v2.StoredInfoTypeState|keyof typeof google.privacy.dlp.v2.StoredInfoTypeState|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#state~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#stats:member'
+    summary: StoredInfoTypeVersion stats
+    name: stats
+    fullName: stats
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'stats?: (google.privacy.dlp.v2.IStoredInfoTypeStats|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#stats~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#config~0:complex'
+    name: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null)
+    fullName: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig:interface'
+        name: google.privacy.dlp.v2.IStoredInfoTypeConfig
+        fullName: google.privacy.dlp.v2.IStoredInfoTypeConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#errors~0:complex'
+    name: '(google.privacy.dlp.v2.IError[]|null)'
+    fullName: '(google.privacy.dlp.v2.IError[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        name: google.privacy.dlp.v2.IError
+        fullName: google.privacy.dlp.v2.IError
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#state~0:complex'
+    name: (google.privacy.dlp.v2.StoredInfoTypeState|keyof typeof google.privacy.dlp.v2.StoredInfoTypeState|null)
+    fullName: (google.privacy.dlp.v2.StoredInfoTypeState|keyof typeof google.privacy.dlp.v2.StoredInfoTypeState|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState:enum'
+        name: google.privacy.dlp.v2.StoredInfoTypeState
+        fullName: google.privacy.dlp.v2.StoredInfoTypeState
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState:enum'
+        name: google.privacy.dlp.v2.StoredInfoTypeState
+        fullName: google.privacy.dlp.v2.StoredInfoTypeState
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion#stats~0:complex'
+    name: (google.privacy.dlp.v2.IStoredInfoTypeStats|null)
+    fullName: (google.privacy.dlp.v2.IStoredInfoTypeStats|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats:interface'
+        name: google.privacy.dlp.v2.IStoredInfoTypeStats
+        fullName: google.privacy.dlp.v2.IStoredInfoTypeStats
+      - name: '|null)'
+        fullName: '|null)'

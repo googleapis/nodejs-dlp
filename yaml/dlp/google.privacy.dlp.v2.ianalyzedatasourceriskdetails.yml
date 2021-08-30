@@ -1,0 +1,207 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+    summary: Properties of an AnalyzeDataSourceRiskDetails.
+    name: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+    fullName: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#categoricalStatsResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kAnonymityResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kMapEstimationResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#lDiversityResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#numericalStatsResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedPrivacyMetric:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedSourceTable:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#categoricalStatsResult:member'
+    summary: AnalyzeDataSourceRiskDetails categoricalStatsResult
+    name: categoricalStatsResult
+    fullName: categoricalStatsResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'categoricalStatsResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#categoricalStatsResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult:member'
+    summary: AnalyzeDataSourceRiskDetails deltaPresenceEstimationResult
+    name: deltaPresenceEstimationResult
+    fullName: deltaPresenceEstimationResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        deltaPresenceEstimationResult?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult~0:complex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kAnonymityResult:member'
+    summary: AnalyzeDataSourceRiskDetails kAnonymityResult
+    name: kAnonymityResult
+    fullName: kAnonymityResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kAnonymityResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kAnonymityResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kMapEstimationResult:member'
+    summary: AnalyzeDataSourceRiskDetails kMapEstimationResult
+    name: kMapEstimationResult
+    fullName: kMapEstimationResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kMapEstimationResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kMapEstimationResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#lDiversityResult:member'
+    summary: AnalyzeDataSourceRiskDetails lDiversityResult
+    name: lDiversityResult
+    fullName: lDiversityResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lDiversityResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#lDiversityResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#numericalStatsResult:member'
+    summary: AnalyzeDataSourceRiskDetails numericalStatsResult
+    name: numericalStatsResult
+    fullName: numericalStatsResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'numericalStatsResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#numericalStatsResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedPrivacyMetric:member'
+    summary: AnalyzeDataSourceRiskDetails requestedPrivacyMetric
+    name: requestedPrivacyMetric
+    fullName: requestedPrivacyMetric
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'requestedPrivacyMetric?: (google.privacy.dlp.v2.IPrivacyMetric|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedPrivacyMetric~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedSourceTable:member'
+    summary: AnalyzeDataSourceRiskDetails requestedSourceTable
+    name: requestedSourceTable
+    fullName: requestedSourceTable
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'requestedSourceTable?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedSourceTable~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#categoricalStatsResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kAnonymityResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#kMapEstimationResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#lDiversityResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#numericalStatsResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedPrivacyMetric~0:complex'
+    name: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    fullName: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        name: google.privacy.dlp.v2.IPrivacyMetric
+        fullName: google.privacy.dlp.v2.IPrivacyMetric
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails#requestedSourceTable~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'

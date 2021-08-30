@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse:interface'
+    summary: Properties of a DeidentifyContentResponse.
+    name: google.privacy.dlp.v2.IDeidentifyContentResponse
+    fullName: google.privacy.dlp.v2.IDeidentifyContentResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#item:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#overview:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#item:member'
+    summary: DeidentifyContentResponse item
+    name: item
+    fullName: item
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'item?: (google.privacy.dlp.v2.IContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#item~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#overview:member'
+    summary: DeidentifyContentResponse overview
+    name: overview
+    fullName: overview
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'overview?: (google.privacy.dlp.v2.ITransformationOverview|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#overview~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#item~0:complex'
+    name: (google.privacy.dlp.v2.IContentItem|null)
+    fullName: (google.privacy.dlp.v2.IContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+        name: google.privacy.dlp.v2.IContentItem
+        fullName: google.privacy.dlp.v2.IContentItem
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyContentResponse#overview~0:complex'
+    name: (google.privacy.dlp.v2.ITransformationOverview|null)
+    fullName: (google.privacy.dlp.v2.ITransformationOverview|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+        name: google.privacy.dlp.v2.ITransformationOverview
+        fullName: google.privacy.dlp.v2.ITransformationOverview
+      - name: '|null)'
+        fullName: '|null)'

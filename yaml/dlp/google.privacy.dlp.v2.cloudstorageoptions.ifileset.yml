@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet:interface'
+    summary: Properties of a FileSet.
+    name: google.privacy.dlp.v2.CloudStorageOptions.IFileSet
+    fullName: google.privacy.dlp.v2.CloudStorageOptions.IFileSet
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#regexFileSet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#url:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#regexFileSet:member'
+    summary: FileSet regexFileSet
+    name: regexFileSet
+    fullName: regexFileSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regexFileSet?: (google.privacy.dlp.v2.ICloudStorageRegexFileSet|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#regexFileSet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#url:member'
+    summary: FileSet url
+    name: url
+    fullName: url
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'url?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.IFileSet#regexFileSet~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStorageRegexFileSet|null)
+    fullName: (google.privacy.dlp.v2.ICloudStorageRegexFileSet|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+        name: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+        fullName: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+    summary: Properties of a DeidentifyTemplate.
+    name: google.privacy.dlp.v2.IDeidentifyTemplate
+    fullName: google.privacy.dlp.v2.IDeidentifyTemplate
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#deidentifyConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#displayName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#updateTime:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#createTime:member'
+    summary: DeidentifyTemplate createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#deidentifyConfig:member'
+    summary: DeidentifyTemplate deidentifyConfig
+    name: deidentifyConfig
+    fullName: deidentifyConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deidentifyConfig?: (google.privacy.dlp.v2.IDeidentifyConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#deidentifyConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#description:member'
+    summary: DeidentifyTemplate description
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'description?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#displayName:member'
+    summary: DeidentifyTemplate displayName
+    name: displayName
+    fullName: displayName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'displayName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#name:member'
+    summary: DeidentifyTemplate name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#updateTime:member'
+    summary: DeidentifyTemplate updateTime
+    name: updateTime
+    fullName: updateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'updateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#updateTime~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#deidentifyConfig~0:complex'
+    name: (google.privacy.dlp.v2.IDeidentifyConfig|null)
+    fullName: (google.privacy.dlp.v2.IDeidentifyConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig:interface'
+        name: google.privacy.dlp.v2.IDeidentifyConfig
+        fullName: google.privacy.dlp.v2.IDeidentifyConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate#updateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'

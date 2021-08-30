@@ -1,0 +1,502 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+    summary: Represents a DescriptorProto.
+    name: google.protobuf.DescriptorProto
+    fullName: google.protobuf.DescriptorProto
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#enumType:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#extension:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#extensionRange:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#field:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#nestedType:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#oneofDecl:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedName:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedRange:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto:constructor(1)'
+    summary: Constructs a new DescriptorProto.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IDescriptorProto);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.create:member(1)'
+    summary: Creates a new DescriptorProto instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IDescriptorProto): google.protobuf.DescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+        description: DescriptorProto instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.decode:member(1)'
+    summary: Decodes a DescriptorProto message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.DescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+        description: DescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.decodeDelimited:member(1)'
+    summary: 'Decodes a DescriptorProto message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.DescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+        description: DescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encode:member(1)'
+    summary: Encodes the specified DescriptorProto message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.protobuf.IDescriptorProto, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited:member(1)'
+    summary: 'Encodes the specified DescriptorProto message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.IDescriptorProto, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#enumType:member'
+    summary: DescriptorProto enumType.
+    name: enumType
+    fullName: enumType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public enumType: google.protobuf.IEnumDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#enumType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#extension:member'
+    summary: DescriptorProto extension.
+    name: extension
+    fullName: extension
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public extension: google.protobuf.IFieldDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#extension~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#extensionRange:member'
+    summary: DescriptorProto extensionRange.
+    name: extensionRange
+    fullName: extensionRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public extensionRange: google.protobuf.DescriptorProto.IExtensionRange[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#extensionRange~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#field:member'
+    summary: DescriptorProto field.
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public field: google.protobuf.IFieldDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#field~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.fromObject:member(1)'
+    summary: Creates a DescriptorProto message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.DescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+        description: DescriptorProto
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#name:member'
+    summary: DescriptorProto name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#nestedType:member'
+    summary: DescriptorProto nestedType.
+    name: nestedType
+    fullName: nestedType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public nestedType: google.protobuf.IDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#nestedType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#oneofDecl:member'
+    summary: DescriptorProto oneofDecl.
+    name: oneofDecl
+    fullName: oneofDecl
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public oneofDecl: google.protobuf.IOneofDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#oneofDecl~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#options:member'
+    summary: DescriptorProto options.
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public options?: (google.protobuf.IMessageOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedName:member'
+    summary: DescriptorProto reservedName.
+    name: reservedName
+    fullName: reservedName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public reservedName: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedRange:member'
+    summary: DescriptorProto reservedRange.
+    name: reservedRange
+    fullName: reservedRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public reservedRange: google.protobuf.DescriptorProto.IReservedRange[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedRange~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#toJSON:member(1)'
+    summary: Converts this DescriptorProto to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.toObject:member(1)'
+    summary: Creates a plain object from a DescriptorProto message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.DescriptorProto, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: DescriptorProto
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.DescriptorProto.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.verify:member(1)'
+    summary: Verifies a DescriptorProto message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+    name: IDescriptorProto
+    fullName: google.protobuf.IDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto:class'
+    name: DescriptorProto
+    fullName: google.protobuf.DescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#enumType~0:complex'
+    name: 'google.protobuf.IEnumDescriptorProto[]'
+    fullName: 'google.protobuf.IEnumDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+        name: google.protobuf.IEnumDescriptorProto
+        fullName: google.protobuf.IEnumDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#extension~0:complex'
+    name: 'google.protobuf.IFieldDescriptorProto[]'
+    fullName: 'google.protobuf.IFieldDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#extensionRange~0:complex'
+    name: 'google.protobuf.DescriptorProto.IExtensionRange[]'
+    fullName: 'google.protobuf.DescriptorProto.IExtensionRange[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange:interface'
+        name: google.protobuf.DescriptorProto.IExtensionRange
+        fullName: google.protobuf.DescriptorProto.IExtensionRange
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#field~0:complex'
+    name: 'google.protobuf.IFieldDescriptorProto[]'
+    fullName: 'google.protobuf.IFieldDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#nestedType~0:complex'
+    name: 'google.protobuf.IDescriptorProto[]'
+    fullName: 'google.protobuf.IDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        name: google.protobuf.IDescriptorProto
+        fullName: google.protobuf.IDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#oneofDecl~0:complex'
+    name: 'google.protobuf.IOneofDescriptorProto[]'
+    fullName: 'google.protobuf.IOneofDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IOneofDescriptorProto:interface'
+        name: google.protobuf.IOneofDescriptorProto
+        fullName: google.protobuf.IOneofDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#options~0:complex'
+    name: (google.protobuf.IMessageOptions|null)
+    fullName: (google.protobuf.IMessageOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions:interface'
+        name: google.protobuf.IMessageOptions
+        fullName: google.protobuf.IMessageOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto#reservedRange~0:complex'
+    name: 'google.protobuf.DescriptorProto.IReservedRange[]'
+    fullName: 'google.protobuf.DescriptorProto.IReservedRange[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange:interface'
+        name: google.protobuf.DescriptorProto.IReservedRange
+        fullName: google.protobuf.DescriptorProto.IReservedRange
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

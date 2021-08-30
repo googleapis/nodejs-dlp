@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest:interface'
+    summary: Properties of a GetInspectTemplateRequest.
+    name: google.privacy.dlp.v2.IGetInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IGetInspectTemplateRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IGetInspectTemplateRequest#name:member'
+    summary: GetInspectTemplateRequest name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)

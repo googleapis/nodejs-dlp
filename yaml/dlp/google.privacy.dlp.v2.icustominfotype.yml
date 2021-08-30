@@ -1,0 +1,220 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+    summary: Properties of a CustomInfoType.
+    name: google.privacy.dlp.v2.ICustomInfoType
+    fullName: google.privacy.dlp.v2.ICustomInfoType
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#detectionRules:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#dictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#exclusionType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#likelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#regex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#storedType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#surrogateType:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#detectionRules:member'
+    summary: CustomInfoType detectionRules
+    name: detectionRules
+    fullName: detectionRules
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'detectionRules?: (google.privacy.dlp.v2.CustomInfoType.IDetectionRule[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#detectionRules~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#dictionary:member'
+    summary: CustomInfoType dictionary
+    name: dictionary
+    fullName: dictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dictionary?: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#dictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#exclusionType:member'
+    summary: CustomInfoType exclusionType
+    name: exclusionType
+    fullName: exclusionType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        exclusionType?: (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+        google.privacy.dlp.v2.CustomInfoType.ExclusionType|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#exclusionType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#infoType:member'
+    summary: CustomInfoType infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#likelihood:member'
+    summary: CustomInfoType likelihood
+    name: likelihood
+    fullName: likelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'likelihood?: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#likelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#regex:member'
+    summary: CustomInfoType regex
+    name: regex
+    fullName: regex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#regex~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#storedType:member'
+    summary: CustomInfoType storedType
+    name: storedType
+    fullName: storedType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'storedType?: (google.privacy.dlp.v2.IStoredType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#storedType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#surrogateType:member'
+    summary: CustomInfoType surrogateType
+    name: surrogateType
+    fullName: surrogateType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'surrogateType?: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#surrogateType~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#detectionRules~0:complex'
+    name: '(google.privacy.dlp.v2.CustomInfoType.IDetectionRule[]|null)'
+    fullName: '(google.privacy.dlp.v2.CustomInfoType.IDetectionRule[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#dictionary~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#exclusionType~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+      google.privacy.dlp.v2.CustomInfoType.ExclusionType|null)
+    fullName: >-
+      (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+      google.privacy.dlp.v2.CustomInfoType.ExclusionType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+        name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+        name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#likelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#regex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#storedType~0:complex'
+    name: (google.privacy.dlp.v2.IStoredType|null)
+    fullName: (google.privacy.dlp.v2.IStoredType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType:interface'
+        name: google.privacy.dlp.v2.IStoredType
+        fullName: google.privacy.dlp.v2.IStoredType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType#surrogateType~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ISurrogateType:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+      - name: '|null)'
+        fullName: '|null)'

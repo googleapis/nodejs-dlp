@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+    summary: Properties of a PrivacyMetric.
+    name: google.privacy.dlp.v2.IPrivacyMetric
+    fullName: google.privacy.dlp.v2.IPrivacyMetric
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#categoricalStatsConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#deltaPresenceEstimationConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kAnonymityConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kMapEstimationConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#lDiversityConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#numericalStatsConfig:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#categoricalStatsConfig:member'
+    summary: PrivacyMetric categoricalStatsConfig
+    name: categoricalStatsConfig
+    fullName: categoricalStatsConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'categoricalStatsConfig?: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#categoricalStatsConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#deltaPresenceEstimationConfig:member'
+    summary: PrivacyMetric deltaPresenceEstimationConfig
+    name: deltaPresenceEstimationConfig
+    fullName: deltaPresenceEstimationConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deltaPresenceEstimationConfig?: (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#deltaPresenceEstimationConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kAnonymityConfig:member'
+    summary: PrivacyMetric kAnonymityConfig
+    name: kAnonymityConfig
+    fullName: kAnonymityConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kAnonymityConfig?: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kAnonymityConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kMapEstimationConfig:member'
+    summary: PrivacyMetric kMapEstimationConfig
+    name: kMapEstimationConfig
+    fullName: kMapEstimationConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kMapEstimationConfig?: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kMapEstimationConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#lDiversityConfig:member'
+    summary: PrivacyMetric lDiversityConfig
+    name: lDiversityConfig
+    fullName: lDiversityConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lDiversityConfig?: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#lDiversityConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#numericalStatsConfig:member'
+    summary: PrivacyMetric numericalStatsConfig
+    name: numericalStatsConfig
+    fullName: numericalStatsConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'numericalStatsConfig?: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#numericalStatsConfig~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#categoricalStatsConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#deltaPresenceEstimationConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kAnonymityConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#kMapEstimationConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#lDiversityConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric#numericalStatsConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig
+      - name: '|null)'
+        fullName: '|null)'

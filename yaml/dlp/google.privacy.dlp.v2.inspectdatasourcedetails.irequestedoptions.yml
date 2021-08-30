@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions:interface'
+    summary: Properties of a RequestedOptions.
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions
+    fullName: google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#jobConfig:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#snapshotInspectTemplate:member
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#jobConfig:member'
+    summary: RequestedOptions jobConfig
+    name: jobConfig
+    fullName: jobConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobConfig?: (google.privacy.dlp.v2.IInspectJobConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#jobConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#snapshotInspectTemplate:member'
+    summary: RequestedOptions snapshotInspectTemplate
+    name: snapshotInspectTemplate
+    fullName: snapshotInspectTemplate
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'snapshotInspectTemplate?: (google.privacy.dlp.v2.IInspectTemplate|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#snapshotInspectTemplate~0:complex
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#jobConfig~0:complex'
+    name: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+        name: google.privacy.dlp.v2.IInspectJobConfig
+        fullName: google.privacy.dlp.v2.IInspectJobConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions#snapshotInspectTemplate~0:complex
+    name: (google.privacy.dlp.v2.IInspectTemplate|null)
+    fullName: (google.privacy.dlp.v2.IInspectTemplate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+        name: google.privacy.dlp.v2.IInspectTemplate
+        fullName: google.privacy.dlp.v2.IInspectTemplate
+      - name: '|null)'
+        fullName: '|null)'

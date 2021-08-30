@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+    summary: Likelihood enum.
+    name: google.privacy.dlp.v2.Likelihood
+    fullName: google.privacy.dlp.v2.Likelihood
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.LIKELIHOOD_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.LIKELY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.POSSIBLE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.UNLIKELY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.VERY_LIKELY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.VERY_UNLIKELY:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.LIKELIHOOD_UNSPECIFIED:member'
+    name: LIKELIHOOD_UNSPECIFIED
+    fullName: LIKELIHOOD_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.LIKELY:member'
+    name: LIKELY
+    fullName: LIKELY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.POSSIBLE:member'
+    name: POSSIBLE
+    fullName: POSSIBLE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.UNLIKELY:member'
+    name: UNLIKELY
+    fullName: UNLIKELY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.VERY_LIKELY:member'
+    name: VERY_LIKELY
+    fullName: VERY_LIKELY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood.VERY_UNLIKELY:member'
+    name: VERY_UNLIKELY
+    fullName: VERY_UNLIKELY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

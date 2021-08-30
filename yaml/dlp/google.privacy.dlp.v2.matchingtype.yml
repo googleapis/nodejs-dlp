@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+    summary: MatchingType enum.
+    name: google.privacy.dlp.v2.MatchingType
+    fullName: google.privacy.dlp.v2.MatchingType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_FULL_MATCH:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_INVERSE_MATCH:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_PARTIAL_MATCH:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_FULL_MATCH:member'
+    name: MATCHING_TYPE_FULL_MATCH
+    fullName: MATCHING_TYPE_FULL_MATCH
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_INVERSE_MATCH:member'
+    name: MATCHING_TYPE_INVERSE_MATCH
+    fullName: MATCHING_TYPE_INVERSE_MATCH
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_PARTIAL_MATCH:member'
+    name: MATCHING_TYPE_PARTIAL_MATCH
+    fullName: MATCHING_TYPE_PARTIAL_MATCH
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType.MATCHING_TYPE_UNSPECIFIED:member'
+    name: MATCHING_TYPE_UNSPECIFIED
+    fullName: MATCHING_TYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

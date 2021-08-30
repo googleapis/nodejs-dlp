@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations:interface'
+    summary: Properties of an InfoTypeTransformations.
+    name: google.privacy.dlp.v2.IInfoTypeTransformations
+    fullName: google.privacy.dlp.v2.IInfoTypeTransformations
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations#transformations:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations#transformations:member'
+    summary: InfoTypeTransformations transformations
+    name: transformations
+    fullName: transformations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'transformations?: (google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations#transformations~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations#transformations~0:complex'
+    name: '(google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation[]|null)'
+    fullName: '(google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation:interface'
+        name: google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation
+        fullName: google.privacy.dlp.v2.InfoTypeTransformations.IInfoTypeTransformation
+      - name: '[]|null)'
+        fullName: '[]|null)'

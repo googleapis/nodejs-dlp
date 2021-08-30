@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig:interface'
+    summary: Properties of a LDiversityConfig.
+    name: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#quasiIds:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#sensitiveAttribute:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#quasiIds:member'
+    summary: LDiversityConfig quasiIds
+    name: quasiIds
+    fullName: quasiIds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIds?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#quasiIds~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#sensitiveAttribute:member'
+    summary: LDiversityConfig sensitiveAttribute
+    name: sensitiveAttribute
+    fullName: sensitiveAttribute
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'sensitiveAttribute?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#sensitiveAttribute~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#quasiIds~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig#sensitiveAttribute~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'

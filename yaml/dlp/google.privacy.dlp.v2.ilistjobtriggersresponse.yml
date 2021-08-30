@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse:interface'
+    summary: Properties of a ListJobTriggersResponse.
+    name: google.privacy.dlp.v2.IListJobTriggersResponse
+    fullName: google.privacy.dlp.v2.IListJobTriggersResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#jobTriggers:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#nextPageToken:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#jobTriggers:member'
+    summary: ListJobTriggersResponse jobTriggers
+    name: jobTriggers
+    fullName: jobTriggers
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobTriggers?: (google.privacy.dlp.v2.IJobTrigger[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#jobTriggers~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#nextPageToken:member'
+    summary: ListJobTriggersResponse nextPageToken
+    name: nextPageToken
+    fullName: nextPageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nextPageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersResponse#jobTriggers~0:complex'
+    name: '(google.privacy.dlp.v2.IJobTrigger[]|null)'
+    fullName: '(google.privacy.dlp.v2.IJobTrigger[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger:interface'
+        name: google.privacy.dlp.v2.IJobTrigger
+        fullName: google.privacy.dlp.v2.IJobTrigger
+      - name: '[]|null)'
+        fullName: '[]|null)'

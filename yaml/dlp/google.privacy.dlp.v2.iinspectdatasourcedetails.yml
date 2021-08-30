@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails:interface'
+    summary: Properties of an InspectDataSourceDetails.
+    name: google.privacy.dlp.v2.IInspectDataSourceDetails
+    fullName: google.privacy.dlp.v2.IInspectDataSourceDetails
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#requestedOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#result:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#requestedOptions:member'
+    summary: InspectDataSourceDetails requestedOptions
+    name: requestedOptions
+    fullName: requestedOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'requestedOptions?: (google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#requestedOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#result:member'
+    summary: InspectDataSourceDetails result
+    name: result
+    fullName: result
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'result?: (google.privacy.dlp.v2.InspectDataSourceDetails.IResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#result~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#requestedOptions~0:complex'
+    name: (google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions|null)
+    fullName: (google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions:interface'
+        name: google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions
+        fullName: google.privacy.dlp.v2.InspectDataSourceDetails.IRequestedOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails#result~0:complex'
+    name: (google.privacy.dlp.v2.InspectDataSourceDetails.IResult|null)
+    fullName: (google.privacy.dlp.v2.InspectDataSourceDetails.IResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult:interface'
+        name: google.privacy.dlp.v2.InspectDataSourceDetails.IResult
+        fullName: google.privacy.dlp.v2.InspectDataSourceDetails.IResult
+      - name: '|null)'
+        fullName: '|null)'

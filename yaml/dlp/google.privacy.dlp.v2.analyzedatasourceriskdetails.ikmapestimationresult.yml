@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult:interface'
+    summary: Properties of a KMapEstimationResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult#kMapEstimationHistogram:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult#kMapEstimationHistogram:member
+    summary: KMapEstimationResult kMapEstimationHistogram
+    name: kMapEstimationHistogram
+    fullName: kMapEstimationHistogram
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        kMapEstimationHistogram?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult#kMapEstimationHistogram~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult#kMapEstimationHistogram~0:complex
+    name: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket[]|null)'
+    fullName: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket:interface
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,464 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+    summary: Represents a PrivacyMetric.
+    name: google.privacy.dlp.v2.PrivacyMetric
+    fullName: google.privacy.dlp.v2.PrivacyMetric
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#categoricalStatsConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#deltaPresenceEstimationConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kAnonymityConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kMapEstimationConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#lDiversityConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#numericalStatsConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:constructor(1)'
+    summary: Constructs a new PrivacyMetric.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IPrivacyMetric);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#categoricalStatsConfig:member'
+    summary: PrivacyMetric categoricalStatsConfig.
+    name: categoricalStatsConfig
+    fullName: categoricalStatsConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public categoricalStatsConfig?: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#categoricalStatsConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.create:member(1)'
+    summary: Creates a new PrivacyMetric instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IPrivacyMetric): google.privacy.dlp.v2.PrivacyMetric;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+        description: PrivacyMetric instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decode:member(1)'
+    summary: Decodes a PrivacyMetric message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.PrivacyMetric;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+        description: PrivacyMetric
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decodeDelimited:member(1)'
+    summary: 'Decodes a PrivacyMetric message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.PrivacyMetric;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+        description: PrivacyMetric
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#deltaPresenceEstimationConfig:member'
+    summary: PrivacyMetric deltaPresenceEstimationConfig.
+    name: deltaPresenceEstimationConfig
+    fullName: deltaPresenceEstimationConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public deltaPresenceEstimationConfig?:
+        (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#deltaPresenceEstimationConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode:member(1)'
+    summary: Encodes the specified PrivacyMetric message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IPrivacyMetric, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: PrivacyMetric message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited:member(1)'
+    summary: 'Encodes the specified PrivacyMetric message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IPrivacyMetric, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: PrivacyMetric message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.fromObject:member(1)'
+    summary: Creates a PrivacyMetric message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.PrivacyMetric;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+        description: PrivacyMetric
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kAnonymityConfig:member'
+    summary: PrivacyMetric kAnonymityConfig.
+    name: kAnonymityConfig
+    fullName: kAnonymityConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public kAnonymityConfig?: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kAnonymityConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kMapEstimationConfig:member'
+    summary: PrivacyMetric kMapEstimationConfig.
+    name: kMapEstimationConfig
+    fullName: kMapEstimationConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public kMapEstimationConfig?: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kMapEstimationConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#lDiversityConfig:member'
+    summary: PrivacyMetric lDiversityConfig.
+    name: lDiversityConfig
+    fullName: lDiversityConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public lDiversityConfig?: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#lDiversityConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#numericalStatsConfig:member'
+    summary: PrivacyMetric numericalStatsConfig.
+    name: numericalStatsConfig
+    fullName: numericalStatsConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public numericalStatsConfig?: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#numericalStatsConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#toJSON:member(1)'
+    summary: Converts this PrivacyMetric to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.toObject:member(1)'
+    summary: Creates a plain object from a PrivacyMetric message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.PrivacyMetric, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: PrivacyMetric
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#type:member'
+    summary: PrivacyMetric type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public type?:
+        ("numericalStatsConfig"|"categoricalStatsConfig"|"kAnonymityConfig"|"lDiversityConfig"|"kMapEstimationConfig"|"deltaPresenceEstimationConfig");
+      return:
+        type:
+          - >-
+            ("numericalStatsConfig"|"categoricalStatsConfig"|"kAnonymityConfig"|"lDiversityConfig"|"kMapEstimationConfig"|"deltaPresenceEstimationConfig")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.verify:member(1)'
+    summary: Verifies a PrivacyMetric message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+    name: IPrivacyMetric
+    fullName: google.privacy.dlp.v2.IPrivacyMetric
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#categoricalStatsConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.ICategoricalStatsConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric:class'
+    name: PrivacyMetric
+    fullName: google.privacy.dlp.v2.PrivacyMetric
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#deltaPresenceEstimationConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kAnonymityConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#kMapEstimationConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.IKMapEstimationConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#lDiversityConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.ILDiversityConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric#numericalStatsConfig~0:complex'
+    name: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null)
+    fullName: (google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig:interface'
+        name: google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig
+        fullName: google.privacy.dlp.v2.PrivacyMetric.INumericalStatsConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

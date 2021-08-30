@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket:interface
+    summary: Properties of a CategoricalStatsHistogramBucket.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketSize:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValueCount:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValues:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyLowerBound:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyUpperBound:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketSize:member
+    summary: CategoricalStatsHistogramBucket bucketSize
+    name: bucketSize
+    fullName: bucketSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketSize?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketSize~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValueCount:member
+    summary: CategoricalStatsHistogramBucket bucketValueCount
+    name: bucketValueCount
+    fullName: bucketValueCount
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketValueCount?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValueCount~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValues:member
+    summary: CategoricalStatsHistogramBucket bucketValues
+    name: bucketValues
+    fullName: bucketValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketValues?: (google.privacy.dlp.v2.IValueFrequency[]|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValues~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyLowerBound:member
+    summary: CategoricalStatsHistogramBucket valueFrequencyLowerBound
+    name: valueFrequencyLowerBound
+    fullName: valueFrequencyLowerBound
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'valueFrequencyLowerBound?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyLowerBound~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyUpperBound:member
+    summary: CategoricalStatsHistogramBucket valueFrequencyUpperBound
+    name: valueFrequencyUpperBound
+    fullName: valueFrequencyUpperBound
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'valueFrequencyUpperBound?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyUpperBound~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketSize~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValueCount~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#bucketValues~0:complex
+    name: '(google.privacy.dlp.v2.IValueFrequency[]|null)'
+    fullName: '(google.privacy.dlp.v2.IValueFrequency[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency:interface'
+        name: google.privacy.dlp.v2.IValueFrequency
+        fullName: google.privacy.dlp.v2.IValueFrequency
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyLowerBound~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket#valueFrequencyUpperBound~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

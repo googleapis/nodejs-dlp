@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+    summary: Represents a PublishFindingsToCloudDataCatalog.
+    name: google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog
+    fullName: google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:constructor(1)'
+    summary: Constructs a new PublishFindingsToCloudDataCatalog.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.create:member(1)'
+    summary: Creates a new PublishFindingsToCloudDataCatalog instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog):
+        google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+        description: PublishFindingsToCloudDataCatalog instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decode:member(1)'
+    summary: Decodes a PublishFindingsToCloudDataCatalog message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+        description: PublishFindingsToCloudDataCatalog
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decodeDelimited:member(1)'
+    summary: 'Decodes a PublishFindingsToCloudDataCatalog message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+        description: PublishFindingsToCloudDataCatalog
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode:member(1)'
+    summary: Encodes the specified PublishFindingsToCloudDataCatalog message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: PublishFindingsToCloudDataCatalog message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited:member(1)'
+    summary: 'Encodes the specified PublishFindingsToCloudDataCatalog message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: PublishFindingsToCloudDataCatalog message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.fromObject:member(1)'
+    summary: >-
+      Creates a PublishFindingsToCloudDataCatalog message from a plain object. Also converts values to their respective
+      internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static fromObject(object: { [k: string]: any }):
+        google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+        description: PublishFindingsToCloudDataCatalog
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog#toJSON:member(1)'
+    summary: Converts this PublishFindingsToCloudDataCatalog to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.toObject:member(1)'
+    summary: >-
+      Creates a plain object from a PublishFindingsToCloudDataCatalog message. Also converts values to other types if
+      specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: PublishFindingsToCloudDataCatalog
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.verify:member(1)'
+    summary: Verifies a PublishFindingsToCloudDataCatalog message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+    name: IPublishFindingsToCloudDataCatalog
+    fullName: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog:class'
+    name: PublishFindingsToCloudDataCatalog
+    fullName: google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

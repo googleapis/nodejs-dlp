@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics:interface'
+    summary: Properties of a HybridInspectStatistics.
+    name: google.privacy.dlp.v2.IHybridInspectStatistics
+    fullName: google.privacy.dlp.v2.IHybridInspectStatistics
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#abortedCount:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#pendingCount:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#processedCount:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#abortedCount:member'
+    summary: HybridInspectStatistics abortedCount
+    name: abortedCount
+    fullName: abortedCount
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'abortedCount?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#abortedCount~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#pendingCount:member'
+    summary: HybridInspectStatistics pendingCount
+    name: pendingCount
+    fullName: pendingCount
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pendingCount?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#pendingCount~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#processedCount:member'
+    summary: HybridInspectStatistics processedCount
+    name: processedCount
+    fullName: processedCount
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'processedCount?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#processedCount~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#abortedCount~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#pendingCount~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics#processedCount~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

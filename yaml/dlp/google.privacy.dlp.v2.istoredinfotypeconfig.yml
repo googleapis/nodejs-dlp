@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig:interface'
+    summary: Properties of a StoredInfoTypeConfig.
+    name: google.privacy.dlp.v2.IStoredInfoTypeConfig
+    fullName: google.privacy.dlp.v2.IStoredInfoTypeConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#dictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#displayName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#largeCustomDictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#regex:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#description:member'
+    summary: StoredInfoTypeConfig description
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'description?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#dictionary:member'
+    summary: StoredInfoTypeConfig dictionary
+    name: dictionary
+    fullName: dictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dictionary?: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#dictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#displayName:member'
+    summary: StoredInfoTypeConfig displayName
+    name: displayName
+    fullName: displayName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'displayName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#largeCustomDictionary:member'
+    summary: StoredInfoTypeConfig largeCustomDictionary
+    name: largeCustomDictionary
+    fullName: largeCustomDictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'largeCustomDictionary?: (google.privacy.dlp.v2.ILargeCustomDictionaryConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#largeCustomDictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#regex:member'
+    summary: StoredInfoTypeConfig regex
+    name: regex
+    fullName: regex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#regex~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#dictionary~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#largeCustomDictionary~0:complex'
+    name: (google.privacy.dlp.v2.ILargeCustomDictionaryConfig|null)
+    fullName: (google.privacy.dlp.v2.ILargeCustomDictionaryConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+        name: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+        fullName: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig#regex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'

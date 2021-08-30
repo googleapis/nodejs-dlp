@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+    summary: Properties of a TimeOfDay.
+    name: google.type.ITimeOfDay
+    fullName: google.type.ITimeOfDay
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.type.ITimeOfDay#hours:member'
+      - '@google-cloud/dlp!google.type.ITimeOfDay#minutes:member'
+      - '@google-cloud/dlp!google.type.ITimeOfDay#nanos:member'
+      - '@google-cloud/dlp!google.type.ITimeOfDay#seconds:member'
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay#hours:member'
+    summary: TimeOfDay hours
+    name: hours
+    fullName: hours
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hours?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay#minutes:member'
+    summary: TimeOfDay minutes
+    name: minutes
+    fullName: minutes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'minutes?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay#nanos:member'
+    summary: TimeOfDay nanos
+    name: nanos
+    fullName: nanos
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nanos?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.type.ITimeOfDay#seconds:member'
+    summary: TimeOfDay seconds
+    name: seconds
+    fullName: seconds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'seconds?: (number|null);'
+      return:
+        type:
+          - (number|null)

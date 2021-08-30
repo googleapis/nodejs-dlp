@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+    summary: Properties of a CryptoReplaceFfxFpeConfig.
+    name: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+    fullName: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#commonAlphabet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#customAlphabet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#radix:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#surrogateInfoType:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#commonAlphabet:member'
+    summary: CryptoReplaceFfxFpeConfig commonAlphabet
+    name: commonAlphabet
+    fullName: commonAlphabet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        commonAlphabet?: (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+        google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#commonAlphabet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#context:member'
+    summary: CryptoReplaceFfxFpeConfig context
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#cryptoKey:member'
+    summary: CryptoReplaceFfxFpeConfig cryptoKey
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#customAlphabet:member'
+    summary: CryptoReplaceFfxFpeConfig customAlphabet
+    name: customAlphabet
+    fullName: customAlphabet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'customAlphabet?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#radix:member'
+    summary: CryptoReplaceFfxFpeConfig radix
+    name: radix
+    fullName: radix
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'radix?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#surrogateInfoType:member'
+    summary: CryptoReplaceFfxFpeConfig surrogateInfoType
+    name: surrogateInfoType
+    fullName: surrogateInfoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'surrogateInfoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#surrogateInfoType~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#commonAlphabet~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+      google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|null)
+    fullName: >-
+      (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+      google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+        name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+        fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+        name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+        fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig#surrogateInfoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'

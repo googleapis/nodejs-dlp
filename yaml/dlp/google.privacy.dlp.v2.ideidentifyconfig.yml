@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig:interface'
+    summary: Properties of a DeidentifyConfig.
+    name: google.privacy.dlp.v2.IDeidentifyConfig
+    fullName: google.privacy.dlp.v2.IDeidentifyConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#infoTypeTransformations:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#recordTransformations:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#transformationErrorHandling:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#infoTypeTransformations:member'
+    summary: DeidentifyConfig infoTypeTransformations
+    name: infoTypeTransformations
+    fullName: infoTypeTransformations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypeTransformations?: (google.privacy.dlp.v2.IInfoTypeTransformations|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#infoTypeTransformations~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#recordTransformations:member'
+    summary: DeidentifyConfig recordTransformations
+    name: recordTransformations
+    fullName: recordTransformations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'recordTransformations?: (google.privacy.dlp.v2.IRecordTransformations|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#recordTransformations~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#transformationErrorHandling:member'
+    summary: DeidentifyConfig transformationErrorHandling
+    name: transformationErrorHandling
+    fullName: transformationErrorHandling
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'transformationErrorHandling?: (google.privacy.dlp.v2.ITransformationErrorHandling|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#transformationErrorHandling~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#infoTypeTransformations~0:complex'
+    name: (google.privacy.dlp.v2.IInfoTypeTransformations|null)
+    fullName: (google.privacy.dlp.v2.IInfoTypeTransformations|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations:interface'
+        name: google.privacy.dlp.v2.IInfoTypeTransformations
+        fullName: google.privacy.dlp.v2.IInfoTypeTransformations
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#recordTransformations~0:complex'
+    name: (google.privacy.dlp.v2.IRecordTransformations|null)
+    fullName: (google.privacy.dlp.v2.IRecordTransformations|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations:interface'
+        name: google.privacy.dlp.v2.IRecordTransformations
+        fullName: google.privacy.dlp.v2.IRecordTransformations
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig#transformationErrorHandling~0:complex'
+    name: (google.privacy.dlp.v2.ITransformationErrorHandling|null)
+    fullName: (google.privacy.dlp.v2.ITransformationErrorHandling|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling:interface'
+        name: google.privacy.dlp.v2.ITransformationErrorHandling
+        fullName: google.privacy.dlp.v2.ITransformationErrorHandling
+      - name: '|null)'
+        fullName: '|null)'

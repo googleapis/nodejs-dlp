@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger:interface'
+    summary: Properties of a Trigger.
+    name: google.privacy.dlp.v2.JobTrigger.ITrigger
+    fullName: google.privacy.dlp.v2.JobTrigger.ITrigger
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#manual:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#schedule:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#manual:member'
+    summary: Trigger manual
+    name: manual
+    fullName: manual
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'manual?: (google.privacy.dlp.v2.IManual|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#manual~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#schedule:member'
+    summary: Trigger schedule
+    name: schedule
+    fullName: schedule
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'schedule?: (google.privacy.dlp.v2.ISchedule|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#schedule~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#manual~0:complex'
+    name: (google.privacy.dlp.v2.IManual|null)
+    fullName: (google.privacy.dlp.v2.IManual|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IManual:interface'
+        name: google.privacy.dlp.v2.IManual
+        fullName: google.privacy.dlp.v2.IManual
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger#schedule~0:complex'
+    name: (google.privacy.dlp.v2.ISchedule|null)
+    fullName: (google.privacy.dlp.v2.ISchedule|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+        name: google.privacy.dlp.v2.ISchedule
+        fullName: google.privacy.dlp.v2.ISchedule
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+    summary: JSType enum.
+    name: google.protobuf.FieldOptions.JSType
+    fullName: google.protobuf.FieldOptions.JSType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_NORMAL:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_NUMBER:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_STRING:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_NORMAL:member'
+    name: JS_NORMAL
+    fullName: JS_NORMAL
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_NUMBER:member'
+    name: JS_NUMBER
+    fullName: JS_NUMBER
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType.JS_STRING:member'
+    name: JS_STRING
+    fullName: JS_STRING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

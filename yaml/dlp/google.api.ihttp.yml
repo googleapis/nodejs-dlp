@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.IHttp:interface'
+    summary: Properties of a Http.
+    name: google.api.IHttp
+    fullName: google.api.IHttp
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.IHttp#fullyDecodeReservedExpansion:member'
+      - '@google-cloud/dlp!google.api.IHttp#rules:member'
+  - uid: '@google-cloud/dlp!google.api.IHttp#fullyDecodeReservedExpansion:member'
+    summary: Http fullyDecodeReservedExpansion
+    name: fullyDecodeReservedExpansion
+    fullName: fullyDecodeReservedExpansion
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fullyDecodeReservedExpansion?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.api.IHttp#rules:member'
+    summary: Http rules
+    name: rules
+    fullName: rules
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rules?: (google.api.IHttpRule[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.IHttp#rules~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.api.IHttp#rules~0:complex'
+    name: '(google.api.IHttpRule[]|null)'
+    fullName: '(google.api.IHttpRule[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+        name: google.api.IHttpRule
+        fullName: google.api.IHttpRule
+      - name: '[]|null)'
+        fullName: '[]|null)'

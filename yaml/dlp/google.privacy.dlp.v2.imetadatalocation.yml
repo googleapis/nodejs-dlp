@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation:interface'
+    summary: Properties of a MetadataLocation.
+    name: google.privacy.dlp.v2.IMetadataLocation
+    fullName: google.privacy.dlp.v2.IMetadataLocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#storageLabel:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#type:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#storageLabel:member'
+    summary: MetadataLocation storageLabel
+    name: storageLabel
+    fullName: storageLabel
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'storageLabel?: (google.privacy.dlp.v2.IStorageMetadataLabel|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#storageLabel~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#type:member'
+    summary: MetadataLocation type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (google.privacy.dlp.v2.MetadataType|keyof typeof google.privacy.dlp.v2.MetadataType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#type~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#storageLabel~0:complex'
+    name: (google.privacy.dlp.v2.IStorageMetadataLabel|null)
+    fullName: (google.privacy.dlp.v2.IStorageMetadataLabel|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel:interface'
+        name: google.privacy.dlp.v2.IStorageMetadataLabel
+        fullName: google.privacy.dlp.v2.IStorageMetadataLabel
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation#type~0:complex'
+    name: (google.privacy.dlp.v2.MetadataType|keyof typeof google.privacy.dlp.v2.MetadataType|null)
+    fullName: (google.privacy.dlp.v2.MetadataType|keyof typeof google.privacy.dlp.v2.MetadataType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType:enum'
+        name: google.privacy.dlp.v2.MetadataType
+        fullName: google.privacy.dlp.v2.MetadataType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType:enum'
+        name: google.privacy.dlp.v2.MetadataType
+        fullName: google.privacy.dlp.v2.MetadataType
+      - name: '|null)'
+        fullName: '|null)'

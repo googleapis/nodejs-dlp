@@ -1,0 +1,342 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+    summary: Represents a Key.
+    name: google.privacy.dlp.v2.Key
+    fullName: google.privacy.dlp.v2.Key
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key#partitionId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key#path:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Key.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key:constructor(1)'
+    summary: Constructs a new Key.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IKey);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.create:member(1)'
+    summary: Creates a new Key instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IKey): google.privacy.dlp.v2.Key;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+        description: Key instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.decode:member(1)'
+    summary: Decodes a Key message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Key;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+        description: Key
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.decodeDelimited:member(1)'
+    summary: 'Decodes a Key message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Key;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+        description: Key
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode:member(1)'
+    summary: Encodes the specified Key message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IKey, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Key message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited:member(1)'
+    summary: 'Encodes the specified Key message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.privacy.dlp.v2.IKey, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Key message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.fromObject:member(1)'
+    summary: Creates a Key message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Key;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+        description: Key
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key#partitionId:member'
+    summary: Key partitionId.
+    name: partitionId
+    fullName: partitionId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public partitionId?: (google.privacy.dlp.v2.IPartitionId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key#partitionId~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key#path:member'
+    summary: Key path.
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public path: google.privacy.dlp.v2.Key.IPathElement[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Key#path~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key#toJSON:member(1)'
+    summary: Converts this Key to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.toObject:member(1)'
+    summary: Creates a plain object from a Key message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Key, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Key
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Key.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.verify:member(1)'
+    summary: Verifies a Key message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+    name: IKey
+    fullName: google.privacy.dlp.v2.IKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key:class'
+    name: Key
+    fullName: google.privacy.dlp.v2.Key
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key#partitionId~0:complex'
+    name: (google.privacy.dlp.v2.IPartitionId|null)
+    fullName: (google.privacy.dlp.v2.IPartitionId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+        name: google.privacy.dlp.v2.IPartitionId
+        fullName: google.privacy.dlp.v2.IPartitionId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key#path~0:complex'
+    name: 'google.privacy.dlp.v2.Key.IPathElement[]'
+    fullName: 'google.privacy.dlp.v2.Key.IPathElement[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.IPathElement:interface'
+        name: google.privacy.dlp.v2.Key.IPathElement
+        fullName: google.privacy.dlp.v2.Key.IPathElement
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

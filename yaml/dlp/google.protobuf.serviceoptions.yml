@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+    summary: Represents a ServiceOptions.
+    name: google.protobuf.ServiceOptions
+    fullName: google.protobuf.ServiceOptions
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions#uninterpretedOption:member'
+      - '@google-cloud/dlp!google.protobuf.ServiceOptions.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions:constructor(1)'
+    summary: Constructs a new ServiceOptions.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IServiceOptions);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.create:member(1)'
+    summary: Creates a new ServiceOptions instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IServiceOptions): google.protobuf.ServiceOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+        description: ServiceOptions instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.decode:member(1)'
+    summary: Decodes a ServiceOptions message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.ServiceOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+        description: ServiceOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.decodeDelimited:member(1)'
+    summary: 'Decodes a ServiceOptions message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.ServiceOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+        description: ServiceOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions#deprecated:member'
+    summary: ServiceOptions deprecated.
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public deprecated: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encode:member(1)'
+    summary: >-
+      Encodes the specified ServiceOptions message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.ServiceOptions.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.protobuf.IServiceOptions, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ServiceOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified ServiceOptions message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.ServiceOptions.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.IServiceOptions, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ServiceOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.fromObject:member(1)'
+    summary: Creates a ServiceOptions message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.ServiceOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+        description: ServiceOptions
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions#toJSON:member(1)'
+    summary: Converts this ServiceOptions to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.toObject:member(1)'
+    summary: Creates a plain object from a ServiceOptions message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.ServiceOptions, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ServiceOptions
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.ServiceOptions.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions#uninterpretedOption:member'
+    summary: ServiceOptions uninterpretedOption.
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public uninterpretedOption: google.protobuf.IUninterpretedOption[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ServiceOptions#uninterpretedOption~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.verify:member(1)'
+    summary: Verifies a ServiceOptions message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+    name: IServiceOptions
+    fullName: google.protobuf.IServiceOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions:class'
+    name: ServiceOptions
+    fullName: google.protobuf.ServiceOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.protobuf.ServiceOptions#uninterpretedOption~0:complex'
+    name: 'google.protobuf.IUninterpretedOption[]'
+    fullName: 'google.protobuf.IUninterpretedOption[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]'
+        fullName: '[]'

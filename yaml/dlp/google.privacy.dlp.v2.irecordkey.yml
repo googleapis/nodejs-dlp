@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey:interface'
+    summary: Properties of a RecordKey.
+    name: google.privacy.dlp.v2.IRecordKey
+    fullName: google.privacy.dlp.v2.IRecordKey
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#bigQueryKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#datastoreKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#idValues:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#bigQueryKey:member'
+    summary: RecordKey bigQueryKey
+    name: bigQueryKey
+    fullName: bigQueryKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bigQueryKey?: (google.privacy.dlp.v2.IBigQueryKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#bigQueryKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#datastoreKey:member'
+    summary: RecordKey datastoreKey
+    name: datastoreKey
+    fullName: datastoreKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'datastoreKey?: (google.privacy.dlp.v2.IDatastoreKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#datastoreKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#idValues:member'
+    summary: RecordKey idValues
+    name: idValues
+    fullName: idValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'idValues?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#bigQueryKey~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryKey|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+        name: google.privacy.dlp.v2.IBigQueryKey
+        fullName: google.privacy.dlp.v2.IBigQueryKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey#datastoreKey~0:complex'
+    name: (google.privacy.dlp.v2.IDatastoreKey|null)
+    fullName: (google.privacy.dlp.v2.IDatastoreKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreKey:interface'
+        name: google.privacy.dlp.v2.IDatastoreKey
+        fullName: google.privacy.dlp.v2.IDatastoreKey
+      - name: '|null)'
+        fullName: '|null)'

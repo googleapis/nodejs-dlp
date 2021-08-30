@@ -1,0 +1,522 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+    summary: Represents an AnalyzeDataSourceRiskDetails.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#categoricalStatsResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kAnonymityResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kMapEstimationResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#lDiversityResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#numericalStatsResult:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedPrivacyMetric:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedSourceTable:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#result:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:constructor(1)'
+    summary: Constructs a new AnalyzeDataSourceRiskDetails.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#categoricalStatsResult:member'
+    summary: AnalyzeDataSourceRiskDetails categoricalStatsResult.
+    name: categoricalStatsResult
+    fullName: categoricalStatsResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public categoricalStatsResult?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#categoricalStatsResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.create:member(1)'
+    summary: Creates a new AnalyzeDataSourceRiskDetails instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails):
+        google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+        description: AnalyzeDataSourceRiskDetails instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decode:member(1)'
+    summary: Decodes an AnalyzeDataSourceRiskDetails message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+        description: AnalyzeDataSourceRiskDetails
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decodeDelimited:member(1)'
+    summary: 'Decodes an AnalyzeDataSourceRiskDetails message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+        description: AnalyzeDataSourceRiskDetails
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult:member'
+    summary: AnalyzeDataSourceRiskDetails deltaPresenceEstimationResult.
+    name: deltaPresenceEstimationResult
+    fullName: deltaPresenceEstimationResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public deltaPresenceEstimationResult?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode:member(1)'
+    summary: Encodes the specified AnalyzeDataSourceRiskDetails message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: AnalyzeDataSourceRiskDetails message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited:member(1)'
+    summary: 'Encodes the specified AnalyzeDataSourceRiskDetails message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: AnalyzeDataSourceRiskDetails message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.fromObject:member(1)'
+    summary: >-
+      Creates an AnalyzeDataSourceRiskDetails message from a plain object. Also converts values to their respective
+      internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+        description: AnalyzeDataSourceRiskDetails
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kAnonymityResult:member'
+    summary: AnalyzeDataSourceRiskDetails kAnonymityResult.
+    name: kAnonymityResult
+    fullName: kAnonymityResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public kAnonymityResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kAnonymityResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kMapEstimationResult:member'
+    summary: AnalyzeDataSourceRiskDetails kMapEstimationResult.
+    name: kMapEstimationResult
+    fullName: kMapEstimationResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public kMapEstimationResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kMapEstimationResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#lDiversityResult:member'
+    summary: AnalyzeDataSourceRiskDetails lDiversityResult.
+    name: lDiversityResult
+    fullName: lDiversityResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public lDiversityResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#lDiversityResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#numericalStatsResult:member'
+    summary: AnalyzeDataSourceRiskDetails numericalStatsResult.
+    name: numericalStatsResult
+    fullName: numericalStatsResult
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public numericalStatsResult?: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#numericalStatsResult~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedPrivacyMetric:member'
+    summary: AnalyzeDataSourceRiskDetails requestedPrivacyMetric.
+    name: requestedPrivacyMetric
+    fullName: requestedPrivacyMetric
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public requestedPrivacyMetric?: (google.privacy.dlp.v2.IPrivacyMetric|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedPrivacyMetric~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedSourceTable:member'
+    summary: AnalyzeDataSourceRiskDetails requestedSourceTable.
+    name: requestedSourceTable
+    fullName: requestedSourceTable
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public requestedSourceTable?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedSourceTable~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#result:member'
+    summary: AnalyzeDataSourceRiskDetails result.
+    name: result
+    fullName: result
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public result?:
+        ("numericalStatsResult"|"categoricalStatsResult"|"kAnonymityResult"|"lDiversityResult"|"kMapEstimationResult"|"deltaPresenceEstimationResult");
+      return:
+        type:
+          - >-
+            ("numericalStatsResult"|"categoricalStatsResult"|"kAnonymityResult"|"lDiversityResult"|"kMapEstimationResult"|"deltaPresenceEstimationResult")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#toJSON:member(1)'
+    summary: Converts this AnalyzeDataSourceRiskDetails to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.toObject:member(1)'
+    summary: >-
+      Creates a plain object from an AnalyzeDataSourceRiskDetails message. Also converts values to other types if
+      specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: AnalyzeDataSourceRiskDetails
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.verify:member(1)'
+    summary: Verifies an AnalyzeDataSourceRiskDetails message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+    name: IAnalyzeDataSourceRiskDetails
+    fullName: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#categoricalStatsResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails:class'
+    name: AnalyzeDataSourceRiskDetails
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#deltaPresenceEstimationResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kAnonymityResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#kMapEstimationResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKMapEstimationResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#lDiversityResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ILDiversityResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#numericalStatsResult~0:complex'
+    name: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null)
+    fullName: (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult:interface'
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedPrivacyMetric~0:complex'
+    name: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    fullName: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        name: google.privacy.dlp.v2.IPrivacyMetric
+        fullName: google.privacy.dlp.v2.IPrivacyMetric
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails#requestedSourceTable~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

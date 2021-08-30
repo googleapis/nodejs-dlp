@@ -1,0 +1,444 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+    summary: Represents a BigQueryOptions.
+    name: google.privacy.dlp.v2.BigQueryOptions
+    fullName: google.privacy.dlp.v2.BigQueryOptions
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#excludedFields:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#identifyingFields:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimit:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimitPercent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#sampleMethod:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#tableReference:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:constructor(1)'
+    summary: Constructs a new BigQueryOptions.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IBigQueryOptions);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.create:member(1)'
+    summary: Creates a new BigQueryOptions instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IBigQueryOptions):
+        google.privacy.dlp.v2.BigQueryOptions;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+        description: BigQueryOptions instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decode:member(1)'
+    summary: Decodes a BigQueryOptions message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.BigQueryOptions;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+        description: BigQueryOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decodeDelimited:member(1)'
+    summary: 'Decodes a BigQueryOptions message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.BigQueryOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+        description: BigQueryOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode:member(1)'
+    summary: Encodes the specified BigQueryOptions message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IBigQueryOptions, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: BigQueryOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited:member(1)'
+    summary: 'Encodes the specified BigQueryOptions message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IBigQueryOptions, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: BigQueryOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#excludedFields:member'
+    summary: BigQueryOptions excludedFields.
+    name: excludedFields
+    fullName: excludedFields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public excludedFields: google.privacy.dlp.v2.IFieldId[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#excludedFields~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.fromObject:member(1)'
+    summary: Creates a BigQueryOptions message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.BigQueryOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+        description: BigQueryOptions
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#identifyingFields:member'
+    summary: BigQueryOptions identifyingFields.
+    name: identifyingFields
+    fullName: identifyingFields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public identifyingFields: google.privacy.dlp.v2.IFieldId[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#identifyingFields~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimit:member'
+    summary: BigQueryOptions rowsLimit.
+    name: rowsLimit
+    fullName: rowsLimit
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public rowsLimit: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimit~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimitPercent:member'
+    summary: BigQueryOptions rowsLimitPercent.
+    name: rowsLimitPercent
+    fullName: rowsLimitPercent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public rowsLimitPercent: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#sampleMethod:member'
+    summary: BigQueryOptions sampleMethod.
+    name: sampleMethod
+    fullName: sampleMethod
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public sampleMethod: (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+        google.privacy.dlp.v2.BigQueryOptions.SampleMethod);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#sampleMethod~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#tableReference:member'
+    summary: BigQueryOptions tableReference.
+    name: tableReference
+    fullName: tableReference
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public tableReference?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#tableReference~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#toJSON:member(1)'
+    summary: Converts this BigQueryOptions to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.toObject:member(1)'
+    summary: Creates a plain object from a BigQueryOptions message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.BigQueryOptions, options?: $protobuf.IConversionOptions):
+        { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: BigQueryOptions
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.verify:member(1)'
+    summary: Verifies a BigQueryOptions message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+    name: IBigQueryOptions
+    fullName: google.privacy.dlp.v2.IBigQueryOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions:class'
+    name: BigQueryOptions
+    fullName: google.privacy.dlp.v2.BigQueryOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#excludedFields~0:complex'
+    name: 'google.privacy.dlp.v2.IFieldId[]'
+    fullName: 'google.privacy.dlp.v2.IFieldId[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#identifyingFields~0:complex'
+    name: 'google.privacy.dlp.v2.IFieldId[]'
+    fullName: 'google.privacy.dlp.v2.IFieldId[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#rowsLimit~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#sampleMethod~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.BigQueryOptions.SampleMethod)
+    fullName: >-
+      (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.BigQueryOptions.SampleMethod)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions#tableReference~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

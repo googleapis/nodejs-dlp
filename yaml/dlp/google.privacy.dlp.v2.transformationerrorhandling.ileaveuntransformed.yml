@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed:interface'
+    summary: Properties of a LeaveUntransformed.
+    name: google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed
+    fullName: google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IDuration:interface'
+    summary: Properties of a Duration.
+    name: google.protobuf.IDuration
+    fullName: google.protobuf.IDuration
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IDuration#nanos:member'
+      - '@google-cloud/dlp!google.protobuf.IDuration#seconds:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IDuration#nanos:member'
+    summary: Duration nanos
+    name: nanos
+    fullName: nanos
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nanos?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IDuration#seconds:member'
+    summary: Duration seconds
+    name: seconds
+    fullName: seconds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'seconds?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDuration#seconds~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IDuration#seconds~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

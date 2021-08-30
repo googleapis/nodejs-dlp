@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label:enum'
+    summary: Label enum.
+    name: google.protobuf.FieldDescriptorProto.Label
+    fullName: google.protobuf.FieldDescriptorProto.Label
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_OPTIONAL:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_REPEATED:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_REQUIRED:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_OPTIONAL:member'
+    name: LABEL_OPTIONAL
+    fullName: LABEL_OPTIONAL
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_REPEATED:member'
+    name: LABEL_REPEATED
+    fullName: LABEL_REPEATED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label.LABEL_REQUIRED:member'
+    name: LABEL_REQUIRED
+    fullName: LABEL_REQUIRED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

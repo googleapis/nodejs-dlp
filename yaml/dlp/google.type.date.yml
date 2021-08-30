@@ -1,0 +1,333 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.type.Date:class'
+    summary: Represents a Date.
+    name: google.type.Date
+    fullName: google.type.Date
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.type.IDate:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.type.Date:constructor(1)'
+      - '@google-cloud/dlp!google.type.Date.create:member(1)'
+      - '@google-cloud/dlp!google.type.Date#day:member'
+      - '@google-cloud/dlp!google.type.Date.decode:member(1)'
+      - '@google-cloud/dlp!google.type.Date.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.type.Date.encode:member(1)'
+      - '@google-cloud/dlp!google.type.Date.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.type.Date.fromObject:member(1)'
+      - '@google-cloud/dlp!google.type.Date#month:member'
+      - '@google-cloud/dlp!google.type.Date#toJSON:member(1)'
+      - '@google-cloud/dlp!google.type.Date.toObject:member(1)'
+      - '@google-cloud/dlp!google.type.Date.verify:member(1)'
+      - '@google-cloud/dlp!google.type.Date#year:member'
+  - uid: '@google-cloud/dlp!google.type.Date:constructor(1)'
+    summary: Constructs a new Date.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.type.IDate);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.type.IDate:interface'
+  - uid: '@google-cloud/dlp!google.type.Date.create:member(1)'
+    summary: Creates a new Date instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.type.IDate): google.type.Date;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date:class'
+        description: Date instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.type.IDate:interface'
+  - uid: '@google-cloud/dlp!google.type.Date#day:member'
+    summary: Date day.
+    name: day
+    fullName: day
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public day: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.type.Date.decode:member(1)'
+    summary: Decodes a Date message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.type.Date;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date:class'
+        description: Date
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.type.Date.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.type.Date.decodeDelimited:member(1)'
+    summary: 'Decodes a Date message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.type.Date;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date:class'
+        description: Date
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.type.Date.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.type.Date.encode:member(1)'
+    summary: Encodes the specified Date message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.type.IDate, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Date message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.type.IDate:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.type.Date.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.type.Date.encodeDelimited:member(1)'
+    summary: 'Encodes the specified Date message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.type.IDate, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Date message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.type.IDate:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.type.Date.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.type.Date.fromObject:member(1)'
+    summary: Creates a Date message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.type.Date;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.type.Date:class'
+        description: Date
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.type.Date#month:member'
+    summary: Date month.
+    name: month
+    fullName: month
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public month: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.type.Date#toJSON:member(1)'
+    summary: Converts this Date to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.type.Date.toObject:member(1)'
+    summary: Creates a plain object from a Date message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static toObject(message: google.type.Date, options?: $protobuf.IConversionOptions): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Date
+          type:
+            - '@google-cloud/dlp!google.type.Date:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.type.Date.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.type.Date.verify:member(1)'
+    summary: Verifies a Date message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.type.Date#year:member'
+    summary: Date year.
+    name: year
+    fullName: year
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public year: number;'
+      return:
+        type:
+          - number
+references:
+  - uid: '@google-cloud/dlp!google.type.IDate:interface'
+    name: IDate
+    fullName: google.type.IDate
+  - uid: '@google-cloud/dlp!google.type.Date:class'
+    name: Date
+    fullName: google.type.Date
+  - uid: '@google-cloud/dlp!google.type.Date.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.type.Date.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.type.Date.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.type.Date.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.type.Date.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.type.Date.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.type.Date.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

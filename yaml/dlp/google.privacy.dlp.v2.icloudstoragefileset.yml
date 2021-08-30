@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet:interface'
+    summary: Properties of a CloudStorageFileSet.
+    name: google.privacy.dlp.v2.ICloudStorageFileSet
+    fullName: google.privacy.dlp.v2.ICloudStorageFileSet
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet#url:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet#url:member'
+    summary: CloudStorageFileSet url
+    name: url
+    fullName: url
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'url?: (string|null);'
+      return:
+        type:
+          - (string|null)

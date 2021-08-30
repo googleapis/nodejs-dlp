@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+    summary: CType enum.
+    name: google.protobuf.FieldOptions.CType
+    fullName: google.protobuf.FieldOptions.CType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.CType.CORD:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.CType.STRING:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.CType.STRING_PIECE:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType.CORD:member'
+    name: CORD
+    fullName: CORD
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType.STRING:member'
+    name: STRING
+    fullName: STRING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType.STRING_PIECE:member'
+    name: STRING_PIECE
+    fullName: STRING_PIECE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

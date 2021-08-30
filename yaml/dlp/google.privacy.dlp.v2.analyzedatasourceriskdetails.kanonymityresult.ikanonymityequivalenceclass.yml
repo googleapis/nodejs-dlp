@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass:interface
+    summary: Properties of a KAnonymityEquivalenceClass.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#equivalenceClassSize:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#quasiIdsValues:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#equivalenceClassSize:member
+    summary: KAnonymityEquivalenceClass equivalenceClassSize
+    name: equivalenceClassSize
+    fullName: equivalenceClassSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'equivalenceClassSize?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#equivalenceClassSize~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#quasiIdsValues:member
+    summary: KAnonymityEquivalenceClass quasiIdsValues
+    name: quasiIdsValues
+    fullName: quasiIdsValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIdsValues?: (google.privacy.dlp.v2.IValue[]|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#quasiIdsValues~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#equivalenceClassSize~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityEquivalenceClass#quasiIdsValues~0:complex
+    name: '(google.privacy.dlp.v2.IValue[]|null)'
+    fullName: '(google.privacy.dlp.v2.IValue[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '[]|null)'
+        fullName: '[]|null)'

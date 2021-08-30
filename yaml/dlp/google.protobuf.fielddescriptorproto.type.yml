@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type:enum'
+    summary: Type enum.
+    name: google.protobuf.FieldDescriptorProto.Type
+    fullName: google.protobuf.FieldDescriptorProto.Type
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_BOOL:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_BYTES:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_DOUBLE:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_ENUM:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FIXED32:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FIXED64:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FLOAT:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_GROUP:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_INT32:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_INT64:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_MESSAGE:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SFIXED32:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SFIXED64:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SINT32:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SINT64:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_STRING:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_UINT32:member'
+      - '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_UINT64:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_BOOL:member'
+    name: TYPE_BOOL
+    fullName: TYPE_BOOL
+    langs:
+      - typeScript
+    type: field
+    numericValue: '8'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_BYTES:member'
+    name: TYPE_BYTES
+    fullName: TYPE_BYTES
+    langs:
+      - typeScript
+    type: field
+    numericValue: '12'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_DOUBLE:member'
+    name: TYPE_DOUBLE
+    fullName: TYPE_DOUBLE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_ENUM:member'
+    name: TYPE_ENUM
+    fullName: TYPE_ENUM
+    langs:
+      - typeScript
+    type: field
+    numericValue: '14'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FIXED32:member'
+    name: TYPE_FIXED32
+    fullName: TYPE_FIXED32
+    langs:
+      - typeScript
+    type: field
+    numericValue: '7'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FIXED64:member'
+    name: TYPE_FIXED64
+    fullName: TYPE_FIXED64
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_FLOAT:member'
+    name: TYPE_FLOAT
+    fullName: TYPE_FLOAT
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_GROUP:member'
+    name: TYPE_GROUP
+    fullName: TYPE_GROUP
+    langs:
+      - typeScript
+    type: field
+    numericValue: '10'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_INT32:member'
+    name: TYPE_INT32
+    fullName: TYPE_INT32
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_INT64:member'
+    name: TYPE_INT64
+    fullName: TYPE_INT64
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_MESSAGE:member'
+    name: TYPE_MESSAGE
+    fullName: TYPE_MESSAGE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '11'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SFIXED32:member'
+    name: TYPE_SFIXED32
+    fullName: TYPE_SFIXED32
+    langs:
+      - typeScript
+    type: field
+    numericValue: '15'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SFIXED64:member'
+    name: TYPE_SFIXED64
+    fullName: TYPE_SFIXED64
+    langs:
+      - typeScript
+    type: field
+    numericValue: '16'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SINT32:member'
+    name: TYPE_SINT32
+    fullName: TYPE_SINT32
+    langs:
+      - typeScript
+    type: field
+    numericValue: '17'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_SINT64:member'
+    name: TYPE_SINT64
+    fullName: TYPE_SINT64
+    langs:
+      - typeScript
+    type: field
+    numericValue: '18'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_STRING:member'
+    name: TYPE_STRING
+    fullName: TYPE_STRING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '9'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_UINT32:member'
+    name: TYPE_UINT32
+    fullName: TYPE_UINT32
+    langs:
+      - typeScript
+    type: field
+    numericValue: '13'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type.TYPE_UINT64:member'
+    name: TYPE_UINT64
+    fullName: TYPE_UINT64
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'

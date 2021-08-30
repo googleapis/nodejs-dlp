@@ -1,0 +1,382 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+    summary: Represents a RiskAnalysisJobConfig.
+    name: google.privacy.dlp.v2.RiskAnalysisJobConfig
+    fullName: google.privacy.dlp.v2.RiskAnalysisJobConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#actions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#privacyMetric:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#sourceTable:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:constructor(1)'
+    summary: Constructs a new RiskAnalysisJobConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IRiskAnalysisJobConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#actions:member'
+    summary: RiskAnalysisJobConfig actions.
+    name: actions
+    fullName: actions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public actions: google.privacy.dlp.v2.IAction[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#actions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.create:member(1)'
+    summary: Creates a new RiskAnalysisJobConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IRiskAnalysisJobConfig):
+        google.privacy.dlp.v2.RiskAnalysisJobConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+        description: RiskAnalysisJobConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decode:member(1)'
+    summary: Decodes a RiskAnalysisJobConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.RiskAnalysisJobConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+        description: RiskAnalysisJobConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a RiskAnalysisJobConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.RiskAnalysisJobConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+        description: RiskAnalysisJobConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode:member(1)'
+    summary: >-
+      Encodes the specified RiskAnalysisJobConfig message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IRiskAnalysisJobConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: RiskAnalysisJobConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified RiskAnalysisJobConfig message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IRiskAnalysisJobConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: RiskAnalysisJobConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.fromObject:member(1)'
+    summary: >-
+      Creates a RiskAnalysisJobConfig message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.RiskAnalysisJobConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+        description: RiskAnalysisJobConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#privacyMetric:member'
+    summary: RiskAnalysisJobConfig privacyMetric.
+    name: privacyMetric
+    fullName: privacyMetric
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public privacyMetric?: (google.privacy.dlp.v2.IPrivacyMetric|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#privacyMetric~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#sourceTable:member'
+    summary: RiskAnalysisJobConfig sourceTable.
+    name: sourceTable
+    fullName: sourceTable
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public sourceTable?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#sourceTable~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#toJSON:member(1)'
+    summary: Converts this RiskAnalysisJobConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.toObject:member(1)'
+    summary: Creates a plain object from a RiskAnalysisJobConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.RiskAnalysisJobConfig, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: RiskAnalysisJobConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.verify:member(1)'
+    summary: Verifies a RiskAnalysisJobConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+    name: IRiskAnalysisJobConfig
+    fullName: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#actions~0:complex'
+    name: 'google.privacy.dlp.v2.IAction[]'
+    fullName: 'google.privacy.dlp.v2.IAction[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+        name: google.privacy.dlp.v2.IAction
+        fullName: google.privacy.dlp.v2.IAction
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig:class'
+    name: RiskAnalysisJobConfig
+    fullName: google.privacy.dlp.v2.RiskAnalysisJobConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#privacyMetric~0:complex'
+    name: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    fullName: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        name: google.privacy.dlp.v2.IPrivacyMetric
+        fullName: google.privacy.dlp.v2.IPrivacyMetric
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig#sourceTable~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RiskAnalysisJobConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

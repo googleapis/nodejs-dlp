@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+    summary: DlpJobType enum.
+    name: google.privacy.dlp.v2.DlpJobType
+    fullName: google.privacy.dlp.v2.DlpJobType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.DLP_JOB_TYPE_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.INSPECT_JOB:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.RISK_ANALYSIS_JOB:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.DLP_JOB_TYPE_UNSPECIFIED:member'
+    name: DLP_JOB_TYPE_UNSPECIFIED
+    fullName: DLP_JOB_TYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.INSPECT_JOB:member'
+    name: INSPECT_JOB
+    fullName: INSPECT_JOB
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType.RISK_ANALYSIS_JOB:member'
+    name: RISK_ANALYSIS_JOB
+    fullName: RISK_ANALYSIS_JOB
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

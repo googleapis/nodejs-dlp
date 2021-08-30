@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig:interface'
+    summary: Properties of a CharacterMaskConfig.
+    name: google.privacy.dlp.v2.ICharacterMaskConfig
+    fullName: google.privacy.dlp.v2.ICharacterMaskConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#charactersToIgnore:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#maskingCharacter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#numberToMask:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#reverseOrder:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#charactersToIgnore:member'
+    summary: CharacterMaskConfig charactersToIgnore
+    name: charactersToIgnore
+    fullName: charactersToIgnore
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'charactersToIgnore?: (google.privacy.dlp.v2.ICharsToIgnore[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#charactersToIgnore~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#maskingCharacter:member'
+    summary: CharacterMaskConfig maskingCharacter
+    name: maskingCharacter
+    fullName: maskingCharacter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maskingCharacter?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#numberToMask:member'
+    summary: CharacterMaskConfig numberToMask
+    name: numberToMask
+    fullName: numberToMask
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'numberToMask?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#reverseOrder:member'
+    summary: CharacterMaskConfig reverseOrder
+    name: reverseOrder
+    fullName: reverseOrder
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'reverseOrder?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig#charactersToIgnore~0:complex'
+    name: '(google.privacy.dlp.v2.ICharsToIgnore[]|null)'
+    fullName: '(google.privacy.dlp.v2.ICharsToIgnore[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore:interface'
+        name: google.privacy.dlp.v2.ICharsToIgnore
+        fullName: google.privacy.dlp.v2.ICharsToIgnore
+      - name: '[]|null)'
+        fullName: '[]|null)'

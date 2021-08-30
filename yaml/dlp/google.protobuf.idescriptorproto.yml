@@ -1,0 +1,230 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+    summary: Properties of a DescriptorProto.
+    name: google.protobuf.IDescriptorProto
+    fullName: google.protobuf.IDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#enumType:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#extension:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#extensionRange:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#field:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#nestedType:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#oneofDecl:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedName:member'
+      - '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedRange:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#enumType:member'
+    summary: DescriptorProto enumType
+    name: enumType
+    fullName: enumType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'enumType?: (google.protobuf.IEnumDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#enumType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#extension:member'
+    summary: DescriptorProto extension
+    name: extension
+    fullName: extension
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'extension?: (google.protobuf.IFieldDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#extension~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#extensionRange:member'
+    summary: DescriptorProto extensionRange
+    name: extensionRange
+    fullName: extensionRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'extensionRange?: (google.protobuf.DescriptorProto.IExtensionRange[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#extensionRange~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#field:member'
+    summary: DescriptorProto field
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'field?: (google.protobuf.IFieldDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#field~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#name:member'
+    summary: DescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#nestedType:member'
+    summary: DescriptorProto nestedType
+    name: nestedType
+    fullName: nestedType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nestedType?: (google.protobuf.IDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#nestedType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#oneofDecl:member'
+    summary: DescriptorProto oneofDecl
+    name: oneofDecl
+    fullName: oneofDecl
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'oneofDecl?: (google.protobuf.IOneofDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#oneofDecl~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#options:member'
+    summary: DescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IMessageOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedName:member'
+    summary: DescriptorProto reservedName
+    name: reservedName
+    fullName: reservedName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'reservedName?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedRange:member'
+    summary: DescriptorProto reservedRange
+    name: reservedRange
+    fullName: reservedRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'reservedRange?: (google.protobuf.DescriptorProto.IReservedRange[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedRange~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#enumType~0:complex'
+    name: '(google.protobuf.IEnumDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IEnumDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+        name: google.protobuf.IEnumDescriptorProto
+        fullName: google.protobuf.IEnumDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#extension~0:complex'
+    name: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#extensionRange~0:complex'
+    name: '(google.protobuf.DescriptorProto.IExtensionRange[]|null)'
+    fullName: '(google.protobuf.DescriptorProto.IExtensionRange[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange:interface'
+        name: google.protobuf.DescriptorProto.IExtensionRange
+        fullName: google.protobuf.DescriptorProto.IExtensionRange
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#field~0:complex'
+    name: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#nestedType~0:complex'
+    name: '(google.protobuf.IDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        name: google.protobuf.IDescriptorProto
+        fullName: google.protobuf.IDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#oneofDecl~0:complex'
+    name: '(google.protobuf.IOneofDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IOneofDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IOneofDescriptorProto:interface'
+        name: google.protobuf.IOneofDescriptorProto
+        fullName: google.protobuf.IOneofDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#options~0:complex'
+    name: (google.protobuf.IMessageOptions|null)
+    fullName: (google.protobuf.IMessageOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IMessageOptions:interface'
+        name: google.protobuf.IMessageOptions
+        fullName: google.protobuf.IMessageOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto#reservedRange~0:complex'
+    name: '(google.protobuf.DescriptorProto.IReservedRange[]|null)'
+    fullName: '(google.protobuf.DescriptorProto.IReservedRange[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange:interface'
+        name: google.protobuf.DescriptorProto.IReservedRange
+        fullName: google.protobuf.DescriptorProto.IReservedRange
+      - name: '[]|null)'
+        fullName: '[]|null)'

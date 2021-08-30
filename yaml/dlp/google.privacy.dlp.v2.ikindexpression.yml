@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression:interface'
+    summary: Properties of a KindExpression.
+    name: google.privacy.dlp.v2.IKindExpression
+    fullName: google.privacy.dlp.v2.IKindExpression
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression#name:member'
+    summary: KindExpression name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)

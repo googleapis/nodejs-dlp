@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto:interface'
+    summary: Properties of a MethodDescriptorProto.
+    name: google.protobuf.IMethodDescriptorProto
+    fullName: google.protobuf.IMethodDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#clientStreaming:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#inputType:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#outputType:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#serverStreaming:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#clientStreaming:member'
+    summary: MethodDescriptorProto clientStreaming
+    name: clientStreaming
+    fullName: clientStreaming
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'clientStreaming?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#inputType:member'
+    summary: MethodDescriptorProto inputType
+    name: inputType
+    fullName: inputType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inputType?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#name:member'
+    summary: MethodDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#options:member'
+    summary: MethodDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IMethodOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#outputType:member'
+    summary: MethodDescriptorProto outputType
+    name: outputType
+    fullName: outputType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'outputType?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#serverStreaming:member'
+    summary: MethodDescriptorProto serverStreaming
+    name: serverStreaming
+    fullName: serverStreaming
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'serverStreaming?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto#options~0:complex'
+    name: (google.protobuf.IMethodOptions|null)
+    fullName: (google.protobuf.IMethodOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions:interface'
+        name: google.protobuf.IMethodOptions
+        fullName: google.protobuf.IMethodOptions
+      - name: '|null)'
+        fullName: '|null)'

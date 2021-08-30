@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+    summary: Properties of a BigQueryOptions.
+    name: google.privacy.dlp.v2.IBigQueryOptions
+    fullName: google.privacy.dlp.v2.IBigQueryOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#excludedFields:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#identifyingFields:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimit:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimitPercent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#sampleMethod:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#tableReference:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#excludedFields:member'
+    summary: BigQueryOptions excludedFields
+    name: excludedFields
+    fullName: excludedFields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'excludedFields?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#excludedFields~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#identifyingFields:member'
+    summary: BigQueryOptions identifyingFields
+    name: identifyingFields
+    fullName: identifyingFields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'identifyingFields?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#identifyingFields~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimit:member'
+    summary: BigQueryOptions rowsLimit
+    name: rowsLimit
+    fullName: rowsLimit
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rowsLimit?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimit~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimitPercent:member'
+    summary: BigQueryOptions rowsLimitPercent
+    name: rowsLimitPercent
+    fullName: rowsLimitPercent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rowsLimitPercent?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#sampleMethod:member'
+    summary: BigQueryOptions sampleMethod
+    name: sampleMethod
+    fullName: sampleMethod
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        sampleMethod?: (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+        google.privacy.dlp.v2.BigQueryOptions.SampleMethod|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#sampleMethod~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#tableReference:member'
+    summary: BigQueryOptions tableReference
+    name: tableReference
+    fullName: tableReference
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'tableReference?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#tableReference~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#excludedFields~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#identifyingFields~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#rowsLimit~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#sampleMethod~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.BigQueryOptions.SampleMethod|null)
+    fullName: >-
+      (google.privacy.dlp.v2.BigQueryOptions.SampleMethod|keyof typeof
+      google.privacy.dlp.v2.BigQueryOptions.SampleMethod|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryOptions.SampleMethod:enum'
+        name: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+        fullName: google.privacy.dlp.v2.BigQueryOptions.SampleMethod
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions#tableReference~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'

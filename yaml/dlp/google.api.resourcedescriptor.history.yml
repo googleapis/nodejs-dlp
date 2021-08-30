@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+    summary: History enum.
+    name: google.api.ResourceDescriptor.History
+    fullName: google.api.ResourceDescriptor.History
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.History.FUTURE_MULTI_PATTERN:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.History.HISTORY_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.api.ResourceDescriptor.History.ORIGINALLY_SINGLE_PATTERN:member'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History.FUTURE_MULTI_PATTERN:member'
+    name: FUTURE_MULTI_PATTERN
+    fullName: FUTURE_MULTI_PATTERN
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History.HISTORY_UNSPECIFIED:member'
+    name: HISTORY_UNSPECIFIED
+    fullName: HISTORY_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History.ORIGINALLY_SINGLE_PATTERN:member'
+    name: ORIGINALLY_SINGLE_PATTERN
+    fullName: ORIGINALLY_SINGLE_PATTERN
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

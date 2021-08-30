@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo:interface'
+    summary: Properties of a GeneratedCodeInfo.
+    name: google.protobuf.IGeneratedCodeInfo
+    fullName: google.protobuf.IGeneratedCodeInfo
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo#annotation:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo#annotation:member'
+    summary: GeneratedCodeInfo annotation
+    name: annotation
+    fullName: annotation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'annotation?: (google.protobuf.GeneratedCodeInfo.IAnnotation[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo#annotation~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IGeneratedCodeInfo#annotation~0:complex'
+    name: '(google.protobuf.GeneratedCodeInfo.IAnnotation[]|null)'
+    fullName: '(google.protobuf.GeneratedCodeInfo.IAnnotation[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.GeneratedCodeInfo.IAnnotation:interface'
+        name: google.protobuf.GeneratedCodeInfo.IAnnotation
+        fullName: google.protobuf.GeneratedCodeInfo.IAnnotation
+      - name: '[]|null)'
+        fullName: '[]|null)'

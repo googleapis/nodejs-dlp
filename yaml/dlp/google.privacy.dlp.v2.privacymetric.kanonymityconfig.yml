@@ -1,0 +1,352 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+    summary: Represents a KAnonymityConfig.
+    name: google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#entityId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#quasiIds:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:constructor(1)'
+    summary: Constructs a new KAnonymityConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.create:member(1)'
+    summary: Creates a new KAnonymityConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig):
+        google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+        description: KAnonymityConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decode:member(1)'
+    summary: Decodes a KAnonymityConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+        description: KAnonymityConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a KAnonymityConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+        description: KAnonymityConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode:member(1)'
+    summary: Encodes the specified KAnonymityConfig message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: KAnonymityConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited:member(1)'
+    summary: 'Encodes the specified KAnonymityConfig message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: KAnonymityConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#entityId:member'
+    summary: KAnonymityConfig entityId.
+    name: entityId
+    fullName: entityId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public entityId?: (google.privacy.dlp.v2.IEntityId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#entityId~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.fromObject:member(1)'
+    summary: Creates a KAnonymityConfig message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+        description: KAnonymityConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#quasiIds:member'
+    summary: KAnonymityConfig quasiIds.
+    name: quasiIds
+    fullName: quasiIds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public quasiIds: google.privacy.dlp.v2.IFieldId[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#quasiIds~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#toJSON:member(1)'
+    summary: Converts this KAnonymityConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.toObject:member(1)'
+    summary: Creates a plain object from a KAnonymityConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: KAnonymityConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.verify:member(1)'
+    summary: Verifies a KAnonymityConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+    name: IKAnonymityConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig:class'
+    name: KAnonymityConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#entityId~0:complex'
+    name: (google.privacy.dlp.v2.IEntityId|null)
+    fullName: (google.privacy.dlp.v2.IEntityId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IEntityId:interface'
+        name: google.privacy.dlp.v2.IEntityId
+        fullName: google.privacy.dlp.v2.IEntityId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig#quasiIds~0:complex'
+    name: 'google.privacy.dlp.v2.IFieldId[]'
+    fullName: 'google.privacy.dlp.v2.IFieldId[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KAnonymityConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

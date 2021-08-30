@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition:interface'
+    summary: Properties of a Condition.
+    name: google.privacy.dlp.v2.RecordCondition.ICondition
+    fullName: google.privacy.dlp.v2.RecordCondition.ICondition
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#field:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#operator:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#value:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#field:member'
+    summary: Condition field
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'field?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#field~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#operator:member'
+    summary: Condition operator
+    name: operator
+    fullName: operator
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        operator?: (google.privacy.dlp.v2.RelationalOperator|keyof typeof
+        google.privacy.dlp.v2.RelationalOperator|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#operator~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#value:member'
+    summary: Condition value
+    name: value
+    fullName: value
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'value?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#value~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#field~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#operator~0:complex'
+    name: (google.privacy.dlp.v2.RelationalOperator|keyof typeof google.privacy.dlp.v2.RelationalOperator|null)
+    fullName: (google.privacy.dlp.v2.RelationalOperator|keyof typeof google.privacy.dlp.v2.RelationalOperator|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator:enum'
+        name: google.privacy.dlp.v2.RelationalOperator
+        fullName: google.privacy.dlp.v2.RelationalOperator
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator:enum'
+        name: google.privacy.dlp.v2.RelationalOperator
+        fullName: google.privacy.dlp.v2.RelationalOperator
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.ICondition#value~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'

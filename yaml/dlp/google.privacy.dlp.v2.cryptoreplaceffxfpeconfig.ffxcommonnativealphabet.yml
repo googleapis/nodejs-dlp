@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+    summary: FfxCommonNativeAlphabet enum.
+    name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+    fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.ALPHA_NUMERIC:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED:member
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.HEXADECIMAL:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.NUMERIC:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.UPPER_CASE_ALPHA_NUMERIC:member
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.ALPHA_NUMERIC:member'
+    name: ALPHA_NUMERIC
+    fullName: ALPHA_NUMERIC
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED:member
+    name: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED
+    fullName: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.HEXADECIMAL:member'
+    name: HEXADECIMAL
+    fullName: HEXADECIMAL
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.NUMERIC:member'
+    name: NUMERIC
+    fullName: NUMERIC
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet.UPPER_CASE_ALPHA_NUMERIC:member
+    name: UPPER_CASE_ALPHA_NUMERIC
+    fullName: UPPER_CASE_ALPHA_NUMERIC
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'

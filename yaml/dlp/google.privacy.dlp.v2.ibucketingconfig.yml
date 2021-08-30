@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig:interface'
+    summary: Properties of a BucketingConfig.
+    name: google.privacy.dlp.v2.IBucketingConfig
+    fullName: google.privacy.dlp.v2.IBucketingConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig#buckets:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig#buckets:member'
+    summary: BucketingConfig buckets
+    name: buckets
+    fullName: buckets
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'buckets?: (google.privacy.dlp.v2.BucketingConfig.IBucket[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig#buckets~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig#buckets~0:complex'
+    name: '(google.privacy.dlp.v2.BucketingConfig.IBucket[]|null)'
+    fullName: '(google.privacy.dlp.v2.BucketingConfig.IBucket[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+        name: google.privacy.dlp.v2.BucketingConfig.IBucket
+        fullName: google.privacy.dlp.v2.BucketingConfig.IBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

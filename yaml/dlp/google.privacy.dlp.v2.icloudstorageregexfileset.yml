@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet:interface'
+    summary: Properties of a CloudStorageRegexFileSet.
+    name: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+    fullName: google.privacy.dlp.v2.ICloudStorageRegexFileSet
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#bucketName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#excludeRegex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#includeRegex:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#bucketName:member'
+    summary: CloudStorageRegexFileSet bucketName
+    name: bucketName
+    fullName: bucketName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#excludeRegex:member'
+    summary: CloudStorageRegexFileSet excludeRegex
+    name: excludeRegex
+    fullName: excludeRegex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'excludeRegex?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageRegexFileSet#includeRegex:member'
+    summary: CloudStorageRegexFileSet includeRegex
+    name: includeRegex
+    fullName: includeRegex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'includeRegex?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'

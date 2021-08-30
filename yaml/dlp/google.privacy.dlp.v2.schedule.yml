@@ -1,0 +1,339 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+    summary: Represents a Schedule.
+    name: google.privacy.dlp.v2.Schedule
+    fullName: google.privacy.dlp.v2.Schedule
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#option:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#recurrencePeriodDuration:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:constructor(1)'
+    summary: Constructs a new Schedule.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ISchedule);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.create:member(1)'
+    summary: Creates a new Schedule instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.ISchedule): google.privacy.dlp.v2.Schedule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+        description: Schedule instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decode:member(1)'
+    summary: Decodes a Schedule message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Schedule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+        description: Schedule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decodeDelimited:member(1)'
+    summary: 'Decodes a Schedule message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Schedule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+        description: Schedule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode:member(1)'
+    summary: >-
+      Encodes the specified Schedule message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Schedule.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.ISchedule, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Schedule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Schedule message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Schedule.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ISchedule, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Schedule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.fromObject:member(1)'
+    summary: Creates a Schedule message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Schedule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+        description: Schedule
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#option:member'
+    summary: Schedule option.
+    name: option
+    fullName: option
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public option?: "recurrencePeriodDuration";'
+      return:
+        type:
+          - '"recurrencePeriodDuration"'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#recurrencePeriodDuration:member'
+    summary: Schedule recurrencePeriodDuration.
+    name: recurrencePeriodDuration
+    fullName: recurrencePeriodDuration
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public recurrencePeriodDuration?: (google.protobuf.IDuration|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#recurrencePeriodDuration~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#toJSON:member(1)'
+    summary: Converts this Schedule to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.toObject:member(1)'
+    summary: Creates a plain object from a Schedule message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Schedule, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Schedule
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.verify:member(1)'
+    summary: Verifies a Schedule message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+    name: ISchedule
+    fullName: google.privacy.dlp.v2.ISchedule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule:class'
+    name: Schedule
+    fullName: google.privacy.dlp.v2.Schedule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule#recurrencePeriodDuration~0:complex'
+    name: (google.protobuf.IDuration|null)
+    fullName: (google.protobuf.IDuration|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IDuration:interface'
+        name: google.protobuf.IDuration
+        fullName: google.protobuf.IDuration
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Schedule.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

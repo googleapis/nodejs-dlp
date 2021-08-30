@@ -1,0 +1,132 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig:interface'
+    summary: Properties of a StorageConfig.
+    name: google.privacy.dlp.v2.IStorageConfig
+    fullName: google.privacy.dlp.v2.IStorageConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#bigQueryOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#cloudStorageOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#datastoreOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#hybridOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#timespanConfig:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#bigQueryOptions:member'
+    summary: StorageConfig bigQueryOptions
+    name: bigQueryOptions
+    fullName: bigQueryOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bigQueryOptions?: (google.privacy.dlp.v2.IBigQueryOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#bigQueryOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#cloudStorageOptions:member'
+    summary: StorageConfig cloudStorageOptions
+    name: cloudStorageOptions
+    fullName: cloudStorageOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cloudStorageOptions?: (google.privacy.dlp.v2.ICloudStorageOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#cloudStorageOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#datastoreOptions:member'
+    summary: StorageConfig datastoreOptions
+    name: datastoreOptions
+    fullName: datastoreOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'datastoreOptions?: (google.privacy.dlp.v2.IDatastoreOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#datastoreOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#hybridOptions:member'
+    summary: StorageConfig hybridOptions
+    name: hybridOptions
+    fullName: hybridOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hybridOptions?: (google.privacy.dlp.v2.IHybridOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#hybridOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#timespanConfig:member'
+    summary: StorageConfig timespanConfig
+    name: timespanConfig
+    fullName: timespanConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timespanConfig?: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#timespanConfig~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#bigQueryOptions~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryOptions|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryOptions:interface'
+        name: google.privacy.dlp.v2.IBigQueryOptions
+        fullName: google.privacy.dlp.v2.IBigQueryOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#cloudStorageOptions~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStorageOptions|null)
+    fullName: (google.privacy.dlp.v2.ICloudStorageOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageOptions:interface'
+        name: google.privacy.dlp.v2.ICloudStorageOptions
+        fullName: google.privacy.dlp.v2.ICloudStorageOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#datastoreOptions~0:complex'
+    name: (google.privacy.dlp.v2.IDatastoreOptions|null)
+    fullName: (google.privacy.dlp.v2.IDatastoreOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions:interface'
+        name: google.privacy.dlp.v2.IDatastoreOptions
+        fullName: google.privacy.dlp.v2.IDatastoreOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#hybridOptions~0:complex'
+    name: (google.privacy.dlp.v2.IHybridOptions|null)
+    fullName: (google.privacy.dlp.v2.IHybridOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions:interface'
+        name: google.privacy.dlp.v2.IHybridOptions
+        fullName: google.privacy.dlp.v2.IHybridOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageConfig#timespanConfig~0:complex'
+    name: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null)
+    fullName: (google.privacy.dlp.v2.StorageConfig.ITimespanConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StorageConfig.ITimespanConfig:interface'
+        name: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+        fullName: google.privacy.dlp.v2.StorageConfig.ITimespanConfig
+      - name: '|null)'
+        fullName: '|null)'

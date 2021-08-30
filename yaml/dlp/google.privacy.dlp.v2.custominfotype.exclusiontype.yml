@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+    summary: ExclusionType enum.
+    name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+    fullName: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType.EXCLUSION_TYPE_EXCLUDE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType.EXCLUSION_TYPE_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType.EXCLUSION_TYPE_EXCLUDE:member'
+    name: EXCLUSION_TYPE_EXCLUDE
+    fullName: EXCLUSION_TYPE_EXCLUDE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType.EXCLUSION_TYPE_UNSPECIFIED:member'
+    name: EXCLUSION_TYPE_UNSPECIFIED
+    fullName: EXCLUSION_TYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

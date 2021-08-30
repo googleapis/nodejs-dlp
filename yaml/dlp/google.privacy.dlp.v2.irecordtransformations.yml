@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations:interface'
+    summary: Properties of a RecordTransformations.
+    name: google.privacy.dlp.v2.IRecordTransformations
+    fullName: google.privacy.dlp.v2.IRecordTransformations
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#fieldTransformations:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#recordSuppressions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#fieldTransformations:member'
+    summary: RecordTransformations fieldTransformations
+    name: fieldTransformations
+    fullName: fieldTransformations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fieldTransformations?: (google.privacy.dlp.v2.IFieldTransformation[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#fieldTransformations~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#recordSuppressions:member'
+    summary: RecordTransformations recordSuppressions
+    name: recordSuppressions
+    fullName: recordSuppressions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'recordSuppressions?: (google.privacy.dlp.v2.IRecordSuppression[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#recordSuppressions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#fieldTransformations~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldTransformation[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldTransformation[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation:interface'
+        name: google.privacy.dlp.v2.IFieldTransformation
+        fullName: google.privacy.dlp.v2.IFieldTransformation
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordTransformations#recordSuppressions~0:complex'
+    name: '(google.privacy.dlp.v2.IRecordSuppression[]|null)'
+    fullName: '(google.privacy.dlp.v2.IRecordSuppression[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordSuppression:interface'
+        name: google.privacy.dlp.v2.IRecordSuppression
+        fullName: google.privacy.dlp.v2.IRecordSuppression
+      - name: '[]|null)'
+        fullName: '[]|null)'

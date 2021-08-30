@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+    summary: Properties of a TableOptions.
+    name: google.privacy.dlp.v2.ITableOptions
+    fullName: google.privacy.dlp.v2.ITableOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions#identifyingFields:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions#identifyingFields:member'
+    summary: TableOptions identifyingFields
+    name: identifyingFields
+    fullName: identifyingFields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'identifyingFields?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions#identifyingFields~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions#identifyingFields~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'

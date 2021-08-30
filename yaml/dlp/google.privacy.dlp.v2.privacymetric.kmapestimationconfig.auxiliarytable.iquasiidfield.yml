@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField:interface'
+    summary: Properties of a QuasiIdField.
+    name: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField
+    fullName: google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#customTag:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#field:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#customTag:member
+    summary: QuasiIdField customTag
+    name: customTag
+    fullName: customTag
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'customTag?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#field:member
+    summary: QuasiIdField field
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'field?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#field~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.IQuasiIdField#field~0:complex
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'

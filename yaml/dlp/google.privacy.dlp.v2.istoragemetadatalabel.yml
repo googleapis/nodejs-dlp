@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel:interface'
+    summary: Properties of a StorageMetadataLabel.
+    name: google.privacy.dlp.v2.IStorageMetadataLabel
+    fullName: google.privacy.dlp.v2.IStorageMetadataLabel
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel#key:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStorageMetadataLabel#key:member'
+    summary: StorageMetadataLabel key
+    name: key
+    fullName: key
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'key?: (string|null);'
+      return:
+        type:
+          - (string|null)

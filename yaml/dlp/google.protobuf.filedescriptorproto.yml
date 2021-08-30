@@ -1,0 +1,522 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+    summary: Represents a FileDescriptorProto.
+    name: google.protobuf.FileDescriptorProto
+    fullName: google.protobuf.FileDescriptorProto
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#dependency:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#enumType:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#extension:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#messageType:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#package:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#publicDependency:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#service:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#sourceCodeInfo:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#syntax:member'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.verify:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#weakDependency:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto:constructor(1)'
+    summary: Constructs a new FileDescriptorProto.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IFileDescriptorProto);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.create:member(1)'
+    summary: Creates a new FileDescriptorProto instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IFileDescriptorProto): google.protobuf.FileDescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+        description: FileDescriptorProto instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decode:member(1)'
+    summary: Decodes a FileDescriptorProto message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.protobuf.FileDescriptorProto;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+        description: FileDescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decodeDelimited:member(1)'
+    summary: 'Decodes a FileDescriptorProto message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.FileDescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+        description: FileDescriptorProto
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#dependency:member'
+    summary: FileDescriptorProto dependency.
+    name: dependency
+    fullName: dependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dependency: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode:member(1)'
+    summary: >-
+      Encodes the specified FileDescriptorProto message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.FileDescriptorProto.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.protobuf.IFileDescriptorProto, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FileDescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified FileDescriptorProto message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.FileDescriptorProto.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.IFileDescriptorProto, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FileDescriptorProto message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#enumType:member'
+    summary: FileDescriptorProto enumType.
+    name: enumType
+    fullName: enumType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public enumType: google.protobuf.IEnumDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#enumType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#extension:member'
+    summary: FileDescriptorProto extension.
+    name: extension
+    fullName: extension
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public extension: google.protobuf.IFieldDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#extension~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.fromObject:member(1)'
+    summary: >-
+      Creates a FileDescriptorProto message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.FileDescriptorProto;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+        description: FileDescriptorProto
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#messageType:member'
+    summary: FileDescriptorProto messageType.
+    name: messageType
+    fullName: messageType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public messageType: google.protobuf.IDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#messageType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#name:member'
+    summary: FileDescriptorProto name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#options:member'
+    summary: FileDescriptorProto options.
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public options?: (google.protobuf.IFileOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#package:member'
+    summary: FileDescriptorProto package.
+    name: package
+    fullName: package
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public package: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#publicDependency:member'
+    summary: FileDescriptorProto publicDependency.
+    name: publicDependency
+    fullName: publicDependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public publicDependency: number[];'
+      return:
+        type:
+          - 'number[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#service:member'
+    summary: FileDescriptorProto service.
+    name: service
+    fullName: service
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public service: google.protobuf.IServiceDescriptorProto[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#service~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#sourceCodeInfo:member'
+    summary: FileDescriptorProto sourceCodeInfo.
+    name: sourceCodeInfo
+    fullName: sourceCodeInfo
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public sourceCodeInfo?: (google.protobuf.ISourceCodeInfo|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FileDescriptorProto#sourceCodeInfo~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#syntax:member'
+    summary: FileDescriptorProto syntax.
+    name: syntax
+    fullName: syntax
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public syntax: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#toJSON:member(1)'
+    summary: Converts this FileDescriptorProto to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.toObject:member(1)'
+    summary: Creates a plain object from a FileDescriptorProto message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.FileDescriptorProto, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: FileDescriptorProto
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.FileDescriptorProto.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.verify:member(1)'
+    summary: Verifies a FileDescriptorProto message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#weakDependency:member'
+    summary: FileDescriptorProto weakDependency.
+    name: weakDependency
+    fullName: weakDependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public weakDependency: number[];'
+      return:
+        type:
+          - 'number[]'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+    name: IFileDescriptorProto
+    fullName: google.protobuf.IFileDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto:class'
+    name: FileDescriptorProto
+    fullName: google.protobuf.FileDescriptorProto
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#enumType~0:complex'
+    name: 'google.protobuf.IEnumDescriptorProto[]'
+    fullName: 'google.protobuf.IEnumDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+        name: google.protobuf.IEnumDescriptorProto
+        fullName: google.protobuf.IEnumDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#extension~0:complex'
+    name: 'google.protobuf.IFieldDescriptorProto[]'
+    fullName: 'google.protobuf.IFieldDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#messageType~0:complex'
+    name: 'google.protobuf.IDescriptorProto[]'
+    fullName: 'google.protobuf.IDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        name: google.protobuf.IDescriptorProto
+        fullName: google.protobuf.IDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#options~0:complex'
+    name: (google.protobuf.IFileOptions|null)
+    fullName: (google.protobuf.IFileOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFileOptions:interface'
+        name: google.protobuf.IFileOptions
+        fullName: google.protobuf.IFileOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#service~0:complex'
+    name: 'google.protobuf.IServiceDescriptorProto[]'
+    fullName: 'google.protobuf.IServiceDescriptorProto[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+        name: google.protobuf.IServiceDescriptorProto
+        fullName: google.protobuf.IServiceDescriptorProto
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto#sourceCodeInfo~0:complex'
+    name: (google.protobuf.ISourceCodeInfo|null)
+    fullName: (google.protobuf.ISourceCodeInfo|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo:interface'
+        name: google.protobuf.ISourceCodeInfo
+        fullName: google.protobuf.ISourceCodeInfo
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.FileDescriptorProto.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

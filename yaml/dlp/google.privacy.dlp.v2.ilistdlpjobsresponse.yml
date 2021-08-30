@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse:interface'
+    summary: Properties of a ListDlpJobsResponse.
+    name: google.privacy.dlp.v2.IListDlpJobsResponse
+    fullName: google.privacy.dlp.v2.IListDlpJobsResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#jobs:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#nextPageToken:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#jobs:member'
+    summary: ListDlpJobsResponse jobs
+    name: jobs
+    fullName: jobs
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobs?: (google.privacy.dlp.v2.IDlpJob[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#jobs~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#nextPageToken:member'
+    summary: ListDlpJobsResponse nextPageToken
+    name: nextPageToken
+    fullName: nextPageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nextPageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsResponse#jobs~0:complex'
+    name: '(google.privacy.dlp.v2.IDlpJob[]|null)'
+    fullName: '(google.privacy.dlp.v2.IDlpJob[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+        name: google.privacy.dlp.v2.IDlpJob
+        fullName: google.privacy.dlp.v2.IDlpJob
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig:interface'
+    summary: Properties of a LargeCustomDictionaryConfig.
+    name: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+    fullName: google.privacy.dlp.v2.ILargeCustomDictionaryConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#bigQueryField:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#cloudStorageFileSet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#outputPath:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#bigQueryField:member'
+    summary: LargeCustomDictionaryConfig bigQueryField
+    name: bigQueryField
+    fullName: bigQueryField
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bigQueryField?: (google.privacy.dlp.v2.IBigQueryField|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#bigQueryField~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#cloudStorageFileSet:member'
+    summary: LargeCustomDictionaryConfig cloudStorageFileSet
+    name: cloudStorageFileSet
+    fullName: cloudStorageFileSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cloudStorageFileSet?: (google.privacy.dlp.v2.ICloudStorageFileSet|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#cloudStorageFileSet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#outputPath:member'
+    summary: LargeCustomDictionaryConfig outputPath
+    name: outputPath
+    fullName: outputPath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'outputPath?: (google.privacy.dlp.v2.ICloudStoragePath|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#outputPath~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#bigQueryField~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryField|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryField|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField:interface'
+        name: google.privacy.dlp.v2.IBigQueryField
+        fullName: google.privacy.dlp.v2.IBigQueryField
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#cloudStorageFileSet~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStorageFileSet|null)
+    fullName: (google.privacy.dlp.v2.ICloudStorageFileSet|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStorageFileSet:interface'
+        name: google.privacy.dlp.v2.ICloudStorageFileSet
+        fullName: google.privacy.dlp.v2.ICloudStorageFileSet
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryConfig#outputPath~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    fullName: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStoragePath:interface'
+        name: google.privacy.dlp.v2.ICloudStoragePath
+        fullName: google.privacy.dlp.v2.ICloudStoragePath
+      - name: '|null)'
+        fullName: '|null)'

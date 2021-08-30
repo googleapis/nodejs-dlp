@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult:interface'
+    summary: Properties of a CategoricalStatsResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult#valueFrequencyHistogramBuckets:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult#valueFrequencyHistogramBuckets:member
+    summary: CategoricalStatsResult valueFrequencyHistogramBuckets
+    name: valueFrequencyHistogramBuckets
+    fullName: valueFrequencyHistogramBuckets
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        valueFrequencyHistogramBuckets?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult#valueFrequencyHistogramBuckets~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.ICategoricalStatsResult#valueFrequencyHistogramBuckets~0:complex
+    name: >-
+      (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket[]|null)
+    fullName: >-
+      (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket[]|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket:interface
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.CategoricalStatsResult.ICategoricalStatsHistogramBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

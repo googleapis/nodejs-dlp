@@ -1,0 +1,413 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+    summary: Represents a RedactImageRequest.
+    name: google.privacy.dlp.v2.RedactImageRequest
+    fullName: google.privacy.dlp.v2.RedactImageRequest
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#byteItem:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#imageRedactionConfigs:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#includeFindings:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#inspectConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:constructor(1)'
+    summary: Constructs a new RedactImageRequest.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IRedactImageRequest);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#byteItem:member'
+    summary: RedactImageRequest byteItem.
+    name: byteItem
+    fullName: byteItem
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public byteItem?: (google.privacy.dlp.v2.IByteContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#byteItem~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.create:member(1)'
+    summary: Creates a new RedactImageRequest instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IRedactImageRequest):
+        google.privacy.dlp.v2.RedactImageRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+        description: RedactImageRequest instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decode:member(1)'
+    summary: Decodes a RedactImageRequest message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.RedactImageRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+        description: RedactImageRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decodeDelimited:member(1)'
+    summary: 'Decodes a RedactImageRequest message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.RedactImageRequest;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+        description: RedactImageRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode:member(1)'
+    summary: Encodes the specified RedactImageRequest message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IRedactImageRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: RedactImageRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited:member(1)'
+    summary: 'Encodes the specified RedactImageRequest message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IRedactImageRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: RedactImageRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.fromObject:member(1)'
+    summary: Creates a RedactImageRequest message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.RedactImageRequest;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+        description: RedactImageRequest
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#imageRedactionConfigs:member'
+    summary: RedactImageRequest imageRedactionConfigs.
+    name: imageRedactionConfigs
+    fullName: imageRedactionConfigs
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public imageRedactionConfigs: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#imageRedactionConfigs~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#includeFindings:member'
+    summary: RedactImageRequest includeFindings.
+    name: includeFindings
+    fullName: includeFindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public includeFindings: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#inspectConfig:member'
+    summary: RedactImageRequest inspectConfig.
+    name: inspectConfig
+    fullName: inspectConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public inspectConfig?: (google.privacy.dlp.v2.IInspectConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#inspectConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#locationId:member'
+    summary: RedactImageRequest locationId.
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public locationId: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#parent:member'
+    summary: RedactImageRequest parent.
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public parent: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#toJSON:member(1)'
+    summary: Converts this RedactImageRequest to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.toObject:member(1)'
+    summary: Creates a plain object from a RedactImageRequest message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.RedactImageRequest, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: RedactImageRequest
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.verify:member(1)'
+    summary: Verifies a RedactImageRequest message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+    name: IRedactImageRequest
+    fullName: google.privacy.dlp.v2.IRedactImageRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#byteItem~0:complex'
+    name: (google.privacy.dlp.v2.IByteContentItem|null)
+    fullName: (google.privacy.dlp.v2.IByteContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+        name: google.privacy.dlp.v2.IByteContentItem
+        fullName: google.privacy.dlp.v2.IByteContentItem
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest:class'
+    name: RedactImageRequest
+    fullName: google.privacy.dlp.v2.RedactImageRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#imageRedactionConfigs~0:complex'
+    name: 'google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[]'
+    fullName: 'google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig:interface'
+        name: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+        fullName: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest#inspectConfig~0:complex'
+    name: (google.privacy.dlp.v2.IInspectConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        name: google.privacy.dlp.v2.IInspectConfig
+        fullName: google.privacy.dlp.v2.IInspectConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

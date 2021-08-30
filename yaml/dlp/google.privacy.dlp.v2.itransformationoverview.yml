@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+    summary: Properties of a TransformationOverview.
+    name: google.privacy.dlp.v2.ITransformationOverview
+    fullName: google.privacy.dlp.v2.ITransformationOverview
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformationSummaries:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformedBytes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformationSummaries:member'
+    summary: TransformationOverview transformationSummaries
+    name: transformationSummaries
+    fullName: transformationSummaries
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'transformationSummaries?: (google.privacy.dlp.v2.ITransformationSummary[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformationSummaries~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformedBytes:member'
+    summary: TransformationOverview transformedBytes
+    name: transformedBytes
+    fullName: transformedBytes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'transformedBytes?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformedBytes~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformationSummaries~0:complex'
+    name: '(google.privacy.dlp.v2.ITransformationSummary[]|null)'
+    fullName: '(google.privacy.dlp.v2.ITransformationSummary[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationSummary:interface'
+        name: google.privacy.dlp.v2.ITransformationSummary
+        fullName: google.privacy.dlp.v2.ITransformationSummary
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview#transformedBytes~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

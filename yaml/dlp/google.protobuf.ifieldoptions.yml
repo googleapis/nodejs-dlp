@@ -1,0 +1,194 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+    summary: Properties of a FieldOptions.
+    name: google.protobuf.IFieldOptions
+    fullName: google.protobuf.IFieldOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.fieldBehavior":member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.resourceReference":member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#ctype:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#jstype:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#lazy:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#packed:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#uninterpretedOption:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions#weak:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.fieldBehavior":member'
+    summary: FieldOptions .google.api.fieldBehavior
+    name: '".google.api.fieldBehavior"'
+    fullName: '".google.api.fieldBehavior"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.fieldBehavior"?: (google.api.FieldBehavior[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.fieldBehavior"~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.resourceReference":member'
+    summary: FieldOptions .google.api.resourceReference
+    name: '".google.api.resourceReference"'
+    fullName: '".google.api.resourceReference"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.resourceReference"?: (google.api.IResourceReference|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.resourceReference"~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#ctype:member'
+    summary: FieldOptions ctype
+    name: ctype
+    fullName: ctype
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'ctype?: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldOptions#ctype~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#deprecated:member'
+    summary: FieldOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#jstype:member'
+    summary: FieldOptions jstype
+    name: jstype
+    fullName: jstype
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jstype?: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldOptions#jstype~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#lazy:member'
+    summary: FieldOptions lazy
+    name: lazy
+    fullName: lazy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lazy?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#packed:member'
+    summary: FieldOptions packed
+    name: packed
+    fullName: packed
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'packed?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#uninterpretedOption:member'
+    summary: FieldOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldOptions#uninterpretedOption~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#weak:member'
+    summary: FieldOptions weak
+    name: weak
+    fullName: weak
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'weak?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.fieldBehavior"~0:complex'
+    name: '(google.api.FieldBehavior[]|null)'
+    fullName: '(google.api.FieldBehavior[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.FieldBehavior:enum'
+        name: google.api.FieldBehavior
+        fullName: google.api.FieldBehavior
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#".google.api.resourceReference"~0:complex'
+    name: (google.api.IResourceReference|null)
+    fullName: (google.api.IResourceReference|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IResourceReference:interface'
+        name: google.api.IResourceReference
+        fullName: google.api.IResourceReference
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#ctype~0:complex'
+    name: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType|null)
+    fullName: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+        name: google.protobuf.FieldOptions.CType
+        fullName: google.protobuf.FieldOptions.CType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+        name: google.protobuf.FieldOptions.CType
+        fullName: google.protobuf.FieldOptions.CType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#jstype~0:complex'
+    name: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType|null)
+    fullName: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+        name: google.protobuf.FieldOptions.JSType
+        fullName: google.protobuf.FieldOptions.JSType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+        name: google.protobuf.FieldOptions.JSType
+        fullName: google.protobuf.FieldOptions.JSType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

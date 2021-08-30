@@ -1,0 +1,300 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+    summary: Represents an Empty.
+    name: google.protobuf.Empty
+    fullName: google.protobuf.Empty
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.Empty:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.Empty.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty:constructor(1)'
+    summary: Constructs a new Empty.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IEmpty);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.create:member(1)'
+    summary: Creates a new Empty instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IEmpty): google.protobuf.Empty;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty:class'
+        description: Empty instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.decode:member(1)'
+    summary: Decodes an Empty message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.Empty;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty:class'
+        description: Empty
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.decodeDelimited:member(1)'
+    summary: 'Decodes an Empty message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.Empty;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty:class'
+        description: Empty
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encode:member(1)'
+    summary: >-
+      Encodes the specified Empty message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.Empty.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.protobuf.IEmpty, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Empty message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Empty message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.Empty.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.protobuf.IEmpty, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Empty message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.fromObject:member(1)'
+    summary: Creates an Empty message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.Empty;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.Empty:class'
+        description: Empty
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty#toJSON:member(1)'
+    summary: Converts this Empty to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.toObject:member(1)'
+    summary: Creates a plain object from an Empty message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.Empty, options?: $protobuf.IConversionOptions): { [k: string]:
+        any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Empty
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.Empty.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.verify:member(1)'
+    summary: Verifies an Empty message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+    name: IEmpty
+    fullName: google.protobuf.IEmpty
+  - uid: '@google-cloud/dlp!google.protobuf.Empty:class'
+    name: Empty
+    fullName: google.protobuf.Empty
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.Empty.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

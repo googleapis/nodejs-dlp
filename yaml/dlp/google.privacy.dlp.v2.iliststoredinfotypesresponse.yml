@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse:interface'
+    summary: Properties of a ListStoredInfoTypesResponse.
+    name: google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    fullName: google.privacy.dlp.v2.IListStoredInfoTypesResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#nextPageToken:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#storedInfoTypes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#nextPageToken:member'
+    summary: ListStoredInfoTypesResponse nextPageToken
+    name: nextPageToken
+    fullName: nextPageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nextPageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#storedInfoTypes:member'
+    summary: ListStoredInfoTypesResponse storedInfoTypes
+    name: storedInfoTypes
+    fullName: storedInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'storedInfoTypes?: (google.privacy.dlp.v2.IStoredInfoType[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#storedInfoTypes~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListStoredInfoTypesResponse#storedInfoTypes~0:complex'
+    name: '(google.privacy.dlp.v2.IStoredInfoType[]|null)'
+    fullName: '(google.privacy.dlp.v2.IStoredInfoType[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType:interface'
+        name: google.privacy.dlp.v2.IStoredInfoType
+        fullName: google.privacy.dlp.v2.IStoredInfoType
+      - name: '[]|null)'
+        fullName: '[]|null)'

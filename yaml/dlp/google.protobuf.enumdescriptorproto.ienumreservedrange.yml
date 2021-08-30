@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange:interface'
+    summary: Properties of an EnumReservedRange.
+    name: google.protobuf.EnumDescriptorProto.IEnumReservedRange
+    fullName: google.protobuf.EnumDescriptorProto.IEnumReservedRange
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange#end:member'
+      - '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange#start:member'
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange#end:member'
+    summary: EnumReservedRange end
+    name: end
+    fullName: end
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'end?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange#start:member'
+    summary: EnumReservedRange start
+    name: start
+    fullName: start
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'start?: (number|null);'
+      return:
+        type:
+          - (number|null)

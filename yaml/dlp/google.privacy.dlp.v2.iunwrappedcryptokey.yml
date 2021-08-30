@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey:interface'
+    summary: Properties of an UnwrappedCryptoKey.
+    name: google.privacy.dlp.v2.IUnwrappedCryptoKey
+    fullName: google.privacy.dlp.v2.IUnwrappedCryptoKey
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey#key:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey#key:member'
+    summary: UnwrappedCryptoKey key
+    name: key
+    fullName: key
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'key?: (Uint8Array|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey#key~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUnwrappedCryptoKey#key~0:complex'
+    name: (Uint8Array|string|null)
+    fullName: (Uint8Array|string|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string|null)'
+        fullName: '|string|null)'

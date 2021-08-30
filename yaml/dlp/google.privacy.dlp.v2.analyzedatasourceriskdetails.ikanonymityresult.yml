@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult:interface'
+    summary: Properties of a KAnonymityResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult#equivalenceClassHistogramBuckets:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult#equivalenceClassHistogramBuckets:member
+    summary: KAnonymityResult equivalenceClassHistogramBuckets
+    name: equivalenceClassHistogramBuckets
+    fullName: equivalenceClassHistogramBuckets
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        equivalenceClassHistogramBuckets?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult#equivalenceClassHistogramBuckets~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IKAnonymityResult#equivalenceClassHistogramBuckets~0:complex
+    name: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket[]|null)'
+    fullName: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket:interface
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KAnonymityResult.IKAnonymityHistogramBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

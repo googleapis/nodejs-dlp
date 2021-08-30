@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse:interface'
+    summary: Properties of a ListDeidentifyTemplatesResponse.
+    name: google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    fullName: google.privacy.dlp.v2.IListDeidentifyTemplatesResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#deidentifyTemplates:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#nextPageToken:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#deidentifyTemplates:member'
+    summary: ListDeidentifyTemplatesResponse deidentifyTemplates
+    name: deidentifyTemplates
+    fullName: deidentifyTemplates
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deidentifyTemplates?: (google.privacy.dlp.v2.IDeidentifyTemplate[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#deidentifyTemplates~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#nextPageToken:member'
+    summary: ListDeidentifyTemplatesResponse nextPageToken
+    name: nextPageToken
+    fullName: nextPageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nextPageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDeidentifyTemplatesResponse#deidentifyTemplates~0:complex'
+    name: '(google.privacy.dlp.v2.IDeidentifyTemplate[]|null)'
+    fullName: '(google.privacy.dlp.v2.IDeidentifyTemplate[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+        name: google.privacy.dlp.v2.IDeidentifyTemplate
+        fullName: google.privacy.dlp.v2.IDeidentifyTemplate
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency:interface'
+    summary: Properties of a ValueFrequency.
+    name: google.privacy.dlp.v2.IValueFrequency
+    fullName: google.privacy.dlp.v2.IValueFrequency
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#count:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#value:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#count:member'
+    summary: ValueFrequency count
+    name: count
+    fullName: count
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'count?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#count~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#value:member'
+    summary: ValueFrequency value
+    name: value
+    fullName: value
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'value?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#value~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#count~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValueFrequency#value~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit:interface'
+    summary: Properties of an InfoTypeLimit.
+    name: google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit
+    fullName: google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#maxFindings:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#infoType:member'
+    summary: InfoTypeLimit infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#maxFindings:member'
+    summary: InfoTypeLimit maxFindings
+    name: maxFindings
+    fullName: maxFindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxFindings?: (number|null);'
+      return:
+        type:
+          - (number|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'

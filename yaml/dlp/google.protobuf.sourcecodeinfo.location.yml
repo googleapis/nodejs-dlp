@@ -1,0 +1,369 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+    summary: Represents a Location.
+    name: google.protobuf.SourceCodeInfo.Location
+    fullName: google.protobuf.SourceCodeInfo.Location
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#leadingComments:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#leadingDetachedComments:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#path:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#span:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#trailingComments:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:constructor(1)'
+    summary: Constructs a new Location.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.SourceCodeInfo.ILocation);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.create:member(1)'
+    summary: Creates a new Location instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.protobuf.SourceCodeInfo.ILocation):
+        google.protobuf.SourceCodeInfo.Location;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+        description: Location instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decode:member(1)'
+    summary: Decodes a Location message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.protobuf.SourceCodeInfo.Location;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+        description: Location
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decodeDelimited:member(1)'
+    summary: 'Decodes a Location message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.SourceCodeInfo.Location;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+        description: Location
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode:member(1)'
+    summary: Encodes the specified Location message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.protobuf.SourceCodeInfo.ILocation, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Location message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited:member(1)'
+    summary: 'Encodes the specified Location message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.SourceCodeInfo.ILocation, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Location message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.fromObject:member(1)'
+    summary: Creates a Location message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.SourceCodeInfo.Location;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+        description: Location
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#leadingComments:member'
+    summary: Location leadingComments.
+    name: leadingComments
+    fullName: leadingComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public leadingComments: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#leadingDetachedComments:member'
+    summary: Location leadingDetachedComments.
+    name: leadingDetachedComments
+    fullName: leadingDetachedComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public leadingDetachedComments: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#path:member'
+    summary: Location path.
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public path: number[];'
+      return:
+        type:
+          - 'number[]'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#span:member'
+    summary: Location span.
+    name: span
+    fullName: span
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public span: number[];'
+      return:
+        type:
+          - 'number[]'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#toJSON:member(1)'
+    summary: Converts this Location to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.toObject:member(1)'
+    summary: Creates a plain object from a Location message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.SourceCodeInfo.Location, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Location
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location#trailingComments:member'
+    summary: Location trailingComments.
+    name: trailingComments
+    fullName: trailingComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public trailingComments: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.verify:member(1)'
+    summary: Verifies a Location message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+    name: ILocation
+    fullName: google.protobuf.SourceCodeInfo.ILocation
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location:class'
+    name: Location
+    fullName: google.protobuf.SourceCodeInfo.Location
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.Location.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

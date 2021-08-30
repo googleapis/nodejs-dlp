@@ -1,0 +1,395 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+    summary: Represents a DateShiftConfig.
+    name: google.privacy.dlp.v2.DateShiftConfig
+    fullName: google.privacy.dlp.v2.DateShiftConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#lowerBoundDays:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#method:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#upperBoundDays:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:constructor(1)'
+    summary: Constructs a new DateShiftConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IDateShiftConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#context:member'
+    summary: DateShiftConfig context.
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.create:member(1)'
+    summary: Creates a new DateShiftConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IDateShiftConfig):
+        google.privacy.dlp.v2.DateShiftConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+        description: DateShiftConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#cryptoKey:member'
+    summary: DateShiftConfig cryptoKey.
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decode:member(1)'
+    summary: Decodes a DateShiftConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.DateShiftConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+        description: DateShiftConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a DateShiftConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.DateShiftConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+        description: DateShiftConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode:member(1)'
+    summary: >-
+      Encodes the specified DateShiftConfig message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IDateShiftConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DateShiftConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified DateShiftConfig message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IDateShiftConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DateShiftConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.fromObject:member(1)'
+    summary: Creates a DateShiftConfig message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.DateShiftConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+        description: DateShiftConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#lowerBoundDays:member'
+    summary: DateShiftConfig lowerBoundDays.
+    name: lowerBoundDays
+    fullName: lowerBoundDays
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public lowerBoundDays: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#method:member'
+    summary: DateShiftConfig method.
+    name: method
+    fullName: method
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public method?: "cryptoKey";'
+      return:
+        type:
+          - '"cryptoKey"'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#toJSON:member(1)'
+    summary: Converts this DateShiftConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.toObject:member(1)'
+    summary: Creates a plain object from a DateShiftConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.DateShiftConfig, options?: $protobuf.IConversionOptions):
+        { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: DateShiftConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#upperBoundDays:member'
+    summary: DateShiftConfig upperBoundDays.
+    name: upperBoundDays
+    fullName: upperBoundDays
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public upperBoundDays: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.verify:member(1)'
+    summary: Verifies a DateShiftConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+    name: IDateShiftConfig
+    fullName: google.privacy.dlp.v2.IDateShiftConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig:class'
+    name: DateShiftConfig
+    fullName: google.privacy.dlp.v2.DateShiftConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateShiftConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

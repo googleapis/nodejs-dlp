@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult:interface'
+    summary: Properties of a NumericalStatsResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#maxValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#minValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#quantileValues:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#maxValue:member'
+    summary: NumericalStatsResult maxValue
+    name: maxValue
+    fullName: maxValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxValue?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#maxValue~0:complex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#minValue:member'
+    summary: NumericalStatsResult minValue
+    name: minValue
+    fullName: minValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'minValue?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#minValue~0:complex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#quantileValues:member'
+    summary: NumericalStatsResult quantileValues
+    name: quantileValues
+    fullName: quantileValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quantileValues?: (google.privacy.dlp.v2.IValue[]|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#quantileValues~0:complex
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#maxValue~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#minValue~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.INumericalStatsResult#quantileValues~0:complex
+    name: '(google.privacy.dlp.v2.IValue[]|null)'
+    fullName: '(google.privacy.dlp.v2.IValue[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '[]|null)'
+        fullName: '[]|null)'

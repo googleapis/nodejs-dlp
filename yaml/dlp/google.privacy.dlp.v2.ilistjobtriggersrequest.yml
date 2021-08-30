@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest:interface'
+    summary: Properties of a ListJobTriggersRequest.
+    name: google.privacy.dlp.v2.IListJobTriggersRequest
+    fullName: google.privacy.dlp.v2.IListJobTriggersRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#filter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#orderBy:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#pageSize:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#pageToken:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#parent:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#filter:member'
+    summary: ListJobTriggersRequest filter
+    name: filter
+    fullName: filter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'filter?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#locationId:member'
+    summary: ListJobTriggersRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#orderBy:member'
+    summary: ListJobTriggersRequest orderBy
+    name: orderBy
+    fullName: orderBy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'orderBy?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#pageSize:member'
+    summary: ListJobTriggersRequest pageSize
+    name: pageSize
+    fullName: pageSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageSize?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#pageToken:member'
+    summary: ListJobTriggersRequest pageToken
+    name: pageToken
+    fullName: pageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListJobTriggersRequest#parent:member'
+    summary: ListJobTriggersRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)

@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType:interface'
+    summary: Properties of a StoredInfoType.
+    name: google.privacy.dlp.v2.IStoredInfoType
+    fullName: google.privacy.dlp.v2.IStoredInfoType
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#currentVersion:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#pendingVersions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#currentVersion:member'
+    summary: StoredInfoType currentVersion
+    name: currentVersion
+    fullName: currentVersion
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'currentVersion?: (google.privacy.dlp.v2.IStoredInfoTypeVersion|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#currentVersion~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#name:member'
+    summary: StoredInfoType name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#pendingVersions:member'
+    summary: StoredInfoType pendingVersions
+    name: pendingVersions
+    fullName: pendingVersions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pendingVersions?: (google.privacy.dlp.v2.IStoredInfoTypeVersion[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#pendingVersions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#currentVersion~0:complex'
+    name: (google.privacy.dlp.v2.IStoredInfoTypeVersion|null)
+    fullName: (google.privacy.dlp.v2.IStoredInfoTypeVersion|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion:interface'
+        name: google.privacy.dlp.v2.IStoredInfoTypeVersion
+        fullName: google.privacy.dlp.v2.IStoredInfoTypeVersion
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoType#pendingVersions~0:complex'
+    name: '(google.privacy.dlp.v2.IStoredInfoTypeVersion[]|null)'
+    fullName: '(google.privacy.dlp.v2.IStoredInfoTypeVersion[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeVersion:interface'
+        name: google.privacy.dlp.v2.IStoredInfoTypeVersion
+        fullName: google.privacy.dlp.v2.IStoredInfoTypeVersion
+      - name: '[]|null)'
+        fullName: '[]|null)'

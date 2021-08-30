@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor:interface'
+    summary: Properties of a Color.
+    name: google.privacy.dlp.v2.IColor
+    fullName: google.privacy.dlp.v2.IColor
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IColor#blue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IColor#green:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IColor#red:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor#blue:member'
+    summary: Color blue
+    name: blue
+    fullName: blue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'blue?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor#green:member'
+    summary: Color green
+    name: green
+    fullName: green
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'green?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IColor#red:member'
+    summary: Color red
+    name: red
+    fullName: red
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'red?: (number|null);'
+      return:
+        type:
+          - (number|null)

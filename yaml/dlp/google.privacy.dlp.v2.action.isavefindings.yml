@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings:interface'
+    summary: Properties of a SaveFindings.
+    name: google.privacy.dlp.v2.Action.ISaveFindings
+    fullName: google.privacy.dlp.v2.Action.ISaveFindings
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings#outputConfig:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings#outputConfig:member'
+    summary: SaveFindings outputConfig
+    name: outputConfig
+    fullName: outputConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'outputConfig?: (google.privacy.dlp.v2.IOutputStorageConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings#outputConfig~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings#outputConfig~0:complex'
+    name: (google.privacy.dlp.v2.IOutputStorageConfig|null)
+    fullName: (google.privacy.dlp.v2.IOutputStorageConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IOutputStorageConfig:interface'
+        name: google.privacy.dlp.v2.IOutputStorageConfig
+        fullName: google.privacy.dlp.v2.IOutputStorageConfig
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.IThrowError:interface'
+    summary: Properties of a ThrowError.
+    name: google.privacy.dlp.v2.TransformationErrorHandling.IThrowError
+    fullName: google.privacy.dlp.v2.TransformationErrorHandling.IThrowError
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

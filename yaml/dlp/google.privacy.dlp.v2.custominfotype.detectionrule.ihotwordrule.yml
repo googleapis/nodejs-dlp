@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule:interface'
+    summary: Properties of a HotwordRule.
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+    fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#hotwordRegex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#likelihoodAdjustment:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#proximity:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#hotwordRegex:member'
+    summary: HotwordRule hotwordRegex
+    name: hotwordRegex
+    fullName: hotwordRegex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hotwordRegex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#hotwordRegex~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#likelihoodAdjustment:member'
+    summary: HotwordRule likelihoodAdjustment
+    name: likelihoodAdjustment
+    fullName: likelihoodAdjustment
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'likelihoodAdjustment?: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#likelihoodAdjustment~0:complex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#proximity:member'
+    summary: HotwordRule proximity
+    name: proximity
+    fullName: proximity
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'proximity?: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#proximity~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#hotwordRegex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#likelihoodAdjustment~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment
+        fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule#proximity~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity
+        fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity
+      - name: '|null)'
+        fullName: '|null)'

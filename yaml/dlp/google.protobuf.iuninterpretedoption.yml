@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+    summary: Properties of an UninterpretedOption.
+    name: google.protobuf.IUninterpretedOption
+    fullName: google.protobuf.IUninterpretedOption
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#aggregateValue:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#doubleValue:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#identifierValue:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#name:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#negativeIntValue:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#positiveIntValue:member'
+      - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#stringValue:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#aggregateValue:member'
+    summary: UninterpretedOption aggregateValue
+    name: aggregateValue
+    fullName: aggregateValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'aggregateValue?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#doubleValue:member'
+    summary: UninterpretedOption doubleValue
+    name: doubleValue
+    fullName: doubleValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'doubleValue?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#identifierValue:member'
+    summary: UninterpretedOption identifierValue
+    name: identifierValue
+    fullName: identifierValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'identifierValue?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#name:member'
+    summary: UninterpretedOption name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (google.protobuf.UninterpretedOption.INamePart[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#name~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#negativeIntValue:member'
+    summary: UninterpretedOption negativeIntValue
+    name: negativeIntValue
+    fullName: negativeIntValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'negativeIntValue?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#negativeIntValue~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#positiveIntValue:member'
+    summary: UninterpretedOption positiveIntValue
+    name: positiveIntValue
+    fullName: positiveIntValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'positiveIntValue?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#positiveIntValue~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#stringValue:member'
+    summary: UninterpretedOption stringValue
+    name: stringValue
+    fullName: stringValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'stringValue?: (Uint8Array|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IUninterpretedOption#stringValue~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#name~0:complex'
+    name: '(google.protobuf.UninterpretedOption.INamePart[]|null)'
+    fullName: '(google.protobuf.UninterpretedOption.INamePart[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.UninterpretedOption.INamePart:interface'
+        name: google.protobuf.UninterpretedOption.INamePart
+        fullName: google.protobuf.UninterpretedOption.INamePart
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#negativeIntValue~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#positiveIntValue~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption#stringValue~0:complex'
+    name: (Uint8Array|string|null)
+    fullName: (Uint8Array|string|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string|null)'
+        fullName: '|string|null)'

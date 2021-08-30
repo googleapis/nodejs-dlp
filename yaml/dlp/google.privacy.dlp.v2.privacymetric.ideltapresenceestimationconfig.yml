@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig:interface'
+    summary: Properties of a DeltaPresenceEstimationConfig.
+    name: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#auxiliaryTables:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#quasiIds:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#regionCode:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#auxiliaryTables:member'
+    summary: DeltaPresenceEstimationConfig auxiliaryTables
+    name: auxiliaryTables
+    fullName: auxiliaryTables
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'auxiliaryTables?: (google.privacy.dlp.v2.IStatisticalTable[]|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#auxiliaryTables~0:complex
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#quasiIds:member'
+    summary: DeltaPresenceEstimationConfig quasiIds
+    name: quasiIds
+    fullName: quasiIds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIds?: (google.privacy.dlp.v2.IQuasiId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#quasiIds~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#regionCode:member'
+    summary: DeltaPresenceEstimationConfig regionCode
+    name: regionCode
+    fullName: regionCode
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regionCode?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#auxiliaryTables~0:complex'
+    name: '(google.privacy.dlp.v2.IStatisticalTable[]|null)'
+    fullName: '(google.privacy.dlp.v2.IStatisticalTable[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStatisticalTable:interface'
+        name: google.privacy.dlp.v2.IStatisticalTable
+        fullName: google.privacy.dlp.v2.IStatisticalTable
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IDeltaPresenceEstimationConfig#quasiIds~0:complex'
+    name: '(google.privacy.dlp.v2.IQuasiId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IQuasiId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId:interface'
+        name: google.privacy.dlp.v2.IQuasiId
+        fullName: google.privacy.dlp.v2.IQuasiId
+      - name: '[]|null)'
+        fullName: '[]|null)'

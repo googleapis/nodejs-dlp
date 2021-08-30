@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+    summary: Properties of an Error.
+    name: google.privacy.dlp.v2.IError
+    fullName: google.privacy.dlp.v2.IError
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IError#details:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IError#timestamps:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError#details:member'
+    summary: Error details
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'details?: (google.rpc.IStatus|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IError#details~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError#timestamps:member'
+    summary: Error timestamps
+    name: timestamps
+    fullName: timestamps
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timestamps?: (google.protobuf.ITimestamp[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IError#timestamps~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError#details~0:complex'
+    name: (google.rpc.IStatus|null)
+    fullName: (google.rpc.IStatus|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.rpc.IStatus:interface'
+        name: google.rpc.IStatus
+        fullName: google.rpc.IStatus
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError#timestamps~0:complex'
+    name: '(google.protobuf.ITimestamp[]|null)'
+    fullName: '(google.protobuf.ITimestamp[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '[]|null)'
+        fullName: '[]|null)'

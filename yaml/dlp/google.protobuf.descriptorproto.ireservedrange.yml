@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange:interface'
+    summary: Properties of a ReservedRange.
+    name: google.protobuf.DescriptorProto.IReservedRange
+    fullName: google.protobuf.DescriptorProto.IReservedRange
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange#end:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange#start:member'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange#end:member'
+    summary: ReservedRange end
+    name: end
+    fullName: end
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'end?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IReservedRange#start:member'
+    summary: ReservedRange start
+    name: start
+    fullName: start
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'start?: (number|null);'
+      return:
+        type:
+          - (number|null)

@@ -1,0 +1,328 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+    summary: Represents a CustomHttpPattern.
+    name: google.api.CustomHttpPattern
+    fullName: google.api.CustomHttpPattern
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.CustomHttpPattern:constructor(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.create:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.decode:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.encode:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.fromObject:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern#kind:member'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern#path:member'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern#toJSON:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.toObject:member(1)'
+      - '@google-cloud/dlp!google.api.CustomHttpPattern.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern:constructor(1)'
+    summary: Constructs a new CustomHttpPattern.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.api.ICustomHttpPattern);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.create:member(1)'
+    summary: Creates a new CustomHttpPattern instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.api.ICustomHttpPattern): google.api.CustomHttpPattern;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+        description: CustomHttpPattern instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.decode:member(1)'
+    summary: Decodes a CustomHttpPattern message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.CustomHttpPattern;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+        description: CustomHttpPattern
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.decodeDelimited:member(1)'
+    summary: 'Decodes a CustomHttpPattern message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.CustomHttpPattern;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+        description: CustomHttpPattern
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encode:member(1)'
+    summary: >-
+      Encodes the specified CustomHttpPattern message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.api.CustomHttpPattern.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CustomHttpPattern message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified CustomHttpPattern message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.api.CustomHttpPattern.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CustomHttpPattern message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.fromObject:member(1)'
+    summary: Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.api.CustomHttpPattern;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+        description: CustomHttpPattern
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern#kind:member'
+    summary: CustomHttpPattern kind.
+    name: kind
+    fullName: kind
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public kind: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern#path:member'
+    summary: CustomHttpPattern path.
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public path: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern#toJSON:member(1)'
+    summary: Converts this CustomHttpPattern to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.toObject:member(1)'
+    summary: Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.api.CustomHttpPattern, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: CustomHttpPattern
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.api.CustomHttpPattern.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.verify:member(1)'
+    summary: Verifies a CustomHttpPattern message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.api.ICustomHttpPattern:interface'
+    name: ICustomHttpPattern
+    fullName: google.api.ICustomHttpPattern
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern:class'
+    name: CustomHttpPattern
+    fullName: google.api.CustomHttpPattern
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.CustomHttpPattern.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

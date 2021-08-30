@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+    summary: Properties of a PublishFindingsToCloudDataCatalog.
+    name: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+    fullName: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

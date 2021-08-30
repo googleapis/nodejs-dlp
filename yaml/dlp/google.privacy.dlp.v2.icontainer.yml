@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+    summary: Properties of a Container.
+    name: google.privacy.dlp.v2.IContainer
+    fullName: google.privacy.dlp.v2.IContainer
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#fullPath:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#projectId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#relativePath:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#rootPath:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#updateTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#version:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#fullPath:member'
+    summary: Container fullPath
+    name: fullPath
+    fullName: fullPath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fullPath?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#projectId:member'
+    summary: Container projectId
+    name: projectId
+    fullName: projectId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'projectId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#relativePath:member'
+    summary: Container relativePath
+    name: relativePath
+    fullName: relativePath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'relativePath?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#rootPath:member'
+    summary: Container rootPath
+    name: rootPath
+    fullName: rootPath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rootPath?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#type:member'
+    summary: Container type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#updateTime:member'
+    summary: Container updateTime
+    name: updateTime
+    fullName: updateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'updateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#updateTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#version:member'
+    summary: Container version
+    name: version
+    fullName: version
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'version?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer#updateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'

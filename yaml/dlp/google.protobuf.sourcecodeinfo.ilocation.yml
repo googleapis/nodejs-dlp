@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+    summary: Properties of a Location.
+    name: google.protobuf.SourceCodeInfo.ILocation
+    fullName: google.protobuf.SourceCodeInfo.ILocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#leadingComments:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#leadingDetachedComments:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#path:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#span:member'
+      - '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#trailingComments:member'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#leadingComments:member'
+    summary: Location leadingComments
+    name: leadingComments
+    fullName: leadingComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'leadingComments?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#leadingDetachedComments:member'
+    summary: Location leadingDetachedComments
+    name: leadingDetachedComments
+    fullName: leadingDetachedComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'leadingDetachedComments?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#path:member'
+    summary: Location path
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'path?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#span:member'
+    summary: Location span
+    name: span
+    fullName: span
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'span?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation#trailingComments:member'
+    summary: Location trailingComments
+    name: trailingComments
+    fullName: trailingComments
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'trailingComments?: (string|null);'
+      return:
+        type:
+          - (string|null)

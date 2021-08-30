@@ -1,0 +1,421 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+    summary: Represents a HybridFindingDetails.
+    name: google.privacy.dlp.v2.HybridFindingDetails
+    fullName: google.privacy.dlp.v2.HybridFindingDetails
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#containerDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#fileOffset:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#labels:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#rowOffset:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#tableOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:constructor(1)'
+    summary: Constructs a new HybridFindingDetails.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IHybridFindingDetails);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#containerDetails:member'
+    summary: HybridFindingDetails containerDetails.
+    name: containerDetails
+    fullName: containerDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public containerDetails?: (google.privacy.dlp.v2.IContainer|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#containerDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.create:member(1)'
+    summary: Creates a new HybridFindingDetails instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IHybridFindingDetails):
+        google.privacy.dlp.v2.HybridFindingDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+        description: HybridFindingDetails instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decode:member(1)'
+    summary: Decodes a HybridFindingDetails message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.HybridFindingDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+        description: HybridFindingDetails
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decodeDelimited:member(1)'
+    summary: 'Decodes a HybridFindingDetails message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.HybridFindingDetails;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+        description: HybridFindingDetails
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode:member(1)'
+    summary: >-
+      Encodes the specified HybridFindingDetails message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IHybridFindingDetails, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: HybridFindingDetails message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified HybridFindingDetails message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IHybridFindingDetails, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: HybridFindingDetails message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#fileOffset:member'
+    summary: HybridFindingDetails fileOffset.
+    name: fileOffset
+    fullName: fileOffset
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public fileOffset: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#fileOffset~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.fromObject:member(1)'
+    summary: >-
+      Creates a HybridFindingDetails message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.HybridFindingDetails;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+        description: HybridFindingDetails
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#labels:member'
+    summary: HybridFindingDetails labels.
+    name: labels
+    fullName: labels
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public labels: { [k: string]: string };'
+      return:
+        type:
+          - '{ [k: string]: string }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#rowOffset:member'
+    summary: HybridFindingDetails rowOffset.
+    name: rowOffset
+    fullName: rowOffset
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public rowOffset: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#rowOffset~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#tableOptions:member'
+    summary: HybridFindingDetails tableOptions.
+    name: tableOptions
+    fullName: tableOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public tableOptions?: (google.privacy.dlp.v2.ITableOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#tableOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#toJSON:member(1)'
+    summary: Converts this HybridFindingDetails to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.toObject:member(1)'
+    summary: Creates a plain object from a HybridFindingDetails message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.HybridFindingDetails, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: HybridFindingDetails
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.verify:member(1)'
+    summary: Verifies a HybridFindingDetails message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+    name: IHybridFindingDetails
+    fullName: google.privacy.dlp.v2.IHybridFindingDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#containerDetails~0:complex'
+    name: (google.privacy.dlp.v2.IContainer|null)
+    fullName: (google.privacy.dlp.v2.IContainer|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+        name: google.privacy.dlp.v2.IContainer
+        fullName: google.privacy.dlp.v2.IContainer
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails:class'
+    name: HybridFindingDetails
+    fullName: google.privacy.dlp.v2.HybridFindingDetails
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#fileOffset~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#rowOffset~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails#tableOptions~0:complex'
+    name: (google.privacy.dlp.v2.ITableOptions|null)
+    fullName: (google.privacy.dlp.v2.ITableOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+        name: google.privacy.dlp.v2.ITableOptions
+        fullName: google.privacy.dlp.v2.ITableOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.HybridFindingDetails.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

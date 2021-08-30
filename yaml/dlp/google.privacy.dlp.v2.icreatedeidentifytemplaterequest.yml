@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest:interface'
+    summary: Properties of a CreateDeidentifyTemplateRequest.
+    name: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+    fullName: google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#deidentifyTemplate:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#templateId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#deidentifyTemplate:member'
+    summary: CreateDeidentifyTemplateRequest deidentifyTemplate
+    name: deidentifyTemplate
+    fullName: deidentifyTemplate
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deidentifyTemplate?: (google.privacy.dlp.v2.IDeidentifyTemplate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#deidentifyTemplate~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#locationId:member'
+    summary: CreateDeidentifyTemplateRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#parent:member'
+    summary: CreateDeidentifyTemplateRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#templateId:member'
+    summary: CreateDeidentifyTemplateRequest templateId
+    name: templateId
+    fullName: templateId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'templateId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateDeidentifyTemplateRequest#deidentifyTemplate~0:complex'
+    name: (google.privacy.dlp.v2.IDeidentifyTemplate|null)
+    fullName: (google.privacy.dlp.v2.IDeidentifyTemplate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+        name: google.privacy.dlp.v2.IDeidentifyTemplate
+        fullName: google.privacy.dlp.v2.IDeidentifyTemplate
+      - name: '|null)'
+        fullName: '|null)'

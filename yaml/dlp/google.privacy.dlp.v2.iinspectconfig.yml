@@ -1,0 +1,187 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+    summary: Properties of an InspectConfig.
+    name: google.privacy.dlp.v2.IInspectConfig
+    fullName: google.privacy.dlp.v2.IInspectConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#contentOptions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#customInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#excludeInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#includeQuote:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#infoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#limits:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#minLikelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#ruleSet:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#contentOptions:member'
+    summary: InspectConfig contentOptions
+    name: contentOptions
+    fullName: contentOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'contentOptions?: (google.privacy.dlp.v2.ContentOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#contentOptions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#customInfoTypes:member'
+    summary: InspectConfig customInfoTypes
+    name: customInfoTypes
+    fullName: customInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'customInfoTypes?: (google.privacy.dlp.v2.ICustomInfoType[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#customInfoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#excludeInfoTypes:member'
+    summary: InspectConfig excludeInfoTypes
+    name: excludeInfoTypes
+    fullName: excludeInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'excludeInfoTypes?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#includeQuote:member'
+    summary: InspectConfig includeQuote
+    name: includeQuote
+    fullName: includeQuote
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'includeQuote?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#infoTypes:member'
+    summary: InspectConfig infoTypes
+    name: infoTypes
+    fullName: infoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypes?: (google.privacy.dlp.v2.IInfoType[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#infoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#limits:member'
+    summary: InspectConfig limits
+    name: limits
+    fullName: limits
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'limits?: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#limits~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#minLikelihood:member'
+    summary: InspectConfig minLikelihood
+    name: minLikelihood
+    fullName: minLikelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'minLikelihood?: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#minLikelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#ruleSet:member'
+    summary: InspectConfig ruleSet
+    name: ruleSet
+    fullName: ruleSet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'ruleSet?: (google.privacy.dlp.v2.IInspectionRuleSet[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#ruleSet~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#contentOptions~0:complex'
+    name: '(google.privacy.dlp.v2.ContentOption[]|null)'
+    fullName: '(google.privacy.dlp.v2.ContentOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ContentOption:enum'
+        name: google.privacy.dlp.v2.ContentOption
+        fullName: google.privacy.dlp.v2.ContentOption
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#customInfoTypes~0:complex'
+    name: '(google.privacy.dlp.v2.ICustomInfoType[]|null)'
+    fullName: '(google.privacy.dlp.v2.ICustomInfoType[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+        name: google.privacy.dlp.v2.ICustomInfoType
+        fullName: google.privacy.dlp.v2.ICustomInfoType
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#infoTypes~0:complex'
+    name: '(google.privacy.dlp.v2.IInfoType[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInfoType[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#limits~0:complex'
+    name: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null)
+    fullName: (google.privacy.dlp.v2.InspectConfig.IFindingLimits|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits:interface'
+        name: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+        fullName: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#minLikelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig#ruleSet~0:complex'
+    name: '(google.privacy.dlp.v2.IInspectionRuleSet[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInspectionRuleSet[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet:interface'
+        name: google.privacy.dlp.v2.IInspectionRuleSet
+        fullName: google.privacy.dlp.v2.IInspectionRuleSet
+      - name: '[]|null)'
+        fullName: '[]|null)'

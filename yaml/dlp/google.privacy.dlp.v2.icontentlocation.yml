@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation:interface'
+    summary: Properties of a ContentLocation.
+    name: google.privacy.dlp.v2.IContentLocation
+    fullName: google.privacy.dlp.v2.IContentLocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerTimestamp:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerVersion:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#documentLocation:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#imageLocation:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#metadataLocation:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#recordLocation:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerName:member'
+    summary: ContentLocation containerName
+    name: containerName
+    fullName: containerName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'containerName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerTimestamp:member'
+    summary: ContentLocation containerTimestamp
+    name: containerTimestamp
+    fullName: containerTimestamp
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'containerTimestamp?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerTimestamp~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerVersion:member'
+    summary: ContentLocation containerVersion
+    name: containerVersion
+    fullName: containerVersion
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'containerVersion?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#documentLocation:member'
+    summary: ContentLocation documentLocation
+    name: documentLocation
+    fullName: documentLocation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'documentLocation?: (google.privacy.dlp.v2.IDocumentLocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#documentLocation~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#imageLocation:member'
+    summary: ContentLocation imageLocation
+    name: imageLocation
+    fullName: imageLocation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'imageLocation?: (google.privacy.dlp.v2.IImageLocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#imageLocation~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#metadataLocation:member'
+    summary: ContentLocation metadataLocation
+    name: metadataLocation
+    fullName: metadataLocation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'metadataLocation?: (google.privacy.dlp.v2.IMetadataLocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#metadataLocation~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#recordLocation:member'
+    summary: ContentLocation recordLocation
+    name: recordLocation
+    fullName: recordLocation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'recordLocation?: (google.privacy.dlp.v2.IRecordLocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#recordLocation~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#containerTimestamp~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#documentLocation~0:complex'
+    name: (google.privacy.dlp.v2.IDocumentLocation|null)
+    fullName: (google.privacy.dlp.v2.IDocumentLocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDocumentLocation:interface'
+        name: google.privacy.dlp.v2.IDocumentLocation
+        fullName: google.privacy.dlp.v2.IDocumentLocation
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#imageLocation~0:complex'
+    name: (google.privacy.dlp.v2.IImageLocation|null)
+    fullName: (google.privacy.dlp.v2.IImageLocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IImageLocation:interface'
+        name: google.privacy.dlp.v2.IImageLocation
+        fullName: google.privacy.dlp.v2.IImageLocation
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#metadataLocation~0:complex'
+    name: (google.privacy.dlp.v2.IMetadataLocation|null)
+    fullName: (google.privacy.dlp.v2.IMetadataLocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IMetadataLocation:interface'
+        name: google.privacy.dlp.v2.IMetadataLocation
+        fullName: google.privacy.dlp.v2.IMetadataLocation
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentLocation#recordLocation~0:complex'
+    name: (google.privacy.dlp.v2.IRecordLocation|null)
+    fullName: (google.privacy.dlp.v2.IRecordLocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation:interface'
+        name: google.privacy.dlp.v2.IRecordLocation
+        fullName: google.privacy.dlp.v2.IRecordLocation
+      - name: '|null)'
+        fullName: '|null)'

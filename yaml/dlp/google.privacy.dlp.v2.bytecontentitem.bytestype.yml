@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+    summary: BytesType enum.
+    name: google.privacy.dlp.v2.ByteContentItem.BytesType
+    fullName: google.privacy.dlp.v2.ByteContentItem.BytesType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.AVRO:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.BYTES_TYPE_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.CSV:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_BMP:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_JPEG:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_PNG:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_SVG:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.PDF:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.TEXT_UTF8:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.TSV:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.WORD_DOCUMENT:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.AVRO:member'
+    name: AVRO
+    fullName: AVRO
+    langs:
+      - typeScript
+    type: field
+    numericValue: '11'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.BYTES_TYPE_UNSPECIFIED:member'
+    name: BYTES_TYPE_UNSPECIFIED
+    fullName: BYTES_TYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.CSV:member'
+    name: CSV
+    fullName: CSV
+    langs:
+      - typeScript
+    type: field
+    numericValue: '12'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE:member'
+    name: IMAGE
+    fullName: IMAGE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_BMP:member'
+    name: IMAGE_BMP
+    fullName: IMAGE_BMP
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_JPEG:member'
+    name: IMAGE_JPEG
+    fullName: IMAGE_JPEG
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_PNG:member'
+    name: IMAGE_PNG
+    fullName: IMAGE_PNG
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.IMAGE_SVG:member'
+    name: IMAGE_SVG
+    fullName: IMAGE_SVG
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.PDF:member'
+    name: PDF
+    fullName: PDF
+    langs:
+      - typeScript
+    type: field
+    numericValue: '8'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.TEXT_UTF8:member'
+    name: TEXT_UTF8
+    fullName: TEXT_UTF8
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.TSV:member'
+    name: TSV
+    fullName: TSV
+    langs:
+      - typeScript
+    type: field
+    numericValue: '13'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType.WORD_DOCUMENT:member'
+    name: WORD_DOCUMENT
+    fullName: WORD_DOCUMENT
+    langs:
+      - typeScript
+    type: field
+    numericValue: '7'

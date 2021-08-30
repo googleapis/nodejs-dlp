@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult:interface'
+    summary: Properties of a Result.
+    name: google.privacy.dlp.v2.InspectDataSourceDetails.IResult
+    fullName: google.privacy.dlp.v2.InspectDataSourceDetails.IResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#hybridStats:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#infoTypeStats:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#processedBytes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#totalEstimatedBytes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#hybridStats:member'
+    summary: Result hybridStats
+    name: hybridStats
+    fullName: hybridStats
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hybridStats?: (google.privacy.dlp.v2.IHybridInspectStatistics|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#hybridStats~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#infoTypeStats:member'
+    summary: Result infoTypeStats
+    name: infoTypeStats
+    fullName: infoTypeStats
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypeStats?: (google.privacy.dlp.v2.IInfoTypeStats[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#infoTypeStats~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#processedBytes:member'
+    summary: Result processedBytes
+    name: processedBytes
+    fullName: processedBytes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'processedBytes?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#processedBytes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#totalEstimatedBytes:member'
+    summary: Result totalEstimatedBytes
+    name: totalEstimatedBytes
+    fullName: totalEstimatedBytes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'totalEstimatedBytes?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#totalEstimatedBytes~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#hybridStats~0:complex'
+    name: (google.privacy.dlp.v2.IHybridInspectStatistics|null)
+    fullName: (google.privacy.dlp.v2.IHybridInspectStatistics|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectStatistics:interface'
+        name: google.privacy.dlp.v2.IHybridInspectStatistics
+        fullName: google.privacy.dlp.v2.IHybridInspectStatistics
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#infoTypeStats~0:complex'
+    name: '(google.privacy.dlp.v2.IInfoTypeStats[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInfoTypeStats[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats:interface'
+        name: google.privacy.dlp.v2.IInfoTypeStats
+        fullName: google.privacy.dlp.v2.IInfoTypeStats
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#processedBytes~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectDataSourceDetails.IResult#totalEstimatedBytes~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

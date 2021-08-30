@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishSummaryToCscc:interface'
+    summary: Properties of a PublishSummaryToCscc.
+    name: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+    fullName: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

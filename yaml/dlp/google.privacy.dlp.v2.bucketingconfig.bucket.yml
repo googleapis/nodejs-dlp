@@ -1,0 +1,378 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+    summary: Represents a Bucket.
+    name: google.privacy.dlp.v2.BucketingConfig.Bucket
+    fullName: google.privacy.dlp.v2.BucketingConfig.Bucket
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#max:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#min:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#replacementValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:constructor(1)'
+    summary: Constructs a new Bucket.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.BucketingConfig.IBucket);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.create:member(1)'
+    summary: Creates a new Bucket instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.BucketingConfig.IBucket):
+        google.privacy.dlp.v2.BucketingConfig.Bucket;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+        description: Bucket instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decode:member(1)'
+    summary: Decodes a Bucket message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.BucketingConfig.Bucket;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+        description: Bucket
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decodeDelimited:member(1)'
+    summary: 'Decodes a Bucket message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.BucketingConfig.Bucket;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+        description: Bucket
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode:member(1)'
+    summary: Encodes the specified Bucket message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.BucketingConfig.IBucket, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Bucket message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited:member(1)'
+    summary: 'Encodes the specified Bucket message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.BucketingConfig.IBucket, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Bucket message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.fromObject:member(1)'
+    summary: Creates a Bucket message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.BucketingConfig.Bucket;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+        description: Bucket
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#max:member'
+    summary: Bucket max.
+    name: max
+    fullName: max
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public max?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#max~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#min:member'
+    summary: Bucket min.
+    name: min
+    fullName: min
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public min?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#min~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#replacementValue:member'
+    summary: Bucket replacementValue.
+    name: replacementValue
+    fullName: replacementValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public replacementValue?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#replacementValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#toJSON:member(1)'
+    summary: Converts this Bucket to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.toObject:member(1)'
+    summary: Creates a plain object from a Bucket message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.BucketingConfig.Bucket, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Bucket
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.verify:member(1)'
+    summary: Verifies a Bucket message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.IBucket:interface'
+    name: IBucket
+    fullName: google.privacy.dlp.v2.BucketingConfig.IBucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket:class'
+    name: Bucket
+    fullName: google.privacy.dlp.v2.BucketingConfig.Bucket
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#max~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#min~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket#replacementValue~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BucketingConfig.Bucket.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

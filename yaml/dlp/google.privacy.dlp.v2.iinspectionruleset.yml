@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet:interface'
+    summary: Properties of an InspectionRuleSet.
+    name: google.privacy.dlp.v2.IInspectionRuleSet
+    fullName: google.privacy.dlp.v2.IInspectionRuleSet
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#infoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#rules:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#infoTypes:member'
+    summary: InspectionRuleSet infoTypes
+    name: infoTypes
+    fullName: infoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypes?: (google.privacy.dlp.v2.IInfoType[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#infoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#rules:member'
+    summary: InspectionRuleSet rules
+    name: rules
+    fullName: rules
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rules?: (google.privacy.dlp.v2.IInspectionRule[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#rules~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#infoTypes~0:complex'
+    name: '(google.privacy.dlp.v2.IInfoType[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInfoType[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRuleSet#rules~0:complex'
+    name: '(google.privacy.dlp.v2.IInspectionRule[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInspectionRule[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+        name: google.privacy.dlp.v2.IInspectionRule
+        fullName: google.privacy.dlp.v2.IInspectionRule
+      - name: '[]|null)'
+        fullName: '[]|null)'

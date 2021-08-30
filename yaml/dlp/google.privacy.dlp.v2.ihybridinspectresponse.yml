@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectResponse:interface'
+    summary: Properties of a HybridInspectResponse.
+    name: google.privacy.dlp.v2.IHybridInspectResponse
+    fullName: google.privacy.dlp.v2.IHybridInspectResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+    summary: Properties of a ServiceOptions.
+    name: google.protobuf.IServiceOptions
+    fullName: google.protobuf.IServiceOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions#".google.api.defaultHost":member'
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions#".google.api.oauthScopes":member'
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IServiceOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions#".google.api.defaultHost":member'
+    summary: ServiceOptions .google.api.defaultHost
+    name: '".google.api.defaultHost"'
+    fullName: '".google.api.defaultHost"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.defaultHost"?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions#".google.api.oauthScopes":member'
+    summary: ServiceOptions .google.api.oauthScopes
+    name: '".google.api.oauthScopes"'
+    fullName: '".google.api.oauthScopes"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.oauthScopes"?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions#deprecated:member'
+    summary: ServiceOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions#uninterpretedOption:member'
+    summary: ServiceOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IServiceOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

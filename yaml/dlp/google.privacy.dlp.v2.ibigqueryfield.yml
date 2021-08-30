@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField:interface'
+    summary: Properties of a BigQueryField.
+    name: google.privacy.dlp.v2.IBigQueryField
+    fullName: google.privacy.dlp.v2.IBigQueryField
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#field:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#table:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#field:member'
+    summary: BigQueryField field
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'field?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#field~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#table:member'
+    summary: BigQueryField table
+    name: table
+    fullName: table
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'table?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#table~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#field~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryField#table~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'

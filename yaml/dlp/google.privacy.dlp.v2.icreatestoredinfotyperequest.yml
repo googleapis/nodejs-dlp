@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest:interface'
+    summary: Properties of a CreateStoredInfoTypeRequest.
+    name: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+    fullName: google.privacy.dlp.v2.ICreateStoredInfoTypeRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#config:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#storedInfoTypeId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#config:member'
+    summary: CreateStoredInfoTypeRequest config
+    name: config
+    fullName: config
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'config?: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#config~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#locationId:member'
+    summary: CreateStoredInfoTypeRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#parent:member'
+    summary: CreateStoredInfoTypeRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#storedInfoTypeId:member'
+    summary: CreateStoredInfoTypeRequest storedInfoTypeId
+    name: storedInfoTypeId
+    fullName: storedInfoTypeId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'storedInfoTypeId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateStoredInfoTypeRequest#config~0:complex'
+    name: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null)
+    fullName: (google.privacy.dlp.v2.IStoredInfoTypeConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeConfig:interface'
+        name: google.privacy.dlp.v2.IStoredInfoTypeConfig
+        fullName: google.privacy.dlp.v2.IStoredInfoTypeConfig
+      - name: '|null)'
+        fullName: '|null)'

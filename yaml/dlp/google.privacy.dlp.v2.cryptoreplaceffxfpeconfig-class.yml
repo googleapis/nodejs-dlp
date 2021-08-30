@@ -1,0 +1,454 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+    summary: Represents a CryptoReplaceFfxFpeConfig.
+    name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig
+    fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#alphabet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#commonAlphabet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#customAlphabet:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#radix:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#surrogateInfoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:constructor(1)'
+    summary: Constructs a new CryptoReplaceFfxFpeConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#alphabet:member'
+    summary: CryptoReplaceFfxFpeConfig alphabet.
+    name: alphabet
+    fullName: alphabet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public alphabet?: ("commonAlphabet"|"customAlphabet"|"radix");'
+      return:
+        type:
+          - ("commonAlphabet"|"customAlphabet"|"radix")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#commonAlphabet:member'
+    summary: CryptoReplaceFfxFpeConfig commonAlphabet.
+    name: commonAlphabet
+    fullName: commonAlphabet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public commonAlphabet: (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+        google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#commonAlphabet~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#context:member'
+    summary: CryptoReplaceFfxFpeConfig context.
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.create:member(1)'
+    summary: Creates a new CryptoReplaceFfxFpeConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig):
+        google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+        description: CryptoReplaceFfxFpeConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#cryptoKey:member'
+    summary: CryptoReplaceFfxFpeConfig cryptoKey.
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#customAlphabet:member'
+    summary: CryptoReplaceFfxFpeConfig customAlphabet.
+    name: customAlphabet
+    fullName: customAlphabet
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public customAlphabet: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decode:member(1)'
+    summary: Decodes a CryptoReplaceFfxFpeConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+        description: CryptoReplaceFfxFpeConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a CryptoReplaceFfxFpeConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+        description: CryptoReplaceFfxFpeConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode:member(1)'
+    summary: Encodes the specified CryptoReplaceFfxFpeConfig message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CryptoReplaceFfxFpeConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited:member(1)'
+    summary: 'Encodes the specified CryptoReplaceFfxFpeConfig message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CryptoReplaceFfxFpeConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.fromObject:member(1)'
+    summary: >-
+      Creates a CryptoReplaceFfxFpeConfig message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+        description: CryptoReplaceFfxFpeConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#radix:member'
+    summary: CryptoReplaceFfxFpeConfig radix.
+    name: radix
+    fullName: radix
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public radix: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#surrogateInfoType:member'
+    summary: CryptoReplaceFfxFpeConfig surrogateInfoType.
+    name: surrogateInfoType
+    fullName: surrogateInfoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public surrogateInfoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#surrogateInfoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#toJSON:member(1)'
+    summary: Converts this CryptoReplaceFfxFpeConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.toObject:member(1)'
+    summary: Creates a plain object from a CryptoReplaceFfxFpeConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: CryptoReplaceFfxFpeConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.verify:member(1)'
+    summary: Verifies a CryptoReplaceFfxFpeConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+    name: ICryptoReplaceFfxFpeConfig
+    fullName: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#commonAlphabet~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+      google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet)
+    fullName: >-
+      (google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet|keyof typeof
+      google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+        name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+        fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet:enum'
+        name: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+        fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.FfxCommonNativeAlphabet
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig:class'
+    name: CryptoReplaceFfxFpeConfig
+    fullName: google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig#surrogateInfoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoReplaceFfxFpeConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

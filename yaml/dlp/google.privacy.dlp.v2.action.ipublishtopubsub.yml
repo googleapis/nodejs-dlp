@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub:interface'
+    summary: Properties of a PublishToPubSub.
+    name: google.privacy.dlp.v2.Action.IPublishToPubSub
+    fullName: google.privacy.dlp.v2.Action.IPublishToPubSub
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub#topic:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub#topic:member'
+    summary: PublishToPubSub topic
+    name: topic
+    fullName: topic
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'topic?: (string|null);'
+      return:
+        type:
+          - (string|null)

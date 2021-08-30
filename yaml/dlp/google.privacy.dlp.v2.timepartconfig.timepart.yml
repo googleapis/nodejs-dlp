@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart:enum'
+    summary: TimePart enum.
+    name: google.privacy.dlp.v2.TimePartConfig.TimePart
+    fullName: google.privacy.dlp.v2.TimePartConfig.TimePart
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.DAY_OF_MONTH:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.DAY_OF_WEEK:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.HOUR_OF_DAY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.MONTH:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.TIME_PART_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.WEEK_OF_YEAR:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.YEAR:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.DAY_OF_MONTH:member'
+    name: DAY_OF_MONTH
+    fullName: DAY_OF_MONTH
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.DAY_OF_WEEK:member'
+    name: DAY_OF_WEEK
+    fullName: DAY_OF_WEEK
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.HOUR_OF_DAY:member'
+    name: HOUR_OF_DAY
+    fullName: HOUR_OF_DAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.MONTH:member'
+    name: MONTH
+    fullName: MONTH
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.TIME_PART_UNSPECIFIED:member'
+    name: TIME_PART_UNSPECIFIED
+    fullName: TIME_PART_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.WEEK_OF_YEAR:member'
+    name: WEEK_OF_YEAR
+    fullName: WEEK_OF_YEAR
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TimePartConfig.TimePart.YEAR:member'
+    name: YEAR
+    fullName: YEAR
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

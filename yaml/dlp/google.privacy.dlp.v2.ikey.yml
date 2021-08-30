@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey:interface'
+    summary: Properties of a Key.
+    name: google.privacy.dlp.v2.IKey
+    fullName: google.privacy.dlp.v2.IKey
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKey#partitionId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKey#path:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey#partitionId:member'
+    summary: Key partitionId
+    name: partitionId
+    fullName: partitionId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'partitionId?: (google.privacy.dlp.v2.IPartitionId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IKey#partitionId~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey#path:member'
+    summary: Key path
+    name: path
+    fullName: path
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'path?: (google.privacy.dlp.v2.Key.IPathElement[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IKey#path~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey#partitionId~0:complex'
+    name: (google.privacy.dlp.v2.IPartitionId|null)
+    fullName: (google.privacy.dlp.v2.IPartitionId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+        name: google.privacy.dlp.v2.IPartitionId
+        fullName: google.privacy.dlp.v2.IPartitionId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKey#path~0:complex'
+    name: '(google.privacy.dlp.v2.Key.IPathElement[]|null)'
+    fullName: '(google.privacy.dlp.v2.Key.IPathElement[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Key.IPathElement:interface'
+        name: google.privacy.dlp.v2.Key.IPathElement
+        fullName: google.privacy.dlp.v2.Key.IPathElement
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest:interface'
+    summary: Properties of a DeleteInspectTemplateRequest.
+    name: google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IDeleteInspectTemplateRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeleteInspectTemplateRequest#name:member'
+    summary: DeleteInspectTemplateRequest name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)

@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+    summary: Represents a Value.
+    name: google.privacy.dlp.v2.Value
+    fullName: google.privacy.dlp.v2.Value
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#booleanValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#dateValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#dayOfWeekValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#floatValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#integerValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#stringValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#timestampValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#timeValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Value.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value:constructor(1)'
+    summary: Constructs a new Value.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IValue);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#booleanValue:member'
+    summary: Value booleanValue.
+    name: booleanValue
+    fullName: booleanValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public booleanValue: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.create:member(1)'
+    summary: Creates a new Value instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IValue): google.privacy.dlp.v2.Value;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+        description: Value instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#dateValue:member'
+    summary: Value dateValue.
+    name: dateValue
+    fullName: dateValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dateValue?: (google.type.IDate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value#dateValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#dayOfWeekValue:member'
+    summary: Value dayOfWeekValue.
+    name: dayOfWeekValue
+    fullName: dayOfWeekValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dayOfWeekValue: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value#dayOfWeekValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.decode:member(1)'
+    summary: Decodes a Value message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Value;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+        description: Value
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.decodeDelimited:member(1)'
+    summary: 'Decodes a Value message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Value;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+        description: Value
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode:member(1)'
+    summary: >-
+      Encodes the specified Value message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Value.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IValue, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Value message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Value message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Value.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IValue, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Value message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#floatValue:member'
+    summary: Value floatValue.
+    name: floatValue
+    fullName: floatValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public floatValue: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.fromObject:member(1)'
+    summary: Creates a Value message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Value;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+        description: Value
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#integerValue:member'
+    summary: Value integerValue.
+    name: integerValue
+    fullName: integerValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public integerValue: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value#integerValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#stringValue:member'
+    summary: Value stringValue.
+    name: stringValue
+    fullName: stringValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public stringValue: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#timestampValue:member'
+    summary: Value timestampValue.
+    name: timestampValue
+    fullName: timestampValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public timestampValue?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value#timestampValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#timeValue:member'
+    summary: Value timeValue.
+    name: timeValue
+    fullName: timeValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public timeValue?: (google.type.ITimeOfDay|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Value#timeValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#toJSON:member(1)'
+    summary: Converts this Value to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.toObject:member(1)'
+    summary: Creates a plain object from a Value message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Value, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Value
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Value.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#type:member'
+    summary: Value type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public type?:
+        ("integerValue"|"floatValue"|"stringValue"|"booleanValue"|"timestampValue"|"timeValue"|"dateValue"|"dayOfWeekValue");
+      return:
+        type:
+          - >-
+            ("integerValue"|"floatValue"|"stringValue"|"booleanValue"|"timestampValue"|"timeValue"|"dateValue"|"dayOfWeekValue")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.verify:member(1)'
+    summary: Verifies a Value message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+    name: IValue
+    fullName: google.privacy.dlp.v2.IValue
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value:class'
+    name: Value
+    fullName: google.privacy.dlp.v2.Value
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#dateValue~0:complex'
+    name: (google.type.IDate|null)
+    fullName: (google.type.IDate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.IDate:interface'
+        name: google.type.IDate
+        fullName: google.type.IDate
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#dayOfWeekValue~0:complex'
+    name: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek)
+    fullName: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#integerValue~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#timestampValue~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value#timeValue~0:complex'
+    name: (google.type.ITimeOfDay|null)
+    fullName: (google.type.ITimeOfDay|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+        name: google.type.ITimeOfDay
+        fullName: google.type.ITimeOfDay
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Value.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

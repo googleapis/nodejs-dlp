@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone:interface'
+    summary: Properties of a TimeZone.
+    name: google.privacy.dlp.v2.DateTime.ITimeZone
+    fullName: google.privacy.dlp.v2.DateTime.ITimeZone
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone#offsetMinutes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone#offsetMinutes:member'
+    summary: TimeZone offsetMinutes
+    name: offsetMinutes
+    fullName: offsetMinutes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'offsetMinutes?: (number|null);'
+      return:
+        type:
+          - (number|null)

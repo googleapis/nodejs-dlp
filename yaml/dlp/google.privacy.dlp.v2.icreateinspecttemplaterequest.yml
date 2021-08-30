@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest:interface'
+    summary: Properties of a CreateInspectTemplateRequest.
+    name: google.privacy.dlp.v2.ICreateInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.ICreateInspectTemplateRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#inspectTemplate:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#templateId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#inspectTemplate:member'
+    summary: CreateInspectTemplateRequest inspectTemplate
+    name: inspectTemplate
+    fullName: inspectTemplate
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectTemplate?: (google.privacy.dlp.v2.IInspectTemplate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#inspectTemplate~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#locationId:member'
+    summary: CreateInspectTemplateRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#parent:member'
+    summary: CreateInspectTemplateRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#templateId:member'
+    summary: CreateInspectTemplateRequest templateId
+    name: templateId
+    fullName: templateId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'templateId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateInspectTemplateRequest#inspectTemplate~0:complex'
+    name: (google.privacy.dlp.v2.IInspectTemplate|null)
+    fullName: (google.privacy.dlp.v2.IInspectTemplate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+        name: google.privacy.dlp.v2.IInspectTemplate
+        fullName: google.privacy.dlp.v2.IInspectTemplate
+      - name: '|null)'
+        fullName: '|null)'

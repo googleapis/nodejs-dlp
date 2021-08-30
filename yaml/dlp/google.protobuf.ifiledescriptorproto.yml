@@ -1,0 +1,234 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto:interface'
+    summary: Properties of a FileDescriptorProto.
+    name: google.protobuf.IFileDescriptorProto
+    fullName: google.protobuf.IFileDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#dependency:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#enumType:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#extension:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#messageType:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#package:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#publicDependency:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#service:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#sourceCodeInfo:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#syntax:member'
+      - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#weakDependency:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#dependency:member'
+    summary: FileDescriptorProto dependency
+    name: dependency
+    fullName: dependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dependency?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#enumType:member'
+    summary: FileDescriptorProto enumType
+    name: enumType
+    fullName: enumType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'enumType?: (google.protobuf.IEnumDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#enumType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#extension:member'
+    summary: FileDescriptorProto extension
+    name: extension
+    fullName: extension
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'extension?: (google.protobuf.IFieldDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#extension~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#messageType:member'
+    summary: FileDescriptorProto messageType
+    name: messageType
+    fullName: messageType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'messageType?: (google.protobuf.IDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#messageType~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#name:member'
+    summary: FileDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#options:member'
+    summary: FileDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IFileOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#package:member'
+    summary: FileDescriptorProto package
+    name: package
+    fullName: package
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '"package"?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#publicDependency:member'
+    summary: FileDescriptorProto publicDependency
+    name: publicDependency
+    fullName: publicDependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'publicDependency?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#service:member'
+    summary: FileDescriptorProto service
+    name: service
+    fullName: service
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'service?: (google.protobuf.IServiceDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#service~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#sourceCodeInfo:member'
+    summary: FileDescriptorProto sourceCodeInfo
+    name: sourceCodeInfo
+    fullName: sourceCodeInfo
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'sourceCodeInfo?: (google.protobuf.ISourceCodeInfo|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#sourceCodeInfo~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#syntax:member'
+    summary: FileDescriptorProto syntax
+    name: syntax
+    fullName: syntax
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'syntax?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#weakDependency:member'
+    summary: FileDescriptorProto weakDependency
+    name: weakDependency
+    fullName: weakDependency
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'weakDependency?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#enumType~0:complex'
+    name: '(google.protobuf.IEnumDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IEnumDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+        name: google.protobuf.IEnumDescriptorProto
+        fullName: google.protobuf.IEnumDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#extension~0:complex'
+    name: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IFieldDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+        name: google.protobuf.IFieldDescriptorProto
+        fullName: google.protobuf.IFieldDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#messageType~0:complex'
+    name: '(google.protobuf.IDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IDescriptorProto:interface'
+        name: google.protobuf.IDescriptorProto
+        fullName: google.protobuf.IDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#options~0:complex'
+    name: (google.protobuf.IFileOptions|null)
+    fullName: (google.protobuf.IFileOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFileOptions:interface'
+        name: google.protobuf.IFileOptions
+        fullName: google.protobuf.IFileOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#service~0:complex'
+    name: '(google.protobuf.IServiceDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IServiceDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+        name: google.protobuf.IServiceDescriptorProto
+        fullName: google.protobuf.IServiceDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileDescriptorProto#sourceCodeInfo~0:complex'
+    name: (google.protobuf.ISourceCodeInfo|null)
+    fullName: (google.protobuf.ISourceCodeInfo|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo:interface'
+        name: google.protobuf.ISourceCodeInfo
+        fullName: google.protobuf.ISourceCodeInfo
+      - name: '|null)'
+        fullName: '|null)'

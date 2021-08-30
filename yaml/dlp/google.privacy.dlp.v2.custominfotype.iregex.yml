@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+    summary: Properties of a Regex.
+    name: google.privacy.dlp.v2.CustomInfoType.IRegex
+    fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex#groupIndexes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex#pattern:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex#groupIndexes:member'
+    summary: Regex groupIndexes
+    name: groupIndexes
+    fullName: groupIndexes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'groupIndexes?: (number[]|null);'
+      return:
+        type:
+          - '(number[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex#pattern:member'
+    summary: Regex pattern
+    name: pattern
+    fullName: pattern
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pattern?: (string|null);'
+      return:
+        type:
+          - (string|null)

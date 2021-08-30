@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule:interface'
+    summary: Properties of a Schedule.
+    name: google.privacy.dlp.v2.ISchedule
+    fullName: google.privacy.dlp.v2.ISchedule
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule#recurrencePeriodDuration:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule#recurrencePeriodDuration:member'
+    summary: Schedule recurrencePeriodDuration
+    name: recurrencePeriodDuration
+    fullName: recurrencePeriodDuration
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'recurrencePeriodDuration?: (google.protobuf.IDuration|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule#recurrencePeriodDuration~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ISchedule#recurrencePeriodDuration~0:complex'
+    name: (google.protobuf.IDuration|null)
+    fullName: (google.protobuf.IDuration|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IDuration:interface'
+        name: google.protobuf.IDuration
+        fullName: google.protobuf.IDuration
+      - name: '|null)'
+        fullName: '|null)'

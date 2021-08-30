@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest:interface'
+    summary: Properties of a CancelDlpJobRequest.
+    name: google.privacy.dlp.v2.ICancelDlpJobRequest
+    fullName: google.privacy.dlp.v2.ICancelDlpJobRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICancelDlpJobRequest#name:member'
+    summary: CancelDlpJobRequest name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)

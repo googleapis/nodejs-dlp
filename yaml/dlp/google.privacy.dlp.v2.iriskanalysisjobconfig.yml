@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig:interface'
+    summary: Properties of a RiskAnalysisJobConfig.
+    name: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+    fullName: google.privacy.dlp.v2.IRiskAnalysisJobConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#actions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#privacyMetric:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#sourceTable:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#actions:member'
+    summary: RiskAnalysisJobConfig actions
+    name: actions
+    fullName: actions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'actions?: (google.privacy.dlp.v2.IAction[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#actions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#privacyMetric:member'
+    summary: RiskAnalysisJobConfig privacyMetric
+    name: privacyMetric
+    fullName: privacyMetric
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'privacyMetric?: (google.privacy.dlp.v2.IPrivacyMetric|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#privacyMetric~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#sourceTable:member'
+    summary: RiskAnalysisJobConfig sourceTable
+    name: sourceTable
+    fullName: sourceTable
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'sourceTable?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#sourceTable~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#actions~0:complex'
+    name: '(google.privacy.dlp.v2.IAction[]|null)'
+    fullName: '(google.privacy.dlp.v2.IAction[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+        name: google.privacy.dlp.v2.IAction
+        fullName: google.privacy.dlp.v2.IAction
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#privacyMetric~0:complex'
+    name: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    fullName: (google.privacy.dlp.v2.IPrivacyMetric|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrivacyMetric:interface'
+        name: google.privacy.dlp.v2.IPrivacyMetric
+        fullName: google.privacy.dlp.v2.IPrivacyMetric
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRiskAnalysisJobConfig#sourceTable~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'

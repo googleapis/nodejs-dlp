@@ -1,0 +1,384 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+    summary: Represents a CryptoDeterministicConfig.
+    name: google.privacy.dlp.v2.CryptoDeterministicConfig
+    fullName: google.privacy.dlp.v2.CryptoDeterministicConfig
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#surrogateInfoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:constructor(1)'
+    summary: Constructs a new CryptoDeterministicConfig.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ICryptoDeterministicConfig);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#context:member'
+    summary: CryptoDeterministicConfig context.
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.create:member(1)'
+    summary: Creates a new CryptoDeterministicConfig instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.ICryptoDeterministicConfig):
+        google.privacy.dlp.v2.CryptoDeterministicConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+        description: CryptoDeterministicConfig instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#cryptoKey:member'
+    summary: CryptoDeterministicConfig cryptoKey.
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decode:member(1)'
+    summary: Decodes a CryptoDeterministicConfig message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.CryptoDeterministicConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+        description: CryptoDeterministicConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decodeDelimited:member(1)'
+    summary: 'Decodes a CryptoDeterministicConfig message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.CryptoDeterministicConfig;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+        description: CryptoDeterministicConfig
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode:member(1)'
+    summary: >-
+      Encodes the specified CryptoDeterministicConfig message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ICryptoDeterministicConfig, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CryptoDeterministicConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified CryptoDeterministicConfig message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ICryptoDeterministicConfig, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CryptoDeterministicConfig message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.fromObject:member(1)'
+    summary: >-
+      Creates a CryptoDeterministicConfig message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.CryptoDeterministicConfig;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+        description: CryptoDeterministicConfig
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#surrogateInfoType:member'
+    summary: CryptoDeterministicConfig surrogateInfoType.
+    name: surrogateInfoType
+    fullName: surrogateInfoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public surrogateInfoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#surrogateInfoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#toJSON:member(1)'
+    summary: Converts this CryptoDeterministicConfig to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.toObject:member(1)'
+    summary: Creates a plain object from a CryptoDeterministicConfig message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.CryptoDeterministicConfig, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: CryptoDeterministicConfig
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.verify:member(1)'
+    summary: Verifies a CryptoDeterministicConfig message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+    name: ICryptoDeterministicConfig
+    fullName: google.privacy.dlp.v2.ICryptoDeterministicConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig:class'
+    name: CryptoDeterministicConfig
+    fullName: google.privacy.dlp.v2.CryptoDeterministicConfig
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig#surrogateInfoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CryptoDeterministicConfig.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

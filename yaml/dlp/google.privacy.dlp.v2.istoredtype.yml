@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType:interface'
+    summary: Properties of a StoredType.
+    name: google.privacy.dlp.v2.IStoredType
+    fullName: google.privacy.dlp.v2.IStoredType
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#createTime:member'
+    summary: StoredType createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#name:member'
+    summary: StoredType name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'

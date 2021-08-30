@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+    summary: DayOfWeek enum.
+    name: google.type.DayOfWeek
+    fullName: google.type.DayOfWeek
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.type.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.FRIDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.MONDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.SATURDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.SUNDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.THURSDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.TUESDAY:member'
+      - '@google-cloud/dlp!google.type.DayOfWeek.WEDNESDAY:member'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED:member'
+    name: DAY_OF_WEEK_UNSPECIFIED
+    fullName: DAY_OF_WEEK_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.FRIDAY:member'
+    name: FRIDAY
+    fullName: FRIDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.MONDAY:member'
+    name: MONDAY
+    fullName: MONDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.SATURDAY:member'
+    name: SATURDAY
+    fullName: SATURDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.SUNDAY:member'
+    name: SUNDAY
+    fullName: SUNDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '7'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.THURSDAY:member'
+    name: THURSDAY
+    fullName: THURSDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.TUESDAY:member'
+    name: TUESDAY
+    fullName: TUESDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.type.DayOfWeek.WEDNESDAY:member'
+    name: WEDNESDAY
+    fullName: WEDNESDAY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'

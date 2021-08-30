@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IAny:interface'
+    summary: Properties of an Any.
+    name: google.protobuf.IAny
+    fullName: google.protobuf.IAny
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IAny#type_url:member'
+      - '@google-cloud/dlp!google.protobuf.IAny#value:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IAny#type_url:member'
+    summary: Any type\_url
+    name: type_url
+    fullName: type_url
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type_url?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IAny#value:member'
+    summary: Any value
+    name: value
+    fullName: value
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'value?: (Uint8Array|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IAny#value~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IAny#value~0:complex'
+    name: (Uint8Array|string|null)
+    fullName: (Uint8Array|string|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string|null)'
+        fullName: '|string|null)'

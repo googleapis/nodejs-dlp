@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions:interface'
+    summary: Properties of a DatastoreOptions.
+    name: google.privacy.dlp.v2.IDatastoreOptions
+    fullName: google.privacy.dlp.v2.IDatastoreOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#kind:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#partitionId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#kind:member'
+    summary: DatastoreOptions kind
+    name: kind
+    fullName: kind
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'kind?: (google.privacy.dlp.v2.IKindExpression|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#kind~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#partitionId:member'
+    summary: DatastoreOptions partitionId
+    name: partitionId
+    fullName: partitionId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'partitionId?: (google.privacy.dlp.v2.IPartitionId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#partitionId~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#kind~0:complex'
+    name: (google.privacy.dlp.v2.IKindExpression|null)
+    fullName: (google.privacy.dlp.v2.IKindExpression|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKindExpression:interface'
+        name: google.privacy.dlp.v2.IKindExpression
+        fullName: google.privacy.dlp.v2.IKindExpression
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDatastoreOptions#partitionId~0:complex'
+    name: (google.privacy.dlp.v2.IPartitionId|null)
+    fullName: (google.privacy.dlp.v2.IPartitionId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+        name: google.privacy.dlp.v2.IPartitionId
+        fullName: google.privacy.dlp.v2.IPartitionId
+      - name: '|null)'
+        fullName: '|null)'

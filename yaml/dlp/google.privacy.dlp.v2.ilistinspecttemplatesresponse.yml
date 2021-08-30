@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse:interface'
+    summary: Properties of a ListInspectTemplatesResponse.
+    name: google.privacy.dlp.v2.IListInspectTemplatesResponse
+    fullName: google.privacy.dlp.v2.IListInspectTemplatesResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#inspectTemplates:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#nextPageToken:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#inspectTemplates:member'
+    summary: ListInspectTemplatesResponse inspectTemplates
+    name: inspectTemplates
+    fullName: inspectTemplates
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectTemplates?: (google.privacy.dlp.v2.IInspectTemplate[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#inspectTemplates~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#nextPageToken:member'
+    summary: ListInspectTemplatesResponse nextPageToken
+    name: nextPageToken
+    fullName: nextPageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nextPageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesResponse#inspectTemplates~0:complex'
+    name: '(google.privacy.dlp.v2.IInspectTemplate[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInspectTemplate[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+        name: google.privacy.dlp.v2.IInspectTemplate
+        fullName: google.privacy.dlp.v2.IInspectTemplate
+      - name: '[]|null)'
+        fullName: '[]|null)'

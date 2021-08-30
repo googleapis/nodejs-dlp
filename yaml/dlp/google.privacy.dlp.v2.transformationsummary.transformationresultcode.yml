@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode:enum'
+    summary: TransformationResultCode enum.
+    name: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+    fullName: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.ERROR:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.SUCCESS:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.TRANSFORMATION_RESULT_CODE_UNSPECIFIED:member
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.ERROR:member'
+    name: ERROR
+    fullName: ERROR
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.SUCCESS:member'
+    name: SUCCESS
+    fullName: SUCCESS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode.TRANSFORMATION_RESULT_CODE_UNSPECIFIED:member
+    name: TRANSFORMATION_RESULT_CODE_UNSPECIFIED
+    fullName: TRANSFORMATION_RESULT_CODE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket:interface
+    summary: Properties of a KMapEstimationHistogramBucket.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketSize:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValueCount:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValues:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#maxAnonymity:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#minAnonymity:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketSize:member
+    summary: KMapEstimationHistogramBucket bucketSize
+    name: bucketSize
+    fullName: bucketSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketSize?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketSize~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValueCount:member
+    summary: KMapEstimationHistogramBucket bucketValueCount
+    name: bucketValueCount
+    fullName: bucketValueCount
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketValueCount?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValueCount~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValues:member
+    summary: KMapEstimationHistogramBucket bucketValues
+    name: bucketValues
+    fullName: bucketValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        bucketValues?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValues~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#maxAnonymity:member
+    summary: KMapEstimationHistogramBucket maxAnonymity
+    name: maxAnonymity
+    fullName: maxAnonymity
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxAnonymity?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#maxAnonymity~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#minAnonymity:member
+    summary: KMapEstimationHistogramBucket minAnonymity
+    name: minAnonymity
+    fullName: minAnonymity
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'minAnonymity?: (number|Long|string|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#minAnonymity~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketSize~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValueCount~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#bucketValues~0:complex
+    name: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues[]|null)'
+    fullName: '(google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues:interface
+        name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues
+        fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationQuasiIdValues
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#maxAnonymity~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.KMapEstimationResult.IKMapEstimationHistogramBucket#minAnonymity~0:complex
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

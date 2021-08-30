@@ -1,0 +1,359 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+    summary: Represents a ByteContentItem.
+    name: google.privacy.dlp.v2.ByteContentItem
+    fullName: google.privacy.dlp.v2.ByteContentItem
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#data:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:constructor(1)'
+    summary: Constructs a new ByteContentItem.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IByteContentItem);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.create:member(1)'
+    summary: Creates a new ByteContentItem instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IByteContentItem):
+        google.privacy.dlp.v2.ByteContentItem;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+        description: ByteContentItem instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#data:member'
+    summary: ByteContentItem data.
+    name: data
+    fullName: data
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public data: (Uint8Array|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#data~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decode:member(1)'
+    summary: Decodes a ByteContentItem message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.ByteContentItem;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+        description: ByteContentItem
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decodeDelimited:member(1)'
+    summary: 'Decodes a ByteContentItem message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.ByteContentItem;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+        description: ByteContentItem
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode:member(1)'
+    summary: Encodes the specified ByteContentItem message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IByteContentItem, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ByteContentItem message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited:member(1)'
+    summary: 'Encodes the specified ByteContentItem message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IByteContentItem, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ByteContentItem message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.fromObject:member(1)'
+    summary: Creates a ByteContentItem message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.ByteContentItem;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+        description: ByteContentItem
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#toJSON:member(1)'
+    summary: Converts this ByteContentItem to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.toObject:member(1)'
+    summary: Creates a plain object from a ByteContentItem message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.ByteContentItem, options?: $protobuf.IConversionOptions):
+        { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ByteContentItem
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#type:member'
+    summary: ByteContentItem type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public type: (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof
+        google.privacy.dlp.v2.ByteContentItem.BytesType);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#type~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.verify:member(1)'
+    summary: Verifies a ByteContentItem message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+    name: IByteContentItem
+    fullName: google.privacy.dlp.v2.IByteContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem:class'
+    name: ByteContentItem
+    fullName: google.privacy.dlp.v2.ByteContentItem
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#data~0:complex'
+    name: (Uint8Array|string)
+    fullName: (Uint8Array|string)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem#type~0:complex'
+    name: (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof google.privacy.dlp.v2.ByteContentItem.BytesType)
+    fullName: (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof google.privacy.dlp.v2.ByteContentItem.BytesType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+        name: google.privacy.dlp.v2.ByteContentItem.BytesType
+        fullName: google.privacy.dlp.v2.ByteContentItem.BytesType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+        name: google.privacy.dlp.v2.ByteContentItem.BytesType
+        fullName: google.privacy.dlp.v2.ByteContentItem.BytesType
+      - name: )
+        fullName: )

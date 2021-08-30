@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation:interface'
+    summary: Properties of a FieldTransformation.
+    name: google.privacy.dlp.v2.IFieldTransformation
+    fullName: google.privacy.dlp.v2.IFieldTransformation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#condition:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#fields:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#infoTypeTransformations:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#primitiveTransformation:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#condition:member'
+    summary: FieldTransformation condition
+    name: condition
+    fullName: condition
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'condition?: (google.privacy.dlp.v2.IRecordCondition|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#condition~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#fields:member'
+    summary: FieldTransformation fields
+    name: fields
+    fullName: fields
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fields?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#fields~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#infoTypeTransformations:member'
+    summary: FieldTransformation infoTypeTransformations
+    name: infoTypeTransformations
+    fullName: infoTypeTransformations
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypeTransformations?: (google.privacy.dlp.v2.IInfoTypeTransformations|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#infoTypeTransformations~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#primitiveTransformation:member'
+    summary: FieldTransformation primitiveTransformation
+    name: primitiveTransformation
+    fullName: primitiveTransformation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'primitiveTransformation?: (google.privacy.dlp.v2.IPrimitiveTransformation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#primitiveTransformation~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#condition~0:complex'
+    name: (google.privacy.dlp.v2.IRecordCondition|null)
+    fullName: (google.privacy.dlp.v2.IRecordCondition|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition:interface'
+        name: google.privacy.dlp.v2.IRecordCondition
+        fullName: google.privacy.dlp.v2.IRecordCondition
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#fields~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#infoTypeTransformations~0:complex'
+    name: (google.privacy.dlp.v2.IInfoTypeTransformations|null)
+    fullName: (google.privacy.dlp.v2.IInfoTypeTransformations|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeTransformations:interface'
+        name: google.privacy.dlp.v2.IInfoTypeTransformations
+        fullName: google.privacy.dlp.v2.IInfoTypeTransformations
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldTransformation#primitiveTransformation~0:complex'
+    name: (google.privacy.dlp.v2.IPrimitiveTransformation|null)
+    fullName: (google.privacy.dlp.v2.IPrimitiveTransformation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation:interface'
+        name: google.privacy.dlp.v2.IPrimitiveTransformation
+        fullName: google.privacy.dlp.v2.IPrimitiveTransformation
+      - name: '|null)'
+        fullName: '|null)'

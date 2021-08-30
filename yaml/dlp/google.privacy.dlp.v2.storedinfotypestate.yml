@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState:enum'
+    summary: StoredInfoTypeState enum.
+    name: google.privacy.dlp.v2.StoredInfoTypeState
+    fullName: google.privacy.dlp.v2.StoredInfoTypeState
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.FAILED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.INVALID:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.PENDING:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.READY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.STORED_INFO_TYPE_STATE_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.FAILED:member'
+    name: FAILED
+    fullName: FAILED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.INVALID:member'
+    name: INVALID
+    fullName: INVALID
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.PENDING:member'
+    name: PENDING
+    fullName: PENDING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.READY:member'
+    name: READY
+    fullName: READY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.StoredInfoTypeState.STORED_INFO_TYPE_STATE_UNSPECIFIED:member'
+    name: STORED_INFO_TYPE_STATE_UNSPECIFIED
+    fullName: STORED_INFO_TYPE_STATE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

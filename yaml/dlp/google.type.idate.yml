@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.type.IDate:interface'
+    summary: Properties of a Date.
+    name: google.type.IDate
+    fullName: google.type.IDate
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.type.IDate#day:member'
+      - '@google-cloud/dlp!google.type.IDate#month:member'
+      - '@google-cloud/dlp!google.type.IDate#year:member'
+  - uid: '@google-cloud/dlp!google.type.IDate#day:member'
+    summary: Date day
+    name: day
+    fullName: day
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'day?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.type.IDate#month:member'
+    summary: Date month
+    name: month
+    fullName: month
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'month?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.type.IDate#year:member'
+    summary: Date year
+    name: year
+    fullName: year
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'year?: (number|null);'
+      return:
+        type:
+          - (number|null)

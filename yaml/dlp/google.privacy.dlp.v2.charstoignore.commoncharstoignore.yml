@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore:enum'
+    summary: CommonCharsToIgnore enum.
+    name: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+    fullName: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.ALPHA_LOWER_CASE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.ALPHA_UPPER_CASE:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.COMMON_CHARS_TO_IGNORE_UNSPECIFIED:member
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.NUMERIC:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.PUNCTUATION:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.WHITESPACE:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.ALPHA_LOWER_CASE:member'
+    name: ALPHA_LOWER_CASE
+    fullName: ALPHA_LOWER_CASE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.ALPHA_UPPER_CASE:member'
+    name: ALPHA_UPPER_CASE
+    fullName: ALPHA_UPPER_CASE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.COMMON_CHARS_TO_IGNORE_UNSPECIFIED:member
+    name: COMMON_CHARS_TO_IGNORE_UNSPECIFIED
+    fullName: COMMON_CHARS_TO_IGNORE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.NUMERIC:member'
+    name: NUMERIC
+    fullName: NUMERIC
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.PUNCTUATION:member'
+    name: PUNCTUATION
+    fullName: PUNCTUATION
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore.WHITESPACE:member'
+    name: WHITESPACE
+    fullName: WHITESPACE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'

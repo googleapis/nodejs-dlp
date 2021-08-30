@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+    summary: Properties of a ResourceDescriptor.
+    name: google.api.IResourceDescriptor
+    fullName: google.api.IResourceDescriptor
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#history:member'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#nameField:member'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#pattern:member'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#plural:member'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#singular:member'
+      - '@google-cloud/dlp!google.api.IResourceDescriptor#type:member'
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#history:member'
+    summary: ResourceDescriptor history
+    name: history
+    fullName: history
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'history?: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.IResourceDescriptor#history~0:complex'
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#nameField:member'
+    summary: ResourceDescriptor nameField
+    name: nameField
+    fullName: nameField
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'nameField?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#pattern:member'
+    summary: ResourceDescriptor pattern
+    name: pattern
+    fullName: pattern
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pattern?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#plural:member'
+    summary: ResourceDescriptor plural
+    name: plural
+    fullName: plural
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'plural?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#singular:member'
+    summary: ResourceDescriptor singular
+    name: singular
+    fullName: singular
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'singular?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#type:member'
+    summary: ResourceDescriptor type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.api.IResourceDescriptor#history~0:complex'
+    name: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History|null)
+    fullName: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+        name: google.api.ResourceDescriptor.History
+        fullName: google.api.ResourceDescriptor.History
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.api.ResourceDescriptor.History:enum'
+        name: google.api.ResourceDescriptor.History
+        fullName: google.api.ResourceDescriptor.History
+      - name: '|null)'
+        fullName: '|null)'

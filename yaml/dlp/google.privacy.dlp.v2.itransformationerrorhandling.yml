@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling:interface'
+    summary: Properties of a TransformationErrorHandling.
+    name: google.privacy.dlp.v2.ITransformationErrorHandling
+    fullName: google.privacy.dlp.v2.ITransformationErrorHandling
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#leaveUntransformed:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#throwError:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#leaveUntransformed:member'
+    summary: TransformationErrorHandling leaveUntransformed
+    name: leaveUntransformed
+    fullName: leaveUntransformed
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'leaveUntransformed?: (google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#leaveUntransformed~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#throwError:member'
+    summary: TransformationErrorHandling throwError
+    name: throwError
+    fullName: throwError
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'throwError?: (google.privacy.dlp.v2.TransformationErrorHandling.IThrowError|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#throwError~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#leaveUntransformed~0:complex'
+    name: (google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed|null)
+    fullName: (google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed:interface'
+        name: google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed
+        fullName: google.privacy.dlp.v2.TransformationErrorHandling.ILeaveUntransformed
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationErrorHandling#throwError~0:complex'
+    name: (google.privacy.dlp.v2.TransformationErrorHandling.IThrowError|null)
+    fullName: (google.privacy.dlp.v2.TransformationErrorHandling.IThrowError|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationErrorHandling.IThrowError:interface'
+        name: google.privacy.dlp.v2.TransformationErrorHandling.IThrowError
+        fullName: google.privacy.dlp.v2.TransformationErrorHandling.IThrowError
+      - name: '|null)'
+        fullName: '|null)'

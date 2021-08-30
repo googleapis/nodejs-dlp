@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest:interface'
+    summary: Properties of a ListInspectTemplatesRequest.
+    name: google.privacy.dlp.v2.IListInspectTemplatesRequest
+    fullName: google.privacy.dlp.v2.IListInspectTemplatesRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#orderBy:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#pageSize:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#pageToken:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#parent:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#locationId:member'
+    summary: ListInspectTemplatesRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#orderBy:member'
+    summary: ListInspectTemplatesRequest orderBy
+    name: orderBy
+    fullName: orderBy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'orderBy?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#pageSize:member'
+    summary: ListInspectTemplatesRequest pageSize
+    name: pageSize
+    fullName: pageSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageSize?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#pageToken:member'
+    summary: ListInspectTemplatesRequest pageToken
+    name: pageToken
+    fullName: pageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInspectTemplatesRequest#parent:member'
+    summary: ListInspectTemplatesRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)

@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+    summary: Represents an Action.
+    name: google.privacy.dlp.v2.Action
+    fullName: google.privacy.dlp.v2.Action
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#action:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#jobNotificationEmails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishFindingsToCloudDataCatalog:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishSummaryToCscc:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishToStackdriver:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#pubSub:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#saveFindings:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Action.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action:constructor(1)'
+    summary: Constructs a new Action.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IAction);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#action:member'
+    summary: Action action.
+    name: action
+    fullName: action
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public action?:
+        ("saveFindings"|"pubSub"|"publishSummaryToCscc"|"publishFindingsToCloudDataCatalog"|"jobNotificationEmails"|"publishToStackdriver");
+      return:
+        type:
+          - >-
+            ("saveFindings"|"pubSub"|"publishSummaryToCscc"|"publishFindingsToCloudDataCatalog"|"jobNotificationEmails"|"publishToStackdriver")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.create:member(1)'
+    summary: Creates a new Action instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IAction): google.privacy.dlp.v2.Action;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+        description: Action instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.decode:member(1)'
+    summary: Decodes an Action message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Action;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+        description: Action
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.decodeDelimited:member(1)'
+    summary: 'Decodes an Action message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Action;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+        description: Action
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode:member(1)'
+    summary: Encodes the specified Action message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IAction, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Action message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited:member(1)'
+    summary: 'Encodes the specified Action message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IAction, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Action message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.fromObject:member(1)'
+    summary: Creates an Action message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Action;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+        description: Action
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#jobNotificationEmails:member'
+    summary: Action jobNotificationEmails.
+    name: jobNotificationEmails
+    fullName: jobNotificationEmails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public jobNotificationEmails?: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#jobNotificationEmails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishFindingsToCloudDataCatalog:member'
+    summary: Action publishFindingsToCloudDataCatalog.
+    name: publishFindingsToCloudDataCatalog
+    fullName: publishFindingsToCloudDataCatalog
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public publishFindingsToCloudDataCatalog?:
+        (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishFindingsToCloudDataCatalog~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishSummaryToCscc:member'
+    summary: Action publishSummaryToCscc.
+    name: publishSummaryToCscc
+    fullName: publishSummaryToCscc
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public publishSummaryToCscc?: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishSummaryToCscc~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishToStackdriver:member'
+    summary: Action publishToStackdriver.
+    name: publishToStackdriver
+    fullName: publishToStackdriver
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public publishToStackdriver?: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishToStackdriver~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#pubSub:member'
+    summary: Action pubSub.
+    name: pubSub
+    fullName: pubSub
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public pubSub?: (google.privacy.dlp.v2.Action.IPublishToPubSub|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#pubSub~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#saveFindings:member'
+    summary: Action saveFindings.
+    name: saveFindings
+    fullName: saveFindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public saveFindings?: (google.privacy.dlp.v2.Action.ISaveFindings|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Action#saveFindings~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#toJSON:member(1)'
+    summary: Converts this Action to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.toObject:member(1)'
+    summary: Creates a plain object from an Action message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Action, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Action
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Action.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.verify:member(1)'
+    summary: Verifies an Action message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+    name: IAction
+    fullName: google.privacy.dlp.v2.IAction
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action:class'
+    name: Action
+    fullName: google.privacy.dlp.v2.Action
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#jobNotificationEmails~0:complex'
+    name: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null)
+    fullName: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IJobNotificationEmails:interface'
+        name: google.privacy.dlp.v2.Action.IJobNotificationEmails
+        fullName: google.privacy.dlp.v2.Action.IJobNotificationEmails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishFindingsToCloudDataCatalog~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+        name: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+        fullName: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishSummaryToCscc~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishSummaryToCscc:interface'
+        name: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+        fullName: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#publishToStackdriver~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToStackdriver:interface'
+        name: google.privacy.dlp.v2.Action.IPublishToStackdriver
+        fullName: google.privacy.dlp.v2.Action.IPublishToStackdriver
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#pubSub~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishToPubSub|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishToPubSub|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub:interface'
+        name: google.privacy.dlp.v2.Action.IPublishToPubSub
+        fullName: google.privacy.dlp.v2.Action.IPublishToPubSub
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action#saveFindings~0:complex'
+    name: (google.privacy.dlp.v2.Action.ISaveFindings|null)
+    fullName: (google.privacy.dlp.v2.Action.ISaveFindings|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings:interface'
+        name: google.privacy.dlp.v2.Action.ISaveFindings
+        fullName: google.privacy.dlp.v2.Action.ISaveFindings
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+    summary: JobState enum.
+    name: google.privacy.dlp.v2.DlpJob.JobState
+    fullName: google.privacy.dlp.v2.DlpJob.JobState
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.ACTIVE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.CANCELED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.DONE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.FAILED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.JOB_STATE_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.PENDING:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.RUNNING:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.ACTIVE:member'
+    name: ACTIVE
+    fullName: ACTIVE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.CANCELED:member'
+    name: CANCELED
+    fullName: CANCELED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.DONE:member'
+    name: DONE
+    fullName: DONE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.FAILED:member'
+    name: FAILED
+    fullName: FAILED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.JOB_STATE_UNSPECIFIED:member'
+    name: JOB_STATE_UNSPECIFIED
+    fullName: JOB_STATE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.PENDING:member'
+    name: PENDING
+    fullName: PENDING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState.RUNNING:member'
+    name: RUNNING
+    fullName: RUNNING
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

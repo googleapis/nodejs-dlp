@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest:interface'
+    summary: Properties of a RedactImageRequest.
+    name: google.privacy.dlp.v2.IRedactImageRequest
+    fullName: google.privacy.dlp.v2.IRedactImageRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#byteItem:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#imageRedactionConfigs:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#includeFindings:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#inspectConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#parent:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#byteItem:member'
+    summary: RedactImageRequest byteItem
+    name: byteItem
+    fullName: byteItem
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'byteItem?: (google.privacy.dlp.v2.IByteContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#byteItem~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#imageRedactionConfigs:member'
+    summary: RedactImageRequest imageRedactionConfigs
+    name: imageRedactionConfigs
+    fullName: imageRedactionConfigs
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'imageRedactionConfigs?: (google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#imageRedactionConfigs~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#includeFindings:member'
+    summary: RedactImageRequest includeFindings
+    name: includeFindings
+    fullName: includeFindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'includeFindings?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#inspectConfig:member'
+    summary: RedactImageRequest inspectConfig
+    name: inspectConfig
+    fullName: inspectConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectConfig?: (google.privacy.dlp.v2.IInspectConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#inspectConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#locationId:member'
+    summary: RedactImageRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#parent:member'
+    summary: RedactImageRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#byteItem~0:complex'
+    name: (google.privacy.dlp.v2.IByteContentItem|null)
+    fullName: (google.privacy.dlp.v2.IByteContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+        name: google.privacy.dlp.v2.IByteContentItem
+        fullName: google.privacy.dlp.v2.IByteContentItem
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#imageRedactionConfigs~0:complex'
+    name: '(google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[]|null)'
+    fullName: '(google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig:interface'
+        name: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+        fullName: google.privacy.dlp.v2.RedactImageRequest.IImageRedactionConfig
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactImageRequest#inspectConfig~0:complex'
+    name: (google.privacy.dlp.v2.IInspectConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        name: google.privacy.dlp.v2.IInspectConfig
+        fullName: google.privacy.dlp.v2.IInspectConfig
+      - name: '|null)'
+        fullName: '|null)'

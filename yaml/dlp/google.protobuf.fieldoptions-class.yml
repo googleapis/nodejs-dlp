@@ -1,0 +1,430 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+    summary: Represents a FieldOptions.
+    name: google.protobuf.FieldOptions
+    fullName: google.protobuf.FieldOptions
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldOptions:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#ctype:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#jstype:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#lazy:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#packed:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#uninterpretedOption:member'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions.verify:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldOptions#weak:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions:constructor(1)'
+    summary: Constructs a new FieldOptions.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IFieldOptions);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.create:member(1)'
+    summary: Creates a new FieldOptions instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IFieldOptions): google.protobuf.FieldOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+        description: FieldOptions instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#ctype:member'
+    summary: FieldOptions ctype.
+    name: ctype
+    fullName: ctype
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public ctype: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions#ctype~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.decode:member(1)'
+    summary: Decodes a FieldOptions message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.FieldOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+        description: FieldOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.decodeDelimited:member(1)'
+    summary: 'Decodes a FieldOptions message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.FieldOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+        description: FieldOptions
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#deprecated:member'
+    summary: FieldOptions deprecated.
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public deprecated: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encode:member(1)'
+    summary: Encodes the specified FieldOptions message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.protobuf.IFieldOptions, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FieldOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited:member(1)'
+    summary: 'Encodes the specified FieldOptions message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.protobuf.IFieldOptions, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FieldOptions message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.fromObject:member(1)'
+    summary: Creates a FieldOptions message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.FieldOptions;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+        description: FieldOptions
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#jstype:member'
+    summary: FieldOptions jstype.
+    name: jstype
+    fullName: jstype
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public jstype: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions#jstype~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#lazy:member'
+    summary: FieldOptions lazy.
+    name: lazy
+    fullName: lazy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public lazy: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#packed:member'
+    summary: FieldOptions packed.
+    name: packed
+    fullName: packed
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public packed: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#toJSON:member(1)'
+    summary: Converts this FieldOptions to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.toObject:member(1)'
+    summary: Creates a plain object from a FieldOptions message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.FieldOptions, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: FieldOptions
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldOptions.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#uninterpretedOption:member'
+    summary: FieldOptions uninterpretedOption.
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public uninterpretedOption: google.protobuf.IUninterpretedOption[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldOptions#uninterpretedOption~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.verify:member(1)'
+    summary: Verifies a FieldOptions message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#weak:member'
+    summary: FieldOptions weak.
+    name: weak
+    fullName: weak
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public weak: boolean;'
+      return:
+        type:
+          - boolean
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+    name: IFieldOptions
+    fullName: google.protobuf.IFieldOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions:class'
+    name: FieldOptions
+    fullName: google.protobuf.FieldOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#ctype~0:complex'
+    name: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType)
+    fullName: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+        name: google.protobuf.FieldOptions.CType
+        fullName: google.protobuf.FieldOptions.CType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.CType:enum'
+        name: google.protobuf.FieldOptions.CType
+        fullName: google.protobuf.FieldOptions.CType
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#jstype~0:complex'
+    name: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType)
+    fullName: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+        name: google.protobuf.FieldOptions.JSType
+        fullName: google.protobuf.FieldOptions.JSType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.JSType:enum'
+        name: google.protobuf.FieldOptions.JSType
+        fullName: google.protobuf.FieldOptions.JSType
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.protobuf.FieldOptions#uninterpretedOption~0:complex'
+    name: 'google.protobuf.IUninterpretedOption[]'
+    fullName: 'google.protobuf.IUninterpretedOption[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]'
+        fullName: '[]'

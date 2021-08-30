@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest:interface'
+    summary: Properties of a CreateJobTriggerRequest.
+    name: google.privacy.dlp.v2.ICreateJobTriggerRequest
+    fullName: google.privacy.dlp.v2.ICreateJobTriggerRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#jobTrigger:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#triggerId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#jobTrigger:member'
+    summary: CreateJobTriggerRequest jobTrigger
+    name: jobTrigger
+    fullName: jobTrigger
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobTrigger?: (google.privacy.dlp.v2.IJobTrigger|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#jobTrigger~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#locationId:member'
+    summary: CreateJobTriggerRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#parent:member'
+    summary: CreateJobTriggerRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#triggerId:member'
+    summary: CreateJobTriggerRequest triggerId
+    name: triggerId
+    fullName: triggerId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'triggerId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICreateJobTriggerRequest#jobTrigger~0:complex'
+    name: (google.privacy.dlp.v2.IJobTrigger|null)
+    fullName: (google.privacy.dlp.v2.IJobTrigger|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger:interface'
+        name: google.privacy.dlp.v2.IJobTrigger
+        fullName: google.privacy.dlp.v2.IJobTrigger
+      - name: '|null)'
+        fullName: '|null)'

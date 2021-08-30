@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator:enum'
+    summary: LogicalOperator enum.
+    name: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+    fullName: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator.AND:member'
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator.LOGICAL_OPERATOR_UNSPECIFIED:member
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator.AND:member'
+    name: AND
+    fullName: AND
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator.LOGICAL_OPERATOR_UNSPECIFIED:member
+    name: LOGICAL_OPERATOR_UNSPECIFIED
+    fullName: LOGICAL_OPERATOR_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

@@ -1,0 +1,313 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask:class'
+    summary: Represents a FieldMask.
+    name: google.protobuf.FieldMask
+    fullName: google.protobuf.FieldMask
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FieldMask:constructor(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.create:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.decode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.encode:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.fromObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask#paths:member'
+      - '@google-cloud/dlp!google.protobuf.FieldMask#toJSON:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.toObject:member(1)'
+      - '@google-cloud/dlp!google.protobuf.FieldMask.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask:constructor(1)'
+    summary: Constructs a new FieldMask.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.protobuf.IFieldMask);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.create:member(1)'
+    summary: Creates a new FieldMask instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.protobuf.IFieldMask): google.protobuf.FieldMask;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+        description: FieldMask instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.decode:member(1)'
+    summary: Decodes a FieldMask message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.FieldMask;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+        description: FieldMask
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.decodeDelimited:member(1)'
+    summary: 'Decodes a FieldMask message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.FieldMask;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+        description: FieldMask
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encode:member(1)'
+    summary: >-
+      Encodes the specified FieldMask message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.FieldMask.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.protobuf.IFieldMask, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FieldMask message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified FieldMask message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.protobuf.FieldMask.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.protobuf.IFieldMask, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: FieldMask message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.fromObject:member(1)'
+    summary: Creates a FieldMask message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.protobuf.FieldMask;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+        description: FieldMask
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask#paths:member'
+    summary: FieldMask paths.
+    name: paths
+    fullName: paths
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public paths: string[];'
+      return:
+        type:
+          - 'string[]'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask#toJSON:member(1)'
+    summary: Converts this FieldMask to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.toObject:member(1)'
+    summary: Creates a plain object from a FieldMask message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.protobuf.FieldMask, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: FieldMask
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.protobuf.FieldMask.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.verify:member(1)'
+    summary: Verifies a FieldMask message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+    name: IFieldMask
+    fullName: google.protobuf.IFieldMask
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask:class'
+    name: FieldMask
+    fullName: google.protobuf.FieldMask
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.protobuf.FieldMask.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

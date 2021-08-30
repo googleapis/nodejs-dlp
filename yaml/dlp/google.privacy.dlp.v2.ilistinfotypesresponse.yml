@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse:interface'
+    summary: Properties of a ListInfoTypesResponse.
+    name: google.privacy.dlp.v2.IListInfoTypesResponse
+    fullName: google.privacy.dlp.v2.IListInfoTypesResponse
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse#infoTypes:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse#infoTypes:member'
+    summary: ListInfoTypesResponse infoTypes
+    name: infoTypes
+    fullName: infoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoTypes?: (google.privacy.dlp.v2.IInfoTypeDescription[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse#infoTypes~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesResponse#infoTypes~0:complex'
+    name: '(google.privacy.dlp.v2.IInfoTypeDescription[]|null)'
+    fullName: '(google.privacy.dlp.v2.IInfoTypeDescription[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeDescription:interface'
+        name: google.privacy.dlp.v2.IInfoTypeDescription
+        fullName: google.privacy.dlp.v2.IInfoTypeDescription
+      - name: '[]|null)'
+        fullName: '[]|null)'

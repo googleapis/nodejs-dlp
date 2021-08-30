@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+    summary: Properties of a HybridFindingDetails.
+    name: google.privacy.dlp.v2.IHybridFindingDetails
+    fullName: google.privacy.dlp.v2.IHybridFindingDetails
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#containerDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#fileOffset:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#labels:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#rowOffset:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#tableOptions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#containerDetails:member'
+    summary: HybridFindingDetails containerDetails
+    name: containerDetails
+    fullName: containerDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'containerDetails?: (google.privacy.dlp.v2.IContainer|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#containerDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#fileOffset:member'
+    summary: HybridFindingDetails fileOffset
+    name: fileOffset
+    fullName: fileOffset
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fileOffset?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#fileOffset~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#labels:member'
+    summary: HybridFindingDetails labels
+    name: labels
+    fullName: labels
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'labels?: ({ [k: string]: string }|null);'
+      return:
+        type:
+          - '({ [k: string]: string }|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#rowOffset:member'
+    summary: HybridFindingDetails rowOffset
+    name: rowOffset
+    fullName: rowOffset
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rowOffset?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#rowOffset~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#tableOptions:member'
+    summary: HybridFindingDetails tableOptions
+    name: tableOptions
+    fullName: tableOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'tableOptions?: (google.privacy.dlp.v2.ITableOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#tableOptions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#containerDetails~0:complex'
+    name: (google.privacy.dlp.v2.IContainer|null)
+    fullName: (google.privacy.dlp.v2.IContainer|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContainer:interface'
+        name: google.privacy.dlp.v2.IContainer
+        fullName: google.privacy.dlp.v2.IContainer
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#fileOffset~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#rowOffset~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails#tableOptions~0:complex'
+    name: (google.privacy.dlp.v2.ITableOptions|null)
+    fullName: (google.privacy.dlp.v2.ITableOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+        name: google.privacy.dlp.v2.ITableOptions
+        fullName: google.privacy.dlp.v2.ITableOptions
+      - name: '|null)'
+        fullName: '|null)'

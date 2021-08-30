@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction:interface'
+    summary: Properties of an Action.
+    name: google.privacy.dlp.v2.IAction
+    fullName: google.privacy.dlp.v2.IAction
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#jobNotificationEmails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishFindingsToCloudDataCatalog:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishSummaryToCscc:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishToStackdriver:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#pubSub:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#saveFindings:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#jobNotificationEmails:member'
+    summary: Action jobNotificationEmails
+    name: jobNotificationEmails
+    fullName: jobNotificationEmails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobNotificationEmails?: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#jobNotificationEmails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishFindingsToCloudDataCatalog:member'
+    summary: Action publishFindingsToCloudDataCatalog
+    name: publishFindingsToCloudDataCatalog
+    fullName: publishFindingsToCloudDataCatalog
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'publishFindingsToCloudDataCatalog?: (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishFindingsToCloudDataCatalog~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishSummaryToCscc:member'
+    summary: Action publishSummaryToCscc
+    name: publishSummaryToCscc
+    fullName: publishSummaryToCscc
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'publishSummaryToCscc?: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishSummaryToCscc~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishToStackdriver:member'
+    summary: Action publishToStackdriver
+    name: publishToStackdriver
+    fullName: publishToStackdriver
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'publishToStackdriver?: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishToStackdriver~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#pubSub:member'
+    summary: Action pubSub
+    name: pubSub
+    fullName: pubSub
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pubSub?: (google.privacy.dlp.v2.Action.IPublishToPubSub|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#pubSub~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#saveFindings:member'
+    summary: Action saveFindings
+    name: saveFindings
+    fullName: saveFindings
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'saveFindings?: (google.privacy.dlp.v2.Action.ISaveFindings|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IAction#saveFindings~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#jobNotificationEmails~0:complex'
+    name: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null)
+    fullName: (google.privacy.dlp.v2.Action.IJobNotificationEmails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IJobNotificationEmails:interface'
+        name: google.privacy.dlp.v2.Action.IJobNotificationEmails
+        fullName: google.privacy.dlp.v2.Action.IJobNotificationEmails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishFindingsToCloudDataCatalog~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog:interface'
+        name: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+        fullName: google.privacy.dlp.v2.Action.IPublishFindingsToCloudDataCatalog
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishSummaryToCscc~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishSummaryToCscc|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishSummaryToCscc:interface'
+        name: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+        fullName: google.privacy.dlp.v2.Action.IPublishSummaryToCscc
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#publishToStackdriver~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishToStackdriver|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToStackdriver:interface'
+        name: google.privacy.dlp.v2.Action.IPublishToStackdriver
+        fullName: google.privacy.dlp.v2.Action.IPublishToStackdriver
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#pubSub~0:complex'
+    name: (google.privacy.dlp.v2.Action.IPublishToPubSub|null)
+    fullName: (google.privacy.dlp.v2.Action.IPublishToPubSub|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IPublishToPubSub:interface'
+        name: google.privacy.dlp.v2.Action.IPublishToPubSub
+        fullName: google.privacy.dlp.v2.Action.IPublishToPubSub
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAction#saveFindings~0:complex'
+    name: (google.privacy.dlp.v2.Action.ISaveFindings|null)
+    fullName: (google.privacy.dlp.v2.Action.ISaveFindings|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.ISaveFindings:interface'
+        name: google.privacy.dlp.v2.Action.ISaveFindings
+        fullName: google.privacy.dlp.v2.Action.ISaveFindings
+      - name: '|null)'
+        fullName: '|null)'

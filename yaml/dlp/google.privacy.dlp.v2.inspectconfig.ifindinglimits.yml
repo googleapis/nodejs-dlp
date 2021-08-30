@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits:interface'
+    summary: Properties of a FindingLimits.
+    name: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+    fullName: google.privacy.dlp.v2.InspectConfig.IFindingLimits
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerInfoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerItem:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerRequest:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerInfoType:member'
+    summary: FindingLimits maxFindingsPerInfoType
+    name: maxFindingsPerInfoType
+    fullName: maxFindingsPerInfoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxFindingsPerInfoType?: (google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerInfoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerItem:member'
+    summary: FindingLimits maxFindingsPerItem
+    name: maxFindingsPerItem
+    fullName: maxFindingsPerItem
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxFindingsPerItem?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerRequest:member'
+    summary: FindingLimits maxFindingsPerRequest
+    name: maxFindingsPerRequest
+    fullName: maxFindingsPerRequest
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'maxFindingsPerRequest?: (number|null);'
+      return:
+        type:
+          - (number|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.IFindingLimits#maxFindingsPerInfoType~0:complex'
+    name: '(google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit[]|null)'
+    fullName: '(google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit:interface'
+        name: google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit
+        fullName: google.privacy.dlp.v2.InspectConfig.FindingLimits.IInfoTypeLimit
+      - name: '[]|null)'
+        fullName: '[]|null)'

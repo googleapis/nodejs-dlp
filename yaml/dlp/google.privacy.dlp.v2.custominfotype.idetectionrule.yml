@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule:interface'
+    summary: Properties of a DetectionRule.
+    name: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+    fullName: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule#hotwordRule:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule#hotwordRule:member'
+    summary: DetectionRule hotwordRule
+    name: hotwordRule
+    fullName: hotwordRule
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hotwordRule?: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule#hotwordRule~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule#hotwordRule~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+        fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,338 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions:interface'
+    summary: Properties of a FileOptions.
+    name: google.protobuf.IFileOptions
+    fullName: google.protobuf.IFileOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#".google.api.resourceDefinition":member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#ccEnableArenas:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#ccGenericServices:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#csharpNamespace:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#goPackage:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaGenerateEqualsAndHash:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaGenericServices:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaMultipleFiles:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaOuterClassname:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaPackage:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#javaStringCheckUtf8:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#objcClassPrefix:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#optimizeFor:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#phpClassPrefix:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#phpGenericServices:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#phpMetadataNamespace:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#phpNamespace:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#pyGenericServices:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#rubyPackage:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#swiftPrefix:member'
+      - '@google-cloud/dlp!google.protobuf.IFileOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#".google.api.resourceDefinition":member'
+    summary: FileOptions .google.api.resourceDefinition
+    name: '".google.api.resourceDefinition"'
+    fullName: '".google.api.resourceDefinition"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.resourceDefinition"?: (google.api.IResourceDescriptor[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileOptions#".google.api.resourceDefinition"~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#ccEnableArenas:member'
+    summary: FileOptions ccEnableArenas
+    name: ccEnableArenas
+    fullName: ccEnableArenas
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'ccEnableArenas?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#ccGenericServices:member'
+    summary: FileOptions ccGenericServices
+    name: ccGenericServices
+    fullName: ccGenericServices
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'ccGenericServices?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#csharpNamespace:member'
+    summary: FileOptions csharpNamespace
+    name: csharpNamespace
+    fullName: csharpNamespace
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'csharpNamespace?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#deprecated:member'
+    summary: FileOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#goPackage:member'
+    summary: FileOptions goPackage
+    name: goPackage
+    fullName: goPackage
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'goPackage?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaGenerateEqualsAndHash:member'
+    summary: FileOptions javaGenerateEqualsAndHash
+    name: javaGenerateEqualsAndHash
+    fullName: javaGenerateEqualsAndHash
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaGenerateEqualsAndHash?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaGenericServices:member'
+    summary: FileOptions javaGenericServices
+    name: javaGenericServices
+    fullName: javaGenericServices
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaGenericServices?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaMultipleFiles:member'
+    summary: FileOptions javaMultipleFiles
+    name: javaMultipleFiles
+    fullName: javaMultipleFiles
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaMultipleFiles?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaOuterClassname:member'
+    summary: FileOptions javaOuterClassname
+    name: javaOuterClassname
+    fullName: javaOuterClassname
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaOuterClassname?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaPackage:member'
+    summary: FileOptions javaPackage
+    name: javaPackage
+    fullName: javaPackage
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaPackage?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#javaStringCheckUtf8:member'
+    summary: FileOptions javaStringCheckUtf8
+    name: javaStringCheckUtf8
+    fullName: javaStringCheckUtf8
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'javaStringCheckUtf8?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#objcClassPrefix:member'
+    summary: FileOptions objcClassPrefix
+    name: objcClassPrefix
+    fullName: objcClassPrefix
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'objcClassPrefix?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#optimizeFor:member'
+    summary: FileOptions optimizeFor
+    name: optimizeFor
+    fullName: optimizeFor
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        optimizeFor?: (google.protobuf.FileOptions.OptimizeMode|keyof typeof
+        google.protobuf.FileOptions.OptimizeMode|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileOptions#optimizeFor~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#phpClassPrefix:member'
+    summary: FileOptions phpClassPrefix
+    name: phpClassPrefix
+    fullName: phpClassPrefix
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'phpClassPrefix?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#phpGenericServices:member'
+    summary: FileOptions phpGenericServices
+    name: phpGenericServices
+    fullName: phpGenericServices
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'phpGenericServices?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#phpMetadataNamespace:member'
+    summary: FileOptions phpMetadataNamespace
+    name: phpMetadataNamespace
+    fullName: phpMetadataNamespace
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'phpMetadataNamespace?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#phpNamespace:member'
+    summary: FileOptions phpNamespace
+    name: phpNamespace
+    fullName: phpNamespace
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'phpNamespace?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#pyGenericServices:member'
+    summary: FileOptions pyGenericServices
+    name: pyGenericServices
+    fullName: pyGenericServices
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pyGenericServices?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#rubyPackage:member'
+    summary: FileOptions rubyPackage
+    name: rubyPackage
+    fullName: rubyPackage
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rubyPackage?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#swiftPrefix:member'
+    summary: FileOptions swiftPrefix
+    name: swiftPrefix
+    fullName: swiftPrefix
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'swiftPrefix?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#uninterpretedOption:member'
+    summary: FileOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFileOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#".google.api.resourceDefinition"~0:complex'
+    name: '(google.api.IResourceDescriptor[]|null)'
+    fullName: '(google.api.IResourceDescriptor[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IResourceDescriptor:interface'
+        name: google.api.IResourceDescriptor
+        fullName: google.api.IResourceDescriptor
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#optimizeFor~0:complex'
+    name: (google.protobuf.FileOptions.OptimizeMode|keyof typeof google.protobuf.FileOptions.OptimizeMode|null)
+    fullName: (google.protobuf.FileOptions.OptimizeMode|keyof typeof google.protobuf.FileOptions.OptimizeMode|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode:enum'
+        name: google.protobuf.FileOptions.OptimizeMode
+        fullName: google.protobuf.FileOptions.OptimizeMode
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode:enum'
+        name: google.protobuf.FileOptions.OptimizeMode
+        fullName: google.protobuf.FileOptions.OptimizeMode
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFileOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

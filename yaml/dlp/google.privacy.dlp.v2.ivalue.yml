@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+    summary: Properties of a Value.
+    name: google.privacy.dlp.v2.IValue
+    fullName: google.privacy.dlp.v2.IValue
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#booleanValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dateValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dayOfWeekValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#floatValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#integerValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#stringValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timestampValue:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timeValue:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#booleanValue:member'
+    summary: Value booleanValue
+    name: booleanValue
+    fullName: booleanValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'booleanValue?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dateValue:member'
+    summary: Value dateValue
+    name: dateValue
+    fullName: dateValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dateValue?: (google.type.IDate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dateValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dayOfWeekValue:member'
+    summary: Value dayOfWeekValue
+    name: dayOfWeekValue
+    fullName: dayOfWeekValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dayOfWeekValue?: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dayOfWeekValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#floatValue:member'
+    summary: Value floatValue
+    name: floatValue
+    fullName: floatValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'floatValue?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#integerValue:member'
+    summary: Value integerValue
+    name: integerValue
+    fullName: integerValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'integerValue?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#integerValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#stringValue:member'
+    summary: Value stringValue
+    name: stringValue
+    fullName: stringValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'stringValue?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timestampValue:member'
+    summary: Value timestampValue
+    name: timestampValue
+    fullName: timestampValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timestampValue?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timestampValue~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timeValue:member'
+    summary: Value timeValue
+    name: timeValue
+    fullName: timeValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timeValue?: (google.type.ITimeOfDay|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timeValue~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dateValue~0:complex'
+    name: (google.type.IDate|null)
+    fullName: (google.type.IDate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.IDate:interface'
+        name: google.type.IDate
+        fullName: google.type.IDate
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#dayOfWeekValue~0:complex'
+    name: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null)
+    fullName: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#integerValue~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timestampValue~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue#timeValue~0:complex'
+    name: (google.type.ITimeOfDay|null)
+    fullName: (google.type.ITimeOfDay|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+        name: google.type.ITimeOfDay
+        fullName: google.type.ITimeOfDay
+      - name: '|null)'
+        fullName: '|null)'

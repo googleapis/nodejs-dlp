@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId:interface'
+    summary: Properties of a QuasiId.
+    name: google.privacy.dlp.v2.IQuasiId
+    fullName: google.privacy.dlp.v2.IQuasiId
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#customTag:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#field:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#inferred:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#infoType:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#customTag:member'
+    summary: QuasiId customTag
+    name: customTag
+    fullName: customTag
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'customTag?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#field:member'
+    summary: QuasiId field
+    name: field
+    fullName: field
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'field?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#field~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#inferred:member'
+    summary: QuasiId inferred
+    name: inferred
+    fullName: inferred
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inferred?: (google.protobuf.IEmpty|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#inferred~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#infoType:member'
+    summary: QuasiId infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#infoType~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#field~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#inferred~0:complex'
+    name: (google.protobuf.IEmpty|null)
+    fullName: (google.protobuf.IEmpty|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEmpty:interface'
+        name: google.protobuf.IEmpty
+        fullName: google.protobuf.IEmpty
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuasiId#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'

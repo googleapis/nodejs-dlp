@@ -1,0 +1,200 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto:interface'
+    summary: Properties of a FieldDescriptorProto.
+    name: google.protobuf.IFieldDescriptorProto
+    fullName: google.protobuf.IFieldDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#defaultValue:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#extendee:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#jsonName:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#label:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#number:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#oneofIndex:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#proto3Optional:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#type:member'
+      - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#typeName:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#defaultValue:member'
+    summary: FieldDescriptorProto defaultValue
+    name: defaultValue
+    fullName: defaultValue
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'defaultValue?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#extendee:member'
+    summary: FieldDescriptorProto extendee
+    name: extendee
+    fullName: extendee
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'extendee?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#jsonName:member'
+    summary: FieldDescriptorProto jsonName
+    name: jsonName
+    fullName: jsonName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jsonName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#label:member'
+    summary: FieldDescriptorProto label
+    name: label
+    fullName: label
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        label?: (google.protobuf.FieldDescriptorProto.Label|keyof typeof
+        google.protobuf.FieldDescriptorProto.Label|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#label~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#name:member'
+    summary: FieldDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#number:member'
+    summary: FieldDescriptorProto number
+    name: number
+    fullName: number
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'number?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#oneofIndex:member'
+    summary: FieldDescriptorProto oneofIndex
+    name: oneofIndex
+    fullName: oneofIndex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'oneofIndex?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#options:member'
+    summary: FieldDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IFieldOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#proto3Optional:member'
+    summary: FieldDescriptorProto proto3Optional
+    name: proto3Optional
+    fullName: proto3Optional
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'proto3Optional?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#type:member'
+    summary: FieldDescriptorProto type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (google.protobuf.FieldDescriptorProto.Type|keyof typeof google.protobuf.FieldDescriptorProto.Type|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#type~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#typeName:member'
+    summary: FieldDescriptorProto typeName
+    name: typeName
+    fullName: typeName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'typeName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#label~0:complex'
+    name: (google.protobuf.FieldDescriptorProto.Label|keyof typeof google.protobuf.FieldDescriptorProto.Label|null)
+    fullName: (google.protobuf.FieldDescriptorProto.Label|keyof typeof google.protobuf.FieldDescriptorProto.Label|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label:enum'
+        name: google.protobuf.FieldDescriptorProto.Label
+        fullName: google.protobuf.FieldDescriptorProto.Label
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Label:enum'
+        name: google.protobuf.FieldDescriptorProto.Label
+        fullName: google.protobuf.FieldDescriptorProto.Label
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#options~0:complex'
+    name: (google.protobuf.IFieldOptions|null)
+    fullName: (google.protobuf.IFieldOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldOptions:interface'
+        name: google.protobuf.IFieldOptions
+        fullName: google.protobuf.IFieldOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldDescriptorProto#type~0:complex'
+    name: (google.protobuf.FieldDescriptorProto.Type|keyof typeof google.protobuf.FieldDescriptorProto.Type|null)
+    fullName: (google.protobuf.FieldDescriptorProto.Type|keyof typeof google.protobuf.FieldDescriptorProto.Type|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type:enum'
+        name: google.protobuf.FieldDescriptorProto.Type
+        fullName: google.protobuf.FieldDescriptorProto.Type
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.FieldDescriptorProto.Type:enum'
+        name: google.protobuf.FieldDescriptorProto.Type
+        fullName: google.protobuf.FieldDescriptorProto.Type
+      - name: '|null)'
+        fullName: '|null)'

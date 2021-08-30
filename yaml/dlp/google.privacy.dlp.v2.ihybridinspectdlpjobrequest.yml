@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest:interface'
+    summary: Properties of a HybridInspectDlpJobRequest.
+    name: google.privacy.dlp.v2.IHybridInspectDlpJobRequest
+    fullName: google.privacy.dlp.v2.IHybridInspectDlpJobRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#hybridItem:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#name:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#hybridItem:member'
+    summary: HybridInspectDlpJobRequest hybridItem
+    name: hybridItem
+    fullName: hybridItem
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'hybridItem?: (google.privacy.dlp.v2.IHybridContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#hybridItem~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#name:member'
+    summary: HybridInspectDlpJobRequest name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridInspectDlpJobRequest#hybridItem~0:complex'
+    name: (google.privacy.dlp.v2.IHybridContentItem|null)
+    fullName: (google.privacy.dlp.v2.IHybridContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem:interface'
+        name: google.privacy.dlp.v2.IHybridContentItem
+        fullName: google.privacy.dlp.v2.IHybridContentItem
+      - name: '|null)'
+        fullName: '|null)'

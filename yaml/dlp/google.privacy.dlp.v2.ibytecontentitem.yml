@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+    summary: Properties of a ByteContentItem.
+    name: google.privacy.dlp.v2.IByteContentItem
+    fullName: google.privacy.dlp.v2.IByteContentItem
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#data:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#type:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#data:member'
+    summary: ByteContentItem data
+    name: data
+    fullName: data
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'data?: (Uint8Array|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#data~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#type:member'
+    summary: ByteContentItem type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        type?: (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof
+        google.privacy.dlp.v2.ByteContentItem.BytesType|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#type~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#data~0:complex'
+    name: (Uint8Array|string|null)
+    fullName: (Uint8Array|string|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem#type~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof
+      google.privacy.dlp.v2.ByteContentItem.BytesType|null)
+    fullName: >-
+      (google.privacy.dlp.v2.ByteContentItem.BytesType|keyof typeof
+      google.privacy.dlp.v2.ByteContentItem.BytesType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+        name: google.privacy.dlp.v2.ByteContentItem.BytesType
+        fullName: google.privacy.dlp.v2.ByteContentItem.BytesType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ByteContentItem.BytesType:enum'
+        name: google.privacy.dlp.v2.ByteContentItem.BytesType
+        fullName: google.privacy.dlp.v2.ByteContentItem.BytesType
+      - name: '|null)'
+        fullName: '|null)'

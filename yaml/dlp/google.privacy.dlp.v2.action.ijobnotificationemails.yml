@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Action.IJobNotificationEmails:interface'
+    summary: Properties of a JobNotificationEmails.
+    name: google.privacy.dlp.v2.Action.IJobNotificationEmails
+    fullName: google.privacy.dlp.v2.Action.IJobNotificationEmails
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest:interface'
+    summary: Properties of a ListDlpJobsRequest.
+    name: google.privacy.dlp.v2.IListDlpJobsRequest
+    fullName: google.privacy.dlp.v2.IListDlpJobsRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#filter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#orderBy:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#pageSize:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#pageToken:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#type:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#filter:member'
+    summary: ListDlpJobsRequest filter
+    name: filter
+    fullName: filter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'filter?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#locationId:member'
+    summary: ListDlpJobsRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#orderBy:member'
+    summary: ListDlpJobsRequest orderBy
+    name: orderBy
+    fullName: orderBy
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'orderBy?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#pageSize:member'
+    summary: ListDlpJobsRequest pageSize
+    name: pageSize
+    fullName: pageSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageSize?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#pageToken:member'
+    summary: ListDlpJobsRequest pageToken
+    name: pageToken
+    fullName: pageToken
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'pageToken?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#parent:member'
+    summary: ListDlpJobsRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#type:member'
+    summary: ListDlpJobsRequest type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#type~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListDlpJobsRequest#type~0:complex'
+    name: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null)
+    fullName: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: '|null)'
+        fullName: '|null)'

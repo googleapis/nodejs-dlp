@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto:interface'
+    summary: Properties of an EnumDescriptorProto.
+    name: google.protobuf.IEnumDescriptorProto
+    fullName: google.protobuf.IEnumDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#options:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedName:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedRange:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#value:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#name:member'
+    summary: EnumDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#options:member'
+    summary: EnumDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IEnumOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedName:member'
+    summary: EnumDescriptorProto reservedName
+    name: reservedName
+    fullName: reservedName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'reservedName?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedRange:member'
+    summary: EnumDescriptorProto reservedRange
+    name: reservedRange
+    fullName: reservedRange
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'reservedRange?: (google.protobuf.EnumDescriptorProto.IEnumReservedRange[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedRange~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#value:member'
+    summary: EnumDescriptorProto value
+    name: value
+    fullName: value
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'value?: (google.protobuf.IEnumValueDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#value~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#options~0:complex'
+    name: (google.protobuf.IEnumOptions|null)
+    fullName: (google.protobuf.IEnumOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions:interface'
+        name: google.protobuf.IEnumOptions
+        fullName: google.protobuf.IEnumOptions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#reservedRange~0:complex'
+    name: '(google.protobuf.EnumDescriptorProto.IEnumReservedRange[]|null)'
+    fullName: '(google.protobuf.EnumDescriptorProto.IEnumReservedRange[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.EnumDescriptorProto.IEnumReservedRange:interface'
+        name: google.protobuf.EnumDescriptorProto.IEnumReservedRange
+        fullName: google.protobuf.EnumDescriptorProto.IEnumReservedRange
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumDescriptorProto#value~0:complex'
+    name: '(google.protobuf.IEnumValueDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IEnumValueDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IEnumValueDescriptorProto:interface'
+        name: google.protobuf.IEnumValueDescriptorProto
+        fullName: google.protobuf.IEnumValueDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'

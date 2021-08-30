@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation:interface'
+    summary: Properties of a RecordLocation.
+    name: google.privacy.dlp.v2.IRecordLocation
+    fullName: google.privacy.dlp.v2.IRecordLocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#fieldId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#recordKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#tableLocation:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#fieldId:member'
+    summary: RecordLocation fieldId
+    name: fieldId
+    fullName: fieldId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fieldId?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#fieldId~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#recordKey:member'
+    summary: RecordLocation recordKey
+    name: recordKey
+    fullName: recordKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'recordKey?: (google.privacy.dlp.v2.IRecordKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#recordKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#tableLocation:member'
+    summary: RecordLocation tableLocation
+    name: tableLocation
+    fullName: tableLocation
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'tableLocation?: (google.privacy.dlp.v2.ITableLocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#tableLocation~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#fieldId~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#recordKey~0:complex'
+    name: (google.privacy.dlp.v2.IRecordKey|null)
+    fullName: (google.privacy.dlp.v2.IRecordKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordKey:interface'
+        name: google.privacy.dlp.v2.IRecordKey
+        fullName: google.privacy.dlp.v2.IRecordKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordLocation#tableLocation~0:complex'
+    name: (google.privacy.dlp.v2.ITableLocation|null)
+    fullName: (google.privacy.dlp.v2.ITableLocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation:interface'
+        name: google.privacy.dlp.v2.ITableLocation
+        fullName: google.privacy.dlp.v2.ITableLocation
+      - name: '|null)'
+        fullName: '|null)'

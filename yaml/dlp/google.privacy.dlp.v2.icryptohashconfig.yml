@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig:interface'
+    summary: Properties of a CryptoHashConfig.
+    name: google.privacy.dlp.v2.ICryptoHashConfig
+    fullName: google.privacy.dlp.v2.ICryptoHashConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig#cryptoKey:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig#cryptoKey:member'
+    summary: CryptoHashConfig cryptoKey
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig#cryptoKey~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'

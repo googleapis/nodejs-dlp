@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+    summary: Properties of a Dictionary.
+    name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+    fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#cloudStoragePath:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#wordList:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#cloudStoragePath:member'
+    summary: Dictionary cloudStoragePath
+    name: cloudStoragePath
+    fullName: cloudStoragePath
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cloudStoragePath?: (google.privacy.dlp.v2.ICloudStoragePath|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#cloudStoragePath~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#wordList:member'
+    summary: Dictionary wordList
+    name: wordList
+    fullName: wordList
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'wordList?: (google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#wordList~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#cloudStoragePath~0:complex'
+    name: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    fullName: (google.privacy.dlp.v2.ICloudStoragePath|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICloudStoragePath:interface'
+        name: google.privacy.dlp.v2.ICloudStoragePath
+        fullName: google.privacy.dlp.v2.ICloudStoragePath
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary#wordList~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList
+        fullName: google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList
+      - name: '|null)'
+        fullName: '|null)'

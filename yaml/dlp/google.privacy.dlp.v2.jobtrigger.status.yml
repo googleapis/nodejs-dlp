@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status:enum'
+    summary: Status enum.
+    name: google.privacy.dlp.v2.JobTrigger.Status
+    fullName: google.privacy.dlp.v2.JobTrigger.Status
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.CANCELLED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.HEALTHY:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.PAUSED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.STATUS_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.CANCELLED:member'
+    name: CANCELLED
+    fullName: CANCELLED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.HEALTHY:member'
+    name: HEALTHY
+    fullName: HEALTHY
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.PAUSED:member'
+    name: PAUSED
+    fullName: PAUSED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status.STATUS_UNSPECIFIED:member'
+    name: STATUS_UNSPECIFIED
+    fullName: STATUS_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator:enum'
+    summary: RelationalOperator enum.
+    name: google.privacy.dlp.v2.RelationalOperator
+    fullName: google.privacy.dlp.v2.RelationalOperator
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.EQUAL_TO:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.EXISTS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.GREATER_THAN:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.GREATER_THAN_OR_EQUALS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.LESS_THAN:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.LESS_THAN_OR_EQUALS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.NOT_EQUAL_TO:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.RELATIONAL_OPERATOR_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.EQUAL_TO:member'
+    name: EQUAL_TO
+    fullName: EQUAL_TO
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.EXISTS:member'
+    name: EXISTS
+    fullName: EXISTS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '7'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.GREATER_THAN:member'
+    name: GREATER_THAN
+    fullName: GREATER_THAN
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.GREATER_THAN_OR_EQUALS:member'
+    name: GREATER_THAN_OR_EQUALS
+    fullName: GREATER_THAN_OR_EQUALS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.LESS_THAN:member'
+    name: LESS_THAN
+    fullName: LESS_THAN
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.LESS_THAN_OR_EQUALS:member'
+    name: LESS_THAN_OR_EQUALS
+    fullName: LESS_THAN_OR_EQUALS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.NOT_EQUAL_TO:member'
+    name: NOT_EQUAL_TO
+    fullName: NOT_EQUAL_TO
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RelationalOperator.RELATIONAL_OPERATOR_UNSPECIFIED:member'
+    name: RELATIONAL_OPERATOR_UNSPECIFIED
+    fullName: RELATIONAL_OPERATOR_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

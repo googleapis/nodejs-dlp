@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues:interface
+    summary: Properties of a DeltaPresenceEstimationQuasiIdValues.
+    name: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues
+    fullName: >-
+      google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#estimatedProbability:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#quasiIdsValues:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#estimatedProbability:member
+    summary: DeltaPresenceEstimationQuasiIdValues estimatedProbability
+    name: estimatedProbability
+    fullName: estimatedProbability
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'estimatedProbability?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#quasiIdsValues:member
+    summary: DeltaPresenceEstimationQuasiIdValues quasiIdsValues
+    name: quasiIdsValues
+    fullName: quasiIdsValues
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIdsValues?: (google.privacy.dlp.v2.IValue[]|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#quasiIdsValues~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationQuasiIdValues#quasiIdsValues~0:complex
+    name: '(google.privacy.dlp.v2.IValue[]|null)'
+    fullName: '(google.privacy.dlp.v2.IValue[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod:enum'
+    summary: SampleMethod enum.
+    name: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+    fullName: google.privacy.dlp.v2.CloudStorageOptions.SampleMethod
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.RANDOM_START:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.SAMPLE_METHOD_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.TOP:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.RANDOM_START:member'
+    name: RANDOM_START
+    fullName: RANDOM_START
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.SAMPLE_METHOD_UNSPECIFIED:member'
+    name: SAMPLE_METHOD_UNSPECIFIED
+    fullName: SAMPLE_METHOD_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CloudStorageOptions.SampleMethod.TOP:member'
+    name: TOP
+    fullName: TOP
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

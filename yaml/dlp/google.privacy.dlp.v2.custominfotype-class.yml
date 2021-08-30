@@ -1,0 +1,521 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+    summary: Represents a CustomInfoType.
+    name: google.privacy.dlp.v2.CustomInfoType
+    fullName: google.privacy.dlp.v2.CustomInfoType
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#detectionRules:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#dictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#exclusionType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#likelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#regex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#storedType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#surrogateType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:constructor(1)'
+    summary: Constructs a new CustomInfoType.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ICustomInfoType);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.create:member(1)'
+    summary: Creates a new CustomInfoType instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.ICustomInfoType): google.privacy.dlp.v2.CustomInfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+        description: CustomInfoType instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decode:member(1)'
+    summary: Decodes a CustomInfoType message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.CustomInfoType;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+        description: CustomInfoType
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decodeDelimited:member(1)'
+    summary: 'Decodes a CustomInfoType message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.CustomInfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+        description: CustomInfoType
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#detectionRules:member'
+    summary: CustomInfoType detectionRules.
+    name: detectionRules
+    fullName: detectionRules
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public detectionRules: google.privacy.dlp.v2.CustomInfoType.IDetectionRule[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#detectionRules~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#dictionary:member'
+    summary: CustomInfoType dictionary.
+    name: dictionary
+    fullName: dictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dictionary?: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#dictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode:member(1)'
+    summary: Encodes the specified CustomInfoType message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ICustomInfoType, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CustomInfoType message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited:member(1)'
+    summary: 'Encodes the specified CustomInfoType message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ICustomInfoType, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: CustomInfoType message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#exclusionType:member'
+    summary: CustomInfoType exclusionType.
+    name: exclusionType
+    fullName: exclusionType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        public exclusionType: (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+        google.privacy.dlp.v2.CustomInfoType.ExclusionType);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#exclusionType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.fromObject:member(1)'
+    summary: Creates a CustomInfoType message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.CustomInfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+        description: CustomInfoType
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#infoType:member'
+    summary: CustomInfoType infoType.
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#likelihood:member'
+    summary: CustomInfoType likelihood.
+    name: likelihood
+    fullName: likelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public likelihood: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#likelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#regex:member'
+    summary: CustomInfoType regex.
+    name: regex
+    fullName: regex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public regex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#regex~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#storedType:member'
+    summary: CustomInfoType storedType.
+    name: storedType
+    fullName: storedType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public storedType?: (google.privacy.dlp.v2.IStoredType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#storedType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#surrogateType:member'
+    summary: CustomInfoType surrogateType.
+    name: surrogateType
+    fullName: surrogateType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public surrogateType?: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#surrogateType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#toJSON:member(1)'
+    summary: Converts this CustomInfoType to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.toObject:member(1)'
+    summary: Creates a plain object from a CustomInfoType message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.CustomInfoType, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: CustomInfoType
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#type:member'
+    summary: CustomInfoType type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type?: ("dictionary"|"regex"|"surrogateType"|"storedType");'
+      return:
+        type:
+          - ("dictionary"|"regex"|"surrogateType"|"storedType")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.verify:member(1)'
+    summary: Verifies a CustomInfoType message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICustomInfoType:interface'
+    name: ICustomInfoType
+    fullName: google.privacy.dlp.v2.ICustomInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType:class'
+    name: CustomInfoType
+    fullName: google.privacy.dlp.v2.CustomInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#detectionRules~0:complex'
+    name: 'google.privacy.dlp.v2.CustomInfoType.IDetectionRule[]'
+    fullName: 'google.privacy.dlp.v2.CustomInfoType.IDetectionRule[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDetectionRule:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDetectionRule
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#dictionary~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#exclusionType~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+      google.privacy.dlp.v2.CustomInfoType.ExclusionType)
+    fullName: >-
+      (google.privacy.dlp.v2.CustomInfoType.ExclusionType|keyof typeof
+      google.privacy.dlp.v2.CustomInfoType.ExclusionType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+        name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ExclusionType:enum'
+        name: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ExclusionType
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#likelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#regex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#storedType~0:complex'
+    name: (google.privacy.dlp.v2.IStoredType|null)
+    fullName: (google.privacy.dlp.v2.IStoredType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredType:interface'
+        name: google.privacy.dlp.v2.IStoredType
+        fullName: google.privacy.dlp.v2.IStoredType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType#surrogateType~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.ISurrogateType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ISurrogateType:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+        fullName: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

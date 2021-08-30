@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation:interface'
+    summary: Properties of a TableLocation.
+    name: google.privacy.dlp.v2.ITableLocation
+    fullName: google.privacy.dlp.v2.ITableLocation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation#rowIndex:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation#rowIndex:member'
+    summary: TableLocation rowIndex
+    name: rowIndex
+    fullName: rowIndex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'rowIndex?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation#rowIndex~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableLocation#rowIndex~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

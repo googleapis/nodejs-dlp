@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+    summary: Properties of a FieldMask.
+    name: google.protobuf.IFieldMask
+    fullName: google.protobuf.IFieldMask
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IFieldMask#paths:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IFieldMask#paths:member'
+    summary: FieldMask paths
+    name: paths
+    fullName: paths
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'paths?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'

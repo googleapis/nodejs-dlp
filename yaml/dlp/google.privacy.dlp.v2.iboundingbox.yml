@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox:interface'
+    summary: Properties of a BoundingBox.
+    name: google.privacy.dlp.v2.IBoundingBox
+    fullName: google.privacy.dlp.v2.IBoundingBox
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#height:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#left:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#top:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#width:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#height:member'
+    summary: BoundingBox height
+    name: height
+    fullName: height
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'height?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#left:member'
+    summary: BoundingBox left
+    name: left
+    fullName: left
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'left?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#top:member'
+    summary: BoundingBox top
+    name: top
+    fullName: top
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'top?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBoundingBox#width:member'
+    summary: BoundingBox width
+    name: width
+    fullName: width
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'width?: (number|null);'
+      return:
+        type:
+          - (number|null)

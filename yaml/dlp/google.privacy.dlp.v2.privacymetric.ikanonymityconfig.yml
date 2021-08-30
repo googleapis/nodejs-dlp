@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig:interface'
+    summary: Properties of a KAnonymityConfig.
+    name: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+    fullName: google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#entityId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#quasiIds:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#entityId:member'
+    summary: KAnonymityConfig entityId
+    name: entityId
+    fullName: entityId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'entityId?: (google.privacy.dlp.v2.IEntityId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#entityId~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#quasiIds:member'
+    summary: KAnonymityConfig quasiIds
+    name: quasiIds
+    fullName: quasiIds
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quasiIds?: (google.privacy.dlp.v2.IFieldId[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#quasiIds~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#entityId~0:complex'
+    name: (google.privacy.dlp.v2.IEntityId|null)
+    fullName: (google.privacy.dlp.v2.IEntityId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IEntityId:interface'
+        name: google.privacy.dlp.v2.IEntityId
+        fullName: google.privacy.dlp.v2.IEntityId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.PrivacyMetric.IKAnonymityConfig#quasiIds~0:complex'
+    name: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    fullName: '(google.privacy.dlp.v2.IFieldId[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '[]|null)'
+        fullName: '[]|null)'

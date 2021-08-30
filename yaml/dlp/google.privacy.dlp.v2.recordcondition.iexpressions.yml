@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions:interface'
+    summary: Properties of an Expressions.
+    name: google.privacy.dlp.v2.RecordCondition.IExpressions
+    fullName: google.privacy.dlp.v2.RecordCondition.IExpressions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#conditions:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#logicalOperator:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#conditions:member'
+    summary: Expressions conditions
+    name: conditions
+    fullName: conditions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'conditions?: (google.privacy.dlp.v2.RecordCondition.IConditions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#conditions~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#logicalOperator:member'
+    summary: Expressions logicalOperator
+    name: logicalOperator
+    fullName: logicalOperator
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        logicalOperator?: (google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|keyof typeof
+        google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#logicalOperator~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#conditions~0:complex'
+    name: (google.privacy.dlp.v2.RecordCondition.IConditions|null)
+    fullName: (google.privacy.dlp.v2.RecordCondition.IConditions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IConditions:interface'
+        name: google.privacy.dlp.v2.RecordCondition.IConditions
+        fullName: google.privacy.dlp.v2.RecordCondition.IConditions
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions#logicalOperator~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|keyof typeof
+      google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|null)
+    fullName: >-
+      (google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|keyof typeof
+      google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator:enum'
+        name: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+        fullName: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator:enum'
+        name: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+        fullName: google.privacy.dlp.v2.RecordCondition.Expressions.LogicalOperator
+      - name: '|null)'
+        fullName: '|null)'

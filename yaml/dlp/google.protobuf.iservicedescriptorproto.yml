@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto:interface'
+    summary: Properties of a ServiceDescriptorProto.
+    name: google.protobuf.IServiceDescriptorProto
+    fullName: google.protobuf.IServiceDescriptorProto
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#method:member'
+      - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#name:member'
+      - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#options:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#method:member'
+    summary: ServiceDescriptorProto method
+    name: method
+    fullName: method
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'method?: (google.protobuf.IMethodDescriptorProto[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#method~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#name:member'
+    summary: ServiceDescriptorProto name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#options:member'
+    summary: ServiceDescriptorProto options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IServiceOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#options~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#method~0:complex'
+    name: '(google.protobuf.IMethodDescriptorProto[]|null)'
+    fullName: '(google.protobuf.IMethodDescriptorProto[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IMethodDescriptorProto:interface'
+        name: google.protobuf.IMethodDescriptorProto
+        fullName: google.protobuf.IMethodDescriptorProto
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IServiceDescriptorProto#options~0:complex'
+    name: (google.protobuf.IServiceOptions|null)
+    fullName: (google.protobuf.IServiceOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IServiceOptions:interface'
+        name: google.protobuf.IServiceOptions
+        fullName: google.protobuf.IServiceOptions
+      - name: '|null)'
+        fullName: '|null)'

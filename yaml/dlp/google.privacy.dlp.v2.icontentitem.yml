@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+    summary: Properties of a ContentItem.
+    name: google.privacy.dlp.v2.IContentItem
+    fullName: google.privacy.dlp.v2.IContentItem
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#byteItem:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#table:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#value:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#byteItem:member'
+    summary: ContentItem byteItem
+    name: byteItem
+    fullName: byteItem
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'byteItem?: (google.privacy.dlp.v2.IByteContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#byteItem~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#table:member'
+    summary: ContentItem table
+    name: table
+    fullName: table
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'table?: (google.privacy.dlp.v2.ITable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#table~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#value:member'
+    summary: ContentItem value
+    name: value
+    fullName: value
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'value?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#byteItem~0:complex'
+    name: (google.privacy.dlp.v2.IByteContentItem|null)
+    fullName: (google.privacy.dlp.v2.IByteContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IByteContentItem:interface'
+        name: google.privacy.dlp.v2.IByteContentItem
+        fullName: google.privacy.dlp.v2.IByteContentItem
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem#table~0:complex'
+    name: (google.privacy.dlp.v2.ITable|null)
+    fullName: (google.privacy.dlp.v2.ITable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITable:interface'
+        name: google.privacy.dlp.v2.ITable
+        fullName: google.privacy.dlp.v2.ITable
+      - name: '|null)'
+        fullName: '|null)'

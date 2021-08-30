@@ -1,0 +1,420 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+    summary: Represents an ExclusionRule.
+    name: google.privacy.dlp.v2.ExclusionRule
+    fullName: google.privacy.dlp.v2.ExclusionRule
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#dictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#excludeInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#matchingType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#regex:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:constructor(1)'
+    summary: Constructs a new ExclusionRule.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IExclusionRule);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.create:member(1)'
+    summary: Creates a new ExclusionRule instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IExclusionRule): google.privacy.dlp.v2.ExclusionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+        description: ExclusionRule instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decode:member(1)'
+    summary: Decodes an ExclusionRule message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.ExclusionRule;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+        description: ExclusionRule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decodeDelimited:member(1)'
+    summary: 'Decodes an ExclusionRule message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.ExclusionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+        description: ExclusionRule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#dictionary:member'
+    summary: ExclusionRule dictionary.
+    name: dictionary
+    fullName: dictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public dictionary?: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#dictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode:member(1)'
+    summary: >-
+      Encodes the specified ExclusionRule message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IExclusionRule, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ExclusionRule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified ExclusionRule message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IExclusionRule, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ExclusionRule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#excludeInfoTypes:member'
+    summary: ExclusionRule excludeInfoTypes.
+    name: excludeInfoTypes
+    fullName: excludeInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public excludeInfoTypes?: (google.privacy.dlp.v2.IExcludeInfoTypes|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#excludeInfoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.fromObject:member(1)'
+    summary: Creates an ExclusionRule message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.ExclusionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+        description: ExclusionRule
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#matchingType:member'
+    summary: ExclusionRule matchingType.
+    name: matchingType
+    fullName: matchingType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public matchingType: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#matchingType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#regex:member'
+    summary: ExclusionRule regex.
+    name: regex
+    fullName: regex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public regex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#regex~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#toJSON:member(1)'
+    summary: Converts this ExclusionRule to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.toObject:member(1)'
+    summary: Creates a plain object from an ExclusionRule message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.ExclusionRule, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ExclusionRule
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#type:member'
+    summary: ExclusionRule type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type?: ("dictionary"|"regex"|"excludeInfoTypes");'
+      return:
+        type:
+          - ("dictionary"|"regex"|"excludeInfoTypes")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.verify:member(1)'
+    summary: Verifies an ExclusionRule message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+    name: IExclusionRule
+    fullName: google.privacy.dlp.v2.IExclusionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule:class'
+    name: ExclusionRule
+    fullName: google.privacy.dlp.v2.ExclusionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#dictionary~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#excludeInfoTypes~0:complex'
+    name: (google.privacy.dlp.v2.IExcludeInfoTypes|null)
+    fullName: (google.privacy.dlp.v2.IExcludeInfoTypes|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExcludeInfoTypes:interface'
+        name: google.privacy.dlp.v2.IExcludeInfoTypes
+        fullName: google.privacy.dlp.v2.IExcludeInfoTypes
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#matchingType~0:complex'
+    name: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType)
+    fullName: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+        name: google.privacy.dlp.v2.MatchingType
+        fullName: google.privacy.dlp.v2.MatchingType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+        name: google.privacy.dlp.v2.MatchingType
+        fullName: google.privacy.dlp.v2.MatchingType
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule#regex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ExclusionRule.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

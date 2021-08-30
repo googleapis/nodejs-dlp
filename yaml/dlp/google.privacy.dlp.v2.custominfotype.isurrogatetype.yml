@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.ISurrogateType:interface'
+    summary: Properties of a SurrogateType.
+    name: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+    fullName: google.privacy.dlp.v2.CustomInfoType.ISurrogateType
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

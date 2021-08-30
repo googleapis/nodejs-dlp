@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo:interface'
+    summary: Properties of a SourceCodeInfo.
+    name: google.protobuf.ISourceCodeInfo
+    fullName: google.protobuf.ISourceCodeInfo
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.ISourceCodeInfo#location:member'
+  - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo#location:member'
+    summary: SourceCodeInfo location
+    name: location
+    fullName: location
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'location?: (google.protobuf.SourceCodeInfo.ILocation[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.ISourceCodeInfo#location~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.ISourceCodeInfo#location~0:complex'
+    name: '(google.protobuf.SourceCodeInfo.ILocation[]|null)'
+    fullName: '(google.protobuf.SourceCodeInfo.ILocation[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.SourceCodeInfo.ILocation:interface'
+        name: google.protobuf.SourceCodeInfo.ILocation
+        fullName: google.protobuf.SourceCodeInfo.ILocation
+      - name: '[]|null)'
+        fullName: '[]|null)'

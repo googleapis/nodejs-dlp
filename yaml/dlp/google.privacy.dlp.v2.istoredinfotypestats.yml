@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats:interface'
+    summary: Properties of a StoredInfoTypeStats.
+    name: google.privacy.dlp.v2.IStoredInfoTypeStats
+    fullName: google.privacy.dlp.v2.IStoredInfoTypeStats
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats#largeCustomDictionary:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats#largeCustomDictionary:member'
+    summary: StoredInfoTypeStats largeCustomDictionary
+    name: largeCustomDictionary
+    fullName: largeCustomDictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'largeCustomDictionary?: (google.privacy.dlp.v2.ILargeCustomDictionaryStats|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats#largeCustomDictionary~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IStoredInfoTypeStats#largeCustomDictionary~0:complex'
+    name: (google.privacy.dlp.v2.ILargeCustomDictionaryStats|null)
+    fullName: (google.privacy.dlp.v2.ILargeCustomDictionaryStats|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILargeCustomDictionaryStats:interface'
+        name: google.privacy.dlp.v2.ILargeCustomDictionaryStats
+        fullName: google.privacy.dlp.v2.ILargeCustomDictionaryStats
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult:interface'
+    summary: Properties of a DeltaPresenceEstimationResult.
+    name: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+    fullName: google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult#deltaPresenceEstimationHistogram:member
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult#deltaPresenceEstimationHistogram:member
+    summary: DeltaPresenceEstimationResult deltaPresenceEstimationHistogram
+    name: deltaPresenceEstimationHistogram
+    fullName: deltaPresenceEstimationHistogram
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        deltaPresenceEstimationHistogram?:
+        (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket[]|null);
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult#deltaPresenceEstimationHistogram~0:complex
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.IDeltaPresenceEstimationResult#deltaPresenceEstimationHistogram~0:complex
+    name: >-
+      (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket[]|null)
+    fullName: >-
+      (google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket[]|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: >-
+          @google-cloud/dlp!google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket:interface
+        name: >-
+          google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket
+        fullName: >-
+          google.privacy.dlp.v2.AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.IDeltaPresenceEstimationHistogramBucket
+      - name: '[]|null)'
+        fullName: '[]|null)'

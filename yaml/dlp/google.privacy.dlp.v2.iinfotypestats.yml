@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats:interface'
+    summary: Properties of an InfoTypeStats.
+    name: google.privacy.dlp.v2.IInfoTypeStats
+    fullName: google.privacy.dlp.v2.IInfoTypeStats
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#count:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#infoType:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#count:member'
+    summary: InfoTypeStats count
+    name: count
+    fullName: count
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'count?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#count~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#infoType:member'
+    summary: InfoTypeStats infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#infoType~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#count~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoTypeStats#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'

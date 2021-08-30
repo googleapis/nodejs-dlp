@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey:interface'
+    summary: Properties of a KmsWrappedCryptoKey.
+    name: google.privacy.dlp.v2.IKmsWrappedCryptoKey
+    fullName: google.privacy.dlp.v2.IKmsWrappedCryptoKey
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#cryptoKeyName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#wrappedKey:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#cryptoKeyName:member'
+    summary: KmsWrappedCryptoKey cryptoKeyName
+    name: cryptoKeyName
+    fullName: cryptoKeyName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoKeyName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#wrappedKey:member'
+    summary: KmsWrappedCryptoKey wrappedKey
+    name: wrappedKey
+    fullName: wrappedKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'wrappedKey?: (Uint8Array|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#wrappedKey~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IKmsWrappedCryptoKey#wrappedKey~0:complex'
+    name: (Uint8Array|string|null)
+    fullName: (Uint8Array|string|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: '|string|null)'
+        fullName: '|string|null)'

@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore:interface'
+    summary: Properties of a CharsToIgnore.
+    name: google.privacy.dlp.v2.ICharsToIgnore
+    fullName: google.privacy.dlp.v2.ICharsToIgnore
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#charactersToSkip:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#commonCharactersToIgnore:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#charactersToSkip:member'
+    summary: CharsToIgnore charactersToSkip
+    name: charactersToSkip
+    fullName: charactersToSkip
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'charactersToSkip?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#commonCharactersToIgnore:member'
+    summary: CharsToIgnore commonCharactersToIgnore
+    name: commonCharactersToIgnore
+    fullName: commonCharactersToIgnore
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        commonCharactersToIgnore?: (google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|keyof typeof
+        google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#commonCharactersToIgnore~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharsToIgnore#commonCharactersToIgnore~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|keyof typeof
+      google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|null)
+    fullName: >-
+      (google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|keyof typeof
+      google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore:enum'
+        name: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+        fullName: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore:enum'
+        name: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+        fullName: google.privacy.dlp.v2.CharsToIgnore.CommonCharsToIgnore
+      - name: '|null)'
+        fullName: '|null)'

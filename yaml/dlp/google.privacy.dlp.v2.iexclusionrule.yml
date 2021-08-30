@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+    summary: Properties of an ExclusionRule.
+    name: google.privacy.dlp.v2.IExclusionRule
+    fullName: google.privacy.dlp.v2.IExclusionRule
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#dictionary:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#excludeInfoTypes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#matchingType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#regex:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#dictionary:member'
+    summary: ExclusionRule dictionary
+    name: dictionary
+    fullName: dictionary
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dictionary?: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#dictionary~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#excludeInfoTypes:member'
+    summary: ExclusionRule excludeInfoTypes
+    name: excludeInfoTypes
+    fullName: excludeInfoTypes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'excludeInfoTypes?: (google.privacy.dlp.v2.IExcludeInfoTypes|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#excludeInfoTypes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#matchingType:member'
+    summary: ExclusionRule matchingType
+    name: matchingType
+    fullName: matchingType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'matchingType?: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#matchingType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#regex:member'
+    summary: ExclusionRule regex
+    name: regex
+    fullName: regex
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'regex?: (google.privacy.dlp.v2.CustomInfoType.IRegex|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#regex~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#dictionary~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IDictionary|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IDictionary:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IDictionary
+        fullName: google.privacy.dlp.v2.CustomInfoType.IDictionary
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#excludeInfoTypes~0:complex'
+    name: (google.privacy.dlp.v2.IExcludeInfoTypes|null)
+    fullName: (google.privacy.dlp.v2.IExcludeInfoTypes|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExcludeInfoTypes:interface'
+        name: google.privacy.dlp.v2.IExcludeInfoTypes
+        fullName: google.privacy.dlp.v2.IExcludeInfoTypes
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#matchingType~0:complex'
+    name: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType|null)
+    fullName: (google.privacy.dlp.v2.MatchingType|keyof typeof google.privacy.dlp.v2.MatchingType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+        name: google.privacy.dlp.v2.MatchingType
+        fullName: google.privacy.dlp.v2.MatchingType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MatchingType:enum'
+        name: google.privacy.dlp.v2.MatchingType
+        fullName: google.privacy.dlp.v2.MatchingType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule#regex~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.IRegex|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.IRegex:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.IRegex
+        fullName: google.privacy.dlp.v2.CustomInfoType.IRegex
+      - name: '|null)'
+        fullName: '|null)'

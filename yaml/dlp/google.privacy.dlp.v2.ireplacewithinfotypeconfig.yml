@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceWithInfoTypeConfig:interface'
+    summary: Properties of a ReplaceWithInfoTypeConfig.
+    name: google.privacy.dlp.v2.IReplaceWithInfoTypeConfig
+    fullName: google.privacy.dlp.v2.IReplaceWithInfoTypeConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'

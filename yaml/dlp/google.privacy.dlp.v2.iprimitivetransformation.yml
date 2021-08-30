@@ -1,0 +1,276 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation:interface'
+    summary: Properties of a PrimitiveTransformation.
+    name: google.privacy.dlp.v2.IPrimitiveTransformation
+    fullName: google.privacy.dlp.v2.IPrimitiveTransformation
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#bucketingConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#characterMaskConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoDeterministicConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoHashConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoReplaceFfxFpeConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#dateShiftConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#fixedSizeBucketingConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#redactConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceWithInfoTypeConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#timePartConfig:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#bucketingConfig:member'
+    summary: PrimitiveTransformation bucketingConfig
+    name: bucketingConfig
+    fullName: bucketingConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketingConfig?: (google.privacy.dlp.v2.IBucketingConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#bucketingConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#characterMaskConfig:member'
+    summary: PrimitiveTransformation characterMaskConfig
+    name: characterMaskConfig
+    fullName: characterMaskConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'characterMaskConfig?: (google.privacy.dlp.v2.ICharacterMaskConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#characterMaskConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoDeterministicConfig:member'
+    summary: PrimitiveTransformation cryptoDeterministicConfig
+    name: cryptoDeterministicConfig
+    fullName: cryptoDeterministicConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoDeterministicConfig?: (google.privacy.dlp.v2.ICryptoDeterministicConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoDeterministicConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoHashConfig:member'
+    summary: PrimitiveTransformation cryptoHashConfig
+    name: cryptoHashConfig
+    fullName: cryptoHashConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoHashConfig?: (google.privacy.dlp.v2.ICryptoHashConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoHashConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoReplaceFfxFpeConfig:member'
+    summary: PrimitiveTransformation cryptoReplaceFfxFpeConfig
+    name: cryptoReplaceFfxFpeConfig
+    fullName: cryptoReplaceFfxFpeConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoReplaceFfxFpeConfig?: (google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoReplaceFfxFpeConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#dateShiftConfig:member'
+    summary: PrimitiveTransformation dateShiftConfig
+    name: dateShiftConfig
+    fullName: dateShiftConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dateShiftConfig?: (google.privacy.dlp.v2.IDateShiftConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#dateShiftConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#fixedSizeBucketingConfig:member'
+    summary: PrimitiveTransformation fixedSizeBucketingConfig
+    name: fixedSizeBucketingConfig
+    fullName: fixedSizeBucketingConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fixedSizeBucketingConfig?: (google.privacy.dlp.v2.IFixedSizeBucketingConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#fixedSizeBucketingConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#redactConfig:member'
+    summary: PrimitiveTransformation redactConfig
+    name: redactConfig
+    fullName: redactConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'redactConfig?: (google.privacy.dlp.v2.IRedactConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#redactConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceConfig:member'
+    summary: PrimitiveTransformation replaceConfig
+    name: replaceConfig
+    fullName: replaceConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'replaceConfig?: (google.privacy.dlp.v2.IReplaceValueConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceWithInfoTypeConfig:member'
+    summary: PrimitiveTransformation replaceWithInfoTypeConfig
+    name: replaceWithInfoTypeConfig
+    fullName: replaceWithInfoTypeConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'replaceWithInfoTypeConfig?: (google.privacy.dlp.v2.IReplaceWithInfoTypeConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceWithInfoTypeConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#timePartConfig:member'
+    summary: PrimitiveTransformation timePartConfig
+    name: timePartConfig
+    fullName: timePartConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timePartConfig?: (google.privacy.dlp.v2.ITimePartConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#timePartConfig~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#bucketingConfig~0:complex'
+    name: (google.privacy.dlp.v2.IBucketingConfig|null)
+    fullName: (google.privacy.dlp.v2.IBucketingConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBucketingConfig:interface'
+        name: google.privacy.dlp.v2.IBucketingConfig
+        fullName: google.privacy.dlp.v2.IBucketingConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#characterMaskConfig~0:complex'
+    name: (google.privacy.dlp.v2.ICharacterMaskConfig|null)
+    fullName: (google.privacy.dlp.v2.ICharacterMaskConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICharacterMaskConfig:interface'
+        name: google.privacy.dlp.v2.ICharacterMaskConfig
+        fullName: google.privacy.dlp.v2.ICharacterMaskConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoDeterministicConfig~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoDeterministicConfig|null)
+    fullName: (google.privacy.dlp.v2.ICryptoDeterministicConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+        name: google.privacy.dlp.v2.ICryptoDeterministicConfig
+        fullName: google.privacy.dlp.v2.ICryptoDeterministicConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoHashConfig~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoHashConfig|null)
+    fullName: (google.privacy.dlp.v2.ICryptoHashConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoHashConfig:interface'
+        name: google.privacy.dlp.v2.ICryptoHashConfig
+        fullName: google.privacy.dlp.v2.ICryptoHashConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#cryptoReplaceFfxFpeConfig~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig|null)
+    fullName: (google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig:interface'
+        name: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+        fullName: google.privacy.dlp.v2.ICryptoReplaceFfxFpeConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#dateShiftConfig~0:complex'
+    name: (google.privacy.dlp.v2.IDateShiftConfig|null)
+    fullName: (google.privacy.dlp.v2.IDateShiftConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+        name: google.privacy.dlp.v2.IDateShiftConfig
+        fullName: google.privacy.dlp.v2.IDateShiftConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#fixedSizeBucketingConfig~0:complex'
+    name: (google.privacy.dlp.v2.IFixedSizeBucketingConfig|null)
+    fullName: (google.privacy.dlp.v2.IFixedSizeBucketingConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig:interface'
+        name: google.privacy.dlp.v2.IFixedSizeBucketingConfig
+        fullName: google.privacy.dlp.v2.IFixedSizeBucketingConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#redactConfig~0:complex'
+    name: (google.privacy.dlp.v2.IRedactConfig|null)
+    fullName: (google.privacy.dlp.v2.IRedactConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRedactConfig:interface'
+        name: google.privacy.dlp.v2.IRedactConfig
+        fullName: google.privacy.dlp.v2.IRedactConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceConfig~0:complex'
+    name: (google.privacy.dlp.v2.IReplaceValueConfig|null)
+    fullName: (google.privacy.dlp.v2.IReplaceValueConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceValueConfig:interface'
+        name: google.privacy.dlp.v2.IReplaceValueConfig
+        fullName: google.privacy.dlp.v2.IReplaceValueConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#replaceWithInfoTypeConfig~0:complex'
+    name: (google.privacy.dlp.v2.IReplaceWithInfoTypeConfig|null)
+    fullName: (google.privacy.dlp.v2.IReplaceWithInfoTypeConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IReplaceWithInfoTypeConfig:interface'
+        name: google.privacy.dlp.v2.IReplaceWithInfoTypeConfig
+        fullName: google.privacy.dlp.v2.IReplaceWithInfoTypeConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPrimitiveTransformation#timePartConfig~0:complex'
+    name: (google.privacy.dlp.v2.ITimePartConfig|null)
+    fullName: (google.privacy.dlp.v2.ITimePartConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITimePartConfig:interface'
+        name: google.privacy.dlp.v2.ITimePartConfig
+        fullName: google.privacy.dlp.v2.ITimePartConfig
+      - name: '|null)'
+        fullName: '|null)'

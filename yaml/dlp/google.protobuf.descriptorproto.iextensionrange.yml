@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange:interface'
+    summary: Properties of an ExtensionRange.
+    name: google.protobuf.DescriptorProto.IExtensionRange
+    fullName: google.protobuf.DescriptorProto.IExtensionRange
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#end:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#options:member'
+      - '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#start:member'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#end:member'
+    summary: ExtensionRange end
+    name: end
+    fullName: end
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'end?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#options:member'
+    summary: ExtensionRange options
+    name: options
+    fullName: options
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'options?: (google.protobuf.IExtensionRangeOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#options~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#start:member'
+    summary: ExtensionRange start
+    name: start
+    fullName: start
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'start?: (number|null);'
+      return:
+        type:
+          - (number|null)
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.DescriptorProto.IExtensionRange#options~0:complex'
+    name: (google.protobuf.IExtensionRangeOptions|null)
+    fullName: (google.protobuf.IExtensionRangeOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IExtensionRangeOptions:interface'
+        name: google.protobuf.IExtensionRangeOptions
+        fullName: google.protobuf.IExtensionRangeOptions
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig:interface'
+    summary: Properties of a DateShiftConfig.
+    name: google.privacy.dlp.v2.IDateShiftConfig
+    fullName: google.privacy.dlp.v2.IDateShiftConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#lowerBoundDays:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#upperBoundDays:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#context:member'
+    summary: DateShiftConfig context
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#cryptoKey:member'
+    summary: DateShiftConfig cryptoKey
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#lowerBoundDays:member'
+    summary: DateShiftConfig lowerBoundDays
+    name: lowerBoundDays
+    fullName: lowerBoundDays
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lowerBoundDays?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#upperBoundDays:member'
+    summary: DateShiftConfig upperBoundDays
+    name: upperBoundDays
+    fullName: upperBoundDays
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'upperBoundDays?: (number|null);'
+      return:
+        type:
+          - (number|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateShiftConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'

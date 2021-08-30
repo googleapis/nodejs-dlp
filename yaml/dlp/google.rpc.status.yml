@@ -1,0 +1,348 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.rpc.Status:class'
+    summary: Represents a Status.
+    name: google.rpc.Status
+    fullName: google.rpc.Status
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.rpc.IStatus:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.rpc.Status:constructor(1)'
+      - '@google-cloud/dlp!google.rpc.Status#code:member'
+      - '@google-cloud/dlp!google.rpc.Status.create:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.decode:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status#details:member'
+      - '@google-cloud/dlp!google.rpc.Status.encode:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.fromObject:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status#message:member'
+      - '@google-cloud/dlp!google.rpc.Status#toJSON:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.toObject:member(1)'
+      - '@google-cloud/dlp!google.rpc.Status.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.rpc.Status:constructor(1)'
+    summary: Constructs a new Status.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.rpc.IStatus);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.rpc.IStatus:interface'
+  - uid: '@google-cloud/dlp!google.rpc.Status#code:member'
+    summary: Status code.
+    name: code
+    fullName: code
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public code: number;'
+      return:
+        type:
+          - number
+  - uid: '@google-cloud/dlp!google.rpc.Status.create:member(1)'
+    summary: Creates a new Status instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.rpc.IStatus): google.rpc.Status;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status:class'
+        description: Status instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.rpc.IStatus:interface'
+  - uid: '@google-cloud/dlp!google.rpc.Status.decode:member(1)'
+    summary: Decodes a Status message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.rpc.Status;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status:class'
+        description: Status
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.rpc.Status.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.rpc.Status.decodeDelimited:member(1)'
+    summary: 'Decodes a Status message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.rpc.Status;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status:class'
+        description: Status
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.rpc.Status.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.rpc.Status#details:member'
+    summary: Status details.
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public details: google.protobuf.IAny[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status#details~0:complex'
+  - uid: '@google-cloud/dlp!google.rpc.Status.encode:member(1)'
+    summary: >-
+      Encodes the specified Status message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.rpc.Status.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.rpc.IStatus, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Status message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.rpc.IStatus:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.rpc.Status.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.rpc.Status.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Status message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.rpc.Status.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.rpc.IStatus, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Status message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.rpc.IStatus:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.rpc.Status.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.rpc.Status.fromObject:member(1)'
+    summary: Creates a Status message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.rpc.Status;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.Status:class'
+        description: Status
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.rpc.Status#message:member'
+    summary: Status message.
+    name: message
+    fullName: message
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public message: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.rpc.Status#toJSON:member(1)'
+    summary: Converts this Status to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.rpc.Status.toObject:member(1)'
+    summary: Creates a plain object from a Status message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.rpc.Status, options?: $protobuf.IConversionOptions): { [k: string]: any
+        };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Status
+          type:
+            - '@google-cloud/dlp!google.rpc.Status:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.rpc.Status.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.rpc.Status.verify:member(1)'
+    summary: Verifies a Status message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.rpc.IStatus:interface'
+    name: IStatus
+    fullName: google.rpc.IStatus
+  - uid: '@google-cloud/dlp!google.rpc.Status:class'
+    name: Status
+    fullName: google.rpc.Status
+  - uid: '@google-cloud/dlp!google.rpc.Status.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.rpc.Status.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.rpc.Status#details~0:complex'
+    name: 'google.protobuf.IAny[]'
+    fullName: 'google.protobuf.IAny[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.IAny:interface'
+        name: google.protobuf.IAny
+        fullName: google.protobuf.IAny
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.rpc.Status.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.rpc.Status.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.rpc.Status.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.rpc.Status.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.rpc.Status.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

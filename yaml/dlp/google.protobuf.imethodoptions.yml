@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions:interface'
+    summary: Properties of a MethodOptions.
+    name: google.protobuf.IMethodOptions
+    fullName: google.protobuf.IMethodOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.http":member'
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.methodSignature":member'
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions#idempotencyLevel:member'
+      - '@google-cloud/dlp!google.protobuf.IMethodOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.http":member'
+    summary: MethodOptions .google.api.http
+    name: '".google.api.http"'
+    fullName: '".google.api.http"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.http"?: (google.api.IHttpRule|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.http"~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.methodSignature":member'
+    summary: MethodOptions .google.api.methodSignature
+    name: '".google.api.methodSignature"'
+    fullName: '".google.api.methodSignature"'
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: '".google.api.methodSignature"?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#deprecated:member'
+    summary: MethodOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#idempotencyLevel:member'
+    summary: MethodOptions idempotencyLevel
+    name: idempotencyLevel
+    fullName: idempotencyLevel
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        idempotencyLevel?: (google.protobuf.MethodOptions.IdempotencyLevel|keyof typeof
+        google.protobuf.MethodOptions.IdempotencyLevel|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMethodOptions#idempotencyLevel~0:complex'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#uninterpretedOption:member'
+    summary: MethodOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IMethodOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#".google.api.http"~0:complex'
+    name: (google.api.IHttpRule|null)
+    fullName: (google.api.IHttpRule|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+        name: google.api.IHttpRule
+        fullName: google.api.IHttpRule
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#idempotencyLevel~0:complex'
+    name: (google.protobuf.MethodOptions.IdempotencyLevel|keyof typeof google.protobuf.MethodOptions.IdempotencyLevel|null)
+    fullName: (google.protobuf.MethodOptions.IdempotencyLevel|keyof typeof google.protobuf.MethodOptions.IdempotencyLevel|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.MethodOptions.IdempotencyLevel:enum'
+        name: google.protobuf.MethodOptions.IdempotencyLevel
+        fullName: google.protobuf.MethodOptions.IdempotencyLevel
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.protobuf.MethodOptions.IdempotencyLevel:enum'
+        name: google.protobuf.MethodOptions.IdempotencyLevel
+        fullName: google.protobuf.MethodOptions.IdempotencyLevel
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.protobuf.IMethodOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.rpc.IStatus:interface'
+    summary: Properties of a Status.
+    name: google.rpc.IStatus
+    fullName: google.rpc.IStatus
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.rpc.IStatus#code:member'
+      - '@google-cloud/dlp!google.rpc.IStatus#details:member'
+      - '@google-cloud/dlp!google.rpc.IStatus#message:member'
+  - uid: '@google-cloud/dlp!google.rpc.IStatus#code:member'
+    summary: Status code
+    name: code
+    fullName: code
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'code?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.rpc.IStatus#details:member'
+    summary: Status details
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'details?: (google.protobuf.IAny[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.rpc.IStatus#details~0:complex'
+  - uid: '@google-cloud/dlp!google.rpc.IStatus#message:member'
+    summary: Status message
+    name: message
+    fullName: message
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'message?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.rpc.IStatus#details~0:complex'
+    name: '(google.protobuf.IAny[]|null)'
+    fullName: '(google.protobuf.IAny[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IAny:interface'
+        name: google.protobuf.IAny
+        fullName: google.protobuf.IAny
+      - name: '[]|null)'
+        fullName: '[]|null)'

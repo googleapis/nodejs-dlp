@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType:enum'
+    summary: FileType enum.
+    name: google.privacy.dlp.v2.FileType
+    fullName: google.privacy.dlp.v2.FileType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.AVRO:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.BINARY_FILE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.CSV:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.FILE_TYPE_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.IMAGE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.PDF:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.TEXT_FILE:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.TSV:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.FileType.WORD:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.AVRO:member'
+    name: AVRO
+    fullName: AVRO
+    langs:
+      - typeScript
+    type: field
+    numericValue: '7'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.BINARY_FILE:member'
+    name: BINARY_FILE
+    fullName: BINARY_FILE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.CSV:member'
+    name: CSV
+    fullName: CSV
+    langs:
+      - typeScript
+    type: field
+    numericValue: '8'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.FILE_TYPE_UNSPECIFIED:member'
+    name: FILE_TYPE_UNSPECIFIED
+    fullName: FILE_TYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.IMAGE:member'
+    name: IMAGE
+    fullName: IMAGE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.PDF:member'
+    name: PDF
+    fullName: PDF
+    langs:
+      - typeScript
+    type: field
+    numericValue: '6'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.TEXT_FILE:member'
+    name: TEXT_FILE
+    fullName: TEXT_FILE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.TSV:member'
+    name: TSV
+    fullName: TSV
+    langs:
+      - typeScript
+    type: field
+    numericValue: '9'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.FileType.WORD:member'
+    name: WORD
+    fullName: WORD
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'

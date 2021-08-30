@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+    summary: Properties of a ListInfoTypesRequest.
+    name: google.privacy.dlp.v2.IListInfoTypesRequest
+    fullName: google.privacy.dlp.v2.IListInfoTypesRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#filter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#languageCode:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#parent:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#filter:member'
+    summary: ListInfoTypesRequest filter
+    name: filter
+    fullName: filter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'filter?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#languageCode:member'
+    summary: ListInfoTypesRequest languageCode
+    name: languageCode
+    fullName: languageCode
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'languageCode?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#locationId:member'
+    summary: ListInfoTypesRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest#parent:member'
+    summary: ListInfoTypesRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)

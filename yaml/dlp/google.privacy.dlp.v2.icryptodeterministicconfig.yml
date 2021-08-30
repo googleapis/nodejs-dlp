@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig:interface'
+    summary: Properties of a CryptoDeterministicConfig.
+    name: google.privacy.dlp.v2.ICryptoDeterministicConfig
+    fullName: google.privacy.dlp.v2.ICryptoDeterministicConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#context:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#cryptoKey:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#surrogateInfoType:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#context:member'
+    summary: CryptoDeterministicConfig context
+    name: context
+    fullName: context
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'context?: (google.privacy.dlp.v2.IFieldId|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#context~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#cryptoKey:member'
+    summary: CryptoDeterministicConfig cryptoKey
+    name: cryptoKey
+    fullName: cryptoKey
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'cryptoKey?: (google.privacy.dlp.v2.ICryptoKey|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#cryptoKey~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#surrogateInfoType:member'
+    summary: CryptoDeterministicConfig surrogateInfoType
+    name: surrogateInfoType
+    fullName: surrogateInfoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'surrogateInfoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#surrogateInfoType~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#context~0:complex'
+    name: (google.privacy.dlp.v2.IFieldId|null)
+    fullName: (google.privacy.dlp.v2.IFieldId|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFieldId:interface'
+        name: google.privacy.dlp.v2.IFieldId
+        fullName: google.privacy.dlp.v2.IFieldId
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#cryptoKey~0:complex'
+    name: (google.privacy.dlp.v2.ICryptoKey|null)
+    fullName: (google.privacy.dlp.v2.ICryptoKey|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoKey:interface'
+        name: google.privacy.dlp.v2.ICryptoKey
+        fullName: google.privacy.dlp.v2.ICryptoKey
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ICryptoDeterministicConfig#surrogateInfoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem:interface'
+    summary: Properties of a HybridContentItem.
+    name: google.privacy.dlp.v2.IHybridContentItem
+    fullName: google.privacy.dlp.v2.IHybridContentItem
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#findingDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#item:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#findingDetails:member'
+    summary: HybridContentItem findingDetails
+    name: findingDetails
+    fullName: findingDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'findingDetails?: (google.privacy.dlp.v2.IHybridFindingDetails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#findingDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#item:member'
+    summary: HybridContentItem item
+    name: item
+    fullName: item
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'item?: (google.privacy.dlp.v2.IContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#item~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#findingDetails~0:complex'
+    name: (google.privacy.dlp.v2.IHybridFindingDetails|null)
+    fullName: (google.privacy.dlp.v2.IHybridFindingDetails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridFindingDetails:interface'
+        name: google.privacy.dlp.v2.IHybridFindingDetails
+        fullName: google.privacy.dlp.v2.IHybridFindingDetails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridContentItem#item~0:complex'
+    name: (google.privacy.dlp.v2.IContentItem|null)
+    fullName: (google.privacy.dlp.v2.IContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+        name: google.privacy.dlp.v2.IContentItem
+        fullName: google.privacy.dlp.v2.IContentItem
+      - name: '|null)'
+        fullName: '|null)'

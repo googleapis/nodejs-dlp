@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime:interface'
+    summary: Properties of a DateTime.
+    name: google.privacy.dlp.v2.IDateTime
+    fullName: google.privacy.dlp.v2.IDateTime
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#date:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#dayOfWeek:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#time:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#timeZone:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#date:member'
+    summary: DateTime date
+    name: date
+    fullName: date
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'date?: (google.type.IDate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#date~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#dayOfWeek:member'
+    summary: DateTime dayOfWeek
+    name: dayOfWeek
+    fullName: dayOfWeek
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'dayOfWeek?: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#dayOfWeek~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#time:member'
+    summary: DateTime time
+    name: time
+    fullName: time
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'time?: (google.type.ITimeOfDay|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#time~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#timeZone:member'
+    summary: DateTime timeZone
+    name: timeZone
+    fullName: timeZone
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'timeZone?: (google.privacy.dlp.v2.DateTime.ITimeZone|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#timeZone~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#date~0:complex'
+    name: (google.type.IDate|null)
+    fullName: (google.type.IDate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.IDate:interface'
+        name: google.type.IDate
+        fullName: google.type.IDate
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#dayOfWeek~0:complex'
+    name: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null)
+    fullName: (google.type.DayOfWeek|keyof typeof google.type.DayOfWeek|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.type.DayOfWeek:enum'
+        name: google.type.DayOfWeek
+        fullName: google.type.DayOfWeek
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#time~0:complex'
+    name: (google.type.ITimeOfDay|null)
+    fullName: (google.type.ITimeOfDay|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.type.ITimeOfDay:interface'
+        name: google.type.ITimeOfDay
+        fullName: google.type.ITimeOfDay
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDateTime#timeZone~0:complex'
+    name: (google.privacy.dlp.v2.DateTime.ITimeZone|null)
+    fullName: (google.privacy.dlp.v2.DateTime.ITimeZone|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DateTime.ITimeZone:interface'
+        name: google.privacy.dlp.v2.DateTime.ITimeZone
+        fullName: google.privacy.dlp.v2.DateTime.ITimeZone
+      - name: '|null)'
+        fullName: '|null)'

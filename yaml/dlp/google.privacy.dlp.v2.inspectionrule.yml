@@ -1,0 +1,367 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+    summary: Represents an InspectionRule.
+    name: google.privacy.dlp.v2.InspectionRule
+    fullName: google.privacy.dlp.v2.InspectionRule
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#exclusionRule:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#hotwordRule:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:constructor(1)'
+    summary: Constructs a new InspectionRule.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IInspectionRule);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.create:member(1)'
+    summary: Creates a new InspectionRule instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IInspectionRule): google.privacy.dlp.v2.InspectionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+        description: InspectionRule instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decode:member(1)'
+    summary: Decodes an InspectionRule message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.InspectionRule;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+        description: InspectionRule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decodeDelimited:member(1)'
+    summary: 'Decodes an InspectionRule message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.InspectionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+        description: InspectionRule
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode:member(1)'
+    summary: >-
+      Encodes the specified InspectionRule message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IInspectionRule, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InspectionRule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified InspectionRule message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IInspectionRule, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InspectionRule message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#exclusionRule:member'
+    summary: InspectionRule exclusionRule.
+    name: exclusionRule
+    fullName: exclusionRule
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public exclusionRule?: (google.privacy.dlp.v2.IExclusionRule|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#exclusionRule~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.fromObject:member(1)'
+    summary: Creates an InspectionRule message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.InspectionRule;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+        description: InspectionRule
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#hotwordRule:member'
+    summary: InspectionRule hotwordRule.
+    name: hotwordRule
+    fullName: hotwordRule
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public hotwordRule?: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#hotwordRule~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#toJSON:member(1)'
+    summary: Converts this InspectionRule to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.toObject:member(1)'
+    summary: Creates a plain object from an InspectionRule message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.InspectionRule, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: InspectionRule
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#type:member'
+    summary: InspectionRule type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type?: ("hotwordRule"|"exclusionRule");'
+      return:
+        type:
+          - ("hotwordRule"|"exclusionRule")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.verify:member(1)'
+    summary: Verifies an InspectionRule message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectionRule:interface'
+    name: IInspectionRule
+    fullName: google.privacy.dlp.v2.IInspectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule:class'
+    name: InspectionRule
+    fullName: google.privacy.dlp.v2.InspectionRule
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#exclusionRule~0:complex'
+    name: (google.privacy.dlp.v2.IExclusionRule|null)
+    fullName: (google.privacy.dlp.v2.IExclusionRule|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IExclusionRule:interface'
+        name: google.privacy.dlp.v2.IExclusionRule
+        fullName: google.privacy.dlp.v2.IExclusionRule
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule#hotwordRule~0:complex'
+    name: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null)
+    fullName: (google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule:interface'
+        name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+        fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IHotwordRule
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InspectionRule.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

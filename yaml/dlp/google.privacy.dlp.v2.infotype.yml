@@ -1,0 +1,315 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+    summary: Represents an InfoType.
+    name: google.privacy.dlp.v2.InfoType
+    fullName: google.privacy.dlp.v2.InfoType
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:constructor(1)'
+    summary: Constructs a new InfoType.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IInfoType);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.create:member(1)'
+    summary: Creates a new InfoType instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IInfoType): google.privacy.dlp.v2.InfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+        description: InfoType instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decode:member(1)'
+    summary: Decodes an InfoType message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.InfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+        description: InfoType
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decodeDelimited:member(1)'
+    summary: 'Decodes an InfoType message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.InfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+        description: InfoType
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode:member(1)'
+    summary: >-
+      Encodes the specified InfoType message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.InfoType.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IInfoType, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InfoType message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified InfoType message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.InfoType.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IInfoType, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: InfoType message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.fromObject:member(1)'
+    summary: Creates an InfoType message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.InfoType;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+        description: InfoType
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType#name:member'
+    summary: InfoType name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType#toJSON:member(1)'
+    summary: Converts this InfoType to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.toObject:member(1)'
+    summary: Creates a plain object from an InfoType message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.InfoType, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: InfoType
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.verify:member(1)'
+    summary: Verifies an InfoType message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+    name: IInfoType
+    fullName: google.privacy.dlp.v2.IInfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType:class'
+    name: InfoType
+    fullName: google.privacy.dlp.v2.InfoType
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.InfoType.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

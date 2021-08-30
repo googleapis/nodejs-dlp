@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions:interface'
+    summary: Properties of a HybridOptions.
+    name: google.privacy.dlp.v2.IHybridOptions
+    fullName: google.privacy.dlp.v2.IHybridOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#labels:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#requiredFindingLabelKeys:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#tableOptions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#description:member'
+    summary: HybridOptions description
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'description?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#labels:member'
+    summary: HybridOptions labels
+    name: labels
+    fullName: labels
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'labels?: ({ [k: string]: string }|null);'
+      return:
+        type:
+          - '({ [k: string]: string }|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#requiredFindingLabelKeys:member'
+    summary: HybridOptions requiredFindingLabelKeys
+    name: requiredFindingLabelKeys
+    fullName: requiredFindingLabelKeys
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'requiredFindingLabelKeys?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#tableOptions:member'
+    summary: HybridOptions tableOptions
+    name: tableOptions
+    fullName: tableOptions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'tableOptions?: (google.privacy.dlp.v2.ITableOptions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#tableOptions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IHybridOptions#tableOptions~0:complex'
+    name: (google.privacy.dlp.v2.ITableOptions|null)
+    fullName: (google.privacy.dlp.v2.ITableOptions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITableOptions:interface'
+        name: google.privacy.dlp.v2.ITableOptions
+        fullName: google.privacy.dlp.v2.ITableOptions
+      - name: '|null)'
+        fullName: '|null)'

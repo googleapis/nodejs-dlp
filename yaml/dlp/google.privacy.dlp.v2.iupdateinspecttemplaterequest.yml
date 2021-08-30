@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest:interface'
+    summary: Properties of an UpdateInspectTemplateRequest.
+    name: google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+    fullName: google.privacy.dlp.v2.IUpdateInspectTemplateRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#inspectTemplate:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#updateMask:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#inspectTemplate:member'
+    summary: UpdateInspectTemplateRequest inspectTemplate
+    name: inspectTemplate
+    fullName: inspectTemplate
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectTemplate?: (google.privacy.dlp.v2.IInspectTemplate|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#inspectTemplate~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#name:member'
+    summary: UpdateInspectTemplateRequest name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#updateMask:member'
+    summary: UpdateInspectTemplateRequest updateMask
+    name: updateMask
+    fullName: updateMask
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'updateMask?: (google.protobuf.IFieldMask|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#updateMask~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#inspectTemplate~0:complex'
+    name: (google.privacy.dlp.v2.IInspectTemplate|null)
+    fullName: (google.privacy.dlp.v2.IInspectTemplate|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectTemplate:interface'
+        name: google.privacy.dlp.v2.IInspectTemplate
+        fullName: google.privacy.dlp.v2.IInspectTemplate
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IUpdateInspectTemplateRequest#updateMask~0:complex'
+    name: (google.protobuf.IFieldMask|null)
+    fullName: (google.protobuf.IFieldMask|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IFieldMask:interface'
+        name: google.protobuf.IFieldMask
+        fullName: google.protobuf.IFieldMask
+      - name: '|null)'
+        fullName: '|null)'

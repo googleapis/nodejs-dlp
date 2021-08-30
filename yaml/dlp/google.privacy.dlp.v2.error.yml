@@ -1,0 +1,348 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+    summary: Represents an Error.
+    name: google.privacy.dlp.v2.Error
+    fullName: google.privacy.dlp.v2.Error
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error#details:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error#timestamps:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.Error.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:constructor(1)'
+    summary: Constructs a new Error.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IError);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.create:member(1)'
+    summary: Creates a new Error instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IError): google.privacy.dlp.v2.Error;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        description: Error instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.decode:member(1)'
+    summary: Decodes an Error message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.Error;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        description: Error
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.decodeDelimited:member(1)'
+    summary: 'Decodes an Error message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.Error;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        description: Error
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error#details:member'
+    summary: Error details.
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public details?: (google.rpc.IStatus|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error#details~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode:member(1)'
+    summary: >-
+      Encodes the specified Error message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Error.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IError, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Error message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Error message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.Error.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IError, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Error message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.fromObject:member(1)'
+    summary: Creates an Error message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.Error;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        description: Error
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error#timestamps:member'
+    summary: Error timestamps.
+    name: timestamps
+    fullName: timestamps
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public timestamps: google.protobuf.ITimestamp[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.Error#timestamps~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error#toJSON:member(1)'
+    summary: Converts this Error to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.toObject:member(1)'
+    summary: Creates a plain object from an Error message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.Error, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Error
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.Error.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.verify:member(1)'
+    summary: Verifies an Error message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+    name: IError
+    fullName: google.privacy.dlp.v2.IError
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error:class'
+    name: Error
+    fullName: google.privacy.dlp.v2.Error
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error#details~0:complex'
+    name: (google.rpc.IStatus|null)
+    fullName: (google.rpc.IStatus|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.rpc.IStatus:interface'
+        name: google.rpc.IStatus
+        fullName: google.rpc.IStatus
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error#timestamps~0:complex'
+    name: 'google.protobuf.ITimestamp[]'
+    fullName: 'google.protobuf.ITimestamp[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Error.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

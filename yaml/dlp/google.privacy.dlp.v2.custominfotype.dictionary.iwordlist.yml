@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList:interface'
+    summary: Properties of a WordList.
+    name: google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList
+    fullName: google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList#words:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.Dictionary.IWordList#words:member'
+    summary: WordList words
+    name: words
+    fullName: words
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'words?: (string[]|null);'
+      return:
+        type:
+          - '(string[]|null)'

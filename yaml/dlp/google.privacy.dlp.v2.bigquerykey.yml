@@ -1,0 +1,350 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+    summary: Represents a BigQueryKey.
+    name: google.privacy.dlp.v2.BigQueryKey
+    fullName: google.privacy.dlp.v2.BigQueryKey
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#rowNumber:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#tableReference:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:constructor(1)'
+    summary: Constructs a new BigQueryKey.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IBigQueryKey);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.create:member(1)'
+    summary: Creates a new BigQueryKey instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IBigQueryKey): google.privacy.dlp.v2.BigQueryKey;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+        description: BigQueryKey instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decode:member(1)'
+    summary: Decodes a BigQueryKey message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.BigQueryKey;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+        description: BigQueryKey
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decodeDelimited:member(1)'
+    summary: 'Decodes a BigQueryKey message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.BigQueryKey;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+        description: BigQueryKey
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode:member(1)'
+    summary: >-
+      Encodes the specified BigQueryKey message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IBigQueryKey, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: BigQueryKey message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified BigQueryKey message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IBigQueryKey, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: BigQueryKey message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.fromObject:member(1)'
+    summary: Creates a BigQueryKey message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.BigQueryKey;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+        description: BigQueryKey
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#rowNumber:member'
+    summary: BigQueryKey rowNumber.
+    name: rowNumber
+    fullName: rowNumber
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public rowNumber: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#rowNumber~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#tableReference:member'
+    summary: BigQueryKey tableReference.
+    name: tableReference
+    fullName: tableReference
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public tableReference?: (google.privacy.dlp.v2.IBigQueryTable|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#tableReference~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#toJSON:member(1)'
+    summary: Converts this BigQueryKey to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.toObject:member(1)'
+    summary: Creates a plain object from a BigQueryKey message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.BigQueryKey, options?: $protobuf.IConversionOptions): {
+        [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: BigQueryKey
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.verify:member(1)'
+    summary: Verifies a BigQueryKey message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryKey:interface'
+    name: IBigQueryKey
+    fullName: google.privacy.dlp.v2.IBigQueryKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey:class'
+    name: BigQueryKey
+    fullName: google.privacy.dlp.v2.BigQueryKey
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#rowNumber~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey#tableReference~0:complex'
+    name: (google.privacy.dlp.v2.IBigQueryTable|null)
+    fullName: (google.privacy.dlp.v2.IBigQueryTable|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IBigQueryTable:interface'
+        name: google.privacy.dlp.v2.IBigQueryTable
+        fullName: google.privacy.dlp.v2.IBigQueryTable
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.BigQueryKey.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

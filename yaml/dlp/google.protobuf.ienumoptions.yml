@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions:interface'
+    summary: Properties of an EnumOptions.
+    name: google.protobuf.IEnumOptions
+    fullName: google.protobuf.IEnumOptions
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.IEnumOptions#allowAlias:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumOptions#deprecated:member'
+      - '@google-cloud/dlp!google.protobuf.IEnumOptions#uninterpretedOption:member'
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions#allowAlias:member'
+    summary: EnumOptions allowAlias
+    name: allowAlias
+    fullName: allowAlias
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'allowAlias?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions#deprecated:member'
+    summary: EnumOptions deprecated
+    name: deprecated
+    fullName: deprecated
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'deprecated?: (boolean|null);'
+      return:
+        type:
+          - (boolean|null)
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions#uninterpretedOption:member'
+    summary: EnumOptions uninterpretedOption
+    name: uninterpretedOption
+    fullName: uninterpretedOption
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.protobuf.IEnumOptions#uninterpretedOption~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.protobuf.IEnumOptions#uninterpretedOption~0:complex'
+    name: '(google.protobuf.IUninterpretedOption[]|null)'
+    fullName: '(google.protobuf.IUninterpretedOption[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.IUninterpretedOption:interface'
+        name: google.protobuf.IUninterpretedOption
+        fullName: google.protobuf.IUninterpretedOption
+      - name: '[]|null)'
+        fullName: '[]|null)'

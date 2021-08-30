@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity:interface'
+    summary: Properties of a Proximity.
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity
+    fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity#windowAfter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity#windowBefore:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity#windowAfter:member'
+    summary: Proximity windowAfter
+    name: windowAfter
+    fullName: windowAfter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'windowAfter?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.IProximity#windowBefore:member'
+    summary: Proximity windowBefore
+    name: windowBefore
+    fullName: windowBefore
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'windowBefore?: (number|null);'
+      return:
+        type:
+          - (number|null)

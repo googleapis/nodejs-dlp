@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode:enum'
+    summary: OptimizeMode enum.
+    name: google.protobuf.FileOptions.OptimizeMode
+    fullName: google.protobuf.FileOptions.OptimizeMode
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.CODE_SIZE:member'
+      - '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.LITE_RUNTIME:member'
+      - '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.SPEED:member'
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.CODE_SIZE:member'
+    name: CODE_SIZE
+    fullName: CODE_SIZE
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.LITE_RUNTIME:member'
+    name: LITE_RUNTIME
+    fullName: LITE_RUNTIME
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.protobuf.FileOptions.OptimizeMode.SPEED:member'
+    name: SPEED
+    fullName: SPEED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema:enum'
+    summary: OutputSchema enum.
+    name: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+    fullName: google.privacy.dlp.v2.OutputStorageConfig.OutputSchema
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.ALL_COLUMNS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.BASIC_COLUMNS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.BIG_QUERY_COLUMNS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.DATASTORE_COLUMNS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.GCS_COLUMNS:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.OUTPUT_SCHEMA_UNSPECIFIED:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.ALL_COLUMNS:member'
+    name: ALL_COLUMNS
+    fullName: ALL_COLUMNS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '5'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.BASIC_COLUMNS:member'
+    name: BASIC_COLUMNS
+    fullName: BASIC_COLUMNS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '1'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.BIG_QUERY_COLUMNS:member'
+    name: BIG_QUERY_COLUMNS
+    fullName: BIG_QUERY_COLUMNS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '4'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.DATASTORE_COLUMNS:member'
+    name: DATASTORE_COLUMNS
+    fullName: DATASTORE_COLUMNS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '3'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.GCS_COLUMNS:member'
+    name: GCS_COLUMNS
+    fullName: GCS_COLUMNS
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.OutputStorageConfig.OutputSchema.OUTPUT_SCHEMA_UNSPECIFIED:member'
+    name: OUTPUT_SCHEMA_UNSPECIFIED
+    fullName: OUTPUT_SCHEMA_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'

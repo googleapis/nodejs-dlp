@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+    summary: Represents a TransformationOverview.
+    name: google.privacy.dlp.v2.TransformationOverview
+    fullName: google.privacy.dlp.v2.TransformationOverview
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformationSummaries:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformedBytes:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:constructor(1)'
+    summary: Constructs a new TransformationOverview.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.ITransformationOverview);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.create:member(1)'
+    summary: Creates a new TransformationOverview instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.ITransformationOverview):
+        google.privacy.dlp.v2.TransformationOverview;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+        description: TransformationOverview instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decode:member(1)'
+    summary: Decodes a TransformationOverview message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.TransformationOverview;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+        description: TransformationOverview
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decodeDelimited:member(1)'
+    summary: 'Decodes a TransformationOverview message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.TransformationOverview;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+        description: TransformationOverview
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode:member(1)'
+    summary: >-
+      Encodes the specified TransformationOverview message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.ITransformationOverview, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: TransformationOverview message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified TransformationOverview message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.ITransformationOverview, writer?:
+        $protobuf.Writer): $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: TransformationOverview message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.fromObject:member(1)'
+    summary: >-
+      Creates a TransformationOverview message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.TransformationOverview;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+        description: TransformationOverview
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#toJSON:member(1)'
+    summary: Converts this TransformationOverview to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.toObject:member(1)'
+    summary: Creates a plain object from a TransformationOverview message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.TransformationOverview, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: TransformationOverview
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformationSummaries:member'
+    summary: TransformationOverview transformationSummaries.
+    name: transformationSummaries
+    fullName: transformationSummaries
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public transformationSummaries: google.privacy.dlp.v2.ITransformationSummary[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformationSummaries~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformedBytes:member'
+    summary: TransformationOverview transformedBytes.
+    name: transformedBytes
+    fullName: transformedBytes
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public transformedBytes: (number|Long|string);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformedBytes~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.verify:member(1)'
+    summary: Verifies a TransformationOverview message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationOverview:interface'
+    name: ITransformationOverview
+    fullName: google.privacy.dlp.v2.ITransformationOverview
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview:class'
+    name: TransformationOverview
+    fullName: google.privacy.dlp.v2.TransformationOverview
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformationSummaries~0:complex'
+    name: 'google.privacy.dlp.v2.ITransformationSummary[]'
+    fullName: 'google.privacy.dlp.v2.ITransformationSummary[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ITransformationSummary:interface'
+        name: google.privacy.dlp.v2.ITransformationSummary
+        fullName: google.privacy.dlp.v2.ITransformationSummary
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationOverview#transformedBytes~0:complex'
+    name: (number|Long|string)
+    fullName: (number|Long|string)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string)'
+        fullName: '|string)'

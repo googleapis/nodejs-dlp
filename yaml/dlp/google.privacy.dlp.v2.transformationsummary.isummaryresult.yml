@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult:interface'
+    summary: Properties of a SummaryResult.
+    name: google.privacy.dlp.v2.TransformationSummary.ISummaryResult
+    fullName: google.privacy.dlp.v2.TransformationSummary.ISummaryResult
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#code:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#count:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#details:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#code:member'
+    summary: SummaryResult code
+    name: code
+    fullName: code
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: >-
+        code?: (google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|keyof typeof
+        google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|null);
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#code~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#count:member'
+    summary: SummaryResult count
+    name: count
+    fullName: count
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'count?: (number|Long|string|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#count~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#details:member'
+    summary: SummaryResult details
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'details?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#code~0:complex'
+    name: >-
+      (google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|keyof typeof
+      google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|null)
+    fullName: >-
+      (google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|keyof typeof
+      google.privacy.dlp.v2.TransformationSummary.TransformationResultCode|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode:enum'
+        name: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+        fullName: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.TransformationResultCode:enum'
+        name: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+        fullName: google.privacy.dlp.v2.TransformationSummary.TransformationResultCode
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.TransformationSummary.ISummaryResult#count~0:complex'
+    name: (number|Long|string|null)
+    fullName: (number|Long|string|null)
+    spec.typeScript:
+      - name: (number|
+        fullName: (number|
+      - uid: '@types/long!~Long:type'
+        name: Long
+        fullName: Long
+      - name: '|string|null)'
+        fullName: '|string|null)'

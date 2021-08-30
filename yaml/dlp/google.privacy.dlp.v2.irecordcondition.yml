@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition:interface'
+    summary: Properties of a RecordCondition.
+    name: google.privacy.dlp.v2.IRecordCondition
+    fullName: google.privacy.dlp.v2.IRecordCondition
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition#expressions:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition#expressions:member'
+    summary: RecordCondition expressions
+    name: expressions
+    fullName: expressions
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'expressions?: (google.privacy.dlp.v2.RecordCondition.IExpressions|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition#expressions~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IRecordCondition#expressions~0:complex'
+    name: (google.privacy.dlp.v2.RecordCondition.IExpressions|null)
+    fullName: (google.privacy.dlp.v2.RecordCondition.IExpressions|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.RecordCondition.IExpressions:interface'
+        name: google.privacy.dlp.v2.RecordCondition.IExpressions
+        fullName: google.privacy.dlp.v2.RecordCondition.IExpressions
+      - name: '|null)'
+        fullName: '|null)'

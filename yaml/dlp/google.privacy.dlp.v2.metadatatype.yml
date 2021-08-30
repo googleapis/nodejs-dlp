@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType:enum'
+    summary: MetadataType enum.
+    name: google.privacy.dlp.v2.MetadataType
+    fullName: google.privacy.dlp.v2.MetadataType
+    langs:
+      - typeScript
+    type: enum
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType.METADATATYPE_UNSPECIFIED:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType.STORAGE_METADATA:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType.METADATATYPE_UNSPECIFIED:member'
+    name: METADATATYPE_UNSPECIFIED
+    fullName: METADATATYPE_UNSPECIFIED
+    langs:
+      - typeScript
+    type: field
+    numericValue: '0'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.MetadataType.STORAGE_METADATA:member'
+    name: STORAGE_METADATA
+    fullName: STORAGE_METADATA
+    langs:
+      - typeScript
+    type: field
+    numericValue: '2'

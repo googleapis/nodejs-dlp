@@ -1,0 +1,239 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding:interface'
+    summary: Properties of a Finding.
+    name: google.privacy.dlp.v2.IFinding
+    fullName: google.privacy.dlp.v2.IFinding
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#infoType:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobCreateTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#labels:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#likelihood:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#location:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quote:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quoteInfo:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#resourceName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#triggerName:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#createTime:member'
+    summary: Finding createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#infoType:member'
+    summary: Finding infoType
+    name: infoType
+    fullName: infoType
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'infoType?: (google.privacy.dlp.v2.IInfoType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#infoType~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobCreateTime:member'
+    summary: Finding jobCreateTime
+    name: jobCreateTime
+    fullName: jobCreateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobCreateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobCreateTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobName:member'
+    summary: Finding jobName
+    name: jobName
+    fullName: jobName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#labels:member'
+    summary: Finding labels
+    name: labels
+    fullName: labels
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'labels?: ({ [k: string]: string }|null);'
+      return:
+        type:
+          - '({ [k: string]: string }|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#likelihood:member'
+    summary: Finding likelihood
+    name: likelihood
+    fullName: likelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'likelihood?: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#likelihood~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#location:member'
+    summary: Finding location
+    name: location
+    fullName: location
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'location?: (google.privacy.dlp.v2.ILocation|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#location~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#name:member'
+    summary: Finding name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quote:member'
+    summary: Finding quote
+    name: quote
+    fullName: quote
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quote?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quoteInfo:member'
+    summary: Finding quoteInfo
+    name: quoteInfo
+    fullName: quoteInfo
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'quoteInfo?: (google.privacy.dlp.v2.IQuoteInfo|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quoteInfo~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#resourceName:member'
+    summary: Finding resourceName
+    name: resourceName
+    fullName: resourceName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'resourceName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#triggerName:member'
+    summary: Finding triggerName
+    name: triggerName
+    fullName: triggerName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'triggerName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#infoType~0:complex'
+    name: (google.privacy.dlp.v2.IInfoType|null)
+    fullName: (google.privacy.dlp.v2.IInfoType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInfoType:interface'
+        name: google.privacy.dlp.v2.IInfoType
+        fullName: google.privacy.dlp.v2.IInfoType
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#jobCreateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#likelihood~0:complex'
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#location~0:complex'
+    name: (google.privacy.dlp.v2.ILocation|null)
+    fullName: (google.privacy.dlp.v2.ILocation|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ILocation:interface'
+        name: google.privacy.dlp.v2.ILocation
+        fullName: google.privacy.dlp.v2.ILocation
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFinding#quoteInfo~0:complex'
+    name: (google.privacy.dlp.v2.IQuoteInfo|null)
+    fullName: (google.privacy.dlp.v2.IQuoteInfo|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IQuoteInfo:interface'
+        name: google.privacy.dlp.v2.IQuoteInfo
+        fullName: google.privacy.dlp.v2.IQuoteInfo
+      - name: '|null)'
+        fullName: '|null)'

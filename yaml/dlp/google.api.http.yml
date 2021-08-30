@@ -1,0 +1,333 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.api.Http:class'
+    summary: Represents a Http.
+    name: google.api.Http
+    fullName: google.api.Http
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.api.IHttp:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.api.Http:constructor(1)'
+      - '@google-cloud/dlp!google.api.Http.create:member(1)'
+      - '@google-cloud/dlp!google.api.Http.decode:member(1)'
+      - '@google-cloud/dlp!google.api.Http.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.Http.encode:member(1)'
+      - '@google-cloud/dlp!google.api.Http.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.api.Http.fromObject:member(1)'
+      - '@google-cloud/dlp!google.api.Http#fullyDecodeReservedExpansion:member'
+      - '@google-cloud/dlp!google.api.Http#rules:member'
+      - '@google-cloud/dlp!google.api.Http#toJSON:member(1)'
+      - '@google-cloud/dlp!google.api.Http.toObject:member(1)'
+      - '@google-cloud/dlp!google.api.Http.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.api.Http:constructor(1)'
+    summary: Constructs a new Http.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.api.IHttp);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.IHttp:interface'
+  - uid: '@google-cloud/dlp!google.api.Http.create:member(1)'
+    summary: Creates a new Http instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.api.IHttp): google.api.Http;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http:class'
+        description: Http instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.api.IHttp:interface'
+  - uid: '@google-cloud/dlp!google.api.Http.decode:member(1)'
+    summary: Decodes a Http message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.Http;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http:class'
+        description: Http
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.Http.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.api.Http.decodeDelimited:member(1)'
+    summary: 'Decodes a Http message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.Http;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http:class'
+        description: Http
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.api.Http.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.api.Http.encode:member(1)'
+    summary: >-
+      Encodes the specified Http message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.api.Http.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Http message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.IHttp:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.Http.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.api.Http.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified Http message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.api.Http.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encodeDelimited(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: Http message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.api.IHttp:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.api.Http.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.api.Http.fromObject:member(1)'
+    summary: Creates a Http message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.api.Http;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http:class'
+        description: Http
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.api.Http#fullyDecodeReservedExpansion:member'
+    summary: Http fullyDecodeReservedExpansion.
+    name: fullyDecodeReservedExpansion
+    fullName: fullyDecodeReservedExpansion
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public fullyDecodeReservedExpansion: boolean;'
+      return:
+        type:
+          - boolean
+  - uid: '@google-cloud/dlp!google.api.Http#rules:member'
+    summary: Http rules.
+    name: rules
+    fullName: rules
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public rules: google.api.IHttpRule[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.api.Http#rules~0:complex'
+  - uid: '@google-cloud/dlp!google.api.Http#toJSON:member(1)'
+    summary: Converts this Http to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.api.Http.toObject:member(1)'
+    summary: Creates a plain object from a Http message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static toObject(message: google.api.Http, options?: $protobuf.IConversionOptions): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: Http
+          type:
+            - '@google-cloud/dlp!google.api.Http:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.api.Http.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.api.Http.verify:member(1)'
+    summary: Verifies a Http message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.api.IHttp:interface'
+    name: IHttp
+    fullName: google.api.IHttp
+  - uid: '@google-cloud/dlp!google.api.Http:class'
+    name: Http
+    fullName: google.api.Http
+  - uid: '@google-cloud/dlp!google.api.Http.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.Http.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.api.Http.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.Http.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.Http.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.Http.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.api.Http#rules~0:complex'
+    name: 'google.api.IHttpRule[]'
+    fullName: 'google.api.IHttpRule[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.api.IHttpRule:interface'
+        name: google.api.IHttpRule
+        fullName: google.api.IHttpRule
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.api.Http.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

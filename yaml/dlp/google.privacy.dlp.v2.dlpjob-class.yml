@@ -1,0 +1,537 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+    summary: Represents a DlpJob.
+    name: google.privacy.dlp.v2.DlpJob
+    fullName: google.privacy.dlp.v2.DlpJob
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#details:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#endTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#errors:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#inspectDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#jobTriggerName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#riskDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#startTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#state:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#type:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:constructor(1)'
+    summary: Constructs a new DlpJob.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IDlpJob);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.create:member(1)'
+    summary: Creates a new DlpJob instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static create(properties?: google.privacy.dlp.v2.IDlpJob): google.privacy.dlp.v2.DlpJob;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        description: DlpJob instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#createTime:member'
+    summary: DlpJob createTime.
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decode:member(1)'
+    summary: Decodes a DlpJob message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.privacy.dlp.v2.DlpJob;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        description: DlpJob
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decodeDelimited:member(1)'
+    summary: 'Decodes a DlpJob message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.DlpJob;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        description: DlpJob
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#details:member'
+    summary: DlpJob details.
+    name: details
+    fullName: details
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public details?: ("riskDetails"|"inspectDetails");'
+      return:
+        type:
+          - ("riskDetails"|"inspectDetails")
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode:member(1)'
+    summary: Encodes the specified DlpJob message. Does not implicitly  messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static encode(message: google.privacy.dlp.v2.IDlpJob, writer?: $protobuf.Writer): $protobuf.Writer;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DlpJob message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited:member(1)'
+    summary: 'Encodes the specified DlpJob message, length delimited. Does not implicitly  messages.'
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IDlpJob, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DlpJob message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#endTime:member'
+    summary: DlpJob endTime.
+    name: endTime
+    fullName: endTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public endTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#endTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#errors:member'
+    summary: DlpJob errors.
+    name: errors
+    fullName: errors
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public errors: google.privacy.dlp.v2.IError[];'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#errors~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.fromObject:member(1)'
+    summary: Creates a DlpJob message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.DlpJob;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        description: DlpJob
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#inspectDetails:member'
+    summary: DlpJob inspectDetails.
+    name: inspectDetails
+    fullName: inspectDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public inspectDetails?: (google.privacy.dlp.v2.IInspectDataSourceDetails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#inspectDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#jobTriggerName:member'
+    summary: DlpJob jobTriggerName.
+    name: jobTriggerName
+    fullName: jobTriggerName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public jobTriggerName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#name:member'
+    summary: DlpJob name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#riskDetails:member'
+    summary: DlpJob riskDetails.
+    name: riskDetails
+    fullName: riskDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public riskDetails?: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#riskDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#startTime:member'
+    summary: DlpJob startTime.
+    name: startTime
+    fullName: startTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public startTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#startTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#state:member'
+    summary: DlpJob state.
+    name: state
+    fullName: state
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public state: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#state~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#toJSON:member(1)'
+    summary: Converts this DlpJob to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.toObject:member(1)'
+    summary: Creates a plain object from a DlpJob message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.DlpJob, options?: $protobuf.IConversionOptions): { [k:
+        string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: DlpJob
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#type:member'
+    summary: DlpJob type.
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public type: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#type~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.verify:member(1)'
+    summary: Verifies a DlpJob message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+    name: IDlpJob
+    fullName: google.privacy.dlp.v2.IDlpJob
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob:class'
+    name: DlpJob
+    fullName: google.privacy.dlp.v2.DlpJob
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#endTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#errors~0:complex'
+    name: 'google.privacy.dlp.v2.IError[]'
+    fullName: 'google.privacy.dlp.v2.IError[]'
+    spec.typeScript:
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        name: google.privacy.dlp.v2.IError
+        fullName: google.privacy.dlp.v2.IError
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#inspectDetails~0:complex'
+    name: (google.privacy.dlp.v2.IInspectDataSourceDetails|null)
+    fullName: (google.privacy.dlp.v2.IInspectDataSourceDetails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails:interface'
+        name: google.privacy.dlp.v2.IInspectDataSourceDetails
+        fullName: google.privacy.dlp.v2.IInspectDataSourceDetails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#riskDetails~0:complex'
+    name: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null)
+    fullName: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+        name: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+        fullName: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#startTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#state~0:complex'
+    name: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState)
+    fullName: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+        name: google.privacy.dlp.v2.DlpJob.JobState
+        fullName: google.privacy.dlp.v2.DlpJob.JobState
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+        name: google.privacy.dlp.v2.DlpJob.JobState
+        fullName: google.privacy.dlp.v2.DlpJob.JobState
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob#type~0:complex'
+    name: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType)
+    fullName: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: )
+        fullName: )

@@ -1,0 +1,419 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+    summary: Represents a DeidentifyTemplate.
+    name: google.privacy.dlp.v2.DeidentifyTemplate
+    fullName: google.privacy.dlp.v2.DeidentifyTemplate
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#deidentifyConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#displayName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#updateTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:constructor(1)'
+    summary: Constructs a new DeidentifyTemplate.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IDeidentifyTemplate);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.create:member(1)'
+    summary: Creates a new DeidentifyTemplate instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IDeidentifyTemplate):
+        google.privacy.dlp.v2.DeidentifyTemplate;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        description: DeidentifyTemplate instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#createTime:member'
+    summary: DeidentifyTemplate createTime.
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decode:member(1)'
+    summary: Decodes a DeidentifyTemplate message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.DeidentifyTemplate;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        description: DeidentifyTemplate
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decodeDelimited:member(1)'
+    summary: 'Decodes a DeidentifyTemplate message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.privacy.dlp.v2.DeidentifyTemplate;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        description: DeidentifyTemplate
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#deidentifyConfig:member'
+    summary: DeidentifyTemplate deidentifyConfig.
+    name: deidentifyConfig
+    fullName: deidentifyConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public deidentifyConfig?: (google.privacy.dlp.v2.IDeidentifyConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#deidentifyConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#description:member'
+    summary: DeidentifyTemplate description.
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public description: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#displayName:member'
+    summary: DeidentifyTemplate displayName.
+    name: displayName
+    fullName: displayName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public displayName: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode:member(1)'
+    summary: >-
+      Encodes the specified DeidentifyTemplate message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IDeidentifyTemplate, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DeidentifyTemplate message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified DeidentifyTemplate message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IDeidentifyTemplate, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: DeidentifyTemplate message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.fromObject:member(1)'
+    summary: Creates a DeidentifyTemplate message from a plain object. Also converts values to their respective internal types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.DeidentifyTemplate;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        description: DeidentifyTemplate
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#name:member'
+    summary: DeidentifyTemplate name.
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public name: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#toJSON:member(1)'
+    summary: Converts this DeidentifyTemplate to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.toObject:member(1)'
+    summary: Creates a plain object from a DeidentifyTemplate message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.DeidentifyTemplate, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: DeidentifyTemplate
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#updateTime:member'
+    summary: DeidentifyTemplate updateTime.
+    name: updateTime
+    fullName: updateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public updateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#updateTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.verify:member(1)'
+    summary: Verifies a DeidentifyTemplate message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyTemplate:interface'
+    name: IDeidentifyTemplate
+    fullName: google.privacy.dlp.v2.IDeidentifyTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate:class'
+    name: DeidentifyTemplate
+    fullName: google.privacy.dlp.v2.DeidentifyTemplate
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#deidentifyConfig~0:complex'
+    name: (google.privacy.dlp.v2.IDeidentifyConfig|null)
+    fullName: (google.privacy.dlp.v2.IDeidentifyConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDeidentifyConfig:interface'
+        name: google.privacy.dlp.v2.IDeidentifyConfig
+        fullName: google.privacy.dlp.v2.IDeidentifyConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DeidentifyTemplate#updateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'

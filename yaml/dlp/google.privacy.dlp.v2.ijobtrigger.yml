@@ -1,0 +1,224 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger:interface'
+    summary: Properties of a JobTrigger.
+    name: google.privacy.dlp.v2.IJobTrigger
+    fullName: google.privacy.dlp.v2.IJobTrigger
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#description:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#displayName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#errors:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#inspectJob:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#lastRunTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#status:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#triggers:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#updateTime:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#createTime:member'
+    summary: JobTrigger createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#description:member'
+    summary: JobTrigger description
+    name: description
+    fullName: description
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'description?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#displayName:member'
+    summary: JobTrigger displayName
+    name: displayName
+    fullName: displayName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'displayName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#errors:member'
+    summary: JobTrigger errors
+    name: errors
+    fullName: errors
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'errors?: (google.privacy.dlp.v2.IError[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#errors~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#inspectJob:member'
+    summary: JobTrigger inspectJob
+    name: inspectJob
+    fullName: inspectJob
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectJob?: (google.privacy.dlp.v2.IInspectJobConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#inspectJob~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#lastRunTime:member'
+    summary: JobTrigger lastRunTime
+    name: lastRunTime
+    fullName: lastRunTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lastRunTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#lastRunTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#name:member'
+    summary: JobTrigger name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#status:member'
+    summary: JobTrigger status
+    name: status
+    fullName: status
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'status?: (google.privacy.dlp.v2.JobTrigger.Status|keyof typeof google.privacy.dlp.v2.JobTrigger.Status|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#status~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#triggers:member'
+    summary: JobTrigger triggers
+    name: triggers
+    fullName: triggers
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'triggers?: (google.privacy.dlp.v2.JobTrigger.ITrigger[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#triggers~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#updateTime:member'
+    summary: JobTrigger updateTime
+    name: updateTime
+    fullName: updateTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'updateTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#updateTime~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#errors~0:complex'
+    name: '(google.privacy.dlp.v2.IError[]|null)'
+    fullName: '(google.privacy.dlp.v2.IError[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        name: google.privacy.dlp.v2.IError
+        fullName: google.privacy.dlp.v2.IError
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#inspectJob~0:complex'
+    name: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectJobConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectJobConfig:interface'
+        name: google.privacy.dlp.v2.IInspectJobConfig
+        fullName: google.privacy.dlp.v2.IInspectJobConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#lastRunTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#status~0:complex'
+    name: (google.privacy.dlp.v2.JobTrigger.Status|keyof typeof google.privacy.dlp.v2.JobTrigger.Status|null)
+    fullName: (google.privacy.dlp.v2.JobTrigger.Status|keyof typeof google.privacy.dlp.v2.JobTrigger.Status|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status:enum'
+        name: google.privacy.dlp.v2.JobTrigger.Status
+        fullName: google.privacy.dlp.v2.JobTrigger.Status
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.Status:enum'
+        name: google.privacy.dlp.v2.JobTrigger.Status
+        fullName: google.privacy.dlp.v2.JobTrigger.Status
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#triggers~0:complex'
+    name: '(google.privacy.dlp.v2.JobTrigger.ITrigger[]|null)'
+    fullName: '(google.privacy.dlp.v2.JobTrigger.ITrigger[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.JobTrigger.ITrigger:interface'
+        name: google.privacy.dlp.v2.JobTrigger.ITrigger
+        fullName: google.privacy.dlp.v2.JobTrigger.ITrigger
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IJobTrigger#updateTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment:interface'
+    summary: Properties of a LikelihoodAdjustment.
+    name: google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment
+    fullName: google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#fixedLikelihood:member
+      - >-
+        @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#relativeLikelihood:member
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#fixedLikelihood:member'
+    summary: LikelihoodAdjustment fixedLikelihood
+    name: fixedLikelihood
+    fullName: fixedLikelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'fixedLikelihood?: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null);'
+      return:
+        type:
+          - >-
+            @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#fixedLikelihood~0:complex
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#relativeLikelihood:member
+    summary: LikelihoodAdjustment relativeLikelihood
+    name: relativeLikelihood
+    fullName: relativeLikelihood
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'relativeLikelihood?: (number|null);'
+      return:
+        type:
+          - (number|null)
+references:
+  - uid: >-
+      @google-cloud/dlp!google.privacy.dlp.v2.CustomInfoType.DetectionRule.ILikelihoodAdjustment#fixedLikelihood~0:complex
+    name: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    fullName: (google.privacy.dlp.v2.Likelihood|keyof typeof google.privacy.dlp.v2.Likelihood|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.Likelihood:enum'
+        name: google.privacy.dlp.v2.Likelihood
+        fullName: google.privacy.dlp.v2.Likelihood
+      - name: '|null)'
+        fullName: '|null)'

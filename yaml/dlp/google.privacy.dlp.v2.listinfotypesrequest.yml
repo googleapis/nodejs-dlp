@@ -1,0 +1,364 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+    summary: Represents a ListInfoTypesRequest.
+    name: google.privacy.dlp.v2.ListInfoTypesRequest
+    fullName: google.privacy.dlp.v2.ListInfoTypesRequest
+    langs:
+      - typeScript
+    type: class
+    implements:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:constructor(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.create:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#filter:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.fromObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#languageCode:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#parent:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#toJSON:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.toObject:member(1)'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.verify:member(1)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:constructor(1)'
+    summary: Constructs a new ListInfoTypesRequest.
+    name: (constructor)(properties)
+    fullName: (constructor)(properties)
+    langs:
+      - typeScript
+    type: constructor
+    syntax:
+      content: 'constructor(properties?: google.privacy.dlp.v2.IListInfoTypesRequest);'
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.create:member(1)'
+    summary: Creates a new ListInfoTypesRequest instance using the specified properties.
+    name: create(properties)
+    fullName: create(properties)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static create(properties?: google.privacy.dlp.v2.IListInfoTypesRequest):
+        google.privacy.dlp.v2.ListInfoTypesRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+        description: ListInfoTypesRequest instance
+      parameters:
+        - id: properties
+          description: Properties to set
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decode:member(1)'
+    summary: Decodes a ListInfoTypesRequest message from the specified reader or buffer.
+    name: 'decode(reader, length)'
+    fullName: 'decode(reader, length)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number):
+        google.privacy.dlp.v2.ListInfoTypesRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+        description: ListInfoTypesRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decode~0:complex'
+        - id: length
+          description: Message length if known beforehand
+          type:
+            - number
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decodeDelimited:member(1)'
+    summary: 'Decodes a ListInfoTypesRequest message from the specified reader or buffer, length delimited.'
+    name: decodeDelimited(reader)
+    fullName: decodeDelimited(reader)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)):
+        google.privacy.dlp.v2.ListInfoTypesRequest;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+        description: ListInfoTypesRequest
+      parameters:
+        - id: reader
+          description: Reader or buffer to decode from
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decodeDelimited~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode:member(1)'
+    summary: >-
+      Encodes the specified ListInfoTypesRequest message. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.verify:member(1)) messages.
+    name: 'encode(message, writer)'
+    fullName: 'encode(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encode(message: google.privacy.dlp.v2.IListInfoTypesRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ListInfoTypesRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited:member(1)'
+    summary: >-
+      Encodes the specified ListInfoTypesRequest message, length delimited. Does not implicitly
+      [verify](xref:@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.verify:member(1)) messages.
+    name: 'encodeDelimited(message, writer)'
+    fullName: 'encodeDelimited(message, writer)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static encodeDelimited(message: google.privacy.dlp.v2.IListInfoTypesRequest, writer?: $protobuf.Writer):
+        $protobuf.Writer;
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited~0:complex'
+        description: Writer
+      parameters:
+        - id: message
+          description: ListInfoTypesRequest message or plain object to encode
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+        - id: writer
+          description: Writer to encode to
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited~1:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#filter:member'
+    summary: ListInfoTypesRequest filter.
+    name: filter
+    fullName: filter
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public filter: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.fromObject:member(1)'
+    summary: >-
+      Creates a ListInfoTypesRequest message from a plain object. Also converts values to their respective internal
+      types.
+    name: fromObject(object)
+    fullName: fromObject(object)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static fromObject(object: { [k: string]: any }): google.privacy.dlp.v2.ListInfoTypesRequest;'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+        description: ListInfoTypesRequest
+      parameters:
+        - id: object
+          description: Plain object
+          type:
+            - '{ [k: string]: any }'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#languageCode:member'
+    summary: ListInfoTypesRequest languageCode.
+    name: languageCode
+    fullName: languageCode
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public languageCode: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#locationId:member'
+    summary: ListInfoTypesRequest locationId.
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public locationId: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#parent:member'
+    summary: ListInfoTypesRequest parent.
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'public parent: string;'
+      return:
+        type:
+          - string
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest#toJSON:member(1)'
+    summary: Converts this ListInfoTypesRequest to JSON.
+    name: toJSON()
+    fullName: toJSON()
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public toJSON(): { [k: string]: any };'
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: JSON object
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.toObject:member(1)'
+    summary: Creates a plain object from a ListInfoTypesRequest message. Also converts values to other types if specified.
+    name: 'toObject(message, options)'
+    fullName: 'toObject(message, options)'
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: >-
+        public static toObject(message: google.privacy.dlp.v2.ListInfoTypesRequest, options?:
+        $protobuf.IConversionOptions): { [k: string]: any };
+      return:
+        type:
+          - '{ [k: string]: any }'
+        description: Plain object
+      parameters:
+        - id: message
+          description: ListInfoTypesRequest
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+        - id: options
+          description: Conversion options
+          type:
+            - '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.toObject~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.verify:member(1)'
+    summary: Verifies a ListInfoTypesRequest message.
+    name: verify(message)
+    fullName: verify(message)
+    langs:
+      - typeScript
+    type: method
+    syntax:
+      content: 'public static verify(message: { [k: string]: any }): (string|null);'
+      return:
+        type:
+          - (string|null)
+        description: '`null` if valid, otherwise the reason why it is not'
+      parameters:
+        - id: message
+          description: Plain object to verify
+          type:
+            - '{ [k: string]: any }'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IListInfoTypesRequest:interface'
+    name: IListInfoTypesRequest
+    fullName: google.privacy.dlp.v2.IListInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest:class'
+    name: ListInfoTypesRequest
+    fullName: google.privacy.dlp.v2.ListInfoTypesRequest
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decode~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.decodeDelimited~0:complex'
+    name: ($protobuf.Reader|Uint8Array)
+    fullName: ($protobuf.Reader|Uint8Array)
+    spec.typeScript:
+      - name: ($protobuf.
+        fullName: ($protobuf.
+      - uid: 'protobufjs!Reader:class'
+        name: Reader
+        fullName: Reader
+      - name: '|'
+        fullName: '|'
+      - uid: '!Uint8Array:interface'
+        name: Uint8Array
+        fullName: Uint8Array
+      - name: )
+        fullName: )
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encode~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited~0:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.encodeDelimited~1:complex'
+    name: $protobuf.Writer
+    fullName: $protobuf.Writer
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!Writer:class'
+        name: Writer
+        fullName: Writer
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.ListInfoTypesRequest.toObject~0:complex'
+    name: $protobuf.IConversionOptions
+    fullName: $protobuf.IConversionOptions
+    spec.typeScript:
+      - name: $protobuf.
+        fullName: $protobuf.
+      - uid: 'protobufjs!IConversionOptions:interface'
+        name: IConversionOptions
+        fullName: IConversionOptions

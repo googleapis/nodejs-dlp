@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest:interface'
+    summary: Properties of an InspectContentRequest.
+    name: google.privacy.dlp.v2.IInspectContentRequest
+    fullName: google.privacy.dlp.v2.IInspectContentRequest
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectConfig:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectTemplateName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#item:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#locationId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#parent:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectConfig:member'
+    summary: InspectContentRequest inspectConfig
+    name: inspectConfig
+    fullName: inspectConfig
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectConfig?: (google.privacy.dlp.v2.IInspectConfig|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectConfig~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectTemplateName:member'
+    summary: InspectContentRequest inspectTemplateName
+    name: inspectTemplateName
+    fullName: inspectTemplateName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectTemplateName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#item:member'
+    summary: InspectContentRequest item
+    name: item
+    fullName: item
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'item?: (google.privacy.dlp.v2.IContentItem|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#item~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#locationId:member'
+    summary: InspectContentRequest locationId
+    name: locationId
+    fullName: locationId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'locationId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#parent:member'
+    summary: InspectContentRequest parent
+    name: parent
+    fullName: parent
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'parent?: (string|null);'
+      return:
+        type:
+          - (string|null)
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#inspectConfig~0:complex'
+    name: (google.privacy.dlp.v2.IInspectConfig|null)
+    fullName: (google.privacy.dlp.v2.IInspectConfig|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectConfig:interface'
+        name: google.privacy.dlp.v2.IInspectConfig
+        fullName: google.privacy.dlp.v2.IInspectConfig
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectContentRequest#item~0:complex'
+    name: (google.privacy.dlp.v2.IContentItem|null)
+    fullName: (google.privacy.dlp.v2.IContentItem|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IContentItem:interface'
+        name: google.privacy.dlp.v2.IContentItem
+        fullName: google.privacy.dlp.v2.IContentItem
+      - name: '|null)'
+        fullName: '|null)'

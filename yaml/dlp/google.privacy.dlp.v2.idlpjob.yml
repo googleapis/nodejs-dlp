@@ -1,0 +1,240 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob:interface'
+    summary: Properties of a DlpJob.
+    name: google.privacy.dlp.v2.IDlpJob
+    fullName: google.privacy.dlp.v2.IDlpJob
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#createTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#endTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#errors:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#inspectDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#jobTriggerName:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#name:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#riskDetails:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#startTime:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#state:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#type:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#createTime:member'
+    summary: DlpJob createTime
+    name: createTime
+    fullName: createTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'createTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#createTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#endTime:member'
+    summary: DlpJob endTime
+    name: endTime
+    fullName: endTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'endTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#endTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#errors:member'
+    summary: DlpJob errors
+    name: errors
+    fullName: errors
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'errors?: (google.privacy.dlp.v2.IError[]|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#errors~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#inspectDetails:member'
+    summary: DlpJob inspectDetails
+    name: inspectDetails
+    fullName: inspectDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'inspectDetails?: (google.privacy.dlp.v2.IInspectDataSourceDetails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#inspectDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#jobTriggerName:member'
+    summary: DlpJob jobTriggerName
+    name: jobTriggerName
+    fullName: jobTriggerName
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'jobTriggerName?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#name:member'
+    summary: DlpJob name
+    name: name
+    fullName: name
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'name?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#riskDetails:member'
+    summary: DlpJob riskDetails
+    name: riskDetails
+    fullName: riskDetails
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'riskDetails?: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#riskDetails~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#startTime:member'
+    summary: DlpJob startTime
+    name: startTime
+    fullName: startTime
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'startTime?: (google.protobuf.ITimestamp|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#startTime~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#state:member'
+    summary: DlpJob state
+    name: state
+    fullName: state
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'state?: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#state~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#type:member'
+    summary: DlpJob type
+    name: type
+    fullName: type
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'type?: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#type~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#createTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#endTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#errors~0:complex'
+    name: '(google.privacy.dlp.v2.IError[]|null)'
+    fullName: '(google.privacy.dlp.v2.IError[]|null)'
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IError:interface'
+        name: google.privacy.dlp.v2.IError
+        fullName: google.privacy.dlp.v2.IError
+      - name: '[]|null)'
+        fullName: '[]|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#inspectDetails~0:complex'
+    name: (google.privacy.dlp.v2.IInspectDataSourceDetails|null)
+    fullName: (google.privacy.dlp.v2.IInspectDataSourceDetails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IInspectDataSourceDetails:interface'
+        name: google.privacy.dlp.v2.IInspectDataSourceDetails
+        fullName: google.privacy.dlp.v2.IInspectDataSourceDetails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#riskDetails~0:complex'
+    name: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null)
+    fullName: (google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails:interface'
+        name: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+        fullName: google.privacy.dlp.v2.IAnalyzeDataSourceRiskDetails
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#startTime~0:complex'
+    name: (google.protobuf.ITimestamp|null)
+    fullName: (google.protobuf.ITimestamp|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.protobuf.ITimestamp:interface'
+        name: google.protobuf.ITimestamp
+        fullName: google.protobuf.ITimestamp
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#state~0:complex'
+    name: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState|null)
+    fullName: (google.privacy.dlp.v2.DlpJob.JobState|keyof typeof google.privacy.dlp.v2.DlpJob.JobState|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+        name: google.privacy.dlp.v2.DlpJob.JobState
+        fullName: google.privacy.dlp.v2.DlpJob.JobState
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJob.JobState:enum'
+        name: google.privacy.dlp.v2.DlpJob.JobState
+        fullName: google.privacy.dlp.v2.DlpJob.JobState
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IDlpJob#type~0:complex'
+    name: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null)
+    fullName: (google.privacy.dlp.v2.DlpJobType|keyof typeof google.privacy.dlp.v2.DlpJobType|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: '|keyof typeof '
+        fullName: '|keyof typeof '
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.DlpJobType:enum'
+        name: google.privacy.dlp.v2.DlpJobType
+        fullName: google.privacy.dlp.v2.DlpJobType
+      - name: '|null)'
+        fullName: '|null)'

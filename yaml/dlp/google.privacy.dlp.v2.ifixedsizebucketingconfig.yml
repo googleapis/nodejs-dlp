@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig:interface'
+    summary: Properties of a FixedSizeBucketingConfig.
+    name: google.privacy.dlp.v2.IFixedSizeBucketingConfig
+    fullName: google.privacy.dlp.v2.IFixedSizeBucketingConfig
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#bucketSize:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#lowerBound:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#upperBound:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#bucketSize:member'
+    summary: FixedSizeBucketingConfig bucketSize
+    name: bucketSize
+    fullName: bucketSize
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'bucketSize?: (number|null);'
+      return:
+        type:
+          - (number|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#lowerBound:member'
+    summary: FixedSizeBucketingConfig lowerBound
+    name: lowerBound
+    fullName: lowerBound
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'lowerBound?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#lowerBound~0:complex'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#upperBound:member'
+    summary: FixedSizeBucketingConfig upperBound
+    name: upperBound
+    fullName: upperBound
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'upperBound?: (google.privacy.dlp.v2.IValue|null);'
+      return:
+        type:
+          - '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#upperBound~0:complex'
+references:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#lowerBound~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IFixedSizeBucketingConfig#upperBound~0:complex'
+    name: (google.privacy.dlp.v2.IValue|null)
+    fullName: (google.privacy.dlp.v2.IValue|null)
+    spec.typeScript:
+      - name: (
+        fullName: (
+      - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IValue:interface'
+        name: google.privacy.dlp.v2.IValue
+        fullName: google.privacy.dlp.v2.IValue
+      - name: '|null)'
+        fullName: '|null)'

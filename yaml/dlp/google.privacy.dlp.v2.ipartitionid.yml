@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId:interface'
+    summary: Properties of a PartitionId.
+    name: google.privacy.dlp.v2.IPartitionId
+    fullName: google.privacy.dlp.v2.IPartitionId
+    langs:
+      - typeScript
+    type: interface
+    package: '@google-cloud/dlp!'
+    children:
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId#namespaceId:member'
+      - '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId#projectId:member'
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId#namespaceId:member'
+    summary: PartitionId namespaceId
+    name: namespaceId
+    fullName: namespaceId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'namespaceId?: (string|null);'
+      return:
+        type:
+          - (string|null)
+  - uid: '@google-cloud/dlp!google.privacy.dlp.v2.IPartitionId#projectId:member'
+    summary: PartitionId projectId
+    name: projectId
+    fullName: projectId
+    langs:
+      - typeScript
+    type: property
+    syntax:
+      content: 'projectId?: (string|null);'
+      return:
+        type:
+          - (string|null)
