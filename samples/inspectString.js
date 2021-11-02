@@ -78,7 +78,6 @@ function main(
       item: item,
     };
 
-
     // Run request
     const [response] = await dlp.inspectContent(request);
     const findings = response.result.findings;
