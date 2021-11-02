@@ -78,8 +78,6 @@ function main(
       item: item,
     };
 
-    console.log(request.inspectConfig.infoTypes);
-    console.log(Array.isArray(request.inspectConfig.infoTypes));
 
     // Run request
     const [response] = await dlp.inspectContent(request);
