@@ -12,5 +12,5 @@
   "name": "dlp",
   "issue_tracker": "https://issuetracker.google.com/savedsearches/5548083",
   "api_shortname": "dlp",
-  "library_type": ""
+  "library_type": "GAPIC_COMBO"
 }
