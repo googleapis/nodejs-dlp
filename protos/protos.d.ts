@@ -526,238 +526,238 @@ export namespace google {
                 namespace DlpService {
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|inspectContent}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#inspectContent}.
                      * @param error Error, if any
                      * @param [response] InspectContentResponse
                      */
                     type InspectContentCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectContentResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|redactImage}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#redactImage}.
                      * @param error Error, if any
                      * @param [response] RedactImageResponse
                      */
                     type RedactImageCallback = (error: (Error|null), response?: google.privacy.dlp.v2.RedactImageResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deidentifyContent}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deidentifyContent}.
                      * @param error Error, if any
                      * @param [response] DeidentifyContentResponse
                      */
                     type DeidentifyContentCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyContentResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|reidentifyContent}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#reidentifyContent}.
                      * @param error Error, if any
                      * @param [response] ReidentifyContentResponse
                      */
                     type ReidentifyContentCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ReidentifyContentResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listInfoTypes}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listInfoTypes}.
                      * @param error Error, if any
                      * @param [response] ListInfoTypesResponse
                      */
                     type ListInfoTypesCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListInfoTypesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|createInspectTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#createInspectTemplate}.
                      * @param error Error, if any
                      * @param [response] InspectTemplate
                      */
                     type CreateInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|updateInspectTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#updateInspectTemplate}.
                      * @param error Error, if any
                      * @param [response] InspectTemplate
                      */
                     type UpdateInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|getInspectTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#getInspectTemplate}.
                      * @param error Error, if any
                      * @param [response] InspectTemplate
                      */
                     type GetInspectTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.InspectTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listInspectTemplates}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listInspectTemplates}.
                      * @param error Error, if any
                      * @param [response] ListInspectTemplatesResponse
                      */
                     type ListInspectTemplatesCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListInspectTemplatesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deleteInspectTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deleteInspectTemplate}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteInspectTemplateCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|createDeidentifyTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#createDeidentifyTemplate}.
                      * @param error Error, if any
                      * @param [response] DeidentifyTemplate
                      */
                     type CreateDeidentifyTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|updateDeidentifyTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#updateDeidentifyTemplate}.
                      * @param error Error, if any
                      * @param [response] DeidentifyTemplate
                      */
                     type UpdateDeidentifyTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|getDeidentifyTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#getDeidentifyTemplate}.
                      * @param error Error, if any
                      * @param [response] DeidentifyTemplate
                      */
                     type GetDeidentifyTemplateCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DeidentifyTemplate) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listDeidentifyTemplates}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listDeidentifyTemplates}.
                      * @param error Error, if any
                      * @param [response] ListDeidentifyTemplatesResponse
                      */
                     type ListDeidentifyTemplatesCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListDeidentifyTemplatesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deleteDeidentifyTemplate}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deleteDeidentifyTemplate}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteDeidentifyTemplateCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|createJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#createJobTrigger}.
                      * @param error Error, if any
                      * @param [response] JobTrigger
                      */
                     type CreateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|updateJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#updateJobTrigger}.
                      * @param error Error, if any
                      * @param [response] JobTrigger
                      */
                     type UpdateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|hybridInspectJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#hybridInspectJobTrigger}.
                      * @param error Error, if any
                      * @param [response] HybridInspectResponse
                      */
                     type HybridInspectJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|getJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#getJobTrigger}.
                      * @param error Error, if any
                      * @param [response] JobTrigger
                      */
                     type GetJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.JobTrigger) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listJobTriggers}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listJobTriggers}.
                      * @param error Error, if any
                      * @param [response] ListJobTriggersResponse
                      */
                     type ListJobTriggersCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListJobTriggersResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deleteJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deleteJobTrigger}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteJobTriggerCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|activateJobTrigger}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#activateJobTrigger}.
                      * @param error Error, if any
                      * @param [response] DlpJob
                      */
                     type ActivateJobTriggerCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|createDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#createDlpJob}.
                      * @param error Error, if any
                      * @param [response] DlpJob
                      */
                     type CreateDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listDlpJobs}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listDlpJobs}.
                      * @param error Error, if any
                      * @param [response] ListDlpJobsResponse
                      */
                     type ListDlpJobsCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListDlpJobsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|getDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#getDlpJob}.
                      * @param error Error, if any
                      * @param [response] DlpJob
                      */
                     type GetDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.DlpJob) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deleteDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deleteDlpJob}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteDlpJobCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|cancelDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#cancelDlpJob}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type CancelDlpJobCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|createStoredInfoType}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#createStoredInfoType}.
                      * @param error Error, if any
                      * @param [response] StoredInfoType
                      */
                     type CreateStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|updateStoredInfoType}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#updateStoredInfoType}.
                      * @param error Error, if any
                      * @param [response] StoredInfoType
                      */
                     type UpdateStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|getStoredInfoType}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#getStoredInfoType}.
                      * @param error Error, if any
                      * @param [response] StoredInfoType
                      */
                     type GetStoredInfoTypeCallback = (error: (Error|null), response?: google.privacy.dlp.v2.StoredInfoType) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|listStoredInfoTypes}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#listStoredInfoTypes}.
                      * @param error Error, if any
                      * @param [response] ListStoredInfoTypesResponse
                      */
                     type ListStoredInfoTypesCallback = (error: (Error|null), response?: google.privacy.dlp.v2.ListStoredInfoTypesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|deleteStoredInfoType}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#deleteStoredInfoType}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteStoredInfoTypeCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|hybridInspectDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#hybridInspectDlpJob}.
                      * @param error Error, if any
                      * @param [response] HybridInspectResponse
                      */
                     type HybridInspectDlpJobCallback = (error: (Error|null), response?: google.privacy.dlp.v2.HybridInspectResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.privacy.dlp.v2.DlpService|finishDlpJob}.
+                     * Callback as used by {@link google.privacy.dlp.v2.DlpService#finishDlpJob}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
@@ -26158,9 +26158,6 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
-            /** FieldOptions unverifiedLazy */
-            unverifiedLazy?: (boolean|null);
-
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -26197,9 +26194,6 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
-
-            /** FieldOptions unverifiedLazy. */
-            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
