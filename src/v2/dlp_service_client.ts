@@ -25,6 +25,8 @@ import type {
   ClientOptions,
   PaginationCallback,
   GaxCall,
+  LocationsClient,
+  LocationProtos,
 } from 'google-gax';
 import {Transform} from 'stream';
 import * as protos from '../../protos/protos';
@@ -67,6 +69,7 @@ export class DlpServiceClient {
   };
   warn: (code: string, message: string, warnType?: string) => void;
   innerApiCalls: {[name: string]: Function};
+  locationsClient: LocationsClient;
   pathTemplates: {[name: string]: gax.PathTemplate};
   dlpServiceStub?: Promise<{[name: string]: Function}>;
 
@@ -160,6 +163,10 @@ export class DlpServiceClient {
     if (servicePath === staticMembers.servicePath) {
       this.auth.defaultScopes = staticMembers.scopes;
     }
+    this.locationsClient = new this._gaxModule.LocationsClient(
+      this._gaxGrpc,
+      opts
+    );
 
     // Determine the client header string.
     const clientHeader = [`gax/${this._gaxModule.version}`, `gapic/${version}`];
@@ -953,7 +960,7 @@ export class DlpServiceClient {
     return this.innerApiCalls.reidentifyContent(request, options, callback);
   }
   /**
-   * Returns a list of the sensitive information types that the DLP API
+   * Returns a list of the sensitive information types that DLP API
    * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
    * learn more.
    *
@@ -1051,7 +1058,7 @@ export class DlpServiceClient {
     return this.innerApiCalls.listInfoTypes(request, options, callback);
   }
   /**
-   * Creates an InspectTemplate for re-using frequently used configuration
+   * Creates an InspectTemplate for reusing frequently used configuration
    * for inspecting content, images, and storage.
    * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
    *
@@ -1458,7 +1465,7 @@ export class DlpServiceClient {
     return this.innerApiCalls.deleteInspectTemplate(request, options, callback);
   }
   /**
-   * Creates a DeidentifyTemplate for re-using frequently used configuration
+   * Creates a DeidentifyTemplate for reusing frequently used configuration
    * for de-identifying content, images, and storage.
    * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
    * more.
@@ -2650,7 +2657,7 @@ export class DlpServiceClient {
   }
   /**
    * Deletes a long-running DlpJob. This method indicates that the client is
-   * no longer interested in the DlpJob result. The job will be cancelled if
+   * no longer interested in the DlpJob result. The job will be canceled if
    * possible.
    * See https://cloud.google.com/dlp/docs/inspecting-storage and
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -3441,7 +3448,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListInspectTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3453,10 +3460,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -3576,7 +3583,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListInspectTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3588,10 +3595,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -3659,7 +3666,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListInspectTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3671,10 +3678,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -3743,7 +3750,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListDeidentifyTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3755,10 +3762,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -3882,7 +3889,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListDeidentifyTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3894,10 +3901,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -3965,7 +3972,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListDeidentifyTemplates`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -3977,10 +3984,10 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the template was created.
-   *   - `update_time`: corresponds to time the template was last updated.
-   *   - `name`: corresponds to template's name.
-   *   - `display_name`: corresponds to template's display name.
+   *   - `create_time`: corresponds to the time the template was created.
+   *   - `update_time`: corresponds to the time the template was last updated.
+   *   - `name`: corresponds to the template's name.
+   *   - `display_name`: corresponds to the template's display name.
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
    * @param {object} [options]
@@ -4056,11 +4063,11 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the JobTrigger was created.
-   *   - `update_time`: corresponds to time the JobTrigger was last updated.
+   *   - `create_time`: corresponds to the time the JobTrigger was created.
+   *   - `update_time`: corresponds to the time the JobTrigger was last updated.
    *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
-   *   - `name`: corresponds to JobTrigger's name.
-   *   - `display_name`: corresponds to JobTrigger's display name.
+   *   - `name`: corresponds to the JobTrigger's name.
+   *   - `display_name`: corresponds to the JobTrigger's display name.
    *   - `status`: corresponds to JobTrigger's status.
    * @param {string} request.filter
    *   Allows filtering.
@@ -4210,11 +4217,11 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the JobTrigger was created.
-   *   - `update_time`: corresponds to time the JobTrigger was last updated.
+   *   - `create_time`: corresponds to the time the JobTrigger was created.
+   *   - `update_time`: corresponds to the time the JobTrigger was last updated.
    *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
-   *   - `name`: corresponds to JobTrigger's name.
-   *   - `display_name`: corresponds to JobTrigger's display name.
+   *   - `name`: corresponds to the JobTrigger's name.
+   *   - `display_name`: corresponds to the JobTrigger's display name.
    *   - `status`: corresponds to JobTrigger's status.
    * @param {string} request.filter
    *   Allows filtering.
@@ -4318,11 +4325,11 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the JobTrigger was created.
-   *   - `update_time`: corresponds to time the JobTrigger was last updated.
+   *   - `create_time`: corresponds to the time the JobTrigger was created.
+   *   - `update_time`: corresponds to the time the JobTrigger was last updated.
    *   - `last_run_time`: corresponds to the last time the JobTrigger ran.
-   *   - `name`: corresponds to JobTrigger's name.
-   *   - `display_name`: corresponds to JobTrigger's display name.
+   *   - `name`: corresponds to the JobTrigger's name.
+   *   - `display_name`: corresponds to the JobTrigger's display name.
    *   - `status`: corresponds to JobTrigger's status.
    * @param {string} request.filter
    *   Allows filtering.
@@ -4423,13 +4430,13 @@ export class DlpServiceClient {
    *   * Supported fields/values for inspect jobs:
    *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
    *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-   *       - `trigger_name` - The resource name of the trigger that created job.
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - `trigger_name` - The name of the trigger that created the job.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * Supported fields for risk analysis jobs:
    *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * The operator must be `=` or `!=`.
    *
    *   Examples:
@@ -4456,9 +4463,9 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the job was created.
-   *   - `end_time`: corresponds to time the job ended.
-   *   - `name`: corresponds to job's name.
+   *   - `create_time`: corresponds to the time the job was created.
+   *   - `end_time`: corresponds to the time the job ended.
+   *   - `name`: corresponds to the job's name.
    *   - `state`: corresponds to `state`
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
@@ -4575,13 +4582,13 @@ export class DlpServiceClient {
    *   * Supported fields/values for inspect jobs:
    *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
    *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-   *       - `trigger_name` - The resource name of the trigger that created job.
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - `trigger_name` - The name of the trigger that created the job.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * Supported fields for risk analysis jobs:
    *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * The operator must be `=` or `!=`.
    *
    *   Examples:
@@ -4608,9 +4615,9 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the job was created.
-   *   - `end_time`: corresponds to time the job ended.
-   *   - `name`: corresponds to job's name.
+   *   - `create_time`: corresponds to the time the job was created.
+   *   - `end_time`: corresponds to the time the job ended.
+   *   - `name`: corresponds to the job's name.
    *   - `state`: corresponds to `state`
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
@@ -4683,13 +4690,13 @@ export class DlpServiceClient {
    *   * Supported fields/values for inspect jobs:
    *       - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED
    *       - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-   *       - `trigger_name` - The resource name of the trigger that created job.
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - `trigger_name` - The name of the trigger that created the job.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * Supported fields for risk analysis jobs:
    *       - `state` - RUNNING|CANCELED|FINISHED|FAILED
-   *       - 'end_time` - Corresponds to time the job finished.
-   *       - 'start_time` - Corresponds to time the job finished.
+   *       - 'end_time` - Corresponds to the time the job finished.
+   *       - 'start_time` - Corresponds to the time the job finished.
    *   * The operator must be `=` or `!=`.
    *
    *   Examples:
@@ -4716,9 +4723,9 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the job was created.
-   *   - `end_time`: corresponds to time the job ended.
-   *   - `name`: corresponds to job's name.
+   *   - `create_time`: corresponds to the time the job was created.
+   *   - `end_time`: corresponds to the time the job ended.
+   *   - `name`: corresponds to the job's name.
    *   - `state`: corresponds to `state`
    * @param {string} request.locationId
    *   Deprecated. This field has no effect.
@@ -4774,10 +4781,6 @@ export class DlpServiceClient {
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
    *   + Projects scope, no location specified (defaults to global):<br/>
    *     `projects/`<var>PROJECT_ID</var>
-   *   + Organizations scope, location specified:<br/>
-   *     `organizations/`<var>ORG_ID</var>`/locations/`<var>LOCATION_ID</var>
-   *   + Organizations scope, no location specified (defaults to global):<br/>
-   *     `organizations/`<var>ORG_ID</var>
    *
    *   The following example `parent` string specifies a parent project with the
    *   identifier `example-project`, and specifies the `europe-west3` location
@@ -4788,7 +4791,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListStoredInfoTypes`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -4800,7 +4803,7 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the most recent version of the
+   *   - `create_time`: corresponds to the time the most recent version of the
    *   resource was created.
    *   - `state`: corresponds to the state of the resource.
    *   - `name`: corresponds to resource name.
@@ -4910,10 +4913,6 @@ export class DlpServiceClient {
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
    *   + Projects scope, no location specified (defaults to global):<br/>
    *     `projects/`<var>PROJECT_ID</var>
-   *   + Organizations scope, location specified:<br/>
-   *     `organizations/`<var>ORG_ID</var>`/locations/`<var>LOCATION_ID</var>
-   *   + Organizations scope, no location specified (defaults to global):<br/>
-   *     `organizations/`<var>ORG_ID</var>
    *
    *   The following example `parent` string specifies a parent project with the
    *   identifier `example-project`, and specifies the `europe-west3` location
@@ -4924,7 +4923,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListStoredInfoTypes`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -4936,7 +4935,7 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the most recent version of the
+   *   - `create_time`: corresponds to the time the most recent version of the
    *   resource was created.
    *   - `state`: corresponds to the state of the resource.
    *   - `name`: corresponds to resource name.
@@ -4994,10 +4993,6 @@ export class DlpServiceClient {
    *     `projects/`<var>PROJECT_ID</var>`/locations/`<var>LOCATION_ID</var>
    *   + Projects scope, no location specified (defaults to global):<br/>
    *     `projects/`<var>PROJECT_ID</var>
-   *   + Organizations scope, location specified:<br/>
-   *     `organizations/`<var>ORG_ID</var>`/locations/`<var>LOCATION_ID</var>
-   *   + Organizations scope, no location specified (defaults to global):<br/>
-   *     `organizations/`<var>ORG_ID</var>
    *
    *   The following example `parent` string specifies a parent project with the
    *   identifier `example-project`, and specifies the `europe-west3` location
@@ -5008,7 +5003,7 @@ export class DlpServiceClient {
    *   Page token to continue retrieval. Comes from previous call
    *   to `ListStoredInfoTypes`.
    * @param {number} request.pageSize
-   *   Size of the page, can be limited by server. If zero server returns
+   *   Size of the page, can be limited by the server. If zero server returns
    *   a page of max size 100.
    * @param {string} request.orderBy
    *   Comma separated list of fields to order by,
@@ -5020,7 +5015,7 @@ export class DlpServiceClient {
    *
    *   Supported fields are:
    *
-   *   - `create_time`: corresponds to time the most recent version of the
+   *   - `create_time`: corresponds to the time the most recent version of the
    *   resource was created.
    *   - `state`: corresponds to the state of the resource.
    *   - `name`: corresponds to resource name.
@@ -5061,6 +5056,86 @@ export class DlpServiceClient {
       callSettings
     ) as AsyncIterable<protos.google.privacy.dlp.v2.IStoredInfoType>;
   }
+  /**
+   * Gets information about a location.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   Resource name for the location.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [Location]{@link google.cloud.location.Location}.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
+   *   for more details and examples.
+   * @example
+   * ```
+   * const [response] = await client.getLocation(request);
+   * ```
+   */
+  getLocation(
+    request: LocationProtos.google.cloud.location.IGetLocationRequest,
+    options?:
+      | gax.CallOptions
+      | Callback<
+          LocationProtos.google.cloud.location.ILocation,
+          | LocationProtos.google.cloud.location.IGetLocationRequest
+          | null
+          | undefined,
+          {} | null | undefined
+        >,
+    callback?: Callback<
+      LocationProtos.google.cloud.location.ILocation,
+      | LocationProtos.google.cloud.location.IGetLocationRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): Promise<LocationProtos.google.cloud.location.ILocation> {
+    return this.locationsClient.getLocation(request, options, callback);
+  }
+
+  /**
+   * Lists information about the supported locations for this service. Returns an iterable object.
+   *
+   * `for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.name
+   *   The resource that owns the locations collection, if applicable.
+   * @param {string} request.filter
+   *   The standard list filter.
+   * @param {number} request.pageSize
+   *   The standard list page size.
+   * @param {string} request.pageToken
+   *   The standard list page token.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Object}
+   *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+   *   When you iterate the returned iterable, each element will be an object representing
+   *   [Location]{@link google.cloud.location.Location}. The API will be called under the hood as needed, once per the page,
+   *   so you can stop the iteration when you don't need more results.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
+   *   for more details and examples.
+   * @example
+   * ```
+   * const iterable = client.listLocationsAsync(request);
+   * for await (const response of iterable) {
+   *   // process response
+   * }
+   * ```
+   */
+  listLocationsAsync(
+    request: LocationProtos.google.cloud.location.IListLocationsRequest,
+    options?: CallOptions
+  ): AsyncIterable<LocationProtos.google.cloud.location.ILocation> {
+    return this.locationsClient.listLocationsAsync(request, options);
+  }
+
   // --------------------
   // -- Path templates --
   // --------------------
@@ -6067,6 +6142,7 @@ export class DlpServiceClient {
       return this.dlpServiceStub.then(stub => {
         this._terminated = true;
         stub.close();
+        this.locationsClient.close();
       });
     }
     return Promise.resolve();
