@@ -15,7 +15,7 @@
     "test": "mocha system-test/*.test.js --timeout=600000"
   },
   "dependencies": {
-    "@google-cloud/dlp": "^4.1.0",
+    "@google-cloud/dlp": "^4.1.1",
     "@google-cloud/pubsub": "^3.0.0",
     "mime": "^3.0.0",
     "yargs": "^16.0.0"
@@ -25,6 +25,6 @@
     "mocha": "^8.0.0",
     "pixelmatch": "^5.0.0",
     "pngjs": "^6.0.0",
-    "uuid": "^8.0.0"
+    "uuid": "^9.0.0"
   }
 }
