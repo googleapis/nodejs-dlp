@@ -733,6 +733,13 @@ export class DlpServiceClient {
    *   inspect_template_name argument.
    * @param {google.privacy.dlp.v2.ContentItem} request.item
    *   The item to de-identify. Will be treated as text.
+   *
+   *   This value must be of type
+   *   {@link google.privacy.dlp.v2.Table|Table} if your
+   *   {@link google.privacy.dlp.v2.DeidentifyContentRequest.deidentify_config|deidentify_config}
+   *   is a
+   *   {@link google.privacy.dlp.v2.RecordTransformations|RecordTransformations}
+   *   object.
    * @param {string} request.inspectTemplateName
    *   Template to use. Any configuration directly specified in
    *   inspect_config will override those set in the template. Singular fields
